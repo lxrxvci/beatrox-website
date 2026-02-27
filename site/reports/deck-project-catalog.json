@@ -1,0 +1,3035 @@
+{
+  "sourceDeck": "assets/decks/_Beatrox _ Sizzle - Experience Design Build Case Studies -Master Deck.pptx",
+  "projectCount": 21,
+  "externalLinkCount": 53,
+  "projects": [
+    {
+      "projectName": "3D Hat Customizer",
+      "slugCandidate": "3d-hat-customizer",
+      "client": "New Era",
+      "location": "Tampa, FL",
+      "type": "Interactive Retail Experience",
+      "designObjectives": [
+        "| We were commissioned to create an integrated media platform for New Era locations that centrally controls all of the video and audio playback from a uni\ufb01ed system. For the pilot location in LA, we integrated an interactive experience that allows users to personalize their own New Era hat in a 3D environment. Once the hat is designed, it gets made and shipped directly to their home. Additionally, the media platform gives complete control over the extensive array of high de\ufb01nition screens. | Type: | Multimedia Design, UI/UX, Installation | Techniques: | Software Development, 3D Modeling and Content Creation, Video Mapping and Playback | Materials: | Tile TV Wall, TouchDesigner Media Server, AWS Website Admin Panel, | Partners: | Engine Creative, DotDotDash"
+      ],
+      "slideNumbers": [
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195
+      ],
+      "links": [],
+      "rawTextSample": [
+        "3D Hat Customizer",
+        "CLIENT: New Era",
+        "LOCATION:Tampa, FL",
+        "TYPE: Interactive Retail Experience"
+      ]
+    },
+    {
+      "projectName": "AKU WORLD",
+      "slugCandidate": "aku-world",
+      "client": "AKU+FTX",
+      "location": "MIAMI, FL",
+      "type": "ART BASEL MIAMI Experiential Event",
+      "designObjectives": [
+        "| Create a real-world space for the NFT Miami event that brings the AKU brand to life, featuring a projection-mapped environment in the main room, an interactive subway lobby, a merch room with 3D holographic displays, and a body scanner for creating and minting digital avatars. Host panel discussions, live music performances, and a patio bar for attendees. Custom fabrication of a large-scale helmet installation, as well as exterior signage, was also included in the project. | Design Concept: | The AKU World: Experiential Event is centered around the character of Aku, a digital explorer on a mission to prove that no dream is too big and no obstacle is too large. Guests are invited to explore the three virtual worlds created for the experience, including the opportunity to control the helmet installation, choose their \"Inner Astronaut,\" and create and mint their own digital avatar through a 4D scan. The projections and lighting in the space are also linked to the musical performances, creating a fully immersive and dynamic experience. | Type: | Immersive Environment, Experiential Event | Techniques: | Projection Mapping, Interactive Software Development, Lighting Design, Environmental Design, Custom Fabrication, 3D scanning, Holographic Displays, 3D World Creation. | Materials: | Projectors, Blender, Touch Designer, Figma, Unreal Engine, Tiled TV Displays, Portal Displays, Custom Scenic Fabrication, LED Lighting | Partners: | MATTE, IMAGINEX"
+      ],
+      "slideNumbers": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=wEehI2AX09I"
+      ],
+      "rawTextSample": [
+        "AKU WORLD",
+        "CLIENT: AKU+FTX",
+        "LOCATION:MIAMI, FL",
+        "TYPE: ART BASEL MIAMI Experiential Event"
+      ]
+    },
+    {
+      "projectName": "ASPIRE",
+      "slugCandidate": "aspire",
+      "client": "Louisiana Tech University",
+      "location": "Ruston, LA",
+      "type": "PERMANENT INSTALLATION",
+      "designObjectives": [
+        "| The 45-foot tall public art installation, Aspire, was commissioned by Louisiana Tech University and the Louisiana Department of Culture, Recreation, and Tourism. The project serves as both an aspirational totem and a symbol of collaboration, unity and inclusivity. The art serves to invigorate the urban experience while bringing diverse parts of the campus and surrounding City of Ruston together. A purposeful harmonious relationship was created between the art, the landscape, and the people. This new public space is now a campus focal point and serves as a permanent symbol for humanity. | Design Concept: | The project, completed in November 2021, is located at Louisiana Tech University along the east end of the Campus Green. The University has placed a high importance to \u201cwelcoming gateways\u201d in the master plan. The historic campus core and new Enterprise Campus come together at this location. Campus leaders have determined this campus confluence would be the perfect location for an iconic work of art. At nearly 45 feet tall, Aspire emerges graciously from the landscape in the form of a cascading fountain. Important to the overall campus master plan, the fountain metaphor is meant to harmonize with another noteworthy public sculpture on campus \u2013 the Lady of the Mist. | Type:  Public Art, Sculptural Lighting, Permanent Installation | Techniques:  Procedural design, electrical engineering, 3D pixel-mapping, generative animation, software development, and lighting design. | Materials:  Coated steel pipe, powder coated steel panel, acrylic panel, and integrated linear addressable LED lighting. | Partners: Curtis Pittman, Harold Combs"
+      ],
+      "slideNumbers": [
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=XHv5yy7YcX4"
+      ],
+      "rawTextSample": [
+        "ASPIRE",
+        "CLIENT: Louisiana Tech University",
+        "LOCATION:Ruston, LA",
+        "TYPE: PERMANENT INSTALLATION"
+      ]
+    },
+    {
+      "projectName": "BIRD OF PARADISE",
+      "slugCandidate": "bird-of-paradise",
+      "client": "Hillsborough County",
+      "location": "Tampa, FL",
+      "type": "PERMANENT INSTALLATION",
+      "designObjectives": [
+        "| The main objectives of the \"Bird of Paradise\" sculpture in Carrollwood Village Park, Florida, are to strengthen the park's identity and enhance visitors' connection to the surrounding natural world. The artwork serves as a wayfinding device and iconic symbol for park visitors, and is a tribute to the importance of wildlife and ecological sustainability. It also serves to bring awareness to these issues. | Design Concept: | The \"Bird of Paradise\" sculpture is prominently situated in the SE corner of Carrollwood Village Park, and is a 26-foot-tall tribute to the importance of wildlife and ecological sustainability. It serves as a natural symbol of life and enhances visitors' connection to the surrounding natural world. The sculpture also features animated pixel-mapped LED lighting inside the interior ribs and matching color palette that is highlighted during sunsets. | Type: | Public Art, Sculptural Lighting, Permanent Installation | Techniques: | Procedural design, electrical engineering, 3D pixel-mapping, generative animation, software development, and lighting design. | Materials: | Coated steel pipe, powder coated steel panel, Led Controller, ArtNet, DMX, 12V RGB, integrated linear addressable LED lighting | Partners: | Curtis Pittman",
+        "| To demonstrate the versatility of Dupont's new product Corian\u00ae by transforming it into an interactive and immersive artwork that brings together music, touch, light, and social interaction. The objective was to showcase the unique properties of Corian\u00ae and how it can be used in innovative ways. The artwork was commissioned as a way to highlight the capabilities of the material and its potential for use in the world of art and design. | Design Concept: | Cameo No.3 represents the intersection of music, touch, light, and social interaction, where sound exploration becomes the genesis of art. The piece transforms Dupont's Corian\u00ae material into a soft and atmospheric sculpture that allows a play of LED-driven light to glow through, while a multi-zoned sound system plays music through the piece via three touch-activated podiums so that individuals can conduct their experience by way of music and light. The underlying concept is united by the notion of blending advanced materials and technology with nature, warmth and human touch. | Type: | Interactive Lighting Sculpture, Audio-Reactive, Semi Permanent | Techniques: | The design and fabrication of Cameo No.3 were developed in collaboration with ZGF Architecture and utilized thermoformed and CNC routed spires. The piece features a multi-zoned sound system, LED-driven light, and capacitive touch interaction. The sound system is audio reactive, allowing the light and sound to change in response to touch. | Materials: | Front-milled and thermoformed acrylic, painted steel pipe, generative animated lighting, generative soundscape, and spatial audio. | Partners: | ZGF Architects,  Piano Push Play,  DotDotDash,  DuPont"
+      ],
+      "slideNumbers": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=6C5SeWPOVkE",
+        "http://www.youtube.com/watch?v=LhUEESypDtI",
+        "http://www.youtube.com/watch?v=Sip85CUc6JE",
+        "http://www.youtube.com/watch?v=XD2zZDNNBHA",
+        "http://www.youtube.com/watch?v=ff2oCpjrh6U",
+        "http://www.youtube.com/watch?v=uCQwixgcMEg",
+        "https://drive.google.com/open?id=1O4OK5A5zGb5VkJ3yP0jwCCtjNx3rPpvY",
+        "https://drive.google.com/open?id=1iUvhGpOnd7Wcmz-ja4XYVRjv_OK4tSku",
+        "https://drive.google.com/open?id=1yXHZSsRsvAYlqHFmuBLvo_ggpByAT9Q-",
+        "https://vimeo.com/264341677",
+        "https://vimeo.com/266815644"
+      ],
+      "rawTextSample": [
+        "BIRD OF PARADISE",
+        "CLIENT: Hillsborough County",
+        "LOCATION:Tampa, FL",
+        "TYPE: PERMANENT INSTALLATION"
+      ]
+    },
+    {
+      "projectName": "BIRD SONG",
+      "slugCandidate": "bird-song",
+      "client": "The Nines Hotel",
+      "location": "Portland, OR",
+      "type": "PERMANENT INSTALLATION",
+      "designObjectives": [
+        "| The design objectives for Bird Song were to create a permanent lighting installation that served as a wayfinding device and iconic symbol for guests of The Nines, a luxury hotel in Portland, Oregon. The artwork was intended to be a tribute to wildlife and ecological sustainability, and to bring awareness to these issues through its unique form and the use of generative soundscapes incorporating Pacific Northwest bird chirps. Additionally, the installation was designed to be interactive, allowing The Nines hotel to change the color, chirp frequency, volume, and randomness of the lights and soundscapes through a custom iPad application. | Design Concept: | The design concept for Bird Song is centered around the idea of representing sound physically through the use of 35-foot glass blown sculptural strands modeled after the sonogram of a repeated bird song. The sculpture is hung with aircraft cable through the middle of each section of hand-blown glass and custom clips hold 3-foot sections of glass in place. LED strips were fabricated to allow double-sided emission and extend voltage transmission length, and addressable lighting technology was used to animate the full vertical height of the chandelier. The iPad control system communicates using OSC over the local network and is remotely controllable. | Type:  I | nteractive Lighting, Audio Reactive Lighting, Permanent Installation | Technique: | generative soundscapes, 3D modeling, custom fabrication, animated LED lighting, pixel mapping, and software development | Materials: | glass blown sculptural strands, aircraft cable, Laser cut stainless, addressable LED strips, iPad | Location: | The Nines Hotel - Portland, Oregon. | Partners: | Melody Owen, DotDotDash"
+      ],
+      "slideNumbers": [
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=5-Fm_H64Tjg"
+      ],
+      "rawTextSample": [
+        "BIRD SONG",
+        "CLIENT: The Nines Hotel",
+        "LOCATION:Portland, OR",
+        "TYPE: PERMANENT INSTALLATION"
+      ]
+    },
+    {
+      "projectName": "CENTRIFUGE: ART TECH WALL",
+      "slugCandidate": "centrifuge-art-tech-wall",
+      "client": "Cedars Sinai",
+      "location": "Los Angeles, CA",
+      "type": "PERMANENT INSTALLATION",
+      "designObjectives": [],
+      "slideNumbers": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=9WGNZaRk9u8",
+        "http://www.youtube.com/watch?v=QcHjOxIlzdk",
+        "http://www.youtube.com/watch?v=V37Lul8ZkYA",
+        "http://www.youtube.com/watch?v=pQ5S5x8s58I"
+      ],
+      "rawTextSample": [
+        "CENTRIFUGE: ART TECH WALL",
+        "CLIENT: Cedars Sinai",
+        "LOCATION:Los Angeles, CA",
+        "TYPE: PERMANENT INSTALLATION"
+      ]
+    },
+    {
+      "projectName": "CNN: Road to 270",
+      "slugCandidate": "cnn-road-to-270",
+      "client": "CNN & Obscura Digital",
+      "location": "Empire state Building - New York, NY",
+      "type": "Projection Mapping, Interactive",
+      "designObjectives": [],
+      "slideNumbers": [
+        200,
+        201,
+        202,
+        203,
+        204
+      ],
+      "links": [],
+      "rawTextSample": [
+        "CNN: Road to 270",
+        "CLIENT: CNN & Obscura Digital",
+        "LOCATION: Empire state Building - New York, NY",
+        "TYPE: Projection Mapping, Interactive"
+      ]
+    },
+    {
+      "projectName": "CONVERGING INFLUENCE",
+      "slugCandidate": "converging-influence",
+      "client": "Santa Clara University",
+      "location": "Santa Clara, CA",
+      "type": "PERMANENT INSTALLATION",
+      "designObjectives": [
+        "| The goal of this project was to create an art wall treatment that would converge the core values of the University of Santa Clara with the new science and technology building and curriculum. The mural was designed to be located in the entrance of the state-of-the-art facility, which was designed and managed by ZGF architects. The \"Converging Influences\" art tech wall was commissioned by the University of Santa Clara's Campus for Innovation and Discovery to create an interactive and visually striking display that unites the core values of the university with the aesthetic and intellectual atmosphere of the campus. The wall was installed on October 15, 2021. | Design Concept: | The custom-fabricated 3D wall incorporates LED pixel mapping technology, custom-made software, and generative animated lighting control and playback to create an interactive and visually striking display. The wall was designed with the intention of uniting the core values of the university with the aesthetic and intellectual atmosphere of the Campus for Innovation and Discovery. The mural features a 3D surface that was panelized and milled using Corian and Acrylic. The names of individual donors who contributed to the university are featured in multiple tiers. In addition to the incredible detail and beautiful finishes, embedded individually addressable LED lighting is used throughout to create intrigue. The lighting is pixel-mapped and animated to help convey the concepts of interweaving science and innovation. The design of the mural was created using a procedural design approach, allowing for a high level of flexibility and adaptability. | Type: | Art Wall, Permanent Lighting Installation, 3D Relief Carving, Mural, Interactive Lighting | Techniques: | Procedural Design, Panelization, CNC Milling, Pixel-Mapping, Generative animation, Software Development | Materials: | Corian, Acrylic, LED lighting, Steel Frame, Plywood Backboard | Partners: | ZGF Architects"
+      ],
+      "slideNumbers": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=Arad72SfvOE"
+      ],
+      "rawTextSample": [
+        "CONVERGING INFLUENCE",
+        "CLIENT: Santa Clara University",
+        "LOCATION:Santa Clara, CA",
+        "TYPE: PERMANENT INSTALLATION"
+      ]
+    },
+    {
+      "projectName": "CREATE OUR FUTURE",
+      "slugCandidate": "create-our-future",
+      "client": "Urban Outfitters x ADIDAS",
+      "location": "Mack Sennett Studio - LA,  CA",
+      "type": "Experiential Event",
+      "designObjectives": [],
+      "slideNumbers": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=woobYB8jRSQ"
+      ],
+      "rawTextSample": [
+        "CREATE OUR FUTURE",
+        "CLIENT: Urban Outfitters x ADIDAS",
+        "LOCATION: Mack Sennett Studio - LA,  CA",
+        "TYPE: Experiential Event"
+      ]
+    },
+    {
+      "projectName": "DESTINATION",
+      "slugCandidate": "destination",
+      "client": "Journey\u2019s x ADIDAS",
+      "location": "Horton Plaza Park - San Diego, CA",
+      "type": "Experiential Event",
+      "designObjectives": [],
+      "slideNumbers": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=jmRUVbKpxU0",
+        "http://www.youtube.com/watch?v=t4u2eCGMzPE"
+      ],
+      "rawTextSample": [
+        "DESTINATION",
+        "CLIENT: Journey\u2019s x ADIDAS",
+        "LOCATION: Horton Plaza Park - San Diego, CA",
+        "TYPE: Experiential Event"
+      ]
+    },
+    {
+      "projectName": "DISENCHANTMENT",
+      "slugCandidate": "disenchantment",
+      "client": "NETFLIX",
+      "location": "San Diego, CA",
+      "type": "COMIC-CON Exhibition",
+      "designObjectives": [],
+      "slideNumbers": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=fd7g1gfCW_g"
+      ],
+      "rawTextSample": [
+        "DISENCHANTMENT",
+        "CLIENT: NETFLIX",
+        "LOCATION:San Diego, CA",
+        "TYPE: COMIC-CON Exhibition"
+      ]
+    },
+    {
+      "projectName": "DUBAI 360: Spherical Projection Theatre",
+      "slugCandidate": "dubai-360-spherical-projection-theatre",
+      "client": "DUBAI 360 & Obscura Digital",
+      "location": "Dubai Mall, Dubai",
+      "type": "Projection Mapping, Content, Deployment, Software",
+      "designObjectives": [],
+      "slideNumbers": [
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=YqjIrs6FwyM",
+        "http://www.youtube.com/watch?v=xgQJMNINuHU"
+      ],
+      "rawTextSample": [
+        "DUBAI 360: Spherical Projection Theatre",
+        "CLIENT: DUBAI 360 & Obscura Digital",
+        "LOCATION: Dubai Mall, Dubai",
+        "TYPE: Projection Mapping, Content, Deployment, Software"
+      ]
+    },
+    {
+      "projectName": "EL CAMINO",
+      "slugCandidate": "el-camino",
+      "client": "NETFLIX",
+      "location": "New York, NY",
+      "type": "COMIC-CON Exhibition",
+      "designObjectives": [],
+      "slideNumbers": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=8t2LzKRXT9o",
+        "http://www.youtube.com/watch?v=SJa555jgOLM",
+        "http://www.youtube.com/watch?v=woWvlLrD0pk"
+      ],
+      "rawTextSample": [
+        "EL CAMINO",
+        "CLIENT: NETFLIX",
+        "LOCATION:New York, NY",
+        "TYPE: COMIC-CON Exhibition"
+      ]
+    },
+    {
+      "projectName": "G-MAN Experiential Campaign",
+      "slugCandidate": "g-man-experiential-campaign",
+      "client": "Toyota x MTV",
+      "location": "Los Angeles, CA",
+      "type": "Experiential Event",
+      "designObjectives": [],
+      "slideNumbers": [
+        196,
+        197,
+        198,
+        199
+      ],
+      "links": [],
+      "rawTextSample": [
+        "G-MAN Experiential Campaign",
+        "CLIENT: Toyota x MTV",
+        "LOCATION:Los Angeles, CA",
+        "TYPE: Experiential Event"
+      ]
+    },
+    {
+      "projectName": "IKON PDX LOUNGE / NIGHTCLUB",
+      "slugCandidate": "ikon-pdx-lounge-nightclub",
+      "client": "Next Concepts",
+      "location": "Portland, OR",
+      "type": "LIGHTING DESIGN, AV INTEGRATION",
+      "designObjectives": [
+        "| The goal of this project was to reimagine a classic Portland location, formerly known as Saucebox, and transform it into a 90's themed lounge with a retro-futuristic twist. The objective was to create an immersive, otherworldly experience that captivates visitors with dynamic lighting and kinetic elements. | Design Concepts: | We transformed the space into a 90's themed lounge with a unique retro-futuristic vibe. The design included the installation of a kinetic DMX winch system that brought an otherworldly experience to life. The entire space was covered with dynamic and animated LED lighting, and the kinetic centerpiece chandelier moved gracefully, dancing in the air. Video panels and custom-made LED lighting were pixel mapped and visualized in 3D space, creating a visually stunning environment. | IKON LOUNGE | Techniques: | Interior Design, Custom Fabrication, Software Development, Kinetic DMX Winch System, Dynamic and Animated LED Lighting, Pixel Mapping and 3D Visualization, Lighting Programming, | Software: | TouchDesigner, GrandMA, Resolume, Rhino3D | Materials: | LED Lighting, Kinetic Lighting, Video Panels, Custom Lighting Fixtures | Partners: | Zfab"
+      ],
+      "slideNumbers": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=4rRArxpxCXo",
+        "http://www.youtube.com/watch?v=5Ak6orO8TmA",
+        "http://www.youtube.com/watch?v=6VGVo4WIQDc",
+        "http://www.youtube.com/watch?v=TC7BxwpgKRE",
+        "http://www.youtube.com/watch?v=g7bg8ugga3w"
+      ],
+      "rawTextSample": [
+        "IKON PDX LOUNGE / NIGHTCLUB",
+        "CLIENT: Next Concepts",
+        "LOCATION:Portland, OR",
+        "TYPE: LIGHTING DESIGN, AV INTEGRATION"
+      ]
+    },
+    {
+      "projectName": "Infinite Playlist Tour",
+      "slugCandidate": "infinite-playlist-tour",
+      "client": "Amazon Music Live",
+      "location": "Stage Coach, Outside Lands",
+      "type": "Interactive Media Experience, Event Production, Festival Activation",
+      "designObjectives": [
+        "| Amazon Music aimed to create an unforgettable festival experience that would break through the clutter and delight audiences at select 2023 music festivals. The objective was to provide fans with unprecedented access to music and artists they love, while also engaging them with interactive elements that enhance their festival experience. | Design Concept : | At Outside Lands, the experience featured a reflective exterior and a custom mural by Bay Area artist Chaz Bear. Fans passed through a colorful, astera-lit hallway into a music-filled space that took over the 3-day festival. The space included meet & greet sessions with artists and interviews hosted by Bimma Williams, enhancing fan engagement. At Stagecoach, attendees enjoyed the official festival livestream in a striking, technicolor build with interactive touchpoints throughout the space, including exclusive merch giveaways, artist meet & greets, VIP pass giveaways, and an Amazon Music LIVE photobooth. | Type: | Interactive Media Experience, Event Production, Festival Activation | Techniques: | Reflective Exterior Design, Custom Mural Creation, Animated LED Lighting, Interactive Touchpoints, AR Moments with Free-standing LED Walls, Real-time Physics Simulations, Interactive Programming | Materials: | LED Video Panels, Reflective Materials, Astera Lights, Custom Murals, TouchDesigner Software, Microsoft Kinect Azure | Partners: Kamp Grizzly, Hawthorne Industries, Sharing Box"
+      ],
+      "slideNumbers": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=K6q4bdCMADI",
+        "http://www.youtube.com/watch?v=_MOJ_AOpApE",
+        "http://www.youtube.com/watch?v=dAscyMAltCc",
+        "http://www.youtube.com/watch?v=kgWQxYT3qZE",
+        "http://www.youtube.com/watch?v=yzqcpqORO6w"
+      ],
+      "rawTextSample": [
+        "Infinite Playlist Tour",
+        "CLIENT: Amazon Music Live",
+        "LOCATION: Stage Coach, Outside Lands",
+        "TYPE:",
+        "Interactive Media Experience, Event Production, Festival Activation"
+      ]
+    },
+    {
+      "projectName": "MY SHELTER",
+      "slugCandidate": "my-shelter",
+      "client": "ADIDAS",
+      "location": "New York, NY",
+      "type": "EXPERIENTIAL EVENT",
+      "designObjectives": [],
+      "slideNumbers": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=Gj1-WvqEgUk",
+        "http://www.youtube.com/watch?v=XQbPeEAccLk",
+        "http://www.youtube.com/watch?v=gj81ozAGWJs"
+      ],
+      "rawTextSample": [
+        "MY SHELTER",
+        "CLIENT: ADIDAS",
+        "LOCATION:New York, NY",
+        "TYPE: EXPERIENTIAL EVENT"
+      ]
+    },
+    {
+      "projectName": "NEW FRONTS",
+      "slugCandidate": "new-fronts",
+      "client": "Buzzfeed",
+      "location": "Moynihan Station, New York, NY",
+      "type": "Event Production",
+      "designObjectives": [
+        "| To create a memorable and engaging event experience for guests at BuzzFeed's 2016 NewFronts, showcasing BuzzFeed's creative process for creating content and demonstrating their ability to meet the needs of their audience. The event space was designed with a purposeful flow and highlighted with large projection screens and individually mapped orbs, creating a visually stunning atmosphere that captivated attendees. | Design Concept: | The event aimed to highlight BuzzFeed's ability to feed the hearts, minds, and businesses of their audience by showcasing their creative process through a unique and immersive event experience. The main presentation took place on a custom built stage, which incorporated projection mapping and a range of multimedia design techniques to bring the event to life. | Type: | Multimedia Design, UI/UX, Event Production, General Session | Techniques: | Projection Mapping, Stage Design, Fabrication | Partners: | DotDotDash"
+      ],
+      "slideNumbers": [
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "links": [
+        "http://nathanael-jenkins.com",
+        "http://www.youtube.com/watch?v=0kMcRijA4cY",
+        "https://drive.google.com/file/d/1bFSMWPFgKdh0DPvsBx7-BBy6rSzL3XJS/view?usp=sharing",
+        "https://drive.google.com/open?id=1qk3RsX1ErdlcYaGAzgnNd8EtO59RG183",
+        "https://vimeo.com/215119496"
+      ],
+      "rawTextSample": [
+        "NEW FRONTS",
+        "CLIENT: Buzzfeed",
+        "LOCATION: Moynihan Station, New York, NY",
+        "TYPE: Event Production"
+      ]
+    },
+    {
+      "projectName": "PROJECTING CHANGE: Racing Extinction",
+      "slugCandidate": "projecting-change-racing-extinction",
+      "client": "Oceanic Preservation Society & Obscura Digital",
+      "location": "Empire State Building, United Nations NYC, Vatican ROME.",
+      "type": "Projection Mapping, Content, Deployment, Software",
+      "designObjectives": [],
+      "slideNumbers": [
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=3eov87VzGO8"
+      ],
+      "rawTextSample": [
+        "PROJECTING CHANGE: Racing Extinction",
+        "CLIENT: Oceanic Preservation Society & Obscura Digital",
+        "LOCATION: Empire State Building, United Nations NYC, Vatican ROME.",
+        "TYPE: Projection Mapping, Content, Deployment, Software"
+      ]
+    },
+    {
+      "projectName": "Projekt X",
+      "slugCandidate": "projekt-x",
+      "client": "Adriatique",
+      "location": "Zurich, Switzerland",
+      "type": "Stage Design",
+      "designObjectives": [
+        "| The goal of this project was to create a custom fabricated set piece for Adriatique's upcoming worldwide tour, \"X Future,\" that would serve as the central element in the stage design. The set piece was designed to be easily crated, toured, rigged, pixel mapped, laser mapped, and flown in any orientation. | Design Concept: | The custom-fabricated set piece was engineered to meet the highest safety standards in California, United States and shipped with all appropriate drawings and load specifications and engineering stamps. The set piece was fabricated using custom edge-lit DMX addressable LEDs that outline and are recessed inside of the structural arms of the X. The highly detailed build drawings were concepted in Rhino3D and finalized in Solid Works. The X is composed of 4 identical armatures and an interchangeable exterior skinning system, allowing for maximum modularity and flexibility. The set piece was built from aluminum to maximize the strength to weight ratio, with extensive rigging points available on each face to allow for unlimited rigging options. | Type: | Custom Scenic, Fabrication, Stage Design, Concert, Event Production | Techniques: | Projection Mapping, Interactive Software Development, Lighting Design, Environmental Design, Custom Fabrication, 3D scanning, Holographic Displays, 3D World Creation. | Materials: | Aluminum,  DMX addressable LEDs,  Silicone Differ, Hardened Steel | Partners: | SETUP.DESIGN"
+      ],
+      "slideNumbers": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=8jg-tGBkCvc",
+        "http://www.youtube.com/watch?v=QONdspLc7gU",
+        "http://www.youtube.com/watch?v=aw0sENfWiY8"
+      ],
+      "rawTextSample": [
+        "Projekt X",
+        "CLIENT: Adriatique",
+        "LOCATION:Zurich, Switzerland",
+        "TYPE: Stage Design"
+      ]
+    },
+    {
+      "projectName": "THE GREAT ESCAPE",
+      "slugCandidate": "the-great-escape",
+      "client": "ADIDAS",
+      "location": "Los Angeles, CA",
+      "type": "Product Launch Experience",
+      "designObjectives": [],
+      "slideNumbers": [
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "links": [
+        "http://www.youtube.com/watch?v=36UOkpSwAZQ",
+        "http://www.youtube.com/watch?v=eNT9qqUFrvo",
+        "http://www.youtube.com/watch?v=hq68fLaJ0VA"
+      ],
+      "rawTextSample": [
+        "THE GREAT ESCAPE",
+        "CLIENT: ADIDAS",
+        "LOCATION:Los Angeles, CA",
+        "TYPE: Product Launch Experience"
+      ]
+    }
+  ],
+  "externalLinks": [
+    "http://nathanael-jenkins.com",
+    "http://www.youtube.com/watch?v=0kMcRijA4cY",
+    "http://www.youtube.com/watch?v=36UOkpSwAZQ",
+    "http://www.youtube.com/watch?v=3eov87VzGO8",
+    "http://www.youtube.com/watch?v=4rRArxpxCXo",
+    "http://www.youtube.com/watch?v=5-Fm_H64Tjg",
+    "http://www.youtube.com/watch?v=5Ak6orO8TmA",
+    "http://www.youtube.com/watch?v=6C5SeWPOVkE",
+    "http://www.youtube.com/watch?v=6VGVo4WIQDc",
+    "http://www.youtube.com/watch?v=8jg-tGBkCvc",
+    "http://www.youtube.com/watch?v=8t2LzKRXT9o",
+    "http://www.youtube.com/watch?v=9WGNZaRk9u8",
+    "http://www.youtube.com/watch?v=Arad72SfvOE",
+    "http://www.youtube.com/watch?v=Gj1-WvqEgUk",
+    "http://www.youtube.com/watch?v=K6q4bdCMADI",
+    "http://www.youtube.com/watch?v=LhUEESypDtI",
+    "http://www.youtube.com/watch?v=QONdspLc7gU",
+    "http://www.youtube.com/watch?v=QcHjOxIlzdk",
+    "http://www.youtube.com/watch?v=SJa555jgOLM",
+    "http://www.youtube.com/watch?v=Sip85CUc6JE",
+    "http://www.youtube.com/watch?v=TC7BxwpgKRE",
+    "http://www.youtube.com/watch?v=V37Lul8ZkYA",
+    "http://www.youtube.com/watch?v=XD2zZDNNBHA",
+    "http://www.youtube.com/watch?v=XHv5yy7YcX4",
+    "http://www.youtube.com/watch?v=XQbPeEAccLk",
+    "http://www.youtube.com/watch?v=YqjIrs6FwyM",
+    "http://www.youtube.com/watch?v=_MOJ_AOpApE",
+    "http://www.youtube.com/watch?v=aw0sENfWiY8",
+    "http://www.youtube.com/watch?v=dAscyMAltCc",
+    "http://www.youtube.com/watch?v=eNT9qqUFrvo",
+    "http://www.youtube.com/watch?v=fd7g1gfCW_g",
+    "http://www.youtube.com/watch?v=ff2oCpjrh6U",
+    "http://www.youtube.com/watch?v=g7bg8ugga3w",
+    "http://www.youtube.com/watch?v=gj81ozAGWJs",
+    "http://www.youtube.com/watch?v=hq68fLaJ0VA",
+    "http://www.youtube.com/watch?v=jmRUVbKpxU0",
+    "http://www.youtube.com/watch?v=kgWQxYT3qZE",
+    "http://www.youtube.com/watch?v=pQ5S5x8s58I",
+    "http://www.youtube.com/watch?v=t4u2eCGMzPE",
+    "http://www.youtube.com/watch?v=uCQwixgcMEg",
+    "http://www.youtube.com/watch?v=wEehI2AX09I",
+    "http://www.youtube.com/watch?v=woWvlLrD0pk",
+    "http://www.youtube.com/watch?v=woobYB8jRSQ",
+    "http://www.youtube.com/watch?v=xgQJMNINuHU",
+    "http://www.youtube.com/watch?v=yzqcpqORO6w",
+    "https://drive.google.com/file/d/1bFSMWPFgKdh0DPvsBx7-BBy6rSzL3XJS/view?usp=sharing",
+    "https://drive.google.com/open?id=1O4OK5A5zGb5VkJ3yP0jwCCtjNx3rPpvY",
+    "https://drive.google.com/open?id=1iUvhGpOnd7Wcmz-ja4XYVRjv_OK4tSku",
+    "https://drive.google.com/open?id=1qk3RsX1ErdlcYaGAzgnNd8EtO59RG183",
+    "https://drive.google.com/open?id=1yXHZSsRsvAYlqHFmuBLvo_ggpByAT9Q-",
+    "https://vimeo.com/215119496",
+    "https://vimeo.com/264341677",
+    "https://vimeo.com/266815644"
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "texts": [
+        "BEATROX LLC"
+      ],
+      "links": [],
+      "projectCandidate": null
+    },
+    {
+      "slide": 2,
+      "texts": [
+        "EXPERIENTIAL PRODUCTION"
+      ],
+      "links": [],
+      "projectCandidate": null
+    },
+    {
+      "slide": 3,
+      "texts": [
+        "Infinite Playlist Tour",
+        "CLIENT: Amazon Music Live",
+        "LOCATION: Stage Coach, Outside Lands",
+        "TYPE:",
+        "Interactive Media Experience, Event Production, Festival Activation"
+      ],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 4,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 5,
+      "texts": [
+        "Design Objectives:",
+        "Amazon Music aimed to create an unforgettable festival experience that would break through the clutter and delight audiences at select 2023 music festivals. The objective was to provide fans with unprecedented access to music and artists they love, while also engaging them with interactive elements that enhance their festival experience.",
+        "Design Concept :",
+        "At Outside Lands, the experience featured a reflective exterior and a custom mural by Bay Area artist Chaz Bear. Fans passed through a colorful, astera-lit hallway into a music-filled space that took over the 3-day festival. The space included meet & greet sessions with artists and interviews hosted by Bimma Williams, enhancing fan engagement. At Stagecoach, attendees enjoyed the official festival livestream in a striking, technicolor build with interactive touchpoints throughout the space, including exclusive merch giveaways, artist meet & greets, VIP pass giveaways, and an Amazon Music LIVE photobooth.",
+        "Type:",
+        "Interactive Media Experience, Event Production, Festival Activation",
+        "Techniques:",
+        "Reflective Exterior Design, Custom Mural Creation, Animated LED Lighting, Interactive Touchpoints, AR Moments with Free-standing LED Walls, Real-time Physics Simulations, Interactive Programming",
+        "Materials:",
+        "LED Video Panels, Reflective Materials, Astera Lights, Custom Murals, TouchDesigner Software, Microsoft Kinect Azure",
+        "Partners: Kamp Grizzly, Hawthorne Industries, Sharing Box"
+      ],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 6,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=yzqcpqORO6w"
+      ],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 7,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 8,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 9,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 10,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=_MOJ_AOpApE"
+      ],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 11,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 12,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 13,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 14,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 15,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 16,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 17,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=dAscyMAltCc"
+      ],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 18,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=kgWQxYT3qZE"
+      ],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 19,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=K6q4bdCMADI"
+      ],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 20,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 21,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "infinite-playlist-tour"
+    },
+    {
+      "slide": 22,
+      "texts": [
+        "AKU WORLD",
+        "CLIENT: AKU+FTX",
+        "LOCATION:MIAMI, FL",
+        "TYPE: ART BASEL MIAMI Experiential Event"
+      ],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 23,
+      "texts": [
+        "AKU WORLD",
+        "CLIENT: AKU+FTX",
+        "LOCATION:MIAMI, FL",
+        "TYPE: ART BASEL MIAMI Experiential Event"
+      ],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 24,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 25,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 26,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 27,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 28,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 29,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 30,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 31,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 32,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=wEehI2AX09I"
+      ],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 33,
+      "texts": [
+        "Design Objectives:",
+        "Create a real-world space for the NFT Miami event that brings the AKU brand to life, featuring a projection-mapped environment in the main room, an interactive subway lobby, a merch room with 3D holographic displays, and a body scanner for creating and minting digital avatars. Host panel discussions, live music performances, and a patio bar for attendees. Custom fabrication of a large-scale helmet installation, as well as exterior signage, was also included in the project.",
+        "Design Concept:",
+        "The AKU World: Experiential Event is centered around the character of Aku, a digital explorer on a mission to prove that no dream is too big and no obstacle is too large. Guests are invited to explore the three virtual worlds created for the experience, including the opportunity to control the helmet installation, choose their \"Inner Astronaut,\" and create and mint their own digital avatar through a 4D scan. The projections and lighting in the space are also linked to the musical performances, creating a fully immersive and dynamic experience.",
+        "Type:",
+        "Immersive Environment, Experiential Event",
+        "Techniques:",
+        "Projection Mapping, Interactive Software Development, Lighting Design, Environmental Design, Custom Fabrication, 3D scanning, Holographic Displays, 3D World Creation.",
+        "Materials:",
+        "Projectors, Blender, Touch Designer, Figma, Unreal Engine, Tiled TV Displays, Portal Displays, Custom Scenic Fabrication, LED Lighting",
+        "Partners:",
+        "MATTE, IMAGINEX"
+      ],
+      "links": [],
+      "projectCandidate": "aku-world"
+    },
+    {
+      "slide": 34,
+      "texts": [
+        "Projekt X",
+        "CLIENT: Adriatique",
+        "LOCATION:Zurich, Switzerland",
+        "TYPE: Stage Design"
+      ],
+      "links": [],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 35,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 36,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 37,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 38,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 39,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=QONdspLc7gU"
+      ],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 40,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=8jg-tGBkCvc",
+        "http://www.youtube.com/watch?v=aw0sENfWiY8"
+      ],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 41,
+      "texts": [
+        "Design Objectives:",
+        "The goal of this project was to create a custom fabricated set piece for Adriatique's upcoming worldwide tour, \"X Future,\" that would serve as the central element in the stage design. The set piece was designed to be easily crated, toured, rigged, pixel mapped, laser mapped, and flown in any orientation.",
+        "Design Concept:",
+        "The custom-fabricated set piece was engineered to meet the highest safety standards in California, United States and shipped with all appropriate drawings and load specifications and engineering stamps. The set piece was fabricated using custom edge-lit DMX addressable LEDs that outline and are recessed inside of the structural arms of the X. The highly detailed build drawings were concepted in Rhino3D and finalized in Solid Works. The X is composed of 4 identical armatures and an interchangeable exterior skinning system, allowing for maximum modularity and flexibility. The set piece was built from aluminum to maximize the strength to weight ratio, with extensive rigging points available on each face to allow for unlimited rigging options.",
+        "Type:",
+        "Custom Scenic, Fabrication, Stage Design, Concert, Event Production",
+        "Techniques:",
+        "Projection Mapping, Interactive Software Development, Lighting Design, Environmental Design, Custom Fabrication, 3D scanning, Holographic Displays, 3D World Creation.",
+        "Materials:",
+        "Aluminum,  DMX addressable LEDs,  Silicone Differ, Hardened Steel",
+        "Partners:",
+        "SETUP.DESIGN"
+      ],
+      "links": [],
+      "projectCandidate": "projekt-x"
+    },
+    {
+      "slide": 42,
+      "texts": [
+        "MY SHELTER",
+        "CLIENT: ADIDAS",
+        "LOCATION:New York, NY",
+        "TYPE: EXPERIENTIAL EVENT"
+      ],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 43,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 44,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 45,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 46,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 47,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 48,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 49,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=gj81ozAGWJs"
+      ],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 50,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=Gj1-WvqEgUk",
+        "http://www.youtube.com/watch?v=XQbPeEAccLk"
+      ],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 51,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "my-shelter"
+    },
+    {
+      "slide": 52,
+      "texts": [
+        "CREATE OUR FUTURE",
+        "CLIENT: Urban Outfitters x ADIDAS",
+        "LOCATION: Mack Sennett Studio - LA,  CA",
+        "TYPE: Experiential Event"
+      ],
+      "links": [],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 53,
+      "texts": [
+        "Type:",
+        "Event Production, Concert, VR Experience",
+        "Tech:",
+        "Projection Mapping, HTC Vive, Depth Camera, 3D Capture",
+        "Location:",
+        "Mark Sennett Studio, Los Angeles, LA",
+        "The challenge was to create a one-of-kind event where attendees become creators in an immersive environment that both empowers the inner creative and drives back to adidas and Urban Out\ufb01tters.   We \ufb01nalized a physical VR station design that tied back to the campaign and Urban Out\ufb01tters retail aesthetic, and spatially laid out the environment and user journey. We devised the full-stack system that would be built which included an app layer on top of a custom virtual reality tool, a custom video pipeline, projection, visual performance and lighting design",
+        "CREATE OUR FUTURE"
+      ],
+      "links": [],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 54,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 55,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 56,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 57,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 58,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 59,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=woobYB8jRSQ"
+      ],
+      "projectCandidate": "create-our-future"
+    },
+    {
+      "slide": 60,
+      "texts": [
+        "DESTINATION",
+        "CLIENT: Journey\u2019s x ADIDAS",
+        "LOCATION: Horton Plaza Park - San Diego, CA",
+        "TYPE: Experiential Event"
+      ],
+      "links": [],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 61,
+      "texts": [
+        "Type:",
+        "Interactive Art Canvas",
+        "Tech:",
+        "Custom Controller, Firmware, Relays,  Mechanical Valves",
+        "Location:",
+        "San Diego, CA",
+        "Created for Journey\u2019s and ADIDAS, this 40\u2019 tall structure was skinned with a blank canvas and outfitted with a custom built paint distribution device.   Each participant was given the chance to control the robotic paint dripper and release 5 different colors of paint.   Participants simply had to press a button for their selections and auto magically a paint would begin flowing.",
+        "Software: Arduino, Touchdesigner",
+        "Interactive",
+        "Paint Mural"
+      ],
+      "links": [],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 62,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 63,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 64,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=t4u2eCGMzPE"
+      ],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 65,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 66,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 67,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 68,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=jmRUVbKpxU0"
+      ],
+      "projectCandidate": "destination"
+    },
+    {
+      "slide": 69,
+      "texts": [
+        "DISENCHANTMENT",
+        "CLIENT: NETFLIX",
+        "LOCATION:San Diego, CA",
+        "TYPE: COMIC-CON Exhibition"
+      ],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 70,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 71,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 72,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 73,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 74,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 75,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 76,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 77,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 78,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=fd7g1gfCW_g"
+      ],
+      "projectCandidate": "disenchantment"
+    },
+    {
+      "slide": 79,
+      "texts": [
+        "THE GREAT ESCAPE",
+        "CLIENT: ADIDAS",
+        "LOCATION:Los Angeles, CA",
+        "TYPE: Product Launch Experience"
+      ],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 80,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 81,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 82,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 83,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 84,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 85,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 86,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 87,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 88,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 89,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 90,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 91,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 92,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 93,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=eNT9qqUFrvo"
+      ],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 94,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=36UOkpSwAZQ",
+        "http://www.youtube.com/watch?v=hq68fLaJ0VA"
+      ],
+      "projectCandidate": "the-great-escape"
+    },
+    {
+      "slide": 95,
+      "texts": [
+        "EL CAMINO",
+        "CLIENT: NETFLIX",
+        "LOCATION:New York, NY",
+        "TYPE: COMIC-CON Exhibition"
+      ],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 96,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 97,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 98,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 99,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 100,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 101,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 102,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 103,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=8t2LzKRXT9o"
+      ],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 104,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=SJa555jgOLM",
+        "http://www.youtube.com/watch?v=woWvlLrD0pk"
+      ],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 105,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=SJa555jgOLM"
+      ],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 106,
+      "texts": [
+        "PERMANENT"
+      ],
+      "links": [],
+      "projectCandidate": "el-camino"
+    },
+    {
+      "slide": 107,
+      "texts": [
+        "IKON PDX LOUNGE / NIGHTCLUB",
+        "CLIENT: Next Concepts",
+        "LOCATION:Portland, OR",
+        "TYPE: LIGHTING DESIGN, AV INTEGRATION"
+      ],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 108,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 109,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 110,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 111,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 112,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 113,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=4rRArxpxCXo"
+      ],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 114,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=5Ak6orO8TmA",
+        "http://www.youtube.com/watch?v=6VGVo4WIQDc",
+        "http://www.youtube.com/watch?v=TC7BxwpgKRE",
+        "http://www.youtube.com/watch?v=g7bg8ugga3w"
+      ],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 115,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 116,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 117,
+      "texts": [
+        "Design Objectives:",
+        "The goal of this project was to reimagine a classic Portland location, formerly known as Saucebox, and transform it into a 90's themed lounge with a retro-futuristic twist. The objective was to create an immersive, otherworldly experience that captivates visitors with dynamic lighting and kinetic elements.",
+        "Design Concepts:",
+        "We transformed the space into a 90's themed lounge with a unique retro-futuristic vibe. The design included the installation of a kinetic DMX winch system that brought an otherworldly experience to life. The entire space was covered with dynamic and animated LED lighting, and the kinetic centerpiece chandelier moved gracefully, dancing in the air. Video panels and custom-made LED lighting were pixel mapped and visualized in 3D space, creating a visually stunning environment.",
+        "IKON LOUNGE",
+        "Techniques:",
+        "Interior Design, Custom Fabrication, Software Development, Kinetic DMX Winch System, Dynamic and Animated LED Lighting, Pixel Mapping and 3D Visualization, Lighting Programming,",
+        "Software:",
+        "TouchDesigner, GrandMA, Resolume, Rhino3D",
+        "Materials:",
+        "LED Lighting, Kinetic Lighting, Video Panels, Custom Lighting Fixtures",
+        "Partners:",
+        "Zfab"
+      ],
+      "links": [],
+      "projectCandidate": "ikon-pdx-lounge-nightclub"
+    },
+    {
+      "slide": 118,
+      "texts": [
+        "CENTRIFUGE: ART TECH WALL",
+        "CLIENT: Cedars Sinai",
+        "LOCATION:Los Angeles, CA",
+        "TYPE: PERMANENT INSTALLATION"
+      ],
+      "links": [],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 119,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 120,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 121,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 122,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 123,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=9WGNZaRk9u8",
+        "http://www.youtube.com/watch?v=pQ5S5x8s58I"
+      ],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 124,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=QcHjOxIlzdk",
+        "http://www.youtube.com/watch?v=V37Lul8ZkYA"
+      ],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 125,
+      "texts": [
+        "Title:",
+        "Centrifuge",
+        "Artist:",
+        "Nathanael Jenkins",
+        "Location:",
+        "Cedars-Sinai Hospital, 20th Floor, FPDC Relocation, Los Angeles, CA",
+        "Year Installed:",
+        "May 2018",
+        "Dimensions:",
+        "14\u2019L x 9\u2019W x .5\u2019H",
+        "Medium:",
+        "Centrifuge Tubes, Finished Wood, Lighting",
+        "Commissioning Agency:",
+        "Cedars-Sinai",
+        "Budget:",
+        "$95,000",
+        "Brief Description:",
+        "Centrifuge is a 14-foot-wide by nine-foot-high art installation that consists of 2,500",
+        "medical-grade centrifuge tubes protruding from perforated wood panels and backlit by 3,500 color-changing LED",
+        "lights that animate to create an organic flow within the city environment . Generative lighting is programmed with"
+      ],
+      "links": [],
+      "projectCandidate": "centrifuge-art-tech-wall"
+    },
+    {
+      "slide": 126,
+      "texts": [
+        "CONVERGING INFLUENCE",
+        "CLIENT: Santa Clara University",
+        "LOCATION:Santa Clara, CA",
+        "TYPE: PERMANENT INSTALLATION"
+      ],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 127,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 128,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 129,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 130,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 131,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 132,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=Arad72SfvOE"
+      ],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 133,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 134,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 135,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 136,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 137,
+      "texts": [
+        "Design Objective:",
+        "The goal of this project was to create an art wall treatment that would converge the core values of the University of Santa Clara with the new science and technology building and curriculum. The mural was designed to be located in the entrance of the state-of-the-art facility, which was designed and managed by ZGF architects. The \"Converging Influences\" art tech wall was commissioned by the University of Santa Clara's Campus for Innovation and Discovery to create an interactive and visually striking display that unites the core values of the university with the aesthetic and intellectual atmosphere of the campus. The wall was installed on October 15, 2021.",
+        "Design Concept:",
+        "The custom-fabricated 3D wall incorporates LED pixel mapping technology, custom-made software, and generative animated lighting control and playback to create an interactive and visually striking display. The wall was designed with the intention of uniting the core values of the university with the aesthetic and intellectual atmosphere of the Campus for Innovation and Discovery. The mural features a 3D surface that was panelized and milled using Corian and Acrylic. The names of individual donors who contributed to the university are featured in multiple tiers. In addition to the incredible detail and beautiful finishes, embedded individually addressable LED lighting is used throughout to create intrigue. The lighting is pixel-mapped and animated to help convey the concepts of interweaving science and innovation. The design of the mural was created using a procedural design approach, allowing for a high level of flexibility and adaptability.",
+        "Type:",
+        "Art Wall, Permanent Lighting Installation, 3D Relief Carving, Mural, Interactive Lighting",
+        "Techniques:",
+        "Procedural Design, Panelization, CNC Milling, Pixel-Mapping, Generative animation, Software Development",
+        "Materials:",
+        "Corian, Acrylic, LED lighting, Steel Frame, Plywood Backboard",
+        "Partners:",
+        "ZGF Architects"
+      ],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 138,
+      "texts": [
+        "Title:",
+        "Converging Influences",
+        "Artist:",
+        "Nathanael Jenkins",
+        "Location:",
+        "Santa Clara University, Santa Clara, CA",
+        "Year Installed:",
+        "October 15, 2021",
+        "Dimensions:",
+        "32\u2019W x 9\u2019H x 6\u201d D",
+        "Medium:",
+        "DuPont Corian\u00ae, Acrylic, Brass, Generative Animated Lighting",
+        "Commissioning Agency:",
+        "Santa Clara University",
+        "Budget:",
+        "$225,000",
+        "Brief Description:",
+        "Converging Influences is a custom-fabricated 3D art tech wall that was commissioned by the University of Santa Clara's Campus for Innovation and Discovery and was installed on October 15, 2021. The project incorporates LED pixel mapping technology, custom-made software, and generative animated lighting control and playback to create an interactive and visually striking display. The wall was designed with the intention of uniting the core values with the aesthetic and intellectual atmosphere of the University of Santa Clara's Campus for Innovation and Discovery."
+      ],
+      "links": [],
+      "projectCandidate": "converging-influence"
+    },
+    {
+      "slide": 139,
+      "texts": [
+        "BIRD SONG",
+        "CLIENT: The Nines Hotel",
+        "LOCATION:Portland, OR",
+        "TYPE: PERMANENT INSTALLATION"
+      ],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 140,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 141,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 142,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 143,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 144,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 145,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 146,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=5-Fm_H64Tjg"
+      ],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 147,
+      "texts": [
+        "Design Objectives:",
+        "The design objectives for Bird Song were to create a permanent lighting installation that served as a wayfinding device and iconic symbol for guests of The Nines, a luxury hotel in Portland, Oregon. The artwork was intended to be a tribute to wildlife and ecological sustainability, and to bring awareness to these issues through its unique form and the use of generative soundscapes incorporating Pacific Northwest bird chirps. Additionally, the installation was designed to be interactive, allowing The Nines hotel to change the color, chirp frequency, volume, and randomness of the lights and soundscapes through a custom iPad application.",
+        "Design Concept:",
+        "The design concept for Bird Song is centered around the idea of representing sound physically through the use of 35-foot glass blown sculptural strands modeled after the sonogram of a repeated bird song. The sculpture is hung with aircraft cable through the middle of each section of hand-blown glass and custom clips hold 3-foot sections of glass in place. LED strips were fabricated to allow double-sided emission and extend voltage transmission length, and addressable lighting technology was used to animate the full vertical height of the chandelier. The iPad control system communicates using OSC over the local network and is remotely controllable.",
+        "Type:  I",
+        "nteractive Lighting, Audio Reactive Lighting, Permanent Installation",
+        "Technique:",
+        "generative soundscapes, 3D modeling, custom fabrication, animated LED lighting, pixel mapping, and software development",
+        "Materials:",
+        "glass blown sculptural strands, aircraft cable, Laser cut stainless, addressable LED strips, iPad",
+        "Location:",
+        "The Nines Hotel - Portland, Oregon.",
+        "Partners:",
+        "Melody Owen, DotDotDash"
+      ],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 148,
+      "texts": [
+        "Title:",
+        "Bird Song.",
+        "Artist:",
+        "Nathanael Jenkins, Melody Owen",
+        "Location:",
+        "The Nines, a Luxury Collection Hotel, Portland (6th-9th Floor Staircase)",
+        "Year Installed:",
+        "July 2016",
+        "Dimensions:",
+        "10\u2019L x 2\u2019W x 35\u2019H",
+        "Medium:",
+        "Blown Glass, Aircraft Cable, Generative Animated Lighting",
+        "Commissioning Agency:",
+        "The Nines Hotel",
+        "Budget:",
+        "$255,000",
+        "Brief Description:",
+        "Birdsong features 11 suspended columns of blown glass, each 35 ft. sculptural strand",
+        "represents sound physically, modeled after the sonogram of a repeated bird song. Lighting and audio systems",
+        "were developed to create generative soundscapes incorporating Pacific Northwest bird chirps, each \"bird song\""
+      ],
+      "links": [],
+      "projectCandidate": "bird-song"
+    },
+    {
+      "slide": 149,
+      "texts": [
+        "ASPIRE",
+        "CLIENT: Louisiana Tech University",
+        "LOCATION:Ruston, LA",
+        "TYPE: PERMANENT INSTALLATION"
+      ],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 150,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 151,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 152,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 153,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 154,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 155,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 156,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 157,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=XHv5yy7YcX4"
+      ],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 158,
+      "texts": [
+        "Design Objectives:",
+        "The 45-foot tall public art installation, Aspire, was commissioned by Louisiana Tech University and the Louisiana Department of Culture, Recreation, and Tourism. The project serves as both an aspirational totem and a symbol of collaboration, unity and inclusivity. The art serves to invigorate the urban experience while bringing diverse parts of the campus and surrounding City of Ruston together. A purposeful harmonious relationship was created between the art, the landscape, and the people. This new public space is now a campus focal point and serves as a permanent symbol for humanity.",
+        "Design Concept:",
+        "The project, completed in November 2021, is located at Louisiana Tech University along the east end of the Campus Green. The University has placed a high importance to \u201cwelcoming gateways\u201d in the master plan. The historic campus core and new Enterprise Campus come together at this location. Campus leaders have determined this campus confluence would be the perfect location for an iconic work of art. At nearly 45 feet tall, Aspire emerges graciously from the landscape in the form of a cascading fountain. Important to the overall campus master plan, the fountain metaphor is meant to harmonize with another noteworthy public sculpture on campus \u2013 the Lady of the Mist.",
+        "Type:  Public Art, Sculptural Lighting, Permanent Installation",
+        "Techniques:  Procedural design, electrical engineering, 3D pixel-mapping, generative animation, software development, and lighting design.",
+        "Materials:  Coated steel pipe, powder coated steel panel, acrylic panel, and integrated linear addressable LED lighting.",
+        "Partners: Curtis Pittman, Harold Combs"
+      ],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 159,
+      "texts": [
+        "Title:",
+        "Aspire",
+        "Artist:",
+        "Nathanael Jenkins, Curtis Pittman",
+        "Location:",
+        "Louisiana Tech University, Ruston, LA",
+        "Year Installed:",
+        "November 2021",
+        "Dimensions:",
+        "10\u2019L x 15\u2019W x 45\u2019H",
+        "Medium:",
+        "coated steel pipe, powder coated steel panel, acrylic panel, integrated linear addressable LED lighting",
+        "Commissioning Agency:",
+        "Louisiana Dept of Culture, Recreation, and Tourism",
+        "Budget:",
+        "$220,000",
+        "Brief Description:",
+        "Aspire is a 45-foot tall public art installation commissioned by Louisiana Tech University and the Louisiana Department of Culture, Recreation, and Tourism. The project, completed in November 2021, serves as both an aspirational totem and a symbol of collaboration, unity, and inclusivity and made of coated steel pipe, powder coated steel panel, acrylic panel, and integrated LED lighting. The artist responsible for the project is Curtis Pittman and Nathan Jenkins served as the lighting design creative technologist."
+      ],
+      "links": [],
+      "projectCandidate": "aspire"
+    },
+    {
+      "slide": 160,
+      "texts": [
+        "BIRD OF PARADISE",
+        "CLIENT: Hillsborough County",
+        "LOCATION:Tampa, FL",
+        "TYPE: PERMANENT INSTALLATION"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 161,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 162,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 163,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 164,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 165,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=LhUEESypDtI"
+      ],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 166,
+      "texts": [
+        "Design Objectives:",
+        "The main objectives of the \"Bird of Paradise\" sculpture in Carrollwood Village Park, Florida, are to strengthen the park's identity and enhance visitors' connection to the surrounding natural world. The artwork serves as a wayfinding device and iconic symbol for park visitors, and is a tribute to the importance of wildlife and ecological sustainability. It also serves to bring awareness to these issues.",
+        "Design Concept:",
+        "The \"Bird of Paradise\" sculpture is prominently situated in the SE corner of Carrollwood Village Park, and is a 26-foot-tall tribute to the importance of wildlife and ecological sustainability. It serves as a natural symbol of life and enhances visitors' connection to the surrounding natural world. The sculpture also features animated pixel-mapped LED lighting inside the interior ribs and matching color palette that is highlighted during sunsets.",
+        "Type:",
+        "Public Art, Sculptural Lighting, Permanent Installation",
+        "Techniques:",
+        "Procedural design, electrical engineering, 3D pixel-mapping, generative animation, software development, and lighting design.",
+        "Materials:",
+        "Coated steel pipe, powder coated steel panel, Led Controller, ArtNet, DMX, 12V RGB, integrated linear addressable LED lighting",
+        "Partners:",
+        "Curtis Pittman"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 167,
+      "texts": [
+        "Title:",
+        "Bird of Paradise",
+        "Artist:",
+        "Nathanael Jenkins, Curtis Pittman",
+        "Location:",
+        "Carrollwood Village Park, Tampa, Fl",
+        "Year Installed:",
+        "May 2021",
+        "Dimensions:",
+        "12\u2019L x 12\u2019W x 27\u2019H",
+        "Medium:",
+        "Coated steel pipe, Powder coated steel panel,  Integrated linear addressable LED lighting",
+        "Commissioning Agency:",
+        "Hillsborough County",
+        "Budget:",
+        "$180,000",
+        "Brief Description:",
+        "This sculpture is located in a community park in Carrollwood Village, Florida, and is 27 feet tall. It serves as a wayfinding device and iconic symbol for park visitors. Its unique form strengthens the park's identity and enhances visitors' connection to the surrounding natural world. The artwork is a tribute to wildlife and ecological sustainability and brings awareness to these issues. It also has animated pixel-mapped LED lighting inside the interior ribs and matching color palette that is highlighted during sunsets."
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 168,
+      "texts": [
+        "BIRD OF PARADISE",
+        "CLIENT: Hillsborough County",
+        "LOCATION:Tampa, FL",
+        "TYPE: PERMANENT INSTALLATION"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 169,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 170,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 171,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 172,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 173,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 174,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=Sip85CUc6JE"
+      ],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 175,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=6C5SeWPOVkE",
+        "http://www.youtube.com/watch?v=XD2zZDNNBHA",
+        "http://www.youtube.com/watch?v=ff2oCpjrh6U",
+        "http://www.youtube.com/watch?v=uCQwixgcMEg"
+      ],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 176,
+      "texts": [
+        "Design Objective:",
+        "To demonstrate the versatility of Dupont's new product Corian\u00ae by transforming it into an interactive and immersive artwork that brings together music, touch, light, and social interaction. The objective was to showcase the unique properties of Corian\u00ae and how it can be used in innovative ways. The artwork was commissioned as a way to highlight the capabilities of the material and its potential for use in the world of art and design.",
+        "Design Concept:",
+        "Cameo No.3 represents the intersection of music, touch, light, and social interaction, where sound exploration becomes the genesis of art. The piece transforms Dupont's Corian\u00ae material into a soft and atmospheric sculpture that allows a play of LED-driven light to glow through, while a multi-zoned sound system plays music through the piece via three touch-activated podiums so that individuals can conduct their experience by way of music and light. The underlying concept is united by the notion of blending advanced materials and technology with nature, warmth and human touch.",
+        "Type:",
+        "Interactive Lighting Sculpture, Audio-Reactive, Semi Permanent",
+        "Techniques:",
+        "The design and fabrication of Cameo No.3 were developed in collaboration with ZGF Architecture and utilized thermoformed and CNC routed spires. The piece features a multi-zoned sound system, LED-driven light, and capacitive touch interaction. The sound system is audio reactive, allowing the light and sound to change in response to touch.",
+        "Materials:",
+        "Front-milled and thermoformed acrylic, painted steel pipe, generative animated lighting, generative soundscape, and spatial audio.",
+        "Partners:",
+        "ZGF Architects,  Piano Push Play,  DotDotDash,  DuPont"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 177,
+      "texts": [
+        "Title:",
+        "Cameo no 3.",
+        "Artist:",
+        "Nathanael Jenkins",
+        "Location:",
+        "Rotating: DesignWeek x NYC (Timesquare), Portland Winter Lights Festival, WTF?! Festival)",
+        "Year Installed:",
+        "January 2017",
+        "Dimensions:",
+        "28\u2019L x 6\u2019W x 14\u2019H",
+        "Medium:",
+        "DuPont Corian\u00ae - Front Milled and Thermo-formed acrylic, painted steel pipe, Generative Animated Lighting, Generative Soundscape, Spatial Audio",
+        "Commissioning Agency:",
+        "DuPont",
+        "Budget:",
+        "$185,000",
+        "Brief Description:",
+        "Cameo No.3 represents the intersection of music, touch, light and social interaction, where",
+        "sound exploration becomes the genesis of art. The piece transforms DuPont\u2019s Corian\u00ae material into a soft and",
+        "atmospheric sculpture that allows a play of LED-driven light to glow through, while a multi-zoned sound system"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 178,
+      "texts": [
+        "TECH",
+        "CAPABILITIES"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 179,
+      "texts": [
+        "Type:",
+        "Live Event | Interactive Experience",
+        "Tech:",
+        "Rapid Prototyping, Hardware and Software Development",
+        "Location:",
+        "Long Beach, CA",
+        "Built for Jeep at COMPLEXCon, this robot wandered the convention floor and  could be controlled by an XBOX remote from the front seat of the latest Jeep Compass.   Participants could drive the bot while chatting and sending emojis via 2-Way video chat.   The ChatBot was capable of traveling upto 2 miles from the driver, and had a 10 hour battery life.     We used omni directional wheels to provide a game like driving experience, and proximity sensors to prevent the Bot from collision.   Software:  RaspberryPI, Arduino, Touchdesigner",
+        "Jeep - ChatBot",
+        "Recap",
+        "VIDEO"
+      ],
+      "links": [
+        "https://drive.google.com/open?id=1yXHZSsRsvAYlqHFmuBLvo_ggpByAT9Q-"
+      ],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 180,
+      "texts": [
+        "Type:",
+        "Live Event | Interactive Experience",
+        "Tech:",
+        "Virtual Reality, Realtime 3D, Software Development",
+        "Location:",
+        "Touring Event",
+        "A multiplayer, 4D Virtual Reality experience that takes participants on an otherworldly adventure through the lens of the Toyota Camry.",
+        "Cosmic Camry - Toyota Tour",
+        "Recap",
+        "VIDEO"
+      ],
+      "links": [
+        "https://vimeo.com/266815644"
+      ],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 181,
+      "texts": [
+        "Type:",
+        "Interactive Retail Experience",
+        "Tech",
+        ":",
+        "Motion Tracking, Sensor Fusion",
+        "Location:",
+        "New York, Long Beach, Chicago",
+        "Interactive displays where the shoe itself served as the interface to warp campaign content in the silhouette's grid aesthetic. The display evolved throughout the ten weeks it was live, updated with content corresponding to new colorways released.",
+        "adidas - deerupt - Product Displays",
+        "Recap",
+        "VIDEO"
+      ],
+      "links": [
+        "https://vimeo.com/264341677"
+      ],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 182,
+      "texts": [
+        "Type:",
+        "Experience Exhibition",
+        "Tech",
+        ":",
+        "Interactive Software, Hardware Integration",
+        "Location:",
+        "Touring",
+        "(",
+        "China | Korea | Africa)",
+        "Interactive experience for a traveling exhibition.",
+        "Optimus Prime X Ray: Using a combination of AR and VR technology to digitally scan a larger than life Optimus Prime to discover the hardware beneath the skin.",
+        "Enigma of Combination: Using body tracking technology to capture a photo of a participant and superimpose it on a selection of Transformer.",
+        "Hasboro - Transformers AR / VR Tour"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 183,
+      "texts": [
+        "Type:",
+        "Interactive Product Activation",
+        "Tech:",
+        "Hall Effect Sensor, Arduino, Led Fixturing, Display Design, TouchDesigner Programming, Lighting Design",
+        "Location:",
+        "Baltimore, MD",
+        "Participants learn about the different essences that make up the brands fragrance line .  Picking up one of the 27 different eyedropper bottles triggers a \u201cPeriodic Table\u201d of lights and info.   Participants were able to learn and create their own custom fragrance.",
+        "Victoria Secret Pink University Makerlab",
+        "Lift Test",
+        "VIDEO",
+        "In Action",
+        "VIDEO"
+      ],
+      "links": [
+        "https://drive.google.com/open?id=1O4OK5A5zGb5VkJ3yP0jwCCtjNx3rPpvY",
+        "https://drive.google.com/open?id=1iUvhGpOnd7Wcmz-ja4XYVRjv_OK4tSku"
+      ],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 184,
+      "texts": [
+        "Type:",
+        "Set Design",
+        "Tech:",
+        "LED Fixture Fabrication, Lighting  and Stage Design",
+        "Location:",
+        "Portland, OR",
+        "We created a neofuturistic set for Travel Portland\u2019s corporate meeting.  The custom made LED fixtures had individually addressed pixels and content was rendered and mapped to create 3D movements with the light.",
+        "Travel Portland"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 185,
+      "texts": [
+        "Type:",
+        "Interactive Retail Experience",
+        "Tech:",
+        "Facial Recognition, Live Camera Capture,SMS and Email Take-Away, Automated Operations,",
+        "Location:",
+        "New York, Long Beach, Chicago",
+        "Starting with facial recognition, participants step into the both to get their photo taken and it auto aligns the face to an onbrand placement. They then go into the booth to kick a soccer ball that automatically captures the action. Finally this app compiles the two images and sends them a photo ready for social sharing.",
+        "adidas MLS Action Selfie Photobooth"
+      ],
+      "links": [],
+      "projectCandidate": "bird-of-paradise"
+    },
+    {
+      "slide": 186,
+      "texts": [
+        "3D Hat Customizer",
+        "CLIENT: New Era",
+        "LOCATION:Tampa, FL",
+        "TYPE: Interactive Retail Experience"
+      ],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 187,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 188,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 189,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 190,
+      "texts": [
+        "Design Objectives:",
+        "We were commissioned to create an integrated media platform for New Era locations that centrally controls all of the video and audio playback from a uni\ufb01ed system. For the pilot location in LA, we integrated an interactive experience that allows users to personalize their own New Era hat in a 3D environment. Once the hat is designed, it gets made and shipped directly to their home. Additionally, the media platform gives complete control over the extensive array of high de\ufb01nition screens.",
+        "Type:",
+        "Multimedia Design, UI/UX, Installation",
+        "Techniques:",
+        "Software Development, 3D Modeling and Content Creation, Video Mapping and Playback",
+        "Materials:",
+        "Tile TV Wall, TouchDesigner Media Server, AWS Website Admin Panel,",
+        "Partners:",
+        "Engine Creative, DotDotDash"
+      ],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 191,
+      "texts": [
+        "THANK YOU"
+      ],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 192,
+      "texts": [
+        "PERMANENT",
+        "-SCU: Donor Wall",
+        "-Centrifuge: Cedars Sinai",
+        "-BirdSong: Nines Hotel",
+        "-Aspire: Louisiana Tech University",
+        "-Bird of Paradise: Tampa, FL",
+        "-Fuse, Kasa, Elevate: Portland, OR",
+        "-Crystal City Interactive Model",
+        "EVENT",
+        "-DG Presents: Honey Room",
+        "-Redacted 7v7 Tampa - Interactive Mocap",
+        "-New Era - Retail Displays and Interactive",
+        "-Projekt X: Adriatique - Lighting Design",
+        "-SuperBowl LIV Lounge",
+        "-Adidas: Career day",
+        "-Hape:Interactive Mirror",
+        "-PrimeKnit, Interactive Floor Mapping",
+        "-HypeFest - Interactive",
+        "-Corona Electric Beach - EDC - Chicago",
+        "-Buzzfeed - Newfronts - Stage Design"
+      ],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 193,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 194,
+      "texts": [
+        "BEATROX"
+      ],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 195,
+      "texts": [
+        "PROJECTION MAPPING"
+      ],
+      "links": [],
+      "projectCandidate": "3d-hat-customizer"
+    },
+    {
+      "slide": 196,
+      "texts": [
+        "G-MAN Experiential Campaign",
+        "CLIENT: Toyota x MTV",
+        "LOCATION:Los Angeles, CA",
+        "TYPE: Experiential Event"
+      ],
+      "links": [],
+      "projectCandidate": "g-man-experiential-campaign"
+    },
+    {
+      "slide": 197,
+      "texts": [
+        "PROJECTION MAPPING"
+      ],
+      "links": [],
+      "projectCandidate": "g-man-experiential-campaign"
+    },
+    {
+      "slide": 198,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "g-man-experiential-campaign"
+    },
+    {
+      "slide": 199,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "g-man-experiential-campaign"
+    },
+    {
+      "slide": 200,
+      "texts": [
+        "CNN: Road to 270",
+        "CLIENT: CNN & Obscura Digital",
+        "LOCATION: Empire state Building - New York, NY",
+        "TYPE: Projection Mapping, Interactive"
+      ],
+      "links": [],
+      "projectCandidate": "cnn-road-to-270"
+    },
+    {
+      "slide": 201,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "cnn-road-to-270"
+    },
+    {
+      "slide": 202,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "cnn-road-to-270"
+    },
+    {
+      "slide": 203,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "cnn-road-to-270"
+    },
+    {
+      "slide": 204,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "cnn-road-to-270"
+    },
+    {
+      "slide": 205,
+      "texts": [
+        "PROJECTING CHANGE: Racing Extinction",
+        "CLIENT: Oceanic Preservation Society & Obscura Digital",
+        "LOCATION: Empire State Building, United Nations NYC, Vatican ROME.",
+        "TYPE: Projection Mapping, Content, Deployment, Software"
+      ],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 206,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=3eov87VzGO8"
+      ],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 207,
+      "texts": [
+        "Oceanic Preservation Society and Obscura took to the sky with a first-of-its-kind live video projection that illuminated the Empire State Building with beautiful, inspiring imagery of endangered species as never seen before. The towering images, more than 350 feet tall and 186 feet wide, and covering 33 floors of the iconic building drew attention to the creatures\u2019 plight against mass extinction. Sia and J. Ralph produced and released a song, \u201cOne Candle\u201d, specifically for the event. The show was captured, edited, and prominently featured as the uplifting ending of the documentary Racing Extinction by Academy Award-winning filmmaker Louie Psyhoyos (The Cover).",
+        "This first-of-its-kind event generated headlines with over 1 billion impressions in worldwide media coverage.",
+        "Join the race to save these species at racingextinction.com"
+      ],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 208,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 209,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 210,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 211,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 212,
+      "texts": [
+        "SF CITY HALL: CENTENNIAL CELEBRATION",
+        "LOCATION:",
+        "City Hall Building",
+        "-",
+        "San Francisco, CA",
+        "The City of San Francisco celebrated the Centennial of its City Hall building with a festival that culminated with an epic digital illumination experience designed by Obscura Digital. San Francisco City Hall\u2019s fa\u00e7ade was transformed into a creative journey through 100 years of history ending with a grand visual finale."
+      ],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 213,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 214,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 215,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "projecting-change-racing-extinction"
+    },
+    {
+      "slide": 216,
+      "texts": [
+        "DUBAI 360: Spherical Projection Theatre",
+        "CLIENT: DUBAI 360 & Obscura Digital",
+        "LOCATION: Dubai Mall, Dubai",
+        "TYPE: Projection Mapping, Content, Deployment, Software"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 217,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=YqjIrs6FwyM"
+      ],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 218,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 219,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 220,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 221,
+      "texts": [
+        "Dubai 360: Spherical Projection Theatre",
+        "The goal was to design a physical space where high-quality panoramic content from the Dubai 360 website could be presented in a unique, fully immersive way.",
+        "Type:",
+        "Interactive Media Experience, Spherical Projection Theater",
+        "Techniques:",
+        "Spherical Projection Mapping, Interactive Engineering, Playback System Integration, TouchDesigner Programming, Synchronization of 18 Projectors",
+        "Materials:",
+        "High-Quality Panoramic Content,  Projectors, Spherical Projection Surface, Suspended Footbridge"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 222,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 223,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 224,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 225,
+      "texts": [
+        "EXAMPLE PROJECTION COST",
+        "LOCATION:",
+        "Empire State Building",
+        "TYPE:",
+        "2 Days of Projection",
+        "SETUP:",
+        "Time 1 week",
+        "PROJECTOR COUNT:",
+        "40",
+        "LUMENS:",
+        "800,000",
+        "FINAL COST:",
+        "$1,265,000.00"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 226,
+      "texts": [
+        "SCANNING THE REALWORLD FOR ACCURATE 3D MODELS"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 227,
+      "texts": [
+        "3D MAPPING & PROJECTOR PLACEMENT"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 228,
+      "texts": [
+        "CONTENT PRE-VISUALIZATION"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 229,
+      "texts": [
+        "LUMINANCE PLANNING"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 230,
+      "texts": [
+        "THROW CALCULATION"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 231,
+      "texts": [
+        "SCHEMATIC DESIGN AND ELECTRICAL"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 232,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 233,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 234,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 235,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 236,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 237,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 238,
+      "texts": [
+        "THANK YOU"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 239,
+      "texts": [
+        "Type:",
+        "Augmented Reality",
+        "Tech:",
+        "Projection Mapping, 3d Content Creation, Media Playback",
+        "Location:",
+        "Los Angeles, CA",
+        "Created for Toyota as a part of the G-Man experiential campaign,  this activation featured a car inside of a projection mapped room. The participants were invited to sit in the car and experience a virtual ride down the rabbit hole.   3D content was created and rendered from the perspective of the passengers to maximize the immersive feel of the content.  Content created with C4D, After Effects, and Mapping with TouchDesigner",
+        "Toyota C-HR - Wave Race Experience"
+      ],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 240,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=xgQJMNINuHU"
+      ],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 241,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 242,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 243,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 244,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 245,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "dubai-360-spherical-projection-theatre"
+    },
+    {
+      "slide": 246,
+      "texts": [
+        "NEW FRONTS",
+        "CLIENT: Buzzfeed",
+        "LOCATION: Moynihan Station, New York, NY",
+        "TYPE: Event Production"
+      ],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 247,
+      "texts": [
+        "Design Objective:",
+        "To create a memorable and engaging event experience for guests at BuzzFeed's 2016 NewFronts, showcasing BuzzFeed's creative process for creating content and demonstrating their ability to meet the needs of their audience. The event space was designed with a purposeful flow and highlighted with large projection screens and individually mapped orbs, creating a visually stunning atmosphere that captivated attendees.",
+        "Design Concept:",
+        "The event aimed to highlight BuzzFeed's ability to feed the hearts, minds, and businesses of their audience by showcasing their creative process through a unique and immersive event experience. The main presentation took place on a custom built stage, which incorporated projection mapping and a range of multimedia design techniques to bring the event to life.",
+        "Type:",
+        "Multimedia Design, UI/UX, Event Production, General Session",
+        "Techniques:",
+        "Projection Mapping, Stage Design, Fabrication",
+        "Partners:",
+        "DotDotDash"
+      ],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 248,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 249,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 250,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 251,
+      "texts": [],
+      "links": [
+        "http://www.youtube.com/watch?v=0kMcRijA4cY"
+      ],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 252,
+      "texts": [
+        "Type:",
+        "Experiential Event",
+        "Tech:",
+        "Projection Mapping, Stage Design, Lighting Design, Event Production, Live Sound",
+        "Location:",
+        "Chicago, IL",
+        "Toyota decided to activate their Music sub label along side the famous Lollapalooza.   We created an immersive event with live music, a beautiful set of custom created projection mapped content.   The lobby of the venue contains a 3 story tall low-poly art wall that made a great canvas for the content.    Programming and  Content creation via TouchDesigner, C4D, AfterEffect.",
+        "Toyota Music / FloodFest - LollaPalooza",
+        "Recap",
+        "VIDEO"
+      ],
+      "links": [
+        "https://drive.google.com/file/d/1bFSMWPFgKdh0DPvsBx7-BBy6rSzL3XJS/view?usp=sharing"
+      ],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 253,
+      "texts": [
+        "Type:",
+        "Experiential Brand Event",
+        "Tech:",
+        "Projection Mapping and Photobooth",
+        "Location:",
+        "MIAMI, FL",
+        "Create an Immersive Event space HQ for ADIDAS presence at",
+        "SUPER BOWL",
+        "LIV.",
+        "Software: Arduino, Python, C++, Touchdesigner",
+        "SUPERBOWL LIV",
+        "Recap",
+        "TimeLapse"
+      ],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 254,
+      "texts": [
+        "Type:",
+        "Live Event | Interactive Experience",
+        "Tech:",
+        "Projection Mapping, Interactive Software Development",
+        "Location:",
+        "Palm Springs, CA",
+        "An icy igloo that transported guests to the North Pole. An interactive experience allowed participants to create their own unique snowflake through gesture. Once completed, they were prompted to toss the snowflake into the sky and watch it explode on the ceiling of a 360 degree projection-mapped geodesic dome.",
+        "Winter Bumbleland - Coachella",
+        "Recap",
+        "VIDEO"
+      ],
+      "links": [
+        "https://vimeo.com/215119496"
+      ],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 255,
+      "texts": [
+        "Type:",
+        "Augmented Reality",
+        "Tech:",
+        "Projection Mapping",
+        "Location:",
+        "Austin, TX",
+        "The project was to create a bouquet of futuristic code-generated, pre-rendered, and audio reactive dimensional art that was projected onto a fabricated profile of the 2016 Toyota Prius emulating its form and function.  Content and mapping where created in TouchDesigner",
+        "Toyota - Projection Mapped Car",
+        "Recap",
+        "VIDEO"
+      ],
+      "links": [
+        "https://drive.google.com/open?id=1qk3RsX1ErdlcYaGAzgnNd8EtO59RG183"
+      ],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 256,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 257,
+      "texts": [],
+      "links": [],
+      "projectCandidate": "new-fronts"
+    },
+    {
+      "slide": 258,
+      "texts": [
+        "NATHANAEL JENKINS",
+        "EMAIL:",
+        "NATHANJENKINS@BEATROX.COM",
+        "PHONE:",
+        "+15035154715",
+        "WEBSITE:",
+        "HTTP://NATHANAEL-JENKINS.COM"
+      ],
+      "links": [
+        "http://nathanael-jenkins.com"
+      ],
+      "projectCandidate": "new-fronts"
+    }
+  ]
+}

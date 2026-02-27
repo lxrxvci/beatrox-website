@@ -1,0 +1,72 @@
+{
+  "title": "Sound Equipment Rentals",
+  "slug": "/services/sound-equipment-rentals",
+  "seo": {
+    "title": "Sound Equipment Rentals — BEATROX",
+    "description": "Beatrox provides professional sound equipment rentals for concerts, events, and activations — including PA systems, monitors, mixing consoles, and on-site audio engineering.",
+    "og": {
+      "title": "Sound Equipment Rentals — BEATROX Portland",
+      "description": "Professional PA systems, consoles, and monitoring with experienced engineers — Beatrox sound equipment rentals for concerts and events.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Sound Equipment Rentals",
+    "subheadline": "Professional PA systems, consoles, and monitoring — with experienced engineers who know how to make them sing.",
+    "cta": {
+      "label": "Get a Quote",
+      "url": "/contact"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Line Array PA Systems",
+    "Stage Monitor Systems",
+    "Digital Mixing Consoles",
+    "Wireless Microphone Systems",
+    "In-Ear Monitor Systems",
+    "Playback & Multitrack Systems",
+    "Front of House Audio Engineering (A1)",
+    "Monitor Engineering (A2)"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "Great sound is the foundation of every great event. Beatrox provides professional-grade audio equipment rentals backed by our team of experienced engineers — from intimate brand activations to large-format concert productions. Every rental comes with the option of on-site engineering support."
+    },
+    {
+      "type": "service_detail",
+      "heading": "Equipment & Engineering",
+      "content": "Our sound rental inventory includes line array PA systems, digital mixing consoles, stage monitor systems, wireless microphone systems, and in-ear monitor setups. Our Audio Engineer Joshua Vallejos brings 15+ years of touring and live sound experience to every project, ensuring your audio is impeccable from soundcheck to last note."
+    },
+    {
+      "type": "specs",
+      "heading": "Common Equipment",
+      "items": [
+        "L-Acoustics, d&b audiotechnik, and Meyer Sound systems",
+        "DiGiCo, Yamaha, and Midas digital consoles",
+        "Shure, Sennheiser, and Lectrosonics wireless systems",
+        "Scalable from 100-person rooms to 5,000+ capacity venues"
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "BuzzFeed",
+      "slug": "/work/buzzfeed"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/home/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals-1d18c704.jpg",
+    "galleryImages": [
+      "/images/verified/services/sound-equipment-rentals/RCF+and+QSC+Speakers+PA-+and+-Sound-System-and-Speaker-Packages+-+Rentals-3ae491f4.png",
+      "/images/verified/services/sound-equipment-rentals/Sound-equipment-audio-mixer-packages-midas-m32-pioneer-djm-presonus-studiolive-rentals-f4b642a0.png",
+      "/images/verified/services/sound-equipment-rentals/Microphone-Pacakges-Band-Backline-DI-Boxes-Drum-Mics-Handheld-Wireless-Mics-DirectBox-00bf529c.png",
+      "/images/verified/services/dj-equipment-rentals/Pioneer-CDJ-3000-2000-DJM-a9-Nexus-NXS2-DJ-Equiopment-Rentals-416b9d21.png"
+    ]
+  }
+}

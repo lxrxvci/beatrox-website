@@ -1,0 +1,92 @@
+# Asset Manifest
+# Squarespace CDN image URLs scraped from beatrox.com project pages
+# Format: assets/path/to/file.jpg https://cdn-url
+
+# ─── RUN FOR THE OCEANS ───────────────────────────────────────────────────────
+assets/portfolio/run-for-the-oceans/KMP_2618.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965788897-6FDRWATSW2DHW9AOGPXF/KMP_2618.jpg
+assets/portfolio/run-for-the-oceans/KMP_2820.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965791194-QJIJPB9GQDX9VDEGZM2T/KMP_2820.jpg
+assets/portfolio/run-for-the-oceans/KMP_3614.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965793037-PNTA16CIDS2510EYWWR4/KMP_3614.jpg
+assets/portfolio/run-for-the-oceans/RTFO2019-PICS-KMP_2875.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965794293-M9WW35WNYKKG5UH2A9RF/RTFO2019-PICS-KMP_2875.jpg
+assets/portfolio/run-for-the-oceans/DeckScreenCap1.png https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965797310-943GD47V5OC60BSYKG9X/DeckScreenCap1.png
+assets/portfolio/run-for-the-oceans/DeckScreenCap3.png https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965799322-YJL2IOK3T8I83I88FFIU/DeckScreenCap3.png
+
+# ─── AKU WORLD ───────────────────────────────────────────────────────────────
+assets/portfolio/aku-world/BodyScanner2.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386564410-OBZJCVBY96PS03UYBFZ9/BodyScanner2.jpg
+assets/portfolio/aku-world/MainRoom4.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386572907-DNQL5MBFA9S75DUSFNLU/MainRoom4.jpg
+assets/portfolio/aku-world/WideShot.jpeg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386565888-I1VXR0J7QX5GY8LGJZ5Q/WideShot.jpeg
+assets/portfolio/aku-world/Concert-WideAngle.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386566287-USUU2W2IV9Z2QGFC22T6/Concert-WideAngle.jpg
+assets/portfolio/aku-world/MainRoom5.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386568737-8VR4FBDDGHA0X303Z6U0/MainRoom5.jpg
+assets/portfolio/aku-world/KIOSKS2.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386567956-TOPKTTCYMWFSWHK7XXE3/KIOSKS2.jpg
+assets/portfolio/aku-world/KIOSKS.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386570129-5RPQB68Q1KU7IDDDY1G7/KIOSKS.jpg
+assets/portfolio/aku-world/Gallery2.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386571088-0CA51V0YEWJS7BW8YR5H/Gallery2.jpg
+assets/portfolio/aku-world/Gallery1.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386571645-LR9TYS3X3WDD1E7YAHRI/Gallery1.jpg
+assets/portfolio/aku-world/MainRoom2.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386573180-RK70AG7HCEMBT1D5P9XF/MainRoom2.jpg
+assets/portfolio/aku-world/GalleryConcept.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386563950-OHAP0LN58UOQEL7SSR6E/GalleryConcept.jpg
+assets/portfolio/aku-world/MainRoom1.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386574033-SDZAGILNLR7EYTV99V6B/MainRoom1.jpg
+
+# ─── PROJEKT X ───────────────────────────────────────────────────────────────
+assets/portfolio/projekt-x/IMG_3944.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390599927-TQPZROUXYZZU25KLUIZP/IMG_3944.jpg
+assets/portfolio/projekt-x/StillsFromVideo6.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390617262-ZNQUMSWTX30X3EZHSCBP/StillsFromVideo6.jpg
+assets/portfolio/projekt-x/StillsFromVideo12.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390642918-3H0XYY35IXP4X6JWMYPY/StillsFromVideo12.jpg
+assets/portfolio/projekt-x/StillsFromVideo14.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390649600-3SEQ7BVD5V2QQ9W0WVD1/StillsFromVideo14.jpg
+assets/portfolio/projekt-x/StillsFromVideo15.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390651166-FW42SEQ95J71ZMFCH9EY/StillsFromVideo15.jpg
+assets/portfolio/projekt-x/StillsFromVideo16.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390656286-YY1J24RG2PWP2BF236AU/StillsFromVideo16.jpg
+assets/portfolio/projekt-x/StillsFromVideo8.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390625560-EWALM05GBTYGWMB7Y540/StillsFromVideo8.jpg
+assets/portfolio/projekt-x/VIDEO009_Moment.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390664656-OT63MB7BTCTBCKTCX58J/VIDEO009_Moment.jpg
+
+# ─── MYSHELTER ───────────────────────────────────────────────────────────────
+assets/portfolio/myshelter/Middle.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546379427-QFKBBMULI1LCIZ51KKPS/Middle.jpg
+assets/portfolio/myshelter/CooridorEmpty.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546303783-JCV5Q2EHJNJV20IYDON4/CooridorEmpty.jpg
+assets/portfolio/myshelter/CustomSign1.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546303935-B6I6CGARX8GHOJX55JB5/CustomSign1.jpg
+assets/portfolio/myshelter/INTERIOR1.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546311229-HNCQTT9PYV9UTBCM4640/INTERIOR1.jpg
+assets/portfolio/myshelter/IMG_9687.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546257971-IHCCABPMBLMOGN78DI15/IMG_9687.jpg
+assets/portfolio/myshelter/IMG_9700.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546259138-1CVUYGZRRS8IJOQHL7N1/IMG_9700.jpg
+assets/portfolio/myshelter/image-asset.png https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546255399-APRA9SX2QVOFSMR0MDM9/image-asset.png
+assets/portfolio/myshelter/IMG_9694.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546258059-0BDY6Y4FURI2IJDSB864/IMG_9694.jpg
+assets/portfolio/myshelter/IMG_9699.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546259129-JAU3TEX1W3NJMS1LNZS0/IMG_9699.jpg
+assets/portfolio/myshelter/IMG_9681.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546256872-8MKP4SDB2H7OWDL6KQLD/IMG_9681.jpg
+assets/portfolio/myshelter/IMG_9675.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546255769-JPJ32AHYRNESX9GB40QM/IMG_9675.jpg
+assets/portfolio/myshelter/IMG_9673.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546254728-U14TWS2YC59VEYO7NDMG/IMG_9673.jpg
+
+# ─── DESTINATION ─────────────────────────────────────────────────────────────
+assets/portfolio/destination/IMG_5461.PNG https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558068768-9GG3VJWRH0DJKWAN0857/IMG_5461.PNG
+assets/portfolio/destination/midi_controller_v_white.png https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558067971-K6J3YLZGVPK3BFQ5OU06/midi_controller_v_white.png
+assets/portfolio/destination/PicsForDeck2.PNG https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558068935-V7R2EVXCO6BLQITR6XJ6/PicsForDeck2.PNG
+assets/portfolio/destination/PicsForDeck3.PNG https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558069745-R8INEOB1HBDZBOQHXVOR/PicsForDeck3.PNG
+assets/portfolio/destination/IMG_8549.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558233260-B1TUT7RBF4S8M8X2ISCA/IMG_8549.jpg
+assets/portfolio/destination/DESTINATION_SD_5of7.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558234080-X47JL4M9OMJD8QPMET7M/DESTINATION+SD+%285+of+7%29+copy.jpg
+assets/portfolio/destination/IMG_9610.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558243259-FXVXE0PBPEZZ9HU9TKMS/IMG_9610.jpg
+assets/portfolio/destination/IMG_9776.jpg https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558242559-AKLW6K0VCMK3713379UF/IMG_9776.jpg
+
+# ─── SUPER BOWL 2020 ─────────────────────────────────────────────────────────
+# CDN URLs not extractable via web fetcher — source from Beatrox Squarespace media library
+# Known filenames from live page:
+# assets/portfolio/super-bowl-2020/ScreenShotsForProjectionMapping5.jpg  # CDN URL needed
+# assets/portfolio/super-bowl-2020/ScreenShotsForProjectionMapping4.jpg  # CDN URL needed
+# assets/portfolio/super-bowl-2020/ScreenShotsForProjectionMapping2.jpg  # CDN URL needed
+# assets/portfolio/super-bowl-2020/[~6 additional images]                # CDN URL needed
+
+# ─── CREATE OUR FUTURE ───────────────────────────────────────────────────────
+# CDN URLs not extractable via web fetcher — source from Beatrox Squarespace media library
+# Known filenames from live page:
+# assets/portfolio/create-our-future/IMG_2957.jpg  # CDN URL needed
+# assets/portfolio/create-our-future/IMG_2958.jpg  # CDN URL needed
+# assets/portfolio/create-our-future/IMG_2959.jpg  # CDN URL needed
+# assets/portfolio/create-our-future/IMG_2960.jpg  # CDN URL needed
+# assets/portfolio/create-our-future/IMG_2961.jpg  # CDN URL needed
+# assets/portfolio/create-our-future/IMG_2962.jpg  # CDN URL needed
+
+# ─── BUZZFEED NEWFRONTS ───────────────────────────────────────────────────────
+# CDN URLs not extractable via web fetcher — source from Beatrox Squarespace media library
+# 12 images visible on live page, filenames not exposed
+# assets/portfolio/buzzfeed/[image-01 through image-12]  # CDN URL needed
+
+# ─── INFINITE PLAYLIST TOUR ──────────────────────────────────────────────────
+# CDN URLs not extractable via web fetcher — source from Beatrox Squarespace media library
+# 24 images visible on live page (12 per festival), filenames not exposed
+# assets/portfolio/infinite-playlist/outside-lands/[image-01 through image-12]  # CDN URL needed
+# assets/portfolio/infinite-playlist/stagecoach/[image-01 through image-12]     # CDN URL needed
+
+# ─── FLIR INTERACTIVE HISTORY WALL ───────────────────────────────────────────
+# No images visible on live page
+# assets/portfolio/flir/[images]  # CDN URL needed — source from Beatrox or Imagine[X]

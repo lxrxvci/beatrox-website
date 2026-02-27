@@ -1,0 +1,200 @@
+{
+  "timestamp": "2026-02-25T19:16:56.877Z",
+  "force": false,
+  "totals": {
+    "entries": 46,
+    "downloaded": 1,
+    "skipped": 45,
+    "failed": 0
+  },
+  "downloaded": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386571645-LR9TYS3X3WDD1E7YAHRI/Gallery1.jpg",
+      "targetPath": "site/public/images/portfolio/aku-world/Gallery1.jpg",
+      "bytes": 146648
+    }
+  ],
+  "skipped": [
+    {
+      "targetPath": "site/public/images/portfolio/run-for-the-oceans/KMP_2618.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/run-for-the-oceans/KMP_2820.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/run-for-the-oceans/KMP_3614.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/run-for-the-oceans/RTFO2019-PICS-KMP_2875.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/run-for-the-oceans/DeckScreenCap1.png",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/run-for-the-oceans/DeckScreenCap3.png",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/BodyScanner2.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/MainRoom4.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/WideShot.jpeg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/Concert-WideAngle.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/MainRoom5.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/KIOSKS2.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/KIOSKS.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/Gallery2.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/MainRoom2.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/GalleryConcept.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/aku-world/MainRoom1.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/IMG_3944.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/StillsFromVideo6.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/StillsFromVideo12.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/StillsFromVideo14.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/StillsFromVideo15.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/StillsFromVideo16.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/StillsFromVideo8.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/projekt-x/VIDEO009_Moment.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/Middle.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/CooridorEmpty.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/CustomSign1.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/INTERIOR1.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/IMG_9687.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/IMG_9700.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/image-asset.png",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/IMG_9694.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/IMG_9699.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/IMG_9681.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/IMG_9675.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/myshelter/IMG_9673.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/IMG_5461.PNG",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/midi_controller_v_white.png",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/PicsForDeck2.PNG",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/PicsForDeck3.PNG",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/IMG_8549.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/DESTINATION_SD_5of7.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/IMG_9610.jpg",
+      "reason": "already_exists"
+    },
+    {
+      "targetPath": "site/public/images/portfolio/destination/IMG_9776.jpg",
+      "reason": "already_exists"
+    }
+  ],
+  "failed": []
+}

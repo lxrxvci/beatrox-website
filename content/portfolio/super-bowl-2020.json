@@ -1,0 +1,133 @@
+{
+  "title": "Super Bowl 2020",
+  "slug": "/work/super-bowl-2020",
+  "seo": {
+    "title": "Super Bowl 2020 \u2014 BEATROX Interactive AR & Projection Mapping",
+    "description": "Beatrox transformed Ampersand Studios in Miami into an immersive Adidas VIP headquarters for Super Bowl 2020 \u2014 featuring projection mapping, an AR mirror with real-time physics, and a Kinect Azure motion capture experience.",
+    "og": {
+      "title": "Super Bowl 2020 \u2014 Adidas VIP Activation Miami",
+      "description": "Projection mapping, AR mirror, and real-time physics at Ampersand Studios Miami \u2014 Beatrox built the Adidas VIP headquarters for Super Bowl 2020.",
+      "image": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Super Bowl 2020",
+    "subheadline": "An immersive Adidas VIP headquarters in Miami for Super Bowl weekend \u2014 projection mapping, AR mirrors, and real-time interactive experiences for sponsored athletes and partners.",
+    "tags": [
+      "Projection Mapping",
+      "Interactive AR",
+      "Experiential Event",
+      "Super Bowl 2020"
+    ]
+  },
+  "metadata": {
+    "client": "Adidas",
+    "location": "Ampersand Studios \u2014 Miami, FL",
+    "type": "Super Bowl 2020 Experiential Event, Projection Mapping, Interactive AR",
+    "tech": [
+      "Projection Mapping",
+      "Hardware & Software Integration",
+      "Motion Capture",
+      "AR Mirror",
+      "Custom Photo Booth",
+      "Digital Takeaway"
+    ],
+    "spec": [
+      "TouchDesigner",
+      "Kinect Azure",
+      "Surface Pro",
+      "Canon 90D",
+      "AI and Computer Vision Algorithms"
+    ],
+    "partners": [
+      "Kamp Grizzly"
+    ]
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "To create a headquarters for Adidas at Super Bowl 2020 in Miami that would host a VIP event for sponsored athletes and develop important brand relationships. The VIP Lounge needed to be an immersive environment that invited guests to share their experiences online and feature an art gallery."
+    },
+    {
+      "type": "concept",
+      "heading": "Projection Mapping",
+      "content": "Ampersand Studios was transformed using projection mapping and custom content, providing Adidas with a home base for their various activations and campaigns throughout Super Bowl weekend. Custom-designed projection content wrapped the architecture of the venue in dynamic, branded visuals \u2014 pre-visualized and calibrated to the geometry of the space for a seamless result."
+    },
+    {
+      "type": "concept",
+      "heading": "Interactive AR Mirror",
+      "content": "An AR Moment was created using a free-standing LED wall as a portal for interaction, featuring an AR overlay of the real world with a real-time physics simulation that allowed guests to interact with a digital portal. The experience was driven by interactive programming in TouchDesigner and motion capture with Microsoft Kinect Azure \u2014 creating a unique, shareable digital takeaway for every guest."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "Full venue transformation via projection mapping and custom branded content",
+        "VIP lounge and art gallery environment for Adidas sponsored athletes",
+        "AR mirror: free-standing LED wall with real-time physics portal interaction",
+        "Microsoft Kinect Azure motion capture for body-driven AR interaction",
+        "AI and computer vision algorithms for gesture tracking",
+        "Custom photo booth with digital takeaway for guests",
+        "TouchDesigner-driven interactive programming throughout",
+        "Pre-visualization and on-site technical direction"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+      "alt": "Super Bowl 2020 preview image"
+    }
+  ],
+  "videos": [
+    {
+      "title": "ADIDAS VIP - Super bowl 2020 - Projection Mapping",
+      "provider": "youtube",
+      "url": "https://youtu.be/IZ-rbG1vPUk",
+      "embedUrl": "https://www.youtube.com/embed/IZ-rbG1vPUk"
+    },
+    {
+      "title": "ADIDAS Super Bowl 2020 - VIP Lounge",
+      "provider": "youtube",
+      "url": "https://youtu.be/s9l3WewPE0E",
+      "embedUrl": "https://www.youtube.com/embed/s9l3WewPE0E"
+    },
+    {
+      "title": "ADIDAS Super Bowl 2020 - VIP LOUNGE BTS",
+      "provider": "youtube",
+      "url": "https://youtu.be/H3YEfNkLDZE",
+      "embedUrl": "https://www.youtube.com/embed/H3YEfNkLDZE"
+    },
+    {
+      "title": "Super Bowl 2020 - adidas AR experience",
+      "provider": "youtube",
+      "url": "https://youtu.be/Ea0TodW-0sI",
+      "embedUrl": "https://www.youtube.com/embed/Ea0TodW-0sI"
+    },
+    {
+      "title": "Cyc Projection Concepts",
+      "provider": "youtube",
+      "url": "https://youtu.be/mUQ2ifJQtkw",
+      "embedUrl": "https://www.youtube.com/embed/mUQ2ifJQtkw"
+    },
+    {
+      "title": "VIP Lounge Concepts",
+      "provider": "youtube",
+      "url": "https://youtu.be/7Y9fkJSUf1o",
+      "embedUrl": "https://www.youtube.com/embed/7Y9fkJSUf1o"
+    },
+    {
+      "title": "VIP Lounge Concepts",
+      "provider": "youtube",
+      "url": "https://youtu.be/DyftgPTJsjo",
+      "embedUrl": "https://www.youtube.com/embed/DyftgPTJsjo"
+    },
+    {
+      "title": "VIP Lounge Concepts",
+      "provider": "youtube",
+      "url": "https://youtu.be/sfm_XvaWaoI",
+      "embedUrl": "https://www.youtube.com/embed/sfm_XvaWaoI"
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+{
+  "generatedAt": "2026-02-26T02:24:35.833Z",
+  "sourceXml": "exports/Squarespace-Wordpress-Export-02-25-2026.xml",
+  "routes": {
+    "home": {
+      "sourcePostName": "about",
+      "sourceLink": "/about",
+      "images": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/071d1bcf-3037-45aa-99e2-f6b3727422ae/IMG_3942-Crop.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/99ec4b20-db33-45b0-9efb-8b12032a2c7d/L23640_00_CS_6500_N20_printmedium.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/dca5ec46-8643-48ec-b2fd-70b1d7466e3c/DSC02590.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee5e831-b09d-4682-8fc6-4493d2ddbd9d/DSC01789.JPG",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390599927-TQPZROUXYZZU25KLUIZP/IMG_3944.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/6d5d8cf0-83b9-4d47-b878-c8649df9f661/Beatrox+LED+VIDEO+WALL.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1717221050725-F9VYRDZ7YOYUCNVF9GFP/ship3.png",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558798351-L2ST2YQZQVEJ95VPB8N1/IMG_2958.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386566287-USUU2W2IV9Z2QGFC22T6/Concert-WideAngle.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675385056895-H2JHBVG14RQD5ABDNLY8/KMP_2618.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675384774671-G2B8AIAR30LRKB9SV8VZ/image-asset.jpeg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8a732e25-f9b7-4213-8c1e-7c0818385c33/Laser-Show-Example1.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675384788510-CBWAAKJDUOKAOP3AK64Y/DC+History+Wall+Demo+4_Moment1.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/936b8e6f-d892-4325-acea-f5b0c626f3fe/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/9acf732a-e2d6-494e-9900-38857bc7373d/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718389986449-O0WIHB780UP5ZF5HJSH9/CE4A4329.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/80a86670-0d5f-4396-8075-fdbaf0ce089f/MainRoom5.jpg"
+      ],
+      "backgrounds": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/071d1bcf-3037-45aa-99e2-f6b3727422ae/IMG_3942-Crop.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/99ec4b20-db33-45b0-9efb-8b12032a2c7d/L23640_00_CS_6500_N20_printmedium.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/dca5ec46-8643-48ec-b2fd-70b1d7466e3c/DSC02590.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee5e831-b09d-4682-8fc6-4493d2ddbd9d/DSC01789.JPG",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/80a86670-0d5f-4396-8075-fdbaf0ce089f/MainRoom5.jpg"
+      ],
+      "notes": [
+        "home_fallback_uses_about_export"
+      ]
+    },
+    "about": {
+      "sourcePostName": "about",
+      "sourceLink": "/about",
+      "images": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/071d1bcf-3037-45aa-99e2-f6b3727422ae/IMG_3942-Crop.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/99ec4b20-db33-45b0-9efb-8b12032a2c7d/L23640_00_CS_6500_N20_printmedium.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/dca5ec46-8643-48ec-b2fd-70b1d7466e3c/DSC02590.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee5e831-b09d-4682-8fc6-4493d2ddbd9d/DSC01789.JPG",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390599927-TQPZROUXYZZU25KLUIZP/IMG_3944.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/6d5d8cf0-83b9-4d47-b878-c8649df9f661/Beatrox+LED+VIDEO+WALL.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1717221050725-F9VYRDZ7YOYUCNVF9GFP/ship3.png",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558798351-L2ST2YQZQVEJ95VPB8N1/IMG_2958.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386566287-USUU2W2IV9Z2QGFC22T6/Concert-WideAngle.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675385056895-H2JHBVG14RQD5ABDNLY8/KMP_2618.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675384774671-G2B8AIAR30LRKB9SV8VZ/image-asset.jpeg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8a732e25-f9b7-4213-8c1e-7c0818385c33/Laser-Show-Example1.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675384788510-CBWAAKJDUOKAOP3AK64Y/DC+History+Wall+Demo+4_Moment1.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/936b8e6f-d892-4325-acea-f5b0c626f3fe/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/9acf732a-e2d6-494e-9900-38857bc7373d/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718389986449-O0WIHB780UP5ZF5HJSH9/CE4A4329.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/80a86670-0d5f-4396-8075-fdbaf0ce089f/MainRoom5.jpg"
+      ],
+      "backgrounds": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/071d1bcf-3037-45aa-99e2-f6b3727422ae/IMG_3942-Crop.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/99ec4b20-db33-45b0-9efb-8b12032a2c7d/L23640_00_CS_6500_N20_printmedium.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/dca5ec46-8643-48ec-b2fd-70b1d7466e3c/DSC02590.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee5e831-b09d-4682-8fc6-4493d2ddbd9d/DSC01789.JPG",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/80a86670-0d5f-4396-8075-fdbaf0ce089f/MainRoom5.jpg"
+      ]
+    },
+    "team": {
+      "sourcePostName": "team",
+      "sourceLink": "/team",
+      "images": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg"
+      ],
+      "backgrounds": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg"
+      ],
+      "members": [
+        {
+          "name": "Joey Paulekas",
+          "heading": "Joey Paulekas - Touring and Fabrication",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG"
+        },
+        {
+          "name": "Nathan Jenkins",
+          "heading": "Nathan Jenkins - Creative Technologist",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg"
+        },
+        {
+          "name": "Eric Mintzer",
+          "heading": "Eric Mintzer - Creative Technologist",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg"
+        },
+        {
+          "name": "Alan Curtiss",
+          "heading": "Alan Curtiss - Video Production & LED Technician",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg"
+        },
+        {
+          "name": "Desiree Daggy",
+          "heading": "Desiree Daggy - 3D & Environmental Design",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg"
+        },
+        {
+          "name": "Joshua Vallejos",
+          "heading": "Joshua Vallejos - Audio Engineer / Production Manager",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg"
+        },
+        {
+          "name": "Bryant Place",
+          "heading": "Bryant Place - Creative Technologist",
+          "imageUrl": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg"
+        }
+      ]
+    },
+    "services": {
+      "sourcePostName": "services",
+      "sourceLink": "/services",
+      "images": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/cccfb0dc-ee90-4aea-8744-907e6fe57ca2/IMG_1801.jpg"
+      ],
+      "backgrounds": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/cccfb0dc-ee90-4aea-8744-907e6fe57ca2/IMG_1801.jpg"
+      ],
+      "details": {
+        "dj-equipment-rentals": {
+          "postName": "dj-equipment-rentals",
+          "link": "/dj-equipment-rentals",
+          "title": "DJ Equipment Rentals in Portland | Beatrox",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/936b8e6f-d892-4325-acea-f5b0c626f3fe/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/09bcafcf-cdee-4ffe-bd05-afe85c1aff9f/Pioneer-djm-s9-s11-s7-Technics-SL-1200-mk7-m5g-m3d-dj-setup-equipment-rental.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/322b1842-5bed-4d38-81bd-01ff27a653b1/Pioneer-CDJ-3000-2000-DJM-a9-Nexus-NXS2-DJ-Equiopment-Rentals.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/c4198cc8-778f-4de2-b5fa-beeccb301d14/RCF+and+QSC+Speakers+PA-+and+-Sound-System-and-Speaker-Packages+-+Rentals.png"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/936b8e6f-d892-4325-acea-f5b0c626f3fe/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear.jpg"
+          ]
+        },
+        "sound-equipment-rentals": {
+          "postName": "sound-equipment-rentals",
+          "link": "/sound-equipment-rentals",
+          "title": "Sound Equipment Rentals",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/9acf732a-e2d6-494e-9900-38857bc7373d/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/2f24e4e2-d6a7-49ac-9fbd-36f5381c5312/RCF+and+QSC+Speakers+PA-+and+-Sound-System-and-Speaker-Packages+-+Rentals.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/c2c7b49d-2bf2-4030-b5be-ec6a46a585ff/Sound-equipment-audio-mixer-packages-midas-m32-pioneer-djm-presonus-studiolive-rentals.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1de0cf8e-27ca-43e0-911c-2a99d7f69d1b/Microphone-Pacakges-Band-Backline-DI-Boxes-Drum-Mics-Handheld-Wireless-Mics-DirectBox.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/322b1842-5bed-4d38-81bd-01ff27a653b1/Pioneer-CDJ-3000-2000-DJM-a9-Nexus-NXS2-DJ-Equiopment-Rentals.png"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/9acf732a-e2d6-494e-9900-38857bc7373d/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals.jpg"
+          ]
+        },
+        "laser-shows": {
+          "postName": "laser-shows",
+          "link": "/laser-shows",
+          "title": "Laser Shows",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/abaa915c-36c9-482e-971e-6d20869d6c7b/Laser-Show-Example1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/81089991-c3f5-4c1a-a325-258e6e6913cf/Pangolin-Beyond-Laser-Show-Software-Equipment-Beatrox.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/3b6a0a98-8cc8-4686-9745-ea47e0f4ab3d/Laser+Show+Complience+Beatrox+and+Laseronics.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d8dd2168-998a-4d17-99a3-5e6d901d3ae1/Laser-Show-Example2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/7bca7e19-8908-4c90-855f-a4df0d873636/Laser-Show-Graphics-Display.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/2d7f6c83-eca8-46a8-8d1f-dd1e463410fa/Laser-Show-Example3-Cairo-Egypt-Armin-Van-Buren.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a40d0751-fe2e-4192-a194-84c0d083e5df/Laser-Show-Example4.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/abaa915c-36c9-482e-971e-6d20869d6c7b/Laser-Show-Example1.jpg"
+          ]
+        },
+        "drone-light-shows": {
+          "postName": "drone-light-shows",
+          "link": "/drone-light-shows",
+          "title": "Drone Light Shows",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/df1e8432-585e-4613-9eb4-0acebc5a760b/ship3.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/49a8a887-5046-4d5a-997e-a5b19ebe789c/scan+me+final.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/41270c94-8c31-4435-91d2-f19d12fd48f0/spaceman.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a445008-593c-4e4b-84a0-fea1c2815f85/Sky-Lites-Drone-Shows.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1b6f156d-5ba3-4566-98e5-67ba34c8bf17/qr.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/e941b83f-a56f-4145-9153-216744b267af/dead.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/fbdbfb0c-defa-4ea1-9114-59d64e7ee6c8/sotrk.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/df1e8432-585e-4613-9eb4-0acebc5a760b/ship3.png"
+          ]
+        },
+        "led-video-wall-rentals": {
+          "postName": "led-video-wall-rentals-portland",
+          "link": "/led-video-wall-rentals-portland",
+          "title": "LED Video Wall Rentals",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/ac3c670d-5ed8-4689-bfc2-fbdddf2187cf/PHOTOSFORDECK-57.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/583f3579-bcb7-4b2c-b141-0a23c9b4f3dd/Beatrox+LED+VIDEO+WALL+-+Planning+and+Logistisc.PNG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a65b0527-0f77-4cba-bf07-db7b405168c8/PHOTOSFORDECK-51.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5d125ca0-2d0a-4499-b29b-106d2dc3c5bf/60A4D548-DF97-47A7-9E9B-A1DB4CD03BC0.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/067e1e14-f35c-4657-abd0-ce5b682e93d5/PHOTOSFORDECK-57+%281%29.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/345d46e1-8dac-4c7a-93b5-e451091cdc41/BeatroxVideoTechStation.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/f5e44749-fb99-4752-a8ae-eabff74777df/Beatrox+-+LED+VIDEO+WALL+-+Custom+Configurations+-+Portland+-+Seattle-+PNW-.PNG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/ad9dd76b-c86d-4faa-abc9-ba6c5d3594c7/Beatrox+-+LED+VIDEO+WALL+-+Custom+Configurations+-+Portland+-+Seattle-+PNW-+PNG.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/ee000a92-ff11-4eb7-8ef5-49a84b310daa/PHOTOSFORDECK-83.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/9f3db0b6-7dad-4e0f-979f-813fc95fcbf6/Nathan-Dome-Camera-Mapping.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/ac3c670d-5ed8-4689-bfc2-fbdddf2187cf/PHOTOSFORDECK-57.jpg"
+          ]
+        }
+      },
+      "unresolvedServiceSlugs": [
+        "backline-stage-rental",
+        "event-production",
+        "lighting-services"
+      ]
+    },
+    "work": {
+      "sourcePostName": "work",
+      "sourceLink": "/work",
+      "images": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg"
+      ],
+      "backgrounds": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg"
+      ],
+      "details": {
+        "projekt-x": {
+          "postName": "projekt-x-stage-design-and-fabrication",
+          "link": "/projekt-x-stage-design-and-fabrication",
+          "title": "Projekt X: Stage Design and Fabrication",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/778016f0-41d1-40a3-ae2e-641f63f8fc31/IMG_3943.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675147322579-1H47RBT4YIGYD7Z4XWWN/image-asset.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390599927-TQPZROUXYZZU25KLUIZP/IMG_3944.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390617262-ZNQUMSWTX30X3EZHSCBP/StillsFromVideo6.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390642918-3H0XYY35IXP4X6JWMYPY/StillsFromVideo12.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390649600-3SEQ7BVD5V2QQ9W0WVD1/StillsFromVideo14.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390651166-FW42SEQ95J71ZMFCH9EY/StillsFromVideo15.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390656286-YY1J24RG2PWP2BF236AU/StillsFromVideo16.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390625560-EWALM05GBTYGWMB7Y540/StillsFromVideo8.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675390664656-OT63MB7BTCTBCKTCX58J/VIDEO009_Moment.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/778016f0-41d1-40a3-ae2e-641f63f8fc31/IMG_3943.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387725960-H9UNRIEUTE2YKUDH0QBE/install2-1024x672.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387729148-S3P75PTXCF3ZSS3I9XFF/unnamed.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387726549-BFGCMHP52C39UW97UOQT/install3-1024x672.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387726862-Y1D2RZLUKKX910U8R160/install-1024x689.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387729444-YMZTDT4HTI8XA7T9UAYU/Rainbow.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387727365-GP5NJD51CGJMX4SWHSDM/perspectivelook.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607388394616-U2JFT7FHE3ADS9JDE0IH/SeattleStar-PressPhotos1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607399437044-XKPHSC36O2FOQ5RK3BL6/Seattle+Star+Drone-Edit_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1674766128434-8YX5652O31GN31TSY86W/IMG_3944.jpg"
+          ]
+        },
+        "aku-world": {
+          "postName": "aku-world-immersive-environment-nft-miami",
+          "link": "/aku-world-immersive-environment-nft-miami",
+          "title": "Aku World: Immersive Environment",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a09e4cfc-e25d-41de-b1b2-181a4dcb0d82/MainRoom3.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386396393-68B0830YERGD18KUMSDC/image-asset.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386564410-OBZJCVBY96PS03UYBFZ9/BodyScanner2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386572907-DNQL5MBFA9S75DUSFNLU/MainRoom4.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386565888-I1VXR0J7QX5GY8LGJZ5Q/WideShot.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386566287-USUU2W2IV9Z2QGFC22T6/Concert-WideAngle.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386568737-8VR4FBDDGHA0X303Z6U0/MainRoom5.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386567956-TOPKTTCYMWFSWHK7XXE3/KIOSKS2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386570129-5RPQB68Q1KU7IDDDY1G7/KIOSKS.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386571088-0CA51V0YEWJS7BW8YR5H/Gallery2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386571645-LR9TYS3X3WDD1E7YAHRI/Gallery1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386573180-RK70AG7HCEMBT1D5P9XF/MainRoom2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386563950-OHAP0LN58UOQEL7SSR6E/GalleryConcept.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675386574033-SDZAGILNLR7EYTV99V6B/MainRoom1.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a09e4cfc-e25d-41de-b1b2-181a4dcb0d82/MainRoom3.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387725960-H9UNRIEUTE2YKUDH0QBE/install2-1024x672.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387729148-S3P75PTXCF3ZSS3I9XFF/unnamed.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387726549-BFGCMHP52C39UW97UOQT/install3-1024x672.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387726862-Y1D2RZLUKKX910U8R160/install-1024x689.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387729444-YMZTDT4HTI8XA7T9UAYU/Rainbow.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387727365-GP5NJD51CGJMX4SWHSDM/perspectivelook.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607388394616-U2JFT7FHE3ADS9JDE0IH/SeattleStar-PressPhotos1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607399437044-XKPHSC36O2FOQ5RK3BL6/Seattle+Star+Drone-Edit_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1674777355726-ZRQU9CTSCR1EB82ZRGHS/AKUWORLD.jpg"
+          ]
+        },
+        "myshelter": {
+          "postName": "myshelter-project-immersive-enviroment",
+          "link": "/myshelter-project-immersive-enviroment",
+          "title": "MyShelter: Immersive Enviroment",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/2bcdaa1f-d479-404f-9d94-7128df2229a6/IMG_9711.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675545453077-450QQTQJR43XGYPYBVAZ/image-asset.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546379427-QFKBBMULI1LCIZ51KKPS/Middle.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546303783-JCV5Q2EHJNJV20IYDON4/CooridorEmpty.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546303935-B6I6CGARX8GHOJX55JB5/CustomSign1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546311229-HNCQTT9PYV9UTBCM4640/INTERIOR1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546257971-IHCCABPMBLMOGN78DI15/IMG_9687.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546259138-1CVUYGZRRS8IJOQHL7N1/IMG_9700.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546255399-APRA9SX2QVOFSMR0MDM9/image-asset.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546258059-0BDY6Y4FURI2IJDSB864/IMG_9694.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546259129-JAU3TEX1W3NJMS1LNZS0/IMG_9699.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546256872-8MKP4SDB2H7OWDL6KQLD/IMG_9681.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546255769-JPJ32AHYRNESX9GB40QM/IMG_9675.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675546254728-U14TWS2YC59VEYO7NDMG/IMG_9673.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/2bcdaa1f-d479-404f-9d94-7128df2229a6/IMG_9711.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387725960-H9UNRIEUTE2YKUDH0QBE/install2-1024x672.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387729148-S3P75PTXCF3ZSS3I9XFF/unnamed.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387726549-BFGCMHP52C39UW97UOQT/install3-1024x672.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387726862-Y1D2RZLUKKX910U8R160/install-1024x689.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387729444-YMZTDT4HTI8XA7T9UAYU/Rainbow.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607387727365-GP5NJD51CGJMX4SWHSDM/perspectivelook.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607388394616-U2JFT7FHE3ADS9JDE0IH/SeattleStar-PressPhotos1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607399437044-XKPHSC36O2FOQ5RK3BL6/Seattle+Star+Drone-Edit_Moment.jpg",
+            "https://static1.squarespace.com/static/58c0ecd3a5790ae223f48eba/t/63d301cf2b50920a07566add/1674772611352/"
+          ]
+        },
+        "destination": {
+          "postName": "destination-experiential-event",
+          "link": "/destination-experiential-event",
+          "title": "Destination: Experiential Event",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/fd87bcb7-b4c0-48d4-836c-00d87ba04b0a/DESTINATION+SD+%287+of+7%29+copy.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558068768-9GG3VJWRH0DJKWAN0857/IMG_5461.PNG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558067971-K6J3YLZGVPK3BFQ5OU06/midi_controller_v_white.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558068935-V7R2EVXCO6BLQITR6XJ6/PicsForDeck2.PNG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558069745-R8INEOB1HBDZBOQHXVOR/PicsForDeck3.PNG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558233260-B1TUT7RBF4S8M8X2ISCA/IMG_8549.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558234080-X47JL4M9OMJD8QPMET7M/DESTINATION+SD+%285+of+7%29+copy.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558243259-FXVXE0PBPEZZ9HU9TKMS/IMG_9610.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558242559-AKLW6K0VCMK3713379UF/IMG_9776.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/fd87bcb7-b4c0-48d4-836c-00d87ba04b0a/DESTINATION+SD+%287+of+7%29+copy.jpg"
+          ]
+        },
+        "create-our-future": {
+          "postName": "create-our-future-experiential-event",
+          "link": "/create-our-future-experiential-event",
+          "title": "Create Our Future: Experiential Event",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/93119d42-e0fb-4a7f-891b-8d3c0c345479/IMG_2959.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558798504-RGLK6KP9YLL72QOQPGJ5/IMG_2957.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558798351-L2ST2YQZQVEJ95VPB8N1/IMG_2958.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558800096-U8WRT88R2QPLAEU1E959/IMG_2959.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558800596-YB8GWB2Z59XF0FA1OBAH/IMG_2960.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558801655-ZY21LO6HOT2A7X77L7HL/IMG_2961.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675558802250-HNRR6EAR33QSM1VOQL69/IMG_2962.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/93119d42-e0fb-4a7f-891b-8d3c0c345479/IMG_2959.jpg"
+          ]
+        },
+        "buzzfeed": {
+          "postName": "buzzfeed-newfronts-event-production",
+          "link": "/buzzfeed-newfronts-event-production",
+          "title": "Buzzfeed Newfronts: Event production",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/75857023-9c52-4973-9e9b-6336029c9ec4/BuzzFeedNewFronts-Stage-Wide2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675889989501-M4BOWHPHEKLT9ZJLIDUL/BuzzfeedDisplay-NeonSign1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675889993819-E0FWD5E6XF2RGUISYMYE/BuzzFeedNewFronts-Stage-Wide.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675889997490-4UDS5GPLBY6YFEYKT4FE/Buzzfeed-NewfrontsTeamPhoto.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675895681733-ARN87SE9LWVMYSG94KRW/Stage-Previs.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675895490498-RSTE5KR169V3AR7IBBO2/Stage+Right+Side.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675895491744-J0YU2AY19TBYU1Q3QMLB/Stage+Right+Side2.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675889996500-XD9ND6YRFALUX2OGQVL6/BuzzFeedNewFronts-Stage-Wide2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675889989683-Z09CIBPFAE0SDRHSLH3B/BuzzFeedNewFronts-Stage-LSide.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675889992679-X6OZH2TT69XU2IGWEJWX/BuzzFeedNewFronts-Stage-LSide2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675895493032-8E8JNWFFT8AZLW7BFZTJ/Stage+Right+Side3.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675890000104-0KD84Q0XCW3QY69WZNVS/MediaWalls-Fabricated.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675890001184-WAX9HHTDGBECU26ERX7T/MediaWalls-Fabricated2.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/75857023-9c52-4973-9e9b-6336029c9ec4/BuzzFeedNewFronts-Stage-Wide2.jpg"
+          ]
+        },
+        "run-for-the-oceans": {
+          "postName": "run-for-the-oceans-interactive-media-experience",
+          "link": "/run-for-the-oceans-interactive-media-experience",
+          "title": "Run For The Oceans: Interactive Media Experience",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ed85f6-2489-43a1-b5b6-7ca3b0b81dcc/KMP_2826.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965788897-6FDRWATSW2DHW9AOGPXF/KMP_2618.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965791194-QJIJPB9GQDX9VDEGZM2T/KMP_2820.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965793037-PNTA16CIDS2510EYWWR4/KMP_3614.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965794293-M9WW35WNYKKG5UH2A9RF/RTFO2019-PICS-KMP_2875.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965797310-943GD47V5OC60BSYKG9X/DeckScreenCap1.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965799322-YJL2IOK3T8I83I88FFIU/DeckScreenCap3.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/fafd99c0-005c-4c65-b994-cfa8fdfb18ab/DeckScreenCap4.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/e75627eb-f1b4-4e55-813b-89c2fea7f585/whalestill-infinity.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/4281b169-bdd5-4be2-b5ad-8c0643f66de1/whalestill-infinity3.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d3ed633a-fd31-474d-b7cf-23bdc98aa0df/Container-BlackPeark-2.8Mill2.JPG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/c29681c2-4675-4a15-a305-4faf733d34f2/RunForTheOcean-LED+PANEL+WALLS+-+Site+Plan.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/c18c0c03-6e61-4b16-b5b1-2fe48a6c6ebc/RunForTheOcean-LED+PANELSIDE+VIEW+WALLS+-+Site+Plan.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/e8236d73-d1de-4806-8e39-780febf7a6bd/IMG_0453_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8b7e7a5e-b226-4072-a071-ed08338069ee/IMG_0431_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/c0918494-2ed3-4261-b2db-7f7f7b0e5fbb/IMG_0462_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b6f7ede9-a1b5-47d0-9a0d-a3fb81bd3ffb/KMP_4425.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/9721aac0-c6bb-4c16-9e5b-7a764cb57c66/RunForTheOcean-Event+Layout+-+Site+Plan.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d52a1dbb-055b-41e2-bb43-24eab443e25a/DeckScreenCap3.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/e36b32c5-0d71-415b-a26e-e444e0fb8441/IMG_0439_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/3015bbff-8bc9-47f8-8626-7c2efff2c043/IMG_0440_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/bc7aa78d-546d-48a1-90dc-bc59cd3171f8/IMG_0449_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/6ad2d1d8-026e-44f0-8ccd-0c32dac597ea/IMG_0464_Moment-JPG.jpg"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ed85f6-2489-43a1-b5b6-7ca3b0b81dcc/KMP_2826.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607556687040-CBHIQ3XQ6JTFC30K02SZ/KMP_2618.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607556687731-ZFXG173V5XF2YVHK5JGP/KMP_2820.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607556700581-10EPQKUAWZM4IDF47FRJ/KMP_3614.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607556694100-V85P37S5UN0GBXR15EQH/RTFO2019-PICS-KMP_2875.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607573662146-WQQS1SEQ2199JR1XE28X/DeckScreenCap1.png",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607573674727-6C0U95UZWWPCGLKNZDWC/DeckScreenCap3.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b6f7ede9-a1b5-47d0-9a0d-a3fb81bd3ffb/KMP_4425.jpg"
+          ]
+        },
+        "super-bowl-2020": {
+          "postName": "super-bowl-2020-projection-mapping-interactive-ar",
+          "link": "/super-bowl-2020-projection-mapping-interactive-ar",
+          "title": "Super Bowl 2020: Projection Mapping & Interactive AR",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/32cc3934-30d7-4a3e-9b04-518e4ac4b385/IMG_1686_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d2c56f4b-03ae-4ab8-8d98-b86f8ae31b0c/Screen+Shots+For+Projection+Mapping5.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/073bef8b-3107-4aca-acfd-5972d11ec83f/Screen+Shots+For+Projection+Mapping4.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/36e71410-06e1-48a6-8ad6-bc7df47dd886/Screen+Shots+For+Projection+Mapping2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965880268-4VUDE8CPO0X1LTACWI3Y/IntroSlide2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1677098500010-BJA1HNNX1DHIZCIAPB0Q/ARMoment1.JPG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965881462-46D6J3CCBTXI7BG5HYJO/Deck+Screenshot+1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965883598-5EXU78VVRZJOP72OOONH/Screen+Shot+2019-12-18+at+8.59.26+AM.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965882475-JD720VZRXD11S8CYPQ29/roughdrawingofARMoment-Structure.JPG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965885049-ODL1DMVN4QFLPKU92G3W/Screen+Shot+2020-01-16+at+7.06.08+PM.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1677099612125-B409M2VWHHBYQ0BNUH1B/VideoScreenShot1.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965890717-I3U4XTE19NTAB2281GPK/VideoScreenShot5.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965887607-XFVNMTHF83OJ436CTTBK/VideoScreenShot2.png"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/32cc3934-30d7-4a3e-9b04-518e4ac4b385/IMG_1686_Moment.jpg"
+          ]
+        },
+        "flir": {
+          "postName": "flir-history-wall-interactive-media-display",
+          "link": "/flir-history-wall-interactive-media-display",
+          "title": "FLIR History Wall:  Interactive Media Display",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965996604-XR9S4UX67CAWX579WFOF/DC+History+Wall+Demo+4_Moment1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966005487-UPRAWO27J8YDGBIMSSU0/IMG_1483_Moment2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966007307-8EAM96W5FW76EIPZG8J8/IMG_1483_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966008772-J2GGPDCBPAGOID6SE4RH/image0.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966009669-NN6YLS7UCPIXNZ1UX43Y/image1.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966010477-R1YSA6K7PBLNEKR56Z30/FrontView-CadDrawing.JPG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966011712-PS2U8LABAS2IS03QN7XA/ScreenSideConnection-Drawing.JPG",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966012694-IOIWAJHCR9P0GRTQ1RNI/ServerSideConnectionDrawing.JPG"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675965996604-XR9S4UX67CAWX579WFOF/DC+History+Wall+Demo+4_Moment1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491681638-Y6WWCV8S3QLW3X2WSTXV/IMG_1483_Moment2.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491678468-DOQCCIGAEF1X6BXM4NDT/DC+History+Wall+Demo+4_Moment1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491679559-HEVX0IP14GYXUM9WB3JW/IMG_1483_Moment.jpg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491635022-YIHU6H4Y2J8IG7713AFD/image0.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491635629-3DQE1POILIX0M51FA1S5/image1.jpeg",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491634860-YZ12IZK0EPOXMAGBVYWG/FrontView-CadDrawing.JPG",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491635726-P37YCJYMGI0PFE8LAN1M/ScreenSideConnection-Drawing.JPG",
+            "https://images.squarespace-cdn.com/content/v1/58c0ecd3a5790ae223f48eba/1607491636234-IC16WPCEVVBQAGW1PLZL/ServerSideConnectionDrawing.JPG"
+          ]
+        },
+        "infinite-playlist": {
+          "postName": "infinite-playlist-tour-festival-activation-experiential-event",
+          "link": "/infinite-playlist-tour-festival-activation-experiential-event",
+          "title": "Infinite Playlist Tour: Festival Activation - Amazon Music Live at Outside Lands 2023",
+          "images": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/7725828c-1107-43dc-a120-44dea71c8f91/Amazon-Music-Live-Activation-at-OutsideLands.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/602c5bfe-0356-4937-9e2a-40fe31ee76e4/Amazon-Music-Live-Outside-Lands-Activation-Design.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418287154-CK198XIO3KH57UYRH0AN/Amazon-Music-Live+-+Custom+Photobooth-Takeaway.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418286895-BMCMJ6NM1BJWC7XUH9WE/Amazon-Music-Live-Outside-Lands-Activation-Lighting-Design-Booth.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418287975-G6RNQRPZ4UI74ERLFFED/Amazon-Music-Live-Outside-lands-Blondish-Custom-DJ-Lighting-Design.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418288647-KPULHT3XOG8GS1B2D2CK/Amazon-Music-Live-Outside-Lands-Booth-Crowd-Shot-DJ-Experience.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418289794-O5KSKSSF7F1DVBJC0T4W/Amazon-Music-Live-Outsidelands-Custom-DJ-Booth-Lighting-Design.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418290504-0UJ6OKFV7BUDJ9BWDCZO/Amazon-Music-Live-Outside-Lands-Mariah-The-Scientist.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418301589-FEMT2VII2KHCCIB6CVZG/Outside+Lands+Amazon+Music-1.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418303498-E3OZAJB3RUNZOMZWKEKY/Outside+Lands+Amazon+Music-7.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418421822-7QZRQSUT2WWZE7X4A45V/Outside+Lands+Amazon+Music-8.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418418021-PCOVO52JKRA6E5IR5K14/Outside+Lands+Amazon+Music-9.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418426098-XV6HMRR2ZK1XDEUJZ7JU/Outside+Lands+Amazon+Music-11.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718418471068-3EAM23C6X4BOCEU3YVKR/Outside+Lands+Amazon+Music-34.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/0370bc31-2d4b-4b52-99cf-cfd6c8044467/Amazon+Music+Live+event+activation+Outside+Lands+-+Festival+Technical+Drawings.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/506f603c-994b-4aea-ba75-8d024ec91668/Stagecoach+%2818+of+1%29.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/30311a60-816c-4976-9785-9f9f9a5d45f4/IMG_4432.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419751247-3S5UGNKI4F93FYJCDPZ7/60A4D548-DF97-47A7-9E9B-A1DB4CD03BC0.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419751445-T6I3FU6NYF7SMK8NWKWF/82A32AC7-06BC-45A2-B253-56220EF35210.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419752080-J45WLNU1OIHBJKY3XKNK/A471C57F-5EE8-4360-A1AF-28B4568025A4.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419752681-S69V5E8JK2F5G5RWD1HQ/Amazon-Music-Live-Stagecoach-2023-Artist-Meet%26Greet3.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419753302-WHKP3RXMAF7CUNJLWZ3Q/Amazon-Music-Live-Stagecoach-2023-Crowd-Interactive.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419753957-5VJEC6UTSSA868PILCTE/Amazon-Music-Live-Stagecoach-2023-Speaker-Artist-Meet%26Greet.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419754327-OVQ1SBLTQTBF33633A4K/D8DE00BD-1FF3-4810-9D8A-F343BA6E0012.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419759530-L45HE3MRQXH0DNCTC0HY/IMG_4366.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419776468-EGU68GUFCGU1Y9VJQB4Z/Stagecoach+%287+of+18%29.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419791796-W1OUA0BXYHQV8A543FAE/Stagecoach+%288+of+18%29.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419798141-DVLMVCP3SSJGEUE3H08V/Stagecoach+%2812+of+18%29.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1718419808579-A4T53MUO4ZB6LYMMRU6E/Stagecoach+%2814+of+18%29.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/93d1b17e-40c6-4f79-bd9a-ccff090c7de9/activationgrabs.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/ec06803a-8c29-47ef-ad31-a59f2a877b61/Amazon+Music+Live+-+StageCoach+-+Festival+Event+-+Technical+Drawings.png",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a33bd37b-088d-4f75-83e4-ea26b7872df6/Screen+Shot+2023-04-04+at+4.29.22+PM.png"
+          ],
+          "backgrounds": [
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/7725828c-1107-43dc-a120-44dea71c8f91/Amazon-Music-Live-Activation-at-OutsideLands.jpg",
+            "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/506f603c-994b-4aea-ba75-8d024ec91668/Stagecoach+%2818+of+1%29.jpg"
+          ]
+        }
+      },
+      "unresolvedProjectSlugs": []
+    }
+  }
+}

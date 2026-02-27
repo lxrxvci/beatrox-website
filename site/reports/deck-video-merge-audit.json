@@ -1,0 +1,140 @@
+{
+  "sources": {
+    "deckCatalog": "site/reports/deck-project-catalog.json",
+    "videoCatalog": "site/reports/video-link-catalog.json",
+    "mergeMap": "site/reports/project-merge-map.json",
+    "enrichmentReport": "site/reports/deck-video-enrichment-report.json",
+    "newProjectsReport": "site/reports/deck-new-projects-report.json"
+  },
+  "summary": {
+    "deckProjectsExtracted": 21,
+    "deckExternalLinksExtracted": 53,
+    "videoLinksExtracted": 29,
+    "existingProjectsUpdated": 7,
+    "newProjectsCreated": 7,
+    "manualReviewDeckMappings": 7,
+    "manualReviewVideoMappings": 2,
+    "newProjectsWithoutVideos": 2
+  },
+  "highlights": {
+    "updatedProjectSlugs": [
+      "aku-world",
+      "buzzfeed",
+      "create-our-future",
+      "destination",
+      "g-man-experiential-campaign",
+      "infinite-playlist",
+      "projekt-x"
+    ],
+    "createdProjectSlugs": [
+      "disenchantment",
+      "the-great-escape",
+      "el-camino",
+      "g-man-experiential-campaign",
+      "cnn-road-to-270",
+      "projecting-change-racing-extinction",
+      "dubai-360-spherical-projection-theatre"
+    ]
+  },
+  "unresolvedFollowUps": {
+    "deckMappings": [
+      {
+        "source": "deck",
+        "label": "3D Hat Customizer",
+        "slugCandidate": "3d-hat-customizer",
+        "matchedSlug": "the-great-escape",
+        "matchedTitle": "The Great Escape",
+        "score": 0.3684,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "ASPIRE",
+        "slugCandidate": "aspire",
+        "matchedSlug": "flir",
+        "matchedTitle": "FLIR Interactive History Wall",
+        "score": 0.4,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "BIRD OF PARADISE",
+        "slugCandidate": "bird-of-paradise",
+        "matchedSlug": "infinite-playlist",
+        "matchedTitle": "Infinite Playlist Tour",
+        "score": 0.4242,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "BIRD SONG",
+        "slugCandidate": "bird-song",
+        "matchedSlug": "buzzfeed",
+        "matchedTitle": "BuzzFeed NewFronts",
+        "score": 0.3704,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "CENTRIFUGE: ART TECH WALL",
+        "slugCandidate": "centrifuge-art-tech-wall",
+        "matchedSlug": "flir",
+        "matchedTitle": "FLIR Interactive History Wall",
+        "score": 0.4528,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "CONVERGING INFLUENCE",
+        "slugCandidate": "converging-influence",
+        "matchedSlug": "projecting-change-racing-extinction",
+        "matchedTitle": "PROJECTING CHANGE: Racing Extinction",
+        "score": 0.3636,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "IKON PDX LOUNGE / NIGHTCLUB",
+        "slugCandidate": "ikon-pdx-lounge-nightclub",
+        "matchedSlug": "projecting-change-racing-extinction",
+        "matchedTitle": "PROJECTING CHANGE: Racing Extinction",
+        "score": 0.3385,
+        "confidence": "manual_review"
+      }
+    ],
+    "videoMappings": [
+      {
+        "source": "video_md",
+        "label": "Video Wall Content and Setup",
+        "url": "https://youtu.be/gLaGivbp5m0",
+        "slugCandidate": "video-wall-content-and-setup",
+        "matchedSlug": "disenchantment",
+        "matchedTitle": "Disenchantment",
+        "score": 0.381,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "video_md",
+        "label": "Video Wall Content and Setup",
+        "url": "https://youtu.be/ZPQsLwlsQxI",
+        "slugCandidate": "video-wall-content-and-setup",
+        "matchedSlug": "disenchantment",
+        "matchedTitle": "Disenchantment",
+        "score": 0.381,
+        "confidence": "manual_review"
+      }
+    ],
+    "newProjectsWithoutVideos": [
+      {
+        "slug": "g-man-experiential-campaign",
+        "title": "G-MAN Experiential Campaign",
+        "videos": 0
+      },
+      {
+        "slug": "cnn-road-to-270",
+        "title": "CNN: Road to 270",
+        "videos": 0
+      }
+    ]
+  }
+}

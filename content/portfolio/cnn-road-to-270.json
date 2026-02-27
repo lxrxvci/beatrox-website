@@ -1,0 +1,59 @@
+{
+  "title": "CNN: Road to 270",
+  "slug": "/work/cnn-road-to-270",
+  "seo": {
+    "title": "CNN: Road to 270 \u2014 BEATROX Case Study",
+    "description": "CNN: Road to 270 by Beatrox for CNN & Obscura Digital in Empire state Building - New York, NY.",
+    "og": {
+      "title": "CNN: Road to 270 \u2014 BEATROX",
+      "description": "CNN: Road to 270 by Beatrox for CNN & Obscura Digital in Empire state Building - New York, NY.",
+      "image": "/images/deck/cnn-road-to-270/01-image250.jpg"
+    }
+  },
+  "hero": {
+    "headline": "CNN: Road to 270",
+    "subheadline": "CNN: Road to 270 by Beatrox for CNN & Obscura Digital in Empire state Building - New York, NY.",
+    "tags": [
+      "Projection Mapping",
+      "Interactive",
+      "Case Study"
+    ]
+  },
+  "metadata": {
+    "client": "CNN & Obscura Digital",
+    "location": "Empire state Building - New York, NY",
+    "type": "Projection Mapping, Interactive",
+    "tech": [],
+    "partners": []
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "This project delivers projection mapping, interactive outcomes through integrated creative technology and production workflows."
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/cnn-road-to-270/01-image250.jpg",
+      "alt": "Cnn Road To 270 deck image 1"
+    },
+    {
+      "url": "/images/deck/cnn-road-to-270/02-image235.jpg",
+      "alt": "Cnn Road To 270 deck image 2"
+    },
+    {
+      "url": "/images/deck/cnn-road-to-270/03-image239.jpg",
+      "alt": "Cnn Road To 270 deck image 3"
+    },
+    {
+      "url": "/images/deck/cnn-road-to-270/04-image244.jpg",
+      "alt": "Cnn Road To 270 deck image 4"
+    },
+    {
+      "url": "/images/deck/cnn-road-to-270/05-image229.jpg",
+      "alt": "Cnn Road To 270 deck image 5"
+    }
+  ],
+  "videos": []
+}

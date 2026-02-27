@@ -1,0 +1,69 @@
+{
+  "title": "DJ Equipment Rentals",
+  "slug": "/services/dj-equipment-rentals",
+  "seo": {
+    "title": "DJ Equipment Rentals — BEATROX",
+    "description": "Beatrox provides professional DJ equipment rentals for festivals, nightlife events, and brand activations — CDJs, mixers, controllers, and full booth setups with technical support.",
+    "og": {
+      "title": "DJ Equipment Rentals — BEATROX Portland",
+      "description": "Industry-standard DJ equipment for world-class performances — Pioneer CDJ-3000, DJM mixers, and full booth packages from Beatrox.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "DJ Equipment Rentals",
+    "subheadline": "Industry-standard DJ equipment for world-class performances — delivered, set up, and supported by our team.",
+    "cta": {
+      "label": "Get a Quote",
+      "url": "/contact"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "DJ Booth Design & Setup",
+    "CDJ & Media Player Systems",
+    "DJ Mixers & Controllers",
+    "Turntable Systems",
+    "Monitor & Club-Style Speaker Setup",
+    "Audio Interface & Recording Integration",
+    "Technical Support On-Site",
+    "Full Booth Packages for Touring Acts"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "Whether it's a festival headliner, a club night, or a brand event featuring live DJ performance, Beatrox provides complete DJ equipment rental packages configured to artist specs. We work with DJs and event producers to spec the right gear, deliver it to venue, and provide on-site technical support."
+    },
+    {
+      "type": "service_detail",
+      "heading": "What's Included",
+      "content": "Our DJ rental packages can be built around Pioneer DJ CDJ-3000 and DJM-900NXS2 systems, along with custom DJ booth fabrication, monitor speakers, recording interfaces, and full cable management. We also offer touring-grade road cases for traveling acts and can integrate DJ rigs directly into our audio production and LED visual systems."
+    },
+    {
+      "type": "specs",
+      "heading": "Available Equipment",
+      "items": [
+        "Pioneer DJ CDJ-3000 & CDJ-2000NXS2 media players",
+        "Pioneer DJM-900NXS2 & Allen & Heath Xone mixers",
+        "Technics SL-1200 turntable systems",
+        "Denon DJ and Rane controller options",
+        "Custom DJ booth fabrication available",
+        "Road-case and touring-ready packages"
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Infinite Playlist",
+      "slug": "/work/infinite-playlist"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/home/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear-9da90b24.jpg",
+    "galleryImages": [
+      "/images/verified/services/dj-equipment-rentals/Pioneer-djm-s9-s11-s7-Technics-SL-1200-mk7-m5g-m3d-dj-setup-equipment-rental-88b873c0.png",
+      "/images/verified/services/dj-equipment-rentals/Pioneer-CDJ-3000-2000-DJM-a9-Nexus-NXS2-DJ-Equiopment-Rentals-416b9d21.png",
+      "/images/verified/services/dj-equipment-rentals/RCF+and+QSC+Speakers+PA-+and+-Sound-System-and-Speaker-Packages+-+Rentals-91342dac.png"
+    ]
+  }
+}

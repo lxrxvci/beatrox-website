@@ -1,0 +1,181 @@
+{
+  "title": "Home",
+  "slug": "/",
+  "seo": {
+    "title": "BEATROX — Experiential Design & Event Production",
+    "description": "Beatrox is a Portland-based experiential design and event production company. We push the limits of creativity and technology to craft inspiring, unforgettable experiences.",
+    "og": {
+      "title": "BEATROX — Experiential Design & Event Production",
+      "description": "Portland-based experiential design and event production. Drone light shows, LED video walls, projection mapping, custom fabrication, and full-service event production.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "We specialize in experiential design and event production",
+    "subheadline": "Pushing the limits of creativity and technology to craft inspiring, unforgettable stories for our audience.",
+    "cta": {
+      "label": "See Our Work",
+      "url": "/work"
+    },
+    "secondaryCta": {
+      "label": "Book a Consultation",
+      "url": "/services"
+    }
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "heading": "Experiential Design. Built for the Real World.",
+      "body": "We are a team of imaginative storytellers who use technology to bring worlds to life. Our goal is to evoke emotions in our audience and create unforgettable experiences that take you on an exciting and informative journey. Our diverse team of creators, engineers, designers, architects, and technologists work together to turn even the most unconventional ideas into reality."
+    },
+    {
+      "type": "capabilities_grid",
+      "heading": "What We Do",
+      "items": [
+        {
+          "label": "Custom Fabrication",
+          "icon": "fabrication"
+        },
+        {
+          "label": "LED Video Wall",
+          "icon": "led"
+        },
+        {
+          "label": "Drone Light Shows",
+          "icon": "drone"
+        },
+        {
+          "label": "Stage Design",
+          "icon": "stage"
+        },
+        {
+          "label": "Experiential Events",
+          "icon": "experiential"
+        },
+        {
+          "label": "Event Production",
+          "icon": "production"
+        },
+        {
+          "label": "Immersive Environments",
+          "icon": "immersive"
+        },
+        {
+          "label": "Laser Light Shows",
+          "icon": "laser"
+        },
+        {
+          "label": "Multimedia Displays",
+          "icon": "multimedia"
+        },
+        {
+          "label": "DJ Equipment Rentals",
+          "icon": "dj"
+        },
+        {
+          "label": "Audio Production",
+          "icon": "audio"
+        },
+        {
+          "label": "Projection Mapping",
+          "icon": "projection"
+        }
+      ]
+    },
+    {
+      "type": "philosophy",
+      "columns": [
+        {
+          "heading": "Who We Are",
+          "body": "We are a team of imaginative storytellers who use technology to bring worlds to life. Creators, engineers, designers, architects, and technologists united by one mission: craft experiences that make audiences feel something real."
+        },
+        {
+          "heading": "What We Do",
+          "body": "From experiential design and creative technology to specialized production and custom fabrication — we believe any idea is achievable. We are always experimenting with new tools and solutions to bring the best possible results to our clients."
+        },
+        {
+          "heading": "How We Do It",
+          "body": "Collaboration is everything. We work openly with clients and partners at every stage, pushing the limits of what is possible to create work that inspires wonder and genuine human connection."
+        }
+      ]
+    },
+    {
+      "type": "featured_work",
+      "heading": "Selected Work",
+      "items": [
+        {
+          "title": "Run for the Oceans",
+          "slug": "/work/run-for-the-oceans",
+          "tags": [
+            "Adidas",
+            "Interactive",
+            "LED"
+          ]
+        },
+        {
+          "title": "AKU World",
+          "slug": "/work/aku-world",
+          "tags": [
+            "NFT Miami",
+            "Projection Mapping",
+            "3D Scanning"
+          ]
+        },
+        {
+          "title": "Projekt X",
+          "slug": "/work/projekt-x",
+          "tags": [
+            "Adriatique",
+            "Custom Fabrication",
+            "Stage Design"
+          ]
+        },
+        {
+          "title": "MyShelter",
+          "slug": "/work/myshelter",
+          "tags": [
+            "Adidas",
+            "Immersive Environment",
+            "Projection Mapping"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta_bar",
+      "heading": "Ready to create something extraordinary?",
+      "body": "Our team of technical and creative directors is ready to help you bring your vision to life.",
+      "cta": {
+        "label": "Book a Discovery Call",
+        "url": "/contact"
+      }
+    }
+  ],
+  "media": {
+    "heroVideoUrl": "https://www.youtube.com/@beatrox",
+    "droneReelUrl": "https://www.instagram.com/beatrox/reels/",
+    "videos": [
+      {
+        "title": "BEATROX YouTube Features",
+        "provider": "youtube",
+        "url": "https://www.youtube.com/@beatrox",
+        "embedUrl": "https://www.youtube.com/embed?listType=search&list=beatrox%20experiential%20design"
+      },
+      {
+        "title": "Instagram Reels",
+        "provider": "instagram",
+        "url": "https://www.instagram.com/beatrox/reels/",
+        "embedUrl": "https://www.instagram.com/beatrox/embed"
+      }
+    ],
+    "heroImage": "/images/verified/home/IMG_3942-Crop-4692a045.jpg",
+    "galleryImages": [
+      "/images/verified/home/IMG_3942-Crop-4692a045.jpg",
+      "/images/verified/home/L23640_00_CS_6500_N20_printmedium-4055b62a.jpg",
+      "/images/verified/home/DSC02590-3988912b.jpg",
+      "/images/verified/home/DSC01789-71839f6f.JPG",
+      "/images/verified/home/IMG_3944-58541203.jpg",
+      "/images/verified/home/Beatrox+LED+VIDEO+WALL-cb621a51.jpg"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "projectsUpdated": 6,
+  "changes": [
+    {
+      "slug": "aku-world",
+      "removedDuplicates": 1,
+      "remainingVideos": 1
+    },
+    {
+      "slug": "buzzfeed",
+      "removedDuplicates": 1,
+      "remainingVideos": 5
+    },
+    {
+      "slug": "create-our-future",
+      "removedDuplicates": 1,
+      "remainingVideos": 1
+    },
+    {
+      "slug": "destination",
+      "removedDuplicates": 2,
+      "remainingVideos": 2
+    },
+    {
+      "slug": "infinite-playlist",
+      "removedDuplicates": 5,
+      "remainingVideos": 5
+    },
+    {
+      "slug": "projekt-x",
+      "removedDuplicates": 2,
+      "remainingVideos": 4
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "title": "G-MAN Experiential Campaign",
+  "slug": "/work/g-man-experiential-campaign",
+  "seo": {
+    "title": "G-MAN Experiential Campaign \u2014 BEATROX Case Study",
+    "description": "G-MAN Experiential Campaign by Beatrox for Toyota x MTV in Los Angeles, CA.",
+    "og": {
+      "title": "G-MAN Experiential Campaign \u2014 BEATROX",
+      "description": "G-MAN Experiential Campaign by Beatrox for Toyota x MTV in Los Angeles, CA.",
+      "image": "/images/deck/g-man-experiential-campaign/01-image264.png"
+    }
+  },
+  "hero": {
+    "headline": "G-MAN Experiential Campaign",
+    "subheadline": "G-MAN Experiential Campaign by Beatrox for Toyota x MTV in Los Angeles, CA.",
+    "tags": [
+      "Experiential Event",
+      "Case Study"
+    ]
+  },
+  "metadata": {
+    "client": "Toyota x MTV",
+    "location": "Los Angeles, CA",
+    "type": "Experiential Event",
+    "tech": [],
+    "partners": []
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "This project delivers experiential event outcomes through integrated creative technology and production workflows."
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/g-man-experiential-campaign/01-image264.png",
+      "alt": "G-MAN Experiential Campaign deck image 1"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/02-image262.png",
+      "alt": "G-MAN Experiential Campaign deck image 2"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/03-image271.png",
+      "alt": "G-MAN Experiential Campaign deck image 3"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/04-image263.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 4"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/05-image265.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 5"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/06-image267.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 6"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/07-image266.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 7"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/08-image269.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 8"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/09-image282.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 9"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/10-image283.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 10"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/11-image273.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 11"
+    },
+    {
+      "url": "/images/deck/g-man-experiential-campaign/12-image278.jpg",
+      "alt": "G-MAN Experiential Campaign deck image 12"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Toyota C-HR x MTV Music Awards - Experiential Event - Project Recap",
+      "provider": "youtube",
+      "url": "https://youtu.be/xgQJMNINuHU",
+      "embedUrl": "https://www.youtube.com/embed/xgQJMNINuHU"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cms:types": "payload generate:types",
+    "cms:importmap": "payload generate:importmap",
+    "cms:import:media": "node ./scripts/cms-import-media.mjs",
+    "cms:import:pages": "node ./scripts/cms-import-pages.mjs",
+    "cms:import:projects": "node ./scripts/cms-import-projects.mjs",
+    "cms:import:services": "node ./scripts/cms-import-services.mjs",
+    "cms:import:team": "node ./scripts/cms-import-team.mjs",
+    "cms:seed": "node ./scripts/cms-seed.mjs",
+    "youtube:sync": "node ./scripts/youtube-sync.mjs",
+    "seo:audit": "node ./scripts/seo-audit.mjs"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "^3.77.0",
+    "@payloadcms/next": "^3.77.0",
+    "@payloadcms/richtext-lexical": "^3.77.0",
+    "@payloadcms/richtext-slate": "^3.77.0",
+    "googleapis": "^171.4.0",
+    "graphql": "^16.13.0",
+    "next": "^16.2.0-canary.65",
+    "payload": "^3.77.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.58.2",
+    "pngjs": "^7.0.0",
+    "puppeteer": "^24.37.5",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}

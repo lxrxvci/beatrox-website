@@ -1,0 +1,77 @@
+{
+  "title": "LED Video Wall Rentals",
+  "slug": "/services/led-video-wall-rentals",
+  "seo": {
+    "title": "LED Video Wall Rentals — BEATROX",
+    "description": "Beatrox provides LED video wall rentals for events, concerts, activations, and installations — including panel sourcing, configuration, media server integration, and on-site LED technician support.",
+    "og": {
+      "title": "LED Video Wall Rentals — BEATROX Portland",
+      "description": "High-resolution LED panels for any footprint — with full media server integration, custom content, and on-site technical support from Beatrox.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "LED Video Wall Rentals",
+    "subheadline": "High-resolution LED panels for any footprint — with full media server integration, custom content, and on-site technical support.",
+    "cta": {
+      "label": "Get a Quote",
+      "url": "/contact"
+    }
+  },
+  "category": "Production / Build",
+  "capabilities": [
+    "LED Panel Sourcing & Configuration",
+    "Indoor & Outdoor LED Wall Systems",
+    "Seamless Multi-Panel Builds",
+    "Media Server & Playback Solutions",
+    "Content Formatting & Pixel Mapping",
+    "LED Technician (On-Site)",
+    "VJ & Media Server Operation",
+    "Custom Content Design"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "From intimate brand activations to massive festival stages, Beatrox delivers LED video wall systems that fit your space, your content, and your budget. Our team handles everything from panel selection and structural integration to media server programming and live operation."
+    },
+    {
+      "type": "service_detail",
+      "heading": "Turnkey LED Solutions",
+      "content": "We source, configure, and operate LED video wall systems of any size and resolution. Our team has extensive experience with seamless wall-to-wall builds in complex environments, including custom infinity mirror configurations and non-standard architectural surfaces. Every rental includes on-site LED technician support."
+    },
+    {
+      "type": "specs",
+      "heading": "Common Specifications",
+      "items": [
+        "Indoor fine-pitch panels (1.5mm – 3.9mm pixel pitch)",
+        "Outdoor high-brightness panels (6mm – 10mm pixel pitch)",
+        "ROE, Absen, and Unilumin panel options",
+        "Scalable from 10x6ft to 100ft+ wide configurations",
+        "Touring-grade road cases and rigging hardware"
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Run for the Oceans",
+      "slug": "/work/run-for-the-oceans"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/services/led-video-wall-rentals/PHOTOSFORDECK-57-2cdf9bc1.jpg",
+    "galleryImages": [
+      "/images/verified/services/led-video-wall-rentals/Beatrox+LED+VIDEO+WALL+-+Planning+and+Logistisc-01cdad42.PNG",
+      "/images/verified/services/led-video-wall-rentals/PHOTOSFORDECK-51-662e8731.jpg",
+      "/images/verified/services/led-video-wall-rentals/60A4D548-DF97-47A7-9E9B-A1DB4CD03BC0-b1374204.jpg",
+      "/images/verified/services/led-video-wall-rentals/PHOTOSFORDECK-57+_1_-00cc4b39.jpg",
+      "/images/verified/services/led-video-wall-rentals/BeatroxVideoTechStation-9fde9db3.jpg",
+      "/images/verified/services/led-video-wall-rentals/Beatrox+-+LED+VIDEO+WALL+-+Custom+Configurations+-+Portland+-+Seattle-+PNW--d8ebb727.PNG",
+      "/images/verified/services/led-video-wall-rentals/Beatrox+-+LED+VIDEO+WALL+-+Custom+Configurations+-+Portland+-+Seattle-+PNW-+PNG-e13ce58e.jpg",
+      "/images/verified/services/led-video-wall-rentals/PHOTOSFORDECK-83-a661568a.jpg"
+    ]
+  }
+}

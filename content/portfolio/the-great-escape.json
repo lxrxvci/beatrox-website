@@ -1,0 +1,121 @@
+{
+  "title": "The Great Escape",
+  "slug": "/work/the-great-escape",
+  "seo": {
+    "title": "The Great Escape \u2014 BEATROX Case Study",
+    "description": "The Great Escape by Beatrox for ADIDAS in Los Angeles, CA.",
+    "og": {
+      "title": "The Great Escape \u2014 BEATROX",
+      "description": "The Great Escape by Beatrox for ADIDAS in Los Angeles, CA.",
+      "image": "/images/deck/the-great-escape/01-image97.jpg"
+    }
+  },
+  "hero": {
+    "headline": "The Great Escape",
+    "subheadline": "The Great Escape by Beatrox for ADIDAS in Los Angeles, CA.",
+    "tags": [
+      "Product Launch Experience",
+      "Case Study"
+    ]
+  },
+  "metadata": {
+    "client": "ADIDAS",
+    "location": "Los Angeles, CA",
+    "type": "Product Launch Experience",
+    "tech": [],
+    "partners": []
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "This project delivers product launch experience outcomes through integrated creative technology and production workflows."
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/the-great-escape/01-image97.jpg",
+      "alt": "The Great Escape deck image 1"
+    },
+    {
+      "url": "/images/deck/the-great-escape/02-image105.jpg",
+      "alt": "The Great Escape deck image 2"
+    },
+    {
+      "url": "/images/deck/the-great-escape/03-image100.jpg",
+      "alt": "The Great Escape deck image 3"
+    },
+    {
+      "url": "/images/deck/the-great-escape/04-image101.jpg",
+      "alt": "The Great Escape deck image 4"
+    },
+    {
+      "url": "/images/deck/the-great-escape/05-image106.jpg",
+      "alt": "The Great Escape deck image 5"
+    },
+    {
+      "url": "/images/deck/the-great-escape/06-image102.jpg",
+      "alt": "The Great Escape deck image 6"
+    },
+    {
+      "url": "/images/deck/the-great-escape/07-image104.jpg",
+      "alt": "The Great Escape deck image 7"
+    },
+    {
+      "url": "/images/deck/the-great-escape/08-image107.jpg",
+      "alt": "The Great Escape deck image 8"
+    },
+    {
+      "url": "/images/deck/the-great-escape/09-image129.jpg",
+      "alt": "The Great Escape deck image 9"
+    },
+    {
+      "url": "/images/deck/the-great-escape/10-image131.jpg",
+      "alt": "The Great Escape deck image 10"
+    },
+    {
+      "url": "/images/deck/the-great-escape/11-image117.jpg",
+      "alt": "The Great Escape deck image 11"
+    },
+    {
+      "url": "/images/deck/the-great-escape/12-image110.jpg",
+      "alt": "The Great Escape deck image 12"
+    },
+    {
+      "url": "/images/deck/the-great-escape/13-image124.jpg",
+      "alt": "The Great Escape deck image 13"
+    },
+    {
+      "url": "/images/deck/the-great-escape/14-image125.jpg",
+      "alt": "The Great Escape deck image 14"
+    },
+    {
+      "url": "/images/deck/the-great-escape/15-image112.jpg",
+      "alt": "The Great Escape deck image 15"
+    },
+    {
+      "url": "/images/deck/the-great-escape/16-image118.jpg",
+      "alt": "The Great Escape deck image 16"
+    }
+  ],
+  "videos": [
+    {
+      "title": "The Great Escape Video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=36UOkpSwAZQ",
+      "embedUrl": "https://www.youtube.com/embed/36UOkpSwAZQ"
+    },
+    {
+      "title": "The Great Escape Video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=eNT9qqUFrvo",
+      "embedUrl": "https://www.youtube.com/embed/eNT9qqUFrvo"
+    },
+    {
+      "title": "The Great Escape Video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=hq68fLaJ0VA",
+      "embedUrl": "https://www.youtube.com/embed/hq68fLaJ0VA"
+    }
+  ]
+}

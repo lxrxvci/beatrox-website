@@ -1,0 +1,109 @@
+{
+  "title": "El Camino",
+  "slug": "/work/el-camino",
+  "seo": {
+    "title": "El Camino \u2014 BEATROX Case Study",
+    "description": "El Camino by Beatrox for NETFLIX in New York, NY.",
+    "og": {
+      "title": "El Camino \u2014 BEATROX",
+      "description": "El Camino by Beatrox for NETFLIX in New York, NY.",
+      "image": "/images/deck/el-camino/01-image134.jpg"
+    }
+  },
+  "hero": {
+    "headline": "El Camino",
+    "subheadline": "El Camino by Beatrox for NETFLIX in New York, NY.",
+    "tags": [
+      "COMIC-CON Exhibition",
+      "Case Study"
+    ]
+  },
+  "metadata": {
+    "client": "NETFLIX",
+    "location": "New York, NY",
+    "type": "COMIC-CON Exhibition",
+    "tech": [],
+    "partners": []
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "This project delivers comic-con exhibition outcomes through integrated creative technology and production workflows."
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/el-camino/01-image134.jpg",
+      "alt": "El Camino deck image 1"
+    },
+    {
+      "url": "/images/deck/el-camino/02-image115.jpg",
+      "alt": "El Camino deck image 2"
+    },
+    {
+      "url": "/images/deck/el-camino/03-image116.jpg",
+      "alt": "El Camino deck image 3"
+    },
+    {
+      "url": "/images/deck/el-camino/04-image119.jpg",
+      "alt": "El Camino deck image 4"
+    },
+    {
+      "url": "/images/deck/el-camino/05-image120.jpg",
+      "alt": "El Camino deck image 5"
+    },
+    {
+      "url": "/images/deck/el-camino/06-image122.jpg",
+      "alt": "El Camino deck image 6"
+    },
+    {
+      "url": "/images/deck/el-camino/07-image121.jpg",
+      "alt": "El Camino deck image 7"
+    },
+    {
+      "url": "/images/deck/el-camino/08-image126.jpg",
+      "alt": "El Camino deck image 8"
+    },
+    {
+      "url": "/images/deck/el-camino/09-image146.jpg",
+      "alt": "El Camino deck image 9"
+    },
+    {
+      "url": "/images/deck/el-camino/10-image164.jpg",
+      "alt": "El Camino deck image 10"
+    },
+    {
+      "url": "/images/deck/el-camino/11-image136.jpg",
+      "alt": "El Camino deck image 11"
+    },
+    {
+      "url": "/images/deck/el-camino/12-image135.jpg",
+      "alt": "El Camino deck image 12"
+    },
+    {
+      "url": "/images/deck/el-camino/13-image171.jpg",
+      "alt": "El Camino deck image 13"
+    }
+  ],
+  "videos": [
+    {
+      "title": "El Camino Video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=8t2LzKRXT9o",
+      "embedUrl": "https://www.youtube.com/embed/8t2LzKRXT9o"
+    },
+    {
+      "title": "El Camino Video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=SJa555jgOLM",
+      "embedUrl": "https://www.youtube.com/embed/SJa555jgOLM"
+    },
+    {
+      "title": "El Camino Video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=woWvlLrD0pk",
+      "embedUrl": "https://www.youtube.com/embed/woWvlLrD0pk"
+    }
+  ]
+}

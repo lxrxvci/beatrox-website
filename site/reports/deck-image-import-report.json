@@ -1,0 +1,284 @@
+{
+  "projectsUpdated": 14,
+  "changes": [
+    {
+      "slug": "aku-world",
+      "slidesUsed": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "titleSlide": 22,
+      "heroImage": "/images/deck/aku-world/01-image27.jpg",
+      "deckImagesImported": 14
+    },
+    {
+      "slug": "buzzfeed",
+      "slidesUsed": [
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "titleSlide": 246,
+      "heroImage": "/images/deck/buzzfeed/01-image290.png",
+      "deckImagesImported": 17
+    },
+    {
+      "slug": "cnn-road-to-270",
+      "slidesUsed": [
+        200,
+        201,
+        202,
+        203,
+        204
+      ],
+      "titleSlide": 200,
+      "heroImage": "/images/deck/cnn-road-to-270/01-image250.jpg",
+      "deckImagesImported": 5
+    },
+    {
+      "slug": "create-our-future",
+      "slidesUsed": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "titleSlide": 52,
+      "heroImage": "/images/deck/create-our-future/01-image70.png",
+      "deckImagesImported": 9
+    },
+    {
+      "slug": "destination",
+      "slidesUsed": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "titleSlide": 60,
+      "heroImage": "/images/deck/destination/01-image77.png",
+      "deckImagesImported": 13
+    },
+    {
+      "slug": "disenchantment",
+      "slidesUsed": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "titleSlide": 69,
+      "heroImage": "/images/deck/disenchantment/01-image80.jpg",
+      "deckImagesImported": 12
+    },
+    {
+      "slug": "dubai-360-spherical-projection-theatre",
+      "slidesUsed": [
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245
+      ],
+      "titleSlide": 216,
+      "heroImage": "/images/deck/dubai-360-spherical-projection-theatre/01-image233.jpg",
+      "deckImagesImported": 54
+    },
+    {
+      "slug": "el-camino",
+      "slidesUsed": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "titleSlide": 95,
+      "heroImage": "/images/deck/el-camino/01-image134.jpg",
+      "deckImagesImported": 13
+    },
+    {
+      "slug": "g-man-experiential-campaign",
+      "slidesUsed": [
+        196,
+        197,
+        198,
+        199
+      ],
+      "titleSlide": 196,
+      "heroImage": "/images/deck/g-man-experiential-campaign/01-image252.jpg",
+      "deckImagesImported": 3
+    },
+    {
+      "slug": "infinite-playlist",
+      "slidesUsed": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "titleSlide": 3,
+      "heroImage": "/images/deck/infinite-playlist/01-image35.jpg",
+      "deckImagesImported": 29
+    },
+    {
+      "slug": "myshelter",
+      "slidesUsed": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "titleSlide": 42,
+      "heroImage": "/images/deck/myshelter/01-image51.jpg",
+      "deckImagesImported": 15
+    },
+    {
+      "slug": "projecting-change-racing-extinction",
+      "slidesUsed": [
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215
+      ],
+      "titleSlide": 205,
+      "heroImage": "/images/deck/projecting-change-racing-extinction/01-image227.jpg",
+      "deckImagesImported": 11
+    },
+    {
+      "slug": "projekt-x",
+      "slidesUsed": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "titleSlide": 34,
+      "heroImage": "/images/deck/projekt-x/01-image46.jpg",
+      "deckImagesImported": 13
+    },
+    {
+      "slug": "the-great-escape",
+      "slidesUsed": [
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "titleSlide": 79,
+      "heroImage": "/images/deck/the-great-escape/01-image97.jpg",
+      "deckImagesImported": 16
+    }
+  ]
+}

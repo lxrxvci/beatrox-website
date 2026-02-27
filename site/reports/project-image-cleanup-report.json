@@ -1,0 +1,59 @@
+{
+  "projectsUpdated": 9,
+  "changes": [
+    {
+      "slug": "cnn-road-to-270",
+      "imagesBefore": 6,
+      "imagesAfter": 5,
+      "heroImage": "/images/deck/cnn-road-to-270/01-image250.jpg"
+    },
+    {
+      "slug": "create-our-future",
+      "imagesBefore": 16,
+      "imagesAfter": 10,
+      "heroImage": "/images/deck/create-our-future/01-image70.png"
+    },
+    {
+      "slug": "disenchantment",
+      "imagesBefore": 13,
+      "imagesAfter": 12,
+      "heroImage": "/images/deck/disenchantment/01-image80.jpg"
+    },
+    {
+      "slug": "dubai-360-spherical-projection-theatre",
+      "imagesBefore": 55,
+      "imagesAfter": 54,
+      "heroImage": "/images/deck/dubai-360-spherical-projection-theatre/01-image233.jpg"
+    },
+    {
+      "slug": "el-camino",
+      "imagesBefore": 14,
+      "imagesAfter": 13,
+      "heroImage": "/images/deck/el-camino/01-image134.jpg"
+    },
+    {
+      "slug": "g-man-experiential-campaign",
+      "imagesBefore": 4,
+      "imagesAfter": 1,
+      "heroImage": "/images/deck/g-man-experiential-campaign/01-image252.jpg"
+    },
+    {
+      "slug": "projecting-change-racing-extinction",
+      "imagesBefore": 12,
+      "imagesAfter": 11,
+      "heroImage": "/images/deck/projecting-change-racing-extinction/01-image227.jpg"
+    },
+    {
+      "slug": "super-bowl-2020",
+      "imagesBefore": 4,
+      "imagesAfter": 1,
+      "heroImage": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    },
+    {
+      "slug": "the-great-escape",
+      "imagesBefore": 17,
+      "imagesAfter": 16,
+      "heroImage": "/images/deck/the-great-escape/01-image97.jpg"
+    }
+  ]
+}

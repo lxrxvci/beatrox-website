@@ -1,0 +1,195 @@
+{
+  "title": "Projekt X",
+  "slug": "/work/projekt-x",
+  "seo": {
+    "title": "Projekt X \u2014 BEATROX Custom Stage Fabrication",
+    "description": "A custom-fabricated modular X-shaped stage element for Adriatique's worldwide 'X Future' tour \u2014 engineered to California safety standards, pixel-mappable, and built from aircraft-grade aluminum.",
+    "og": {
+      "title": "Projekt X \u2014 Custom Stage Fabrication for Adriatique",
+      "description": "A modular LED-lit X stage element engineered for Adriatique's worldwide tour \u2014 aluminum construction, pixel-mappable, built to California safety standards.",
+      "image": "/images/deck/projekt-x/01-image46.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Projekt X",
+    "subheadline": "A precision-engineered custom stage element built for global touring \u2014 pixel-mapped, laser-mappable, and designed for any orientation.",
+    "tags": [
+      "Custom Scenic",
+      "Fabrication",
+      "Stage Design",
+      "Concert"
+    ]
+  },
+  "metadata": {
+    "client": "Adriatique",
+    "location": "Zurich, Switzerland",
+    "type": "Custom Fabricated Stage Element, Specialized Production",
+    "tech": [
+      "Projection Mapping",
+      "Lighting Design",
+      "Custom Fabrication",
+      "DMX Addressable LED Integration",
+      "Pixel Mapping",
+      "Laser Mapping"
+    ],
+    "materials": [
+      "Aluminum",
+      "DMX Addressable LEDs",
+      "Silicone Diffuser",
+      "Hardened Steel"
+    ],
+    "spec": [
+      "Rhino3D",
+      "SolidWorks"
+    ],
+    "partners": [
+      "SETUP.DESIGN"
+    ]
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "The goal of this project was to create a custom fabricated set piece for Adriatique's upcoming worldwide tour, 'X Future,' that would serve as the central element in the stage design. The set piece was designed to be easily crated, toured, rigged, pixel mapped, laser mapped, and flown in any orientation."
+    },
+    {
+      "type": "concept",
+      "heading": "Design Concept",
+      "content": "The custom-fabricated set piece was engineered to meet the highest safety standards in California, United States, and shipped with all appropriate drawings, load specifications, and engineering stamps. The set piece incorporates custom edge-lit DMX addressable LEDs that outline and are recessed inside the structural arms of the X.\n\nThe highly detailed build drawings were conceived in Rhino3D and finalized in SolidWorks. The X is composed of 4 identical armatures and an interchangeable exterior skinning system, allowing for maximum modularity and flexibility across venues worldwide. Built from aluminum to maximize the strength-to-weight ratio, with extensive rigging points available on each face to allow for unlimited rigging options."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "Modular X-shaped architecture: 4 identical armatures for maximum flexibility",
+        "Interchangeable exterior skinning system for venue adaptation",
+        "Custom edge-lit DMX addressable LEDs for pixel and laser mapping",
+        "California safety standard engineering with full documentation and stamps",
+        "Aluminum construction for optimal strength-to-weight ratio",
+        "Multi-face rigging points for unlimited flown orientations",
+        "Designed for easy crating and international freight",
+        "Fully compatible with projection mapping and interactive software"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "title": "Projekt X Stage Video Highlights",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/@beatrox",
+      "embedUrl": "https://www.youtube.com/embed?listType=search&list=beatrox%20projekt%20x%20stage"
+    },
+    {
+      "title": "Projekt X Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=8jg-tGBkCvc",
+      "embedUrl": "https://www.youtube.com/embed/8jg-tGBkCvc"
+    },
+    {
+      "title": "Projekt X Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=QONdspLc7gU",
+      "embedUrl": "https://www.youtube.com/embed/QONdspLc7gU"
+    },
+    {
+      "title": "Projekt X Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=aw0sENfWiY8",
+      "embedUrl": "https://www.youtube.com/embed/aw0sENfWiY8"
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/projekt-x/01-image46.jpg",
+      "alt": "Projekt X deck image 1"
+    },
+    {
+      "url": "/images/deck/projekt-x/02-image49.jpg",
+      "alt": "Projekt X deck image 2"
+    },
+    {
+      "url": "/images/deck/projekt-x/03-image41.jpg",
+      "alt": "Projekt X deck image 3"
+    },
+    {
+      "url": "/images/deck/projekt-x/04-image34.jpg",
+      "alt": "Projekt X deck image 4"
+    },
+    {
+      "url": "/images/deck/projekt-x/05-image47.jpg",
+      "alt": "Projekt X deck image 5"
+    },
+    {
+      "url": "/images/deck/projekt-x/06-image57.jpg",
+      "alt": "Projekt X deck image 6"
+    },
+    {
+      "url": "/images/deck/projekt-x/07-image74.jpg",
+      "alt": "Projekt X deck image 7"
+    },
+    {
+      "url": "/images/deck/projekt-x/08-image75.jpg",
+      "alt": "Projekt X deck image 8"
+    },
+    {
+      "url": "/images/deck/projekt-x/09-image55.jpg",
+      "alt": "Projekt X deck image 9"
+    },
+    {
+      "url": "/images/deck/projekt-x/10-image50.jpg",
+      "alt": "Projekt X deck image 10"
+    },
+    {
+      "url": "/images/deck/projekt-x/11-image44.jpg",
+      "alt": "Projekt X deck image 11"
+    },
+    {
+      "url": "/images/deck/projekt-x/12-image48.jpg",
+      "alt": "Projekt X deck image 12"
+    },
+    {
+      "url": "/images/deck/projekt-x/13-image58.jpg",
+      "alt": "Projekt X deck image 13"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/IMG_3944.jpg",
+      "alt": "Projekt X custom X stage element in fabrication",
+      "filename": "IMG_3944.jpg"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/StillsFromVideo6.jpg",
+      "alt": "X stage element with LED mapping activated",
+      "filename": "StillsFromVideo6.jpg"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/StillsFromVideo12.jpg",
+      "alt": "Stage element in performance environment",
+      "filename": "StillsFromVideo12.jpg"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/StillsFromVideo14.jpg",
+      "alt": "Adriatique performing with Projekt X rig",
+      "filename": "StillsFromVideo14.jpg"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/StillsFromVideo15.jpg",
+      "alt": "X stage with projection mapping content",
+      "filename": "StillsFromVideo15.jpg"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/StillsFromVideo16.jpg",
+      "alt": "Projekt X full stage overview",
+      "filename": "StillsFromVideo16.jpg"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/StillsFromVideo8.jpg",
+      "alt": "LED-lit stage element close-up",
+      "filename": "StillsFromVideo8.jpg"
+    },
+    {
+      "url": "/images/portfolio/projekt-x/VIDEO009_Moment.jpg",
+      "alt": "Tour performance still with X element",
+      "filename": "VIDEO009_Moment.jpg"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Backline & Stage Rental",
+  "slug": "/services/backline-stage-rental",
+  "seo": {
+    "title": "Backline & Stage Rental — BEATROX",
+    "description": "Beatrox provides professional backline and stage rental services for concerts, tours, and events — drum kits, guitar/bass amplifiers, keyboards, and full stage packages with setup support.",
+    "og": {
+      "title": "Backline & Stage Rental — BEATROX Portland",
+      "description": "Professional-grade backline and stage packages for concerts and tours — drum kits, amplifiers, keyboards, and staging from the Beatrox team.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Backline & Stage Rental",
+    "subheadline": "Professional-grade backline and stage packages — so your artists hit the stage ready to perform, every time.",
+    "cta": {
+      "label": "Get a Quote",
+      "url": "/contact"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Drum Kit Rentals & Configurations",
+    "Guitar & Bass Amplifier Packages",
+    "Keyboard & Synthesizer Systems",
+    "Stage Monitor & IEM Packages",
+    "Stage Riser & Platform Rental",
+    "Touring Stage Packages",
+    "Staging & Rigging",
+    "Backline Technician Support"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "Beatrox's backline and stage rental service is built for touring acts, festivals, and one-off concert productions. Our team — led by Joey Paulekas, who has toured with Odesza and global brands — understands exactly what artists and production managers need from a backline package."
+    },
+    {
+      "type": "service_detail",
+      "heading": "Complete Stage Packages",
+      "content": "From drum kits and amplifiers to staging risers and monitor systems, Beatrox configures stage packages to artist riders and venue specs. We handle delivery, setup, and technical support, and can integrate backline packages with our full AV and lighting production services for a seamless, single-vendor experience."
+    },
+    {
+      "type": "specs",
+      "heading": "Common Backline",
+      "items": [
+        "Pearl, DW, and Ludwig drum kit configurations",
+        "Marshall, Fender, Mesa/Boogie guitar amplifiers",
+        "Ampeg, Darkglass bass amplification",
+        "Nord, Roland, and Korg keyboard/synthesizer systems",
+        "Stage risers and custom platform builds",
+        "Audio-Technica and Shure microphone packages"
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Projekt X",
+      "slug": "/work/projekt-x"
+    },
+    {
+      "title": "BuzzFeed",
+      "slug": "/work/buzzfeed"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
+    "galleryImages": []
+  }
+}

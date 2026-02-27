@@ -1,0 +1,74 @@
+{
+  "title": "Full Service Event Production",
+  "slug": "/services/event-production",
+  "seo": {
+    "title": "Event Production Services — BEATROX",
+    "description": "Beatrox provides full-service event production including planning, logistics, AV equipment sourcing, tour and production management, venue sourcing, permit submittal, and on-site labor.",
+    "og": {
+      "title": "Full Service Event Production — BEATROX",
+      "description": "From first concept to final strike — Beatrox manages every layer of your event including AV, logistics, labor, venue, and production management.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Full Service Event Production",
+    "subheadline": "From first concept to final strike, we manage every layer of your event — so you can focus on your audience.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/contact"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Event Planning & Logistics",
+    "AV Equipment Sourcing & Rentals",
+    "Tour Management",
+    "Production Management",
+    "Labor Hire Roles: TD, PM, A1/A2, V1/V2, L1/L2",
+    "Venue Sourcing & Booking",
+    "Permit Submittal",
+    "System Maintenance & Support"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "Beatrox is a full-service event production partner. Whether you're producing a brand activation, a touring concert, an experiential pop-up, or a corporate event, our team handles everything — from pre-production planning to on-site technical direction and final strike."
+    },
+    {
+      "type": "service_detail",
+      "heading": "What We Handle",
+      "content": "Our production team serves as your single point of contact, managing AV equipment sourcing and rentals, venue coordination, labor hiring, permit submittal, and day-of execution. We have deep experience with complex logistics across multiple formats and venue types, and we bring a seasoned network of production professionals to every project."
+    },
+    {
+      "type": "labor_roles",
+      "heading": "Available Labor Roles",
+      "items": [
+        "Technical Director (TD)",
+        "Production Manager (PM)",
+        "Audio Engineer A1 / A2",
+        "Video Engineer V1 / V2",
+        "Lighting Director L1 / L2",
+        "Crew Chief & Stage Manager",
+        "Riggers & Loaders"
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "BuzzFeed",
+      "slug": "/work/buzzfeed"
+    },
+    {
+      "title": "Run for the Oceans",
+      "slug": "/work/run-for-the-oceans"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
+    "galleryImages": []
+  }
+}

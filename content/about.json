@@ -1,0 +1,145 @@
+{
+  "title": "About",
+  "slug": "/about",
+  "seo": {
+    "title": "About BEATROX — Experiential Design & Event Production",
+    "description": "Beatrox LLC is a Portland, OR-based team of imaginative storytellers, engineers, designers, and technologists who build world-class experiential events and immersive environments.",
+    "og": {
+      "title": "About BEATROX",
+      "description": "A Portland-based team of creators, engineers, designers, and technologists building world-class experiential events and immersive environments.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Who Are We",
+    "subheadline": "We are a team of imaginative storytellers who use technology to bring worlds to life.",
+    "cta": {
+      "label": "Meet the Team",
+      "url": "/team"
+    }
+  },
+  "sections": [
+    {
+      "type": "text_block",
+      "heading": "Our Story",
+      "body": "Beatrox was founded in Portland, Oregon with a single conviction: any idea, no matter how unconventional, is achievable. What started as a small collective of designers and technologists has grown into a full-service experiential design and event production company trusted by some of the world's most iconic brands.\n\nWith over 20 years of combined industry experience, our team has designed and produced events across the United States and internationally — from immersive retail activations for Adidas to large-scale stage fabrication for worldwide tours."
+    },
+    {
+      "type": "three_column",
+      "columns": [
+        {
+          "heading": "Who We Are",
+          "body": "A diverse collective of creators, engineers, designers, architects, and technologists. We believe the best work happens when every discipline is at the table, collaborating toward a shared vision."
+        },
+        {
+          "heading": "What We Do",
+          "body": "Our services span the full spectrum of experiential production: environmental design, LED and projection systems, custom fabrication, interactive media, drone and laser shows, and turnkey event management."
+        },
+        {
+          "heading": "How We Do It",
+          "body": "Collaboration is the foundation of everything we build. We work openly with our clients and partners at every stage — from first concept to final strike — to ensure the work exceeds expectations every time."
+        }
+      ]
+    },
+    {
+      "type": "values",
+      "heading": "What Drives Us",
+      "items": [
+        {
+          "title": "Creativity Without Limits",
+          "body": "We believe any idea is achievable. Our team constantly experiments with emerging tools and technologies to ensure our clients get the most innovative solutions possible."
+        },
+        {
+          "title": "Technical Excellence",
+          "body": "From engineering certification to media server programming, our technical standards are uncompromising. Every build is designed to be safe, reliable, and spectacular."
+        },
+        {
+          "title": "Human Connection",
+          "body": "Technology is our tool, not our goal. Every experience we create is designed to evoke genuine emotion and create lasting memories for audiences."
+        },
+        {
+          "title": "True Collaboration",
+          "body": "We are partners, not vendors. We immerse ourselves in each client's vision, working side-by-side to make great work that inspires wonder."
+        }
+      ]
+    },
+    {
+      "type": "capabilities_summary",
+      "heading": "Our Capabilities",
+      "categories": [
+        {
+          "label": "Design",
+          "items": [
+            "Environmental Design",
+            "Lighting Design",
+            "Pre-Visualization",
+            "3D Animation & Motion Capture",
+            "Realtime Content (AR, VR, XR)",
+            "Audio, Video & Lighting Content Design",
+            "Consultation & System Design",
+            "Interactive UI/UX Design"
+          ]
+        },
+        {
+          "label": "Build",
+          "items": [
+            "Custom Fabrication",
+            "Set & Scenic Assembly",
+            "Staging & Rigging",
+            "Lighting Integration",
+            "Trade & Convention Booths",
+            "Permanent Installation",
+            "CNC Machining",
+            "Materials Sourcing & Selection"
+          ]
+        },
+        {
+          "label": "Technical",
+          "items": [
+            "Technical Direction",
+            "Drafting & Detail Drawings",
+            "Engineering Certification",
+            "Software Development",
+            "Site & Floor Plans",
+            "Technical Documentation",
+            "Media Server & Playback Solutions",
+            "AV System Integration"
+          ]
+        },
+        {
+          "label": "Production",
+          "items": [
+            "Event Planning & Logistics",
+            "AV Equipment Sourcing & Rentals",
+            "Tour Management",
+            "Production Management",
+            "Labor Hire Roles: TD, PM, A1/A2, V1/V2, L1/L2",
+            "Venue Sourcing & Booking",
+            "Permit Submittal",
+            "System Maintenance & Support"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta_bar",
+      "heading": "Let's Build Something Together",
+      "body": "Our team is ready to help you create something truly extraordinary. Book a discovery call and get professional advice today.",
+      "cta": {
+        "label": "Book a Consultation",
+        "url": "/contact"
+      }
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/home/IMG_3942-Crop-4692a045.jpg",
+    "sectionImages": [
+      "/images/verified/home/IMG_3942-Crop-4692a045.jpg",
+      "/images/verified/home/L23640_00_CS_6500_N20_printmedium-4055b62a.jpg",
+      "/images/verified/home/DSC02590-3988912b.jpg",
+      "/images/verified/home/DSC01789-71839f6f.JPG",
+      "/images/verified/home/IMG_3944-58541203.jpg",
+      "/images/verified/home/Beatrox+LED+VIDEO+WALL-cb621a51.jpg"
+    ]
+  }
+}

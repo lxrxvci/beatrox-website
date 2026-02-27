@@ -1,0 +1,71 @@
+{
+  "title": "Laser Light Shows",
+  "slug": "/services/laser-shows",
+  "seo": {
+    "title": "Laser Light Shows — BEATROX",
+    "description": "Beatrox designs and operates professional laser light shows for concerts, festivals, and experiential events — custom beam choreography, sky scanning, and laser mapping.",
+    "og": {
+      "title": "Laser Light Shows — BEATROX",
+      "description": "Professional laser systems choreographed to your music and brand — sky scanning, beam effects, and laser mapping for concerts and festivals.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Laser Light Shows",
+    "subheadline": "High-powered laser systems choreographed to your music and brand — cutting through the dark with precision and impact.",
+    "cta": {
+      "label": "Get a Quote",
+      "url": "/contact"
+    }
+  },
+  "category": "Specialty Production",
+  "capabilities": [
+    "Multi-Laser System Design",
+    "Custom Beam Choreography",
+    "Sky Scanning & Fan Beams",
+    "Laser Mapping on Surfaces & Structures",
+    "Integration with LED, Projection & Drone",
+    "Live Event Operation",
+    "Variance Permitting",
+    "Pre-Visualization & Programming"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "Few effects command an audience's attention like a precisely choreographed laser show. Beatrox designs and operates professional laser systems for concerts, festivals, brand activations, and large-scale experiential events — from tight venue beam effects to massive outdoor sky scans."
+    },
+    {
+      "type": "service_detail",
+      "heading": "Custom Laser Production",
+      "content": "Our laser shows are fully custom-programmed to your event's music, timing, and creative vision. We handle all pre-visualization and programming in advance, with live operation on event day. Beatrox is experienced in integrating laser with LED video walls, projection mapping, and drone light shows for unified multi-system spectacles."
+    },
+    {
+      "type": "specs",
+      "heading": "System Options",
+      "items": [
+        "DPSS full-color RGB laser systems (1W – 40W+)",
+        "Indoor and outdoor rated enclosures",
+        "Sky scan, fan beam, aerial, and surface mapping modes",
+        "ILDA-compatible programming",
+        "Variance permit coordination included"
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Projekt X",
+      "slug": "/work/projekt-x"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/services/laser-shows/Laser-Show-Example1-97b60e2c.jpg",
+    "galleryImages": [
+      "/images/verified/services/laser-shows/Pangolin-Beyond-Laser-Show-Software-Equipment-Beatrox-faf5d1ee.jpg",
+      "/images/verified/services/laser-shows/Laser+Show+Complience+Beatrox+and+Laseronics-09c904fb.png",
+      "/images/verified/services/laser-shows/Laser-Show-Example2-caa0ff71.jpg",
+      "/images/verified/services/laser-shows/Laser-Show-Graphics-Display-421a1543.jpg",
+      "/images/verified/services/laser-shows/Laser-Show-Example3-Cairo-Egypt-Armin-Van-Buren-a5396ba5.jpg",
+      "/images/verified/services/laser-shows/Laser-Show-Example4-fa5953e5.jpg"
+    ]
+  }
+}

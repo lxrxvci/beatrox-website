@@ -1,0 +1,116 @@
+{
+  "title": "Create Our Future",
+  "slug": "/work/create-our-future",
+  "seo": {
+    "title": "Create Our Future \u2014 BEATROX Experiential Event",
+    "description": "Beatrox produced an experiential event for Urban Outfitters x Adidas at Mack Sennett Studio in LA \u2014 featuring a projection-mapped 270-degree Cyclone Wall, live performances by Phantogram, and a custom VR avatar creation experience.",
+    "og": {
+      "title": "Create Our Future \u2014 Urban Outfitters x Adidas",
+      "description": "A 270-degree projection-mapped Cyclone Wall, Phantogram live, and VR avatar creation \u2014 Beatrox produced this experiential event for Urban Outfitters x Adidas in LA.",
+      "image": "/images/deck/create-our-future/01-image70.png"
+    }
+  },
+  "hero": {
+    "headline": "Create Our Future",
+    "subheadline": "A 270-degree projection-mapped Cyclone Wall, live music from Phantogram, and a custom VR avatar experience \u2014 produced for Urban Outfitters x Adidas at Mack Sennett Studio.",
+    "tags": [
+      "Stage Design",
+      "Concert",
+      "Experiential Event",
+      "VR Experience",
+      "Lighting Design"
+    ]
+  },
+  "metadata": {
+    "client": "Urban Outfitters x Adidas",
+    "location": "Mack Sennett Studio \u2014 Los Angeles, CA",
+    "type": "Experiential Event, Stage Design, Concert, VR Experience, Lighting Design",
+    "tech": [
+      "Projection Mapping",
+      "Self-Climbing Truss",
+      "270-Degree Cyclone Wall",
+      "VR Headsets",
+      "Kinect Camera",
+      "3D Digital Avatar Creation"
+    ],
+    "software": [
+      "Unity",
+      "TouchDesigner"
+    ],
+    "partners": [
+      "Round House",
+      "DotDotDash"
+    ]
+  },
+  "body": [
+    {
+      "type": "concept",
+      "heading": "The Experience",
+      "content": "Create Our Future was an experiential event created for Adidas and Urban Outfitters that centered on live music, immersive visual production, and cutting-edge interactive technology. The centerpiece was a projection-mapped 270-degree Cyclone Wall \u2014 a self-climbing truss system that wrapped the stage in dynamic, full-surround visuals as a backdrop for multiple artist performances, including Phantogram.\n\nGuests were also invited to experience a custom-built VR station where they could draw and customize 3D digital avatars captured from a Microsoft Kinect Camera \u2014 bringing their personal creative expression into a digital world."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "270-degree projection-mapped Cyclone Wall with self-climbing truss system",
+        "Full-surround dynamic visual content for live performances",
+        "Multiple artist performances including Phantogram",
+        "Custom VR experience: guests draw and customize 3D digital avatars",
+        "Microsoft Kinect Camera for body-driven avatar capture",
+        "Unity + TouchDesigner pipeline for real-time content",
+        "Full lighting design and programming",
+        "Custom fabrication by Round House"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/create-our-future/01-image70.png",
+      "alt": "Create Our Future deck image 1"
+    },
+    {
+      "url": "/images/deck/create-our-future/02-image72.png",
+      "alt": "Create Our Future deck image 2"
+    },
+    {
+      "url": "/images/deck/create-our-future/03-image91.jpg",
+      "alt": "Create Our Future deck image 3"
+    },
+    {
+      "url": "/images/deck/create-our-future/04-image96.jpg",
+      "alt": "Create Our Future deck image 4"
+    },
+    {
+      "url": "/images/deck/create-our-future/05-image92.jpg",
+      "alt": "Create Our Future deck image 5"
+    },
+    {
+      "url": "/images/deck/create-our-future/06-image90.jpg",
+      "alt": "Create Our Future deck image 6"
+    },
+    {
+      "url": "/images/deck/create-our-future/07-image98.jpg",
+      "alt": "Create Our Future deck image 7"
+    },
+    {
+      "url": "/images/deck/create-our-future/08-image93.jpg",
+      "alt": "Create Our Future deck image 8"
+    },
+    {
+      "url": "/images/deck/create-our-future/09-image71.jpg",
+      "alt": "Create Our Future deck image 9"
+    },
+    {
+      "url": "/images/verified/work/create-our-future/IMG_2959-154e3954.jpg",
+      "alt": "Create Our Future preview image"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Create Our Future Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=woobYB8jRSQ",
+      "embedUrl": "https://www.youtube.com/embed/woobYB8jRSQ"
+    }
+  ]
+}

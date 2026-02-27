@@ -1,0 +1,74 @@
+{
+  "title": "Lighting Services",
+  "slug": "/services/lighting-services",
+  "seo": {
+    "title": "Lighting Design & Services — BEATROX",
+    "description": "Beatrox provides full-spectrum lighting services — from environmental and stage lighting design and pre-visualization to lighting integration, programming, and live operation for events and installations.",
+    "og": {
+      "title": "Lighting Design & Services — BEATROX",
+      "description": "Lighting that transforms spaces and elevates every moment — designed, programmed, and operated by Beatrox for events, concerts, and permanent installations.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Lighting Services",
+    "subheadline": "Lighting that transforms spaces and elevates every moment — designed, programmed, and operated by our experienced team.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/contact"
+    }
+  },
+  "category": "Design / Build / Technical",
+  "capabilities": [
+    "Lighting Design (Environmental & Stage)",
+    "Pre-Visualization",
+    "Audio-Reactive Lighting Programming",
+    "Lighting Integration into Custom Builds",
+    "DMX & Addressable LED Systems",
+    "Media Server-Driven Lighting",
+    "Trade Show & Permanent Installation Lighting",
+    "Lighting Director (L1/L2) On-Site Operation"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "Lighting is the invisible hand that shapes every experience. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, Beatrox's lighting team designs systems that serve your vision — technically and aesthetically."
+    },
+    {
+      "type": "service_detail",
+      "heading": "From Concept to Operation",
+      "content": "Our lighting services begin at the design stage with full pre-visualization, allowing clients to see the lighting environment before a single fixture is hung. We then handle all integration, programming, and live operation — including DMX-controlled rigs, addressable LED systems, media server-driven content, and audio-reactive programming for immersive environments."
+    },
+    {
+      "type": "service_list",
+      "heading": "Applications",
+      "items": [
+        "Concert and festival stage lighting",
+        "Experiential and immersive environment lighting",
+        "Retail and product launch activations",
+        "Corporate and brand events",
+        "Trade show and convention booth lighting",
+        "Permanent architectural installations",
+        "Film and broadcast set lighting"
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "MyShelter",
+      "slug": "/work/myshelter"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    },
+    {
+      "title": "Projekt X",
+      "slug": "/work/projekt-x"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
+    "galleryImages": []
+  }
+}

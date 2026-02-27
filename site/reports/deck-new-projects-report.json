@@ -1,0 +1,40 @@
+{
+  "created": [
+    {
+      "slug": "disenchantment",
+      "title": "Disenchantment",
+      "videos": 1
+    },
+    {
+      "slug": "the-great-escape",
+      "title": "The Great Escape",
+      "videos": 3
+    },
+    {
+      "slug": "el-camino",
+      "title": "El Camino",
+      "videos": 3
+    },
+    {
+      "slug": "g-man-experiential-campaign",
+      "title": "G-MAN Experiential Campaign",
+      "videos": 0
+    },
+    {
+      "slug": "cnn-road-to-270",
+      "title": "CNN: Road to 270",
+      "videos": 0
+    },
+    {
+      "slug": "projecting-change-racing-extinction",
+      "title": "PROJECTING CHANGE: Racing Extinction",
+      "videos": 1
+    },
+    {
+      "slug": "dubai-360-spherical-projection-theatre",
+      "title": "DUBAI 360: Spherical Projection Theatre",
+      "videos": 2
+    }
+  ],
+  "skipped": []
+}

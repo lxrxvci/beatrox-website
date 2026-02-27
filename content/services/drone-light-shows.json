@@ -1,0 +1,67 @@
+{
+  "title": "Drone Light Shows",
+  "slug": "/services/drone-light-shows",
+  "seo": {
+    "title": "Drone Light Shows — BEATROX",
+    "description": "Beatrox produces spectacular drone light shows for events, festivals, and brand activations — custom choreographed formations with full FAA compliance and operational support.",
+    "og": {
+      "title": "Drone Light Shows — BEATROX",
+      "description": "Hundreds of synchronized drones painting the night sky with your story — custom choreographed drone light shows for festivals and brand activations.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Drone Light Shows",
+    "subheadline": "Hundreds of synchronized drones painting the night sky with your story — a breathtaking spectacle that no other medium can match.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/contact"
+    }
+  },
+  "category": "Specialty Production",
+  "capabilities": [
+    "Custom Drone Formation Design",
+    "3D Animation & Pre-Visualization",
+    "FAA Coordination & Permitting",
+    "Indoor & Outdoor Drone Shows",
+    "Integration with Laser & Pyro",
+    "Drone Show Operations & Safety",
+    "Brand Logo & Message Formations",
+    "Live Event Synchronization"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "content": "Drone light shows are the most awe-inspiring spectacle in live events today. Beatrox — through the expertise of Alan Curtiss, owner of Sky Lites Drone Shows — designs and operates custom drone formations that tell your brand's story in the sky, at a scale audiences will never forget."
+    },
+    {
+      "type": "service_detail",
+      "heading": "End-to-End Drone Production",
+      "content": "From initial concept and 3D pre-visualization to FAA coordination, permitting, on-site setup, and live show operations, Beatrox manages the entire drone show production pipeline. Every formation is custom-designed to your brand, your story, and your event timeline."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Ideal For",
+      "items": [
+        "Festival headline acts and concert finales",
+        "Brand launches and product reveals",
+        "Corporate events and milestone celebrations",
+        "Sporting events and halftime shows",
+        "Public art installations",
+        "New Year's Eve and seasonal spectacles"
+      ]
+    }
+  ],
+  "relatedWork": [],
+  "media": {
+    "heroImage": "/images/verified/services/drone-light-shows/ship3-fdfa40c6.png",
+    "galleryImages": [
+      "/images/verified/services/drone-light-shows/scan+me+final-c81eab7f.jpg",
+      "/images/verified/services/drone-light-shows/spaceman-1aa70c45.png",
+      "/images/verified/services/drone-light-shows/Sky-Lites-Drone-Shows-658d95f5.jpg",
+      "/images/verified/services/drone-light-shows/qr-b998aca3.png",
+      "/images/verified/services/drone-light-shows/dead-47810eb2.png",
+      "/images/verified/services/drone-light-shows/sotrk-02e1bfcb.jpg"
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "title": "AKU World",
+  "slug": "/work/aku-world",
+  "seo": {
+    "title": "AKU World \u2014 BEATROX Experiential Design",
+    "description": "An NFT Miami experiential event for AKU+FTX featuring projection-mapped environments, 3D body scanning for digital avatar minting, holographic displays, and live performances.",
+    "og": {
+      "title": "AKU World \u2014 NFT Miami Experiential Event",
+      "description": "A multi-room immersive event in New York \u2014 projection mapping, 3D body scanning, holographic displays, and live music for AKU+FTX.",
+      "image": "/images/deck/aku-world/01-image27.jpg"
+    }
+  },
+  "hero": {
+    "headline": "AKU World",
+    "subheadline": "A multi-room experiential event bringing a digital universe to life \u2014 projection mapping, 3D scanning, holographic displays, and live music, all under one roof.",
+    "tags": [
+      "Immersive Environment",
+      "Experiential Event",
+      "NFT Miami"
+    ]
+  },
+  "metadata": {
+    "client": "AKU + FTX",
+    "location": "New York, NY",
+    "type": "NFT Miami Experiential Event, Immersive Environment",
+    "tech": [
+      "Projection Mapping",
+      "Interactive Software Development",
+      "Lighting Design",
+      "Environmental Design",
+      "Custom Fabrication",
+      "3D Scanning",
+      "Holographic Displays",
+      "3D World Creation"
+    ],
+    "spec": [
+      "Projectors",
+      "Blender",
+      "TouchDesigner",
+      "Figma",
+      "Unreal Engine",
+      "Tiled TV Displays",
+      "Portal Displays",
+      "Custom Scenic Fabrication",
+      "LED Lighting"
+    ],
+    "partners": [
+      "PHNTM",
+      "MATTE",
+      "imagine{X}"
+    ]
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "Create a real-world space for the NFT Miami event that brings the AKU brand to life \u2014 featuring a projection-mapped environment in the main room, an interactive subway lobby, a merch room with 3D holographic displays, and a body scanner for creating and minting digital avatars. Host panel discussions, live music performances, and a patio bar for attendees. Custom fabrication of a large-scale helmet installation, as well as exterior signage, was also included in the project."
+    },
+    {
+      "type": "concept",
+      "heading": "Design Concept",
+      "content": "AKU World is centered around the character of Aku \u2014 a digital explorer on a mission to prove that no dream is too big and no obstacle is too large. Guests were invited to explore three virtual worlds created for the experience, including the opportunity to control a large custom helmet installation, choose their 'Inner Astronaut,' and create and mint their own digital avatar through a 4D body scan.\n\nThe projections and lighting in the space were linked to the live musical performances, creating a fully immersive and dynamic environment that responded in real time to the energy of the crowd."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "Main room projection-mapped environment with Unreal Engine real-time content",
+        "Interactive subway lobby experience",
+        "Merch room with 3D holographic portal displays",
+        "4D body scanner for digital avatar creation and NFT minting",
+        "Custom fabricated large-scale helmet installation",
+        "Exterior signage and environmental design",
+        "Live music performances synced to lighting and projection",
+        "Panel discussions and patio bar"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/aku-world/01-image27.jpg",
+      "alt": "Aku World deck image 1"
+    },
+    {
+      "url": "/images/deck/aku-world/02-image20.jpg",
+      "alt": "Aku World deck image 2"
+    },
+    {
+      "url": "/images/deck/aku-world/03-image15.jpg",
+      "alt": "Aku World deck image 3"
+    },
+    {
+      "url": "/images/deck/aku-world/04-image32.jpg",
+      "alt": "Aku World deck image 4"
+    },
+    {
+      "url": "/images/deck/aku-world/05-image31.jpg",
+      "alt": "Aku World deck image 5"
+    },
+    {
+      "url": "/images/deck/aku-world/06-image26.jpg",
+      "alt": "Aku World deck image 6"
+    },
+    {
+      "url": "/images/deck/aku-world/07-image36.jpg",
+      "alt": "Aku World deck image 7"
+    },
+    {
+      "url": "/images/deck/aku-world/08-image30.jpg",
+      "alt": "Aku World deck image 8"
+    },
+    {
+      "url": "/images/deck/aku-world/09-image39.jpg",
+      "alt": "Aku World deck image 9"
+    },
+    {
+      "url": "/images/deck/aku-world/10-image45.jpg",
+      "alt": "Aku World deck image 10"
+    },
+    {
+      "url": "/images/deck/aku-world/11-image43.jpg",
+      "alt": "Aku World deck image 11"
+    },
+    {
+      "url": "/images/deck/aku-world/12-image37.jpg",
+      "alt": "Aku World deck image 12"
+    },
+    {
+      "url": "/images/deck/aku-world/13-image42.jpg",
+      "alt": "Aku World deck image 13"
+    },
+    {
+      "url": "/images/deck/aku-world/14-image52.jpg",
+      "alt": "Aku World deck image 14"
+    },
+    {
+      "url": "/images/portfolio/aku-world/BodyScanner2.jpg",
+      "alt": "4D body scanner for digital avatar creation",
+      "filename": "BodyScanner2.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/MainRoom4.jpg",
+      "alt": "AKU World main room projection mapping",
+      "filename": "MainRoom4.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/WideShot.jpeg",
+      "alt": "Wide shot of AKU World event space",
+      "filename": "WideShot.jpeg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/Concert-WideAngle.jpg",
+      "alt": "Live concert wide angle with synchronized lighting",
+      "filename": "Concert-WideAngle.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/MainRoom5.jpg",
+      "alt": "Main room immersive projection environment",
+      "filename": "MainRoom5.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/KIOSKS2.jpg",
+      "alt": "Interactive kiosks for avatar selection",
+      "filename": "KIOSKS2.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/KIOSKS.jpg",
+      "alt": "AKU World kiosk experience",
+      "filename": "KIOSKS.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/Gallery2.jpg",
+      "alt": "Gallery room with holographic displays",
+      "filename": "Gallery2.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/Gallery1.jpg",
+      "alt": "Gallery concept environment",
+      "filename": "Gallery1.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/MainRoom2.jpg",
+      "alt": "Main room with audience",
+      "filename": "MainRoom2.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/GalleryConcept.jpg",
+      "alt": "Gallery concept design",
+      "filename": "GalleryConcept.jpg"
+    },
+    {
+      "url": "/images/portfolio/aku-world/MainRoom1.jpg",
+      "alt": "AKU World main room overview",
+      "filename": "MainRoom1.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "title": "AKU World Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=wEehI2AX09I",
+      "embedUrl": "https://www.youtube.com/embed/wEehI2AX09I"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Services",
+  "slug": "/services",
+  "seo": {
+    "title": "Services — BEATROX",
+    "description": "We offer the full spectrum of experiential event design and production services — Design, Build, Technical, and Production.",
+    "og": {
+      "title": "Services — BEATROX",
+      "description": "Full-spectrum experiential event services from Design and Build to Technical and Production.",
+      "image": "/og-default.jpg"
+    }
+  }
+}

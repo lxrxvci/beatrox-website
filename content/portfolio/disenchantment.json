@@ -1,0 +1,93 @@
+{
+  "title": "Disenchantment",
+  "slug": "/work/disenchantment",
+  "seo": {
+    "title": "Disenchantment \u2014 BEATROX Case Study",
+    "description": "Disenchantment by Beatrox for NETFLIX in San Diego, CA.",
+    "og": {
+      "title": "Disenchantment \u2014 BEATROX",
+      "description": "Disenchantment by Beatrox for NETFLIX in San Diego, CA.",
+      "image": "/images/deck/disenchantment/01-image80.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Disenchantment",
+    "subheadline": "Disenchantment by Beatrox for NETFLIX in San Diego, CA.",
+    "tags": [
+      "COMIC-CON Exhibition",
+      "Case Study"
+    ]
+  },
+  "metadata": {
+    "client": "NETFLIX",
+    "location": "San Diego, CA",
+    "type": "COMIC-CON Exhibition",
+    "tech": [],
+    "partners": []
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "This project delivers comic-con exhibition outcomes through integrated creative technology and production workflows."
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/disenchantment/01-image80.jpg",
+      "alt": "Disenchantment deck image 1"
+    },
+    {
+      "url": "/images/deck/disenchantment/02-image82.jpg",
+      "alt": "Disenchantment deck image 2"
+    },
+    {
+      "url": "/images/deck/disenchantment/03-image83.jpg",
+      "alt": "Disenchantment deck image 3"
+    },
+    {
+      "url": "/images/deck/disenchantment/04-image81.jpg",
+      "alt": "Disenchantment deck image 4"
+    },
+    {
+      "url": "/images/deck/disenchantment/05-image84.jpg",
+      "alt": "Disenchantment deck image 5"
+    },
+    {
+      "url": "/images/deck/disenchantment/06-image85.jpg",
+      "alt": "Disenchantment deck image 6"
+    },
+    {
+      "url": "/images/deck/disenchantment/07-image88.jpg",
+      "alt": "Disenchantment deck image 7"
+    },
+    {
+      "url": "/images/deck/disenchantment/08-image95.jpg",
+      "alt": "Disenchantment deck image 8"
+    },
+    {
+      "url": "/images/deck/disenchantment/09-image103.jpg",
+      "alt": "Disenchantment deck image 9"
+    },
+    {
+      "url": "/images/deck/disenchantment/10-image94.jpg",
+      "alt": "Disenchantment deck image 10"
+    },
+    {
+      "url": "/images/deck/disenchantment/11-image153.jpg",
+      "alt": "Disenchantment deck image 11"
+    },
+    {
+      "url": "/images/deck/disenchantment/12-image99.jpg",
+      "alt": "Disenchantment deck image 12"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Disenchantment Video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=fd7g1gfCW_g",
+      "embedUrl": "https://www.youtube.com/embed/fd7g1gfCW_g"
+    }
+  ]
+}

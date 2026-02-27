@@ -1,0 +1,579 @@
+{
+  "sources": {
+    "deckCatalog": "site/reports/deck-project-catalog.json",
+    "videoCatalog": "site/reports/video-link-catalog.json"
+  },
+  "portfolioCount": 17,
+  "deckMappings": [
+    {
+      "source": "deck",
+      "label": "3D Hat Customizer",
+      "slugCandidate": "3d-hat-customizer",
+      "matchedSlug": "the-great-escape",
+      "matchedTitle": "The Great Escape",
+      "score": 0.3684,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "deck",
+      "label": "AKU WORLD",
+      "slugCandidate": "aku-world",
+      "matchedSlug": "aku-world",
+      "matchedTitle": "AKU World",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "ASPIRE",
+      "slugCandidate": "aspire",
+      "matchedSlug": "flir",
+      "matchedTitle": "FLIR Interactive History Wall",
+      "score": 0.4,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "deck",
+      "label": "BIRD OF PARADISE",
+      "slugCandidate": "bird-of-paradise",
+      "matchedSlug": "infinite-playlist",
+      "matchedTitle": "Infinite Playlist Tour",
+      "score": 0.4242,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "deck",
+      "label": "BIRD SONG",
+      "slugCandidate": "bird-song",
+      "matchedSlug": "buzzfeed",
+      "matchedTitle": "BuzzFeed NewFronts",
+      "score": 0.3704,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "deck",
+      "label": "CENTRIFUGE: ART TECH WALL",
+      "slugCandidate": "centrifuge-art-tech-wall",
+      "matchedSlug": "flir",
+      "matchedTitle": "FLIR Interactive History Wall",
+      "score": 0.4528,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "deck",
+      "label": "CNN: Road to 270",
+      "slugCandidate": "cnn-road-to-270",
+      "matchedSlug": "cnn-road-to-270",
+      "matchedTitle": "CNN: Road to 270",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "CONVERGING INFLUENCE",
+      "slugCandidate": "converging-influence",
+      "matchedSlug": "projecting-change-racing-extinction",
+      "matchedTitle": "PROJECTING CHANGE: Racing Extinction",
+      "score": 0.3636,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "deck",
+      "label": "CREATE OUR FUTURE",
+      "slugCandidate": "create-our-future",
+      "matchedSlug": "create-our-future",
+      "matchedTitle": "Create Our Future",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "DESTINATION",
+      "slugCandidate": "destination",
+      "matchedSlug": "destination",
+      "matchedTitle": "Destination",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "DISENCHANTMENT",
+      "slugCandidate": "disenchantment",
+      "matchedSlug": "disenchantment",
+      "matchedTitle": "Disenchantment",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "DUBAI 360: Spherical Projection Theatre",
+      "slugCandidate": "dubai-360-spherical-projection-theatre",
+      "matchedSlug": "dubai-360-spherical-projection-theatre",
+      "matchedTitle": "DUBAI 360: Spherical Projection Theatre",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "EL CAMINO",
+      "slugCandidate": "el-camino",
+      "matchedSlug": "el-camino",
+      "matchedTitle": "El Camino",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "G-MAN Experiential Campaign",
+      "slugCandidate": "g-man-experiential-campaign",
+      "matchedSlug": "g-man-experiential-campaign",
+      "matchedTitle": "G-MAN Experiential Campaign",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "IKON PDX LOUNGE / NIGHTCLUB",
+      "slugCandidate": "ikon-pdx-lounge-nightclub",
+      "matchedSlug": "projecting-change-racing-extinction",
+      "matchedTitle": "PROJECTING CHANGE: Racing Extinction",
+      "score": 0.3385,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "deck",
+      "label": "Infinite Playlist Tour",
+      "slugCandidate": "infinite-playlist-tour",
+      "matchedSlug": "infinite-playlist",
+      "matchedTitle": "Infinite Playlist Tour",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "MY SHELTER",
+      "slugCandidate": "my-shelter",
+      "matchedSlug": "myshelter",
+      "matchedTitle": "MyShelter",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "NEW FRONTS",
+      "slugCandidate": "new-fronts",
+      "matchedSlug": "buzzfeed",
+      "matchedTitle": "BuzzFeed NewFronts",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "PROJECTING CHANGE: Racing Extinction",
+      "slugCandidate": "projecting-change-racing-extinction",
+      "matchedSlug": "projecting-change-racing-extinction",
+      "matchedTitle": "PROJECTING CHANGE: Racing Extinction",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "Projekt X",
+      "slugCandidate": "projekt-x",
+      "matchedSlug": "projekt-x",
+      "matchedTitle": "Projekt X",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "deck",
+      "label": "THE GREAT ESCAPE",
+      "slugCandidate": "the-great-escape",
+      "matchedSlug": "the-great-escape",
+      "matchedTitle": "The Great Escape",
+      "score": 0.999,
+      "confidence": "exact"
+    }
+  ],
+  "videoMappings": [
+    {
+      "source": "video_md",
+      "label": "Video Wall Content and Setup",
+      "url": "https://youtu.be/gLaGivbp5m0",
+      "slugCandidate": "video-wall-content-and-setup",
+      "matchedSlug": "disenchantment",
+      "matchedTitle": "Disenchantment",
+      "score": 0.381,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "video_md",
+      "label": "Video Wall Content and Setup",
+      "url": "https://youtu.be/ZPQsLwlsQxI",
+      "slugCandidate": "video-wall-content-and-setup",
+      "matchedSlug": "disenchantment",
+      "matchedTitle": "Disenchantment",
+      "score": 0.381,
+      "confidence": "manual_review"
+    },
+    {
+      "source": "video_md",
+      "label": "Stage Coach Infinite Playlist Tour - Recap Video",
+      "url": "https://youtu.be/dAscyMAltCc",
+      "slugCandidate": "stage-coach-infinite-playlist-tour-recap-video",
+      "matchedSlug": "infinite-playlist",
+      "matchedTitle": "Infinite Playlist Tour",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Outside Lands Infinite Playlist Tour - Recap Video",
+      "url": "https://youtu.be/_MOJ_AOpApE",
+      "slugCandidate": "outside-lands-infinite-playlist-tour-recap-video",
+      "matchedSlug": "infinite-playlist",
+      "matchedTitle": "Infinite Playlist Tour",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Amazon Music Live Outside Lands Activation Recap Video After Movie",
+      "url": "https://youtu.be/yzqcpqORO6w",
+      "slugCandidate": "amazon-music-live-outside-lands-activation-recap-video-after-movie",
+      "matchedSlug": "infinite-playlist",
+      "matchedTitle": "Infinite Playlist Tour",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Lighting and Environmental Design for Amazon Music Live at Stagecoach 2023",
+      "url": "https://youtu.be/kgWQxYT3qZE",
+      "slugCandidate": "lighting-and-environmental-design-for-amazon-music-live-at-stagecoach-2023",
+      "matchedSlug": "infinite-playlist",
+      "matchedTitle": "Infinite Playlist Tour",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Merchandise created and presented for Amazon Music at the Stagecoach 2023 Music Festival",
+      "url": "https://youtu.be/K6q4bdCMADI",
+      "slugCandidate": "merchandise-created-and-presented-for-amazon-music-at-the-stagecoach-2023-music-festival",
+      "matchedSlug": "infinite-playlist",
+      "matchedTitle": "Infinite Playlist Tour",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Niagra Falls Drone Show - Long distance Shot",
+      "url": "https://youtu.be/s7hunGseQnE",
+      "slugCandidate": "niagra-falls-drone-show-long-distance-shot",
+      "matchedSlug": "run-for-the-oceans",
+      "matchedTitle": "Run for the Oceans",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Niagra Falls - Drone Show with Sky Lites",
+      "url": "https://youtu.be/9DPVS9Ak2CQ",
+      "slugCandidate": "niagra-falls-drone-show-with-sky-lites",
+      "matchedSlug": "run-for-the-oceans",
+      "matchedTitle": "Run for the Oceans",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Ikon Lounge Portland - Immersive Lighting Design IMG 5878",
+      "url": "https://youtu.be/73M-0G7xXGM",
+      "slugCandidate": "ikon-lounge-portland-immersive-lighting-design-img-5878",
+      "matchedSlug": "myshelter",
+      "matchedTitle": "MyShelter",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Ikon Lounge Portland - Immersive Lighting Design-  IMG 5877",
+      "url": "https://youtu.be/6VGVo4WIQDc",
+      "slugCandidate": "ikon-lounge-portland-immersive-lighting-design-img-5877",
+      "matchedSlug": "myshelter",
+      "matchedTitle": "MyShelter",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Ikon Lounge Portland - Immersive Lighting Design-  IMG 5875",
+      "url": "https://youtu.be/TC7BxwpgKRE",
+      "slugCandidate": "ikon-lounge-portland-immersive-lighting-design-img-5875",
+      "matchedSlug": "myshelter",
+      "matchedTitle": "MyShelter",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Buzzfeed NewFronts - Event Production",
+      "url": "https://youtu.be/0kMcRijA4cY",
+      "slugCandidate": "buzzfeed-newfronts-event-production",
+      "matchedSlug": "buzzfeed",
+      "matchedTitle": "BuzzFeed NewFronts",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "ADIDAS x UO: Create Our Future - Recap Video",
+      "url": "https://youtu.be/woobYB8jRSQ",
+      "slugCandidate": "adidas-x-uo-create-our-future-recap-video",
+      "matchedSlug": "create-our-future",
+      "matchedTitle": "Create Our Future",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Journey's x ADIDAS: Destination, San Diego Recap Video",
+      "url": "https://youtu.be/jmRUVbKpxU0",
+      "slugCandidate": "journeys-x-adidas-destination-san-diego-recap-video",
+      "matchedSlug": "destination",
+      "matchedTitle": "Destination",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Destination: Robotic Paint Mural",
+      "url": "https://youtu.be/t4u2eCGMzPE",
+      "slugCandidate": "destination-robotic-paint-mural",
+      "matchedSlug": "destination",
+      "matchedTitle": "Destination",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "ADIDAS VIP - Super bowl 2020 - Projection Mapping",
+      "url": "https://youtu.be/IZ-rbG1vPUk",
+      "slugCandidate": "adidas-vip-super-bowl-2020-projection-mapping",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "ADIDAS Super Bowl 2020 - VIP Lounge",
+      "url": "https://youtu.be/s9l3WewPE0E",
+      "slugCandidate": "adidas-super-bowl-2020-vip-lounge",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "ADIDAS Super Bowl 2020 - VIP LOUNGE BTS",
+      "url": "https://youtu.be/H3YEfNkLDZE",
+      "slugCandidate": "adidas-super-bowl-2020-vip-lounge-bts",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Cyc Projection Concepts",
+      "url": "https://youtu.be/mUQ2ifJQtkw",
+      "slugCandidate": "cyc-projection-concepts",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "VIP Lounge Concepts",
+      "url": "https://youtu.be/7Y9fkJSUf1o",
+      "slugCandidate": "vip-lounge-concepts",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "VIP Lounge Concepts",
+      "url": "https://youtu.be/DyftgPTJsjo",
+      "slugCandidate": "vip-lounge-concepts",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "VIP Lounge Concepts",
+      "url": "https://youtu.be/sfm_XvaWaoI",
+      "slugCandidate": "vip-lounge-concepts",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Toyota C-HR x MTV Music Awards - Experiential Event - Project Recap",
+      "url": "https://youtu.be/xgQJMNINuHU",
+      "slugCandidate": "toyota-c-hr-x-mtv-music-awards-experiential-event-project-recap",
+      "matchedSlug": "g-man-experiential-campaign",
+      "matchedTitle": "G-MAN Experiential Campaign",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Projekt X: Adriatique - Intro from Zurich",
+      "url": "https://youtu.be/QONdspLc7gU",
+      "slugCandidate": "projekt-x-adriatique-intro-from-zurich",
+      "matchedSlug": "projekt-x",
+      "matchedTitle": "Projekt X",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Projekt X: Adriatique - Build Reel",
+      "url": "https://youtu.be/aw0sENfWiY8",
+      "slugCandidate": "projekt-x-adriatique-build-reel",
+      "matchedSlug": "projekt-x",
+      "matchedTitle": "Projekt X",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "AKU WORLD: Experiential Event - Recap Video",
+      "url": "https://youtu.be/wEehI2AX09I",
+      "slugCandidate": "aku-world-experiential-event-recap-video",
+      "matchedSlug": "aku-world",
+      "matchedTitle": "AKU World",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Super Bowl 2020 - adidas AR experience",
+      "url": "https://youtu.be/Ea0TodW-0sI",
+      "slugCandidate": "super-bowl-2020-adidas-ar-experience",
+      "matchedSlug": "super-bowl-2020",
+      "matchedTitle": "Super Bowl 2020",
+      "score": 0.999,
+      "confidence": "exact"
+    },
+    {
+      "source": "video_md",
+      "label": "Parley Ocean School:  Interactive Container Experience",
+      "url": "https://youtu.be/DjyulR5DvOQ",
+      "slugCandidate": "parley-ocean-school-interactive-container-experience",
+      "matchedSlug": "run-for-the-oceans",
+      "matchedTitle": "Run for the Oceans",
+      "score": 0.999,
+      "confidence": "exact"
+    }
+  ],
+  "unresolved": {
+    "deck": [
+      {
+        "source": "deck",
+        "label": "3D Hat Customizer",
+        "slugCandidate": "3d-hat-customizer",
+        "matchedSlug": "the-great-escape",
+        "matchedTitle": "The Great Escape",
+        "score": 0.3684,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "ASPIRE",
+        "slugCandidate": "aspire",
+        "matchedSlug": "flir",
+        "matchedTitle": "FLIR Interactive History Wall",
+        "score": 0.4,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "BIRD OF PARADISE",
+        "slugCandidate": "bird-of-paradise",
+        "matchedSlug": "infinite-playlist",
+        "matchedTitle": "Infinite Playlist Tour",
+        "score": 0.4242,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "BIRD SONG",
+        "slugCandidate": "bird-song",
+        "matchedSlug": "buzzfeed",
+        "matchedTitle": "BuzzFeed NewFronts",
+        "score": 0.3704,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "CENTRIFUGE: ART TECH WALL",
+        "slugCandidate": "centrifuge-art-tech-wall",
+        "matchedSlug": "flir",
+        "matchedTitle": "FLIR Interactive History Wall",
+        "score": 0.4528,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "CONVERGING INFLUENCE",
+        "slugCandidate": "converging-influence",
+        "matchedSlug": "projecting-change-racing-extinction",
+        "matchedTitle": "PROJECTING CHANGE: Racing Extinction",
+        "score": 0.3636,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "deck",
+        "label": "IKON PDX LOUNGE / NIGHTCLUB",
+        "slugCandidate": "ikon-pdx-lounge-nightclub",
+        "matchedSlug": "projecting-change-racing-extinction",
+        "matchedTitle": "PROJECTING CHANGE: Racing Extinction",
+        "score": 0.3385,
+        "confidence": "manual_review"
+      }
+    ],
+    "video": [
+      {
+        "source": "video_md",
+        "label": "Video Wall Content and Setup",
+        "url": "https://youtu.be/gLaGivbp5m0",
+        "slugCandidate": "video-wall-content-and-setup",
+        "matchedSlug": "disenchantment",
+        "matchedTitle": "Disenchantment",
+        "score": 0.381,
+        "confidence": "manual_review"
+      },
+      {
+        "source": "video_md",
+        "label": "Video Wall Content and Setup",
+        "url": "https://youtu.be/ZPQsLwlsQxI",
+        "slugCandidate": "video-wall-content-and-setup",
+        "matchedSlug": "disenchantment",
+        "matchedTitle": "Disenchantment",
+        "score": 0.381,
+        "confidence": "manual_review"
+      }
+    ]
+  }
+}

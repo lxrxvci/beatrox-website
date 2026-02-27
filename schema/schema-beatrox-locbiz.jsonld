@@ -1,0 +1,183 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Beatrox LLC",
+  "url": "https://www.beatrox.com",
+  "logo": "https://www.beatrox.com/images/beatrox-logo.png",
+  "description": "Beatrox is a Portland, OR-based experiential design and event production company specializing in immersive environments, LED video walls, drone light shows, laser shows, projection mapping, custom fabrication, and full-service event production.",
+  "slogan": "Experiential Design & Event Production",
+  "foundingDate": "2020",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8625 NE Halsey St",
+    "addressLocality": "Portland",
+    "addressRegion": "OR",
+    "postalCode": "97220",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.5051,
+    "longitude": -122.6750
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Oregon"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "International"
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Nathan Jenkins",
+    "jobTitle": "Founder & CEO",
+    "description": "Creative Technologist with over 20 years of experience in Audio Visual Design, Technical Direction, Lighting Design, and Sound Design."
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Joey Paulekas",
+      "jobTitle": "Touring & Fabrication"
+    },
+    {
+      "@type": "Person",
+      "name": "Eric Mintzer",
+      "jobTitle": "Creative Technologist"
+    },
+    {
+      "@type": "Person",
+      "name": "Alan Curtiss",
+      "jobTitle": "Video Production & LED Technician"
+    },
+    {
+      "@type": "Person",
+      "name": "Desiree Daggy",
+      "jobTitle": "3D & Environmental Design"
+    },
+    {
+      "@type": "Person",
+      "name": "Joshua Vallejos",
+      "jobTitle": "Audio Engineer / Production Manager"
+    },
+    {
+      "@type": "Person",
+      "name": "Bryant Place",
+      "jobTitle": "Creative Technologist"
+    }
+  ],
+  "knowsAbout": [
+    "Experiential Design",
+    "Event Production",
+    "Immersive Environments",
+    "LED Video Wall",
+    "Drone Light Shows",
+    "Laser Light Shows",
+    "Projection Mapping",
+    "Custom Fabrication",
+    "Stage Design",
+    "Multimedia Displays",
+    "Interactive Software Development",
+    "Audio Production",
+    "Lighting Design",
+    "Environmental Design",
+    "3D Animation",
+    "Real-Time Content (AR, VR, XR)",
+    "TouchDesigner",
+    "Unreal Engine",
+    "Media Server Operation",
+    "Tour Management"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Beatrox Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Full Service Event Production",
+          "url": "https://www.beatrox.com/services/event-production"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "LED Video Wall Rentals",
+          "url": "https://www.beatrox.com/services/led-video-wall-rentals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Drone Light Shows",
+          "url": "https://www.beatrox.com/services/drone-light-shows"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Laser Light Shows",
+          "url": "https://www.beatrox.com/services/laser-shows"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lighting Services",
+          "url": "https://www.beatrox.com/services/lighting-services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sound Equipment Rentals",
+          "url": "https://www.beatrox.com/services/sound-equipment-rentals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DJ Equipment Rentals",
+          "url": "https://www.beatrox.com/services/dj-equipment-rentals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Backline & Stage Rental",
+          "url": "https://www.beatrox.com/services/backline-stage-rental"
+        }
+      }
+    ]
+  },
+  "workExample": [
+    { "@type": "CreativeWork", "name": "Run for the Oceans", "url": "https://www.beatrox.com/run-for-the-oceans-interactive-media-experience" },
+    { "@type": "CreativeWork", "name": "AKU World", "url": "https://www.beatrox.com/aku-world-immersive-environment-nft-miami" },
+    { "@type": "CreativeWork", "name": "Projekt X", "url": "https://www.beatrox.com/projekt-x-stage-design-and-fabrication" },
+    { "@type": "CreativeWork", "name": "MyShelter", "url": "https://www.beatrox.com/myshelter-project-immersive-enviroment" },
+    { "@type": "CreativeWork", "name": "Destination", "url": "https://www.beatrox.com/destination-experiential-event" },
+    { "@type": "CreativeWork", "name": "Infinite Playlist Tour", "url": "https://www.beatrox.com/infinite-playlist-tour-festival-activation-experiential-event" },
+    { "@type": "CreativeWork", "name": "Super Bowl 2020", "url": "https://www.beatrox.com/super-bowl-2020-projection-mapping-interactive-ar" },
+    { "@type": "CreativeWork", "name": "BuzzFeed NewFronts", "url": "https://www.beatrox.com/buzzfeed-newfronts-event-production" },
+    { "@type": "CreativeWork", "name": "Create Our Future", "url": "https://www.beatrox.com/create-our-future-experiential-event" },
+    { "@type": "CreativeWork", "name": "FLIR Interactive History Wall", "url": "https://www.beatrox.com/flir-history-wall-interactive-media-display" }
+  ],
+  "sameAs": [
+    "https://www.youtube.com/@beatrox",
+    "https://www.instagram.com/beatrox/"
+  ]
+}
