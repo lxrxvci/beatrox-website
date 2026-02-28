@@ -1,0 +1,10 @@
+{
+  "install": "cd site && npm install",
+  "terminals": [
+    {
+      "name": "Next.js + Payload CMS",
+      "command": "cd site && npm run dev"
+    }
+  ],
+  "start": "cd site && npm run dev"
+}

@@ -1,4 +1,5 @@
 temp_docs/
 misc/
 assets/decks/*.pptx
-.cursor/
+.cursor/*
+!.cursor/environment.json
