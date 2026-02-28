@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { getPayload } from 'payload'
+import { draftMode } from 'next/headers'
 import payloadConfig from '@/payload.config'
 
 const CONTENT_ROOT = path.join(process.cwd(), '..', 'content')
@@ -50,6 +51,8 @@ export interface BodyBlock {
 export interface Project {
   title: string
   slug: string
+  canonicalSlug: string
+  tags: string[]
   seo: SeoMeta
   hero: {
     headline: string
@@ -72,6 +75,8 @@ export interface Project {
   images: ProjectImage[]
   videos?: VideoEmbed[]
 }
+
+export interface CaseStudy extends Project {}
 
 export interface Service {
   title: string
@@ -194,13 +199,31 @@ export function getContact() {
 export function getAllProjects(): Project[] {
   const dir = path.join(CONTENT_ROOT, 'portfolio')
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()
-  return files.map(file => readJson<Project>(path.join(dir, file)))
+  return files.map(file => {
+    const legacy = readJson<Project>(path.join(dir, file))
+    const canonicalSlug = normalizeProjectSlug(legacy.slug || file.replace('.json', ''))
+    const tags = uniqueStrings((legacy.hero?.tags || []).map((tag) => normalizeProjectTag(tag)))
+    return {
+      ...legacy,
+      slug: canonicalSlug,
+      canonicalSlug,
+      tags,
+    }
+  })
 }
 
 export function getProject(slug: string): Project | null {
   const filePath = path.join(CONTENT_ROOT, 'portfolio', `${slug}.json`)
   if (!fs.existsSync(filePath)) return null
-  return readJson<Project>(filePath)
+  const legacy = readJson<Project>(filePath)
+  const canonicalSlug = normalizeProjectSlug(legacy.slug || slug)
+  const tags = uniqueStrings((legacy.hero?.tags || []).map((tag) => normalizeProjectTag(tag)))
+  return {
+    ...legacy,
+    slug: canonicalSlug,
+    canonicalSlug,
+    tags,
+  }
 }
 
 export function getAllServices(): Service[] {
@@ -229,6 +252,59 @@ function asArray<T>(input: unknown): T[] {
   return Array.isArray(input) ? (input as T[]) : []
 }
 
+export function normalizeProjectSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/^\/+/, '')
+    .replace(/^work\/+/, '')
+    .replace(/[^a-z0-9/-]+/g, '-')
+    .replace(/\/+/g, '/')
+    .replace(/^-+|-+$/g, '')
+}
+
+export function normalizeProjectTag(value: string): string {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+export function normalizeCaseStudySlug(value: string): string {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/^\/+/, '')
+    .replace(/^case-studies\/+/, '')
+    .replace(/[^a-z0-9/-]+/g, '-')
+    .replace(/\/+/g, '/')
+    .replace(/^-+|-+$/g, '')
+}
+
+function uniqueStrings(values: string[]): string[] {
+  return [...new Set(values.filter(Boolean))]
+}
+
+async function isPreviewModeEnabled(): Promise<boolean> {
+  try {
+    const state = await draftMode()
+    return Boolean(state.isEnabled)
+  } catch {
+    return false
+  }
+}
+
+function extractProjectTags(doc: Record<string, unknown>): string[] {
+  const projectTags = asArray<Record<string, unknown>>(doc.tags)
+    .map((row) => normalizeProjectTag(String(row.tag || '')))
+    .filter(Boolean)
+  const heroTags = asArray<Record<string, unknown>>((doc.hero as Record<string, unknown>)?.tags)
+    .map((row) => normalizeProjectTag(String(row.tag || '')))
+    .filter(Boolean)
+  return uniqueStrings([...projectTags, ...heroTags])
+}
+
 function resolveCmsMediaUrl(media: unknown): string | undefined {
   if (!media || typeof media !== 'object') return undefined
   const doc = media as { legacyUrl?: string; url?: string }
@@ -250,7 +326,9 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
 
   return {
     title: String(doc.title || ''),
-    slug: String(doc.slug || ''),
+    slug: normalizeProjectSlug(String(doc.slug || '')),
+    canonicalSlug: normalizeProjectSlug(String(doc.slug || '')),
+    tags: extractProjectTags(doc),
     seo: {
       title: String((doc.seo as Record<string, unknown>)?.title || ''),
       description: String((doc.seo as Record<string, unknown>)?.description || ''),
@@ -341,85 +419,128 @@ function mapCmsService(doc: Record<string, unknown>): Service {
 export async function getAllProjectsResolved(): Promise<Project[]> {
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'projects',
-      where: {
-        status: { equals: 'published' },
-        isEnabled: { equals: true },
-      },
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       sort: 'listOrder',
       limit: 200,
       depth: 2,
-      draft: false,
+      draft: preview,
     })
-    if (result.docs.length > 0) {
-      return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
-    }
-  } catch {
-    // fallback
+    return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
+  } catch (error) {
+    console.error('Failed to load projects from CMS:', error)
+    return []
   }
-  return getAllProjects()
 }
 
 export async function getProjectResolved(slug: string): Promise<Project | null> {
+  const canonicalSlug = normalizeProjectSlug(slug)
+  if (!canonicalSlug) return null
   try {
     const payload = await getPayloadClient()
-    const result = await payload.find({
+    const preview = await isPreviewModeEnabled()
+    const resultByCanonical = await payload.find({
       collection: 'projects',
-      where: {
-        slug: { equals: slug },
-        status: { equals: 'published' },
-        isEnabled: { equals: true },
-      },
+      where: preview
+        ? {
+            slug: { equals: canonicalSlug },
+          }
+        : {
+            slug: { equals: canonicalSlug },
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       limit: 1,
       depth: 2,
-      draft: false,
+      draft: preview,
     })
-    const doc = result.docs[0]
-    if (doc) return mapCmsProject(doc as Record<string, unknown>)
-  } catch {
-    // fallback
+    const canonicalDoc = resultByCanonical.docs[0]
+    if (canonicalDoc) return mapCmsProject(canonicalDoc as Record<string, unknown>)
+
+    const legacyResult = await payload.find({
+      collection: 'projects',
+      where: preview
+        ? {
+            slug: { equals: `work/${canonicalSlug}` },
+          }
+        : {
+            slug: { equals: `work/${canonicalSlug}` },
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
+      limit: 1,
+      depth: 2,
+      draft: preview,
+    })
+    const legacyDoc = legacyResult.docs[0]
+    if (legacyDoc) return mapCmsProject(legacyDoc as Record<string, unknown>)
+  } catch (error) {
+    console.error(`Failed to load project from CMS for slug "${canonicalSlug}":`, error)
   }
-  return getProject(slug)
+  return null
 }
 
 export async function getProjectSlugsResolved(): Promise<string[]> {
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'projects',
-      where: {
-        status: { equals: 'published' },
-        isEnabled: { equals: true },
-      },
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       limit: 500,
-      draft: false,
+      draft: preview,
     })
-    if (result.docs.length > 0) {
-      return result.docs
-        .map((doc) => String((doc as Record<string, unknown>).slug || ''))
-        .filter(Boolean)
-        .sort()
-    }
-  } catch {
-    // fallback
+    return uniqueStrings(
+      result.docs
+        .map((doc) => normalizeProjectSlug(String((doc as Record<string, unknown>).slug || '')))
+        .filter(Boolean),
+    ).sort()
+  } catch (error) {
+    console.error('Failed to load project slugs from CMS:', error)
+    return []
   }
-  return getProjectSlugs()
+}
+
+export async function getProjectTagsResolved(): Promise<string[]> {
+  const projects = await getAllProjectsResolved()
+  return uniqueStrings(projects.flatMap((project) => project.tags.map((tag) => normalizeProjectTag(tag)))).sort()
+}
+
+export async function getProjectsByTagResolved(tag: string): Promise<Project[]> {
+  const normalizedTag = normalizeProjectTag(tag)
+  if (!normalizedTag) return []
+  const projects = await getAllProjectsResolved()
+  return projects.filter((project) => project.tags.includes(normalizedTag))
 }
 
 export async function getAllServicesResolved(): Promise<Service[]> {
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'services',
-      where: {
-        status: { equals: 'published' },
-        isEnabled: { equals: true },
-      },
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       sort: 'listOrder',
       limit: 200,
       depth: 2,
-      draft: false,
+      draft: preview,
     })
     if (result.docs.length > 0) {
       return result.docs.map((doc) => mapCmsService(doc as Record<string, unknown>))
@@ -433,16 +554,21 @@ export async function getAllServicesResolved(): Promise<Service[]> {
 export async function getServiceResolved(slug: string): Promise<Service | null> {
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'services',
-      where: {
-        slug: { equals: slug },
-        status: { equals: 'published' },
-        isEnabled: { equals: true },
-      },
+      where: preview
+        ? {
+            slug: { equals: slug },
+          }
+        : {
+            slug: { equals: slug },
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       limit: 1,
       depth: 2,
-      draft: false,
+      draft: preview,
     })
     const doc = result.docs[0]
     if (doc) return mapCmsService(doc as Record<string, unknown>)
@@ -455,14 +581,17 @@ export async function getServiceResolved(slug: string): Promise<Service | null> 
 export async function getServiceSlugsResolved(): Promise<string[]> {
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'services',
-      where: {
-        status: { equals: 'published' },
-        isEnabled: { equals: true },
-      },
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       limit: 500,
-      draft: false,
+      draft: preview,
     })
     if (result.docs.length > 0) {
       return result.docs
@@ -480,23 +609,32 @@ export async function getTeamResolved() {
   const fallback = getTeam()
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const teamMembersResult = await payload.find({
       collection: 'team',
-      where: {
-        status: { equals: 'published' },
-        isEnabled: { equals: true },
-      },
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       sort: 'order',
       limit: 200,
       depth: 2,
-      draft: false,
+      draft: preview,
     })
     const pageResult = await payload.find({
       collection: 'pages',
-      where: { slug: { equals: 'team' } },
+      where: preview
+        ? { slug: { equals: 'team' } }
+        : {
+            slug: { equals: 'team' },
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
       limit: 1,
       depth: 2,
-      draft: false,
+      draft: preview,
     })
     const page = pageResult.docs[0] as Record<string, unknown> | undefined
     const teamHeroImage = resolveCmsMediaUrl(((page?.seo as Record<string, unknown>)?.ogImage as unknown))
@@ -640,6 +778,7 @@ function resolveMediaUrl(media: unknown): string | undefined {
 export async function getNavigationLinks(): Promise<NavigationLink[]> {
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const nav = await payload.findGlobal({
       slug: 'navigation',
       depth: 1,
@@ -666,13 +805,18 @@ export async function getNavigationLinks(): Promise<NavigationLink[]> {
 
     const pages = await payload.find({
       collection: 'pages',
-      where: {
-        isEnabled: { equals: true },
-        showInNav: { equals: true },
-      },
+      where: preview
+        ? {
+            showInNav: { equals: true },
+          }
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+            showInNav: { equals: true },
+          },
       sort: 'navOrder',
       limit: 50,
-      draft: false,
+      draft: preview,
     })
 
     const pageLinks = pages.docs
@@ -732,19 +876,29 @@ export async function getSeoDefaults(): Promise<SeoDefaultsSettings> {
 export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null> {
   try {
     const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'pages',
-      where: {
-        slug: {
-          equals: slug,
-        },
-        isEnabled: {
-          equals: true,
-        },
-      },
+      where: preview
+        ? {
+            slug: {
+              equals: slug,
+            },
+          }
+        : {
+            slug: {
+              equals: slug,
+            },
+            status: {
+              equals: 'published',
+            },
+            isEnabled: {
+              equals: true,
+            },
+          },
       limit: 1,
       depth: 2,
-      draft: false,
+      draft: preview,
     })
 
     const page = result.docs[0] as unknown as
@@ -774,5 +928,94 @@ export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null
     }
   } catch {
     return null
+  }
+}
+
+function mapCmsCaseStudy(doc: Record<string, unknown>): CaseStudy {
+  const mapped = mapCmsProject(doc)
+  const canonicalSlug = normalizeCaseStudySlug(String(doc.slug || mapped.slug))
+  return {
+    ...mapped,
+    slug: canonicalSlug,
+    canonicalSlug,
+  }
+}
+
+export async function getAllCaseStudiesResolved(): Promise<CaseStudy[]> {
+  try {
+    const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
+    const result = await payload.find({
+      collection: 'case-studies',
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
+      sort: 'listOrder',
+      limit: 200,
+      depth: 2,
+      draft: preview,
+    })
+    return result.docs.map((doc) => mapCmsCaseStudy(doc as Record<string, unknown>))
+  } catch (error) {
+    console.error('Failed to load case studies from CMS:', error)
+    return []
+  }
+}
+
+export async function getCaseStudyResolved(slug: string): Promise<CaseStudy | null> {
+  const canonicalSlug = normalizeCaseStudySlug(slug)
+  if (!canonicalSlug) return null
+  try {
+    const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
+    const result = await payload.find({
+      collection: 'case-studies',
+      where: preview
+        ? {
+            slug: { equals: canonicalSlug },
+          }
+        : {
+            slug: { equals: canonicalSlug },
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
+      limit: 1,
+      depth: 2,
+      draft: preview,
+    })
+    const doc = result.docs[0]
+    if (doc) return mapCmsCaseStudy(doc as Record<string, unknown>)
+  } catch (error) {
+    console.error(`Failed to load case study from CMS for slug "${canonicalSlug}":`, error)
+  }
+  return null
+}
+
+export async function getCaseStudySlugsResolved(): Promise<string[]> {
+  try {
+    const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
+    const result = await payload.find({
+      collection: 'case-studies',
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
+      limit: 500,
+      draft: preview,
+    })
+    return uniqueStrings(
+      result.docs
+        .map((doc) => normalizeCaseStudySlug(String((doc as Record<string, unknown>).slug || '')))
+        .filter(Boolean),
+    ).sort()
+  } catch (error) {
+    console.error('Failed to load case study slugs from CMS:', error)
+    return []
   }
 }

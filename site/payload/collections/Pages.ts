@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { getLivePath, getPreviewPath } from '../utils/previewLinks'
 
 function slugify(value: string): string {
   return value
@@ -16,8 +17,7 @@ export const Pages: CollectionConfig = {
     livePreview: {
       url: ({ data }) => {
         const slug = typeof data?.slug === 'string' ? data.slug : ''
-        if (!slug || slug === 'home' || slug === 'homepage') return '/'
-        return `/${slug}`
+        return getLivePath('pages', slug)
       },
     },
   },
@@ -31,9 +31,19 @@ export const Pages: CollectionConfig = {
     beforeValidate: [
       ({ data }) => {
         if (data && typeof data === 'object' && typeof data.title === 'string' && (!data.slug || typeof data.slug !== 'string')) {
+          const nextSlug = slugify(data.title)
           return {
             ...data,
-            slug: slugify(data.title),
+            slug: nextSlug,
+            liveUrl: getLivePath('pages', nextSlug),
+            previewUrl: getPreviewPath('pages', nextSlug),
+          }
+        }
+        if (data && typeof data === 'object' && typeof data.slug === 'string') {
+          return {
+            ...data,
+            liveUrl: getLivePath('pages', data.slug),
+            previewUrl: getPreviewPath('pages', data.slug),
           }
         }
         return data
@@ -203,6 +213,22 @@ export const Pages: CollectionConfig = {
       type: 'text',
       admin: {
         description: 'Optional custom preview path. Defaults to slug route.',
+      },
+    },
+    {
+      name: 'liveUrl',
+      type: 'text',
+      admin: {
+        readOnly: true,
+        description: 'Open published route for this page.',
+      },
+    },
+    {
+      name: 'previewUrl',
+      type: 'text',
+      admin: {
+        readOnly: true,
+        description: 'Open admin-session draft/private preview route for this page.',
       },
     },
     {

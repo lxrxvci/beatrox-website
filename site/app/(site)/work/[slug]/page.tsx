@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
+import { getProjectResolved, getProjectSlugsResolved, normalizeProjectSlug } from '@/lib/content'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
 
@@ -16,7 +16,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const project = await getProjectResolved(slug)
+  const canonicalSlug = normalizeProjectSlug(slug)
+  const project = await getProjectResolved(canonicalSlug)
   if (!project) return {}
   return {
     title: project.seo.title,
@@ -31,7 +32,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params
-  const project = await getProjectResolved(slug)
+  const canonicalSlug = normalizeProjectSlug(slug)
+  if (!canonicalSlug) notFound()
+  if (slug !== canonicalSlug) {
+    redirect(`/work/${canonicalSlug}`)
+  }
+  const project = await getProjectResolved(canonicalSlug)
   if (!project) notFound()
 
   const validImages = project.images?.filter(img => img.url && img.url !== '') ?? []

@@ -8,6 +8,7 @@ import { Users } from './payload/collections/Users.ts'
 import { Media } from './payload/collections/Media.ts'
 import { Pages } from './payload/collections/Pages.ts'
 import { Projects } from './payload/collections/Projects.ts'
+import { CaseStudies } from './payload/collections/CaseStudies.ts'
 import { Services } from './payload/collections/Services.ts'
 import { Team } from './payload/collections/Team.ts'
 import { Redirects } from './payload/collections/Redirects.ts'
@@ -35,7 +36,7 @@ export default buildConfig({
     },
     push: true,
   }),
-  collections: [Users, Media, Redirects, Pages, Projects, Services, Team],
+  collections: [Users, Media, Redirects, Pages, Projects, CaseStudies, Services, Team],
   globals: [Navigation, SiteStyles, SeoDefaults],
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

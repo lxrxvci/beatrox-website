@@ -5,6 +5,7 @@ export const Redirects: CollectionConfig = {
   admin: {
     useAsTitle: 'from',
     defaultColumns: ['from', 'to', 'statusCode', 'isEnabled', 'updatedAt'],
+    description: 'Manage URL redirects. Hygiene utility available at /admin/redirect-hygiene.',
   },
   access: {
     read: () => true,

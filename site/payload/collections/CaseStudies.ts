@@ -9,20 +9,20 @@ function slugify(value: string): string {
     .replace(/^-+|-+$/g, '')
 }
 
-function normalizeProjectSlug(value: string): string {
-  const stripped = value.trim().replace(/^\/+/, '').replace(/^work\/+/i, '')
+function normalizeCaseStudySlug(value: string): string {
+  const stripped = value.trim().replace(/^\/+/, '').replace(/^case-studies\/+/i, '')
   return slugify(stripped)
 }
 
-export const Projects: CollectionConfig = {
-  slug: 'projects',
+export const CaseStudies: CollectionConfig = {
+  slug: 'case-studies',
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'status', 'listOrder', 'updatedAt'],
     livePreview: {
       url: ({ data }) => {
-        const slug = typeof data?.slug === 'string' ? normalizeProjectSlug(data.slug) : ''
-        return getLivePath('projects', slug)
+        const slug = typeof data?.slug === 'string' ? normalizeCaseStudySlug(data.slug) : ''
+        return getLivePath('case-studies', slug)
       },
     },
   },
@@ -36,21 +36,21 @@ export const Projects: CollectionConfig = {
     beforeValidate: [
       ({ data }) => {
         if (data && typeof data === 'object' && typeof data.title === 'string' && (!data.slug || typeof data.slug !== 'string')) {
-          const nextSlug = normalizeProjectSlug(slugify(data.title))
+          const nextSlug = normalizeCaseStudySlug(slugify(data.title))
           return {
             ...data,
             slug: nextSlug,
-            liveUrl: getLivePath('projects', nextSlug),
-            previewUrl: getPreviewPath('projects', nextSlug),
+            liveUrl: getLivePath('case-studies', nextSlug),
+            previewUrl: getPreviewPath('case-studies', nextSlug),
           }
         }
         if (data && typeof data === 'object' && typeof data.slug === 'string') {
-          const nextSlug = normalizeProjectSlug(data.slug)
+          const nextSlug = normalizeCaseStudySlug(data.slug)
           return {
             ...data,
             slug: nextSlug,
-            liveUrl: getLivePath('projects', nextSlug),
-            previewUrl: getPreviewPath('projects', nextSlug),
+            liveUrl: getLivePath('case-studies', nextSlug),
+            previewUrl: getPreviewPath('case-studies', nextSlug),
           }
         }
         return data
@@ -63,8 +63,8 @@ export const Projects: CollectionConfig = {
         const prevSlug = typeof originalDoc?.slug === 'string' ? originalDoc.slug : ''
         if (!nextSlug || !prevSlug || nextSlug === prevSlug) return data
 
-        const previousPath = `/work/${prevSlug}`
-        const nextPath = `/work/${nextSlug}`
+        const previousPath = `/case-studies/${prevSlug}`
+        const nextPath = `/case-studies/${nextSlug}`
         try {
           const existing = await req.payload.find({
             collection: 'redirects',
@@ -87,7 +87,7 @@ export const Projects: CollectionConfig = {
                 to: nextPath,
                 statusCode: '301',
                 isEnabled: true,
-                note: 'Auto-created from project slug change',
+                note: 'Auto-created from case study slug change',
               },
               req,
             })
@@ -111,9 +111,6 @@ export const Projects: CollectionConfig = {
         { label: 'In Review', value: 'review' },
         { label: 'Published', value: 'published' },
       ],
-      admin: {
-        description: 'Workflow state for editorial quality control.',
-      },
     },
     { name: 'isEnabled', type: 'checkbox', defaultValue: true },
     {
@@ -121,14 +118,6 @@ export const Projects: CollectionConfig = {
       type: 'number',
       defaultValue: 0,
       admin: { step: 1, description: 'Lower numbers appear first in listings.' },
-    },
-    {
-      name: 'parent',
-      type: 'relationship',
-      relationTo: 'projects',
-      admin: {
-        description: 'Optional hierarchy parent for grouped project navigation.',
-      },
     },
     {
       name: 'hero',
@@ -149,18 +138,9 @@ export const Projects: CollectionConfig = {
       fields: [
         { name: 'client', type: 'text' },
         { name: 'location', type: 'text' },
-        {
-          name: 'locations',
-          type: 'array',
-          fields: [{ name: 'location', type: 'text', required: true }],
-        },
         { name: 'type', type: 'text' },
+        { name: 'investmentRange', type: 'text' },
         { name: 'partners', type: 'array', fields: [{ name: 'name', type: 'text', required: true }] },
-        { name: 'tech', type: 'array', fields: [{ name: 'value', type: 'text', required: true }] },
-        { name: 'techniques', type: 'array', fields: [{ name: 'value', type: 'text', required: true }] },
-        { name: 'materials', type: 'array', fields: [{ name: 'value', type: 'text', required: true }] },
-        { name: 'spec', type: 'array', fields: [{ name: 'value', type: 'text', required: true }] },
-        { name: 'software', type: 'array', fields: [{ name: 'value', type: 'text', required: true }] },
       ],
     },
     {
@@ -199,8 +179,6 @@ export const Projects: CollectionConfig = {
         { name: 'media', type: 'relationship', relationTo: 'media' },
         { name: 'legacyUrl', type: 'text' },
         { name: 'alt', type: 'text', required: true },
-        { name: 'filename', type: 'text' },
-        { name: 'note', type: 'textarea' },
       ],
     },
     {
@@ -217,7 +195,6 @@ export const Projects: CollectionConfig = {
         },
         { name: 'url', type: 'text', required: true },
         { name: 'embedUrl', type: 'text' },
-        { name: 'note', type: 'textarea' },
       ],
     },
     {
@@ -225,7 +202,7 @@ export const Projects: CollectionConfig = {
       type: 'text',
       admin: {
         readOnly: true,
-        description: 'Open published route for this project.',
+        description: 'Open published route for this case study.',
       },
     },
     {
@@ -233,7 +210,7 @@ export const Projects: CollectionConfig = {
       type: 'text',
       admin: {
         readOnly: true,
-        description: 'Open admin-session draft/private preview route for this project.',
+        description: 'Open admin-session draft/private preview route for this case study.',
       },
     },
   ],

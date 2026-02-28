@@ -37,8 +37,7 @@ export default async function HomePage() {
   const allProjects = await getAllProjectsResolved()
   const heroImage = data.media.heroImage || '/og-default.jpg'
   const galleryImages = data.media.galleryImages || []
-  const normalizeProjectSlug = (slugValue: string) => slugValue.replace(/^\/+/, '').replace(/^work\/+/, '')
-  const projectsBySlug = new Map(allProjects.map((project) => [normalizeProjectSlug(project.slug), project]))
+  const projectsBySlug = new Map(allProjects.map((project) => [project.canonicalSlug, project]))
 
   // Featured 4 projects for homepage grid
   const featuredSlugs = ['run-for-the-oceans', 'aku-world', 'projekt-x', 'myshelter']

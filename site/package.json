@@ -14,6 +14,10 @@
     "cms:import:services": "node ./scripts/cms-import-services.mjs",
     "cms:import:team": "node ./scripts/cms-import-team.mjs",
     "cms:seed": "node ./scripts/cms-seed.mjs",
+    "cms:publish:site": "python ./scripts/bulk_publish_site_content.py",
+    "cms:publish:site:apply": "python ./scripts/bulk_publish_site_content.py --apply",
+    "redirects:hygiene": "python ./scripts/redirects_hygiene.py",
+    "redirects:hygiene:apply": "python ./scripts/redirects_hygiene.py --apply",
     "youtube:sync": "node ./scripts/youtube-sync.mjs",
     "seo:audit": "node ./scripts/seo-audit.mjs"
   },

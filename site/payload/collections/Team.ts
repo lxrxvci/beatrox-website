@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { getLivePath, getPreviewPath } from '../utils/previewLinks'
 
 function slugify(value: string): string {
   return value
@@ -13,6 +14,12 @@ export const Team: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'title', 'status', 'order', 'updatedAt'],
+    livePreview: {
+      url: ({ data }) => {
+        const slug = typeof data?.slug === 'string' ? data.slug : ''
+        return getLivePath('team', slug)
+      },
+    },
   },
   access: {
     read: () => true,
@@ -24,9 +31,19 @@ export const Team: CollectionConfig = {
     beforeValidate: [
       ({ data }) => {
         if (data && typeof data === 'object' && typeof data.name === 'string' && (!data.slug || typeof data.slug !== 'string')) {
+          const nextSlug = slugify(data.name)
           return {
             ...data,
-            slug: slugify(data.name),
+            slug: nextSlug,
+            liveUrl: getLivePath('team', nextSlug),
+            previewUrl: getPreviewPath('team', nextSlug),
+          }
+        }
+        if (data && typeof data === 'object' && typeof data.slug === 'string') {
+          return {
+            ...data,
+            liveUrl: getLivePath('team', data.slug),
+            previewUrl: getPreviewPath('team', data.slug),
           }
         }
         return data
@@ -63,6 +80,22 @@ export const Team: CollectionConfig = {
         { name: 'legacyUrl', type: 'text' },
         { name: 'alt', type: 'text' },
       ],
+    },
+    {
+      name: 'liveUrl',
+      type: 'text',
+      admin: {
+        readOnly: true,
+        description: 'Open published route for team page.',
+      },
+    },
+    {
+      name: 'previewUrl',
+      type: 'text',
+      admin: {
+        readOnly: true,
+        description: 'Open admin-session draft/private preview route for team page.',
+      },
     },
   ],
 }

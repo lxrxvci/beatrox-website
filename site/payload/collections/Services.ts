@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { getLivePath, getPreviewPath } from '../utils/previewLinks'
 
 function slugify(value: string): string {
   return value
@@ -16,7 +17,7 @@ export const Services: CollectionConfig = {
     livePreview: {
       url: ({ data }) => {
         const slug = typeof data?.slug === 'string' ? data.slug : ''
-        return slug ? `/services/${slug}` : '/services'
+        return getLivePath('services', slug)
       },
     },
   },
@@ -30,9 +31,19 @@ export const Services: CollectionConfig = {
     beforeValidate: [
       ({ data }) => {
         if (data && typeof data === 'object' && typeof data.title === 'string' && (!data.slug || typeof data.slug !== 'string')) {
+          const nextSlug = slugify(data.title)
           return {
             ...data,
-            slug: slugify(data.title),
+            slug: nextSlug,
+            liveUrl: getLivePath('services', nextSlug),
+            previewUrl: getPreviewPath('services', nextSlug),
+          }
+        }
+        if (data && typeof data === 'object' && typeof data.slug === 'string') {
+          return {
+            ...data,
+            liveUrl: getLivePath('services', data.slug),
+            previewUrl: getPreviewPath('services', data.slug),
           }
         }
         return data
@@ -186,6 +197,22 @@ export const Services: CollectionConfig = {
         { name: 'noindex', type: 'checkbox', defaultValue: false },
         { name: 'ogImage', type: 'relationship', relationTo: 'media' },
       ],
+    },
+    {
+      name: 'liveUrl',
+      type: 'text',
+      admin: {
+        readOnly: true,
+        description: 'Open published route for this service.',
+      },
+    },
+    {
+      name: 'previewUrl',
+      type: 'text',
+      admin: {
+        readOnly: true,
+        description: 'Open admin-session draft/private preview route for this service.',
+      },
     },
   ],
 }

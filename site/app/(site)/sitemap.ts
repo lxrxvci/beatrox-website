@@ -1,11 +1,13 @@
 import type { MetadataRoute } from 'next'
-import { getProjectSlugsResolved, getServiceSlugsResolved } from '@/lib/content'
+import { getCaseStudySlugsResolved, getProjectSlugsResolved, getProjectTagsResolved, getServiceSlugsResolved } from '@/lib/content'
 import { readManifest } from '@/lib/youtube/storage'
 
 const BASE_URL = 'https://www.beatrox.com'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectSlugs = await getProjectSlugsResolved()
+  const caseStudySlugs = await getCaseStudySlugsResolved()
+  const projectTags = await getProjectTagsResolved()
   const serviceSlugs = await getServiceSlugsResolved()
   const videoManifest = readManifest()
 
@@ -61,6 +63,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
+  const projectTagPages: MetadataRoute.Sitemap = projectTags.map(tag => ({
+    url: `${BASE_URL}/work/tag/${tag}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
+  }))
+
+  const caseStudyPages: MetadataRoute.Sitemap = caseStudySlugs.map((slug) => ({
+    url: `${BASE_URL}/case-studies/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   const servicePages: MetadataRoute.Sitemap = serviceSlugs.map(slug => ({
     url: `${BASE_URL}/services/${slug}`,
     lastModified: new Date(),
@@ -77,5 +93,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     }))
 
-  return [...rootPages, ...projectPages, ...servicePages, ...videoPages]
+  return [...rootPages, ...projectPages, ...projectTagPages, ...caseStudyPages, ...servicePages, ...videoPages]
 }

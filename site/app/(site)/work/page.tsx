@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getAllProjectsResolved, getCMSPageBySlug, getProjectSlugsResolved, getWorkIndex } from '@/lib/content'
+import { redirect } from 'next/navigation'
+import { getAllProjectsResolved, getCMSPageBySlug, getProjectSlugsResolved, getProjectTagsResolved, getWorkIndex, normalizeProjectTag } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import ParallaxHero from '@/components/ParallaxHero'
@@ -22,11 +23,21 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getWorkIndex().seo)
 }
 
-export default async function WorkPage() {
+interface WorkPageProps {
+  searchParams?: Promise<{ tag?: string }>
+}
+
+export default async function WorkPage({ searchParams }: WorkPageProps) {
+  const params = (await searchParams) || {}
+  const requestedTag = params.tag ? normalizeProjectTag(params.tag) : ''
+  if (requestedTag) {
+    redirect(`/work/tag/${requestedTag}`)
+  }
+
   const projects = await getAllProjectsResolved()
   const slugs = await getProjectSlugsResolved()
-  const normalizeProjectSlug = (slugValue: string) => slugValue.replace(/^\/+/, '').replace(/^work\/+/, '')
-  const projectsBySlug = new Map(projects.map((project) => [normalizeProjectSlug(project.slug), project]))
+  const tags = await getProjectTagsResolved()
+  const projectsBySlug = new Map(projects.map((project) => [project.canonicalSlug, project]))
   const rows = slugs
     .map((slug) => ({ slug, project: projectsBySlug.get(slug) }))
     .filter((row): row is { slug: string; project: (typeof projects)[number] } => Boolean(row.project))
@@ -45,6 +56,20 @@ export default async function WorkPage() {
         description="Our creative technology projects range from permanent installations to touring events — we scale from the small details to international logistics to meet your needs."
         minHeightClass="min-h-[94svh]"
       />
+
+      {tags.length > 0 && (
+        <section className="border-t border-white/10 px-6 lg:px-10 py-8">
+          <Reveal className="max-w-[1120px] mx-auto">
+            <div className="flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <Link key={tag} href={`/work/tag/${tag}`} className="tag hover:border-white/40 transition-colors">
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       {/* Project previews */}
       <section className="border-t border-white/10 px-6 lg:px-10 py-16 lg:py-24">
