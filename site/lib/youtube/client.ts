@@ -1,8 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 import { google, type youtube_v3 } from 'googleapis'
-import type { OAuth2Client } from 'google-auth-library'
 import type { Credentials } from 'google-auth-library'
+
+type OAuth2Client = InstanceType<typeof google.auth.OAuth2>
 import type { YouTubePlaylistRef, YouTubeRawData, YouTubeRawVideo } from './types'
 
 export type Scope = 'youtube.readonly' | 'youtube.force-ssl' | 'youtube'
