@@ -1,8 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
-import fs from 'fs'
 import { buildConfig } from 'payload'
-import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { Users } from './payload/collections/Users.ts'
 import { Media } from './payload/collections/Media.ts'
@@ -18,8 +17,6 @@ import { SeoDefaults } from './payload/globals/SeoDefaults.ts'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-const defaultDatabasePath = path.resolve(dirname, '.cms-data', 'payload.db')
-fs.mkdirSync(path.dirname(defaultDatabasePath), { recursive: true })
 
 export default buildConfig({
   admin: {
@@ -30,9 +27,9 @@ export default buildConfig({
   },
   secret: process.env.PAYLOAD_SECRET || 'dev-only-secret-change-me',
   editor: lexicalEditor(),
-  db: sqliteAdapter({
-    client: {
-      url: process.env.DATABASE_URI || `file:${defaultDatabasePath}`,
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.DATABASE_URI || 'postgresql://localhost:5432/beatrox',
     },
     push: true,
   }),

@@ -1,0 +1,133 @@
+{
+  "title": "Contact",
+  "slug": "/contact",
+  "seo": {
+    "title": "Contact BEATROX — Book a Consultation",
+    "description": "Get in touch with the Beatrox team to discuss your next experiential event, production, or installation. Located in Portland, OR and working worldwide.",
+    "og": {
+      "title": "Contact BEATROX — Let's Build Something Extraordinary",
+      "description": "Ready to create an unforgettable experience? Get in touch with the Beatrox team in Portland, OR to start your project.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Contact Us",
+    "subheadline": "We love to collaborate and amplify your voice. We put your message at the center of the story — let's build something awesome together."
+  },
+  "address": {
+    "company": "Beatrox LLC",
+    "street": "8625 NE Halsey St",
+    "city": "Portland",
+    "state": "OR",
+    "zip": "97220",
+    "country": "US",
+    "formatted": "8625 NE Halsey St, Portland, OR 97220"
+  },
+  "social": {
+    "youtube": "https://www.youtube.com/@beatrox",
+    "instagram": "https://www.instagram.com/beatrox/"
+  },
+  "consultationForm": {
+    "heading": "Book a Discovery Call",
+    "description": "Our team of technical and creative directors can help you with your project. We specialize in bringing unique and bespoke ideas to life. We know that every project is different and we can tailor a custom solution that works for you and your budget.",
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "email",
+        "label": "Email Address",
+        "type": "email",
+        "required": true
+      },
+      {
+        "id": "company",
+        "label": "Company / Organization",
+        "type": "text",
+        "required": false
+      },
+      {
+        "id": "event_type",
+        "label": "Event / Project Type",
+        "type": "select",
+        "required": true,
+        "options": [
+          "Experiential Event",
+          "Festival Activation",
+          "Brand Activation",
+          "Concert / Tour",
+          "Corporate Event",
+          "Permanent Installation",
+          "Product Launch",
+          "Trade Show / Convention",
+          "Other"
+        ]
+      },
+      {
+        "id": "services",
+        "label": "Services Interested In",
+        "type": "multiselect",
+        "required": false,
+        "options": [
+          "Full Service Event Production",
+          "LED Video Wall",
+          "Drone Light Shows",
+          "Laser Shows",
+          "Projection Mapping",
+          "Custom Fabrication",
+          "Lighting Design",
+          "Sound Equipment",
+          "DJ Equipment",
+          "Backline & Stage Rental",
+          "Immersive Environment Design",
+          "Interactive Software"
+        ]
+      },
+      {
+        "id": "event_date",
+        "label": "Estimated Event Date",
+        "type": "date",
+        "required": false
+      },
+      {
+        "id": "location",
+        "label": "Event Location / City",
+        "type": "text",
+        "required": false
+      },
+      {
+        "id": "budget",
+        "label": "Estimated Budget",
+        "type": "select",
+        "required": false,
+        "options": [
+          "Under $10,000",
+          "$10,000 – $25,000",
+          "$25,000 – $50,000",
+          "$50,000 – $100,000",
+          "$100,000 – $250,000",
+          "$250,000+",
+          "Not sure yet"
+        ]
+      },
+      {
+        "id": "message",
+        "label": "Tell Us About Your Project",
+        "type": "textarea",
+        "required": true,
+        "placeholder": "Describe your vision, goals, and any specific requirements..."
+      }
+    ],
+    "submitLabel": "Send Message",
+    "successMessage": "Thanks for reaching out! A member of the Beatrox team will be in touch within 1–2 business days."
+  },
+  "emailSignup": {
+    "heading": "Stay in the Loop",
+    "description": "Join our mailing list for project updates, industry insights, and what we're building next.",
+    "placeholder": "Email Address",
+    "submitLabel": "Sign Up"
+  }
+}

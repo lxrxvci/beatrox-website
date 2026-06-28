@@ -2,21 +2,36 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { readManifest } from '@/lib/youtube/storage'
 
-export const metadata: Metadata = {
-  title: 'Videos',
-  description: 'Video library sourced from the BEATROX YouTube channel manifest.',
-  openGraph: {
-    title: 'Videos — BEATROX',
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Videos',
     description: 'Video library sourced from the BEATROX YouTube channel manifest.',
-    images: ['/og-default.jpg'],
-  },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: 'Videos — BEATROX',
+      description: 'Video library sourced from the BEATROX YouTube channel manifest.',
+      images: ['/og-default.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Videos — BEATROX',
+      description: 'Video library sourced from the BEATROX YouTube channel manifest.',
+      images: ['/og-default.jpg'],
+    },
+    alternates: {
+      canonical: '/videos',
+    },
+  }
 }
 
 export default function VideosPage() {
   const manifest = readManifest()
 
   return (
-    <section className="pt-28 pb-20 px-6 lg:px-10">
+    <section className="section">
       <div className="max-w-[1100px] mx-auto">
         <header className="mb-12">
           <p className="heading-sm text-white/35 mb-3">Media</p>
@@ -44,6 +59,20 @@ export default function VideosPage() {
           </div>
         )}
       </div>
+
+      {/* CTA */}
+      <section className="section border-t border-white/10 text-center">
+        <div className="max-w-xl mx-auto">
+          <h2 className="heading-md mb-4">Want to see more?</h2>
+          <p className="text-sm text-white/50 mb-8 leading-relaxed">
+            Explore our full portfolio of experiential events, installations, and productions.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/work" className="btn-primary">View Our Work</Link>
+            <Link href="/contact" className="btn-ghost">Get a Quote</Link>
+          </div>
+        </div>
+      </section>
     </section>
   )
 }

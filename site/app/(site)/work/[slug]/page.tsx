@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getProjectResolved, getProjectSlugsResolved, normalizeProjectSlug } from '@/lib/content'
+import { getProject, getProjectSlugs, normalizeProjectSlug } from '@/lib/json-content'
+import { seoToMetadata } from '@/lib/metadata'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
 
@@ -10,24 +11,16 @@ interface Props {
   params: Promise<{ slug: string }>
 }
 
-export async function generateStaticParams() {
-  return (await getProjectSlugsResolved()).map(slug => ({ slug }))
+export function generateStaticParams() {
+  return getProjectSlugs().map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const canonicalSlug = normalizeProjectSlug(slug)
-  const project = await getProjectResolved(canonicalSlug)
+  const project = getProject(canonicalSlug)
   if (!project) return {}
-  return {
-    title: project.seo.title,
-    description: project.seo.description,
-    openGraph: {
-      title: project.seo.og.title,
-      description: project.seo.og.description,
-      images: [project.seo.og.image],
-    },
-  }
+  return seoToMetadata(project.seo)
 }
 
 export default async function ProjectPage({ params }: Props) {
@@ -37,7 +30,7 @@ export default async function ProjectPage({ params }: Props) {
   if (slug !== canonicalSlug) {
     redirect(`/work/${canonicalSlug}`)
   }
-  const project = await getProjectResolved(canonicalSlug)
+  const project = getProject(canonicalSlug)
   if (!project) notFound()
 
   const validImages = project.images?.filter(img => img.url && img.url !== '') ?? []
@@ -174,13 +167,22 @@ export default async function ProjectPage({ params }: Props) {
         <VideoEmbedStrip title="Project Video" videos={project.videos} />
       )}
 
-      {/* Bottom nav */}
-      <section className="section border-t border-white/10">
-        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      {/* Bottom nav / CTA */}
+      <section className="section border-t border-white/10 text-center">
+        <div className="max-w-xl mx-auto mb-10">
+          <h2 className="heading-md mb-4">Ready to start your project?</h2>
+          <p className="text-sm text-white/50 mb-8 leading-relaxed">
+            Let&apos;s bring your vision to life. Our team of creative and technical directors is ready to collaborate.
+          </p>
+          <Link href="/contact" className="btn-primary">Start Your Project</Link>
+        </div>
+        <div className="max-w-[1400px] mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link href="/work" className="text-xs font-semibold tracking-[0.2em] uppercase text-white/40 hover:text-white transition-colors">
             ← All Projects
           </Link>
-          <Link href="/contact" className="btn-primary">Start Your Project</Link>
+          <Link href="/services" className="text-xs font-semibold tracking-[0.2em] uppercase text-white/40 hover:text-white transition-colors">
+            Explore Services →
+          </Link>
         </div>
       </section>
     </>

@@ -39,7 +39,7 @@ export default function ParallaxHero({
   }, [])
 
   return (
-    <section className={`relative overflow-hidden border-b border-white/10 px-6 lg:px-10 pt-28 pb-14 ${minHeightClass} flex items-end`}>
+    <section className={`relative overflow-hidden border-b border-white/10 px-6 lg:px-10 pt-24 pb-14 ${minHeightClass} flex items-end`}>
       <div className="absolute inset-0">
         <Image
           src={imageSrc}

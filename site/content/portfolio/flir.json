@@ -1,0 +1,74 @@
+{
+  "title": "FLIR Interactive History Wall",
+  "slug": "/work/flir",
+  "seo": {
+    "title": "FLIR Interactive History Wall — BEATROX Interactive Media Display",
+    "description": "Beatrox created an AI-powered interactive history wall for FLIR at their Washington DC headquarters — featuring LIDAR body tracking, Iron Bow thermal imaging aesthetics, and multi-user simultaneous interaction via computer vision.",
+    "og": {
+      "title": "FLIR Interactive History Wall — Washington DC",
+      "description": "A touch-free LIDAR and AI computer vision history wall at FLIR HQ — multiple users, Iron Bow thermal aesthetics, permanent installation by Beatrox.",
+      "image": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg"
+    }
+  },
+  "hero": {
+    "headline": "FLIR Interactive History Wall",
+    "subheadline": "A permanent interactive media installation at FLIR HQ in Washington DC — LIDAR body tracking and AI computer vision let visitors explore FLIR's technology milestones with their physical presence.",
+    "tags": [
+      "Interactive Media Display",
+      "Permanent Installation",
+      "AI & Computer Vision"
+    ]
+  },
+  "metadata": {
+    "client": "FLIR",
+    "location": "FLIR Headquarters — Washington, DC",
+    "type": "Interactive Media Display, Permanent Installation",
+    "techniques": [
+      "Motion Tracking",
+      "Video Mapping",
+      "Hardware & Software Integration",
+      "AI and Computer Vision Algorithms"
+    ],
+    "materials": [
+      "Ultra Wide Format Displays",
+      "LIDAR Sensors",
+      "Media Server",
+      "Interactive Software Development"
+    ],
+    "partners": [
+      "Imagine[X]"
+    ]
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "To showcase FLIR's historic milestones and achievements through an interactive media display that engages and informs the public about the company's technological innovations. The display was designed to create a unique and memorable experience for visitors at FLIR's headquarters in Washington, DC."
+    },
+    {
+      "type": "concept",
+      "heading": "Design Concept",
+      "content": "Inspired by Apple's iconic springboard app launcher in macOS, the interactive media display uses FLIR's recognizable 'Iron Bow' thermal imaging gradient as a visual language throughout — keeping the experience deeply on-brand.\n\nLIDAR scanners allow participants to control the timeline with their physical body through entirely touch-free interaction. The display uses AI and computer vision algorithms to parse sensor data and generate unique IDs for each individual, enabling multiple simultaneous interactions without interference. The screens react to the presence of people passing by and invite them to explore a library of video content and animations related to FLIR's history — making every visit a discovery."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "Touch-free body interaction via LIDAR scanning sensors",
+        "AI and computer vision algorithms assigning unique IDs per visitor",
+        "Multiple simultaneous user interactions supported",
+        "Iron Bow thermal imaging gradient as visual design language",
+        "Ultra wide-format display system for panoramic impact",
+        "Passive engagement: screens react to passers-by without prompting",
+        "Media server-driven playback of FLIR history video library",
+        "Permanent installation engineered for reliability and low maintenance"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg",
+      "alt": "FLIR Interactive History Wall preview image"
+    }
+  ]
+}

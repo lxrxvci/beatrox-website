@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import type { NavigationLink } from '@/lib/content'
+import type { NavigationLink } from '@/lib/fallbacks'
 
 interface Props {
   links: NavigationLink[]

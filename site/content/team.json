@@ -1,0 +1,145 @@
+{
+  "title": "Team",
+  "slug": "/team",
+  "seo": {
+    "title": "Our Team — BEATROX Experiential Design & Event Production",
+    "description": "Meet the multidisciplinary team behind Beatrox — creators, engineers, designers, and technologists with decades of experience in experiential events and live production.",
+    "og": {
+      "title": "Meet the BEATROX Team",
+      "description": "Creators, engineers, designers, and technologists united by one mission — craft experiences that make audiences feel something real.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Our Team",
+    "subheadline": "We believe in the spirit of collaboration and foster positivity. We are agile and ready to respond with an established network of industry partners."
+  },
+  "members": [
+    {
+      "name": "Nathan Jenkins",
+      "title": "Founder & CEO / Creative Technologist",
+      "bio": "Founder and CEO of Beatrox. With over 20 years of experience in the industry, Nathan's expertise spans Audio Visual Design and Integration, Technical Direction, Lighting Design, and Sound Design. He brings a rare combination of creative vision and deep technical knowledge to every project.",
+      "expertise": [
+        "Audio Visual Design & Integration",
+        "Technical Direction",
+        "Lighting Design",
+        "Sound Design",
+        "Event Production"
+      ],
+      "order": 1,
+      "photo": {
+        "url": "/images/verified/team/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3-442ff685.jpg",
+        "alt": "Nathan Jenkins - Creative Technologist"
+      }
+    },
+    {
+      "name": "Joey Paulekas",
+      "title": "Touring & Fabrication",
+      "bio": "Whether it's Tour Manager, Art Director, Scenic Carpenter, or Production Manager, Joey has done it all. He has worked for global brands and has toured the world with renowned acts including Odesza and Emancipator, bringing a world-class perspective to every project.",
+      "expertise": [
+        "Tour Management",
+        "Art Direction",
+        "Scenic Carpentry",
+        "Production Management",
+        "Custom Fabrication"
+      ],
+      "order": 2,
+      "photo": {
+        "url": "/images/verified/team/Joey-b479f7bf.JPG",
+        "alt": "Joey Paulekas - Touring and Fabrication"
+      }
+    },
+    {
+      "name": "Eric Mintzer",
+      "title": "Creative Technologist",
+      "bio": "A technologist and music lover who has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup Shell and Pamble. Eric is also the current Founder and CEO of ImagineX, pushing the boundaries of what interactive media can do.",
+      "expertise": [
+        "Projection Mapping",
+        "Sensor Automation",
+        "Media Control Systems",
+        "Interactive Software Development"
+      ],
+      "order": 3,
+      "photo": {
+        "url": "/images/verified/team/EDDDED1D-E470-433F-9A93-6826FFE4B993-62a74fbd.jpg",
+        "alt": "Eric Mintzer - Creative Technologist"
+      }
+    },
+    {
+      "name": "Alan Curtiss",
+      "title": "Video Production & LED Technician",
+      "bio": "Owner of Sky Lites Drone Shows and a core member of the Beatrox team. Alan has spent many years producing and managing high-profile technical productions with a wide variety of skills — mastering video production both behind the camera and on the screens. His specialties include Drone Operations, VJ/Media Server operation, and LED Technician work.",
+      "expertise": [
+        "Video Production",
+        "Drone Operations",
+        "VJ / Media Servers",
+        "LED Systems",
+        "Technical Production Management"
+      ],
+      "order": 4,
+      "photo": {
+        "url": "/images/verified/team/Alan-a6e033b5.jpg",
+        "alt": "Alan Curtiss - Video Production & LED Technician"
+      }
+    },
+    {
+      "name": "Desiree Daggy",
+      "title": "3D & Environmental Design",
+      "bio": "A 3D animator and Environmental Designer with expertise spanning character rigging to real-time environments. Desiree brings deep creative and technical skills from years of experience working in the events and entertainment industries, delivering stunning visual worlds for every project.",
+      "expertise": [
+        "3D Animation",
+        "Environmental Design",
+        "Character Rigging",
+        "Real-Time Environments",
+        "Motion Capture"
+      ],
+      "order": 5,
+      "photo": {
+        "url": "/images/verified/team/IMG_6659-f5def1ae.jpg",
+        "alt": "Desiree Daggy - 3D & Environmental Design"
+      }
+    },
+    {
+      "name": "Joshua Vallejos",
+      "title": "Audio Engineer / Production Manager",
+      "bio": "An Audio Engineer with over 15 years of experience spanning touring and live sound, studio engineering, music production, mix and mastering, and sound design for games and TV commercials. Whether on-stage or in the studio, Josh delivers with precision and passion.",
+      "expertise": [
+        "Live Sound Engineering",
+        "Studio Engineering",
+        "Music Production",
+        "Mix & Master Engineering",
+        "Sound Design for Games & TV"
+      ],
+      "order": 6,
+      "photo": {
+        "url": "/images/verified/team/Josh-58ac6190.jpg",
+        "alt": "Joshua Vallejos - Audio Engineer / Production Manager"
+      }
+    },
+    {
+      "name": "Bryant Place",
+      "title": "Creative Technologist",
+      "bio": "With over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art. His international career gives him a unique perspective on how creative technology can transform any space or event.",
+      "expertise": [
+        "Live Entertainment Technology",
+        "Permanent Installations",
+        "Creative Technology",
+        "AV System Integration"
+      ],
+      "order": 7,
+      "photo": {
+        "url": "/images/verified/team/profile_photo1-da4b1a4f.jpg",
+        "alt": "Bryant Place - Creative Technologist"
+      }
+    }
+  ],
+  "cta": {
+    "heading": "Work With Our Team",
+    "body": "We are always looking to collaborate with talented people and ambitious brands. Get in touch to start the conversation.",
+    "label": "Contact Us",
+    "url": "/contact"
+  },
+  "media": {
+    "heroImage": "/images/verified/team/IMG_2959-71c4ed33.jpg"
+  }
+}

@@ -1,17 +1,12 @@
 import type { Metadata } from 'next'
-import { getContact } from '@/lib/content'
+import { getContact } from '@/lib/json-content'
+import { seoToMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/JsonLd'
+import { buildLocalBusinessSchema } from '@/lib/schema'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getContact()
-  return {
-    title: data.seo.title,
-    description: data.seo.description,
-    openGraph: {
-      title: data.seo.og.title,
-      description: data.seo.og.description,
-      images: [data.seo.og.image],
-    },
-  }
+  return seoToMetadata(data.seo)
 }
 
 export default function ContactPage() {
@@ -20,7 +15,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-5 md:px-6 lg:px-10 border-b border-white/10">
+      <section className="pt-24 pb-12 md:pb-16 px-6 lg:px-10 border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <p className="heading-sm text-white/30 mb-4">Get in Touch</p>
           <h1 className="heading-xl max-w-3xl">{data.hero.headline}</h1>
@@ -152,6 +147,21 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Secondary Contact CTAs */}
+      <section className="section border-t border-white/10 text-center">
+        <div className="max-w-xl mx-auto">
+          <h2 className="heading-md mb-4">Prefer to reach out directly?</h2>
+          <p className="text-sm text-white/50 mb-8 leading-relaxed">
+            Our team is available Monday–Friday, 9am–6pm PST. We typically respond within 1–2 business days.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="mailto:hello@beatrox.com" className="btn-primary">Email Us</a>
+            <a href="tel:+15035551234" className="btn-ghost">Call Us</a>
+          </div>
+        </div>
+      </section>
+      <JsonLd data={buildLocalBusinessSchema()} />
     </>
   )
 }

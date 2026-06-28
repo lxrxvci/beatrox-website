@@ -1,23 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllServicesResolved, getCMSPageBySlug, getServiceSlugsResolved, getServicesIndex } from '@/lib/content'
+import { getAllServices, getServiceSlugs, getServicesIndex } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cms = await getCMSPageBySlug('services')
-  if (cms?.seo?.title && cms.seo.description && cms.seo.ogTitle && cms.seo.ogDescription && cms.seo.ogImage) {
-    return seoToMetadata({
-      title: cms.seo.title,
-      description: cms.seo.description,
-      og: {
-        title: cms.seo.ogTitle,
-        description: cms.seo.ogDescription,
-        image: cms.seo.ogImage,
-      },
-    })
-  }
   return seoToMetadata(getServicesIndex().seo)
 }
 
@@ -27,39 +15,39 @@ const CATEGORIES = [
     items: [
       'Environmental Design', 'Lighting Design', 'Pre-Visualization',
       '3D Animation and Motion Capture', 'Realtime Content (AR, VR, XR)',
-      'Audio, Video & Lighting Content Design', 'Consultation & System Design',
-      'Interactive UI/UX Design',
+      'Audio, Video, and Lighting Content Design', 'Consultation and System Design',
+      'Interactive UI / UX Design',
     ],
   },
   {
     label: 'Build',
     items: [
-      'Custom Fabrication', 'Set & Scenic Assembly', 'Staging & Rigging',
-      'Lighting Integration', 'Trade & Convention Booths', 'Permanent Installation',
-      'CNC Machining', 'Materials Sourcing & Selection',
+      'Custom Fabrication', 'Set and Scenic Assembly', 'Staging and Rigging',
+      'Lighting Integration', 'Trade and Convention Booths', 'Permanent Installation',
+      'CNC Machining', 'Materials Sourcing and Selection',
     ],
   },
   {
     label: 'Technical',
     items: [
-      'Technical Direction', 'Drafting & Detail Drawings', 'Engineering Certification',
-      'Software Development', 'Site & Floor Plans', 'Technical Documentation',
-      'Media Server & Playback Solutions', 'AV System Integration',
+      'Technical Direction', 'Drafting and Detail Drawings', 'Engineering Certification',
+      'Software Development', 'Site and Floor Plans', 'Technical Documentation',
+      'Media Server and Playback Solutions', 'AV System Integration',
     ],
   },
   {
     label: 'Production',
     items: [
-      'Event Planning & Logistics', 'AV Equipment Sourcing & Rentals', 'Tour Management',
-      'Production Management', 'Labor Hire Roles: TD, PM, A1/A2, V1/V2, L1/L2',
-      'Venue Sourcing & Booking', 'Permit Submittal', 'System Maintenance & Support',
+      'Event Planning and Logistics', 'AV Equipment Sourcing and Rentals', 'Tour Management',
+      'Production Management', 'Labor Hire Roles: TD, PM, A1 A2, V1 V2, L1, L2',
+      'Venue Sourcing and Booking', 'Permit Submittal', 'System Maintenance and Support',
     ],
   },
 ]
 
-export default async function ServicesPage() {
-  const services = await getAllServicesResolved()
-  const slugs = await getServiceSlugsResolved()
+export default function ServicesPage() {
+  const services = getAllServices()
+  const slugs = getServiceSlugs()
   const servicesHero = services[0]?.media?.heroImage || '/og-default.jpg'
 
   return (
@@ -74,7 +62,7 @@ export default async function ServicesPage() {
       />
 
       {/* 4-Category Grid */}
-      <section className="border-b border-white/10 px-6 lg:px-10 py-16 lg:py-24">
+      <section className="section border-b border-white/10">
         <div className="max-w-[1120px] mx-auto">
           <h2 className="heading-lg mb-10">Our Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
@@ -93,7 +81,7 @@ export default async function ServicesPage() {
       </section>
 
       {/* Individual Service Cards */}
-      <section className="border-b border-white/10 px-6 lg:px-10 py-16 lg:py-24">
+      <section className="section border-b border-white/10">
         <div className="max-w-[1120px] mx-auto">
           <h2 className="heading-lg mb-10">Rental & Specialty Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
@@ -143,8 +131,9 @@ export default async function ServicesPage() {
           <h2 className="heading-lg mb-4">Book a Consultation</h2>
           <p className="text-sm text-white/50 leading-relaxed mb-10">
             Our team of technical and creative directors can help you with your project.
-            We specialize in bringing unique and bespoke ideas to life. Every project is different
-            and we can tailor a custom solution that works for you and your budget.
+            We specialize in bringing unique and bespoke ideas to life. We know that every project
+            is different and we can tailor a custom solution that works for you and your budget.
+            Book a discovery call and get professional advice today.
           </p>
           <Link href="/contact" className="btn-primary">Book a Discovery Call</Link>
         </div>

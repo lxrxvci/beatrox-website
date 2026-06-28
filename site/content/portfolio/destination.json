@@ -1,0 +1,169 @@
+{
+  "title": "Destination",
+  "slug": "/work/destination",
+  "seo": {
+    "title": "Destination \u2014 BEATROX Interactive Art Canvas",
+    "description": "A 40-foot interactive paint canvas created for Journey's x Adidas at Horton Plaza Park, San Diego. Participants controlled a robotic paint dripper to create live collaborative art.",
+    "og": {
+      "title": "Destination \u2014 Journey's x Adidas Interactive Canvas",
+      "description": "A 40-foot blank canvas controlled by the crowd \u2014 robotic paint drippers, 5 colors, and live collaborative art creation for Journey's x Adidas in San Diego.",
+      "image": "/images/deck/destination/01-image77.png"
+    }
+  },
+  "hero": {
+    "headline": "Destination",
+    "subheadline": "A 40-foot blank canvas, five colors of paint, and a robotic dripper controlled by the crowd \u2014 collaborative art at festival scale.",
+    "tags": [
+      "Interactive Art Canvas",
+      "Custom Scenic",
+      "Fabrication",
+      "Experiential Event"
+    ]
+  },
+  "metadata": {
+    "client": "Journey's x Adidas",
+    "location": "Horton Plaza Park \u2014 San Diego, CA",
+    "type": "Interactive Art Canvas, Custom Scenic, Fabrication, Stage Design, Concert, Event Production",
+    "tech": [
+      "Custom Controller",
+      "Firmware Development",
+      "Relay Systems",
+      "Mechanical Valves",
+      "Robotic Paint Distribution Device"
+    ],
+    "spec": [
+      "Arduino",
+      "TouchDesigner"
+    ],
+    "partners": [
+      "Starch Creative"
+    ]
+  },
+  "body": [
+    {
+      "type": "concept",
+      "heading": "The Experience",
+      "content": "Created for Journey's and Adidas, Destination was a 40-foot tall structure skinned with a blank canvas and outfitted with a custom-built robotic paint distribution device. Each participant was given the chance to control the paint dripper and release one of 5 different colors of paint \u2014 all with the press of a button.\n\nParticipants simply made their color selection and the system automatically activated a mechanical valve, sending paint flowing down the massive canvas in real time. Over the course of the event, the canvas became a living, collaborative artwork shaped entirely by the crowd \u2014 a unique take-home memory that existed nowhere else in the world."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "40-foot tall canvas structure for large-scale visual impact",
+        "Custom-built robotic paint distribution device with 5 color channels",
+        "Participant-controlled via custom button controller",
+        "Arduino firmware with relay-driven mechanical valve system",
+        "TouchDesigner integration for event synchronization",
+        "Real-time collaborative art creation at festival scale"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/destination/01-image77.png",
+      "alt": "Destination deck image 1"
+    },
+    {
+      "url": "/images/deck/destination/02-image86.png",
+      "alt": "Destination deck image 2"
+    },
+    {
+      "url": "/images/deck/destination/03-image111.jpg",
+      "alt": "Destination deck image 3"
+    },
+    {
+      "url": "/images/deck/destination/04-image89.jpg",
+      "alt": "Destination deck image 4"
+    },
+    {
+      "url": "/images/deck/destination/05-image79.png",
+      "alt": "Destination deck image 5"
+    },
+    {
+      "url": "/images/deck/destination/06-image87.png",
+      "alt": "Destination deck image 6"
+    },
+    {
+      "url": "/images/deck/destination/07-image137.jpg",
+      "alt": "Destination deck image 7"
+    },
+    {
+      "url": "/images/deck/destination/08-image108.jpg",
+      "alt": "Destination deck image 8"
+    },
+    {
+      "url": "/images/deck/destination/09-image73.jpg",
+      "alt": "Destination deck image 9"
+    },
+    {
+      "url": "/images/deck/destination/10-image109.jpg",
+      "alt": "Destination deck image 10"
+    },
+    {
+      "url": "/images/deck/destination/11-image114.jpg",
+      "alt": "Destination deck image 11"
+    },
+    {
+      "url": "/images/deck/destination/12-image113.jpg",
+      "alt": "Destination deck image 12"
+    },
+    {
+      "url": "/images/deck/destination/13-image78.jpg",
+      "alt": "Destination deck image 13"
+    },
+    {
+      "url": "/images/portfolio/destination/IMG_5461.PNG",
+      "alt": "Destination 40-foot canvas structure at Horton Plaza Park",
+      "filename": "IMG_5461.PNG"
+    },
+    {
+      "url": "/images/portfolio/destination/midi_controller_v_white.png",
+      "alt": "Custom paint controller interface",
+      "filename": "midi_controller_v_white.png"
+    },
+    {
+      "url": "/images/portfolio/destination/PicsForDeck2.PNG",
+      "alt": "Robotic paint dripper mechanism",
+      "filename": "PicsForDeck2.PNG"
+    },
+    {
+      "url": "/images/portfolio/destination/PicsForDeck3.PNG",
+      "alt": "Paint flowing down canvas in real time",
+      "filename": "PicsForDeck3.PNG"
+    },
+    {
+      "url": "/images/portfolio/destination/IMG_8549.jpg",
+      "alt": "Crowd interacting with Destination canvas",
+      "filename": "IMG_8549.jpg"
+    },
+    {
+      "url": "/images/portfolio/destination/DESTINATION_SD_5of7.jpg",
+      "alt": "Destination San Diego event full view",
+      "filename": "DESTINATION_SD_5of7.jpg"
+    },
+    {
+      "url": "/images/portfolio/destination/IMG_9610.jpg",
+      "alt": "Completed canvas artwork",
+      "filename": "IMG_9610.jpg"
+    },
+    {
+      "url": "/images/portfolio/destination/IMG_9776.jpg",
+      "alt": "Destination event atmosphere",
+      "filename": "IMG_9776.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Destination Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=jmRUVbKpxU0",
+      "embedUrl": "https://www.youtube.com/embed/jmRUVbKpxU0"
+    },
+    {
+      "title": "Destination Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=t4u2eCGMzPE",
+      "embedUrl": "https://www.youtube.com/embed/t4u2eCGMzPE"
+    }
+  ]
+}

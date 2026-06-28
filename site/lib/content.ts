@@ -3,8 +3,18 @@ import path from 'path'
 import { getPayload } from 'payload'
 import { draftMode } from 'next/headers'
 import payloadConfig from '@/payload.config'
+import {
+  FALLBACK_NAVIGATION,
+  FALLBACK_SITE_STYLES,
+  FALLBACK_SEO_DEFAULTS,
+} from '@/lib/fallbacks'
+import type {
+  NavigationLink,
+  SiteStyleSettings,
+  SeoDefaultsSettings,
+} from '@/lib/fallbacks'
 
-const CONTENT_ROOT = path.join(process.cwd(), '..', 'content')
+const CONTENT_ROOT = path.join(process.cwd(), 'content')
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -681,28 +691,6 @@ export async function getTeamResolved() {
   }
 }
 
-export interface NavigationLink {
-  label: string
-  href: string
-}
-
-export interface SiteStyleSettings {
-  brandPrimary: string
-  brandSecondary: string
-  backgroundColor: string
-  fontFamilyHeading: string
-  fontFamilyBody: string
-  buttonStyle: 'sharp' | 'rounded'
-}
-
-export interface SeoDefaultsSettings {
-  siteName: string
-  defaultTitle: string
-  titleTemplate: string
-  defaultDescription: string
-  noindexByDefault: boolean
-}
-
 export interface CMSPageBlock {
   blockType: 'text' | 'gallery' | 'features' | 'cta' | 'video'
   heading?: string
@@ -729,32 +717,6 @@ export interface CMSPageData {
     ogImage?: string
   }
   blocks: CMSPageBlock[]
-}
-
-const FALLBACK_NAVIGATION: NavigationLink[] = [
-  { label: 'About', href: '/about' },
-  { label: 'Work', href: '/work' },
-  { label: 'Services', href: '/services' },
-  { label: 'Team', href: '/team' },
-  { label: 'Contact', href: '/contact' },
-]
-
-const FALLBACK_SITE_STYLES: SiteStyleSettings = {
-  brandPrimary: '#ffffff',
-  brandSecondary: '#a1a1aa',
-  backgroundColor: '#000000',
-  fontFamilyHeading: 'inherit',
-  fontFamilyBody: 'inherit',
-  buttonStyle: 'sharp',
-}
-
-const FALLBACK_SEO_DEFAULTS: SeoDefaultsSettings = {
-  siteName: 'BEATROX',
-  defaultTitle: 'BEATROX — Experiential Design & Event Production',
-  titleTemplate: '%s | BEATROX',
-  defaultDescription:
-    'Portland-based experiential design and event production. Drone light shows, LED video walls, projection mapping, custom fabrication, and full-service event production.',
-  noindexByDefault: false,
 }
 
 let payloadClientPromise: ReturnType<typeof getPayload> | null = null

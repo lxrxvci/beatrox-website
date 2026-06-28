@@ -1,29 +1,23 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { getTeamResolved } from '@/lib/content'
+import Link from 'next/link'
+import { getTeam } from '@/lib/json-content'
+import { seoToMetadata } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const data = await getTeamResolved()
-  return {
-    title: data.seo.title,
-    description: data.seo.description,
-    openGraph: {
-      title: data.seo.og.title,
-      description: data.seo.og.description,
-      images: [data.seo.og.image],
-    },
-  }
+  const data = getTeam()
+  return seoToMetadata(data.seo)
 }
 
-export default async function TeamPage() {
-  const data = await getTeamResolved()
+export default function TeamPage() {
+  const data = getTeam()
   const sorted = [...data.members].sort((a, b) => a.order - b.order)
   const heroImage = data.media?.heroImage || '/og-default.jpg'
 
   return (
     <>
       {/* Header */}
-      <section className="relative pt-28 md:pt-32 pb-12 md:pb-14 px-5 md:px-6 lg:px-10 border-b border-white/10 overflow-hidden">
+      <section className="relative pt-24 pb-12 md:pb-16 px-6 lg:px-10 border-b border-white/10 overflow-hidden">
         <Image
           src={heroImage}
           alt="Team hero media"
@@ -41,7 +35,7 @@ export default async function TeamPage() {
       </section>
 
       {/* Team members */}
-      <section className="px-5 md:px-6 lg:px-10 py-10 md:py-14 lg:py-20 border-b border-white/10">
+      <section className="section border-b border-white/10">
         <div className="max-w-[1120px] mx-auto">
           <div className="space-y-8 md:space-y-10">
             {sorted.map((member) => (
@@ -72,6 +66,17 @@ export default async function TeamPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      {data.cta && (
+        <section className="section border-t border-white/10 text-center">
+          <div className="max-w-xl mx-auto">
+            <h2 className="heading-md mb-4">{data.cta.heading}</h2>
+            <p className="text-sm text-white/50 mb-8 leading-relaxed">{data.cta.body}</p>
+            <Link href={data.cta.url} className="btn-primary">{data.cta.label}</Link>
+          </div>
+        </section>
+      )}
     </>
   )
 }

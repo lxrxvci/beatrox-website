@@ -1,0 +1,119 @@
+{
+  "title": "Run for the Oceans",
+  "slug": "/work/run-for-the-oceans",
+  "seo": {
+    "title": "Run for the Oceans \u2014 BEATROX Experiential Design",
+    "description": "An interactive ocean-awareness media experience created for Adidas and Parley Ocean School at Domino Park, Brooklyn. Custom shipping container build with infinity LED walls and LIDAR-driven real-time simulations.",
+    "og": {
+      "title": "Run for the Oceans \u2014 Adidas x Parley Ocean School",
+      "description": "An immersive shipping container turned deep-ocean environment \u2014 LIDAR sensors, infinity LED walls, and real-time fish simulations in Brooklyn.",
+      "image": "/images/portfolio/run-for-the-oceans/KMP_2618.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Run for the Oceans",
+    "subheadline": "An immersive interactive experience raising awareness about plastic waste in our oceans \u2014 powered by LIDAR, LED video, and real-time simulation.",
+    "tags": [
+      "Interactive Media Experience",
+      "Event Production",
+      "Marathon Activation"
+    ]
+  },
+  "metadata": {
+    "client": "Adidas",
+    "location": "Domino Park \u2014 Brooklyn, NY",
+    "type": "Interactive Media Experience, Event Production, Marathon Activation, Infinity Mirror",
+    "tech": [
+      "LED Video Panel",
+      "Scanning LIDAR Sensors",
+      "Custom Shipping Container Build",
+      "Flocking Simulation",
+      "Fluids Simulation",
+      "Real-Time Interactive Programming"
+    ],
+    "spec": [
+      "TouchDesigner",
+      "Hokuyo",
+      "ROE Black Pearl"
+    ],
+    "partners": [
+      "Parley Ocean School",
+      "Adidas",
+      "Kamp Grizzly"
+    ]
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "To create an interactive and educational experience for attendees of the Parley Ocean School x Adidas annual 5k marathon event. The goal was to raise awareness about the impact of plastic waste in the ocean, while also providing an immersive and entertaining experience."
+    },
+    {
+      "type": "concept",
+      "heading": "Design Concept",
+      "content": "A custom shipping container build was used to create an immersive environment that resembled a deep chamber within the ocean. The container was fitted with seamless wall-to-wall video panels and mirror surfaces for the floor and ceiling to create an infinity mirror effect.\n\nThe interactive experience used scanning LIDAR sensors to track the participants' movements and touch interactions, and this data was used to drive a real-time visualization of flocking fish and a fluid simulation. A collage of information and footage about the deep ocean and plastic waste was also displayed on the screens."
+    },
+    {
+      "type": "quote",
+      "content": "Interactive Infinity & Media Tunnel \u2014 Event Production at its most immersive."
+    }
+  ],
+  "videos": [
+    {
+      "title": "BEATROX Ocean Experience Reel",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/@beatrox",
+      "embedUrl": "https://www.youtube.com/embed?listType=search&list=beatrox%20run%20for%20the%20oceans"
+    },
+    {
+      "title": "Niagra Falls Drone Show - Long distance Shot",
+      "provider": "youtube",
+      "url": "https://youtu.be/s7hunGseQnE",
+      "embedUrl": "https://www.youtube.com/embed/s7hunGseQnE"
+    },
+    {
+      "title": "Niagra Falls - Drone Show with Sky Lites",
+      "provider": "youtube",
+      "url": "https://youtu.be/9DPVS9Ak2CQ",
+      "embedUrl": "https://www.youtube.com/embed/9DPVS9Ak2CQ"
+    },
+    {
+      "title": "Parley Ocean School: Interactive Container Experience",
+      "provider": "youtube",
+      "url": "https://youtu.be/DjyulR5DvOQ",
+      "embedUrl": "https://www.youtube.com/embed/DjyulR5DvOQ"
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/portfolio/run-for-the-oceans/KMP_2618.jpg",
+      "alt": "Run for the Oceans immersive container exterior",
+      "filename": "KMP_2618.jpg"
+    },
+    {
+      "url": "/images/portfolio/run-for-the-oceans/KMP_2820.jpg",
+      "alt": "LED infinity mirror interior view",
+      "filename": "KMP_2820.jpg"
+    },
+    {
+      "url": "/images/portfolio/run-for-the-oceans/KMP_3614.jpg",
+      "alt": "Participant interacting with LIDAR flocking simulation",
+      "filename": "KMP_3614.jpg"
+    },
+    {
+      "url": "/images/portfolio/run-for-the-oceans/RTFO2019-PICS-KMP_2875.jpg",
+      "alt": "Ocean media content on LED walls",
+      "filename": "RTFO2019-PICS-KMP_2875.jpg"
+    },
+    {
+      "url": "/images/portfolio/run-for-the-oceans/DeckScreenCap1.png",
+      "alt": "Real-time flocking fish simulation",
+      "filename": "DeckScreenCap1.png"
+    },
+    {
+      "url": "/images/portfolio/run-for-the-oceans/DeckScreenCap3.png",
+      "alt": "Fluid simulation visualization",
+      "filename": "DeckScreenCap3.png"
+    }
+  ]
+}

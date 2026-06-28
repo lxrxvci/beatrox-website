@@ -1,0 +1,240 @@
+{
+  "title": "MyShelter",
+  "slug": "/work/myshelter",
+  "seo": {
+    "title": "MyShelter \u2014 BEATROX Immersive Environment",
+    "description": "An immersive forest environment created for the Adidas Outdoor MyShelter jacket launch in New York \u2014 projection mapping, spatial audio, and low-lying fog in a repurposed bodega space.",
+    "og": {
+      "title": "MyShelter \u2014 Adidas Immersive Product Launch",
+      "description": "A narrow NYC bodega transformed into a living forest canopy \u2014 projection mapping, spatial audio, and fog for the Adidas Outdoor MyShelter jacket launch.",
+      "image": "/images/deck/myshelter/01-image51.jpg"
+    }
+  },
+  "hero": {
+    "headline": "MyShelter",
+    "subheadline": "A narrow bodega transformed into a living forest canopy \u2014 letting visitors experience Adidas Outdoor's MyShelter jacket in the environment it was made for.",
+    "tags": [
+      "Environmental Design",
+      "Immersive Experience",
+      "Product Launch",
+      "Retail Build"
+    ]
+  },
+  "metadata": {
+    "client": "Adidas",
+    "location": "New York, NY",
+    "type": "Experiential Event, Immersive Environment, Product Launch, Retail Build",
+    "tech": [
+      "Projection Mapping",
+      "Short-Throw Projector",
+      "Spatial Audio",
+      "Audio-Reactive Lighting",
+      "Low-Lying Fog Effects",
+      "Forced Perspective Content"
+    ],
+    "materials": [
+      "Foliage",
+      "Street Signs & Lights",
+      "CNC Acrylic",
+      "Addressable LEDs",
+      "TouchDesigner"
+    ],
+    "spec": [
+      "TouchDesigner"
+    ],
+    "partners": [
+      "Kamp Grizzly"
+    ]
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "To create an experiential immersive environment for the product launch of Adidas Outdoor's MyShelter jacket. The objective was to give people an environment to experience the jacket in the setting where it is best suited \u2014 deep within a lush forest canopy."
+    },
+    {
+      "type": "concept",
+      "heading": "Design Concept",
+      "content": "The environment was created using projection mapping to transform the walls into a lush inner forest scene. Spatial audio recreated the immersive sounds of the inner forest canopy, and low-lying fog was used to create a sense of discovery and intrigue.\n\nThe project also utilized audio-reactive lighting, scenic elements hung from the roof, and custom signage to create a surreal scene to keep visitors entertained as they experienced the new Adidas jacket. The projector was short-throw and hidden within the forest canopy. The projection content was a slowly animating forest scene using forced perspective, making visitors feel like they were gently floating through a peaceful forest \u2014 even within a tiny Manhattan space."
+    },
+    {
+      "type": "challenge",
+      "heading": "Design Challenge",
+      "content": "The space was a small and narrow shut-down bodega, previously used for storing old kitchen equipment. The main challenge was to create a fully convincing immersive experience within this tight footprint \u2014 while hiding all technical infrastructure from view."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "Floor-to-ceiling projection mapping on narrow bodega walls",
+        "Forced perspective forest content for depth illusion",
+        "Hidden short-throw projector within scenic forest canopy",
+        "Spatial audio recreating inner forest soundscape",
+        "Low-lying fog for atmosphere and discovery",
+        "Audio-reactive addressable LED lighting",
+        "Custom CNC acrylic and foliage scenic elements",
+        "Custom street signage and environmental design"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/myshelter/01-image51.jpg",
+      "alt": "Myshelter deck image 1"
+    },
+    {
+      "url": "/images/deck/myshelter/02-image67.jpg",
+      "alt": "Myshelter deck image 2"
+    },
+    {
+      "url": "/images/deck/myshelter/03-image61.jpg",
+      "alt": "Myshelter deck image 3"
+    },
+    {
+      "url": "/images/deck/myshelter/04-image69.jpg",
+      "alt": "Myshelter deck image 4"
+    },
+    {
+      "url": "/images/deck/myshelter/05-image63.jpg",
+      "alt": "Myshelter deck image 5"
+    },
+    {
+      "url": "/images/deck/myshelter/06-image62.jpg",
+      "alt": "Myshelter deck image 6"
+    },
+    {
+      "url": "/images/deck/myshelter/07-image66.jpg",
+      "alt": "Myshelter deck image 7"
+    },
+    {
+      "url": "/images/deck/myshelter/08-image56.jpg",
+      "alt": "Myshelter deck image 8"
+    },
+    {
+      "url": "/images/deck/myshelter/09-image54.jpg",
+      "alt": "Myshelter deck image 9"
+    },
+    {
+      "url": "/images/deck/myshelter/10-image59.jpg",
+      "alt": "Myshelter deck image 10"
+    },
+    {
+      "url": "/images/deck/myshelter/11-image76.jpg",
+      "alt": "Myshelter deck image 11"
+    },
+    {
+      "url": "/images/deck/myshelter/12-image60.jpg",
+      "alt": "Myshelter deck image 12"
+    },
+    {
+      "url": "/images/deck/myshelter/13-image65.jpg",
+      "alt": "Myshelter deck image 13"
+    },
+    {
+      "url": "/images/deck/myshelter/14-image68.jpg",
+      "alt": "Myshelter deck image 14"
+    },
+    {
+      "url": "/images/deck/myshelter/15-image64.jpg",
+      "alt": "Myshelter deck image 15"
+    },
+    {
+      "url": "/images/portfolio/myshelter/Middle.jpg",
+      "alt": "MyShelter immersive forest environment \u2014 middle section",
+      "filename": "Middle.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/CooridorEmpty.jpg",
+      "alt": "Narrow bodega corridor transformed into forest",
+      "filename": "CooridorEmpty.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/CustomSign1.jpg",
+      "alt": "Custom scenic signage in MyShelter environment",
+      "filename": "CustomSign1.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/INTERIOR1.jpg",
+      "alt": "MyShelter interior with forest projection",
+      "filename": "INTERIOR1.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/IMG_9687.jpg",
+      "alt": "Forest canopy projection close-up",
+      "filename": "IMG_9687.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/IMG_9700.jpg",
+      "alt": "Visitor experiencing MyShelter environment",
+      "filename": "IMG_9700.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/image-asset.png",
+      "alt": "MyShelter concept design",
+      "filename": "image-asset.png"
+    },
+    {
+      "url": "/images/portfolio/myshelter/IMG_9694.jpg",
+      "alt": "Audio-reactive lighting in forest environment",
+      "filename": "IMG_9694.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/IMG_9699.jpg",
+      "alt": "Low-lying fog in MyShelter corridor",
+      "filename": "IMG_9699.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/IMG_9681.jpg",
+      "alt": "Foliage scenic elements overhead",
+      "filename": "IMG_9681.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/IMG_9675.jpg",
+      "alt": "MyShelter entrance view",
+      "filename": "IMG_9675.jpg"
+    },
+    {
+      "url": "/images/portfolio/myshelter/IMG_9673.jpg",
+      "alt": "CNC acrylic and addressable LED details",
+      "filename": "IMG_9673.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "title": "MyShelter Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=Gj1-WvqEgUk",
+      "embedUrl": "https://www.youtube.com/embed/Gj1-WvqEgUk"
+    },
+    {
+      "title": "MyShelter Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=XQbPeEAccLk",
+      "embedUrl": "https://www.youtube.com/embed/XQbPeEAccLk"
+    },
+    {
+      "title": "MyShelter Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=gj81ozAGWJs",
+      "embedUrl": "https://www.youtube.com/embed/gj81ozAGWJs"
+    },
+    {
+      "title": "Ikon Lounge Portland - Immersive Lighting Design IMG 5878",
+      "provider": "youtube",
+      "url": "https://youtu.be/73M-0G7xXGM",
+      "embedUrl": "https://www.youtube.com/embed/73M-0G7xXGM"
+    },
+    {
+      "title": "Ikon Lounge Portland - Immersive Lighting Design- IMG 5877",
+      "provider": "youtube",
+      "url": "https://youtu.be/6VGVo4WIQDc",
+      "embedUrl": "https://www.youtube.com/embed/6VGVo4WIQDc"
+    },
+    {
+      "title": "Ikon Lounge Portland - Immersive Lighting Design- IMG 5875",
+      "provider": "youtube",
+      "url": "https://youtu.be/TC7BxwpgKRE",
+      "embedUrl": "https://www.youtube.com/embed/TC7BxwpgKRE"
+    }
+  ]
+}

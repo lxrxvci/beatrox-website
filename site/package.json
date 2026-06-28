@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "if [ -d ../content ]; then rm -rf ./content && cp -r ../content ./content; fi",
     "dev": "next dev",
+    "prebuild": "if [ -d ../content ]; then rm -rf ./content && cp -r ../content ./content; fi",
     "build": "next build",
     "start": "next start",
     "cms:types": "payload generate:types",
@@ -22,14 +24,14 @@
     "seo:audit": "node ./scripts/seo-audit.mjs"
   },
   "dependencies": {
-    "@payloadcms/db-sqlite": "^3.77.0",
-    "@payloadcms/next": "^3.77.0",
-    "@payloadcms/richtext-lexical": "^3.77.0",
-    "@payloadcms/richtext-slate": "^3.77.0",
+    "@payloadcms/db-postgres": "^3.85.1",
+    "@payloadcms/next": "^3.85.1",
+    "@payloadcms/richtext-lexical": "^3.85.1",
+    "@payloadcms/richtext-slate": "^3.85.1",
     "googleapis": "^171.4.0",
     "graphql": "^16.13.0",
     "next": "^16.2.0-canary.65",
-    "payload": "^3.77.0",
+    "payload": "^3.85.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "sharp": "^0.34.5"

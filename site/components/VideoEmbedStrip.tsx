@@ -1,4 +1,4 @@
-import { VideoEmbed } from '@/lib/content'
+import type { VideoEmbed } from '@/lib/json-content'
 
 interface VideoEmbedStripProps {
   title: string

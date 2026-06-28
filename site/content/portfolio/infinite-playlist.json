@@ -1,0 +1,238 @@
+{
+  "title": "Infinite Playlist Tour",
+  "slug": "/work/infinite-playlist",
+  "seo": {
+    "title": "Infinite Playlist Tour \u2014 BEATROX Festival Activation",
+    "description": "Beatrox produced the Amazon Music Live Infinite Playlist Tour activations at Outside Lands 2023 and Stagecoach 2023 \u2014 immersive festival builds with AR moments, interactive touchpoints, and artist meet & greets.",
+    "og": {
+      "title": "Infinite Playlist Tour \u2014 Amazon Music Live",
+      "description": "Beatrox produced immersive festival activations for Amazon Music Live at Outside Lands and Stagecoach 2023 \u2014 AR moments, custom murals, and exclusive artist meet & greets.",
+      "image": "/images/deck/infinite-playlist/01-image35.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Infinite Playlist Tour",
+    "subheadline": "Two unforgettable festival activations for Amazon Music Live \u2014 bringing fans unprecedented access to artists at Outside Lands and Stagecoach 2023.",
+    "tags": [
+      "Interactive Media Experience",
+      "Event Production",
+      "Festival Activation"
+    ]
+  },
+  "metadata": {
+    "client": "Amazon Music Live",
+    "locations": [
+      "Outside Lands Music Festival 2023 \u2014 San Francisco, CA",
+      "Stagecoach 2023 \u2014 Indio, CA"
+    ],
+    "type": "Interactive Media Experience, Event Production, Festival Activation",
+    "techniques": [
+      "Reflective Exterior Design",
+      "Custom Mural Creation",
+      "Animated LED Lighting",
+      "Interactive Touchpoints",
+      "AR Moments with Free-Standing LED Walls",
+      "Real-Time Physics Simulations",
+      "Interactive Programming"
+    ],
+    "materials": [
+      "LED Video Panels",
+      "Reflective Materials",
+      "Astera Lights",
+      "Custom Murals",
+      "TouchDesigner",
+      "Microsoft Kinect Azure"
+    ],
+    "partners": [
+      "Kamp Grizzly",
+      "Hawthorne Industries",
+      "Sharing Box"
+    ],
+    "location": "Stage Coach, Outside Lands"
+  },
+  "body": [
+    {
+      "type": "objective",
+      "heading": "Design Objective",
+      "content": "Amazon Music aimed to create an unforgettable festival experience that would break through the clutter and delight audiences at select 2023 music festivals. The objective was to provide fans with unprecedented access to the music and artists they love, while also engaging them with interactive elements that enhance their overall festival experience."
+    },
+    {
+      "type": "concept",
+      "heading": "Outside Lands \u2014 San Francisco",
+      "content": "At Outside Lands, the experience featured a reflective exterior and a custom mural by Bay Area artist Chaz Bear. Fans passed through a colorful, Astera-lit hallway into a music-filled space that took over the 3-day festival. The space included meet & greet sessions with artists and interviews hosted by Bimma Williams, enhancing fan engagement throughout the weekend."
+    },
+    {
+      "type": "concept",
+      "heading": "Stagecoach \u2014 Indio, CA",
+      "content": "At Stagecoach, attendees enjoyed the official festival livestream in a striking, technicolor build with interactive touchpoints throughout the space \u2014 including exclusive merch giveaways, artist meet & greets, VIP pass giveaways, and an Amazon Music LIVE photobooth."
+    },
+    {
+      "type": "features_list",
+      "heading": "Key Features",
+      "items": [
+        "Reflective exterior build with custom Bay Area artist mural (Chaz Bear)",
+        "Astera-lit colorful entry hallway experience",
+        "Artist meet & greet sessions hosted by Bimma Williams",
+        "AR moments powered by free-standing LED walls and Kinect Azure",
+        "Real-time physics simulations via TouchDesigner",
+        "Official festival livestream integration (Stagecoach)",
+        "Interactive touchpoints: merch giveaways, VIP pass activations, photobooth",
+        "Multi-festival deployment with custom builds per venue"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "url": "/images/deck/infinite-playlist/01-image35.jpg",
+      "alt": "Infinite Playlist deck image 1"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/02-image2.jpg",
+      "alt": "Infinite Playlist deck image 2"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/03-image21.jpg",
+      "alt": "Infinite Playlist deck image 3"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/04-image28.jpg",
+      "alt": "Infinite Playlist deck image 4"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/05-image23.jpg",
+      "alt": "Infinite Playlist deck image 5"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/06-image33.jpg",
+      "alt": "Infinite Playlist deck image 6"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/07-image18.jpg",
+      "alt": "Infinite Playlist deck image 7"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/08-image40.jpg",
+      "alt": "Infinite Playlist deck image 8"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/09-image38.jpg",
+      "alt": "Infinite Playlist deck image 9"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/10-image19.jpg",
+      "alt": "Infinite Playlist deck image 10"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/11-image53.jpg",
+      "alt": "Infinite Playlist deck image 11"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/12-image25.jpg",
+      "alt": "Infinite Playlist deck image 12"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/13-image29.jpg",
+      "alt": "Infinite Playlist deck image 13"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/14-image4.jpg",
+      "alt": "Infinite Playlist deck image 14"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/15-image10.png",
+      "alt": "Infinite Playlist deck image 15"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/16-image1.png",
+      "alt": "Infinite Playlist deck image 16"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/17-image11.jpg",
+      "alt": "Infinite Playlist deck image 17"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/18-image3.jpg",
+      "alt": "Infinite Playlist deck image 18"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/19-image5.jpg",
+      "alt": "Infinite Playlist deck image 19"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/20-image7.jpg",
+      "alt": "Infinite Playlist deck image 20"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/21-image6.jpg",
+      "alt": "Infinite Playlist deck image 21"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/22-image8.jpg",
+      "alt": "Infinite Playlist deck image 22"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/23-image9.jpg",
+      "alt": "Infinite Playlist deck image 23"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/24-image16.jpg",
+      "alt": "Infinite Playlist deck image 24"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/25-image12.jpg",
+      "alt": "Infinite Playlist deck image 25"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/26-image13.jpg",
+      "alt": "Infinite Playlist deck image 26"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/27-image22.png",
+      "alt": "Infinite Playlist deck image 27"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/28-image14.jpg",
+      "alt": "Infinite Playlist deck image 28"
+    },
+    {
+      "url": "/images/deck/infinite-playlist/29-image17.jpg",
+      "alt": "Infinite Playlist deck image 29"
+    },
+    {
+      "url": "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg",
+      "alt": "Infinite Playlist Tour preview image"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Infinite Playlist Tour Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=K6q4bdCMADI",
+      "embedUrl": "https://www.youtube.com/embed/K6q4bdCMADI"
+    },
+    {
+      "title": "Infinite Playlist Tour Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=_MOJ_AOpApE",
+      "embedUrl": "https://www.youtube.com/embed/_MOJ_AOpApE"
+    },
+    {
+      "title": "Infinite Playlist Tour Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=dAscyMAltCc",
+      "embedUrl": "https://www.youtube.com/embed/dAscyMAltCc"
+    },
+    {
+      "title": "Infinite Playlist Tour Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=kgWQxYT3qZE",
+      "embedUrl": "https://www.youtube.com/embed/kgWQxYT3qZE"
+    },
+    {
+      "title": "Infinite Playlist Tour Deck Link",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=yzqcpqORO6w",
+      "embedUrl": "https://www.youtube.com/embed/yzqcpqORO6w"
+    }
+  ]
+}

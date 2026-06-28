@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import type { YouTubeManifestData, YouTubeOverridesData, YouTubeRawData } from './types'
 
-const CONTENT_ROOT = path.join(process.cwd(), '..', 'content')
+const CONTENT_ROOT = path.join(process.cwd(), 'content')
 const YOUTUBE_ROOT = path.join(CONTENT_ROOT, 'youtube')
 
 const RAW_PATH = path.join(YOUTUBE_ROOT, 'raw-videos.json')

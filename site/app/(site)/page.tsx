@@ -1,20 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getHomepage, getAllProjectsResolved } from '@/lib/content'
+import { getHomepage, getAllProjects } from '@/lib/json-content'
+import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getHomepage()
-  return {
-    title: data.seo.title,
-    description: data.seo.description,
-    openGraph: {
-      title: data.seo.og.title,
-      description: data.seo.og.description,
-      images: [data.seo.og.image],
-    },
-  }
+  return seoToMetadata(data.seo)
 }
 
 const CAPABILITIES = [
@@ -34,7 +27,7 @@ const CAPABILITIES = [
 
 export default async function HomePage() {
   const data = getHomepage()
-  const allProjects = await getAllProjectsResolved()
+  const allProjects = getAllProjects()
   const heroImage = data.media.heroImage || '/og-default.jpg'
   const galleryImages = data.media.galleryImages || []
   const projectsBySlug = new Map(allProjects.map((project) => [project.canonicalSlug, project]))
@@ -89,7 +82,7 @@ export default async function HomePage() {
       </section>
 
       {galleryImages.length > 0 && (
-        <section className="border-t border-white/10">
+        <section className="section border-t border-white/10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
             {galleryImages.slice(0, 6).map((img, idx) => (
               <div key={`${img}-${idx}`} className="relative h-52 md:h-64 bg-neutral-950 overflow-hidden">

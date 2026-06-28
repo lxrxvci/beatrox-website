@@ -5,6 +5,10 @@ export function seoToMetadata(seo: SeoMeta): Metadata {
   return {
     title: seo.title,
     description: seo.description,
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title: seo.og.title,
       description: seo.og.description,

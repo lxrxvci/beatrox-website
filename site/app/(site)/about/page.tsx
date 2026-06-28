@@ -1,19 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAbout } from '@/lib/content'
+import { getAbout } from '@/lib/json-content'
+import { seoToMetadata } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getAbout()
-  return {
-    title: data.seo.title,
-    description: data.seo.description,
-    openGraph: {
-      title: data.seo.og.title,
-      description: data.seo.og.description,
-      images: [data.seo.og.image],
-    },
-  }
+  return seoToMetadata(data.seo)
 }
 
 export default function AboutPage() {
@@ -27,7 +20,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 px-6 lg:px-10 border-b border-white/10 overflow-hidden">
+      <section className="relative pt-24 pb-16 px-6 lg:px-10 border-b border-white/10 overflow-hidden">
         <Image
           src={heroImage}
           alt="About page hero"

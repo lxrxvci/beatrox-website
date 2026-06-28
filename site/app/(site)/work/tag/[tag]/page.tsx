@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getProjectsByTagResolved, getProjectTagsResolved, normalizeProjectTag } from '@/lib/content'
+import { getProjectsByTag, getProjectTags, normalizeProjectTag } from '@/lib/json-content'
 
 interface Props {
   params: Promise<{ tag: string }>
 }
 
-export async function generateStaticParams() {
-  return (await getProjectTagsResolved()).map((tag) => ({ tag }))
+export function generateStaticParams() {
+  return getProjectTags().map((tag) => ({ tag }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -19,6 +19,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Work tagged "${normalizedTag}"`,
     description: `Portfolio projects tagged ${normalizedTag}.`,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: `Work tagged "${normalizedTag}" — BEATROX`,
+      description: `Portfolio projects tagged ${normalizedTag}.`,
+      images: ['/og-default.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Work tagged "${normalizedTag}" — BEATROX`,
+      description: `Portfolio projects tagged ${normalizedTag}.`,
+      images: ['/og-default.jpg'],
+    },
+    alternates: {
+      canonical: `/work/tag/${normalizedTag}`,
+    },
   }
 }
 
@@ -27,7 +45,7 @@ export default async function WorkTagPage({ params }: Props) {
   const normalizedTag = normalizeProjectTag(tag)
   if (!normalizedTag) notFound()
 
-  const projects = await getProjectsByTagResolved(normalizedTag)
+  const projects = getProjectsByTag(normalizedTag)
   if (projects.length === 0) notFound()
 
   const heroImage =

@@ -1,7 +1,6 @@
-import { getNavigationLinks } from '@/lib/content'
+import { FALLBACK_NAVIGATION } from '@/lib/fallbacks'
 import NavClient from '@/components/NavClient'
 
-export default async function Nav() {
-  const links = await getNavigationLinks()
-  return <NavClient links={links} />
+export default function Nav() {
+  return <NavClient links={FALLBACK_NAVIGATION} />
 }

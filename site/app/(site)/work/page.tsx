@@ -1,44 +1,22 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
-import { getAllProjectsResolved, getCMSPageBySlug, getProjectSlugsResolved, getProjectTagsResolved, getWorkIndex, normalizeProjectTag } from '@/lib/content'
+import { getAllProjects, getProjectSlugs, getProjectTags, getWorkIndex, normalizeProjectSlug } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import ParallaxHero from '@/components/ParallaxHero'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cms = await getCMSPageBySlug('work')
-  if (cms?.seo?.title && cms.seo.description && cms.seo.ogTitle && cms.seo.ogDescription && cms.seo.ogImage) {
-    return seoToMetadata({
-      title: cms.seo.title,
-      description: cms.seo.description,
-      og: {
-        title: cms.seo.ogTitle,
-        description: cms.seo.ogDescription,
-        image: cms.seo.ogImage,
-      },
-    })
-  }
   return seoToMetadata(getWorkIndex().seo)
 }
 
-interface WorkPageProps {
-  searchParams?: Promise<{ tag?: string }>
-}
-
-export default async function WorkPage({ searchParams }: WorkPageProps) {
-  const params = (await searchParams) || {}
-  const requestedTag = params.tag ? normalizeProjectTag(params.tag) : ''
-  if (requestedTag) {
-    redirect(`/work/tag/${requestedTag}`)
-  }
-
-  const projects = await getAllProjectsResolved()
-  const slugs = await getProjectSlugsResolved()
-  const tags = await getProjectTagsResolved()
+export default function WorkPage() {
+  const projects = getAllProjects()
+  const slugs = getProjectSlugs()
+  const tags = getProjectTags()
   const projectsBySlug = new Map(projects.map((project) => [project.canonicalSlug, project]))
-  const rows = slugs
+  const normalizedSlugs = slugs.map((slug) => normalizeProjectSlug(slug))
+  const rows = normalizedSlugs
     .map((slug) => ({ slug, project: projectsBySlug.get(slug) }))
     .filter((row): row is { slug: string; project: (typeof projects)[number] } => Boolean(row.project))
   const heroImage =
@@ -72,7 +50,7 @@ export default async function WorkPage({ searchParams }: WorkPageProps) {
       )}
 
       {/* Project previews */}
-      <section className="border-t border-white/10 px-6 lg:px-10 py-16 lg:py-24">
+      <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
             {rows.map(({ slug, project }) => (

@@ -1,0 +1,271 @@
+{
+  "title": "Equipment Rentals",
+  "slug": "/rentals",
+  "seo": {
+    "title": "Event Equipment Rentals — LED Walls, Sound, DJ, Lighting | BEATROX",
+    "description": "Professional event equipment rentals in Portland, OR — LED video walls, sound systems, DJ equipment, lighting, lasers, backline, and more. Delivery and on-site support available.",
+    "og": {
+      "title": "Event Equipment Rentals — BEATROX Portland",
+      "description": "Professional LED walls, sound, DJ, lighting, and backline rentals for events, concerts, and productions. Get a quote today.",
+      "image": "/og-default.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Professional Equipment Rentals",
+    "subheadline": "Industry-grade LED walls, sound systems, DJ equipment, lighting, lasers, and backline — delivered, set up, and supported by the Beatrox team.",
+    "cta": { "label": "Get a Quote", "url": "/contact" }
+  },
+  "categories": [
+    {
+      "name": "LED Video Walls",
+      "description": "High-resolution LED panels for any footprint — indoor, outdoor, and custom configurations.",
+      "items": [
+        {
+          "name": "Indoor Fine-Pitch LED Panels",
+          "specs": [
+            "1.5mm – 3.9mm pixel pitch",
+            "ROE, Absen, and Unilumin panel options",
+            "Scalable from 10x6ft to 100ft+ wide configurations",
+            "Media server integration and pixel mapping included"
+          ],
+          "description": "Crystal-clear LED panels for conferences, brand activations, and stage backdrops where viewers are close to the screen. Full content formatting and on-site LED technician support included.",
+          "available": true
+        },
+        {
+          "name": "Outdoor High-Brightness LED Panels",
+          "specs": [
+            "6mm – 10mm pixel pitch",
+            "High-brightness panels rated for direct sunlight",
+            "Touring-grade road cases and rigging hardware",
+            "Weather-resistant construction for outdoor events"
+          ],
+          "description": "Rugged, high-brightness LED panels designed for outdoor festivals, sporting events, and large-scale activations. Built to perform in daylight and withstand the elements.",
+          "available": true
+        },
+        {
+          "name": "Curved & Creative LED Builds",
+          "specs": [
+            "Custom curved, corner, and non-standard configurations",
+            "Infinity mirror and architectural surface integration",
+            "Seamless wall-to-wall multi-panel builds",
+            "Custom content design and pre-visualization available"
+          ],
+          "description": "Break the rectangle with custom LED configurations — curved walls, infinity mirror setups, and architectural integrations that transform spaces into immersive visual environments.",
+          "available": true
+        },
+        {
+          "name": "LED Media Server Packages",
+          "specs": [
+            "Resolume, Disguise, or TouchDesigner playback options",
+            "Custom content design and pixel mapping",
+            "Live VJ and media server operation available",
+            "Multi-screen sync and show control integration"
+          ],
+          "description": "Complete media server and playback solutions for LED walls, including custom content creation, pixel mapping, and live VJ operation. Turnkey packages with hardware, software, and operator.",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Sound Equipment",
+      "description": "Professional PA systems, mixing consoles, wireless systems, and monitoring for events of any size.",
+      "items": [
+        {
+          "name": "Line Array PA Systems",
+          "specs": [
+            "L-Acoustics, d&b audiotechnik, and Meyer Sound systems",
+            "Scalable from 100-person rooms to 5,000+ capacity venues",
+            "Touring-grade subwoofer and fill speaker options",
+            "System tuning and front-of-house engineering available"
+          ],
+          "description": "Concert-grade line array PA systems configured to your venue and audience size. Full system tuning, rigging, and front-of-house audio engineering support included.",
+          "available": true
+        },
+        {
+          "name": "Digital Mixing Consoles",
+          "specs": [
+            "DiGiCo, Yamaha, and Midas digital consoles",
+            "32 to 96 channel configurations",
+            "Stage boxes and digital snake systems",
+            "Multi-track recording and playback integration"
+          ],
+          "description": "Industry-standard digital mixing consoles with experienced operators. From intimate events to large concert productions, our consoles deliver pristine audio quality and flexible routing.",
+          "available": true
+        },
+        {
+          "name": "Wireless Microphone Systems",
+          "specs": [
+            "Shure, Sennheiser, and Lectrosonics wireless systems",
+            "Handheld, lavalier, and headset microphone options",
+            "Frequency coordination and RF scanning",
+            "Up to 24 simultaneous wireless channels available"
+          ],
+          "description": "Professional wireless microphone systems for speeches, performances, and broadcasts. Full frequency coordination and RF management to ensure clean, interference-free audio.",
+          "available": true
+        },
+        {
+          "name": "Stage Monitor Systems",
+          "specs": [
+            "Wedge and side-fill monitor configurations",
+            "In-ear monitor (IEM) systems available",
+            "Shure PSM and Sennheiser IEM options",
+            "Monitor engineering (A2) support available"
+          ],
+          "description": "Complete stage monitoring solutions including floor wedges, side-fills, and in-ear monitor systems. Optional monitor engineering (A2) support ensures every performer hears exactly what they need.",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "DJ Equipment",
+      "description": "Industry-standard DJ equipment for world-class performances — delivered, set up, and supported.",
+      "items": [
+        {
+          "name": "Pioneer CDJ/DJM Packages",
+          "specs": [
+            "Pioneer DJ CDJ-3000 & CDJ-2000NXS2 media players",
+            "Pioneer DJM-900NXS2 & DJM-A9 mixers",
+            "Allen & Heath Xone mixer options",
+            "Road-case and touring-ready configurations"
+          ],
+          "description": "The industry standard for club and festival DJs. Pioneer CDJ and DJM packages configured to artist specs, delivered with full cabling, cases, and on-site technical support.",
+          "available": true
+        },
+        {
+          "name": "Technics Turntable Setups",
+          "specs": [
+            "Technics SL-1200MK7 and SL-1200M3D turntables",
+            "Matched with Pioneer or Allen & Heath mixers",
+            "Ortofon and Shure cartridge options",
+            "Full phono preamp and grounding solutions"
+          ],
+          "description": "Vinyl-focused DJ setups featuring Technics SL-1200 turntables, premium cartridges, and matched mixers. Perfect for turntablists, vinyl collectors, and events requiring analog warmth.",
+          "available": true
+        },
+        {
+          "name": "DJ Booth & Fabrication",
+          "specs": [
+            "Custom DJ booth fabrication and design",
+            "LED-integrated and branded facade options",
+            "Monitor speaker and club-style sound integration",
+            "Cable management and clean power distribution"
+          ],
+          "description": "Custom DJ booth fabrication with integrated lighting, branded facades, and clean cable management. Designed to complement your event aesthetic while keeping the DJ comfortable and in control.",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Backline & Stage",
+      "description": "Professional-grade backline and stage packages so your artists hit the stage ready to perform.",
+      "items": [
+        {
+          "name": "Drum Kit Packages",
+          "specs": [
+            "Pearl, DW, and Ludwig drum kit configurations",
+            "Complete cymbal, hardware, and throne packages",
+            "Electronic drum options (Roland V-Drums)",
+            "Drum mic packages (Audio-Technica, Shure)"
+          ],
+          "description": "Touring-quality drum kits configured to artist riders. From jazz combos to heavy rock, our drum packages include shells, cymbals, hardware, and mics — fully tuned and ready to play.",
+          "available": true
+        },
+        {
+          "name": "Guitar & Bass Amp Packages",
+          "specs": [
+            "Marshall, Fender, and Mesa/Boogie guitar amplifiers",
+            "Ampeg and Darkglass bass amplification",
+            "Cabinet options: 1x12, 2x12, 4x12, and 8x10",
+            "Pedalboard power and direct box (DI) included"
+          ],
+          "description": "Iconic guitar and bass amplifier packages for any genre. From clean Fender tones to high-gain Marshall stacks and punchy Ampeg bass rigs, delivered with cabinets, DIs, and pedalboard power.",
+          "available": true
+        },
+        {
+          "name": "Keyboard & Synth Packages",
+          "specs": [
+            "Nord Stage, Roland RD, and Korg keyboard systems",
+            "Analog synthesizer options (Moog, Sequential, Korg)",
+            "Keyboard stands, benches, and sustain pedals",
+            "Direct boxes and stereo monitoring integration"
+          ],
+          "description": "Professional keyboard and synthesizer packages for stage and studio. From piano-focused Nord Stage systems to analog synth rigs, complete with stands, monitoring, and DI integration.",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Lighting Systems",
+      "description": "Complete lighting packages from design to operation — DMX rigs, LED washes, moving heads, and truss.",
+      "items": [
+        {
+          "name": "DMX Moving Head Packages",
+          "specs": [
+            "Beam, spot, and wash moving head fixtures",
+            "Martin, Chauvet, and Robe fixture options",
+            "DMX programming and scene creation",
+            "Audio-reactive and timecode-triggered operation"
+          ],
+          "description": "Dynamic moving head packages programmed to your music and show. From tight beams to sweeping washes, our DMX moving head rigs add motion and drama to any stage or event.",
+          "available": true
+        },
+        {
+          "name": "LED Wash & PAR Packages",
+          "specs": [
+            "Full-color RGBAW LED wash and PAR fixtures",
+            "Battery-powered wireless uplighting options",
+            "Addressable LED strip and pixel mapping systems",
+            "Environmental and architectural wash applications"
+          ],
+          "description": "Vibrant LED wash and PAR packages for stage lighting, uplighting, and environmental illumination. Battery-powered wireless options available for venues without easy power access.",
+          "available": true
+        },
+        {
+          "name": "Truss & Rigging",
+          "specs": [
+            "Box truss, triangle truss, and ground support systems",
+            "Motorized chain hoist and rigging hardware",
+            "Custom truss configurations and custom builds",
+            "Certified rigging and structural safety compliance"
+          ],
+          "description": "Complete truss and rigging solutions for hanging lighting, LED walls, and effects. Custom configurations, certified rigging, and structural safety compliance for venues of all sizes.",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Laser Systems",
+      "description": "High-power professional laser systems for indoor and outdoor events — fully programmed and operated.",
+      "items": [
+        {
+          "name": "Indoor RGB Laser Systems",
+          "specs": [
+            "5W to 30W RGB laser projectors",
+            "ILDA and DMX-controlled beam and graphics projection",
+            "Haze and fog machine integration for visible beams",
+            "FDA variance and laser safety officer (LSO) included"
+          ],
+          "description": "Stunning indoor RGB laser systems for concerts, nightclubs, and brand activations. Programmed beam shows, graphic projections, and atmospheric effects with full safety compliance and on-site LSO.",
+          "available": true
+        },
+        {
+          "name": "Outdoor Sky-Scan Lasers",
+          "specs": [
+            "High-power sky-scan lasers (30W to 80W+)",
+            "Long-range atmospheric beam projection",
+            "FAA coordination and outdoor safety compliance",
+            "Weather-resistant enclosures and remote operation"
+          ],
+          "description": "Massive sky-scan laser systems for outdoor festivals, arena shows, and large-scale events. Long-range beam projection visible for miles, with full FAA coordination and outdoor safety compliance.",
+          "available": true
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "heading": "Need something custom?",
+    "subheading": "We configure rental packages to your exact specs. Get a free quote in 24 hours.",
+    "label": "Get a Free Quote",
+    "url": "/contact"
+  }
+}

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import type { CMSPageBlock } from '@/lib/content'
+import type { CMSPageBlock } from '@/lib/json-content'
 
 interface Props {
   blocks: CMSPageBlock[]
