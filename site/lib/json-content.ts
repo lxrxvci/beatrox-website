@@ -1,7 +1,13 @@
 import fs from 'fs'
 import path from 'path'
 
-const CONTENT_ROOT = path.join(process.cwd(), 'content')
+const SITE_CONTENT_ROOT = path.join(process.cwd(), 'content')
+const REPO_CONTENT_ROOT = path.resolve(process.cwd(), '..', 'content')
+const CONTENT_ROOT = fs.existsSync(SITE_CONTENT_ROOT)
+  ? SITE_CONTENT_ROOT
+  : fs.existsSync(REPO_CONTENT_ROOT)
+    ? REPO_CONTENT_ROOT
+    : SITE_CONTENT_ROOT
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -262,6 +268,7 @@ export function getContact() {
       zip: string
       formatted: string
     }
+    contact: { email: string; phone: string; phoneFormatted: string }
     social: { youtube: string; instagram: string }
     consultationForm: {
       heading: string
@@ -340,4 +347,24 @@ export function getService(slug: string): Service | null {
 export function getServiceSlugs(): string[] {
   const dir = path.join(CONTENT_ROOT, 'services')
   return fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => f.replace('.json', '')).sort()
+}
+
+export function getRentals() {
+  return readJson<{
+    title: string
+    slug: string
+    seo: SeoMeta
+    hero: { headline: string; subheadline: string }
+    categories: {
+      name: string
+      description: string
+      items: {
+        name: string
+        description: string
+        specs: string[]
+        available: boolean
+      }[]
+    }[]
+    cta: { heading: string; subheading: string; label: string; url: string }
+  }>(path.join(CONTENT_ROOT, 'rentals.json'))
 }

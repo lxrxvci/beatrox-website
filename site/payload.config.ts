@@ -11,6 +11,7 @@ import { CaseStudies } from './payload/collections/CaseStudies.ts'
 import { Services } from './payload/collections/Services.ts'
 import { Team } from './payload/collections/Team.ts'
 import { Redirects } from './payload/collections/Redirects.ts'
+import { ContactSubmissions } from './payload/collections/ContactSubmissions.ts'
 import { Navigation } from './payload/globals/Navigation.ts'
 import { SiteStyles } from './payload/globals/SiteStyles.ts'
 import { SeoDefaults } from './payload/globals/SeoDefaults.ts'
@@ -29,11 +30,11 @@ export default buildConfig({
   editor: lexicalEditor(),
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URI || 'postgresql://localhost:5432/beatrox',
+      connectionString: process.env.DATABASE_URI || process.env.DATABASE_URL || 'postgresql://localhost:5432/beatrox',
     },
     push: true,
   }),
-  collections: [Users, Media, Redirects, Pages, Projects, CaseStudies, Services, Team],
+  collections: [Users, Media, Redirects, ContactSubmissions, Pages, Projects, CaseStudies, Services, Team],
   globals: [Navigation, SiteStyles, SeoDefaults],
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

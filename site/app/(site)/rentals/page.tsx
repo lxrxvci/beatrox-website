@@ -2,13 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
-import rentalsData from '@/content/rentals.json'
+import { getRentals } from '@/lib/json-content'
 
 export async function generateMetadata(): Promise<Metadata> {
+  const rentalsData = getRentals()
   return seoToMetadata(rentalsData.seo)
 }
 
 export default function RentalsPage() {
+  const rentalsData = getRentals()
   const { hero, categories, cta } = rentalsData
 
   return (
@@ -26,7 +28,7 @@ export default function RentalsPage() {
       {categories.map((category) => (
         <section
           key={category.name}
-          className="border-b border-white/10 px-6 lg:px-10 py-16 lg:py-24"
+          className="border-b border-white/10 section"
         >
           <div className="max-w-[1120px] mx-auto">
             <div className="mb-10">

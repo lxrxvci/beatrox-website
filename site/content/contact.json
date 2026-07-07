@@ -23,6 +23,11 @@
     "country": "US",
     "formatted": "8625 NE Halsey St, Portland, OR 97220"
   },
+  "contact": {
+    "email": "hello@beatrox.com",
+    "phone": "+15035154715",
+    "phoneFormatted": "(503) 515-4715"
+  },
   "social": {
     "youtube": "https://www.youtube.com/@beatrox",
     "instagram": "https://www.instagram.com/beatrox/"
