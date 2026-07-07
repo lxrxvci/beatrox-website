@@ -28,3 +28,7 @@ misc/
 assets/decks/*.pptx
 .cursor/*
 !.cursor/environment.json
+
+# Payload media uploads (local dev only; use cloud storage in production)
+site/public/uploads/
+site/public/media/

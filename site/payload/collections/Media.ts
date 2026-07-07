@@ -7,7 +7,7 @@ export const Media: CollectionConfig = {
     read: () => true,
   },
   upload: {
-    staticDir: path.resolve(process.cwd(), 'public', 'uploads'),
+    staticDir: path.resolve(process.cwd(), 'public', 'media'),
     adminThumbnail: 'thumbnail',
     mimeTypes: ['image/*', 'video/*'],
   },
