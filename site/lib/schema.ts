@@ -90,6 +90,7 @@ export function buildLocalBusinessSchema(): LocalBusinessSchema {
       'https://www.youtube.com/@beatrox',
       'https://www.instagram.com/beatrox/',
     ],
+    telephone: '+15035154715',
     areaServed: 'Portland, OR and worldwide',
     priceRange: '$$$',
   }

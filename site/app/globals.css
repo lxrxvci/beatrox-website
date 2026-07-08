@@ -21,6 +21,17 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body {
   background-color: #000;
   color: #fff;
@@ -35,6 +46,19 @@ button {
   transition: all 200ms ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button {
+    transition: none;
+  }
+}
+
+/* Focus indicators */
+:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 /* Section utility */
 .section {
   padding: 5.5rem 1.5rem;
@@ -42,6 +66,16 @@ button {
 @media (min-width: 1024px) {
   .section {
     padding: 7rem 2.5rem;
+  }
+}
+
+/* Hero utility — clears fixed 64px nav with consistent bottom padding */
+.hero {
+  padding: 6rem 1.5rem 4rem;
+}
+@media (min-width: 1024px) {
+  .hero {
+    padding: 6rem 2.5rem 5rem;
   }
 }
 
@@ -74,6 +108,42 @@ button {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: #fff;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #fff;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Screen-reader-only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Divider */
@@ -167,4 +237,13 @@ button {
 
 .project-card:hover::after {
   opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card-overlay,
+  .project-card::after,
+  .project-card:hover .project-card-overlay,
+  .project-card:hover::after {
+    transition: none;
+  }
 }

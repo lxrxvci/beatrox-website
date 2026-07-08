@@ -30,10 +30,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function CaseStudiesPage() {
   return (
     <>
-      <section className="relative pt-24 min-h-[48vh] flex flex-col justify-end overflow-hidden bg-black">
+      <section className="relative hero min-h-[48vh] flex flex-col justify-end overflow-hidden bg-black">
         <Image src="/og-default.jpg" alt="Case studies hero" fill priority sizes="100vw" className="object-cover opacity-35" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-        <div className="relative max-w-[1400px] mx-auto w-full px-6 lg:px-10 pb-14">
+        <div className="relative max-w-[1400px] mx-auto w-full">
           <p className="heading-sm text-white/40 mb-3">Sprint Execution</p>
           <h1 className="heading-xl max-w-3xl">Case Studies</h1>
         </div>

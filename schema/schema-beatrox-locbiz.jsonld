@@ -7,6 +7,8 @@
   "description": "Beatrox is a Portland, OR-based experiential design and event production company specializing in immersive environments, LED video walls, drone light shows, laser shows, projection mapping, custom fabrication, and full-service event production.",
   "slogan": "Experiential Design & Event Production",
   "foundingDate": "2020",
+  "telephone": "+15035154715",
+  "email": "hello@beatrox.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "8625 NE Halsey St",

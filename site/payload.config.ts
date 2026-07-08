@@ -12,6 +12,10 @@ import { Services } from './payload/collections/Services.ts'
 import { Team } from './payload/collections/Team.ts'
 import { Redirects } from './payload/collections/Redirects.ts'
 import { ContactSubmissions } from './payload/collections/ContactSubmissions.ts'
+import { ConsultationTypes } from './payload/collections/ConsultationTypes.ts'
+import { AvailabilityRules } from './payload/collections/AvailabilityRules.ts'
+import { BlackoutDates } from './payload/collections/BlackoutDates.ts'
+import { Consultations } from './payload/collections/Consultations.ts'
 import { Navigation } from './payload/globals/Navigation.ts'
 import { SiteStyles } from './payload/globals/SiteStyles.ts'
 import { SeoDefaults } from './payload/globals/SeoDefaults.ts'
@@ -34,7 +38,7 @@ export default buildConfig({
     },
     push: true,
   }),
-  collections: [Users, Media, Redirects, ContactSubmissions, Pages, Projects, CaseStudies, Services, Team],
+  collections: [Users, Media, Redirects, ContactSubmissions, ConsultationTypes, AvailabilityRules, BlackoutDates, Consultations, Pages, Projects, CaseStudies, Services, Team],
   globals: [Navigation, SiteStyles, SeoDefaults],
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

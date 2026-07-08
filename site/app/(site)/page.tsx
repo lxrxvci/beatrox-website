@@ -41,7 +41,7 @@ export default async function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[100svh] flex flex-col justify-end pb-24 px-6 lg:px-10 pt-24 overflow-hidden bg-black border-b border-white/10">
+      <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
         <Image
           src={heroImage}
           alt="BEATROX hero media"

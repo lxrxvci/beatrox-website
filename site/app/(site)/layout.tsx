@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import '../globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
 import { buildOrganizationSchema } from '@/lib/schema'
+import { Analytics } from '@vercel/analytics/react'
 import { FALLBACK_SEO_DEFAULTS, FALLBACK_SITE_STYLES } from '@/lib/fallbacks'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -59,9 +61,29 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className="bg-black text-white antialiased" style={cssVars}>
       <JsonLd data={buildOrganizationSchema()} />
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <Nav />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <Footer />
+      <Analytics />
+      {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+            `}
+          </Script>
+        </>
+      )}
     </div>
   )
 }

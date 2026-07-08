@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import { getContact } from '@/lib/json-content'
 
 export default function Footer() {
+  const data = getContact()
+
   return (
     <footer className="border-t border-white/10 bg-black">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12">
@@ -9,9 +12,21 @@ export default function Footer() {
           <div>
             <p className="text-xs font-bold tracking-[0.25em] uppercase text-white mb-3">BEATROX LLC</p>
             <p className="text-xs text-white/40 leading-relaxed">
-              8625 NE Halsey St<br />
-              Portland, OR 97220
+              {data.address.street}<br />
+              {data.address.city}, {data.address.state} {data.address.zip}
             </p>
+            <a
+              href={`mailto:${data.contact.email}`}
+              className="text-xs text-white/40 hover:text-white transition-colors block mt-2"
+            >
+              {data.contact.email}
+            </a>
+            <a
+              href={`tel:${data.contact.phone}`}
+              className="text-xs text-white/40 hover:text-white transition-colors block mt-1"
+            >
+              {data.contact.phoneFormatted}
+            </a>
           </div>
 
           {/* Nav */}
@@ -22,6 +37,7 @@ export default function Footer() {
               ['Services', '/services'],
               ['Rentals', '/rentals'],
               ['Team', '/team'],
+              ['Book', '/book'],
               ['Contact', '/contact'],
             ].map(([label, href]) => (
               <Link
@@ -37,7 +53,7 @@ export default function Footer() {
           {/* Social */}
           <div className="flex flex-col gap-3">
             <a
-              href="https://www.youtube.com/@beatrox"
+              href={data.social.youtube}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 hover:text-white transition-colors w-fit"
@@ -45,7 +61,7 @@ export default function Footer() {
               YouTube
             </a>
             <a
-              href="https://www.instagram.com/beatrox/"
+              href={data.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 hover:text-white transition-colors w-fit"

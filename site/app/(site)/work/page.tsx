@@ -36,7 +36,7 @@ export default function WorkPage() {
       />
 
       {tags.length > 0 && (
-        <section className="border-t border-white/10 px-6 lg:px-10 py-8">
+        <section className="section border-t border-white/10">
           <Reveal className="max-w-[1120px] mx-auto">
             <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (

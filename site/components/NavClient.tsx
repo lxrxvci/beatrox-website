@@ -43,6 +43,7 @@ export default function NavClient({ links }: Props) {
               <Link
                 key={href}
                 href={href}
+                aria-current={active ? 'page' : undefined}
                 className={`text-[0.7rem] font-semibold tracking-[0.2em] uppercase transition-colors ${
                   active ? 'text-white' : 'text-white/50 hover:text-white'
                 }`}
@@ -51,12 +52,20 @@ export default function NavClient({ links }: Props) {
               </Link>
             )
           })}
+          <Link
+            href="/book"
+            className="btn-primary text-[0.65rem] tracking-[0.15em] uppercase py-2.5 px-5"
+          >
+            Book Now
+          </Link>
         </nav>
 
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setOpen((o) => !o)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           <span className={`block w-6 h-px bg-white transition-transform duration-200 ${open ? 'translate-y-2.5 rotate-45' : ''}`} />
           <span className={`block w-6 h-px bg-white transition-opacity duration-200 ${open ? 'opacity-0' : ''}`} />
@@ -65,6 +74,7 @@ export default function NavClient({ links }: Props) {
       </div>
 
       <div
+        id="mobile-menu"
         className={`md:hidden overflow-hidden border-t border-white/10 transition-[max-height,opacity] duration-300 ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 border-transparent'
         }`}
@@ -79,6 +89,12 @@ export default function NavClient({ links }: Props) {
               {label}
             </Link>
           ))}
+          <Link
+            href="/book"
+            className="btn-primary text-center text-[0.65rem] tracking-[0.15em] uppercase py-2.5 px-5 mt-2"
+          >
+            Book Now
+          </Link>
         </div>
       </div>
     </header>

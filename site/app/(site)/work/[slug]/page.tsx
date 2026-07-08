@@ -39,7 +39,7 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-24 min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
+      <section className="relative hero min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
         {heroImage && (
           <>
             <Image
@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: Props) {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
           </>
         )}
-        <div className="relative max-w-[1400px] mx-auto w-full px-6 lg:px-10 pb-16">
+        <div className="relative max-w-[1400px] mx-auto w-full">
           <Link href="/work" className="text-[0.65rem] tracking-[0.2em] uppercase text-white/30 hover:text-white transition-colors mb-8 inline-block">
             ← Work
           </Link>
@@ -156,7 +156,7 @@ export default async function ProjectPage({ params }: Props) {
       {/* Gallery */}
       {validImages.length > 0 && (
         <section className="border-t border-white/10">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4 mb-2">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-6 lg:py-8">
             <p className="heading-sm text-white/30">Gallery</p>
           </div>
           <ProjectGallery images={validImages} />

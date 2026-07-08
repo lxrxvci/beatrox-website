@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import CTASection from '@/components/CTASection'
 import { getProjectsByTag, getProjectTags, normalizeProjectTag } from '@/lib/json-content'
 
 interface Props {
@@ -55,10 +56,10 @@ export default async function WorkTagPage({ params }: Props) {
 
   return (
     <>
-      <section className="relative pt-24 min-h-[42vh] flex flex-col justify-end overflow-hidden bg-black">
+      <section className="relative hero min-h-[42vh] flex flex-col justify-end overflow-hidden bg-black">
         <Image src={heroImage} alt={`Projects tagged ${normalizedTag}`} fill priority sizes="100vw" className="object-cover opacity-35" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-        <div className="relative max-w-[1400px] mx-auto w-full px-6 lg:px-10 pb-14">
+        <div className="relative max-w-[1400px] mx-auto w-full">
           <Link href="/work" className="text-[0.65rem] tracking-[0.2em] uppercase text-white/35 hover:text-white transition-colors mb-6 inline-block">
             ← Work
           </Link>
@@ -67,7 +68,7 @@ export default async function WorkTagPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="border-t border-white/10 px-6 lg:px-10 py-16 lg:py-24">
+      <section className="border-t border-white/10 section">
         <div className="max-w-[1120px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
             {projects.map((project) => (
@@ -105,6 +106,15 @@ export default async function WorkTagPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <CTASection
+        heading={`Interested in ${normalizedTag} projects?`}
+        subheading="Let's talk about how we can deliver the same impact for your event."
+        primaryLabel="Start Your Project"
+        primaryHref="/contact"
+        secondaryLabel="Explore Services"
+        secondaryHref="/services"
+      />
     </>
   )
 }

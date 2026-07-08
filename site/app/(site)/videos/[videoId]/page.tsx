@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { readManifest } from '@/lib/youtube/storage'
+import CTASection from '@/components/CTASection'
 
 interface Props {
   params: Promise<{ videoId: string }>
@@ -71,40 +72,51 @@ export default async function VideoDetailPage({ params }: Props) {
   }
 
   return (
-    <section className="pt-28 pb-20 px-6 lg:px-10">
-      <div className="max-w-[1000px] mx-auto space-y-6">
-        <header>
-          <p className="text-xs text-white/45 uppercase tracking-[0.14em] mb-2">{video.privacyStatus}</p>
-          <h1 className="heading-lg mb-3">{video.title}</h1>
-          <p className="text-sm text-white/60 whitespace-pre-line">{video.description}</p>
-        </header>
+    <>
+      <section className="section">
+        <div className="max-w-[1000px] mx-auto space-y-6">
+          <header>
+            <p className="text-xs text-white/45 uppercase tracking-[0.14em] mb-2">{video.privacyStatus}</p>
+            <h1 className="heading-lg mb-3">{video.title}</h1>
+            <p className="text-sm text-white/60 whitespace-pre-line">{video.description}</p>
+          </header>
 
-        <div className="aspect-video border border-white/10 bg-black">
-          <iframe
-            src={video.embedUrl}
-            title={video.title}
-            className="h-full w-full"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
+          <div className="aspect-video border border-white/10 bg-black">
+            <iframe
+              src={video.embedUrl}
+              title={video.title}
+              className="h-full w-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+
+          <div className="text-xs text-white/45">
+            <p>Published: {video.publishedAt || 'Unknown'}</p>
+            <p>Duration: {video.duration || 'Unknown'}</p>
+            <p>
+              Source:{' '}
+              <a href={video.url} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white">
+                Watch on YouTube
+              </a>
+            </p>
+            {video.noindex && <p className="text-amber-300/80 mt-2">This page is marked noindex in your local override.</p>}
+          </div>
         </div>
 
-        <div className="text-xs text-white/45">
-          <p>Published: {video.publishedAt || 'Unknown'}</p>
-          <p>Duration: {video.duration || 'Unknown'}</p>
-          <p>
-            Source:{' '}
-            <a href={video.url} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white">
-              Watch on YouTube
-            </a>
-          </p>
-          {video.noindex && <p className="text-amber-300/80 mt-2">This page is marked noindex in your local override.</p>}
-        </div>
-      </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-    </section>
+      <CTASection
+        heading="Want to create something like this?"
+        subheading="Tell us about your project and we'll help you bring it to life."
+        primaryLabel="Book a Consultation"
+        primaryHref="/contact"
+        secondaryLabel="View Our Work"
+        secondaryHref="/work"
+      />
+    </>
   )
 }

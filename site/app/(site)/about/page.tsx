@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-24 pb-16 px-6 lg:px-10 border-b border-white/10 overflow-hidden">
+      <section className="relative hero border-b border-white/10 overflow-hidden">
         <Image
           src={heroImage}
           alt="About page hero"
