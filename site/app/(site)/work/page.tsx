@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { getAllProjects, getProjectSlugs, getProjectTags, getWorkIndex, normalizeProjectSlug } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import ParallaxHero from '@/components/ParallaxHero'
+import BentoWorkGrid from '@/components/BentoWorkGrid'
+
+/** Humanize kebab-case tags: "ai-computer-vision" → "AI & Computer Vision". */
+function humanize(tag: string) {
+  return tag
+    .split('-')
+    .map((w) => (w === 'ai' ? 'AI' : w === 'and' ? '&' : w.charAt(0).toUpperCase() + w.slice(1)))
+    .join(' ')
+}
 
 export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getWorkIndex().seo)
@@ -40,8 +48,12 @@ export default function WorkPage() {
           <Reveal className="max-w-[1120px] mx-auto">
             <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (
-                <Link key={tag} href={`/work/tag/${tag}`} className="tag hover:border-white/40 transition-colors">
-                  {tag}
+                <Link
+                  key={tag}
+                  href={`/work/tag/${tag}`}
+                  className="mono text-xs uppercase text-[var(--text-tertiary)] hover:text-[var(--accent)] transition-colors border-b border-transparent hover:border-[var(--accent)] pb-0.5"
+                >
+                  {humanize(tag)}
                 </Link>
               ))}
             </div>
@@ -49,41 +61,22 @@ export default function WorkPage() {
         </section>
       )}
 
-      {/* Project previews */}
+      {/* Project previews — asymmetric bento grid */}
       <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
-            {rows.map(({ slug, project }) => (
-              <Link
-                key={slug}
-                href={`/work/${slug}`}
-                className="project-card relative aspect-[16/10] overflow-hidden bg-neutral-950 group block"
-              >
-                <Image
-                  src={project.images?.find((img) => img.url && img.url !== '')?.url || project.seo?.og?.image || '/og-default.jpg'}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="project-card-overlay">
-                  <div>
-                    <p className="heading-sm text-white mb-2">{project.title}</p>
-                    {project.metadata?.client && (
-                      <p className="text-sm text-white/75 tracking-[0.12em] uppercase mb-2">
-                        {project.metadata.client}
-                      </p>
-                    )}
-                    <div className="flex flex-wrap gap-1.5">
-                      {(project.hero?.tags || []).slice(0, 3).map((tag) => (
-                        <span key={tag} className="tag">{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <BentoWorkGrid
+            projects={rows.map(({ slug, project }) => ({
+              slug,
+              title: project.title,
+              client: project.metadata?.client,
+              tags: project.hero?.tags,
+              image:
+                project.images?.find((img) => img.url && img.url !== '')?.url ||
+                project.seo?.og?.image ||
+                '/og-default.jpg',
+              alt: project.title,
+            }))}
+          />
         </Reveal>
       </section>
 

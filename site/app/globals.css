@@ -390,6 +390,38 @@ button {
   }
 }
 
+/* FluidImage CSS fallback (used where WebGL is disabled) */
+.fluid-fallback {
+  transition: transform 0.5s var(--ease-smooth), filter 0.5s var(--ease-smooth);
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .group:hover .fluid-fallback {
+    transform: scale(1.03);
+    filter: hue-rotate(10deg);
+  }
+}
+
+/* Bento work grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .work-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .work-card-featured {
+    grid-column: span 8;
+  }
+  .work-card-medium {
+    grid-column: span 4;
+  }
+  .work-card-wide {
+    grid-column: span 6;
+  }
+}
+
 /* Kinetic heading: chars masked until SplitText runs */
 .kinetic-heading {
   visibility: hidden;

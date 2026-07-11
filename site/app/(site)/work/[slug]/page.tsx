@@ -6,6 +6,8 @@ import { getProject, getProjectSlugs, normalizeProjectSlug } from '@/lib/json-co
 import { seoToMetadata } from '@/lib/metadata'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
+import MetadataSchematic from '@/components/MetadataSchematic'
+import KineticHeading from '@/components/KineticHeading'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -54,78 +56,45 @@ export default async function ProjectPage({ params }: Props) {
           </>
         )}
         <div className="relative max-w-[1400px] mx-auto w-full">
-          <Link href="/work" className="text-sm tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors mb-8 inline-block">
+          <Link href="/work" className="mono text-white/60 hover:text-white transition-colors mb-8 inline-block">
             ← Work
           </Link>
-          <p className="heading-sm text-white/75 mb-3">{project.metadata.type}</p>
-          <h1 className="heading-xl max-w-3xl">{project.title}</h1>
+          {project.metadata.client && (
+            <p className="mono text-[var(--accent)] mb-3">{project.metadata.client}</p>
+          )}
+          <KineticHeading text={project.title} className="heading-xl max-w-3xl" />
         </div>
       </section>
 
       {/* Content */}
       <section className="section border-t border-white/10">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-16">
+          {/* Editorial schematic metadata */}
+          <MetadataSchematic
+            cells={[
+              { label: 'Client', values: [project.metadata.client ?? ''] },
+              {
+                label: 'Location',
+                values: project.metadata.location
+                  ? [project.metadata.location]
+                  : project.metadata.locations ?? [],
+              },
+              { label: 'Type', values: [project.metadata.type ?? ''] },
+              {
+                label: 'Tech',
+                values: [
+                  ...(project.metadata.tech ?? []),
+                  ...(project.metadata.techniques ?? []),
+                  ...(project.metadata.materials ?? []),
+                ],
+              },
+              { label: 'Spec', values: project.metadata.spec ?? [] },
+              { label: 'Partners', values: project.metadata.partners ?? [] },
+            ]}
+          />
 
-            {/* Sidebar */}
-            <aside className="space-y-8">
-              {project.metadata.client && (
-                <div>
-                  <p className="heading-sm text-white/75 mb-2">Client</p>
-                  <p className="text-base text-white/90">{project.metadata.client}</p>
-                </div>
-              )}
-              {(project.metadata.location || project.metadata.locations) && (
-                <div>
-                  <p className="heading-sm text-white/75 mb-2">Location</p>
-                  {project.metadata.location
-                    ? <p className="text-base text-white/90">{project.metadata.location}</p>
-                    : project.metadata.locations?.map(l => (
-                        <p key={l} className="text-base text-white/90 mb-1">{l}</p>
-                      ))
-                  }
-                </div>
-              )}
-              {project.metadata.type && (
-                <div>
-                  <p className="heading-sm text-white/75 mb-2">Type</p>
-                  <p className="text-base text-white/90 leading-relaxed">{project.metadata.type}</p>
-                </div>
-              )}
-              {(project.metadata.tech || project.metadata.techniques || project.metadata.materials) && (
-                <div>
-                  <p className="heading-sm text-white/75 mb-3">Tech</p>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      ...(project.metadata.tech ?? []),
-                      ...(project.metadata.techniques ?? []),
-                      ...(project.metadata.materials ?? []),
-                    ].map(t => (
-                      <span key={t} className="tag">{t}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {project.metadata.spec && project.metadata.spec.length > 0 && (
-                <div>
-                  <p className="heading-sm text-white/75 mb-2">Spec</p>
-                  <p className="text-base text-white/75 leading-relaxed">
-                    {project.metadata.spec.join(', ')}
-                  </p>
-                </div>
-              )}
-              {project.metadata.partners && project.metadata.partners.length > 0 && (
-                <div>
-                  <p className="heading-sm text-white/75 mb-2">Partners</p>
-                  {project.metadata.partners.map(p => (
-                    <p key={p} className="text-base text-white/80">{p}</p>
-                  ))}
-                </div>
-              )}
-            </aside>
-
-            {/* Body */}
-            <div className="space-y-12">
+          {/* Body */}
+          <div className="mt-16 max-w-3xl space-y-12">
               {project.body.map((block, i) => (
                 <div key={i}>
                   {block.heading && (
@@ -148,7 +117,6 @@ export default async function ProjectPage({ params }: Props) {
                   )}
                 </div>
               ))}
-            </div>
           </div>
         </div>
       </section>

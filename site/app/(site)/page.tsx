@@ -6,6 +6,9 @@ import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import HeroMedia from '@/components/HeroMedia'
 import HomeHero from '@/components/HomeHero'
+import BentoWorkGrid from '@/components/BentoWorkGrid'
+import CapabilitiesTicker from '@/components/CapabilitiesTicker'
+import Marquee from '@/components/Marquee'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getHomepage()
@@ -80,18 +83,10 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ── Capabilities Grid ─────────────────────────────────────────────── */}
-      <section className="section border-t border-white/10">
-        <Reveal className="max-w-[1120px] mx-auto">
-          <h2 className="heading-sm text-white/75 mb-12">Tech Capabilities</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-white/10">
-            {CAPABILITIES.map(cap => (
-              <div key={cap} className="bg-black px-6 py-5 flex items-center">
-                <span className="text-sm font-medium tracking-[0.1em] uppercase text-white/80">{cap}</span>
-              </div>
-            ))}
-          </div>
-        </Reveal>
+      {/* ── Capabilities Ticker ───────────────────────────────────────────── */}
+      <section className="py-16 border-t border-[var(--border)] overflow-hidden" aria-label="Tech capabilities">
+        <h2 className="sr-only">Tech Capabilities</h2>
+        <CapabilitiesTicker items={CAPABILITIES} />
       </section>
 
       {/* ── Featured Work ─────────────────────────────────────────────────── */}
@@ -103,39 +98,35 @@ export default async function HomePage() {
               View All →
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
-            {featured.map(({ project, slug }) => {
+          <BentoWorkGrid
+            projects={featured.map(({ project, slug }) => {
               const firstImage = project.images?.find(img => img.url && img.url !== '')
-              const imgSrc = firstImage?.url || project.seo?.og?.image || '/og-default.jpg'
-              return (
-                <Link
-                  key={slug}
-                  href={`/work/${slug}`}
-                  className="project-card relative aspect-square overflow-hidden bg-neutral-950 group block"
-                >
-                  <Image
-                    src={imgSrc}
-                    alt={firstImage?.alt || project.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="project-card-overlay">
-                    <div>
-                      <p className="heading-sm text-white mb-2">{project.title}</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {project.hero?.tags?.slice(0, 3).map(tag => (
-                          <span key={tag} className="tag">{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              )
+              return {
+                slug,
+                title: project.title,
+                client: project.metadata?.client,
+                tags: project.hero?.tags,
+                image: firstImage?.url || project.seo?.og?.image || '/og-default.jpg',
+                alt: firstImage?.alt || project.title,
+              }
             })}
-          </div>
+          />
         </Reveal>
       </section>
+
+      {/* ── Infinite Marquee ──────────────────────────────────────────────── */}
+      <Marquee
+        items={(galleryImages.length > 0
+          ? galleryImages.slice(0, 8).map((img, idx) => ({ src: img, alt: `Project highlight ${idx + 1}` }))
+          : featured.map(({ project, slug }) => {
+              const firstImage = project.images?.find(img => img.url && img.url !== '')
+              return {
+                src: firstImage?.url || project.seo?.og?.image || '/og-default.jpg',
+                alt: `${project.title} (${slug})`,
+              }
+            })
+        )}
+      />
 
       {/* ── CTA Bar ───────────────────────────────────────────────────────── */}
       <section className="section border-t border-white/10 text-center">
