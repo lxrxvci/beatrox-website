@@ -390,6 +390,17 @@ button {
   }
 }
 
+/* Footer curtain reveal (desktop only) */
+@media (min-width: 1024px) {
+  .curtain-main {
+    margin-bottom: 400px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  }
+  .curtain-footer {
+    height: 400px;
+  }
+}
+
 /* FluidImage CSS fallback (used where WebGL is disabled) */
 .fluid-fallback {
   transition: transform 0.5s var(--ease-smooth), filter 0.5s var(--ease-smooth);

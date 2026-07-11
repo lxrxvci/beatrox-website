@@ -8,6 +8,7 @@ import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
 import MetadataSchematic from '@/components/MetadataSchematic'
 import KineticHeading from '@/components/KineticHeading'
+import NodeBullet from '@/components/NodeBullet'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -107,9 +108,9 @@ export default async function ProjectPage({ params }: Props) {
                   )}
                   {block.items && (
                     <ul className="space-y-2 mt-2">
-                      {block.items.map(item => (
+                      {block.items.map((item, i) => (
                         <li key={item} className="flex items-start gap-3 text-base text-white/75">
-                          <span className="text-white/50 mt-1">—</span>
+                          <NodeBullet index={i} />
                           <span>{item}</span>
                         </li>
                       ))}

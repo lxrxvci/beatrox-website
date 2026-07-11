@@ -6,6 +6,7 @@ import { getService, getServiceSlugs } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { buildServiceSchema } from '@/lib/schema'
+import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 
 interface Props {
@@ -52,9 +53,9 @@ export default async function ServicePage({ params }: Props) {
           <div>
             <h2 className="heading-sm text-white/75 mb-6">Capabilities</h2>
             <ul className="space-y-3">
-              {service.capabilities.map(cap => (
+              {service.capabilities.map((cap, i) => (
                 <li key={cap} className="flex items-start gap-3 text-base text-white/75">
-                  <span className="text-white/60 mt-1">—</span>
+                  <NodeBullet index={i} />
                   <span>{cap}</span>
                 </li>
               ))}
@@ -130,9 +131,9 @@ export default async function ServicePage({ params }: Props) {
                       )}
                       {bodyBlock.items && (
                         <ul className="space-y-2 mt-2">
-                          {bodyBlock.items.map(item => (
+                          {bodyBlock.items.map((item, i) => (
                             <li key={item} className="flex items-start gap-3 text-base text-white/75">
-                              <span className="text-white/50 mt-1">—</span>
+                              <NodeBullet index={i} />
                               <span>{item}</span>
                             </li>
                           ))}

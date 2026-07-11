@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
+import NodeBullet from '@/components/NodeBullet'
 import { getRentals } from '@/lib/json-content'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -72,12 +73,12 @@ export default function RentalsPage() {
 
                   {/* Specs */}
                   <ul className="space-y-2">
-                    {item.specs.map((spec) => (
+                    {item.specs.map((spec, i) => (
                       <li
                         key={spec}
                         className="text-sm text-white/65 leading-relaxed flex items-start gap-2.5"
                       >
-                        <span className="text-white/60 mt-1 shrink-0">—</span>
+                        <NodeBullet index={i} />
                         {spec}
                       </li>
                     ))}

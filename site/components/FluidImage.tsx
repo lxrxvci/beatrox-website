@@ -151,9 +151,9 @@ export default function FluidImage({ src, alt, sizes, className = '', priority }
     scene.add(mesh)
 
     let raf = 0
-    const clock = new THREE.Clock()
+    const startTime = performance.now()
     const tick = () => {
-      uniforms.u_time.value = clock.getElapsedTime()
+      uniforms.u_time.value = (performance.now() - startTime) / 1000
       renderer.render(scene, camera)
       raf = requestAnimationFrame(tick)
     }

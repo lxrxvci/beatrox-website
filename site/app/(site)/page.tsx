@@ -9,6 +9,7 @@ import HomeHero from '@/components/HomeHero'
 import BentoWorkGrid from '@/components/BentoWorkGrid'
 import CapabilitiesTicker from '@/components/CapabilitiesTicker'
 import Marquee from '@/components/Marquee'
+import MagneticButton from '@/components/MagneticButton'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getHomepage()
@@ -55,9 +56,22 @@ export default async function HomePage() {
       <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {data.sections.find(s => s.type === 'philosophy')?.columns?.map((col) => (
+            {[
+              {
+                heading: 'Who We Are',
+                body: "Engineers, artists, and architects of awe. We build the things people can't stop talking about.",
+              },
+              {
+                heading: 'What We Do',
+                body: 'From concept to curtain call — design, fabrication, deployment, and operation. Full spectrum, zero compromise.',
+              },
+              {
+                heading: 'How We Do It',
+                body: "Your vision + our obsession. We prototype fast, iterate relentlessly, and only stop when it's extraordinary.",
+              },
+            ].map((col) => (
               <div key={col.heading}>
-                <h2 className="heading-sm text-white/75 mb-4">{col.heading}</h2>
+                <h2 className="heading-sm text-[var(--accent)] mb-4">{col.heading}</h2>
                 <p className="text-base text-white/75 leading-relaxed">{col.body}</p>
               </div>
             ))}
@@ -129,13 +143,13 @@ export default async function HomePage() {
       />
 
       {/* ── CTA Bar ───────────────────────────────────────────────────────── */}
-      <section className="section border-t border-white/10 text-center">
+      <section className="section border-t border-[var(--border)] text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="heading-lg mb-5">Ready to create something extraordinary?</h2>
-          <p className="text-base text-white/70 mb-10 leading-relaxed">
-            Our team of technical and creative directors is ready to help you bring your vision to life.
+          <h2 className="heading-lg mb-5">Let&apos;s Build Something Extraordinary</h2>
+          <p className="text-base text-[var(--text-secondary)] mb-10 leading-relaxed">
+            Every great experience starts with a conversation.
           </p>
-          <Link href="/contact" className="btn-primary">Book a Discovery Call</Link>
+          <MagneticButton href="/contact" variant="accent">Start a Project</MagneticButton>
         </div>
       </section>
     </>

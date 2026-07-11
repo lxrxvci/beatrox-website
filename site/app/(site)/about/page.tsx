@@ -43,6 +43,9 @@ export default function AboutPage() {
         <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-8 md:gap-12 items-start">
           <div className="space-y-6">
             <h2 className="heading-sm text-white/75">Who are we</h2>
+            <blockquote className="heading-md text-[var(--accent)] !normal-case tracking-normal leading-snug">
+              &ldquo;We don&apos;t just produce events. We engineer awe.&rdquo;
+            </blockquote>
             <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
               {story?.body || data.hero.subheadline}
             </p>

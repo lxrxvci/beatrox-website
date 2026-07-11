@@ -69,8 +69,16 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       </a>
       <SmoothScroll>
         <Nav />
-        <main id="main-content">{children}</main>
-        <Footer />
+        {/* Curtain wrapper: lifts to reveal the fixed footer on desktop */}
+        <main
+          id="main-content"
+          className="curtain-main relative z-10 bg-[var(--bg-primary)]"
+        >
+          {children}
+        </main>
+        <div className="curtain-footer lg:fixed lg:inset-x-0 lg:bottom-0 lg:z-0 lg:overflow-hidden">
+          <Footer />
+        </div>
       </SmoothScroll>
       <Analytics />
       {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
