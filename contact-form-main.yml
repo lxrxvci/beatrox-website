@@ -1,0 +1,110 @@
+- main [ref=f12e15]:
+  - generic [ref=f12e17]:
+    - paragraph [ref=f12e18]: Get in Touch
+    - heading "Contact Us" [level=1] [ref=f12e19]
+    - paragraph [ref=f12e20]: We love to collaborate and amplify your voice. We put your message at the center of the story — let's build something awesome together.
+  - generic [ref=f12e23]:
+    - heading "Book a Discovery Call" [level=2] [ref=f12e24]
+    - paragraph [ref=f12e25]: Our team of technical and creative directors can help you with your project. We specialize in bringing unique and bespoke ideas to life. We know that every project is different and we can tailor a custom solution that works for you and your budget.
+    - generic [ref=f12e26]:
+      - generic [ref=f12e27]:
+        - generic [ref=f12e28]:
+          - generic [ref=f12e29]: Your Name *
+          - textbox "Your Name *" [ref=f12e30]:
+            - /placeholder: Your Name
+        - generic [ref=f12e31]:
+          - generic [ref=f12e32]: Email Address *
+          - textbox "Email Address *" [ref=f12e33]:
+            - /placeholder: Email Address
+        - generic [ref=f12e34]:
+          - generic [ref=f12e35]: Company / Organization
+          - textbox "Company / Organization" [ref=f12e36]
+        - generic [ref=f12e37]:
+          - generic [ref=f12e38]: Event Location / City
+          - textbox "Event Location / City" [ref=f12e39]
+      - generic [ref=f12e40]:
+        - generic [ref=f12e41]: Event / Project Type *
+        - combobox "Event / Project Type *" [ref=f12e42]:
+          - option "Select…" [selected]
+          - option "Experiential Event"
+          - option "Festival Activation"
+          - option "Brand Activation"
+          - option "Concert / Tour"
+          - option "Corporate Event"
+          - option "Permanent Installation"
+          - option "Product Launch"
+          - option "Trade Show / Convention"
+          - option "Other"
+      - generic [ref=f12e43]:
+        - generic [ref=f12e44]: Services Interested In
+        - generic [ref=f12e45]:
+          - generic [ref=f12e46] [cursor=pointer]:
+            - checkbox "Full Service Event Production" [ref=f12e47]
+            - generic [ref=f12e48]: Full Service Event Production
+          - generic [ref=f12e49] [cursor=pointer]:
+            - checkbox "LED Video Wall" [ref=f12e50]
+            - generic [ref=f12e51]: LED Video Wall
+          - generic [ref=f12e52] [cursor=pointer]:
+            - checkbox "Drone Light Shows" [ref=f12e53]
+            - generic [ref=f12e54]: Drone Light Shows
+          - generic [ref=f12e55] [cursor=pointer]:
+            - checkbox "Laser Shows" [ref=f12e56]
+            - generic [ref=f12e57]: Laser Shows
+          - generic [ref=f12e58] [cursor=pointer]:
+            - checkbox "Projection Mapping" [ref=f12e59]
+            - generic [ref=f12e60]: Projection Mapping
+          - generic [ref=f12e61] [cursor=pointer]:
+            - checkbox "Custom Fabrication" [ref=f12e62]
+            - generic [ref=f12e63]: Custom Fabrication
+          - generic [ref=f12e64] [cursor=pointer]:
+            - checkbox "Lighting Design" [ref=f12e65]
+            - generic [ref=f12e66]: Lighting Design
+          - generic [ref=f12e67] [cursor=pointer]:
+            - checkbox "Sound Equipment" [ref=f12e68]
+            - generic [ref=f12e69]: Sound Equipment
+          - generic [ref=f12e70] [cursor=pointer]:
+            - checkbox "DJ Equipment" [ref=f12e71]
+            - generic [ref=f12e72]: DJ Equipment
+          - generic [ref=f12e73] [cursor=pointer]:
+            - checkbox "Backline & Stage Rental" [ref=f12e74]
+            - generic [ref=f12e75]: Backline & Stage Rental
+          - generic [ref=f12e76] [cursor=pointer]:
+            - checkbox "Immersive Environment Design" [ref=f12e77]
+            - generic [ref=f12e78]: Immersive Environment Design
+          - generic [ref=f12e79] [cursor=pointer]:
+            - checkbox "Interactive Software" [ref=f12e80]
+            - generic [ref=f12e81]: Interactive Software
+      - generic [ref=f12e82]:
+        - generic [ref=f12e83]: Estimated Event Date
+        - textbox "Estimated Event Date" [ref=f12e84]
+      - generic [ref=f12e85]:
+        - generic [ref=f12e86]: Estimated Budget
+        - combobox "Estimated Budget" [ref=f12e87]:
+          - option "Select…" [selected]
+          - option "Under $10,000"
+          - option "$10,000 – $25,000"
+          - option "$25,000 – $50,000"
+          - option "$50,000 – $100,000"
+          - option "$100,000 – $250,000"
+          - option "$250,000+"
+          - option "Not sure yet"
+      - generic [ref=f12e88]:
+        - generic [ref=f12e89]: Tell Us About Your Project *
+        - textbox "Tell Us About Your Project *" [ref=f12e90]:
+          - /placeholder: Describe your vision, goals, and any specific requirements...
+      - button "Send Message" [ref=f12e91]
+    - generic [ref=f12e92]:
+      - paragraph [ref=f12e93]: 8625 NE Halsey St, Portland, OR 97220
+      - generic [ref=f12e94]:
+        - link "YouTube" [ref=f12e95] [cursor=pointer]:
+          - /url: https://www.youtube.com/@beatrox
+        - link "Instagram" [ref=f12e96] [cursor=pointer]:
+          - /url: https://www.instagram.com/beatrox/
+  - generic [ref=f12e98]:
+    - heading "Prefer to reach out directly?" [level=2] [ref=f12e99]
+    - paragraph [ref=f12e100]: Our team is available Monday–Friday, 9am–6pm PST. We typically respond within 1–2 business days.
+    - generic [ref=f12e101]:
+      - link "Email Us" [ref=f12e102] [cursor=pointer]:
+        - /url: mailto:hello@beatrox.com
+      - link "Call Us" [ref=f12e103] [cursor=pointer]:
+        - /url: tel:+15035154715

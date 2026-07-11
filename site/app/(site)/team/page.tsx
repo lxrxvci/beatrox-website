@@ -28,9 +28,9 @@ export default function TeamPage() {
         />
         <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/88" />
         <div className="relative max-w-[1120px] mx-auto">
-          <p className="heading-sm text-white/30 mb-4">The Team</p>
+          <p className="heading-sm text-white/80 mb-4">The Team</p>
           <h1 className="heading-lg md:heading-xl max-w-3xl">{data.hero.headline}</h1>
-          <p className="text-sm text-white/60 mt-6 max-w-4xl leading-relaxed">{data.hero.subheadline}</p>
+          <p className="text-base text-white/70 mt-6 max-w-4xl leading-relaxed">{data.hero.subheadline}</p>
         </div>
       </section>
 
@@ -53,10 +53,10 @@ export default function TeamPage() {
                     </div>
                   )}
                   <div>
-                    <h2 className="text-[0.78rem] md:text-base tracking-[0.11em] uppercase text-white mb-2">
+                    <h2 className="text-sm md:text-base tracking-[0.11em] uppercase text-white mb-2">
                       {member.name} - {member.title}
                     </h2>
-                    <p className="text-[0.86rem] md:text-sm text-white/65 leading-relaxed">
+                    <p className="text-base text-white/75 leading-relaxed">
                       {member.bio}
                     </p>
                   </div>
@@ -71,8 +71,8 @@ export default function TeamPage() {
       {data.cta && (
         <section className="section border-t border-white/10 text-center">
           <div className="max-w-xl mx-auto">
-            <h2 className="heading-md mb-4">{data.cta.heading}</h2>
-            <p className="text-sm text-white/50 mb-8 leading-relaxed">{data.cta.body}</p>
+            <h2 className="heading-md mb-5">{data.cta.heading}</h2>
+            <p className="text-base text-white/70 mb-8 leading-relaxed">{data.cta.body}</p>
             <Link href={data.cta.url} className="btn-primary">{data.cta.label}</Link>
           </div>
         </section>

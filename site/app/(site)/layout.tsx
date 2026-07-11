@@ -54,8 +54,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
     '--brand-primary': styles.brandPrimary,
     '--brand-secondary': styles.brandSecondary,
     '--site-bg': styles.backgroundColor,
-    '--font-heading': styles.fontFamilyHeading,
-    '--font-body': styles.fontFamilyBody,
+    // Only override font variables when CMS provides explicit families;
+    // otherwise the next/font variables on :root are used.
+    ...(styles.fontFamilyHeading !== 'inherit' && { '--font-heading': styles.fontFamilyHeading }),
+    ...(styles.fontFamilyBody !== 'inherit' && { '--font-body': styles.fontFamilyBody }),
   } as React.CSSProperties
 
   return (

@@ -70,7 +70,7 @@ export default function WorkPage() {
                   <div>
                     <p className="heading-sm text-white mb-2">{project.title}</p>
                     {project.metadata?.client && (
-                      <p className="text-[0.65rem] text-white/35 tracking-[0.16em] uppercase mb-2">
+                      <p className="text-sm text-white/75 tracking-[0.12em] uppercase mb-2">
                         {project.metadata.client}
                       </p>
                     )}
@@ -90,8 +90,8 @@ export default function WorkPage() {
       {/* CTA */}
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-4">Have a project in mind?</h2>
-          <p className="text-sm text-white/50 mb-8">Let&apos;s talk about how we can bring your vision to life.</p>
+          <h2 className="heading-md mb-5">Have a project in mind?</h2>
+          <p className="text-base text-white/70 mb-8">Let&apos;s talk about how we can bring your vision to life.</p>
           <Link href="/contact" className="btn-primary">Start a Conversation</Link>
         </div>
       </section>

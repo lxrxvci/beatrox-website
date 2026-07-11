@@ -44,8 +44,8 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-black/30 flex items-end p-3">
-              <span className="text-[0.65rem] uppercase tracking-[0.14em] text-white/80">Expand</span>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-black/30 flex items-end p-4">
+              <span className="text-sm uppercase tracking-[0.14em] text-white/90">Expand</span>
             </div>
           </button>
         ))}
@@ -58,14 +58,14 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
           aria-modal="true"
         >
           <button
-            className="absolute top-5 right-5 text-white/70 hover:text-white text-xs tracking-[0.2em] uppercase"
+            className="absolute top-5 right-5 text-white/80 hover:text-white text-sm tracking-[0.18em] uppercase"
             onClick={close}
           >
             Close
           </button>
 
           <button
-            className="absolute left-4 md:left-8 text-white/70 hover:text-white text-xs tracking-[0.2em] uppercase"
+            className="absolute left-4 md:left-8 text-white/80 hover:text-white text-sm tracking-[0.18em] uppercase"
             onClick={goPrev}
           >
             Prev
@@ -82,7 +82,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
           </div>
 
           <button
-            className="absolute right-4 md:right-8 text-white/70 hover:text-white text-xs tracking-[0.2em] uppercase"
+            className="absolute right-4 md:right-8 text-white/80 hover:text-white text-sm tracking-[0.18em] uppercase"
             onClick={goNext}
           >
             Next

@@ -25,13 +25,13 @@ export default function NavClient({ links }: Props) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || open ? 'bg-black/85 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        scrolled || open ? 'bg-black/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
         <Link
           href="/"
-          className="text-white font-bold tracking-[0.25em] text-sm uppercase hover:opacity-70 transition-opacity"
+          className="text-white font-bold tracking-[0.22em] text-base uppercase hover:opacity-70 transition-opacity"
         >
           BEATROX
         </Link>
@@ -44,8 +44,8 @@ export default function NavClient({ links }: Props) {
                 key={href}
                 href={href}
                 aria-current={active ? 'page' : undefined}
-                className={`text-[0.7rem] font-semibold tracking-[0.2em] uppercase transition-colors ${
-                  active ? 'text-white' : 'text-white/50 hover:text-white'
+                className={`text-xs font-semibold tracking-[0.18em] uppercase transition-colors ${
+                  active ? 'text-white' : 'text-white/75 hover:text-white'
                 }`}
               >
                 {label}
@@ -54,7 +54,7 @@ export default function NavClient({ links }: Props) {
           })}
           <Link
             href="/book"
-            className="btn-primary text-[0.65rem] tracking-[0.15em] uppercase py-2.5 px-5"
+            className="btn-primary text-xs tracking-[0.15em] uppercase py-2.5 px-5"
           >
             Book Now
           </Link>
@@ -84,14 +84,14 @@ export default function NavClient({ links }: Props) {
             <Link
               key={href}
               href={href}
-              className="text-[0.7rem] font-semibold tracking-[0.2em] uppercase text-white/70 hover:text-white transition-colors"
+              className="text-xs font-semibold tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors"
             >
               {label}
             </Link>
           ))}
           <Link
             href="/book"
-            className="btn-primary text-center text-[0.65rem] tracking-[0.15em] uppercase py-2.5 px-5 mt-2"
+            className="btn-primary text-center text-xs tracking-[0.15em] uppercase py-2.5 px-5 mt-2"
           >
             Book Now
           </Link>

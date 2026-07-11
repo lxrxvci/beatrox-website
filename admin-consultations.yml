@@ -1,0 +1,17 @@
+- generic [active] [ref=f25e21]:
+  - generic [ref=f25e5] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f25e6]:
+      - img [ref=f25e7]
+    - generic [ref=f25e10]:
+      - button "Open issues overlay" [ref=f25e11]
+      - button "Collapse issues badge" [ref=f25e17]
+  - generic [ref=f25e23]:
+    - img [ref=f25e25]
+    - generic [ref=f25e38]:
+      - generic [ref=f25e39]
+      - link "Forgot password?" [ref=f25e51] [cursor=pointer]:
+        - /url: /admin/forgot
+      - button "Login" [ref=f25e53] [cursor=pointer]
+  - status [ref=f25e54]
+  - region "Notifications alt+T"
+  - alert [ref=f25e20]: Login - Payload

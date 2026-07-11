@@ -28,9 +28,9 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
 
   if (state.success) {
     return (
-      <div className="border border-white/20 bg-white/5 p-8 text-center" role="status" aria-live="polite">
-        <h3 className="heading-sm text-white mb-3">Message Sent</h3>
-        <p className="text-sm text-white/60 leading-relaxed">{successMessage}</p>
+      <div className="border border-white/20 bg-white/5 p-10 md:p-12 text-center" role="status" aria-live="polite">
+        <h3 className="heading-sm text-white mb-4">Message Sent</h3>
+        <p className="text-base text-white/70 leading-relaxed">{successMessage}</p>
       </div>
     )
   }
@@ -44,23 +44,23 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
 
   const fieldError = (id: string) =>
     state.errors?.[id]?.map((err, i) => (
-      <p key={i} className="text-xs text-red-400 mt-1.5">
+      <p key={i} className="text-sm text-red-400 mt-2">
         {err}
       </p>
     ))
 
   return (
-    <form action={formAction} className="space-y-5 md:space-y-6">
+    <form action={formAction} className="space-y-7 md:space-y-8">
       {state.message && !state.success && (
-        <div className="border border-red-400/30 bg-red-400/10 p-4" role="alert" aria-live="polite">
-          <p className="text-sm text-red-200">{state.message}</p>
+        <div className="border border-red-400/30 bg-red-400/10 p-5" role="alert" aria-live="polite">
+          <p className="text-base text-red-200">{state.message}</p>
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-7">
         {textFields.slice(0, 4).map((field) => (
           <div key={field.id}>
-            <label className="heading-sm text-white/30 block mb-1.5" htmlFor={field.id}>
+            <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
               {field.label}
               {field.required && ' *'}
             </label>
@@ -70,7 +70,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
               type={field.type}
               required={field.required}
               defaultValue={field.id === 'company' ? '' : undefined}
-              className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors"
+              className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
               placeholder={field.label}
             />
             {fieldError(field.id)}
@@ -82,7 +82,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'select' && field.options) {
           return (
             <div key={field.id}>
-              <label className="heading-sm text-white/30 block mb-1.5" htmlFor={field.id}>
+              <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
                 {field.label}
                 {field.required && ' *'}
               </label>
@@ -90,7 +90,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 id={field.id}
                 name={field.id}
                 required={field.required}
-                className="w-full bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:outline-none focus:border-white transition-colors"
               >
                 <option value="">Select…</option>
                 {field.options.map((opt) => (
@@ -107,7 +107,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'multiselect' && field.options) {
           return (
             <div key={field.id}>
-              <span className="heading-sm text-white/30 block mb-3">
+              <span className="heading-sm text-white/75 block mb-4">
                 {field.label}
                 {field.required && ' *'}
               </span>
@@ -115,15 +115,15 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 {field.options.map((opt) => (
                   <label
                     key={opt}
-                    className="flex items-start gap-3 p-3 border border-white/10 bg-transparent hover:bg-white/5 transition-colors cursor-pointer"
+                    className="flex items-start gap-3.5 p-4 border border-white/15 bg-transparent hover:bg-white/5 transition-colors cursor-pointer"
                   >
                     <input
                       type="checkbox"
                       name="services"
                       value={opt}
-                      className="mt-0.5 w-4 h-4 accent-white"
+                      className="mt-1 w-4 h-4 accent-white"
                     />
-                    <span className="text-sm text-white/70 leading-snug">{opt}</span>
+                    <span className="text-base text-white/80 leading-snug">{opt}</span>
                   </label>
                 ))}
               </div>
@@ -135,7 +135,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'date') {
           return (
             <div key={field.id}>
-              <label className="heading-sm text-white/30 block mb-1.5" htmlFor={field.id}>
+              <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
                 {field.label}
                 {field.required && ' *'}
               </label>
@@ -144,7 +144,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 name={field.id}
                 type="date"
                 required={field.required}
-                className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors [color-scheme:dark]"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors [color-scheme:dark]"
               />
               {fieldError(field.id)}
             </div>
@@ -154,7 +154,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'textarea') {
           return (
             <div key={field.id}>
-              <label className="heading-sm text-white/30 block mb-1.5" htmlFor={field.id}>
+              <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
                 {field.label}
                 {field.required && ' *'}
               </label>
@@ -162,8 +162,8 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 id={field.id}
                 name={field.id}
                 required={field.required}
-                rows={5}
-                className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors resize-none"
+                rows={6}
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors resize-none"
                 placeholder={field.placeholder || field.label}
               />
               {fieldError(field.id)}

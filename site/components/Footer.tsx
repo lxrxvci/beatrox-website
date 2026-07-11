@@ -6,24 +6,24 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-black">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <p className="text-xs font-bold tracking-[0.25em] uppercase text-white mb-3">BEATROX LLC</p>
-            <p className="text-xs text-white/40 leading-relaxed">
+            <p className="text-sm font-bold tracking-[0.22em] uppercase text-white mb-4">BEATROX LLC</p>
+            <p className="text-sm text-white/70 leading-relaxed">
               {data.address.street}<br />
               {data.address.city}, {data.address.state} {data.address.zip}
             </p>
             <a
               href={`mailto:${data.contact.email}`}
-              className="text-xs text-white/40 hover:text-white transition-colors block mt-2"
+              className="text-sm text-white/70 hover:text-white transition-colors block mt-3"
             >
               {data.contact.email}
             </a>
             <a
               href={`tel:${data.contact.phone}`}
-              className="text-xs text-white/40 hover:text-white transition-colors block mt-1"
+              className="text-sm text-white/70 hover:text-white transition-colors block mt-1"
             >
               {data.contact.phoneFormatted}
             </a>
@@ -43,7 +43,7 @@ export default function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 hover:text-white transition-colors w-fit"
+                className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
               >
                 {label}
               </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
               href={data.social.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 hover:text-white transition-colors w-fit"
+              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
             >
               YouTube
             </a>
@@ -64,7 +64,7 @@ export default function Footer() {
               href={data.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 hover:text-white transition-colors w-fit"
+              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
             >
               Instagram
             </a>
@@ -73,7 +73,7 @@ export default function Footer() {
 
         <div className="divider mb-6" />
 
-        <p className="text-[0.65rem] text-white/20 tracking-widest uppercase">
+        <p className="text-xs text-white/55 tracking-[0.16em] uppercase">
           © {new Date().getFullYear()} Beatrox LLC. All rights reserved.
         </p>
       </div>

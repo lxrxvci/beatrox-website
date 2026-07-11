@@ -82,11 +82,11 @@ export default function BookingForm({ types }: BookingFormProps) {
 
   if (step === 'success') {
     return (
-      <div className="border border-white/20 bg-white/5 p-8 md:p-12 text-center" role="status" aria-live="polite">
-        <h2 className="heading-md text-white mb-4">You're Booked</h2>
-        <p className="text-sm text-white/60 leading-relaxed mb-6">{state.message}</p>
+      <div className="border border-white/20 bg-white/5 p-10 md:p-12 text-center" role="status" aria-live="polite">
+        <h2 className="heading-md text-white mb-5">You're Booked</h2>
+        <p className="text-base text-white/70 leading-relaxed mb-6">{state.message}</p>
         {state.startTime && state.timezone && (
-          <p className="text-sm text-white/80 mb-2">
+          <p className="text-base text-white/85 mb-2">
             <strong>{state.startTime}</strong> {state.timezone}
           </p>
         )}
@@ -105,28 +105,28 @@ export default function BookingForm({ types }: BookingFormProps) {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       {state.message && !state.success && (
-        <div className="border border-red-400/30 bg-red-400/10 p-4" role="alert" aria-live="polite">
-          <p className="text-sm text-red-200">{state.message}</p>
+        <div className="border border-red-400/30 bg-red-400/10 p-5" role="alert" aria-live="polite">
+          <p className="text-base text-red-200">{state.message}</p>
         </div>
       )}
 
       {/* Step 1: Select type */}
       <div className={step === 'type' ? 'block' : 'hidden'}>
-        <h2 className="heading-sm text-white/40 mb-6">1. Choose a consultation type</h2>
+        <h2 className="heading-sm text-white/75 mb-7">1. Choose a consultation type</h2>
         {types.length === 0 ? (
-          <p className="text-sm text-white/50">No consultation types are available right now.</p>
+          <p className="text-base text-white/70">No consultation types are available right now.</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {types.map((type) => (
               <button
                 key={type.id}
                 type="button"
                 onClick={() => handleTypeSelect(type)}
-                className="text-left border border-white/10 bg-transparent hover:bg-white/5 p-5 transition-colors"
+                className="text-left border border-white/15 bg-transparent hover:bg-white/5 p-6 transition-colors"
               >
-                <span className="flex items-center gap-3 mb-2">
+                <span className="flex items-center gap-3 mb-3">
                   {type.color && (
                     <span
                       className="w-3 h-3 rounded-full"
@@ -135,9 +135,9 @@ export default function BookingForm({ types }: BookingFormProps) {
                   )}
                   <span className="heading-sm text-white">{type.name}</span>
                 </span>
-                <span className="text-xs text-white/40 block mb-2">{type.duration} minutes</span>
+                <span className="text-sm text-white/65 block mb-2">{type.duration} minutes</span>
                 {type.description && (
-                  <span className="text-sm text-white/50 leading-relaxed">{type.description}</span>
+                  <span className="text-base text-white/70 leading-relaxed">{type.description}</span>
                 )}
               </button>
             ))}
@@ -147,25 +147,25 @@ export default function BookingForm({ types }: BookingFormProps) {
 
       {/* Step 2: Select date and time */}
       <div className={step === 'datetime' ? 'block' : 'hidden'}>
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="heading-sm text-white/40">2. Select a date and time</h2>
+        <div className="flex items-center justify-between mb-7">
+          <h2 className="heading-sm text-white/75">2. Select a date and time</h2>
           <button
             type="button"
             onClick={() => setStep('type')}
-            className="text-xs text-white/40 hover:text-white transition-colors"
+            className="text-sm text-white/65 hover:text-white transition-colors"
           >
             ← Back to types
           </button>
         </div>
 
         {selectedType && (
-          <p className="text-sm text-white/50 mb-4">
+          <p className="text-base text-white/70 mb-5">
             Booking a <strong className="text-white">{selectedType.name}</strong> ({selectedType.duration} min)
           </p>
         )}
 
-        <div className="mb-6">
-          <label className="heading-sm text-white/30 block mb-2" htmlFor="booking-date">
+        <div className="mb-7">
+          <label className="heading-sm text-white/75 block mb-2.5" htmlFor="booking-date">
             Date
           </label>
           <input
@@ -175,29 +175,29 @@ export default function BookingForm({ types }: BookingFormProps) {
             min={formatDateInputValue(tomorrow)}
             max={formatDateInputValue(maxDate)}
             onChange={(e) => handleDateChange(e.target.value)}
-            className="w-full sm:w-auto bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors [color-scheme:dark]"
+            className="w-full sm:w-auto bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:outline-none focus:border-white transition-colors [color-scheme:dark]"
           />
         </div>
 
-        {isPendingSlots && <p className="text-sm text-white/40">Loading available times…</p>}
+        {isPendingSlots && <p className="text-base text-white/65">Loading available times…</p>}
 
         {slotError && !isPendingSlots && (
-          <p className="text-sm text-red-200 bg-red-400/10 border border-red-400/30 p-3 mb-4">{slotError}</p>
+          <p className="text-base text-red-200 bg-red-400/10 border border-red-400/30 p-4 mb-5">{slotError}</p>
         )}
 
         {slots.length > 0 && !isPendingSlots && (
           <div>
-            <p className="heading-sm text-white/30 block mb-3">Available times</p>
+            <p className="heading-sm text-white/75 block mb-4">Available times</p>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
               {slots.map((slot) => (
                 <button
                   key={slot.startTime}
                   type="button"
                   onClick={() => handleSlotSelect(slot)}
-                  className="border border-white/10 bg-transparent hover:bg-white/5 hover:border-white/30 py-3 text-center transition-colors"
+                  className="border border-white/15 bg-transparent hover:bg-white/5 hover:border-white/35 py-3.5 text-center transition-colors"
                 >
-                  <span className="text-sm text-white">{slot.displayTime}</span>
-                  <span className="text-xs text-white/40 block">{slot.displayPeriod}</span>
+                  <span className="text-base text-white">{slot.displayTime}</span>
+                  <span className="text-sm text-white/60 block">{slot.displayPeriod}</span>
                 </button>
               ))}
             </div>
@@ -207,20 +207,20 @@ export default function BookingForm({ types }: BookingFormProps) {
 
       {/* Step 3: Contact details */}
       <div className={step === 'details' ? 'block' : 'hidden'}>
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="heading-sm text-white/40">3. Your details</h2>
+        <div className="flex items-center justify-between mb-7">
+          <h2 className="heading-sm text-white/75">3. Your details</h2>
           <button
             type="button"
             onClick={() => setStep('datetime')}
-            className="text-xs text-white/40 hover:text-white transition-colors"
+            className="text-sm text-white/65 hover:text-white transition-colors"
           >
             ← Back to time
           </button>
         </div>
 
         {selectedSlot && (
-          <div className="border border-white/10 bg-white/5 p-4 mb-6">
-            <p className="text-sm text-white/60">
+          <div className="border border-white/15 bg-white/5 p-5 mb-7">
+            <p className="text-base text-white/70">
               <span className="text-white">{selectedType?.name}</span> on{' '}
               <span className="text-white">
                 {new Date(selectedSlot.startTime).toLocaleDateString(undefined, {
@@ -238,15 +238,15 @@ export default function BookingForm({ types }: BookingFormProps) {
           </div>
         )}
 
-        <form action={formAction} className="space-y-5">
+        <form action={formAction} className="space-y-6">
           <input type="hidden" name="typeId" value={selectedType?.id || ''} />
           <input type="hidden" name="startTime" value={selectedSlot?.startTime || ''} />
           <input type="hidden" name="endTime" value={selectedSlot?.endTime || ''} />
           <input type="hidden" name="timezone" value={selectedSlot?.timezone || ''} />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label className="heading-sm text-white/30 block mb-1.5" htmlFor="name">
+              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="name">
                 Your Name *
               </label>
               <input
@@ -254,12 +254,12 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="name"
                 type="text"
                 required
-                className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
                 placeholder="Your Name"
               />
             </div>
             <div>
-              <label className="heading-sm text-white/30 block mb-1.5" htmlFor="email">
+              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="email">
                 Email Address *
               </label>
               <input
@@ -267,46 +267,46 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="email"
                 type="email"
                 required
-                className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
                 placeholder="Email Address"
               />
             </div>
             <div>
-              <label className="heading-sm text-white/30 block mb-1.5" htmlFor="company">
+              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="company">
                 Company / Organization
               </label>
               <input
                 id="company"
                 name="company"
                 type="text"
-                className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
                 placeholder="Company"
               />
             </div>
             <div>
-              <label className="heading-sm text-white/30 block mb-1.5" htmlFor="phone">
+              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="phone">
                 Phone Number
               </label>
               <input
                 id="phone"
                 name="phone"
                 type="tel"
-                className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
                 placeholder="Phone Number"
               />
             </div>
           </div>
 
           <div>
-            <label className="heading-sm text-white/30 block mb-1.5" htmlFor="projectSummary">
+            <label className="heading-sm text-white/75 block mb-2.5" htmlFor="projectSummary">
               Tell Us About Your Project *
             </label>
             <textarea
               id="projectSummary"
               name="projectSummary"
               required
-              rows={5}
-              className="w-full bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none focus:border-white transition-colors resize-none"
+              rows={6}
+              className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors resize-none"
               placeholder="Describe your vision, goals, and any specific requirements..."
             />
           </div>

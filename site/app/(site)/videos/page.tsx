@@ -35,26 +35,26 @@ export default function VideosPage() {
       <section className="section">
         <div className="max-w-[1100px] mx-auto">
           <header className="mb-12">
-            <p className="heading-sm text-white/35 mb-3">Media</p>
-            <h1 className="heading-lg mb-3">Videos</h1>
-            <p className="text-sm text-white/55 max-w-2xl">
+            <p className="heading-sm text-white/75 mb-3">Media</p>
+            <h1 className="heading-lg mb-4">Videos</h1>
+            <p className="text-base text-white/70 max-w-2xl">
               Local manifest-backed video index with SEO-friendly pages and optional push-back metadata edits.
             </p>
           </header>
 
           {manifest.count === 0 ? (
-            <p className="text-sm text-white/55">No videos in manifest yet. Run sync in the local admin.</p>
+            <p className="text-base text-white/70">No videos in manifest yet. Run sync in the local admin.</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {manifest.videos.map((video) => (
                 <Link
                   key={video.id}
                   href={`/videos/${video.id}`}
-                  className="block border border-white/10 p-4 hover:bg-white/5 transition-colors"
+                  className="block border border-white/10 p-5 hover:bg-white/5 transition-colors"
                 >
-                  <p className="heading-sm text-white/85 mb-1">{video.title}</p>
-                  <p className="text-xs text-white/45 mb-2">{video.privacyStatus}</p>
-                  <p className="text-xs text-white/60 line-clamp-3">{video.description}</p>
+                  <p className="heading-sm text-white mb-1">{video.title}</p>
+                  <p className="text-sm text-white/55 mb-2">{video.privacyStatus}</p>
+                  <p className="text-base text-white/75 line-clamp-3">{video.description}</p>
                 </Link>
               ))}
             </div>
@@ -65,8 +65,8 @@ export default function VideosPage() {
       {/* CTA */}
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-4">Want to see more?</h2>
-          <p className="text-sm text-white/50 mb-8 leading-relaxed">
+          <h2 className="heading-md mb-5">Want to see more?</h2>
+          <p className="text-base text-white/70 mb-8 leading-relaxed">
             Explore our full portfolio of experiential events, installations, and productions.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

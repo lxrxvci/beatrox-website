@@ -14,7 +14,8 @@ const config: Config = {
         'accent-mid': 'rgba(255,255,255,0.3)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-body)', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Space Grotesk', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.25em',

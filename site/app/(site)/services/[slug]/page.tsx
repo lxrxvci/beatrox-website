@@ -50,11 +50,11 @@ export default async function ServicePage({ params }: Props) {
       <section className="section border-b border-white/10">
         <div className="max-w-[1120px] mx-auto grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
           <div>
-            <h2 className="heading-sm text-white/30 mb-6">Capabilities</h2>
+            <h2 className="heading-sm text-white/75 mb-6">Capabilities</h2>
             <ul className="space-y-3">
               {service.capabilities.map(cap => (
-                <li key={cap} className="flex items-start gap-3 text-sm text-white/70">
-                  <span className="text-white/20 mt-1">—</span>
+                <li key={cap} className="flex items-start gap-3 text-base text-white/75">
+                  <span className="text-white/60 mt-1">—</span>
                   <span>{cap}</span>
                 </li>
               ))}
@@ -69,12 +69,12 @@ export default async function ServicePage({ params }: Props) {
                   {block.type === 'trust' && (
                     <div className="border border-white/10 bg-white/[0.03] rounded-sm p-6 md:p-8">
                       {block.heading && (
-                        <h2 className="heading-sm text-white/40 mb-6">{block.heading}</h2>
+                        <h2 className="heading-sm text-white/75 mb-6">{block.heading}</h2>
                       )}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {block.items?.map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-3 text-sm text-white/75">
-                            <span className="text-white/30 mt-0.5 shrink-0">✓</span>
+                          <div key={idx} className="flex items-start gap-3 text-base text-white/80">
+                            <span className="text-white/60 mt-0.5 shrink-0">✓</span>
                             <span>{item}</span>
                           </div>
                         ))}
@@ -85,15 +85,15 @@ export default async function ServicePage({ params }: Props) {
                   {block.type === 'process' && (
                     <div>
                       {block.heading && (
-                        <h2 className="heading-sm text-white/40 mb-6">{block.heading}</h2>
+                        <h2 className="heading-sm text-white/75 mb-6">{block.heading}</h2>
                       )}
                       <ol className="space-y-6">
                         {block.items?.map((item, idx) => (
                           <li key={idx} className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-white/20 text-white/50 text-sm font-semibold rounded-sm">
+                            <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-white/30 text-white/80 text-base font-semibold rounded-sm">
                               {idx + 1}
                             </span>
-                            <span className="text-sm text-white/75 leading-relaxed pt-1.5">{item}</span>
+                            <span className="text-base text-white/80 leading-relaxed pt-1">{item}</span>
                           </li>
                         ))}
                       </ol>
@@ -103,13 +103,13 @@ export default async function ServicePage({ params }: Props) {
                   {block.type === 'faq' && (
                     <div>
                       {block.heading && (
-                        <h2 className="heading-sm text-white/40 mb-6">{block.heading}</h2>
+                        <h2 className="heading-sm text-white/75 mb-6">{block.heading}</h2>
                       )}
                       <div className="divide-y divide-white/10">
                         {(block.items as { question: string; answer: string }[])?.map((item, idx) => (
                           <div key={idx} className="py-5 first:pt-0 last:pb-0">
-                            <p className="text-sm font-semibold text-white/90 mb-2">{item.question}</p>
-                            <p className="text-sm text-white/60 leading-relaxed">{item.answer}</p>
+                            <p className="text-base font-semibold text-white mb-2">{item.question}</p>
+                            <p className="text-base text-white/75 leading-relaxed">{item.answer}</p>
                           </div>
                         ))}
                       </div>
@@ -121,18 +121,18 @@ export default async function ServicePage({ params }: Props) {
                     return (
                     <div>
                       {bodyBlock.heading && (
-                        <h2 className="heading-sm text-white/40 mb-4">{bodyBlock.heading}</h2>
+                        <h2 className="heading-sm text-white/75 mb-4">{bodyBlock.heading}</h2>
                       )}
                       {bodyBlock.content && (
-                        <p className="text-sm text-white/75 leading-relaxed whitespace-pre-line">
+                        <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
                           {bodyBlock.content}
                         </p>
                       )}
                       {bodyBlock.items && (
                         <ul className="space-y-2 mt-2">
                           {bodyBlock.items.map(item => (
-                            <li key={item} className="flex items-start gap-3 text-sm text-white/70">
-                              <span className="text-white/20 mt-1">—</span>
+                            <li key={item} className="flex items-start gap-3 text-base text-white/75">
+                              <span className="text-white/50 mt-1">—</span>
                               <span>{item}</span>
                             </li>
                           ))}
@@ -163,7 +163,7 @@ export default async function ServicePage({ params }: Props) {
       {service.relatedWork && service.relatedWork.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1400px] mx-auto">
-            <h2 className="heading-sm text-white/30 mb-8">Related Work</h2>
+            <h2 className="heading-sm text-white/75 mb-8">Related Work</h2>
             <div className="flex flex-wrap gap-4">
               {service.relatedWork.map((work) => (
                 <Link key={work.slug} href={work.slug} className="btn-ghost">
@@ -178,8 +178,8 @@ export default async function ServicePage({ params }: Props) {
       {/* CTA */}
       <section className="section text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-4">Ready to get started?</h2>
-          <p className="text-sm text-white/50 mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
+          <h2 className="heading-md mb-5">Ready to get started?</h2>
+          <p className="text-base text-white/70 mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="btn-primary">Get in Touch</Link>
             <Link href="/work" className="btn-ghost">View Our Work</Link>

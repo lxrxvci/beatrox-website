@@ -1,0 +1,739 @@
+{
+  "source_page": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png",
+  "page_title": "Work \u2014 BEATROX - Experiential Design & Event Production",
+  "crawl_timestamp": "2024",
+  "summary": {
+    "total_unique_urls": 96,
+    "unique_base_images": 12,
+    "sources_checked": [
+      "img.src",
+      "img.srcset",
+      "img.data-src",
+      "img.data-original",
+      "img.data-lazy-src",
+      "img.data-srcset",
+      "picture.source.srcset",
+      "picture.source.data-srcset",
+      "inline-style (background-image)",
+      "meta tags (og:image, twitter:image)",
+      "link rel=image_src",
+      "data-bg attributes",
+      "data-background attributes",
+      "style tag CSS url()",
+      "script tag image references",
+      "data-image/data-img attributes"
+    ]
+  },
+  "all_urls": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg",
+      "source": "img.src",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=1000w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=100w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=1500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=2500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=300w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=500w",
+      "source": "img.srcset",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=750w",
+      "source": "img.srcset",
+      "context": ""
+    }
+  ],
+  "unique_base_images": [
+    {
+      "project": "BEATROX: Hero/Brand Image",
+      "filename": "image-asset.jpeg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966261711-93FNALQDNC048KCUY36S/image-asset.jpeg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "INFINITE PLAYLIST: FESTIVAL ACTIVATION",
+      "filename": "Outside+Lands+Amazon+Music-8.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5a2719a5-c139-4e74-b001-1a2274baa9e1/Outside+Lands+Amazon+Music-8.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "MYSHELTER: IMMERSIVE ENVIRONMENT",
+      "filename": "IMG_9711.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a0c282c1-3861-413e-b463-42fc00d42b08/IMG_9711.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "PROJEKT X: SPECIALIZED PRODUCTION",
+      "filename": "IMG_3944.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/28816dcf-89a5-45f8-bcaf-74b7db5e53a6/IMG_3944.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "AKU WORLD: EXPERIENTIAL EVENT",
+      "filename": "Concert-WideAngle.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/03ced12a-a48a-4844-90df-0e1b25426a5f/Concert-WideAngle.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "RTFO2019: IMMERSIVE MEDIA EXPERIENCE",
+      "filename": "RTFO2019-PICS-KMP_2242.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/8e234e1a-4002-480c-b19d-3e8db45e7496/RTFO2019-PICS-KMP_2242.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "SUPER BOWL 2020: PROJECTION & INTERACTIVE",
+      "filename": "IMG_1686_Moment.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/94e85f56-2246-4153-af8a-2a5313ca7eae/IMG_1686_Moment.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "CREATE OUR FUTURE: EXPERIENTIAL EVENT",
+      "filename": "IMG_2959.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "DESTINATION: EXPERIENTIAL EVENT",
+      "filename": "IMG_7561.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/472f5479-3bb9-44f4-b150-37bedaff2dc6/IMG_7561.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "BUZZFEED: EVENT PRODUCTION",
+      "filename": "BuzzFeedNewFronts-Stage-Wide2.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/998abb8f-26ed-4119-90c7-e63243a8975e/BuzzFeedNewFronts-Stage-Wide2.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "FLIR: INTERACTIVE MEDIA DISPLAY",
+      "filename": "DC+History+Wall+Demo+4_Moment1.jpg",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1675966006272-F2BAVISBIYUNQ0N9AOTB/DC+History+Wall+Demo+4_Moment1.jpg?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    },
+    {
+      "project": "LED VIDEO WALL: Technical/Equipment",
+      "filename": "Back-of-LED-VIDEO-Wall.png",
+      "base_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png",
+      "format_variants": [
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=2500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=750w"
+      ],
+      "sources_found": [
+        "img.src",
+        "img.srcset"
+      ]
+    }
+  ]
+}

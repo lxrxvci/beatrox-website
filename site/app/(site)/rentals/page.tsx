@@ -33,7 +33,7 @@ export default function RentalsPage() {
           <div className="max-w-[1120px] mx-auto">
             <div className="mb-10">
               <h2 className="heading-lg mb-3">{category.name}</h2>
-              <p className="text-sm text-white/50 leading-relaxed max-w-2xl">
+              <p className="text-base text-white/70 leading-relaxed max-w-2xl">
                 {category.description}
               </p>
             </div>
@@ -47,15 +47,15 @@ export default function RentalsPage() {
                   {/* Availability badge */}
                   <div className="flex items-center justify-between mb-4">
                     <span
-                      className={`inline-flex items-center gap-1.5 text-[0.6rem] font-semibold tracking-[0.15em] uppercase px-2.5 py-1 ${
+                      className={`inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.12em] uppercase px-3 py-1.5 ${
                         item.available
-                          ? 'bg-white/10 text-white/70'
-                          : 'bg-white/5 text-white/30'
+                          ? 'bg-white/10 text-white/80'
+                          : 'bg-white/5 text-white/55'
                       }`}
                     >
                       <span
                         className={`w-1.5 h-1.5 rounded-full ${
-                          item.available ? 'bg-emerald-400' : 'bg-white/20'
+                          item.available ? 'bg-emerald-400' : 'bg-white/25'
                         }`}
                       />
                       {item.available ? 'Available' : 'On Request'}
@@ -66,18 +66,18 @@ export default function RentalsPage() {
                     {item.name}
                   </h3>
 
-                  <p className="text-xs text-white/50 leading-relaxed mb-5 flex-grow">
+                  <p className="text-base text-white/75 leading-relaxed mb-5 flex-grow">
                     {item.description}
                   </p>
 
                   {/* Specs */}
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {item.specs.map((spec) => (
                       <li
                         key={spec}
-                        className="text-[0.65rem] text-white/30 leading-relaxed flex items-start gap-2"
+                        className="text-sm text-white/65 leading-relaxed flex items-start gap-2.5"
                       >
-                        <span className="text-white/20 mt-0.5 shrink-0">—</span>
+                        <span className="text-white/60 mt-1 shrink-0">—</span>
                         {spec}
                       </li>
                     ))}
@@ -92,8 +92,8 @@ export default function RentalsPage() {
       {/* CTA */}
       <section className="section text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="heading-lg mb-4">{cta.heading}</h2>
-          <p className="text-sm text-white/50 leading-relaxed mb-10">
+          <h2 className="heading-lg mb-5">{cta.heading}</h2>
+          <p className="text-base text-white/70 leading-relaxed mb-10">
             {cta.subheading}
           </p>
           <Link href={cta.url} className="btn-primary">

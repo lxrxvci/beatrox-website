@@ -71,7 +71,7 @@ export default function ServicesPage() {
                 <h2 className="heading-sm text-white mb-6 pb-4 border-b border-white/10">{cat.label}</h2>
                 <ul className="space-y-3">
                   {cat.items.map(item => (
-                    <li key={item} className="text-xs text-white/60 leading-relaxed">{item}</li>
+                    <li key={item} className="text-sm text-white/75 leading-relaxed">{item}</li>
                   ))}
                 </ul>
               </div>
@@ -108,13 +108,13 @@ export default function ServicesPage() {
                   <p className="heading-sm text-white mb-3 group-hover:text-white transition-colors">
                     {service.title}
                   </p>
-                  <p className="text-[0.65rem] text-white/30 tracking-widest uppercase mb-4">
+                  <p className="text-sm text-white/70 tracking-widest uppercase mb-4">
                     {service.category}
                   </p>
-                  <p className="text-xs text-white/50 leading-relaxed line-clamp-3">
+                  <p className="text-base text-white/75 leading-relaxed line-clamp-3">
                     {service.hero.subheadline}
                   </p>
-                  <span className="inline-block mt-4 text-[0.65rem] tracking-[0.15em] uppercase text-white/30 group-hover:text-white transition-colors">
+                  <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
                     Learn more →
                   </span>
                   </div>
@@ -128,8 +128,8 @@ export default function ServicesPage() {
       {/* Consultation CTA */}
       <section className="section text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="heading-lg mb-4">Book a Consultation</h2>
-          <p className="text-sm text-white/50 leading-relaxed mb-10">
+          <h2 className="heading-lg mb-5">Book a Consultation</h2>
+          <p className="text-base text-white/70 leading-relaxed mb-10">
             Our team of technical and creative directors can help you with your project.
             We specialize in bringing unique and bespoke ideas to life. We know that every project
             is different and we can tailor a custom solution that works for you and your budget.

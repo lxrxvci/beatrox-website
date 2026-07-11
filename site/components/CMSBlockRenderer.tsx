@@ -37,7 +37,7 @@ export default function CMSBlockRenderer({ blocks }: Props) {
             return (
               <article key={`${block.blockType}-${index}`} className="space-y-4">
                 {block.heading && <h2 className="heading-md">{block.heading}</h2>}
-                <p className="text-sm text-white/75 leading-relaxed whitespace-pre-line">
+                <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
                   {extractText(block.body)}
                 </p>
               </article>
@@ -78,7 +78,7 @@ export default function CMSBlockRenderer({ blocks }: Props) {
                 {block.heading && <h2 className="heading-md">{block.heading}</h2>}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {items.map((item, itemIndex) => (
-                    <li key={`${item.label}-${itemIndex}`} className="text-sm text-white/75">
+                    <li key={`${item.label}-${itemIndex}`} className="text-base text-white/80">
                       {item.label}
                     </li>
                   ))}
@@ -92,7 +92,7 @@ export default function CMSBlockRenderer({ blocks }: Props) {
             return (
               <article key={`${block.blockType}-${index}`} className="border border-white/10 p-8 text-center space-y-4">
                 {block.heading && <h2 className="heading-md">{block.heading}</h2>}
-                {Boolean(block.body) && <p className="text-sm text-white/65">{extractText(block.body)}</p>}
+                {Boolean(block.body) && <p className="text-base text-white/70">{extractText(block.body)}</p>}
                 <Link href={block.url} className="btn-primary">
                   {block.label}
                 </Link>
@@ -105,7 +105,7 @@ export default function CMSBlockRenderer({ blocks }: Props) {
             return (
               <article key={`${block.blockType}-${index}`} className="space-y-4">
                 {block.heading && <h2 className="heading-md">{block.heading}</h2>}
-                <p className="text-sm text-white/70">
+                <p className="text-base text-white/75">
                   {block.provider ? `${block.provider.toUpperCase()} video: ` : 'Video: '}
                   <a href={block.url} target="_blank" rel="noreferrer" className="underline">
                     {block.url}

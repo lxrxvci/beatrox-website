@@ -53,11 +53,11 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black pointer-events-none" />
 
         <div className="relative max-w-[1120px] mx-auto w-full pb-6 lg:pb-10">
-          <p className="heading-sm text-white/50 mb-6">Experiential Design & Event Production</p>
+          <p className="heading-sm text-white/85 mb-6">Experiential Design & Event Production</p>
           <h1 className="heading-xl max-w-5xl mb-8">
             {data.hero.headline}
           </h1>
-          <p className="text-base text-white/70 max-w-xl mb-10 leading-relaxed">
+          <p className="text-lg text-white/80 max-w-xl mb-10 leading-relaxed">
             {data.hero.subheadline}
           </p>
           <div className="flex flex-wrap gap-4">
@@ -73,8 +73,8 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {data.sections.find(s => s.type === 'philosophy')?.columns?.map((col) => (
               <div key={col.heading}>
-                <h2 className="heading-sm text-white/40 mb-4">{col.heading}</h2>
-                <p className="text-sm text-white/70 leading-relaxed">{col.body}</p>
+                <h2 className="heading-sm text-white/75 mb-4">{col.heading}</h2>
+                <p className="text-base text-white/75 leading-relaxed">{col.body}</p>
               </div>
             ))}
           </div>
@@ -102,11 +102,11 @@ export default async function HomePage() {
       {/* ── Capabilities Grid ─────────────────────────────────────────────── */}
       <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto">
-          <h2 className="heading-sm text-white/40 mb-12">Tech Capabilities</h2>
+          <h2 className="heading-sm text-white/75 mb-12">Tech Capabilities</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-white/10">
             {CAPABILITIES.map(cap => (
               <div key={cap} className="bg-black px-6 py-5 flex items-center">
-                <span className="text-xs font-medium tracking-[0.1em] uppercase text-white/70">{cap}</span>
+                <span className="text-sm font-medium tracking-[0.1em] uppercase text-white/80">{cap}</span>
               </div>
             ))}
           </div>
@@ -118,7 +118,7 @@ export default async function HomePage() {
         <Reveal className="max-w-[1120px] mx-auto">
           <div className="flex items-end justify-between mb-10">
             <h2 className="heading-lg">Work</h2>
-            <Link href="/work" className="text-xs font-semibold tracking-[0.2em] uppercase text-white/40 hover:text-white transition-colors">
+            <Link href="/work" className="text-sm font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-white transition-colors">
               View All →
             </Link>
           </div>
@@ -159,8 +159,8 @@ export default async function HomePage() {
       {/* ── CTA Bar ───────────────────────────────────────────────────────── */}
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="heading-lg mb-4">Ready to create something extraordinary?</h2>
-          <p className="text-sm text-white/50 mb-10 leading-relaxed">
+          <h2 className="heading-lg mb-5">Ready to create something extraordinary?</h2>
+          <p className="text-base text-white/70 mb-10 leading-relaxed">
             Our team of technical and creative directors is ready to help you bring your vision to life.
           </p>
           <Link href="/contact" className="btn-primary">Book a Discovery Call</Link>

@@ -50,18 +50,18 @@ export default function ParallaxHero({
           className="object-cover scale-[1.06] will-change-transform"
           style={{ transform: `translate3d(0, ${offset}px, 0) scale(1.06)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/92" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/92" />
       </div>
 
       <div className="relative max-w-[1400px] mx-auto w-full">
         {backHref && backLabel && (
-          <Link href={backHref} className="text-[0.65rem] tracking-[0.2em] uppercase text-white/35 hover:text-white transition-colors mb-8 inline-block">
+          <Link href={backHref} className="text-xs tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors mb-8 inline-block">
             {backLabel}
           </Link>
         )}
-        {eyebrow && <p className="heading-sm text-white/35 mb-4">{eyebrow}</p>}
+        {eyebrow && <p className="heading-sm text-white/90 mb-4">{eyebrow}</p>}
         <h1 className="heading-xl max-w-4xl">{title}</h1>
-        {description && <p className="text-sm text-white/60 mt-6 max-w-2xl leading-relaxed">{description}</p>}
+        {description && <p className="text-base text-white/85 mt-6 max-w-2xl leading-relaxed">{description}</p>}
         {ctaHref && ctaLabel && (
           <Link href={ctaHref} className="btn-primary mt-10 inline-block">
             {ctaLabel}

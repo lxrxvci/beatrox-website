@@ -1,0 +1,613 @@
+{
+  "source_page": "https://www.beatrox.com/team",
+  "crawl_summary": {
+    "total_unique_images": 111,
+    "img_src_tags": 9,
+    "img_srcset_variants": 63,
+    "css_background_images": 38
+  },
+  "team_members": [
+    {
+      "name_role": "Eric Mintzer - Creative Technologist",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg",
+      "filename": "EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg"
+    },
+    {
+      "name_role": "Footer/Background - LED Video Wall",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png",
+      "filename": "Back-of-LED-VIDEO-Wall.png"
+    },
+    {
+      "name_role": "Joey Paulekas - Touring and Fabrication",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG",
+      "filename": "Joey.JPG"
+    },
+    {
+      "name_role": "Collaboration/Team Photo",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+      "filename": "IMG_2959.jpg"
+    },
+    {
+      "name_role": "Desiree Daggy - 3D & Environmental Design",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg",
+      "filename": "IMG_6659.jpg"
+    },
+    {
+      "name_role": "Alan Curtiss - Video Production & LED Technician",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg",
+      "filename": "Alan.jpg"
+    },
+    {
+      "name_role": "Nathan Jenkins - Creative Technologist (Founder/CEO)",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg",
+      "filename": "C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg"
+    },
+    {
+      "name_role": "Joshua Vallejos - Audio Engineer / Production Manager",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg",
+      "filename": "Josh.jpg"
+    },
+    {
+      "name_role": "Bryant Place - Creative Technologist",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg",
+      "filename": "profile_photo1.jpg"
+    }
+  ],
+  "all_images": [
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/social-20141119/social-icon-font.eot",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/social-20141119/social-icon-font.eot#iefix",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/social-20141119/social-icon-font.svg#social-icon-font",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/social-20141119/social-icon-font.ttf",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/social-20141119/social-icon-font.woff",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/squarespace-ui-font.eot",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/squarespace-ui-font.eot#iefix",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/squarespace-ui-font.svg#squarespace-ui-font",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/squarespace-ui-font.ttf",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/fonts/squarespace-ui-font.woff",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/cart-16-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/cart-32-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/edit-aviary-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/edit-aviary-light@2x.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/edit-info-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/edit-info-light@2x.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/error-dark.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/error-dark@2x.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/getty-16-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/getty-32-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/play-button.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/play-button@2x.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/shopping-cart-16-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/shopping-cart-32-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/trash-9-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/trash-9-light@2x.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/trash-9-red.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/damask/trash-9-red@2x.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/icons/icon-cart-18-dark.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/icons/icon-settings-16-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/icons/icon-video-24-light-solid.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/images-v6/standard/icon_close_7_light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://static1.squarespace.com/universal/images-v6/icons/block-indicator-dark.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://static1.squarespace.com/universal/images-v6/icons/block-indicator-dark@2x.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://static1.squarespace.com/universal/images-v6/icons/icon-searchqueries-20-dark.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://static1.squarespace.com/universal/images-v6/icons/icon-searchqueries-20-light.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://static1.squarespace.com/universal/images-v6/icons/opentable-icons.png",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://static1.squarespace.com/universal/images-v6/icons/opentable-icons.svg",
+      "source_type": "css.background-image",
+      "context": ""
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg",
+      "source_type": "img.src",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png",
+      "source_type": "img.src",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG",
+      "source_type": "img.src",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg",
+      "source_type": "img.src",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg",
+      "source_type": "img.src",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg",
+      "source_type": "img.src",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg",
+      "source_type": "img.src",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg",
+      "source_type": "img.src",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg",
+      "source_type": "img.src",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg?format=1000w",
+      "source_type": "img.srcset",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg?format=100w",
+      "source_type": "img.srcset",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg?format=1500w",
+      "source_type": "img.srcset",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg?format=2500w",
+      "source_type": "img.srcset",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg?format=300w",
+      "source_type": "img.srcset",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg?format=500w",
+      "source_type": "img.srcset",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/1ee0657d-3c36-4745-81d3-0ef8cfece2cd/EDDDED1D-E470-433F-9A93-6826FFE4B993.jpg?format=750w",
+      "source_type": "img.srcset",
+      "context": "Eric Mintzer - Creative TechnologistTechnologist and music lover that has developed award-winning systems for projection mapping, sensor automation, and media control. Past companies include Startup S"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=1000w",
+      "source_type": "img.srcset",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=100w",
+      "source_type": "img.srcset",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=1500w",
+      "source_type": "img.srcset",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=2500w",
+      "source_type": "img.srcset",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=300w",
+      "source_type": "img.srcset",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=500w",
+      "source_type": "img.srcset",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/5e02ff07-b17c-4c66-9da9-6486fcf96875/Back-of-LED-VIDEO-Wall.png?format=750w",
+      "source_type": "img.srcset",
+      "context": "BEATROX LLC8625 NE Halsey st.Portland, OR 97220About |Work |Services |Team |Contact"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG?format=1000w",
+      "source_type": "img.srcset",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG?format=100w",
+      "source_type": "img.srcset",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG?format=1500w",
+      "source_type": "img.srcset",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG?format=2500w",
+      "source_type": "img.srcset",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG?format=300w",
+      "source_type": "img.srcset",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG?format=500w",
+      "source_type": "img.srcset",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/77f4fb69-2c52-46e1-88d2-1c3c362e5a2e/Joey.JPG?format=750w",
+      "source_type": "img.srcset",
+      "context": "Joey Paulekas - Touring and FabricationWhether it\u2019s Tour Manager, Art Director, Scenic Carpenter, Production Manager,  Joey has done it all,  He has worked for global brands  and has toured the world "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=1000w",
+      "source_type": "img.srcset",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=100w",
+      "source_type": "img.srcset",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=1500w",
+      "source_type": "img.srcset",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=2500w",
+      "source_type": "img.srcset",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=300w",
+      "source_type": "img.srcset",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=500w",
+      "source_type": "img.srcset",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/79cf6328-394c-47bc-8974-70e66c0133cc/IMG_2959.jpg?format=750w",
+      "source_type": "img.srcset",
+      "context": "We believe in the spirit of collaboration and foster positivity.  We are agile and ready to respond with an established network of industry partners."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg?format=1000w",
+      "source_type": "img.srcset",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg?format=100w",
+      "source_type": "img.srcset",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg?format=1500w",
+      "source_type": "img.srcset",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg?format=2500w",
+      "source_type": "img.srcset",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg?format=300w",
+      "source_type": "img.srcset",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg?format=500w",
+      "source_type": "img.srcset",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/84ddeda8-de8b-4dba-bfd1-07a8ff50815e/IMG_6659.jpg?format=750w",
+      "source_type": "img.srcset",
+      "context": "Desiree Daggy - 3D & Environmental DesignDesiree is a 3D animator & Environmental Designer from Character rigging to real-time environments.  Dezi has the skills to get the job done with many years of"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg?format=1000w",
+      "source_type": "img.srcset",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg?format=100w",
+      "source_type": "img.srcset",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg?format=1500w",
+      "source_type": "img.srcset",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg?format=2500w",
+      "source_type": "img.srcset",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg?format=300w",
+      "source_type": "img.srcset",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg?format=500w",
+      "source_type": "img.srcset",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/a9aa8fe3-ed87-4966-8e8b-8032c29b3770/Alan.jpg?format=750w",
+      "source_type": "img.srcset",
+      "context": "Alan Curtiss - Video Production & LED TechnicianOwner of Sky Lites Drone Shows, and a staple member of the Beatrox team, Alan has been producing and managing high profile technical productions for man"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg?format=1000w",
+      "source_type": "img.srcset",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg?format=100w",
+      "source_type": "img.srcset",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg?format=1500w",
+      "source_type": "img.srcset",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg?format=2500w",
+      "source_type": "img.srcset",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg?format=300w",
+      "source_type": "img.srcset",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg?format=500w",
+      "source_type": "img.srcset",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/adbe092d-edd6-4e11-9ab7-f950333788c1/C1A4F784-8BE5-49D3-9B83-EB58F7C314C3.jpg?format=750w",
+      "source_type": "img.srcset",
+      "context": "Nathan Jenkins - Creative TechnologistFounder and CEO of Beatrox,  With over 20 years of experience in the industry,  Audio Visual Design and Integration, Technical Director, Lighting Designer, Sound "
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg?format=1000w",
+      "source_type": "img.srcset",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg?format=100w",
+      "source_type": "img.srcset",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg?format=1500w",
+      "source_type": "img.srcset",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg?format=2500w",
+      "source_type": "img.srcset",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg?format=300w",
+      "source_type": "img.srcset",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg?format=500w",
+      "source_type": "img.srcset",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/b31d3db9-bcf6-403f-afb8-b41f17e800bc/Josh.jpg?format=750w",
+      "source_type": "img.srcset",
+      "context": "Joshua Vallejos - Audio Engineer / Production ManagerJoshua Vallejos is an Audio Engineer with over 15 years of experience working as a touring and live sound engineer, studio engineer, music producer"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg?format=1000w",
+      "source_type": "img.srcset",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg?format=100w",
+      "source_type": "img.srcset",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg?format=1500w",
+      "source_type": "img.srcset",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg?format=2500w",
+      "source_type": "img.srcset",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg?format=300w",
+      "source_type": "img.srcset",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg?format=500w",
+      "source_type": "img.srcset",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/63d86c8ff442c358474548c3/d1ece25a-8c54-4309-afbd-72266f2b7091/profile_photo1.jpg?format=750w",
+      "source_type": "img.srcset",
+      "context": "Bryant Place - Creative TechnologistWith over 13 years of global experience in the live entertainment and permanent installation industries, Bryant has a keen focus on merging technology and art."
+    },
+    {
+      "url": "https://assets.squarespace.com/universal/default-favicon.ico",
+      "source_type": "link.rel=icon",
+      "context": ""
+    }
+  ]
+}
