@@ -30,8 +30,8 @@ export default function WorkPage() {
         imageSrc={heroImage}
         imageAlt="Work page hero"
         eyebrow="Portfolio"
-        title="Work"
-        description="Our creative technology projects range from permanent installations to touring events — we scale from the small details to international logistics to meet your needs."
+        title="Our Work"
+        description="Permanent installations. Touring spectacles. Global activations. Every project is a new frontier."
         minHeightClass="min-h-[94svh]"
       />
 

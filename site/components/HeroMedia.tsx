@@ -1,15 +1,24 @@
 import Image from 'next/image'
 
+interface VideoSource {
+  src: string
+  type: string
+}
+
 interface HeroMediaProps {
   imageSrc: string
   imageAlt: string
   videoSrc?: string
+  /** Multi-format sources, e.g. AV1 webm + HEVC mp4 + H.264 fallback. */
+  videoSources?: VideoSource[]
 }
 
-export default function HeroMedia({ imageSrc, imageAlt, videoSrc }: HeroMediaProps) {
+export default function HeroMedia({ imageSrc, imageAlt, videoSrc, videoSources }: HeroMediaProps) {
+  const sources = videoSources ?? (videoSrc ? [{ src: videoSrc, type: 'video/mp4' }] : [])
+
   return (
     <div className="absolute inset-0">
-      {videoSrc ? (
+      {sources.length > 0 ? (
         <video
           className="h-full w-full object-cover"
           autoPlay
@@ -19,7 +28,9 @@ export default function HeroMedia({ imageSrc, imageAlt, videoSrc }: HeroMediaPro
           preload="metadata"
           poster={imageSrc}
         >
-          <source src={videoSrc} type="video/mp4" />
+          {sources.map((s) => (
+            <source key={s.src} src={s.src} type={s.type} />
+          ))}
         </video>
       ) : (
         <Image

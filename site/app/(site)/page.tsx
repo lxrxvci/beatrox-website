@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { getHomepage, getAllProjects } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
+import HeroMedia from '@/components/HeroMedia'
+import HomeHero from '@/components/HomeHero'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getHomepage()
@@ -42,29 +44,8 @@ export default async function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
-        <Image
-          src={heroImage}
-          alt="BEATROX hero media"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black pointer-events-none" />
-
-        <div className="relative max-w-[1120px] mx-auto w-full pb-6 lg:pb-10">
-          <p className="heading-sm text-white/85 mb-6">Experiential Design & Event Production</p>
-          <h1 className="heading-xl max-w-5xl mb-8">
-            {data.hero.headline}
-          </h1>
-          <p className="text-lg text-white/80 max-w-xl mb-10 leading-relaxed">
-            {data.hero.subheadline}
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link href={data.hero.cta.url} className="btn-primary">{data.hero.cta.label}</Link>
-            <Link href={data.hero.secondaryCta.url} className="btn-ghost">{data.hero.secondaryCta.label}</Link>
-          </div>
-        </div>
+        <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
+        <HomeHero />
       </section>
 
       {/* ── Philosophy ────────────────────────────────────────────────────── */}

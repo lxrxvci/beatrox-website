@@ -1,0 +1,52 @@
+'use client'
+
+import { motion } from 'motion/react'
+import KineticHeading from '@/components/KineticHeading'
+import MagneticButton from '@/components/MagneticButton'
+
+/**
+ * Homepage hero content with the staggered entrance sequence from the
+ * redesign spec: overline (0.1s) → kinetic headline (0.3s) → body (0.8s)
+ * → CTAs (1.2s).
+ */
+export default function HomeHero() {
+  return (
+    <div className="relative max-w-[1120px] mx-auto w-full pb-6 lg:pb-10">
+      <motion.p
+        className="overline mb-6"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+      >
+        Beatrox
+      </motion.p>
+
+      <KineticHeading
+        text="Building Unforgettable Worlds"
+        className="heading-xl max-w-[12ch] mb-8"
+        delay={0.3}
+      />
+
+      <motion.p
+        className="text-lg text-[var(--text-secondary)] max-w-[48ch] mb-10 leading-relaxed"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+      >
+        Laser. Drone. Code. Canvas. We engineer moments that defy expectation.
+      </motion.p>
+
+      <motion.div
+        className="flex flex-wrap gap-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <MagneticButton href="/work">See Our Work</MagneticButton>
+        <MagneticButton href="/book" variant="accent">
+          Book a Consultation
+        </MagneticButton>
+      </motion.div>
+    </div>
+  )
+}

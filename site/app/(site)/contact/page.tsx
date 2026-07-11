@@ -4,6 +4,7 @@ import { seoToMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { buildLocalBusinessSchema } from '@/lib/schema'
 import ContactForm from './ContactForm'
+import KineticHeading from '@/components/KineticHeading'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getContact()
@@ -18,8 +19,8 @@ export default function ContactPage() {
       {/* Header */}
       <section className="hero border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
-          <p className="heading-sm text-white/80 mb-4">Get in Touch</p>
-          <h1 className="heading-xl max-w-3xl">{data.hero.headline}</h1>
+          <p className="overline mb-4">Get in Touch</p>
+          <KineticHeading text={data.hero.headline} className="heading-xl max-w-3xl" />
           <p className="text-base text-white/70 mt-6 max-w-xl leading-relaxed">{data.hero.subheadline}</p>
         </div>
       </section>

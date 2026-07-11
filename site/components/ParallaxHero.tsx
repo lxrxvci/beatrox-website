@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'motion/react'
+import KineticHeading from '@/components/KineticHeading'
 
 interface ParallaxHeroProps {
   imageSrc: string
@@ -55,17 +57,41 @@ export default function ParallaxHero({
 
       <div className="relative max-w-[1400px] mx-auto w-full">
         {backHref && backLabel && (
-          <Link href={backHref} className="text-xs tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors mb-8 inline-block">
+          <Link href={backHref} className="mono text-white/60 hover:text-white transition-colors mb-8 inline-block">
             {backLabel}
           </Link>
         )}
-        {eyebrow && <p className="heading-sm text-white/90 mb-4">{eyebrow}</p>}
-        <h1 className="heading-xl max-w-4xl">{title}</h1>
-        {description && <p className="text-base text-white/85 mt-6 max-w-2xl leading-relaxed">{description}</p>}
+        {eyebrow && (
+          <motion.p
+            className="overline mb-4"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {eyebrow}
+          </motion.p>
+        )}
+        <KineticHeading text={title} className="heading-xl max-w-4xl" delay={0.3} />
+        {description && (
+          <motion.p
+            className="text-base text-[var(--text-secondary)] mt-6 max-w-2xl leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            {description}
+          </motion.p>
+        )}
         {ctaHref && ctaLabel && (
-          <Link href={ctaHref} className="btn-primary mt-10 inline-block">
-            {ctaLabel}
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Link href={ctaHref} className="btn-primary mt-10 inline-block">
+              {ctaLabel}
+            </Link>
+          </motion.div>
         )}
       </div>
     </section>

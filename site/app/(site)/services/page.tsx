@@ -56,8 +56,8 @@ export default function ServicesPage() {
         imageSrc={servicesHero}
         imageAlt="Services hero media"
         eyebrow="What We Offer"
-        title="Services"
-        description="We offer the full spectrum of experiential event design and production services."
+        title="What We Do"
+        description="Full-spectrum experiential production. From the first sketch to the final strike."
         minHeightClass="min-h-[94svh]"
       />
 

@@ -19,7 +19,7 @@ export default function RentalsPage() {
         imageSrc="/images/verified/home/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals-1d18c704.jpg"
         imageAlt="Equipment rentals hero"
         eyebrow="What We Rent"
-        title={hero.headline}
+        title="Gear That Delivers"
         description={hero.subheadline}
         minHeightClass="min-h-[94svh]"
       />

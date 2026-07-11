@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getTeam } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
+import KineticHeading from '@/components/KineticHeading'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getTeam()
@@ -28,8 +29,8 @@ export default function TeamPage() {
         />
         <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/88" />
         <div className="relative max-w-[1120px] mx-auto">
-          <p className="heading-sm text-white/80 mb-4">The Team</p>
-          <h1 className="heading-lg md:heading-xl max-w-3xl">{data.hero.headline}</h1>
+          <p className="overline mb-4">The Team</p>
+          <KineticHeading text={data.hero.headline} className="heading-lg md:heading-xl max-w-3xl" />
           <p className="text-base text-white/70 mt-6 max-w-4xl leading-relaxed">{data.hero.subheadline}</p>
         </div>
       </section>

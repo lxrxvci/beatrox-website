@@ -1,6 +1,10 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 interface RevealProps {
   children: React.ReactNode
@@ -8,38 +12,48 @@ interface RevealProps {
   delayMs?: number
 }
 
+/**
+ * Scroll-triggered reveal (y: 40 → 0, scale: 1.02 → 1, fade in) fired
+ * when the element enters the viewport at "top 85%". Keeps the same API
+ * as the previous IntersectionObserver-based implementation.
+ */
 export default function Reveal({ children, className = '', delayMs = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null)
-  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const node = ref.current
-    if (!node) return
+    const el = ref.current
+    if (!el) return
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisible(true)
-            observer.disconnect()
-          }
-        })
-      },
-      { threshold: 0.16 }
-    )
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.set(el, { opacity: 1, y: 0, scale: 1 })
+      return
+    }
 
-    observer.observe(node)
-    return () => observer.disconnect()
-  }, [])
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el,
+        { y: 40, opacity: 0, scale: 1.02 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          delay: delayMs / 1000,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      )
+    }, el)
+
+    return () => ctx.revert()
+  }, [delayMs])
 
   return (
-    <div
-      ref={ref}
-      style={{ transitionDelay: `${delayMs}ms` }}
-      className={`${className} motion-safe:transition-all motion-safe:duration-700 motion-safe:ease-out ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-      }`}
-    >
+    <div ref={ref} className={className} style={{ opacity: 0 }}>
       {children}
     </div>
   )

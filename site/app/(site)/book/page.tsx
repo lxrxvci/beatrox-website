@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getPayload } from 'payload'
 import payloadConfig from '@/payload.config'
 import BookingForm from './BookingForm'
+import KineticHeading from '@/components/KineticHeading'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -33,8 +34,8 @@ export default async function BookPage() {
     <>
       <section className="hero border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
-          <p className="heading-sm text-white/80 mb-4">Schedule</p>
-          <h1 className="heading-xl max-w-3xl">Book a Consultation</h1>
+          <p className="overline mb-4">Schedule</p>
+          <KineticHeading text="Book a Consultation" className="heading-xl max-w-3xl" />
           <p className="text-base text-white/70 mt-6 max-w-xl leading-relaxed">
             Pick a time that works for you and we'll send a calendar invite with a Google Meet link.
           </p>

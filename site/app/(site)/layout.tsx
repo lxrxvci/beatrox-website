@@ -3,6 +3,7 @@ import Script from 'next/script'
 import '../globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import SmoothScroll from '@/components/SmoothScroll'
 import JsonLd from '@/components/JsonLd'
 import { buildOrganizationSchema } from '@/lib/schema'
 import { Analytics } from '@vercel/analytics/react'
@@ -66,9 +67,11 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
-      <Nav />
-      <main id="main-content">{children}</main>
-      <Footer />
+      <SmoothScroll>
+        <Nav />
+        <main id="main-content">{children}</main>
+        <Footer />
+      </SmoothScroll>
       <Analytics />
       {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
         <>

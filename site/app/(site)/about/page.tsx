@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getAbout } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
+import KineticHeading from '@/components/KineticHeading'
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = getAbout()
@@ -31,9 +32,9 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/55 to-black/90" />
         <div className="max-w-[1120px] mx-auto">
-          <p className="heading-sm text-white/80 mb-4">About Us</p>
-          <h1 className="heading-xl max-w-3xl">{data.hero.headline}</h1>
-          <p className="text-base text-white/70 mt-6 max-w-3xl leading-relaxed">{data.hero.subheadline}</p>
+          <p className="overline mb-4">About Us</p>
+          <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
+          <p className="text-base text-[var(--text-secondary)] mt-6 max-w-3xl leading-relaxed">{data.hero.subheadline}</p>
         </div>
       </section>
 
