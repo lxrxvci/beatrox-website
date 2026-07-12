@@ -28,16 +28,20 @@
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Lenis smooth scroll */
@@ -52,44 +56,55 @@ html.lenis body {
   overflow: hidden;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-body), 'Inter', system-ui, sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
+@layer base {
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body), 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
-a,
-button {
-  transition: all 200ms ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
+@layer base {
   a,
   button {
-    transition: none;
+    transition: all 200ms ease;
+  }
+}
+
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    a,
+    button {
+      transition: none;
+    }
   }
 }
 
 /* Focus indicators */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
+@layer components {
 /* Section utility — generous "luxury" spacing */
 .section {
   padding: 6rem 1.5rem;
@@ -452,4 +467,6 @@ button {
     transition: none;
     animation: none;
   }
+}
+
 }
