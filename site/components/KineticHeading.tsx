@@ -43,6 +43,14 @@ export default function KineticHeading({
 
     const split = new SplitText(el, { type: 'chars,words', mask: 'chars' })
 
+    // Keep each word atomic so the browser never breaks mid-word
+    // (e.g. "CONSULTATIO|N") — wrapping happens between words only.
+    split.words.forEach((word) => {
+      const w = word as HTMLElement
+      w.style.display = 'inline-block'
+      w.style.whiteSpace = 'nowrap'
+    })
+
     const ctx = gsap.context(() => {
       gsap.from(split.chars, {
         yPercent: 120,
