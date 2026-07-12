@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getContact } from '@/lib/json-content'
 
 export default function Footer() {
@@ -10,7 +11,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <p className="text-sm font-bold tracking-[0.22em] uppercase text-white mb-4">BEATROX LLC</p>
+            <Image
+              src="/brand/beatrox-logo-white.png"
+              alt="BEATROX"
+              width={2412}
+              height={2102}
+              className="h-24 w-auto mb-5"
+            />
             <p className="text-sm text-white/70 leading-relaxed">
               {data.address.street}<br />
               {data.address.city}, {data.address.state} {data.address.zip}

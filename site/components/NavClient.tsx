@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import type { NavigationLink } from '@/lib/fallbacks'
@@ -78,8 +79,17 @@ export default function NavClient({ links }: Props) {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
         <Link
           href="/"
-          className="text-white font-bold tracking-[0.22em] text-base uppercase hover:opacity-70 transition-opacity"
+          className="flex items-center gap-2.5 text-white font-bold tracking-[0.22em] text-base uppercase hover:opacity-70 transition-opacity"
+          aria-label="BEATROX — Home"
         >
+          <Image
+            src="/brand/beatrox-symbol.png"
+            alt=""
+            width={1870}
+            height={1595}
+            className="h-7 w-auto"
+            priority
+          />
           BEATROX
         </Link>
 
