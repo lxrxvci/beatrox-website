@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import '../globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -49,6 +50,27 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+  weight: ['400', '700'],
+})
+
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
   const styles = await getSiteStyles()
   const cssVars = {
@@ -62,41 +84,45 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
   } as React.CSSProperties
 
   return (
-    <div className="bg-black text-white antialiased" style={cssVars}>
-      <JsonLd data={buildOrganizationSchema()} />
-      <a href="#main-content" className="skip-link">
-        Skip to content
-      </a>
-      <SmoothScroll>
-        <Nav />
-        {/* Curtain wrapper: lifts to reveal the fixed footer on desktop */}
-        <main
-          id="main-content"
-          className="curtain-main relative z-10 bg-[var(--bg-primary)]"
-        >
-          {children}
-        </main>
-        <div className="curtain-footer lg:fixed lg:inset-x-0 lg:bottom-0 lg:z-0 lg:overflow-hidden">
-          <Footer />
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
+      <body>
+        <div className="bg-black text-white antialiased" style={cssVars}>
+          <JsonLd data={buildOrganizationSchema()} />
+          <a href="#main-content" className="skip-link">
+            Skip to content
+          </a>
+          <SmoothScroll>
+            <Nav />
+            {/* Curtain wrapper: lifts to reveal the fixed footer on desktop */}
+            <main
+              id="main-content"
+              className="curtain-main relative z-10 bg-[var(--bg-primary)]"
+            >
+              {children}
+            </main>
+            <div className="curtain-footer lg:fixed lg:inset-x-0 lg:bottom-0 lg:z-0 lg:overflow-hidden">
+              <Footer />
+            </div>
+          </SmoothScroll>
+          <Analytics />
+          {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+            <>
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+                strategy="afterInteractive"
+              />
+              <Script id="google-analytics" strategy="afterInteractive">
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+                `}
+              </Script>
+            </>
+          )}
         </div>
-      </SmoothScroll>
-      <Analytics />
-      {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-            `}
-          </Script>
-        </>
-      )}
-    </div>
+      </body>
+    </html>
   )
 }
