@@ -1,17 +1,19 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getTeam } from '@/lib/json-content'
+import { getTeamResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 
+export const revalidate = 300
+
 export async function generateMetadata(): Promise<Metadata> {
-  const data = getTeam()
+  const data = await getTeamResolved()
   return seoToMetadata(data.seo)
 }
 
-export default function TeamPage() {
-  const data = getTeam()
+export default async function TeamPage() {
+  const data = await getTeamResolved()
   const sorted = [...data.members].sort((a, b) => a.order - b.order)
   const heroImage = data.media?.heroImage || '/og-default.jpg'
 
