@@ -31,6 +31,9 @@ import {
   getServiceResolved,
   getServiceSlugsResolved,
   getTeamResolved,
+  getHomepageResolved,
+  getAboutResolved,
+  getContactResolved,
   getNavigationLinks,
   getSiteStyles,
   getSeoDefaults,
@@ -43,6 +46,9 @@ import {
   getService,
   getServiceSlugs,
   getTeam,
+  getHomepage,
+  getAbout,
+  getContact,
 } from '../lib/json-content.ts'
 import {
   FALLBACK_NAVIGATION,
@@ -174,12 +180,17 @@ async function main() {
   const jsonTeam = getTeam()
   compare('team', { ...cmsTeam, members: sortBy(cmsTeam.members, 'order') }, { ...jsonTeam, members: sortBy(jsonTeam.members, 'order') })
 
-  // 5. Globals
+  // 5. Pages (home / about / contact)
+  compare('homepage', await getHomepageResolved(), getHomepage())
+  compare('about page', await getAboutResolved(), getAbout())
+  compare('contact page', await getContactResolved(), getContact())
+
+  // 6. Globals
   compare('navigation global', await getNavigationLinks(), FALLBACK_NAVIGATION)
   compare('site-styles global', await getSiteStyles(), FALLBACK_SITE_STYLES)
   compare('seo-defaults global', await getSeoDefaults(), FALLBACK_SEO_DEFAULTS)
 
-  // 6. Fallback warnings = vacuous parity
+  // 7. Fallback warnings = vacuous parity
   if (fallbackWarnings.length > 0) {
     failures.push({
       label: 'resolver fallbacks',

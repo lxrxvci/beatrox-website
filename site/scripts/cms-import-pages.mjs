@@ -2,6 +2,7 @@ import path from 'path'
 import { pathToFileURL } from 'url'
 import {
   assertCredentials,
+  findOneByField,
   login,
   normalizeSlug,
   readJson,
@@ -20,12 +21,12 @@ function normalizePageSlug(file, source) {
   return normalizeSlug(mapped || file.replace('.json', ''))
 }
 
-function mapSectionsToBlocks(source) {
+async function mapSectionsToBlocks(source, token) {
   const sections = Array.isArray(source.sections) ? source.sections : []
-  return sections
-    .map((section) => {
+  const blocks = await Promise.all(
+    sections.map(async (section) => {
       const type = section.type || 'text_block'
-      if (type === 'philosophy' && Array.isArray(section.columns)) {
+      if ((type === 'philosophy' || type === 'three_column') && Array.isArray(section.columns)) {
         return {
           blockType: 'philosophy',
           heading: section.heading || 'Philosophy',
@@ -35,9 +36,21 @@ function mapSectionsToBlocks(source) {
           })),
         }
       }
+      if (type === 'values' && Array.isArray(section.items)) {
+        return {
+          blockType: 'philosophy',
+          heading: section.heading || 'Values',
+          columns: section.items.map((item) => ({
+            heading: item.title || item.heading || '',
+            body: item.body || '',
+          })),
+        }
+      }
       if ((type === 'capabilities_grid' || type === 'capabilities_summary') && Array.isArray(section.items || section.categories)) {
         const items = Array.isArray(section.items)
-          ? section.items.map((item) => ({ label: item.label || item.title || '' })).filter((item) => item.label)
+          ? section.items
+              .map((item) => ({ label: item.label || item.title || '', icon: item.icon || undefined }))
+              .filter((item) => item.label)
           : section.categories.flatMap((cat) => (cat.items || []).map((item) => ({ label: item })))
         return {
           blockType: 'capabilitiesGrid',
@@ -46,10 +59,17 @@ function mapSectionsToBlocks(source) {
         }
       }
       if (type === 'featured_work' && Array.isArray(section.items)) {
+        const projectIds = []
+        for (const item of section.items) {
+          const bareSlug = String(item.slug || '').replace(/^\/+/, '').replace(/^work\/+/, '')
+          if (!bareSlug) continue
+          const project = await findOneByField('projects', 'slug', bareSlug, token)
+          if (project?.id) projectIds.push(project.id)
+        }
         return {
           blockType: 'featuredWork',
           heading: section.heading || 'Featured Work',
-          projects: [],
+          projects: projectIds,
         }
       }
       if (type === 'cta_bar' && section.cta) {
@@ -76,8 +96,85 @@ function mapSectionsToBlocks(source) {
         heading: section.heading || '',
         body: toLexicalText(textBody),
       }
-    })
-    .filter(Boolean)
+    }),
+  )
+  return blocks.filter(Boolean)
+}
+
+async function mapPageMedia(source, token) {
+  const media = source?.media
+  if (!media || typeof media !== 'object') return undefined
+  const heroUrl = media.heroImage || ''
+  const heroDoc = await resolveMediaByLegacyUrl(heroUrl, token)
+  const galleryUrls = Array.isArray(media.galleryImages)
+    ? media.galleryImages
+    : Array.isArray(media.sectionImages)
+      ? media.sectionImages
+      : []
+  const galleryImages = []
+  for (const url of galleryUrls) {
+    if (!url) continue
+    const doc = await resolveMediaByLegacyUrl(url, token)
+    galleryImages.push({ media: doc?.id, legacyUrl: url })
+  }
+  return {
+    heroImage: heroDoc?.id,
+    heroImageLegacyUrl: heroUrl,
+    galleryImages,
+  }
+}
+
+function mapContactGroups(source) {
+  return {
+    address: source?.address
+      ? {
+          company: source.address.company || '',
+          street: source.address.street || '',
+          city: source.address.city || '',
+          state: source.address.state || '',
+          zip: source.address.zip || '',
+          country: source.address.country || '',
+          formatted: source.address.formatted || '',
+        }
+      : undefined,
+    contactInfo: source?.contact
+      ? {
+          email: source.contact.email || '',
+          phone: source.contact.phone || '',
+          phoneFormatted: source.contact.phoneFormatted || '',
+        }
+      : undefined,
+    social: source?.social
+      ? {
+          youtube: source.social.youtube || '',
+          instagram: source.social.instagram || '',
+        }
+      : undefined,
+    consultationForm: source?.consultationForm
+      ? {
+          heading: source.consultationForm.heading || '',
+          description: source.consultationForm.description || '',
+          submitLabel: source.consultationForm.submitLabel || '',
+          successMessage: source.consultationForm.successMessage || '',
+          fields: (source.consultationForm.fields || []).map((field) => ({
+            id: field.id || '',
+            label: field.label || '',
+            type: field.type || 'text',
+            required: Boolean(field.required),
+            placeholder: field.placeholder || undefined,
+            options: Array.isArray(field.options) ? field.options.map((value) => ({ value })) : [],
+          })),
+        }
+      : undefined,
+    emailSignup: source?.emailSignup
+      ? {
+          heading: source.emailSignup.heading || '',
+          description: source.emailSignup.description || '',
+          placeholder: source.emailSignup.placeholder || '',
+          submitLabel: source.emailSignup.submitLabel || '',
+        }
+      : undefined,
+  }
 }
 
 export async function importPages(token) {
@@ -88,6 +185,7 @@ export async function importPages(token) {
     const source = readJson(filePath)
     const slug = normalizePageSlug(file, source)
     const ogImageDoc = await resolveMediaByLegacyUrl(source?.seo?.og?.image, token)
+    const media = await mapPageMedia(source, token)
 
     const pageDoc = await upsertBySlug(
       'pages',
@@ -113,7 +211,9 @@ export async function importPages(token) {
           ogDescription: source?.seo?.og?.description || source?.seo?.description || '',
           ogImage: ogImageDoc?.id,
         },
-        blocks: mapSectionsToBlocks(source),
+        ...(media ? { media } : {}),
+        ...(slug === 'contact' ? mapContactGroups(source) : {}),
+        blocks: await mapSectionsToBlocks(source, token),
       },
       token,
     )

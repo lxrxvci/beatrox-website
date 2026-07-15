@@ -756,23 +756,227 @@ export async function getTeamResolved() {
   }
 }
 
+function lexicalNodeToPlaintext(node: unknown): string {
+  if (!node || typeof node !== 'object') return ''
+  const n = node as Record<string, unknown>
+  if (typeof n.text === 'string') return n.text
+  const children = Array.isArray(n.children) ? n.children : []
+  const text = children.map((child) => lexicalNodeToPlaintext(child)).join('')
+  const type = typeof n.type === 'string' ? n.type : ''
+  if (type === 'paragraph' || type === 'heading' || type === 'listitem' || type === 'quote') {
+    return text + '\n\n'
+  }
+  return text
+}
+
+export function lexicalToPlaintext(richText: unknown): string {
+  const root = (richText as { root?: unknown } | null | undefined)?.root
+  return lexicalNodeToPlaintext(root).replace(/\n{3,}/g, '\n\n').trim()
+}
+
+// ─── Page resolvers (home / about / contact) ────────────────────────────────
+// CMS drives seo, hero, media (and, for contact, the flat groups). Section
+// copy passes through from JSON: rendered copy is component-hardcoded or
+// structurally lossy in the blocks schema.
+
+type CmsPageDoc = Record<string, unknown>
+
+async function findCmsPageDoc(slug: string): Promise<CmsPageDoc | undefined> {
+  const payload = await getPayloadClient()
+  const preview = await isPreviewModeEnabled()
+  const result = await payload.find({
+    collection: 'pages',
+    where: preview
+      ? { slug: { equals: slug } }
+      : { slug: { equals: slug }, status: { equals: 'published' }, isEnabled: { equals: true } },
+    limit: 1,
+    depth: 2,
+    draft: preview,
+  })
+  return result.docs[0] as CmsPageDoc | undefined
+}
+
+function pageSeo(page: CmsPageDoc | undefined, fallback: SeoMeta): SeoMeta {
+  const seo = ((page?.seo as Record<string, unknown> | undefined) || {})
+  return {
+    title: String(seo.title || fallback.title),
+    description: String(seo.description || fallback.description),
+    og: {
+      title: String(seo.ogTitle || fallback.og.title),
+      description: String(seo.ogDescription || fallback.og.description),
+      image: resolveCmsMediaUrl(seo.ogImage) || fallback.og.image,
+    },
+  }
+}
+
+function pageMediaAssets(page: CmsPageDoc | undefined): { heroImage: string; galleryImages: string[] } {
+  const media = ((page?.media as Record<string, unknown> | undefined) || {})
+  return {
+    heroImage: resolveCmsMediaUrl(media.heroImage) || String(media.heroImageLegacyUrl || ''),
+    galleryImages: asArray<Record<string, unknown>>(media.galleryImages)
+      .map((row) => resolveCmsMediaUrl(row.media) || String(row.legacyUrl || ''))
+      .filter(Boolean),
+  }
+}
+
+function pageHeroCta(value: unknown, fallback: { label: string; url: string }): { label: string; url: string } {
+  const cta = ((value as Record<string, unknown> | undefined) || {})
+  return {
+    label: String(cta.label || fallback.label),
+    url: String(cta.url || fallback.url),
+  }
+}
+
+export async function getHomepageResolved(): Promise<Homepage> {
+  const fallback = getHomepage()
+  try {
+    const page = await findCmsPageDoc('home')
+    if (!page) return fallback
+    const hero = ((page.hero as Record<string, unknown> | undefined) || {})
+    const media = pageMediaAssets(page)
+    return {
+      ...fallback,
+      title: page.title ? String(page.title) : fallback.title,
+      slug: fallback.slug,
+      seo: pageSeo(page, fallback.seo),
+      hero: {
+        headline: String(hero.headline || fallback.hero.headline),
+        subheadline: String(hero.subheadline || fallback.hero.subheadline),
+        cta: pageHeroCta(hero.cta, fallback.hero.cta),
+        secondaryCta: pageHeroCta(hero.secondaryCta, fallback.hero.secondaryCta),
+      },
+      sections: fallback.sections,
+      media: {
+        ...fallback.media,
+        heroImage: media.heroImage || fallback.media.heroImage,
+        galleryImages: media.galleryImages.length > 0 ? media.galleryImages : fallback.media.galleryImages,
+      },
+    }
+  } catch {
+    return fallback
+  }
+}
+
+export async function getAboutResolved(): Promise<ReturnType<typeof getAbout>> {
+  const fallback = getAbout()
+  try {
+    const page = await findCmsPageDoc('about')
+    if (!page) return fallback
+    const hero = ((page.hero as Record<string, unknown> | undefined) || {})
+    const media = pageMediaAssets(page)
+    return {
+      ...fallback,
+      title: page.title ? String(page.title) : fallback.title,
+      slug: fallback.slug,
+      seo: pageSeo(page, fallback.seo),
+      hero: {
+        headline: String(hero.headline || fallback.hero.headline),
+        subheadline: String(hero.subheadline || fallback.hero.subheadline),
+        cta: pageHeroCta(hero.cta, fallback.hero.cta),
+      },
+      sections: fallback.sections,
+      media: {
+        ...fallback.media,
+        heroImage: media.heroImage || fallback.media?.heroImage,
+        sectionImages: media.galleryImages.length > 0 ? media.galleryImages : fallback.media?.sectionImages,
+      },
+    }
+  } catch {
+    return fallback
+  }
+}
+
+export async function getContactResolved(): Promise<ReturnType<typeof getContact>> {
+  const fallback = getContact()
+  try {
+    const page = await findCmsPageDoc('contact')
+    if (!page) return fallback
+    const hero = ((page.hero as Record<string, unknown> | undefined) || {})
+    const address = ((page.address as Record<string, unknown> | undefined) || {})
+    const contactInfo = ((page.contactInfo as Record<string, unknown> | undefined) || {})
+    const social = ((page.social as Record<string, unknown> | undefined) || {})
+    const form = ((page.consultationForm as Record<string, unknown> | undefined) || {})
+    const signup = ((page.emailSignup as Record<string, unknown> | undefined) || {})
+    const cmsFields = asArray<Record<string, unknown>>(form.fields).map((field) => ({
+      id: String(field.id || ''),
+      label: String(field.label || ''),
+      type: String(field.type || 'text'),
+      required: Boolean(field.required),
+      ...(field.placeholder ? { placeholder: String(field.placeholder) } : {}),
+      ...(asArray<Record<string, unknown>>(field.options).length > 0
+        ? { options: asArray<Record<string, unknown>>(field.options).map((o) => String(o.value || '')).filter(Boolean) }
+        : {}),
+    }))
+    const resolved = {
+      ...fallback,
+      title: page.title ? String(page.title) : fallback.title,
+      slug: fallback.slug,
+      seo: pageSeo(page, fallback.seo),
+      hero: {
+        headline: String(hero.headline || fallback.hero.headline),
+        subheadline: String(hero.subheadline || fallback.hero.subheadline),
+      },
+      address: {
+        ...fallback.address,
+        company: String(address.company || fallback.address.company),
+        street: String(address.street || fallback.address.street),
+        city: String(address.city || fallback.address.city),
+        state: String(address.state || fallback.address.state),
+        zip: String(address.zip || fallback.address.zip),
+        formatted: String(address.formatted || fallback.address.formatted),
+      },
+      contact: {
+        email: String(contactInfo.email || (fallback as { contact?: { email: string } }).contact?.email || ''),
+        phone: String(contactInfo.phone || (fallback as { contact?: { phone: string } }).contact?.phone || ''),
+        phoneFormatted: String(contactInfo.phoneFormatted || (fallback as { contact?: { phoneFormatted: string } }).contact?.phoneFormatted || ''),
+      },
+      social: {
+        youtube: String(social.youtube || fallback.social.youtube),
+        instagram: String(social.instagram || fallback.social.instagram),
+      },
+      consultationForm: {
+        heading: String(form.heading || fallback.consultationForm.heading),
+        description: String(form.description || fallback.consultationForm.description),
+        submitLabel: String(form.submitLabel || fallback.consultationForm.submitLabel),
+        successMessage: String(form.successMessage || fallback.consultationForm.successMessage),
+        fields: (cmsFields.length > 0 ? cmsFields : fallback.consultationForm.fields) as typeof fallback.consultationForm.fields,
+      },
+      emailSignup: {
+        heading: String(signup.heading || fallback.emailSignup.heading),
+        description: String(signup.description || fallback.emailSignup.description),
+        placeholder: String(signup.placeholder || fallback.emailSignup.placeholder),
+        submitLabel: String(signup.submitLabel || fallback.emailSignup.submitLabel),
+      },
+    }
+    return resolved as ReturnType<typeof getContact>
+  } catch {
+    return fallback
+  }
+}
+
 export interface CMSPageBlock {
-  blockType: 'text' | 'gallery' | 'features' | 'cta' | 'video'
+  blockType: 'intro' | 'text' | 'gallery' | 'features' | 'capabilitiesGrid' | 'philosophy' | 'featuredWork' | 'cta' | 'video' | 'ctaBar'
   heading?: string
   body?: unknown
-  images?: Array<{ id?: string; url?: string; alt?: string }>
-  items?: Array<{ label: string }>
+  images?: unknown
+  items?: Array<{ label?: string; icon?: string; title?: string; body?: string }>
+  columns?: Array<{ heading?: string; body?: string }>
+  projects?: unknown
   label?: string
   url?: string
   provider?: 'youtube' | 'vimeo' | 'instagram' | 'external'
+  cta?: { label?: string; url?: string }
 }
 
 export interface CMSPageData {
   title: string
   slug: string
   hero?: {
+    eyebrow?: string
     headline?: string
     subheadline?: string
+    cta?: { label?: string; url?: string }
+    secondaryCta?: { label?: string; url?: string }
   }
   seo?: {
     title?: string
@@ -932,7 +1136,7 @@ export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null
       | {
           title: string
           slug: string
-          hero?: { headline?: string; subheadline?: string }
+          hero?: CMSPageData['hero']
           seo?: { title?: string; description?: string; ogTitle?: string; ogDescription?: string; ogImage?: unknown }
           blocks?: CMSPageBlock[]
         }
@@ -949,7 +1153,7 @@ export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null
         description: page.seo?.description,
         ogTitle: page.seo?.ogTitle,
         ogDescription: page.seo?.ogDescription,
-        ogImage: resolveMediaUrl(page.seo?.ogImage),
+        ogImage: resolveCmsMediaUrl(page.seo?.ogImage),
       },
       blocks: page.blocks || [],
     }

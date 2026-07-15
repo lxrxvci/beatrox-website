@@ -209,6 +209,113 @@ export const Pages: CollectionConfig = {
       ],
     },
     {
+      name: 'media',
+      type: 'group',
+      fields: [
+        { name: 'heroImage', type: 'upload', relationTo: 'media' },
+        { name: 'heroImageLegacyUrl', type: 'text' },
+        {
+          name: 'galleryImages',
+          type: 'array',
+          fields: [
+            { name: 'media', type: 'upload', relationTo: 'media' },
+            { name: 'legacyUrl', type: 'text' },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'address',
+      type: 'group',
+      admin: {
+        condition: (data) => data?.slug === 'contact',
+        description: 'Contact page only.',
+      },
+      fields: [
+        { name: 'company', type: 'text' },
+        { name: 'street', type: 'text' },
+        { name: 'city', type: 'text' },
+        { name: 'state', type: 'text' },
+        { name: 'zip', type: 'text' },
+        { name: 'country', type: 'text' },
+        { name: 'formatted', type: 'textarea' },
+      ],
+    },
+    {
+      name: 'contactInfo',
+      type: 'group',
+      admin: {
+        condition: (data) => data?.slug === 'contact',
+        description: 'Contact page only.',
+      },
+      fields: [
+        { name: 'email', type: 'text' },
+        { name: 'phone', type: 'text' },
+        { name: 'phoneFormatted', type: 'text' },
+      ],
+    },
+    {
+      name: 'social',
+      type: 'group',
+      admin: {
+        condition: (data) => data?.slug === 'contact',
+        description: 'Contact page only.',
+      },
+      fields: [
+        { name: 'youtube', type: 'text' },
+        { name: 'instagram', type: 'text' },
+      ],
+    },
+    {
+      name: 'consultationForm',
+      type: 'group',
+      admin: {
+        condition: (data) => data?.slug === 'contact',
+        description: 'Contact page only.',
+      },
+      fields: [
+        { name: 'heading', type: 'text' },
+        { name: 'description', type: 'textarea' },
+        { name: 'submitLabel', type: 'text' },
+        { name: 'successMessage', type: 'textarea' },
+        {
+          name: 'fields',
+          type: 'array',
+          fields: [
+            { name: 'id', type: 'text', required: true },
+            { name: 'label', type: 'text', required: true },
+            {
+              name: 'type',
+              type: 'select',
+              defaultValue: 'text',
+              options: ['text', 'email', 'select', 'multiselect', 'date', 'textarea'],
+            },
+            { name: 'required', type: 'checkbox', defaultValue: false },
+            { name: 'placeholder', type: 'text' },
+            {
+              name: 'options',
+              type: 'array',
+              fields: [{ name: 'value', type: 'text', required: true }],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'emailSignup',
+      type: 'group',
+      admin: {
+        condition: (data) => data?.slug === 'contact',
+        description: 'Contact page only.',
+      },
+      fields: [
+        { name: 'heading', type: 'text' },
+        { name: 'description', type: 'textarea' },
+        { name: 'placeholder', type: 'text' },
+        { name: 'submitLabel', type: 'text' },
+      ],
+    },
+    {
       name: 'previewPath',
       type: 'text',
       admin: {
