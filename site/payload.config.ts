@@ -51,7 +51,9 @@ export default buildConfig({
     // all existing legacyUrl fields keep serving current content.
     vercelBlobStorage({
       enabled: Boolean(runtimeEnv.BLOB_READ_WRITE_TOKEN),
-      collections: { media: true },
+      // Media read access is fully public, so serve direct Blob URLs (CDN)
+      // instead of proxying every image request through a lambda.
+      collections: { media: { disablePayloadAccessControl: true } },
       token: runtimeEnv.BLOB_READ_WRITE_TOKEN || '',
     }),
   ],
