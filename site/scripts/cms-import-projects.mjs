@@ -53,7 +53,9 @@ export async function importProjects(token) {
   for (let index = 0; index < files.length; index += 1) {
     const file = files[index]
     const source = readJson(path.join(PROJECTS_DIR, file))
-    const slug = normalizeSlug(source.slug || file.replace('.json', ''))
+    // Store the canonical bare slug (the collection's beforeValidate hook strips
+    // any "/work/" prefix anyway — looking up the prefixed form always misses).
+    const slug = normalizeSlug(source.slug || file.replace('.json', '')).replace(/^work\/+/, '')
     const ogImageDoc = await resolveMediaByLegacyUrl(source?.seo?.og?.image, token)
     const images = await mapProjectImages(source.images, token)
 

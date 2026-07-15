@@ -18,9 +18,9 @@
  *
  * Run (from site/): `npm run cms:parity`
  * (bundles via esbuild, loads DATABASE_URI/DATABASE_URL + PAYLOAD_SECRET from .env
- * via dotenv, then executes against the Neon DB those vars point at).
+ * via ./load-env.mjs, then executes against the Neon DB those vars point at).
  */
-import 'dotenv/config'
+import './load-env.mjs'
 import { getPayload } from 'payload'
 import config from '../payload.config.ts'
 import {
