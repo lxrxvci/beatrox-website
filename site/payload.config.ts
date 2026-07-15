@@ -2,6 +2,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { Users } from './payload/collections/Users.ts'
 import { Media } from './payload/collections/Media.ts'
@@ -40,6 +41,16 @@ export default buildConfig({
   }),
   collections: [Users, Media, Redirects, ContactSubmissions, ConsultationTypes, AvailabilityRules, BlackoutDates, Consultations, Pages, Projects, CaseStudies, Services, Team],
   globals: [Navigation, SiteStyles, SeoDefaults],
+  plugins: [
+    // Media files are served from Vercel Blob when a store is provisioned
+    // (BLOB_READ_WRITE_TOKEN set). Without it, uploads stay on local disk and
+    // all existing legacyUrl fields keep serving current content.
+    vercelBlobStorage({
+      enabled: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
+      collections: { media: true },
+      token: process.env.BLOB_READ_WRITE_TOKEN || '',
+    }),
+  ],
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
