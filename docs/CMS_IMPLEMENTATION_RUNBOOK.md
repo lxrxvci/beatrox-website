@@ -68,6 +68,7 @@ npm run cms:import:projects   # upsert-by-slug from content/portfolio/*.json
 npm run cms:import:services   # from content/services/*.json (auto-picks new files)
 npm run cms:import:team       # from content/team.json
 npm run cms:import:pages      # pages + navigation/site-styles/seo-defaults globals
+npm run cms:import:media      # upload site/public/images/** → media collection (idempotent by filename)
 node scripts/cms-import-case-study-amazon.mjs  # Amazon Infinite Playlist case study from content/portfolio/infinite-playlist.json
 npm run cms:seed              # all of the above (media uploads tolerated to fail)
 npm run cms:publish:site      # dry-run: report non-published/disabled docs
@@ -119,6 +120,7 @@ npm run cms:parity            # the gate (see below)
 - **Page renders but FAQ/list items show raw JSON strings** → body `items` rows must store `{question, answer}` in the dedicated fields, not stringified in `value`.
 - **Service detail silently uses JSON** → resolver lookup missed; check stored slug form (`services/<slug>`) vs caller form.
 - **OG images show `/og-default.jpg`** → `ogImageLegacyUrl` missing on the doc; re-seed.
+- **Media upload fails `413 FUNCTION_PAYLOAD_TOO_LARGE`** → Vercel serverless requests cap at 4.5MB; recompress the source PNG/JPG in `site/public/images` (lossless `PIL optimize=True` recovered 23% on the one offender) and re-run `cms:import:media` (idempotent).
 - **"client password must be a string"** → env vars not loaded/exported before Payload init.
 - **Stale content after admin edit** → ISR window (~5 min); hard-revalidate by redeploying or touching the page's data.
 
