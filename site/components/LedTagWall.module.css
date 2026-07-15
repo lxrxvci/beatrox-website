@@ -213,25 +213,25 @@
   z-index: 1;
 }
 
-/* LED Wall grid */
+/* LED Wall grid — 4 columns so 32 tags form exactly 8 symmetrical rows */
 .ledWall {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 6px;
   width: 100%;
   perspective: 1000px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .ledWall {
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .ledWall {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
   }
 }
 
@@ -281,10 +281,10 @@
 .matrixDots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 4px 4px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.11) 1.5px, transparent 1.5px);
+  background-size: 5px 5px;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .panelText {
