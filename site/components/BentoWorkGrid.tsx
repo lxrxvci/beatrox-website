@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import FluidImage from '@/components/FluidImage'
+import { humanizeTag } from '@/lib/tags'
 
 export interface BentoProject {
   slug: string
@@ -17,13 +18,7 @@ interface BentoWorkGridProps {
   className?: string
 }
 
-/** Humanize a kebab-case tag for display. */
-function humanize(tag: string) {
-  return tag
-    .split('-')
-    .map((w) => (w === 'ai' ? 'AI' : w.charAt(0).toUpperCase() + w.slice(1)))
-    .join(' ')
-}
+
 
 /**
  * Asymmetric bento grid: first project is the featured card (8 cols × 2
@@ -61,7 +56,7 @@ export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGri
                 <div className="flex flex-wrap gap-2">
                   {project.tags.slice(0, 3).map((tag) => (
                     <span key={tag} className="mono text-[11px] text-[var(--text-secondary)] uppercase">
-                      {humanize(tag)}
+                      {humanizeTag(tag)}
                     </span>
                   ))}
                 </div>

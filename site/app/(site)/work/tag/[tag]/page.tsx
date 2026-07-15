@@ -115,7 +115,7 @@ export default async function WorkTagPage({ params }: Props) {
         heading={`Interested in ${normalizedTag} projects?`}
         subheading="Let's talk about how we can deliver the same impact for your event."
         primaryLabel="Start Your Project"
-        primaryHref="/contact"
+        primaryHref="/book"
         secondaryLabel="Explore Services"
         secondaryHref="/services"
       />

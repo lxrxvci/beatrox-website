@@ -13,7 +13,7 @@ export default function CTASection({
   heading = 'Ready to build something extraordinary?',
   subheading = "Tell us about your project and we'll help you create an unforgettable experience.",
   primaryLabel = 'Book a Consultation',
-  primaryHref = '/contact',
+  primaryHref = '/book',
   secondaryLabel,
   secondaryHref,
 }: CTASectionProps) {

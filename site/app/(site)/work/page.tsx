@@ -2,18 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWorkIndex, normalizeProjectSlug } from '@/lib/json-content'
 import { getAllProjectsResolved, getProjectSlugsResolved, getProjectTagsResolved } from '@/lib/content'
+import { humanizeTag } from '@/lib/tags'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import ParallaxHero from '@/components/ParallaxHero'
 import BentoWorkGrid from '@/components/BentoWorkGrid'
+import LedTagWall from '@/components/LedTagWall'
 
-/** Humanize kebab-case tags: "ai-computer-vision" → "AI & Computer Vision". */
-function humanize(tag: string) {
-  return tag
-    .split('-')
-    .map((w) => (w === 'ai' ? 'AI' : w === 'and' ? '&' : w.charAt(0).toUpperCase() + w.slice(1)))
-    .join(' ')
-}
+
 
 export const revalidate = 300
 
@@ -25,6 +21,10 @@ export default async function WorkPage() {
   const projects = await getAllProjectsResolved()
   const slugs = await getProjectSlugsResolved()
   const tags = await getProjectTagsResolved()
+  const tagCounts = tags.reduce((acc, tag) => {
+    acc[tag] = projects.filter((p) => p.tags.includes(tag)).length
+    return acc
+  }, {} as Record<string, number>)
   const projectsBySlug = new Map(projects.map((project) => [project.canonicalSlug, project]))
   const normalizedSlugs = slugs.map((slug) => normalizeProjectSlug(slug))
   const rows = normalizedSlugs
@@ -47,21 +47,9 @@ export default async function WorkPage() {
       />
 
       {tags.length > 0 && (
-        <section className="section border-t border-white/10">
-          <Reveal className="max-w-[1120px] mx-auto">
-            <div className="flex flex-wrap gap-2">
-              {tags.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/work/tag/${tag}`}
-                  className="mono text-xs uppercase text-[var(--text-tertiary)] hover:text-[var(--accent)] transition-colors border-b border-transparent hover:border-[var(--accent)] pb-0.5"
-                >
-                  {humanize(tag)}
-                </Link>
-              ))}
-            </div>
-          </Reveal>
-        </section>
+        <LedTagWall
+          tags={tags.map((tag) => ({ slug: tag, label: humanizeTag(tag), count: tagCounts[tag] }))}
+        />
       )}
 
       {/* Project previews — asymmetric bento grid */}
