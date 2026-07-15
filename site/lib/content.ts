@@ -281,6 +281,17 @@ export function normalizeProjectTag(value: string): string {
     .replace(/^-+|-+$/g, '')
 }
 
+export function normalizeServiceSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/^\/+/, '')
+    .replace(/^services\/+/, '')
+    .replace(/[^a-z0-9/-]+/g, '-')
+    .replace(/\/+/g, '/')
+    .replace(/^-+|-+$/g, '')
+}
+
 export function normalizeCaseStudySlug(value: string): string {
   return value
     .toLowerCase()
@@ -345,7 +356,10 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
       og: {
         title: String((doc.seo as Record<string, unknown>)?.ogTitle || ''),
         description: String((doc.seo as Record<string, unknown>)?.ogDescription || ''),
-        image: resolveCmsMediaUrl((doc.seo as Record<string, unknown>)?.ogImage) || '/og-default.jpg',
+        image:
+          resolveCmsMediaUrl((doc.seo as Record<string, unknown>)?.ogImage) ||
+          String((doc.seo as Record<string, unknown>)?.ogImageLegacyUrl || '') ||
+          '/og-default.jpg',
       },
     },
     hero: {
@@ -385,14 +399,18 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
 function mapCmsService(doc: Record<string, unknown>): Service {
   return {
     title: String(doc.title || ''),
-    slug: String(doc.slug || ''),
+    // JSON service files carry the route-prefixed form ("/services/<slug>"); match it exactly.
+    slug: `/services/${normalizeServiceSlug(String(doc.slug || ''))}`,
     seo: {
       title: String((doc.seo as Record<string, unknown>)?.title || ''),
       description: String((doc.seo as Record<string, unknown>)?.description || ''),
       og: {
         title: String((doc.seo as Record<string, unknown>)?.ogTitle || ''),
         description: String((doc.seo as Record<string, unknown>)?.ogDescription || ''),
-        image: resolveCmsMediaUrl((doc.seo as Record<string, unknown>)?.ogImage) || '/og-default.jpg',
+        image:
+          resolveCmsMediaUrl((doc.seo as Record<string, unknown>)?.ogImage) ||
+          String((doc.seo as Record<string, unknown>)?.ogImageLegacyUrl || '') ||
+          '/og-default.jpg',
       },
     },
     hero: {
@@ -409,7 +427,14 @@ function mapCmsService(doc: Record<string, unknown>): Service {
       type: String(block.type || ''),
       heading: block.heading ? String(block.heading) : undefined,
       content: block.content ? String(block.content) : undefined,
-      items: asArray<Record<string, unknown>>(block.items).map((item) => String(item.value || '')).filter(Boolean),
+      // FAQ blocks store {question, answer} pairs; all other blocks use plain `value` strings.
+      items: asArray<Record<string, unknown>>(block.items)
+        .map((item) =>
+          item.question != null
+            ? { question: String(item.question || ''), answer: String(item.answer || '') }
+            : String(item.value || ''),
+        )
+        .filter((item) => (typeof item === 'string' ? Boolean(item) : Boolean(item.question))) as string[],
     })),
     relatedWork: asArray<Record<string, unknown>>(doc.relatedWork).map((row) => ({
       title: String(row.title || ''),
@@ -565,17 +590,21 @@ export async function getAllServicesResolved(): Promise<Service[]> {
 }
 
 export async function getServiceResolved(slug: string): Promise<Service | null> {
+  const bareSlug = normalizeServiceSlug(slug)
+  if (!bareSlug) return null
   try {
     const payload = await getPayloadClient()
     const preview = await isPreviewModeEnabled()
+    // Seeded docs store the slug as "services/<slug>"; accept any caller form.
+    const candidates = [`services/${bareSlug}`, bareSlug, `/services/${bareSlug}`]
     const result = await payload.find({
       collection: 'services',
       where: preview
         ? {
-            slug: { equals: slug },
+            slug: { in: candidates },
           }
         : {
-            slug: { equals: slug },
+            slug: { in: candidates },
             status: { equals: 'published' },
             isEnabled: { equals: true },
           },
@@ -588,7 +617,7 @@ export async function getServiceResolved(slug: string): Promise<Service | null> 
   } catch (error) {
     console.warn(`Failed to load service from CMS for slug "${slug}"; falling back to JSON:`, error)
   }
-  return getService(slug)
+  return getService(bareSlug)
 }
 
 export async function getServiceSlugsResolved(): Promise<string[]> {
@@ -607,10 +636,11 @@ export async function getServiceSlugsResolved(): Promise<string[]> {
       draft: preview,
     })
     if (result.docs.length > 0) {
-      return result.docs
-        .map((doc) => String((doc as Record<string, unknown>).slug || ''))
-        .filter(Boolean)
-        .sort()
+      return uniqueStrings(
+        result.docs
+          .map((doc) => normalizeServiceSlug(String((doc as Record<string, unknown>).slug || '')))
+          .filter(Boolean),
+      ).sort()
     }
   } catch (error) {
     console.warn('Failed to load service slugs from CMS; falling back to JSON:', error)
@@ -655,7 +685,8 @@ export async function getTeamResolved() {
 
     return {
       title: page?.title ? String(page.title) : fallback.title,
-      slug: page?.slug ? String(page.slug) : fallback.slug,
+      // JSON content carries the route-prefixed form ("/team"); match it exactly.
+      slug: page?.slug ? `/${String(page.slug).replace(/^\/+/, '')}` : fallback.slug,
       seo: {
         title: String(((page?.seo as Record<string, unknown>)?.title as string) || fallback.seo.title),
         description: String(((page?.seo as Record<string, unknown>)?.description as string) || fallback.seo.description),

@@ -153,7 +153,11 @@ export const Services: CollectionConfig = {
         {
           name: 'items',
           type: 'array',
-          fields: [{ name: 'value', type: 'text', required: true }],
+          fields: [
+            { name: 'value', type: 'text' },
+            { name: 'question', type: 'text' },
+            { name: 'answer', type: 'textarea' },
+          ],
         },
       ],
     },
@@ -196,6 +200,7 @@ export const Services: CollectionConfig = {
         { name: 'canonicalUrl', type: 'text' },
         { name: 'noindex', type: 'checkbox', defaultValue: false },
         { name: 'ogImage', type: 'relationship', relationTo: 'media' },
+        { name: 'ogImageLegacyUrl', type: 'text' },
       ],
     },
     {

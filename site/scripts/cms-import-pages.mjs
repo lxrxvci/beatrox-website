@@ -127,6 +127,7 @@ export async function importPages(token) {
         { enabled: true, label: 'About', path: '/about', order: 10 },
         { enabled: true, label: 'Work', path: '/work', order: 20 },
         { enabled: true, label: 'Services', path: '/services', order: 30 },
+        { enabled: true, label: 'Rentals', path: '/rentals', order: 35 },
         { enabled: true, label: 'Team', path: '/team', order: 40 },
         { enabled: true, label: 'Contact', path: '/contact', order: 50 },
       ],

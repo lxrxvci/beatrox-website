@@ -37,7 +37,12 @@ function mapBody(body) {
     type: block.type || 'text',
     heading: block.heading || '',
     content: block.content || '',
-    items: asArray(block.items).map((item) => ({ value: item })),
+    // FAQ-style blocks carry {question, answer} objects; other blocks carry plain strings.
+    items: asArray(block.items).map((item) =>
+      item && typeof item === 'object'
+        ? { question: String(item.question || ''), answer: String(item.answer || '') }
+        : { value: String(item ?? '') },
+    ),
   }))
 }
 
@@ -84,6 +89,7 @@ export async function importProjects(token) {
           ogTitle: source?.seo?.og?.title || source?.seo?.title || source.title || slug,
           ogDescription: source?.seo?.og?.description || source?.seo?.description || '',
           ogImage: ogImageDoc?.id,
+          ogImageLegacyUrl: source?.seo?.og?.image || '',
         },
         body: mapBody(source.body),
         images,

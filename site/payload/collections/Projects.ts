@@ -174,6 +174,7 @@ export const Projects: CollectionConfig = {
         { name: 'canonicalUrl', type: 'text' },
         { name: 'noindex', type: 'checkbox', defaultValue: false },
         { name: 'ogImage', type: 'relationship', relationTo: 'media' },
+        { name: 'ogImageLegacyUrl', type: 'text' },
       ],
     },
     {
