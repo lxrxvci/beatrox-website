@@ -1,17 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAbout } from '@/lib/json-content'
+import { getAboutResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 
+export const revalidate = 300
+
 export async function generateMetadata(): Promise<Metadata> {
-  const data = getAbout()
+  const data = await getAboutResolved()
   return seoToMetadata(data.seo)
 }
 
-export default function AboutPage() {
-  const data = getAbout()
+export default async function AboutPage() {
+  const data = await getAboutResolved()
   const heroImage = data.media?.heroImage || '/og-default.jpg'
   const sectionImages = data.media?.sectionImages || []
   const story = data.sections.find((s) => s.type === 'text_block')

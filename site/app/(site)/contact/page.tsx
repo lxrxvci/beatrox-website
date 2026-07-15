@@ -1,18 +1,20 @@
 import type { Metadata } from 'next'
-import { getContact } from '@/lib/json-content'
+import { getContactResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { buildLocalBusinessSchema } from '@/lib/schema'
 import ContactForm from './ContactForm'
 import KineticHeading from '@/components/KineticHeading'
 
+export const revalidate = 300
+
 export async function generateMetadata(): Promise<Metadata> {
-  const data = getContact()
+  const data = await getContactResolved()
   return seoToMetadata(data.seo)
 }
 
-export default function ContactPage() {
-  const data = getContact()
+export default async function ContactPage() {
+  const data = await getContactResolved()
 
   return (
     <>

@@ -228,7 +228,7 @@ export function getTeam() {
 }
 
 export function getContact() {
-  return readJson<{ title: string; slug: string; seo: SeoMeta; hero: { headline: string; subheadline: string }; address: { company: string; street: string; city: string; state: string; zip: string; formatted: string }; social: { youtube: string; instagram: string }; consultationForm: { heading: string; description: string; fields: { id: string; label: string; type: string; required: boolean; options?: string[] }[]; submitLabel: string; successMessage: string }; emailSignup: { heading: string; description: string; placeholder: string; submitLabel: string } }>(path.join(CONTENT_ROOT, 'contact.json'))
+  return readJson<{ title: string; slug: string; seo: SeoMeta; hero: { headline: string; subheadline: string }; address: { company: string; street: string; city: string; state: string; zip: string; formatted: string }; contact: { email: string; phone: string; phoneFormatted: string }; social: { youtube: string; instagram: string }; consultationForm: { heading: string; description: string; fields: { id: string; label: string; type: string; required: boolean; placeholder?: string; options?: string[] }[]; submitLabel: string; successMessage: string }; emailSignup: { heading: string; description: string; placeholder: string; submitLabel: string } }>(path.join(CONTENT_ROOT, 'contact.json'))
 }
 
 export function getAllProjects(): Project[] {

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getHomepage } from '@/lib/json-content'
-import { getAllProjectsResolved } from '@/lib/content'
+import { getHomepageResolved, getAllProjectsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import HeroMedia from '@/components/HeroMedia'
@@ -15,7 +14,7 @@ import MagneticButton from '@/components/MagneticButton'
 export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
-  const data = getHomepage()
+  const data = await getHomepageResolved()
   return seoToMetadata(data.seo)
 }
 
@@ -35,7 +34,7 @@ const CAPABILITIES = [
 ]
 
 export default async function HomePage() {
-  const data = getHomepage()
+  const data = await getHomepageResolved()
   const allProjects = await getAllProjectsResolved()
   const heroImage = data.media.heroImage || '/og-default.jpg'
   const galleryImages = data.media.galleryImages || []
