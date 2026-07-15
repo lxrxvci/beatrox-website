@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { getCMSPageBySlug, getCMSPageSlugs, type SeoMeta } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import { EditableText } from '@/components/admin'
 
 export const dynamicParams = false
 export const revalidate = 300
@@ -50,16 +51,32 @@ export default async function CMSPage({
       {hasHero && (
         <section className="hero border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
-            {page.hero?.eyebrow && <p className="overline mb-4">{page.hero.eyebrow}</p>}
-            {page.hero?.headline && <h1 className="heading-xl max-w-3xl">{page.hero.headline}</h1>}
+            {page.hero?.eyebrow && (
+              <p className="overline mb-4">
+                <EditableText collection="pages" documentId={page.id} fieldPath="hero.eyebrow" value={page.hero.eyebrow}>
+                  {page.hero.eyebrow}
+                </EditableText>
+              </p>
+            )}
+            {page.hero?.headline && (
+              <h1 className="heading-xl max-w-3xl">
+                <EditableText collection="pages" documentId={page.id} fieldPath="hero.headline" value={page.hero.headline}>
+                  {page.hero.headline}
+                </EditableText>
+              </h1>
+            )}
             {page.hero?.subheadline && (
               <p className="text-base text-[var(--text-secondary)] mt-6 max-w-3xl leading-relaxed">
-                {page.hero.subheadline}
+                <EditableText collection="pages" documentId={page.id} fieldPath="hero.subheadline" value={page.hero.subheadline}>
+                  {page.hero.subheadline}
+                </EditableText>
               </p>
             )}
             {page.hero?.cta?.label && page.hero?.cta?.url && (
               <a href={page.hero.cta.url} className="btn-primary inline-block mt-8">
-                {page.hero.cta.label}
+                <EditableText collection="pages" documentId={page.id} fieldPath="hero.cta.label" value={page.hero.cta.label}>
+                  {page.hero.cta.label}
+                </EditableText>
               </a>
             )}
           </div>

@@ -9,6 +9,7 @@ import { buildServiceSchema } from '@/lib/schema'
 import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import { EditableText } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -70,7 +71,7 @@ export default async function ServicePage({ params }: Props) {
               {service.capabilities.map((cap, i) => (
                 <li key={cap} className="flex items-start gap-3 text-base text-white/75">
                   <NodeBullet index={i} />
-                  <span>{cap}</span>
+                  <EditableText collection="services" documentId={service.id} fieldPath={`capabilities.${i}`} value={cap}><span>{cap}</span></EditableText>
                 </li>
               ))}
             </ul>
@@ -90,7 +91,7 @@ export default async function ServicePage({ params }: Props) {
                         {block.items?.map((item, idx) => (
                           <div key={idx} className="flex items-start gap-3 text-base text-white/80">
                             <span className="text-white/60 mt-0.5 shrink-0">✓</span>
-                            <span>{item}</span>
+                            <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}><span>{item}</span></EditableText>
                           </div>
                         ))}
                       </div>
@@ -108,7 +109,7 @@ export default async function ServicePage({ params }: Props) {
                             <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-white/30 text-white/80 text-base font-semibold rounded-sm">
                               {idx + 1}
                             </span>
-                            <span className="text-base text-white/80 leading-relaxed pt-1">{item}</span>
+                            <span className="text-base text-white/80 leading-relaxed pt-1"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item}</EditableText></span>
                           </li>
                         ))}
                       </ol>
@@ -123,8 +124,8 @@ export default async function ServicePage({ params }: Props) {
                       <div className="divide-y divide-white/10">
                         {(block.items as { question: string; answer: string }[])?.map((item, idx) => (
                           <div key={idx} className="py-5 first:pt-0 last:pb-0">
-                            <p className="text-base font-semibold text-white mb-2">{item.question}</p>
-                            <p className="text-base text-white/75 leading-relaxed">{item.answer}</p>
+                            <p className="text-base font-semibold text-white mb-2"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.question`} value={item.question}>{item.question}</EditableText></p>
+                            <p className="text-base text-white/75 leading-relaxed"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.answer`} value={item.answer}>{item.answer}</EditableText></p>
                           </div>
                         ))}
                       </div>
@@ -136,7 +137,7 @@ export default async function ServicePage({ params }: Props) {
                     return (
                     <div>
                       {bodyBlock.heading && (
-                        <h2 className="heading-sm text-white/75 mb-4">{bodyBlock.heading}</h2>
+                        <h2 className="heading-sm text-white/75 mb-4"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.heading`} value={bodyBlock.heading}>{bodyBlock.heading}</EditableText></h2>
                       )}
                       {bodyBlock.content && (
                         <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
@@ -145,10 +146,10 @@ export default async function ServicePage({ params }: Props) {
                       )}
                       {bodyBlock.items && (
                         <ul className="space-y-2 mt-2">
-                          {bodyBlock.items.map((item, i) => (
+                          {bodyBlock.items.map((item, itemIndex) => (
                             <li key={item} className="flex items-start gap-3 text-base text-white/75">
-                              <NodeBullet index={i} />
-                              <span>{item}</span>
+                              <NodeBullet index={itemIndex} />
+                              <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${itemIndex}`} value={item}><span>{item}</span></EditableText>
                             </li>
                           ))}
                         </ul>

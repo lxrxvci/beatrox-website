@@ -5,6 +5,7 @@ import { getAboutResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import { EditableText } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -39,7 +40,9 @@ export default async function AboutPage() {
             <p className="overline mb-4">About Us</p>
             <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
             <p className="text-base text-[var(--text-secondary)] mt-6 max-w-3xl leading-relaxed">
-              {data.hero.subheadline}
+              <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="hero.subheadline" value={data.hero.subheadline}>
+                {data.hero.subheadline}
+              </EditableText>
             </p>
           </div>
         </section>

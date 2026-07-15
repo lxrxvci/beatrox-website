@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { CMSPageBlock } from '@/lib/json-content'
 import { LexicalReact, type LexicalNode } from '@/components/richtext'
-import { EditableRichText } from '@/components/admin'
+import { EditableRichText, EditableText } from '@/components/admin'
 
 interface Props {
   blocks: CMSPageBlock[]
@@ -69,14 +69,13 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
           if (block.blockType === 'intro') {
             return (
               <article key={key} className="text-center max-w-3xl mx-auto space-y-6">
-                {block.heading && <h2 className="heading-lg">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-lg"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <div className="prose prose-invert mx-auto">
                   {renderEditableBody(block.body, collection, documentId, `blocks.${index}.body`)}
                 </div>
                 {block.cta?.label && block.cta?.url && (
-                  <Link href={block.cta.url} className="btn-primary inline-block mt-4">
-                    {block.cta.label}
-                  </Link>
+                  <Link href={block.cta.url} className="btn-primary inline-block mt-4"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.cta.label`} value={block.cta.label}>{block.cta.label}</EditableText>
+        </Link>
                 )}
               </article>
             )
@@ -85,7 +84,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
           if (block.blockType === 'text') {
             return (
               <article key={key} className="space-y-4">
-                {block.heading && <h2 className="heading-md">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <div className="prose prose-invert">
                   {renderEditableBody(block.body, collection, documentId, `blocks.${index}.body`)}
                 </div>
@@ -98,7 +97,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (images.length === 0) return null
             return (
               <article key={key} className="space-y-6">
-                {block.heading && <h2 className="heading-md">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-white/10">
                   {images.map((image, imageIndex) => {
                     if (!image.url) return null
@@ -127,11 +126,11 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (items.length === 0) return null
             return (
               <article key={key} className="space-y-6">
-                {block.heading && <h2 className="heading-md">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {items.map((item, itemIndex) => (
                     <li key={`${item.label}-${itemIndex}`} className="text-base text-white/80">
-                      {item.label}
+                      <EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.items.${itemIndex}.label`} value={item.label}>{item.label}</EditableText>
                     </li>
                   ))}
                 </ul>
@@ -144,14 +143,14 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (items.length === 0) return null
             return (
               <article key={key} className="space-y-6">
-                {block.heading && <h2 className="heading-md">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <div className="flex flex-wrap gap-3">
                   {items.map((item, itemIndex) => (
                     <span
                       key={`${item.label}-${itemIndex}`}
                       className="tag"
                     >
-                      {item.label}
+                      <EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.items.${itemIndex}.label`} value={item.label}>{item.label}</EditableText>
                     </span>
                   ))}
                 </div>
@@ -164,11 +163,11 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (columns.length === 0) return null
             return (
               <article key={key} className="space-y-8">
-                {block.heading && <h2 className="heading-md text-center">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md text-center"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                   {columns.map((col, colIndex) => (
                     <div key={`${col.heading}-${colIndex}`}>
-                      {col.heading && <h3 className="heading-sm text-white mb-4">{col.heading}</h3>}
+                      {col.heading && <h3 className="heading-sm text-white mb-4"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.columns.${colIndex}.heading`} value={col.heading}>{col.heading}</EditableText></h3>}
                       <div className="prose prose-invert">
                       {renderEditableBody(col.body, collection, documentId, `blocks.${index}.columns.${colIndex}.body`)}
                     </div>
@@ -184,7 +183,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (!Array.isArray(projects) || projects.length === 0) return null
             return (
               <article key={key} className="space-y-6">
-                {block.heading && <h2 className="heading-md">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
                   {projects.map((project, projectIndex) => {
                     const p = project as {
@@ -230,15 +229,14 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (!block.label || !block.url) return null
             return (
               <article key={key} className="border border-white/10 p-8 text-center space-y-4">
-                {block.heading && <h2 className="heading-md">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 {Boolean(block.body) && (
                   <div className="prose prose-invert mx-auto">
                     {renderEditableBody(block.body, collection, documentId, `blocks.${index}.body`)}
                   </div>
                 )}
-                <Link href={block.url} className="btn-primary inline-block">
-                  {block.label}
-                </Link>
+                <Link href={block.url} className="btn-primary inline-block"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.label`} value={block.label}>{block.label}</EditableText>
+        </Link>
               </article>
             )
           }
@@ -247,15 +245,14 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (!block.cta?.label || !block.cta?.url) return null
             return (
               <article key={key} className="bg-[var(--bg-elevated)] border border-white/10 p-10 md:p-14 text-center space-y-5">
-                {block.heading && <h2 className="heading-lg">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-lg"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 {Boolean(block.body) && (
                   <div className="prose prose-invert mx-auto max-w-2xl">
                     {renderEditableBody(block.body, collection, documentId, `blocks.${index}.body`)}
                   </div>
                 )}
-                <Link href={block.cta.url} className="btn-primary inline-block">
-                  {block.cta.label}
-                </Link>
+                <Link href={block.cta.url} className="btn-primary inline-block"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.cta.label`} value={block.cta.label}>{block.cta.label}</EditableText>
+        </Link>
               </article>
             )
           }
@@ -264,7 +261,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
             if (!block.url) return null
             return (
               <article key={key} className="space-y-4">
-                {block.heading && <h2 className="heading-md">{block.heading}</h2>}
+                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <p className="text-base text-white/75">
                   {block.provider ? `${block.provider.toUpperCase()} video: ` : 'Video: '}
                   <a href={block.url} target="_blank" rel="noreferrer" className="underline">

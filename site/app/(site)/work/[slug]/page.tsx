@@ -11,6 +11,7 @@ import MetadataSchematic from '@/components/MetadataSchematic'
 import KineticHeading from '@/components/KineticHeading'
 import NodeBullet from '@/components/NodeBullet'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import { EditableText } from '@/components/admin'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -104,20 +105,22 @@ export default async function ProjectPage({ params }: Props) {
               {project.body.map((block, i) => (
                 <div key={i}>
                   {block.heading && (
-                    <h2 className="heading-sm text-white/75 mb-4">{block.heading}</h2>
+                    <h2 className="heading-sm text-white/75 mb-4"><EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.heading`} value={block.heading}>{block.heading}</EditableText></h2>
                   )}
                   {block.content && (
                     <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
-                      {block.content}
+                      <EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.content`} value={block.content} multiline>
+                        {block.content}
+                      </EditableText>
                     </p>
                   )}
                   {block.items && (
                     <ul className="space-y-2 mt-2">
-                      {block.items.map((item, i) => (
+                      {block.items.map((item, itemIndex) => (
                         <li key={item} className="flex items-start gap-3 text-base text-white/75">
-                          <NodeBullet index={i} />
-                          <span>{item}</span>
-                        </li>
+                        <NodeBullet index={itemIndex} />
+                        <EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.items.${itemIndex}`} value={item}><span>{item}</span></EditableText>
+                      </li>
                       ))}
                     </ul>
                   )}

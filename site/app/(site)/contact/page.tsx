@@ -6,6 +6,7 @@ import { buildLocalBusinessSchema } from '@/lib/schema'
 import ContactForm from './ContactForm'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import { EditableText } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -25,7 +26,11 @@ export default async function ContactPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="overline mb-4">Get in Touch</p>
           <KineticHeading text={data.hero.headline} className="heading-xl max-w-3xl" />
-          <p className="text-base text-white/70 mt-6 max-w-xl leading-relaxed">{data.hero.subheadline}</p>
+          <p className="text-base text-white/70 mt-6 max-w-xl leading-relaxed">
+            <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="hero.subheadline" value={data.hero.subheadline}>
+              {data.hero.subheadline}
+            </EditableText>
+          </p>
         </div>
       </section>
 
@@ -37,8 +42,16 @@ export default async function ContactPage() {
       <section className="section border-b border-white/10">
         <div className="max-w-[980px] mx-auto">
           <div>
-            <h2 className="heading-sm text-white/75 mb-6">{data.consultationForm.heading}</h2>
-            <p className="text-base text-white/70 mb-8 md:mb-10 leading-relaxed">{data.consultationForm.description}</p>
+            <h2 className="heading-sm text-white/75 mb-6">
+              <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="consultationForm.heading" value={data.consultationForm.heading}>
+                {data.consultationForm.heading}
+              </EditableText>
+            </h2>
+            <p className="text-base text-white/70 mb-8 md:mb-10 leading-relaxed">
+              <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="consultationForm.description" value={data.consultationForm.description} multiline>
+                {data.consultationForm.description}
+              </EditableText>
+            </p>
             <ContactForm
               fields={data.consultationForm.fields}
               submitLabel={data.consultationForm.submitLabel}
@@ -46,7 +59,11 @@ export default async function ContactPage() {
             />
 
             <div className="mt-12 md:mt-14 pt-8 md:pt-10 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-              <p className="text-sm text-white/65">{data.address.formatted}</p>
+              <p className="text-sm text-white/65">
+                <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="address.formatted" value={data.address.formatted} multiline>
+                  {data.address.formatted}
+                </EditableText>
+              </p>
               <div className="flex items-center gap-5">
                 <a
                   href={data.social.youtube}
