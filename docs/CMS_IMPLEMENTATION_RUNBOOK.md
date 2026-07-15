@@ -49,7 +49,11 @@ This runbook defines how agents should operate the CMS-backed content system in 
 
 - Serverless cannot persist `Media` collection uploads (`public/media` is ephemeral). **`heroImageLegacyUrl` / `legacyUrl` / `ogImageLegacyUrl` fields are authoritative**; resolvers use `resolveCmsMediaUrl()` first, then the legacy URL.
 - Images are served from `site/public/images/**` via those legacy paths.
-- `@payloadcms/storage-vercel-blob` is installed and wired in `payload.config.ts`, gated on `BLOB_READ_WRITE_TOKEN`. When the token is absent the plugin is disabled and nothing changes. To activate: provision a Blob store in the Vercel project dashboard (Storage tab), let Vercel inject `BLOB_READ_WRITE_TOKEN` into env vars, redeploy.
+- `@payloadcms/storage-vercel-blob` is installed and **active in production** (store `store_08R2eupHppprM6h7`), gated on `BLOB_READ_WRITE_TOKEN` in `payload.config.ts`. Config notes:
+  - The token is read via a `process.env` indirection so Turbopack cannot inline it at build time — keep it a true runtime read.
+  - `disablePayloadAccessControl: true` on `media`: docs get direct `*.public.blob.vercel-storage.com` CDN URLs instead of proxying every image through a lambda (safe because Media read access is fully public).
+  - If the token is ever absent, the plugin no-ops and uploads fall back to ephemeral local disk + legacyUrl fields.
+- `resolveCmsMediaUrl()` prefers a media doc's `legacyUrl`, then its `url` (Blob URL for new uploads) — both shapes work everywhere.
 
 ## Seed / Publish / Parity Commands
 
