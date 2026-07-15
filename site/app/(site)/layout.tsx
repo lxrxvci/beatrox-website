@@ -7,10 +7,10 @@ import SmoothScroll from '@/components/SmoothScroll'
 import JsonLd from '@/components/JsonLd'
 import { buildOrganizationSchema } from '@/lib/schema'
 import { Analytics } from '@vercel/analytics/react'
-import { FALLBACK_SEO_DEFAULTS, FALLBACK_SITE_STYLES } from '@/lib/fallbacks'
+import { getSeoDefaults, getSiteStyles } from '@/lib/content'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const seoDefaults = FALLBACK_SEO_DEFAULTS
+  const seoDefaults = await getSeoDefaults()
   return {
     title: {
       default: seoDefaults.defaultTitle,
@@ -49,8 +49,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function SiteLayout({ children }: { children: React.ReactNode }) {
-  const styles = FALLBACK_SITE_STYLES
+export default async function SiteLayout({ children }: { children: React.ReactNode }) {
+  const styles = await getSiteStyles()
   const cssVars = {
     '--brand-primary': styles.brandPrimary,
     '--brand-secondary': styles.brandSecondary,
