@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }: Props) {
           <p className="text-base text-white/70 mb-8 leading-relaxed">
             Let&apos;s bring your vision to life. Our team of creative and technical directors is ready to collaborate.
           </p>
-          <Link href="/contact" className="btn-primary">Start Your Project</Link>
+          <Link href="/book" className="btn-primary">Start Your Project</Link>
         </div>
         <div className="max-w-[1400px] mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link href="/work" className="text-sm font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-white transition-colors">

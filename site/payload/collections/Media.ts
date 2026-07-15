@@ -13,6 +13,14 @@ export const Media: CollectionConfig = {
   },
   fields: [
     {
+      name: 'legacyUrl',
+      type: 'text',
+      admin: {
+        description: 'Original static path (e.g. /images/...) this asset was imported from. Resolvers prefer it over the Blob CDN URL.',
+        readOnly: true,
+      },
+    },
+    {
       name: 'alt',
       type: 'text',
       required: false,

@@ -156,6 +156,8 @@ export async function uploadMediaDoc({
   caption,
   tags = [],
 }) {
+  // Static path this file is served from, so resolvers can prefer it over the Blob CDN URL
+  const legacyUrl = '/' + toPosixPath(path.relative(path.join(process.cwd(), 'public'), filePath))
   const existing = await findOneByField('media', 'filename', path.basename(filePath), token)
   if (existing?.id) {
     return api(`/api/media/${existing.id}`, {
@@ -164,7 +166,7 @@ export async function uploadMediaDoc({
         Authorization: `JWT ${token}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ alt, caption, tags: tags.map((tag) => ({ tag })) }),
+      body: JSON.stringify({ alt, caption, legacyUrl, tags: tags.map((tag) => ({ tag })) }),
     })
   }
 
@@ -176,6 +178,7 @@ export async function uploadMediaDoc({
     JSON.stringify({
       alt,
       caption,
+      legacyUrl,
       tags: tags.map((tag) => ({ tag })),
     }),
   )

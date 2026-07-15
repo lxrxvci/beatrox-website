@@ -94,7 +94,7 @@ export default async function AboutPage() {
             Our team of creative and technical directors is ready to bring your vision to life.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">Book a Discovery Call</Link>
+            <Link href="/book" className="btn-primary">Book a Discovery Call</Link>
             <Link href="/work" className="btn-ghost">View Our Work</Link>
           </div>
         </div>

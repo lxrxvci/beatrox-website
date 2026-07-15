@@ -223,7 +223,7 @@ export default async function ServicePage({ params }: Props) {
           <h2 className="heading-md mb-5">Ready to get started?</h2>
           <p className="text-base text-white/70 mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">Get in Touch</Link>
+            <Link href="/book" className="btn-primary">Get in Touch</Link>
             <Link href="/work" className="btn-ghost">View Our Work</Link>
           </div>
         </div>

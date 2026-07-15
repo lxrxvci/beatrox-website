@@ -96,7 +96,7 @@ export default async function CaseStudiesPage() {
             Let&apos;s talk about how we can bring your vision to life with our full-service production capabilities.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">Start Your Project</Link>
+            <Link href="/book" className="btn-primary">Start Your Project</Link>
             <Link href="/services" className="btn-ghost">Explore Services</Link>
           </div>
         </div>

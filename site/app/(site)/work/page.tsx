@@ -88,7 +88,7 @@ export default async function WorkPage() {
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Have a project in mind?</h2>
           <p className="text-base text-white/70 mb-8">Let&apos;s talk about how we can bring your vision to life.</p>
-          <Link href="/contact" className="btn-primary">Start a Conversation</Link>
+          <Link href="/book" className="btn-primary">Start a Conversation</Link>
         </div>
       </section>
     </>

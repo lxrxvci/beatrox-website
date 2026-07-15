@@ -71,7 +71,7 @@ export default function VideosPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/work" className="btn-primary">View Our Work</Link>
-            <Link href="/contact" className="btn-ghost">Get a Quote</Link>
+            <Link href="/book" className="btn-ghost">Get a Quote</Link>
           </div>
         </div>
       </section>

@@ -151,7 +151,7 @@ export default async function HomePage() {
           <p className="text-base text-[var(--text-secondary)] mb-10 leading-relaxed">
             Every great experience starts with a conversation.
           </p>
-          <MagneticButton href="/contact" variant="accent">Start a Project</MagneticButton>
+          <MagneticButton href="/book" variant="accent">Start a Project</MagneticButton>
         </div>
       </section>
     </>
