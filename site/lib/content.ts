@@ -58,6 +58,31 @@ export interface BodyBlock {
   items?: string[]
 }
 
+export interface TrustBlock {
+  type: 'trust'
+  heading?: string
+  items: string[]
+}
+
+export interface ProcessBlock {
+  type: 'process'
+  heading?: string
+  items: string[]
+}
+
+export interface FAQItem {
+  question: string
+  answer: string
+}
+
+export interface FAQBlock {
+  type: 'faq'
+  heading?: string
+  items: FAQItem[]
+}
+
+export type ServiceBodyBlock = BodyBlock | TrustBlock | ProcessBlock | FAQBlock
+
 export interface Project {
   title: string
   slug: string
@@ -99,7 +124,7 @@ export interface Service {
   }
   category: string
   capabilities: string[]
-  body: BodyBlock[]
+  body: ServiceBodyBlock[]
   relatedWork: { title: string; slug: string }[]
   media?: {
     heroImage?: string
@@ -423,19 +448,25 @@ function mapCmsService(doc: Record<string, unknown>): Service {
     },
     category: String(doc.category || ''),
     capabilities: asArray<Record<string, unknown>>(doc.capabilities).map((item) => String(item.value || '')).filter(Boolean),
-    body: asArray<Record<string, unknown>>(doc.body).map((block) => ({
-      type: String(block.type || ''),
-      heading: block.heading ? String(block.heading) : undefined,
-      content: block.content ? String(block.content) : undefined,
-      // FAQ blocks store {question, answer} pairs; all other blocks use plain `value` strings.
-      items: asArray<Record<string, unknown>>(block.items)
-        .map((item) =>
-          item.question != null
-            ? { question: String(item.question || ''), answer: String(item.answer || '') }
-            : String(item.value || ''),
-        )
-        .filter((item) => (typeof item === 'string' ? Boolean(item) : Boolean(item.question))) as string[],
-    })),
+    body: asArray<Record<string, unknown>>(doc.body).map((block): ServiceBodyBlock => {
+      const type = String(block.type || '')
+      if (type === 'faq') {
+        // FAQ blocks store {question, answer} pairs; all other blocks use plain `value` strings.
+        return {
+          type: 'faq',
+          heading: block.heading ? String(block.heading) : undefined,
+          items: asArray<Record<string, unknown>>(block.items)
+            .map((item) => ({ question: String(item.question || ''), answer: String(item.answer || '') }))
+            .filter((item) => Boolean(item.question)),
+        }
+      }
+      return {
+        type,
+        heading: block.heading ? String(block.heading) : undefined,
+        content: block.content ? String(block.content) : undefined,
+        items: asArray<Record<string, unknown>>(block.items).map((item) => String(item.value || '')).filter(Boolean),
+      }
+    }),
     relatedWork: asArray<Record<string, unknown>>(doc.relatedWork).map((row) => ({
       title: String(row.title || ''),
       slug: String(row.slug || ''),

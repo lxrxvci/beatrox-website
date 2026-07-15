@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllServices, getServicesIndex } from '@/lib/json-content'
+import { getServicesIndex } from '@/lib/json-content'
+import { getAllServicesResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
+
+export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getServicesIndex().seo)
@@ -70,8 +73,8 @@ const RENTAL_SPECIALTY_SLUGS = [
   'laser-shows', 'led-video-wall-rentals', 'lighting-services', 'sound-equipment-rentals',
 ]
 
-export default function ServicesPage() {
-  const services = getAllServices()
+export default async function ServicesPage() {
+  const services = await getAllServicesResolved()
   const servicesHero = services[0]?.media?.heroImage || '/og-default.jpg'
   const rentalSpecialty = RENTAL_SPECIALTY_SLUGS
     .map(slug => services.find(s => s.slug === `/services/${slug}`))

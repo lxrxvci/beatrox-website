@@ -2,38 +2,41 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllProjects, getService, getServiceSlugs } from '@/lib/json-content'
+import { getAllProjectsResolved, getServiceResolved, getServiceSlugsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { buildServiceSchema } from '@/lib/schema'
 import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 
+export const revalidate = 300
+
 interface Props {
   params: Promise<{ slug: string }>
 }
 
-export function generateStaticParams() {
-  return getServiceSlugs().map(slug => ({ slug }))
+export async function generateStaticParams() {
+  const slugs = await getServiceSlugsResolved()
+  return slugs.map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const service = getService(slug)
+  const service = await getServiceResolved(slug)
   if (!service) return {}
   return seoToMetadata(service.seo)
 }
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params
-  const service = getService(slug)
+  const service = await getServiceResolved(slug)
   if (!service) notFound()
   const heroImage = service.media?.heroImage || '/og-default.jpg'
   const gallery = service.media?.galleryImages || []
   const inlineMedia = gallery.filter((img) => img && img !== heroImage)
 
   // Resolve relatedWork slugs (full paths like "/work/foo") against portfolio projects
-  const projects = getAllProjects()
+  const projects = await getAllProjectsResolved()
   const relatedProjects = (service.relatedWork || [])
     .map((work) => {
       const key = work.slug.replace(/^\/work\/+/, '')
