@@ -385,7 +385,9 @@ export default function LedTagWall({ tags }: LedTagWallProps) {
                 <span className={styles.panelText}>
                   {tag.label}
                   {typeof tag.count === 'number' && (
-                    <span className={styles.panelCount}>{tag.count} projects</span>
+                    <span className={styles.panelCount}>
+                      {tag.count} {tag.count === 1 ? 'project' : 'projects'}
+                    </span>
                   )}
                 </span>
               </Link>
