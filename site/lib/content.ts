@@ -443,11 +443,13 @@ export async function getAllProjectsResolved(): Promise<Project[]> {
       depth: 2,
       draft: preview,
     })
-    return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
+    if (result.docs.length > 0) {
+      return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
+    }
   } catch (error) {
-    console.error('Failed to load projects from CMS:', error)
-    return []
+    console.warn('Failed to load projects from CMS; falling back to JSON:', error)
   }
+  return getAllProjects()
 }
 
 export async function getProjectResolved(slug: string): Promise<Project | null> {
@@ -492,9 +494,9 @@ export async function getProjectResolved(slug: string): Promise<Project | null> 
     const legacyDoc = legacyResult.docs[0]
     if (legacyDoc) return mapCmsProject(legacyDoc as Record<string, unknown>)
   } catch (error) {
-    console.error(`Failed to load project from CMS for slug "${canonicalSlug}":`, error)
+    console.warn(`Failed to load project from CMS for slug "${canonicalSlug}"; falling back to JSON:`, error)
   }
-  return null
+  return getProject(canonicalSlug)
 }
 
 export async function getProjectSlugsResolved(): Promise<string[]> {
@@ -512,15 +514,16 @@ export async function getProjectSlugsResolved(): Promise<string[]> {
       limit: 500,
       draft: preview,
     })
-    return uniqueStrings(
+    const slugs = uniqueStrings(
       result.docs
         .map((doc) => normalizeProjectSlug(String((doc as Record<string, unknown>).slug || '')))
         .filter(Boolean),
     ).sort()
+    if (slugs.length > 0) return slugs
   } catch (error) {
-    console.error('Failed to load project slugs from CMS:', error)
-    return []
+    console.warn('Failed to load project slugs from CMS; falling back to JSON:', error)
   }
+  return getProjectSlugs()
 }
 
 export async function getProjectTagsResolved(): Promise<string[]> {
@@ -555,8 +558,8 @@ export async function getAllServicesResolved(): Promise<Service[]> {
     if (result.docs.length > 0) {
       return result.docs.map((doc) => mapCmsService(doc as Record<string, unknown>))
     }
-  } catch {
-    // fallback
+  } catch (error) {
+    console.warn('Failed to load services from CMS; falling back to JSON:', error)
   }
   return getAllServices()
 }
@@ -582,8 +585,8 @@ export async function getServiceResolved(slug: string): Promise<Service | null> 
     })
     const doc = result.docs[0]
     if (doc) return mapCmsService(doc as Record<string, unknown>)
-  } catch {
-    // fallback
+  } catch (error) {
+    console.warn(`Failed to load service from CMS for slug "${slug}"; falling back to JSON:`, error)
   }
   return getService(slug)
 }
@@ -609,8 +612,8 @@ export async function getServiceSlugsResolved(): Promise<string[]> {
         .filter(Boolean)
         .sort()
     }
-  } catch {
-    // fallback
+  } catch (error) {
+    console.warn('Failed to load service slugs from CMS; falling back to JSON:', error)
   }
   return getServiceSlugs()
 }
