@@ -68,7 +68,11 @@ export default function EditableText({
   if (!active) {
     return (
       <span
-        onClick={() => setActive(true)}
+        onClick={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          setActive(true)
+        }}
         className="relative inline-block cursor-pointer rounded-sm hover:ring-1 hover:ring-[var(--accent)]/50 hover:ring-offset-1 hover:ring-offset-black transition-all"
         role="button"
         aria-label={`Edit ${fieldPath}`}
@@ -117,14 +121,14 @@ export default function EditableText({
       )}
       <span className="absolute left-0 top-full mt-2 flex items-center gap-2 z-20">
         <button
-          onClick={handleSave}
+          onClick={(e) => { e.preventDefault(); handleSave() }}
           disabled={isSaving}
           className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black rounded-sm disabled:opacity-50"
         >
           {isSaving ? 'Saving…' : 'Save'}
         </button>
         <button
-          onClick={handleCancel}
+          onClick={(e) => { e.preventDefault(); handleCancel() }}
           disabled={isSaving}
           className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 rounded-sm disabled:opacity-50"
         >
