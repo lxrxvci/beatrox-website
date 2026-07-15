@@ -113,6 +113,7 @@ export async function importAmazonCaseStudy(token) {
         canonicalUrl: `/case-studies/${CANONICAL_SLUG}`,
         noindex: false,
         ogImage: ogImageDoc?.id,
+        ogImageLegacyUrl: source?.seo?.og?.image || '',
       },
       body: mapBody(source.body),
       images,

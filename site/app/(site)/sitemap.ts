@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getProjectSlugsResolved, getProjectTagsResolved, getServiceSlugsResolved } from '@/lib/content'
+import { getProjectSlugsResolved, getProjectTagsResolved, getServiceSlugsResolved, getCaseStudySlugsResolved } from '@/lib/content'
 import { readManifest } from '@/lib/youtube/storage'
 
 const BASE_URL = 'https://www.beatrox.com'
@@ -10,6 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectSlugs = await getProjectSlugsResolved()
   const projectTags = await getProjectTagsResolved()
   const serviceSlugs = await getServiceSlugsResolved()
+  const caseStudySlugs = await getCaseStudySlugsResolved()
   const videoManifest = readManifest()
 
   const rootPages: MetadataRoute.Sitemap = [
@@ -93,6 +94,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
+  const caseStudyPages: MetadataRoute.Sitemap = caseStudySlugs.map(slug => ({
+    url: `${BASE_URL}/case-studies/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   const videoPages: MetadataRoute.Sitemap = videoManifest.videos
     .filter((video) => !video.noindex)
     .map((video) => ({
@@ -102,5 +110,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     }))
 
-  return [...rootPages, ...projectPages, ...projectTagPages, ...servicePages, ...videoPages]
+  return [...rootPages, ...projectPages, ...projectTagPages, ...servicePages, ...caseStudyPages, ...videoPages]
 }

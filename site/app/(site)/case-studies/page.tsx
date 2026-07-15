@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getAllCaseStudiesResolved } from '@/lib/content'
+
+export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -27,7 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function CaseStudiesPage() {
+export default async function CaseStudiesPage() {
+  const caseStudies = await getAllCaseStudiesResolved()
+
   return (
     <>
       <section className="relative hero min-h-[48vh] flex flex-col justify-end overflow-hidden bg-black">
@@ -41,7 +46,45 @@ export default function CaseStudiesPage() {
 
       <section className="section border-t border-white/10">
         <div className="max-w-[1120px] mx-auto">
-          <p className="text-base text-white/70">Case studies coming soon.</p>
+          {caseStudies.length === 0 ? (
+            <p className="text-base text-white/70">Case studies coming soon.</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+              {caseStudies.map((study) => {
+                const firstImage = study.images?.find((img) => img.url && img.url !== '')
+                const image = firstImage?.url || study.seo?.og?.image || '/og-default.jpg'
+                return (
+                  <Link
+                    key={study.canonicalSlug}
+                    href={`/case-studies/${study.canonicalSlug}`}
+                    className="group relative block bg-black overflow-hidden"
+                  >
+                    <div className="relative h-64 md:h-80 overflow-hidden">
+                      <Image
+                        src={image}
+                        alt={firstImage?.alt || study.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                    </div>
+                    <div className="relative p-6 md:p-8">
+                      {study.metadata?.type && (
+                        <p className="heading-sm text-white/40 mb-2">{study.metadata.type}</p>
+                      )}
+                      <h2 className="heading-md text-white group-hover:text-[var(--accent)] transition-colors">
+                        {study.title}
+                      </h2>
+                      {study.metadata?.client && (
+                        <p className="text-sm text-white/60 mt-2">{study.metadata.client}</p>
+                      )}
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          )}
         </div>
       </section>
 
