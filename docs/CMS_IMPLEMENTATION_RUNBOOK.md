@@ -15,10 +15,12 @@ This runbook defines how agents should operate the CMS-backed content system in 
   - **Projects**: `/work`, `/work/[slug]`, `/work/tag/[tag]`, home featured grid, `sitemap.xml`
   - **Services**: `/services`, `/services/[slug]` (all 40)
   - **Team**: `/team`
+  - **Pages**: `/` (home), `/about`, `/contact` — CMS drives seo/hero/media (+ contact flat groups: address, contactInfo, social, consultationForm, emailSignup); section copy passes through from JSON (rendered copy is component-hardcoded or structurally lossy in blocks)
+  - **Case studies**: `/case-studies`, `/case-studies/[slug]`, `sitemap.xml` — CMS-only (no JSON fallback exists; empty collection renders the "coming soon" empty state by design)
   - **Globals**: navigation (`Nav`), site-styles + seo-defaults (`app/(site)/layout.tsx`)
-- **JSON files in `content/` are the permanent fallback safety net, not dead weight.** Every resolver falls back to the sync JSON getter (with a `console.warn`) when the CMS errors or returns empty. Never remove this — it is what keeps pages rendering if Neon is unreachable or a collection is emptied.
+- **JSON files in `content/` are the permanent fallback safety net, not dead weight.** Every JSON-backed resolver falls back to the sync JSON getter (with a `console.warn`) when the CMS errors or returns empty. Never remove this — it is what keeps pages rendering if Neon is unreachable or a collection is emptied.
 - JSON getters (`site/lib/json-content.ts`) also define the canonical shapes; resolver output must deep-match them (see Parity Gate).
-- Not yet wired (still JSON-only, v2 candidates): `pages` collection for home/about/contact, case studies, draft preview routes, Vercel Blob media storage.
+- All v1+v2 domains are wired; nothing remains JSON-only.
 
 ## ISR Propagation
 
@@ -33,13 +35,21 @@ This runbook defines how agents should operate the CMS-backed content system in 
   - `getServiceSlugsResolved()` → bare slugs (route params)
   - `Service.slug` field → `/services/<slug>` (matches JSON files exactly; the services index compares against this form)
 - Team/pages docs: stored bare (`team`); `getTeamResolved()` emits `/team` to match JSON.
+- Case study slugs are stored **bare** (`amazon-music-live-infinite-playlist-tour`); `normalizeCaseStudySlug` is the canonical normalizer. Case studies have no JSON baseline — parity gate does not cover them.
 - `normalizeProjectSlug` / `normalizeServiceSlug` in `site/lib/content.ts` are the canonical normalizers.
+
+## Draft Preview Routes
+
+- `site/app/preview/route.ts` enables Next draft mode; `site/app/preview/exit/route.ts` disables it.
+- Auth is **verified**, not substring-matched: the route calls `payload.auth({ headers })` and returns 401 unless a valid Payload admin session cookie is present. Do not regress this to cookie-substring checks.
+- Collection hooks (`payload/utils/previewLinks.ts`) generate `/preview?path=...&collection=...&slug=...` admin links; the `path` param is sanitized to same-origin relative paths.
+- Resolvers are draft-aware via `isPreviewModeEnabled()`: draft mode bypasses the `status`/`isEnabled` filters.
 
 ## Media Reality on Vercel
 
 - Serverless cannot persist `Media` collection uploads (`public/media` is ephemeral). **`heroImageLegacyUrl` / `legacyUrl` / `ogImageLegacyUrl` fields are authoritative**; resolvers use `resolveCmsMediaUrl()` first, then the legacy URL.
 - Images are served from `site/public/images/**` via those legacy paths.
-- Vercel Blob storage is an optional later phase — not part of the current migration.
+- `@payloadcms/storage-vercel-blob` is installed and wired in `payload.config.ts`, gated on `BLOB_READ_WRITE_TOKEN`. When the token is absent the plugin is disabled and nothing changes. To activate: provision a Blob store in the Vercel project dashboard (Storage tab), let Vercel inject `BLOB_READ_WRITE_TOKEN` into env vars, redeploy.
 
 ## Seed / Publish / Parity Commands
 
@@ -54,6 +64,7 @@ npm run cms:import:projects   # upsert-by-slug from content/portfolio/*.json
 npm run cms:import:services   # from content/services/*.json (auto-picks new files)
 npm run cms:import:team       # from content/team.json
 npm run cms:import:pages      # pages + navigation/site-styles/seo-defaults globals
+node scripts/cms-import-case-study-amazon.mjs  # Amazon Infinite Playlist case study from content/portfolio/infinite-playlist.json
 npm run cms:seed              # all of the above (media uploads tolerated to fail)
 npm run cms:publish:site      # dry-run: report non-published/disabled docs
 npm run cms:publish:site:apply # set status=published, isEnabled=true on projects/services/team/pages
@@ -68,7 +79,7 @@ npm run cms:parity            # the gate (see below)
 `npm run cms:parity` bundles `scripts/cms-parity-check.mjs` with esbuild (env loaded via `scripts/load-env.mjs` **before** Payload config import — import order matters, do not inline it) and deep-compares resolver output vs JSON getters:
 
 - published+enabled counts per collection must equal JSON source counts
-- projects (slugs/list/every detail), services (slugs/list/every detail), team, navigation, site-styles, seo-defaults
+- projects (slugs/list/every detail), services (slugs/list/every detail), team, **pages (home/about/contact)**, navigation, site-styles, seo-defaults — 68 comparisons
 - fails if any resolver logged a fallback warning (vacuous parity)
 - normalization rules (reviewed, rendering-equivalent): `''` ≡ missing, empty arrays ≡ missing
 
