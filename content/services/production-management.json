@@ -1,0 +1,124 @@
+{
+  "title": "Production Management",
+  "slug": "/services/production-management",
+  "seo": {
+    "title": "Production Management",
+    "description": "Beatrox provides production management for complex experiential events — budgets, schedules, vendors, and departments unified under one accountable lead.",
+    "og": {
+      "title": "Production Management | BEATROX",
+      "description": "One accountable lead unifying budget, schedule, vendors, and departments — production management for complex experiential events.",
+      "image": "/images/portfolio/myshelter/Middle.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Production Management",
+    "subheadline": "One accountable lead unifying budget, schedule, vendors, and departments — so complex productions stay on time, on budget, and on vision.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Master Budget Creation & Tracking",
+    "Production Schedules & Milestones",
+    "Vendor & Department Coordination",
+    "Staffing Plans & Crew Management",
+    "Daily Reporting & Cost Control",
+    "Risk & Contingency Planning",
+    "Client Communication & Approvals",
+    "Post-Production Reconciliation"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Production Management?",
+      "content": "Production management is the operational leadership of an event or build — the role that owns the budget, the schedule, and the truth about where the project actually stands. While creative teams shape the experience and technical teams build it, the production manager makes sure every department has what it needs, when it needs it, at a cost the project can bear.\n\nComplex experiential work fails in the gaps between departments: the fabricator waiting on a sign-off, the AV vendor quoting against an outdated drawing, the venue approving a schedule nobody circulated. A production manager closes those gaps — running the master schedule, tracking every dollar, coordinating vendors, and giving the client a single honest answer to 'where are we?'\n\nYou need dedicated production management whenever multiple departments, partners, or workstreams must land together — which describes nearly every ambitious event. It's the difference between a project that's merely busy and one that's actually under control."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Large-scale experiential events and launches",
+        "Multi-partner productions with shared responsibilities",
+        "Broadcast and landmark projection deployments",
+        "Tight-footprint venue transformations",
+        "Multi-room or multi-zone event environments",
+        "Fast-turnaround builds with fixed air dates",
+        "Agency-led projects needing a production backbone"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Our production managers run the full operational stack: master budgets with real-time cost tracking, milestone schedules, vendor procurement and coordination, staffing plans, daily reporting, and risk management with actual contingency plans — not hope. We sit between the client, the creative team, and every department on the floor, translating vision into executable work orders and keeping approvals moving.\n\nThat discipline is what held together projects like Create Our Future for Urban Outfitters x Adidas at Mack Sennett Studio — a production spanning a 270-degree projection-mapped Cyclone Wall on a self-climbing truss, live performances including Phantogram, a custom VR avatar station, and multiple fabrication and technology partners working in one room. On MyShelter, we managed the transformation of a shut-down Manhattan bodega into an immersive forest environment for Adidas Outdoor, where a brutally tight footprint meant every vendor delivery, scenic piece, and cable path had to be sequenced precisely. And on CNN: Road to 270, we delivered projection mapping and interactive production on the Empire State Building with CNN and Obscura Digital — an environment where schedule slips simply aren't an option."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Discovery — We scope the project, stakeholders, and success criteria",
+        "2. Budget & Schedule — Master budget and milestone schedule built and baselined",
+        "3. Mobilize — Vendors contracted, departments staffed, communication cadence set",
+        "4. Manage — Daily tracking of cost, schedule, and risks through the build",
+        "5. Deliver — On-site leadership through load-in, event, and strike",
+        "6. Reconcile — Final accounting, documentation, and post-project review"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Managed multi-partner productions like Create Our Future for Urban Outfitters x Adidas",
+        "Delivered landmark-scale work like CNN: Road to 270 on the Empire State Building",
+        "Executed tight-footprint transformations like MyShelter's Manhattan bodega build",
+        "One accountable production lead — a single honest answer on budget and schedule",
+        "In-house design, build, and technical departments under one roof",
+        "Trusted by brands and agencies including Adidas, CNN, and Urban Outfitters"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How is production management different from event planning?",
+          "answer": "Planning builds the roadmap; production management drives it. The production manager owns the live budget, the day-to-day schedule, and every department's coordination from contract through strike — including the hard calls when something has to give."
+        },
+        {
+          "question": "Can you manage a production where another agency holds the creative?",
+          "answer": "Frequently, yes — it's one of our most common arrangements. Agencies bring us in as the production backbone: we manage budget, schedule, vendors, and execution while they own the creative relationship."
+        },
+        {
+          "question": "How do you keep budgets from drifting?",
+          "answer": "Real-time cost tracking against a baselined budget, with committed spend visible as it's approved — not discovered at reconciliation. When scope changes, you see the cost impact before deciding, not after."
+        },
+        {
+          "question": "What size project justifies a dedicated production manager?",
+          "answer": "Any project with multiple vendors or departments, a fixed deadline, or a budget you can't afford to surprise you. On smaller jobs the role folds into our project lead; on complex builds it's a dedicated position."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "CNN: Road to 270",
+      "slug": "/work/cnn-road-to-270"
+    },
+    {
+      "title": "MyShelter",
+      "slug": "/work/myshelter"
+    },
+    {
+      "title": "Create Our Future",
+      "slug": "/work/create-our-future"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/portfolio/myshelter/Middle.jpg",
+    "galleryImages": [
+      "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg",
+      "/images/verified/work/create-our-future/IMG_2959-154e3954.jpg"
+    ]
+  }
+}

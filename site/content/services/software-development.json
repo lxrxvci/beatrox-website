@@ -1,0 +1,124 @@
+{
+  "title": "Software Development",
+  "slug": "/services/software-development",
+  "seo": {
+    "title": "Software Development",
+    "description": "Beatrox develops custom software for events and installations — real-time interactive experiences, sensor integration, and show control for live shows.",
+    "og": {
+      "title": "Software Development | BEATROX",
+      "description": "Custom interactive software, real-time content engines, and show-control integration built for the pressure of live events.",
+      "image": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Software Development",
+    "subheadline": "Custom interactive software and real-time systems built for the one environment where there are no second takes — a live audience.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Technical",
+  "capabilities": [
+    "Real-Time Interactive Experience Development",
+    "TouchDesigner & Unreal Engine Programming",
+    "Sensor & Computer Vision Integration",
+    "Motion Capture & Body Tracking",
+    "Show Control & System Synchronization",
+    "Custom UI / UX for Installations",
+    "Hardware & Firmware Integration",
+    "On-Site Deployment & Support"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Software Development for Events?",
+      "content": "Event software development is the craft of building custom code that has to work perfectly, in public, at a specific moment in time. It covers real-time interactive experiences, sensor-driven installations, media playback logic, show-control integration, and the custom tooling that ties lighting, video, audio, and interactivity into one responsive system.\n\nYou need custom software whenever an experience can't be bought off the shelf: a wall that reacts to the people in front of it, an AR moment driven by body tracking, a queue of kiosks that must never freeze, or a show where lighting and projection respond live to a performance. The tools exist — TouchDesigner, Unreal Engine, Unity, computer vision libraries — but making them reliable under live conditions is its own discipline.\n\nWhat separates event software from other software is the testing environment: there isn't one. Code has to be right before doors open, degrade gracefully if a sensor misbehaves, and be operable by a crew member who isn't a developer. That's how we build it."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Interactive brand experiences and AR moments",
+        "Motion-tracked and gesture-driven installations",
+        "Real-time generative visuals synced to performance",
+        "Kiosk and touchscreen applications",
+        "Projection and LED content playback logic",
+        "Sensor fusion: LIDAR, Kinect, computer vision",
+        "Permanent installations requiring years of uptime"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "BEATROX develops the full software stack for experiential work: real-time engines in TouchDesigner, Unreal Engine, and Unity; computer vision and sensor integration with hardware like Microsoft Kinect Azure and LIDAR; custom interfaces for guests and operators; and the networking and show-control glue that keeps every system synchronized. We prototype early, test against the actual hardware, and deploy with on-site support through the event.\n\nOur software has run in front of serious audiences. For the G-MAN Experiential Campaign with Toyota x MTV in Los Angeles, custom interactive technology drove the guest experience end to end. At AKU World for AKU + FTX in New York, we built an interactive software ecosystem across a multi-room event — Unreal Engine real-time content in the projection-mapped main room, interactive kiosks for selecting an 'Inner Astronaut,' and a 4D body-scanning pipeline for creating and minting digital avatars. And for Adidas at Super Bowl 2020 in Miami, our TouchDesigner programming paired with Kinect Azure motion capture and AI computer vision powered an AR mirror with a real-time physics portal, plus a custom photo booth that gave every guest a shareable digital takeaway."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Discovery — We define the interaction, audience flow, and technical constraints",
+        "2. Prototyping — Core interactions are built and tested against real hardware early",
+        "3. Development — Full experience build with operator tools and fallback states",
+        "4. Integration & Testing — Software is stress-tested with the actual sensors, servers, and displays",
+        "5. Deployment — On-site installation, calibration, and rehearsal with the show team",
+        "6. Live Support & Handoff — We staff the event and document the system for future runs"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "AR mirror and real-time physics software for Adidas at Super Bowl 2020",
+        "Multi-room interactive ecosystem built for AKU World with AKU + FTX",
+        "End-to-end experiential software for the Toyota x MTV G-MAN campaign in Los Angeles",
+        "Deep bench in TouchDesigner, Unreal Engine, Unity, and computer vision",
+        "Software developed beside the hardware team that installs it",
+        "Built-in operator tools and graceful failure modes for live conditions"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What platforms and languages do you develop in?",
+          "answer": "Our real-time work centers on TouchDesigner, Unreal Engine, and Unity, with Python and C++ for computer vision, sensor integration, and custom tooling. We choose the stack that fits the experience — not the other way around."
+        },
+        {
+          "question": "How do you make sure the software doesn't fail live?",
+          "answer": "We prototype against the real hardware early, build in fallback states for every sensor and network dependency, and stress-test the full system in rehearsal conditions before doors open. An operator-friendly control interface comes standard."
+        },
+        {
+          "question": "Can you build software for a permanent installation?",
+          "answer": "Yes. Permanent work is engineered for uptime — watchdog processes, remote monitoring, and maintenance documentation so the experience keeps running long after the launch event."
+        },
+        {
+          "question": "Do you work with our existing creative or engineering team?",
+          "answer": "Absolutely. We can own the full software build or embed with your team — taking a creative brief to deployment, or contributing specific systems like tracking, playback, or show control."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "G-MAN Experiential Campaign",
+      "slug": "/work/g-man-experiential-campaign"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    },
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+    "galleryImages": [
+      "/images/portfolio/aku-world/KIOSKS2.jpg",
+      "/images/verified/work/g-man-experiential-campaign/g_man_experiential_campaign_preview.png"
+    ]
+  }
+}

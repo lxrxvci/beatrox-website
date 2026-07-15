@@ -1,0 +1,124 @@
+{
+  "title": "Site & Floor Plans",
+  "slug": "/services/site-floor-plans",
+  "seo": {
+    "title": "Site & Floor Plans",
+    "description": "Beatrox creates site and floor plans for events and experiential builds — scaled layouts, guest flow, power plans, and venue-ready production drawings.",
+    "og": {
+      "title": "Site & Floor Plans | BEATROX",
+      "description": "Scaled event layouts that place every stage, screen, cable run, and guest — before a single truck arrives at the venue.",
+      "image": "/images/verified/work/create-our-future/IMG_2959-154e3954.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Site & Floor Plans",
+    "subheadline": "Scaled, accurate event layouts that place every stage, screen, cable run, and guest — so load-in day has no surprises.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Technical",
+  "capabilities": [
+    "Scaled Venue Floor Plans",
+    "Guest Flow & Circulation Design",
+    "Stage, Screen & Seating Layouts",
+    "Power Distribution Plans",
+    "Rigging & Truss Placement",
+    "Emergency Egress & Compliance Layouts",
+    "Site Surveys & Measurements",
+    "Multi-Vendor Coordination Overlays"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What are Site & Floor Plans?",
+      "content": "Site and floor plans are the scaled drawings that define where everything goes: stages, screens, scenic, seating, bars, back-of-house, cable runs, power drops, and the paths guests and crew will take through the space. They're the single document every department — production, AV, scenic, catering, security, the venue itself — works from.\n\nYou need proper site and floor plans whenever an event occupies real space, which is always. A venue's marketing PDF is rarely dimensioned, never shows column locations accurately, and says nothing about power or rigging points. Building your layout on accurate surveyed measurements is what separates a smooth load-in from a day of shuffling trucks and redrawing on a whiteboard.\n\nGood plans also make the invisible visible: guest flow bottlenecks, sightline obstructions, cable paths that cross emergency egress, a projector throw that clips a chandelier. Finding those problems on paper costs nothing. Finding them on site costs a day."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Corporate events, galas, and conferences",
+        "Brand activations in raw or retail spaces",
+        "Festival and outdoor site layouts",
+        "Multi-room immersive environments",
+        "Presentation stages with projection and LED",
+        "Venue submittals and permit packages",
+        "Touring productions adapting to new venues"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "BEATROX produces complete, scaled site and floor plan packages: surveyed base plans, production layouts with every technical system placed to the inch, power distribution and rigging overlays, guest flow studies, and compliance layouts showing egress and fire lanes. Because our planners are also the people who load in the show, the plans reflect real truck dimensions, real cable paths, and real crew workflows.\n\nOur plans have organized productions in demanding spaces. For BuzzFeed's NewFronts at Moynihan Station in New York, the layout choreographed a custom-built stage, large-format projection screens, and individually mapped orbs suspended throughout the venue into a purposeful guest flow. On Create Our Future for Urban Outfitters x Adidas at Mack Sennett Studio in Los Angeles, site planning had to resolve a 270-degree projection-mapped Cyclone Wall on a self-climbing truss, live performance staging, and a VR avatar station in one shared footprint. And on CNN: Road to 270 with CNN and Obscura Digital, precise site documentation supported a projection-mapped, interactive installation at the Empire State Building — a venue where every placement decision is scrutinized."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Site Survey — We measure the venue and document columns, rigging points, power, and access",
+        "2. Base Plan — An accurate scaled drawing of the space becomes the foundation",
+        "3. Production Layout — Stages, screens, scenic, seating, and back-of-house are placed and iterated",
+        "4. Technical Overlays — Power, rigging, cable, and signal paths are layered on",
+        "5. Review & Compliance — Guest flow, egress, and venue requirements are checked and approved",
+        "6. Issue & Update — Final plans are distributed to all departments and revised as the show evolves"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Full production layouts for BuzzFeed's NewFronts at Moynihan Station, New York",
+        "Complex multi-system planning for Create Our Future at Mack Sennett Studio, Los Angeles",
+        "Site documentation for CNN: Road to 270 at the Empire State Building",
+        "Planners who load in the shows they draw — layouts that work in practice",
+        "Single source of truth shared across every vendor and department",
+        "Venue- and permit-ready packages that speed up approvals"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can't I just use the venue's floor plan?",
+          "answer": "Venue plans are a starting point, but they're frequently out of scale, missing columns and rigging points, and silent on power. We survey and verify everything so your production layout is built on measurements you can trust."
+        },
+        {
+          "question": "What do I get in a site and floor plan package?",
+          "answer": "A scaled base plan, the full production layout, technical overlays for power, rigging, and cable, plus compliance views showing egress and fire lanes — issued in formats every vendor can open."
+        },
+        {
+          "question": "How early should floor planning start?",
+          "answer": "As soon as the venue is confirmed. Layout drives budget, equipment lists, and creative decisions — starting early means the design develops around the real space instead of being forced into it later."
+        },
+        {
+          "question": "Do you update plans as the show changes?",
+          "answer": "Yes. Plans are living documents through pre-production. We track revisions and reissue to all departments so no one is ever building from an outdated drawing."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "BuzzFeed NewFronts",
+      "slug": "/work/buzzfeed"
+    },
+    {
+      "title": "Create Our Future",
+      "slug": "/work/create-our-future"
+    },
+    {
+      "title": "CNN: Road to 270",
+      "slug": "/work/cnn-road-to-270"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/create-our-future/IMG_2959-154e3954.jpg",
+    "galleryImages": [
+      "/images/deck/buzzfeed/02-image293.jpg",
+      "/images/deck/cnn-road-to-270/01-image250.jpg"
+    ]
+  }
+}

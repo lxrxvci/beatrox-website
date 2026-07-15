@@ -1,0 +1,126 @@
+{
+  "title": "Custom Fabrication",
+  "slug": "/services/custom-fabrication",
+  "seo": {
+    "title": "Custom Fabrication",
+    "description": "Custom fabrication for events, exhibits, and installations — Beatrox designs and builds one-of-a-kind structures, scenic elements, and interactive devices.",
+    "og": {
+      "title": "Custom Fabrication | BEATROX",
+      "description": "One-of-a-kind structures, scenic elements, and interactive devices — designed, engineered, and built by Beatrox in Portland, deployed nationwide.",
+      "image": "/images/portfolio/destination/IMG_5461.PNG"
+    }
+  },
+  "hero": {
+    "headline": "Custom Fabrication",
+    "subheadline": "When the thing you need doesn't exist yet, we build it. Beatrox designs, engineers, and fabricates one-of-a-kind structures, scenic elements, and interactive devices for events and installations.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Build",
+  "capabilities": [
+    "Custom Structure Design & Engineering",
+    "Scenic & Display Fabrication",
+    "Interactive Device Prototyping",
+    "Mixed-Material Builds — Wood, Metal, Acrylic",
+    "Electronics & Firmware Integration",
+    "Large-Scale Canvas & Skin Systems",
+    "Finish Work & Brand Detailing",
+    "Pre-Visualization & Shop Drawings",
+    "Delivery, Install & Strike"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Custom Fabrication?",
+      "content": "Custom fabrication is the process of designing and building physical elements that can't be bought off the shelf — the scenic structures, display systems, interactive devices, and architectural features that make an experience unlike anything else. Where rental equipment covers the standard toolkit, fabrication covers everything your concept actually demands.\n\nYou need custom fabrication when your creative vision outruns the catalog: a 40-foot structure that has to survive a festival crowd, a display wall that has to run reliably for years in a corporate headquarters, or a device that lets the public physically control paint, light, or motion. It's the bridge between a render on a screen and something real people can touch.\n\nDone well, fabrication is invisible — the audience never thinks about how the piece was built, only how it made them feel. That requires a team that treats engineering, materials, and finish work with the same care as the creative concept itself."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Large-scale event structures and festival builds",
+        "Trade show and exhibition architecture",
+        "Interactive devices and kinetic elements",
+        "Permanent brand installations and displays",
+        "Custom signage and wayfinding systems",
+        "Scenic skins, facades, and themed environments",
+        "Prototype and one-off specialty builds"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Beatrox handles the full fabrication arc in-house: design development, engineering, shop drawings, prototyping, build, finishing, and on-site installation. Our shop works across wood, metal, and acrylic, and we routinely integrate electronics — custom controllers, firmware, relay systems, and mechanical actuation — directly into the pieces we build, so the physical and technical sides of a project are solved by the same team.\n\nFor Destination, created for Journey's x Adidas at Horton Plaza Park in San Diego, we designed and built a 40-foot tall structure skinned with a blank canvas and outfitted with a custom-built robotic paint distribution device. Participants selected one of five paint colors with a custom button controller, and our Arduino firmware drove a relay-based mechanical valve system that sent paint flowing down the canvas in real time — all synchronized with TouchDesigner. For FLIR, we delivered a permanent interactive history wall at FLIR's Washington, DC headquarters, integrating ultra wide-format displays, LIDAR sensors, and a media server into a single installation engineered for reliability and low maintenance. And for El Camino, we produced a Comic-Con exhibition build for Netflix in New York — a high-traffic environment where durability and finish quality had to hold up under constant public interaction."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Discovery — We learn the creative vision, environment, load requirements, and budget",
+        "2. Design Development — Concepts become pre-visualizations and material plans you can approve",
+        "3. Engineering & Shop Drawings — Every build is drawn, detailed, and checked before a cut is made",
+        "4. Fabrication & Prototyping — We build, test mechanisms, and verify fit in the shop first",
+        "5. Finishing & QA — Surfaces, paint, and brand detailing are completed to spec",
+        "6. Delivery & Install — Our team transports, assembles, and strikes the build on site"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Proven at festival scale — the 40-foot Destination canvas structure for Journey's x Adidas",
+        "Permanent-installation grade — the FLIR history wall engineered for years of low-maintenance operation",
+        "Trusted by Netflix, Adidas, and FLIR for high-visibility builds",
+        "Electronics and firmware integrated in-house, not bolted on afterward",
+        "One accountable team from concept sketch to final strike",
+        "Portland-based shop with nationwide delivery and installation"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What materials can you build with?",
+          "answer": "We work across wood, metal, acrylic, canvas and fabric skins, and composite materials, and we integrate electronics, LED, and sensor systems directly into our builds. Material selection is driven by the environment, load requirements, and budget of each project."
+        },
+        {
+          "question": "How long does a custom build take?",
+          "answer": "Timelines depend on scale and complexity. Simple scenic elements can turn around in a few weeks; large engineered structures or interactive devices typically need 8–12 weeks from design lock to install. We'll give you a realistic schedule during the discovery phase."
+        },
+        {
+          "question": "Do you only build one-offs, or can you produce multiples?",
+          "answer": "Both. We build one-of-a-kind hero pieces as well as repeatable kits — for example, activation builds designed to be deployed across multiple events or venues with consistent quality."
+        },
+        {
+          "question": "Can you install outside Portland?",
+          "answer": "Yes. Our builds have been delivered and installed across the country — from San Diego festival sites to a corporate headquarters in Washington, DC. We handle transport, on-site assembly, and strike."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "El Camino",
+      "slug": "/work/el-camino"
+    },
+    {
+      "title": "FLIR Interactive History Wall",
+      "slug": "/work/flir"
+    },
+    {
+      "title": "Destination",
+      "slug": "/work/destination"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/portfolio/destination/IMG_5461.PNG",
+    "galleryImages": [
+      "/images/verified/work/el-camino/el_camino_preview.jpg",
+      "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg",
+      "/images/portfolio/destination/DESTINATION_SD_5of7.jpg"
+    ]
+  }
+}

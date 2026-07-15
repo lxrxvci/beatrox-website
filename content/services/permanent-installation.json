@@ -1,0 +1,125 @@
+{
+  "title": "Permanent Installation",
+  "slug": "/services/permanent-installation",
+  "seo": {
+    "title": "Permanent Installation",
+    "description": "Permanent installation services for architectural media, theatres, and branded environments — Beatrox builds experiences engineered to run for years, not days.",
+    "og": {
+      "title": "Permanent Installation | BEATROX",
+      "description": "Architectural media, theatres, and branded environments engineered for years of daily operation — designed, built, and commissioned by Beatrox.",
+      "image": "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png"
+    }
+  },
+  "hero": {
+    "headline": "Permanent Installation",
+    "subheadline": "Some experiences are built for a weekend. These are built for years. Beatrox designs, builds, and commissions permanent installations engineered for daily operation.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Build",
+  "capabilities": [
+    "Architectural Media Integration",
+    "Permanent Theatre & Venue Builds",
+    "Long-Life Structural Fabrication",
+    "Large-Scale Projection Deployment",
+    "Systems Commissioning & Calibration",
+    "Maintenance & Serviceability Planning",
+    "Environmental & Public-Space Hardening",
+    "Documentation & Handover"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Permanent Installation?",
+      "content": "A permanent installation is an experience built to live in a space for years rather than days — a theatre, an architectural media feature, a branded environment in a headquarters, mall, museum, or public landmark. It demands a fundamentally different mindset than event production: every material, mount, and system is chosen for longevity, serviceability, and daily public use.\n\nYou need a permanent installation partner when a space itself is the attraction — when the technology has to survive thousands of operating hours, be maintainable by local staff, and still look intentional a decade from now. The work spans structural engineering, media systems, environmental hardening, and the documentation that keeps it all running.\n\nThe stakes are higher because there's no strike coming to rescue a mistake. Permanent work has to be right on day one and stay right — which is why it belongs with a team that has deployed media systems on some of the most demanding architectural canvases in the world."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Projection theatres and immersive venues",
+        "Corporate headquarters media installations",
+        "Retail and mall attractions",
+        "Museum and cultural exhibits",
+        "Architectural projection deployments",
+        "Public landmark media features",
+        "Branded permanent environments"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Beatrox provides end-to-end permanent installation delivery: site assessment, structural and systems design, fabrication, large-scale media deployment, commissioning, calibration, and handover documentation. We engineer for serviceability from the start — access panels, replaceable components, and maintenance plans — so the installation's tenth year looks like its first.\n\nOur deployment pedigree includes DUBAI 360: Spherical Projection Theatre at Dubai Mall, delivered for DUBAI 360 and Obscura Digital — a spherical projection theatre environment requiring precise system deployment, content integration, and software in one of the world's highest-traffic retail destinations. For PROJECTING CHANGE: Racing Extinction, produced with the Oceanic Preservation Society and Obscura Digital, Beatrox was part of the team deploying large-scale projection mapping onto architectural landmarks including the Empire State Building, the United Nations in New York, and the Vatican in Rome — work where engineering precision and institutional coordination were non-negotiable. And Destination, our 40-foot interactive canvas structure for Journey's x Adidas in San Diego, shows the structural side of the craft: a towering engineered build with integrated mechanical and control systems designed to operate continuously under public use."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Site Assessment — We survey the structure, environment, access, and operating conditions",
+        "2. Engineering & Design — Structural, media, and serviceability plans developed and reviewed",
+        "3. Fabrication & Pre-Integration — Systems are built and burned in before they reach the site",
+        "4. Installation & Commissioning — Precise mounting, alignment, and calibration in the space",
+        "5. Documentation & Training — As-builts, maintenance plans, and staff handover",
+        "6. Ongoing Support — Service and system maintenance available for the life of the installation"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Deployed a spherical projection theatre at Dubai Mall — one of the world's busiest retail destinations",
+        "Projection deployments on global landmarks: Empire State Building, United Nations NYC, and the Vatican",
+        "Trusted collaborators for Obscura Digital and the Oceanic Preservation Society",
+        "Structural builds like the 40-foot Destination canvas engineered for continuous public operation",
+        "Serviceability designed in from day one — documentation, access, and maintenance planning",
+        "A single team covering structure, media systems, and software"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How is a permanent installation different from an event build?",
+          "answer": "Everything is engineered for longevity: materials rated for years of use, systems designed for serviceability, and documentation that lets local teams maintain it. There's no strike date to absorb mistakes — it has to be right from day one."
+        },
+        {
+          "question": "Can you install in high-traffic public venues?",
+          "answer": "Yes. Our deployments include Dubai Mall and architectural landmarks like the Empire State Building and the Vatican — environments with strict access, security, and coordination requirements."
+        },
+        {
+          "question": "Do you provide maintenance after installation?",
+          "answer": "We offer ongoing system maintenance and support, and every installation ships with documentation and training so your team or ours can keep it running for years."
+        },
+        {
+          "question": "Do you work internationally?",
+          "answer": "We do. Our installation and deployment work has taken us from Dubai to Rome, and we manage the logistics, coordination, and compliance that international projects require."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Destination",
+      "slug": "/work/destination"
+    },
+    {
+      "title": "DUBAI 360: Spherical Projection Theatre",
+      "slug": "/work/dubai-360-spherical-projection-theatre"
+    },
+    {
+      "title": "PROJECTING CHANGE: Racing Extinction",
+      "slug": "/work/projecting-change-racing-extinction"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png",
+    "galleryImages": [
+      "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg",
+      "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
+      "/images/portfolio/destination/IMG_8549.jpg"
+    ]
+  }
+}

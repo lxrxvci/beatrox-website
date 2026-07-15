@@ -1,0 +1,124 @@
+{
+  "title": "Environmental Design",
+  "slug": "/services/environmental-design",
+  "seo": {
+    "title": "Environmental Design",
+    "description": "Environmental design for events and immersive spaces — Beatrox turns venues into fully realized worlds with scenic, projection, lighting, and spatial audio.",
+    "og": {
+      "title": "Environmental Design | BEATROX",
+      "description": "From empty rooms to fully realized worlds — scenic design, projection, lighting, and spatial audio for immersive brand environments.",
+      "image": "/images/portfolio/myshelter/INTERIOR1.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Environmental Design",
+    "subheadline": "We transform ordinary spaces into fully realized worlds — shaping how guests move, feel, and remember every moment inside your environment.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Design",
+  "capabilities": [
+    "Immersive Environment Concepting",
+    "Spatial Layout & Guest Flow",
+    "Scenic & Set Design",
+    "Projection Mapping Surfaces",
+    "Lighting & Atmosphere Design",
+    "Spatial Audio Integration",
+    "Material & Finish Selection",
+    "Retail & Brand Space Transformation"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Environmental Design?",
+      "content": "Environmental design is the discipline of shaping a physical space into an experience. It goes far beyond decoration — it considers how guests enter, where they look, how they move, what they hear, and what they feel at every step. The goal is an environment that tells a story without anyone having to explain it.\n\nYou need environmental design whenever a space has to do more than hold people. Product launches, brand activations, pop-up retail, festival installations, and exhibition booths all live or die on whether guests feel transported the moment they walk in. A well-designed environment turns a venue into the message itself.\n\nDone right, environmental design is invisible as a technique and unforgettable as an experience. Every element — scenic builds, lighting, projection, audio, materials, and signage — works as one system so guests remember the feeling, not the fixtures."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Product launch environments",
+        "Brand activations and pop-up retail",
+        "Festival and expo installations",
+        "Immersive art and gallery spaces",
+        "VIP lounges and hospitality suites",
+        "Exhibition booths and trade show pavilions"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Our environmental design work starts with the story your space needs to tell, then works backward to the physical plan. We deliver concept development, spatial layouts, scenic design direction, material and finish palettes, lighting atmosphere plans, and full integration of projection, audio, and interactive media. Because Beatrox also fabricates and produces, our designs are built to be buildable — every concept accounts for rigging, power, sightlines, and guest flow from day one.\n\nFor Adidas, we transformed a narrow, shuttered Manhattan bodega into a living forest canopy for the MyShelter jacket launch — floor-to-ceiling projection, forced-perspective content, spatial audio, low-lying fog, and audio-reactive LED lighting, with every piece of technology hidden from view. At Super Bowl 2020 in Miami, we converted Ampersand Studios into an immersive Adidas VIP headquarters using projection mapping that wrapped the venue's architecture in branded visuals. And in Dubai Mall, we contributed to the DUBAI 360 spherical projection theatre for DUBAI 360 & Obscura Digital — an environment where the architecture itself became the screen."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Discovery — We learn your brand story, goals, audience, and venue constraints",
+        "2. Concept Development — Mood boards, spatial concepts, and experience narratives",
+        "3. Design Development — Layouts, material palettes, lighting and media integration plans",
+        "4. Pre-Visualization — See the environment rendered before anything is built",
+        "5. Build & Install — Our fabrication and technical teams bring the design to life on site",
+        "6. Show Support & Strike — We operate, maintain, and remove the environment cleanly"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Turned a cramped NYC bodega into a convincing forest canopy for Adidas MyShelter",
+        "Transformed Ampersand Studios Miami into an immersive Adidas VIP headquarters for Super Bowl 2020",
+        "Worked on the DUBAI 360 spherical projection theatre in Dubai Mall",
+        "Design, fabrication, and technical production under one roof — no handoff gaps",
+        "Designs engineered around real rigging, power, and safety constraints from the start",
+        "Trusted by Adidas, Netflix, CNN, and Amazon Music for high-stakes brand environments"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can you design an environment for a space you haven't seen yet?",
+          "answer": "Yes. We work from floor plans, photos, and measurements when a site visit isn't possible, and we verify critical dimensions during pre-production. Site surveys are always recommended for complex builds."
+        },
+        {
+          "question": "Do you only design, or do you also build?",
+          "answer": "Both. Beatrox designs, fabricates, installs, and operates. Keeping design and build in one team means nothing gets lost in translation and your budget goes further."
+        },
+        {
+          "question": "How early should environmental design start in the event timeline?",
+          "answer": "Ideally 8–12 weeks before load-in. Design decisions drive fabrication lead times, equipment orders, and permits — the earlier we start, the more ambitious the environment can be."
+        },
+        {
+          "question": "Can the environment include interactive elements?",
+          "answer": "Absolutely. We routinely integrate projection mapping, motion tracking, AR moments, and spatial audio into our environmental designs, as we did for Adidas at Super Bowl 2020 and MyShelter."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    },
+    {
+      "title": "DUBAI 360: Spherical Projection Theatre",
+      "slug": "/work/dubai-360-spherical-projection-theatre"
+    },
+    {
+      "title": "MyShelter",
+      "slug": "/work/myshelter"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/portfolio/myshelter/INTERIOR1.jpg",
+    "galleryImages": [
+      "/images/portfolio/myshelter/IMG_9687.jpg",
+      "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+      "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png"
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "title": "Lighting Design",
+  "slug": "/services/lighting-design",
+  "seo": {
+    "title": "Lighting Design",
+    "description": "Lighting design for concerts, events, and immersive environments — Beatrox creates custom concepts, plots, and programming that shape mood and guide attention.",
+    "og": {
+      "title": "Lighting Design | BEATROX",
+      "description": "Custom lighting design and programming for events, concerts, and immersive spaces — from intimate activations to festival-scale rigs.",
+      "image": "/images/portfolio/aku-world/Concert-WideAngle.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Lighting Design",
+    "subheadline": "Light is how an audience feels before they think. We design lighting that shapes mood, directs attention, and turns spaces into experiences.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Design",
+  "capabilities": [
+    "Lighting Concept Development",
+    "Fixture Plots & Rig Design",
+    "Lighting Programming & Cueing",
+    "Audio-Reactive & Live-Linked Lighting",
+    "Addressable LED & Pixel Mapping",
+    "Architectural & Scenic Lighting",
+    "Concert & Stage Lighting Design",
+    "Integration with Video & Projection"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Lighting Design?",
+      "content": "Lighting design is the art and engineering of using light to shape how a space is experienced. It covers everything from the color wash on a stage to the glow that guides guests through an installation — balancing creative intent with fixture selection, rigging, power, and control systems.\n\nYou need a lighting designer whenever light has to do real work: building drama for a keynote, making a product hero on a launch stage, energizing a crowd at a concert, or giving an immersive environment its atmosphere. Good lighting design is felt more than seen — it sets the emotional temperature of a room.\n\nBeyond aesthetics, professional lighting design keeps productions safe and practical. Rig plots, load calculations, cable management, and control architecture all matter. A great design looks spectacular from the audience and runs reliably from the dimmer rack."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Concerts and live music performances",
+        "Corporate keynotes and galas",
+        "Brand activations and product launches",
+        "Immersive installations and art environments",
+        "Festival stages and tent builds",
+        "Permanent venue and architectural lighting"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "We deliver the full lighting design package: creative concepting, fixture selection, scaled lighting plots, rig and power specifications, programming, and on-site operation. Our designers work fluently with LED video, projection mapping, and laser systems, so lighting becomes one layer of a unified visual show rather than a competing element. We also specialize in audio-reactive and performance-linked lighting that responds to music and guest behavior in real time.\n\nAt AKU World in New York — an experiential event for AKU + FTX — our lighting design was linked to live musical performances, so projections and light responded in real time to the energy of the crowd. For Amazon Music Live's Infinite Playlist Tour at Outside Lands and Stagecoach 2023, we designed an Astera-lit entry hallway and animated LED lighting that pulled festival crowds into the activation. And for Run for the Oceans with Adidas and Parley Ocean School, wall-to-wall LED panels and mirrored surfaces inside a custom shipping container created an infinity-ocean light environment visitors could interact with."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Discovery — We learn your creative goals, venue, budget, and show format",
+        "2. Concept & Look Development — Color palettes, fixture choices, and key looks",
+        "3. Plots & Technical Design — Scaled drawings, rig points, power and data plans",
+        "4. Programming & Pre-Viz — Cues built and previewed before load-in",
+        "5. Install & Focus — On-site rigging, aiming, and system commissioning",
+        "6. Show Operation & Strike — Live operation, then clean, efficient load-out"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Live-linked lighting for concert performances at AKU World in New York",
+        "Immersive festival lighting for Amazon Music Live at Outside Lands and Stagecoach",
+        "Infinity LED environments built for Adidas x Parley Ocean School in Brooklyn",
+        "Designers who program and operate — one team from plot to show",
+        "Seamless integration with projection, LED video, and laser systems",
+        "Portland-based team with nationwide event experience"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Do you provide the lighting equipment as well as the design?",
+          "answer": "Yes. We can source and rent fixtures through our production arm, or design to a venue's existing inventory. Either way, the plot and programming are built around the exact equipment that will be on site."
+        },
+        {
+          "question": "Can lighting react to music or audience interaction?",
+          "answer": "Absolutely. We've built audio-reactive and sensor-driven lighting for projects like MyShelter and Run for the Oceans, using addressable LEDs and real-time control systems."
+        },
+        {
+          "question": "How far in advance should I bring in a lighting designer?",
+          "answer": "Six to ten weeks before the event is ideal. Fixture availability, rigging approvals, and programming time all get easier — and the creative gets better — with an earlier start."
+        },
+        {
+          "question": "Do you handle rigging and power calculations?",
+          "answer": "Yes. Every design includes rig and power specifications, and we coordinate with venue riggers and engineers to ensure everything is safe and approved."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Run for the Oceans",
+      "slug": "/work/run-for-the-oceans"
+    },
+    {
+      "title": "Infinite Playlist Tour",
+      "slug": "/work/infinite-playlist"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/portfolio/aku-world/Concert-WideAngle.jpg",
+    "galleryImages": [
+      "/images/portfolio/run-for-the-oceans/KMP_2820.jpg",
+      "/images/deck/infinite-playlist/01-image35.jpg"
+    ]
+  }
+}

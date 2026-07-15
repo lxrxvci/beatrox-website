@@ -1,0 +1,124 @@
+{
+  "title": "Labor Hire & Crew Roles (TD, PM, A1/A2, V1/V2, L1/L2)",
+  "slug": "/services/labor-hire-crew-roles",
+  "seo": {
+    "title": "Labor Hire & Crew Roles (TD, PM, A1/A2, V1/V2, L1/L2)",
+    "description": "Beatrox supplies experienced event crew — technical directors, production managers, and audio, video, and lighting engineers — for shows of any scale.",
+    "og": {
+      "title": "Labor Hire & Crew Roles | BEATROX",
+      "description": "Vetted TDs, PMs, A1/A2s, V1/V2s, and L1/L2s — experienced show crew matched to your production, supervised and accountable.",
+      "image": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Labor Hire & Crew Roles",
+    "subheadline": "Vetted technical directors, production managers, audio, video, and lighting engineers — the right crew for every role, from load-in to last cue.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Technical Directors (TD)",
+    "Production Managers (PM)",
+    "Audio Engineers (A1 / A2)",
+    "Video Engineers (V1 / V2)",
+    "Lighting Directors (L1 / L2)",
+    "Stage Managers & Crew Chiefs",
+    "Riggers & Loaders",
+    "Media Server & Playback Operators"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Labor Hire for Events?",
+      "content": "Labor hire is how productions get the specialist crew they need without carrying a full-time staff. Live events run on defined roles — the TD owns the technical systems, the PM owns schedule and budget, the A1 mixes front of house while the A2 runs monitors and RF, the V1 drives the screens while the V2 manages playback and switching, and the L1 designs and calls the lighting with the L2 on programming and focus. Each role is a career skill, and shows succeed or fail on who's sitting in those chairs.\n\nThe challenge for most producers is finding people who are genuinely good — not just available. A resume full of acronyms doesn't tell you how someone behaves at hour fourteen of a problem load-in, or whether they can hold a show together when a playback system hiccups mid-keynote.\n\nThat's what a labor partner solves: vetted professionals, matched to the actual demands of your show, booked under one accountable umbrella. You get the right number of the right people — no more, no less — plus the supervision and insurance structure that comes with an established production company."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Full show crews for concerts and festivals",
+        "Single-specialist hires to complete an existing team",
+        "Corporate keynotes and broadcast events",
+        "Brand activations needing embedded technical staff",
+        "Touring productions requiring consistent per-stop crew",
+        "Load-in / load-out labor for large builds",
+        "Extended-run installations needing rotating operators"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "We staff productions from our own team and a trusted network of specialists we've worked with across years of shows. Every hire is matched to the gig — the media server operator who's actually programmed the platform you're running, the TD who's directed builds at your scale — and every role arrives with clear reporting lines, call times, and deliverables. We can supply a single V2 to round out your department or a complete crew with a crew chief and stage manager running the floor.\n\nOur crews have carried high-stakes rooms: for Super Bowl 2020 in Miami, our team provided pre-visualization and on-site technical direction for the Adidas VIP headquarters, running projection mapping and interactive systems through a weekend of VIP programming. At BuzzFeed's 2016 NewFronts, our engineers handled media server programming and full lighting programming for a mapped, multi-screen presentation at Moynihan Station. And on Projekt X, we delivered the technical direction behind a touring stage element engineered with extensive rigging points and flown orientations — the kind of build where rigger and TD judgment is everything."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Scope — We define every role, skill set, and call time your show needs",
+        "2. Match — Crew selected from our team and vetted network for exact fit",
+        "3. Book — Contracts, rates, insurance, and scheduling confirmed",
+        "4. Brief — Advance documents and show files distributed before load-in",
+        "5. Supervise — On-site leadership through build, show, and strike",
+        "6. Wrap — Timesheets reconciled and performance feedback collected"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "On-site technical direction for the Adidas VIP headquarters at Super Bowl 2020",
+        "Media server and lighting programming for BuzzFeed's NewFronts at Moynihan Station",
+        "Technical direction on touring builds like Projekt X for Adriatique",
+        "Crew who are working show professionals — not a staffing agency's spreadsheet",
+        "One accountable company covering supervision, insurance, and scheduling",
+        "Scale from a single specialist to a full departmental crew"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What's the difference between A1/A2, V1/V2, and L1/L2?",
+          "answer": "The 1s lead their department: the A1 mixes front of house, the V1 runs the main video system, the L1 designs and calls lighting. The 2s support them — A2 handles monitors and wireless, V2 runs playback and switching, L2 programs and focuses fixtures. Bigger shows need both layers."
+        },
+        {
+          "question": "Can I hire just one specialist instead of a full crew?",
+          "answer": "Yes. Single-role hires are common — a TD for a complex install, an A1 for a keynote, a media server operator for a playback-heavy show. We'll match the person to the actual technical demands, not just the title."
+        },
+        {
+          "question": "How far ahead should I book crew?",
+          "answer": "Two to four weeks is comfortable for most shows; large crews and peak dates (festival season, major sporting events) benefit from more. We can often cover short-notice requests, but the best-fit specialists book first."
+        },
+        {
+          "question": "Do your crew members travel?",
+          "answer": "They do. We staff productions nationwide and internationally, and we handle the travel logistics so your crew arrives briefed and on schedule."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    },
+    {
+      "title": "BuzzFeed NewFronts",
+      "slug": "/work/buzzfeed"
+    },
+    {
+      "title": "Projekt X",
+      "slug": "/work/projekt-x"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+    "galleryImages": [
+      "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-703a6f28.jpg",
+      "/images/portfolio/projekt-x/VIDEO009_Moment.jpg"
+    ]
+  }
+}

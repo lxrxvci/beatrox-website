@@ -1,0 +1,125 @@
+{
+  "title": "Staging & Rigging",
+  "slug": "/services/staging-rigging",
+  "seo": {
+    "title": "Staging & Rigging",
+    "description": "Staging and rigging for concerts, festivals, and brand events — Beatrox designs and installs stages, overhead structures, and suspended elements safely.",
+    "og": {
+      "title": "Staging & Rigging | BEATROX",
+      "description": "Stages, overhead structures, and suspended scenic elements — engineered, installed, and operated safely by Beatrox.",
+      "image": "/images/portfolio/aku-world/Concert-WideAngle.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Staging & Rigging",
+    "subheadline": "The structure everything hangs from. Beatrox designs, engineers, and installs stages, overhead rigging, and suspended elements that keep shows safe and spectacular.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Build",
+  "capabilities": [
+    "Stage Design & Construction",
+    "Overhead Rigging & Suspension",
+    "Truss Systems & Ground Support",
+    "Suspended Scenic & Display Elements",
+    "Free-Standing LED Wall Structures",
+    "Load Calculations & Safety Planning",
+    "Venue Rigging Coordination",
+    "Certified Install & Strike Crews"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Staging & Rigging?",
+      "content": "Staging and rigging is the structural backbone of any live experience — the platforms performers stand on, the overhead systems that suspend lighting, video, and scenic elements, and the engineered connections that keep all of it safely over an audience's heads. It's equal parts construction, engineering, and choreography.\n\nYou need professional staging and rigging whenever weight goes over people: concert stages, festival structures, suspended installations, hanging signage, or free-standing video walls in public spaces. Venues, insurers, and fire marshals all have requirements — and a qualified rigging team is how you meet them without compromising the creative.\n\nRigging done right is invisible and boring in the best way: nothing moves that shouldn't, nothing sags, and the show runs exactly as designed. That outcome comes from load calculations, rated hardware, and experienced hands — never improvisation."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Concert and live performance stages",
+        "Festival activation structures",
+        "Suspended scenic installations and hero pieces",
+        "Free-standing LED wall support systems",
+        "Overhead lighting and projection positions",
+        "Exterior signage and facade mounting",
+        "Venue transformations with ceiling-hung elements"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Beatrox provides staging and rigging as part of a complete build package: stage platforms and decks, truss and ground-support systems, suspension of scenic and display elements, load planning, and venue coordination — installed and struck by crews who understand both the structural and creative sides of a show. Because our scenic, lighting, and AV teams work under one roof, rigging plots are designed around the actual show, not retrofitted to it.\n\nFor AKU World in New York, produced for AKU + FTX, our scope included a custom-fabricated, large-scale helmet installation that guests could interact with — a hero piece that had to be safely integrated into a multi-room event environment alongside exterior signage. For the Infinite Playlist Tour with Amazon Music Live, we built and deployed festival activation structures at both Outside Lands 2023 in San Francisco and Stagecoach 2023 in Indio — including free-standing LED wall structures that had to stand up to outdoor festival conditions and heavy foot traffic across multi-day events. And for Super Bowl 2020, we transformed Ampersand Studios in Miami into Adidas's VIP headquarters, installing a free-standing LED wall and full venue treatments in a space never designed to hold them."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Site & Load Assessment — We survey the venue, anchor points, and structural limits",
+        "2. Rigging & Stage Design — Plots, load calculations, and hardware schedules are documented",
+        "3. Venue & Authority Coordination — We align with venue riggers, insurers, and inspectors",
+        "4. Install — Stages, truss, and suspended elements go in per the engineered plan",
+        "5. Inspection & Show Support — Every point is checked before doors; crew stays through the show",
+        "6. Strike — Controlled derigging that protects both the equipment and the venue"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Festival-proven structures — deployed at Outside Lands and Stagecoach for Amazon Music Live",
+        "Large-scale suspended and hero installations like the AKU World helmet piece",
+        "Venue transformations executed under Super Bowl weekend pressure for Adidas",
+        "Safety-first culture: load calculations and rated hardware on every suspension",
+        "Rigging designed in concert with lighting, video, and scenic — one coordinated team",
+        "Portland-based, with crews experienced in venues nationwide"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Do you handle rigging in venues that have their own house riggers?",
+          "answer": "Yes. We coordinate directly with house rigging crews and venue engineers, providing our load calculations and hardware schedules so everything integrates with the venue's requirements."
+        },
+        {
+          "question": "Can you build outdoor stages and structures?",
+          "answer": "We build and deploy outdoor structures regularly — our festival builds for Amazon Music Live ran across multi-day outdoor events at Outside Lands and Stagecoach, designed for weather and heavy public traffic."
+        },
+        {
+          "question": "How do you ensure suspended elements are safe?",
+          "answer": "Every suspension starts with load calculations and rated hardware, installed per an engineered plot and inspected before the audience arrives. We never improvise overhead."
+        },
+        {
+          "question": "Can staging and rigging be bundled with the rest of our production?",
+          "answer": "Absolutely — that's how we prefer to work. When staging, rigging, lighting, video, and scenic come from one team, the plots are coordinated from day one and load-in runs faster."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    },
+    {
+      "title": "Infinite Playlist Tour",
+      "slug": "/work/infinite-playlist"
+    },
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/portfolio/aku-world/Concert-WideAngle.jpg",
+    "galleryImages": [
+      "/images/portfolio/aku-world/WideShot.jpeg",
+      "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg",
+      "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    ]
+  }
+}

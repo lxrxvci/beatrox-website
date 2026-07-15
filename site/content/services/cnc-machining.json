@@ -1,0 +1,125 @@
+{
+  "title": "CNC Machining",
+  "slug": "/services/cnc-machining",
+  "seo": {
+    "title": "CNC Machining",
+    "description": "CNC machining for events, exhibits, and installations — Beatrox produces precision-cut acrylic, wood, and composite parts for scenic, signage, and display work.",
+    "og": {
+      "title": "CNC Machining | BEATROX",
+      "description": "Precision-cut acrylic, wood, and composite parts for scenic builds, signage, and displays — machined and finished by Beatrox.",
+      "image": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg"
+    }
+  },
+  "hero": {
+    "headline": "CNC Machining",
+    "subheadline": "Precision parts for impossible designs. Beatrox machines acrylic, wood, and composite components that bring crisp, repeatable accuracy to scenic builds, signage, and displays.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Build",
+  "capabilities": [
+    "CNC Routing & Precision Cutting",
+    "Acrylic, Wood & Composite Machining",
+    "Dimensional Signage & Lettering",
+    "Scenic & Display Component Production",
+    "Repeatable Multi-Part Runs",
+    "CAD-to-Machine Workflow",
+    "Edge Finishing & Assembly Prep",
+    "Prototype to Production Scaling"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is CNC Machining?",
+      "content": "CNC machining uses computer-controlled cutting tools to turn digital designs into physical parts with millimeter precision. In experiential production, it's how crisp signage, intricate scenic details, interlocking structures, and perfectly repeatable components get made — straight from a CAD file to the shop floor.\n\nYou need CNC machining whenever a design calls for accuracy hand tools can't hold: tight-tolerance display housings, layered acrylic graphics, branded dimensional lettering, or dozens of identical parts that have to fit together on a fast load-in. It's also the fastest path from prototype to production — once the file is right, the hundredth part is identical to the first.\n\nThe real advantage isn't the machine; it's having machining in the same shop as fabrication, electronics, and finishing. Parts are designed for how they'll actually be assembled and used — not just how they look on screen."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Dimensional logos and branded signage",
+        "Layered acrylic displays and light features",
+        "Precision scenic details and textures",
+        "Display housings for screens and sensors",
+        "Interlocking structural components",
+        "Exhibit and booth component runs",
+        "Prototypes for custom interactive devices"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Beatrox provides CNC machining as part of our in-house fabrication capability: CAD-to-machine workflow, routing and precision cutting across acrylic, wood, and composites, edge finishing, and assembly preparation. Because machining sits alongside our scenic, electronics, and finishing teams, parts arrive at the build already designed around their real-world mounting, wiring, and finish requirements.\n\nPrecision shows up across our project history. For the FLIR Interactive History Wall at FLIR's Washington, DC headquarters, we produced a permanent installation where ultra wide-format displays, LIDAR sensors, and media hardware had to be housed and mounted with exact alignment — the kind of tolerance-driven work machining exists for. For El Camino, our Comic-Con exhibition for Netflix in New York, the build demanded crisp, brand-perfect components that could survive days of dense public traffic. And for Super Bowl 2020 at Ampersand Studios in Miami, we transformed the venue into Adidas's VIP headquarters on a tight Super Bowl weekend timeline — work where pre-machined, test-fit components are what make a fast, flawless install possible."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Design & File Prep — We develop or refine CAD files with machining and assembly in mind",
+        "2. Material Selection — Substrates chosen for the environment, finish, and budget",
+        "3. Machining — Parts are cut, checked against tolerance, and labeled for assembly",
+        "4. Finishing — Edges, surfaces, paint, and brand detailing completed in-house",
+        "5. Test-Fit — Components are dry-fit with their mating parts before leaving the shop",
+        "6. Delivery & Install — Kitted, labeled parts make on-site assembly fast and error-free"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Precision installation work for FLIR — sensor and display housings in a permanent HQ environment",
+        "Brand-critical component quality proven on a Comic-Con floor for Netflix",
+        "Fast-turn venue transformation for Adidas under Super Bowl weekend pressure",
+        "Machining integrated with fabrication, electronics, and finishing under one roof",
+        "CAD-to-machine workflow that scales from one-off prototypes to production runs",
+        "Portland-based shop serving projects nationwide"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What materials can you machine?",
+          "answer": "We machine acrylic, wood, and composite sheet goods — the core materials of scenic, signage, and display work. Material choice is matched to the environment, finish requirements, and budget of each project."
+        },
+        {
+          "question": "Can you work from our design files?",
+          "answer": "Yes. We accept client CAD files and also develop machining-ready files in-house — either way, we review every file for manufacturability and assembly before anything is cut."
+        },
+        {
+          "question": "Do you do production runs, or just prototypes?",
+          "answer": "Both. CNC is ideal for one-off prototypes, but its real power is repeatability — once the file is dialed in, we produce identical parts at quantity for multi-location or multi-show deployments."
+        },
+        {
+          "question": "Is machining available as a standalone service?",
+          "answer": "It can be, but it's most valuable integrated — when machining, fabrication, electronics, and finishing come from one shop, parts are designed around how they'll actually be assembled and used."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "El Camino",
+      "slug": "/work/el-camino"
+    },
+    {
+      "title": "FLIR Interactive History Wall",
+      "slug": "/work/flir"
+    },
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg",
+    "galleryImages": [
+      "/images/deck/el-camino/02-image115.jpg",
+      "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+      "/images/verified/work/el-camino/el_camino_preview.jpg"
+    ]
+  }
+}

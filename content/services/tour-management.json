@@ -1,0 +1,124 @@
+{
+  "title": "Tour Management",
+  "slug": "/services/tour-management",
+  "seo": {
+    "title": "Tour Management",
+    "description": "Beatrox provides tour management for multi-city event programs and festival circuits — routing, freight, per-venue adaptation, and consistent show quality.",
+    "og": {
+      "title": "Tour Management | BEATROX",
+      "description": "Multi-city event programs run like clockwork — routing, freight, per-venue adaptation, and consistent quality at every stop.",
+      "image": "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Tour Management",
+    "subheadline": "Multi-city event programs and festival circuits, run like clockwork — routing, freight, per-venue adaptation, and the same show quality at every stop.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Routing & Advance Planning",
+    "Per-Venue Adaptation & Spec Packs",
+    "Freight & Multi-Stop Logistics",
+    "Crew & Vendor Management",
+    "Asset & Inventory Tracking",
+    "Show Documentation & Repeatability",
+    "Budget Reconciliation Per Stop",
+    "On-Tour Technical Support"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Tour Management?",
+      "content": "Tour management is the production discipline behind anything that happens more than once, in more than one place. Whether it's a brand activation hitting multiple festivals, a product experience moving city to city, or a live show with a routing sheet, the challenge is the same: deliver an identical quality of experience in venues that are never identical.\n\nEach stop brings new constraints — different footprints, power, load-in access, local vendors, and timelines. Without a touring framework, every city becomes a ground-up rebuild: budgets drift, freight goes missing, and the show slowly mutates as teams improvise around surprises. Tour management replaces improvisation with a system — advance work, spec packs, repeatable builds, and documentation that travels with the production.\n\nYou need it whenever your program has more than one date on the calendar. The second stop is where single-event thinking breaks down, and it's where an experienced tour manager pays for themselves immediately."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Multi-festival brand activations",
+        "Touring product experiences and pop-ups",
+        "Artist and live music tour support",
+        "Annual event series that redeploy each season",
+        "Multi-city corporate roadshows",
+        "Traveling immersive installations",
+        "Sponsor activations across a circuit"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "We build the touring plan from the routing out: advance surveys and spec packs for every venue, freight and trucking schedules between stops, crew and vendor coordination, asset tracking for every case and scenic element, and per-stop budget reconciliation. Critically, we design the production itself to tour — modular builds, crating strategies, and documented setup procedures so each deployment is faster and more consistent than the last.\n\nOn the Infinite Playlist Tour for Amazon Music Live, we deployed custom-built festival activations at both Outside Lands in San Francisco and Stagecoach in Indio within a single season — each venue receiving its own tailored build while the program's identity and quality stayed constant. AKU World in New York showed the same muscle at a different scale: live musical performances synchronized to lighting and projection across multiple programmed rooms, running on show discipline rather than luck. And Run for the Oceans — an interactive container experience built for Adidas and Parley Ocean School's annual 5k event — was engineered as a self-contained, redeployable environment for a recurring activation format."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Routing & Advance — We survey every stop and flag constraints early",
+        "2. Tour-Ready Design — Builds engineered to crate, ship, and redeploy fast",
+        "3. Spec Packs — Per-venue documents covering power, rigging, footprint, schedule",
+        "4. Deploy — Managed load-in, show, and strike at each stop",
+        "5. Transit — Freight, trucking, and asset tracking between cities",
+        "6. Wrap — Per-stop budgets reconciled and lessons fed into the next run"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Ran back-to-back festival deployments for Amazon Music Live in one season",
+        "Built redeployable activation formats like the Run for the Oceans container experience",
+        "Delivered synchronized multi-room live programming at AKU World",
+        "In-house fabrication means builds are designed to survive the road",
+        "Documented, repeatable setup procedures at every stop",
+        "One accountable team from first advance call to final strike"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How do you keep the experience consistent across different venues?",
+          "answer": "Every touring production ships with spec packs and documented setup procedures, and the build itself is designed modularly so it adapts to different footprints without changing the audience experience. The same core team advances each stop."
+        },
+        {
+          "question": "Can you take over management of an existing tour or program?",
+          "answer": "Yes. We audit the current production, document what exists, fix the pain points — usually freight, scheduling, and per-venue adaptation — and run subsequent stops on a proper touring framework."
+        },
+        {
+          "question": "Do you handle international stops?",
+          "answer": "We do. Our team has delivered work internationally, and we manage the added complexity — carnets, freight forwarding, local crew, and compliance — as part of the routing plan."
+        },
+        {
+          "question": "What's the minimum program size where tour management makes sense?",
+          "answer": "Two stops. The moment a production repeats, a touring framework saves money and protects quality. Even a two-festival season like the Infinite Playlist Tour benefits from proper advance work and freight planning."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Infinite Playlist Tour",
+      "slug": "/work/infinite-playlist"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    },
+    {
+      "title": "Run for the Oceans",
+      "slug": "/work/run-for-the-oceans"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg",
+    "galleryImages": [
+      "/images/portfolio/aku-world/MainRoom4.jpg",
+      "/images/portfolio/run-for-the-oceans/KMP_2820.jpg"
+    ]
+  }
+}

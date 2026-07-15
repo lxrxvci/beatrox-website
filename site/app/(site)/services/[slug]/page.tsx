@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getService, getServiceSlugs } from '@/lib/json-content'
+import { getAllProjects, getService, getServiceSlugs } from '@/lib/json-content'
 import { seoToMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { buildServiceSchema } from '@/lib/schema'
@@ -32,6 +32,16 @@ export default async function ServicePage({ params }: Props) {
   const gallery = service.media?.galleryImages || []
   const inlineMedia = gallery.filter((img) => img && img !== heroImage)
 
+  // Resolve relatedWork slugs (full paths like "/work/foo") against portfolio projects
+  const projects = getAllProjects()
+  const relatedProjects = (service.relatedWork || [])
+    .map((work) => {
+      const key = work.slug.replace(/^\/work\/+/, '')
+      const project = projects.find((p) => p.canonicalSlug === key)
+      return project ? { work, project } : null
+    })
+    .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
+
   return (
     <>
       <ParallaxHero
@@ -42,7 +52,7 @@ export default async function ServicePage({ params }: Props) {
         eyebrow={service.category}
         title={service.title}
         description={service.hero.subheadline}
-        ctaHref="/contact"
+        ctaHref={service.hero.cta.url}
         ctaLabel={service.hero.cta.label}
         minHeightClass="min-h-[92svh]"
       />
@@ -160,17 +170,45 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Related Work */}
-      {service.relatedWork && service.relatedWork.length > 0 && (
+      {/* Related Work — example cards cited from past projects */}
+      {relatedProjects.length > 0 && (
         <section className="section border-b border-white/10">
-          <div className="max-w-[1400px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">Related Work</h2>
-            <div className="flex flex-wrap gap-4">
-              {service.relatedWork.map((work) => (
-                <Link key={work.slug} href={work.slug} className="btn-ghost">
-                  {work.title}
-                </Link>
-              ))}
+          <div className="max-w-[1120px] mx-auto">
+            <h2 className="heading-sm text-white/75 mb-8">See It in Action</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
+              {relatedProjects.map(({ work, project }) => {
+                const image = project.images?.[0]?.url
+                return (
+                  <Link
+                    key={work.slug}
+                    href={work.slug}
+                    className="relative bg-black p-7 md:p-8 group hover:bg-white/5 transition-colors block min-h-[16rem] overflow-hidden border border-white/10"
+                  >
+                    {image && (
+                      <Image
+                        src={image}
+                        alt={project.images[0].alt || `${project.title} project image`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+                    <div className="relative">
+                      <p className="mono text-[var(--accent)] mb-3">
+                        {project.metadata.client}
+                      </p>
+                      <p className="heading-sm text-white mb-3">{project.title}</p>
+                      <p className="text-base text-white/75 leading-relaxed line-clamp-2">
+                        {project.hero.subheadline}
+                      </p>
+                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
+                        View project →
+                      </span>
+                    </div>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </section>

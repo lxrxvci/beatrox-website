@@ -1,0 +1,124 @@
+{
+  "title": "System Maintenance & Support",
+  "slug": "/services/system-maintenance-support",
+  "seo": {
+    "title": "System Maintenance & Support",
+    "description": "Beatrox provides system maintenance and support for installed AV and interactive experiences — preventative care, rapid response, and long-term reliability.",
+    "og": {
+      "title": "System Maintenance & Support | BEATROX",
+      "description": "Preventative maintenance, rapid-response support, and long-term reliability for installed AV and interactive experiences.",
+      "image": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg"
+    }
+  },
+  "hero": {
+    "headline": "System Maintenance & Support",
+    "subheadline": "Preventative maintenance, rapid-response support, and long-term reliability for the AV and interactive systems your audience depends on.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Preventative Maintenance Schedules",
+    "Remote Monitoring & Diagnostics",
+    "Rapid On-Site Response",
+    "Firmware & Software Updates",
+    "Lamp, Filter & Consumable Service",
+    "Spare Parts & Loaner Equipment",
+    "System Documentation & Training",
+    "Extended-Run Show Support"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is System Maintenance & Support?",
+      "content": "System maintenance and support is what happens after opening night — the ongoing care that keeps installed AV, projection, LED, and interactive systems performing the way they did on day one. It spans scheduled preventative service, software and firmware updates, consumable replacement, remote diagnostics, and rapid response when something goes wrong.\n\nEvery technical system drifts without attention: projectors lose brightness, media servers fall behind on updates, sensors need recalibration, and interactive software meets edge cases nobody tested. For a permanent installation or a long-running experience, the gap between a system that delights visitors and one that disappoints them is almost entirely maintenance discipline.\n\nYou need a support partner whenever your experience has to run beyond a single event — retail installations, museum and lobby displays, venue systems, or multi-week activations. The team that built the system is always the best team to keep it alive: they know every cable path, every config file, and every failure mode."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Permanent interactive installations",
+        "Retail and showroom display systems",
+        "Corporate lobby and HQ media walls",
+        "Multi-week activations and extended runs",
+        "Projection theatres and immersive rooms",
+        "Venue-installed AV infrastructure",
+        "Touring systems between stops"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "We offer structured maintenance programs built around your system's actual duty cycle: scheduled preventative visits, remote health monitoring where the hardware allows, software and firmware update management, consumable replacement before end-of-life, and guaranteed response windows for failures. Every engagement includes living documentation — system diagrams, configurations, and service history — plus training so your on-site staff can handle day-to-day operation confidently.\n\nWe support what we build, and we build things meant to last. The FLIR Interactive History Wall at FLIR's Washington DC headquarters was engineered from the start for reliability and low maintenance — a permanent installation where media server playback, LIDAR tracking, and computer vision have to work for every visitor, every day. On Destination, our 40-foot interactive paint canvas for Journey's x Adidas in San Diego, we supported a fully custom system — Arduino firmware, relay-driven valves, and a robotic paint distribution device — running live and outdoors through the event. And DUBAI 360, a spherical projection theatre deployed inside Dubai Mall, represents the class of high-uptime installed environment where consistent playback and calibration are the entire product."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Assessment — We audit your system's condition, usage, and failure risks",
+        "2. Plan — A maintenance schedule and response agreement tailored to duty cycle",
+        "3. Baseline — Full documentation, configuration backup, and staff training",
+        "4. Maintain — Scheduled preventative service and update management",
+        "5. Respond — Rapid remote or on-site support when issues arise",
+        "6. Report — Service history and recommendations after every visit"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Built the FLIR Interactive History Wall — a permanent installation engineered for reliability and low maintenance",
+        "Supported fully custom live systems like the Destination robotic paint canvas",
+        "Experience with high-uptime installed environments like DUBAI 360 at Dubai Mall",
+        "The team that built your system maintains it — no knowledge gap",
+        "Living documentation and training included with every engagement",
+        "Portland-based with nationwide support capability"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Do you maintain systems you didn't build?",
+          "answer": "Often, yes. We start with a full assessment — documenting the hardware, software, and configurations as they exist — then take over under a maintenance agreement. If we find underlying issues, we'll quote remediation separately so you can decide."
+        },
+        {
+          "question": "What does a typical maintenance visit cover?",
+          "answer": "Physical inspection and cleaning, consumable checks (lamps, filters, fans), software and firmware status, calibration and alignment verification, sensor testing, and a full playback run-through. You get a written report with anything that needs attention."
+        },
+        {
+          "question": "How fast can you respond to a failure?",
+          "answer": "Response windows are defined in your support agreement — remote diagnostics often resolve issues within hours, and on-site response is scheduled by severity. Critical systems can be covered with priority-response terms."
+        },
+        {
+          "question": "Can you train our staff to handle daily operation?",
+          "answer": "Yes — training is part of every engagement. We document startup, shutdown, content updates, and basic troubleshooting so your team runs the system confidently and calls us only for what actually needs us."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Destination",
+      "slug": "/work/destination"
+    },
+    {
+      "title": "DUBAI 360: Spherical Projection Theatre",
+      "slug": "/work/dubai-360-spherical-projection-theatre"
+    },
+    {
+      "title": "FLIR Interactive History Wall",
+      "slug": "/work/flir"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg",
+    "galleryImages": [
+      "/images/portfolio/destination/DESTINATION_SD_5of7.jpg",
+      "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png"
+    ]
+  }
+}

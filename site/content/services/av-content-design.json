@@ -1,0 +1,123 @@
+{
+  "title": "Audio, Video & Lighting Content Design",
+  "slug": "/services/av-content-design",
+  "seo": {
+    "title": "Audio, Video & Lighting Content Design",
+    "description": "Audio, video, and lighting content design for events and installations — Beatrox creates custom media, projection content, and synced visuals for any canvas.",
+    "og": {
+      "title": "Audio, Video & Lighting Content Design | BEATROX",
+      "description": "Custom video, projection content, spatial audio, and lighting looks — designed as one synchronized system for your event.",
+      "image": "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png"
+    }
+  },
+  "hero": {
+    "headline": "Audio, Video & Lighting Content Design",
+    "subheadline": "Custom media designed for your canvas — video, projection content, audio, and lighting looks that work as one synchronized system.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Design",
+  "capabilities": [
+    "Custom Video & Motion Graphics",
+    "Projection Mapping Content",
+    "LED Wall Content Design",
+    "Spatial & Ambient Audio Design",
+    "Lighting Look & Cue Design",
+    "Timecode-Synced Show Content",
+    "Media Server Playback Programming",
+    "Branded Visual Systems"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Audio, Video & Lighting Content Design?",
+      "content": "Content design is everything the audience sees and hears — the video on the LED wall, the imagery wrapped across a building, the soundscape in the room, and the lighting looks that tie it together. Designing these elements as one system, rather than three separate vendors, is what makes a show feel unified.\n\nYou need content design whenever your event has screens, projectors, speakers, or intelligent lighting — which is nearly every modern production. The content has to fit the exact pixel map of your displays, the geometry of your projection surfaces, and the timing of your show. Off-the-shelf visuals rarely do any of that.\n\nGreat content design starts with the story and the canvas. A spherical theatre, a landmark facade, and a conference main stage each demand completely different approaches to resolution, composition, contrast, and motion."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Projection mapping shows on buildings and structures",
+        "LED wall content for stages and installations",
+        "Broadcast and election-night visual systems",
+        "Spatial audio for immersive environments",
+        "Branded motion graphics for keynotes and launches",
+        "Ambient content for museums, lobbies, and retail"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "We produce custom video and motion graphics, projection mapping content aligned to your exact surfaces, LED wall media built to native pixel maps, spatial and ambient audio, and lighting looks — all programmed for timecode-accurate playback on professional media servers. Our team handles the full chain: creative direction, asset production, surface calibration, and on-site playback operation.\n\nFor the DUBAI 360 spherical projection theatre in Dubai Mall, we delivered content and deployment for DUBAI 360 & Obscura Digital on a fully spherical canvas — imagery engineered to surround the audience with no visible seams. With PROJECTING CHANGE: Racing Extinction for the Oceanic Preservation Society & Obscura Digital, projection content was designed for some of the world's most recognizable canvases, including the Empire State Building, the United Nations in New York, and the Vatican in Rome. And for CNN: Road to 270 with CNN & Obscura Digital, we built projection and interactive visual content on the Empire State Building for election-night storytelling at landmark scale."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Canvas & Story Audit — We study your surfaces, displays, and narrative goals",
+        "2. Creative Direction — Style frames and animatics establish the visual language",
+        "3. Content Production — Video, audio, and lighting looks built to spec",
+        "4. Calibration & Mapping — Content aligned to real geometry and pixel maps",
+        "5. Playback Programming — Media servers, timecode, and cue stacks configured",
+        "6. Show Operation — Rehearsed, operated, and supported live on event day"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Spherical theatre content for DUBAI 360 in Dubai Mall",
+        "Landmark projection content for the Empire State Building, the UN, and the Vatican",
+        "Election-night visual systems for CNN on the Empire State Building",
+        "Content, audio, and lighting designed as one synchronized system",
+        "Timecode-accurate media server playback on every show",
+        "Experience across theatres, facades, stages, and installations"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can you design content for surfaces that aren't flat screens?",
+          "answer": "Yes — irregular surfaces are our specialty. We map content to domes, spheres, buildings, and scenic structures using the actual geometry of the canvas."
+        },
+        {
+          "question": "Do you handle the playback systems too?",
+          "answer": "We do. Content design and media server playback programming go together — we configure the servers, timecode, and cue structure so the content runs exactly as designed."
+        },
+        {
+          "question": "Can content be synced to a live show or broadcast?",
+          "answer": "Absolutely. We lock content to timecode and show calling for concerts, broadcasts, and run-of-show-driven corporate events, as we did for CNN: Road to 270."
+        },
+        {
+          "question": "What information do you need to quote content design?",
+          "answer": "Your canvas specs (screen sizes, surfaces, venue), show length, brand assets, and creative goals. From there we can scope production time and deliverables quickly."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "DUBAI 360: Spherical Projection Theatre",
+      "slug": "/work/dubai-360-spherical-projection-theatre"
+    },
+    {
+      "title": "PROJECTING CHANGE: Racing Extinction",
+      "slug": "/work/projecting-change-racing-extinction"
+    },
+    {
+      "title": "CNN: Road to 270",
+      "slug": "/work/cnn-road-to-270"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
+    "galleryImages": [
+      "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg",
+      "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg"
+    ]
+  }
+}

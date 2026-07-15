@@ -1,0 +1,123 @@
+{
+  "title": "3D Animation & Motion Capture",
+  "slug": "/services/3d-animation-motion-capture",
+  "seo": {
+    "title": "3D Animation & Motion Capture",
+    "description": "3D animation and motion capture for live events and interactive experiences — Beatrox builds real-time avatars, character animation, and body-driven AR content.",
+    "og": {
+      "title": "3D Animation & Motion Capture | BEATROX",
+      "description": "Real-time avatars, character animation, and motion-captured interaction for events, installations, and brand experiences.",
+      "image": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    }
+  },
+  "hero": {
+    "headline": "3D Animation & Motion Capture",
+    "subheadline": "Characters, avatars, and motion that respond to real people in real time — we bring digital performers to life inside physical events.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Design",
+  "capabilities": [
+    "Real-Time 3D Character Animation",
+    "Motion Capture Systems (Kinect Azure)",
+    "Avatar Creation & Digital Takeaways",
+    "3D Body Scanning",
+    "Physics-Based Simulation",
+    "AI & Computer Vision Tracking",
+    "Blender & Unreal Engine Content",
+    "TouchDesigner Interactive Programming"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is 3D Animation & Motion Capture?",
+      "content": "3D animation for live events is content that moves with purpose — characters, particles, simulations, and rendered worlds built to play on screens, projections, and LED walls. Motion capture takes it further: cameras and depth sensors track a real person's body and translate it into a digital performance in real time.\n\nYou need these tools whenever the experience should respond to the people inside it. An AR mirror that mirrors your movements, a flock of fish that scatters when you reach toward it, an avatar minted from your own body scan — these moments feel like magic to guests, and they're powered by motion capture pipelines and real-time 3D engines.\n\nThe difference between a gimmick and a memory is craft. Tracking has to be fast and stable, animation has to feel alive, and the system has to run flawlessly for hours of continuous foot traffic. That's the work we do."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Interactive AR mirrors and photo moments",
+        "Motion-driven digital avatars",
+        "Branded 3D content for LED and projection",
+        "Body scanning for digital collectibles",
+        "Gesture-controlled installations",
+        "Character animation for launches and exhibitions"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "We build the full pipeline: character and asset creation in Blender and Unreal Engine, real-time interactive programming in TouchDesigner, motion capture with Microsoft Kinect Azure, and AI and computer vision algorithms for gesture and body tracking. Deliverables range from rendered 3D content for screens and projections to fully interactive systems where guests' movements drive the animation live, complete with shareable digital takeaways.\n\nFor Adidas at Super Bowl 2020 in Miami, we built an AR mirror on a free-standing LED wall: Kinect Azure motion capture and AI computer vision tracked guests' bodies and drove a real-time physics simulation they could play with — every guest left with a digital takeaway. Our exhibition work for Netflix, including Disenchantment at Comic-Con in San Diego, applies the same animation and interactive discipline to fan-facing brand worlds. And for product launches like The Great Escape for Adidas in Los Angeles, we bring the same motion and 3D craft to experiential moments built around a product story."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Creative Brief — We define the interaction, characters, and emotional goal",
+        "2. Asset & Character Development — 3D models, rigs, and animation built to spec",
+        "3. Tracking & Interaction Build — Motion capture, computer vision, and sensor integration",
+        "4. Real-Time Testing — Latency, tracking stability, and throughput tuned with real users",
+        "5. Deployment — Hardware and software installed and calibrated on site",
+        "6. Live Operation — Staffed operation and monitoring for the full event run"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Kinect Azure motion-capture AR mirror built for Adidas at Super Bowl 2020",
+        "Real-time physics and AI computer vision in guest-facing installations",
+        "Interactive exhibition work for Netflix at Comic-Con",
+        "Full in-house pipeline: Blender, Unreal Engine, TouchDesigner, sensors",
+        "Systems engineered for hours of continuous guest traffic",
+        "Every interactive moment designed to be shareable"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Do guests need to wear anything for motion capture?",
+          "answer": "No. We use markerless depth-sensing systems like Microsoft Kinect Azure, so guests simply walk up and move — no suits, markers, or setup."
+        },
+        {
+          "question": "Can the animation match our brand's existing 3D assets?",
+          "answer": "Yes. We can adapt your existing models and style guides, or create new characters and worlds from scratch to match your campaign."
+        },
+        {
+          "question": "How many people can use an interactive installation per hour?",
+          "answer": "It depends on the interaction length, but our systems are designed for continuous traffic — experiences typically cycle in 30–90 seconds, and we design queue-friendly formats for busy events."
+        },
+        {
+          "question": "Do guests get something to take home?",
+          "answer": "Usually, yes. We build digital takeaways — photos, clips, or avatar content — into most interactive systems, delivered by email, QR code, or on-screen share."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    },
+    {
+      "title": "Disenchantment",
+      "slug": "/work/disenchantment"
+    },
+    {
+      "title": "The Great Escape",
+      "slug": "/work/the-great-escape"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+    "galleryImages": [
+      "/images/deck/disenchantment/02-image82.jpg",
+      "/images/verified/work/the-great-escape/the_great_escape_preview.jpg"
+    ]
+  }
+}

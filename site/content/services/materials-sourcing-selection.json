@@ -1,0 +1,125 @@
+{
+  "title": "Materials Sourcing & Selection",
+  "slug": "/services/materials-sourcing-selection",
+  "seo": {
+    "title": "Materials Sourcing & Selection",
+    "description": "Materials sourcing and selection for experiential builds — Beatrox specs substrates, finishes, and hardware that balance look, durability, budget, and schedule.",
+    "og": {
+      "title": "Materials Sourcing & Selection | BEATROX",
+      "description": "The right substrate, finish, and hardware for every build — sourced and specified by Beatrox for look, durability, budget, and schedule.",
+      "image": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Materials Sourcing & Selection",
+    "subheadline": "The right material makes the build. Beatrox sources and specifies substrates, finishes, and hardware that hit the look, survive the environment, and respect the budget.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Build",
+  "capabilities": [
+    "Substrate & Sheet Goods Specification",
+    "Finish, Paint & Surface Systems",
+    "LED, Display & Optics Sourcing",
+    "Hardware, Fasteners & Rigging Rated Components",
+    "Specialty & Sustainable Material Options",
+    "Vendor & Supplier Network Management",
+    "Sample, Mockup & Prototype Review",
+    "Logistics, Lead-Time & Budget Planning"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Materials Sourcing & Selection?",
+      "content": "Materials sourcing and selection is the unglamorous discipline that quietly decides whether a build succeeds: choosing the substrates, finishes, display hardware, and specialty components a design will actually be made from — and getting them to the shop on time and on budget. It's equal parts aesthetics, engineering, and procurement.\n\nYou need deliberate materials work whenever a build faces real constraints: outdoor weather, dense public traffic, fire codes, camera close-ups, aggressive timelines, or a budget that has to stretch. The wrong panel, coating, or lens can blow a schedule or cheapen the entire experience; the right one is invisible because everything just works.\n\nAn experienced production team carries a mental library — and a supplier network — built from hundreds of builds. We know which materials survive a festival crowd, which finishes read best under LED light, and where the money is worth spending versus saving."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Outdoor and festival-rated builds",
+        "High-traffic public installations",
+        "Projection and LED display surfaces",
+        "Flame-rated and code-compliant interiors",
+        "Reflective, mirrored, and optical finishes",
+        "Sustainable and reusable material programs",
+        "Fast-turnaround event sourcing"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Beatrox handles materials as a first-class part of the build process: specification during design, sourcing through our supplier network, sample and mockup review, and logistics planning around lead times. We spec everything from structural substrates and surface finishes to display panels, optical films, and rated rigging hardware — always balancing look, durability, compliance, and cost.\n\nThe results show in our builds. For Super Bowl 2020 at Ampersand Studios in Miami, we transformed the venue into Adidas's VIP headquarters with projection-mapped architecture and a free-standing LED wall — work that depends on sourcing the right display hardware and surface treatments so mapped content reads cleanly across real materials. For Create Our Future at Mack Sennett Studio, produced for Urban Outfitters x Adidas, the centerpiece was a 270-degree Cyclone Wall — a wraparound scenic surface that had to take projection beautifully while touring through a live concert environment with performances including Phantogram. And for Destination in San Diego, built for Journey's x Adidas, we sourced and engineered a 40-foot canvas skin system paired with mechanical valves and paint delivery hardware — specialty components selected to perform outdoors, in public, all event long."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Requirements Review — We define the environment, codes, lifespan, and budget constraints",
+        "2. Specification — Materials and hardware are selected and documented against the design",
+        "3. Sourcing & Quoting — We leverage our supplier network for pricing, availability, and lead times",
+        "4. Samples & Mockups — Critical finishes and surfaces are reviewed physically before commitment",
+        "5. Procurement & Logistics — Orders are timed to the build schedule, with alternates on standby",
+        "6. On-Site Verification — Materials are checked at install so the finished build matches the spec"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Materials decisions proven at Super Bowl scale for Adidas in Miami",
+        "Projection-surface expertise — from the Create Our Future Cyclone Wall to mapped architecture",
+        "Specialty sourcing for one-of-a-kind systems like Destination's outdoor canvas and paint hardware",
+        "A supplier network built over years of experiential production",
+        "Budget fluency — we know where premium materials matter and where they don't",
+        "Sourcing integrated with design and fabrication, so specs are buildable by definition"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can you source materials for outdoor events?",
+          "answer": "Yes. We spec weather-rated substrates, finishes, and hardware for outdoor builds — like Destination's 40-foot canvas structure, which had to perform outdoors at Horton Plaza Park through the entire event."
+        },
+        {
+          "question": "Do you offer sustainable or reusable material options?",
+          "answer": "We do. We can spec recyclable substrates, reusable modular systems, and low-waste finish options — and we'll be honest about the tradeoffs in cost, weight, and durability."
+        },
+        {
+          "question": "How do you handle long-lead or specialty items?",
+          "answer": "We flag long-lead materials during design, order them first, and always identify approved alternates. Sourcing risk is managed in the schedule, not discovered during the build."
+        },
+        {
+          "question": "Can you work within a strict materials budget?",
+          "answer": "Absolutely. Value engineering is part of the job — we know where premium materials change the outcome and where a smart substitution saves money without anyone noticing."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    },
+    {
+      "title": "Create Our Future",
+      "slug": "/work/create-our-future"
+    },
+    {
+      "title": "Destination",
+      "slug": "/work/destination"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+    "galleryImages": [
+      "/images/verified/work/create-our-future/IMG_2959-154e3954.jpg",
+      "/images/portfolio/destination/IMG_9610.jpg",
+      "/images/deck/create-our-future/03-image91.jpg"
+    ]
+  }
+}

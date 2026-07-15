@@ -1,0 +1,124 @@
+{
+  "title": "Engineering Certification",
+  "slug": "/services/engineering-certification",
+  "seo": {
+    "title": "Engineering Certification",
+    "description": "Beatrox delivers engineering certification for event structures and experiential builds — load analysis, stamped drawings, and venue-ready safety documentation.",
+    "og": {
+      "title": "Engineering Certification | BEATROX",
+      "description": "Structural analysis, load calculations, and stamped engineering documents that get ambitious builds approved and safely installed.",
+      "image": "/images/portfolio/aku-world/WideShot.jpeg"
+    }
+  },
+  "hero": {
+    "headline": "Engineering Certification",
+    "subheadline": "Structural analysis and stamped engineering documentation that gets ambitious builds approved — and keeps them safe in the real world.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Technical",
+  "capabilities": [
+    "Structural Load Analysis",
+    "Stamped Engineering Drawings",
+    "Rigging & Suspension Calculations",
+    "Wind & Environmental Load Review",
+    "Venue & Authority Submittal Packages",
+    "Temporary Structure Certification",
+    "Load Specification Documentation",
+    "Safety Standards Compliance"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Engineering Certification?",
+      "content": "Engineering certification is the formal verification that a structure is safe to build, suspend, and stand in front of an audience. A licensed engineer reviews the design — its materials, connections, loads, and the forces it will see from rigging, crowds, weather, and its own weight — and stamps drawings that venues, fire marshals, and insurers require before they'll let anything go up.\n\nYou need engineering certification whenever a build goes beyond off-the-shelf: custom-fabricated scenic, flown elements, tall freestanding structures, outdoor festival builds, or anything a venue's operations team asks questions about. Many venues and municipalities won't approve a load-in without stamped documents, and discovering that late is one of the most expensive surprises in production.\n\nCertification isn't a hurdle to clear — it's design input. When engineering thinking starts early, structures get lighter, rigging gets simpler, and approvals get faster."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Custom-fabricated stage and scenic elements",
+        "Flown and rigged structures over audiences",
+        "Outdoor festival builds exposed to wind",
+        "Large-scale brand installations and sculptures",
+        "Touring set pieces with repeated assembly",
+        "Venue-mandated structural submittals",
+        "Permanent installations in public spaces"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "BEATROX manages the full certification path: we prepare the calculation packages and drawing sets, coordinate with licensed engineers, and deliver stamped documents in the format venues and authorities expect. Because our drafters, fabricators, and technical directors sit in the same shop, the certified design is the same design that gets built — no translation losses between engineering intent and shop reality.\n\nWe've engineered structures for demanding environments. On AKU World for AKU + FTX in New York, the build included a custom-fabricated large-scale helmet installation alongside projection-mapped rooms and holographic displays — structural elements that had to be documented and safe for a public event. The Infinite Playlist Tour for Amazon Music Live deployed custom builds at Outside Lands and Stagecoach, where outdoor festival structures face wind and weather loads that must be calculated, not guessed. And at Super Bowl 2020, we transformed Ampersand Studios in Miami into an immersive Adidas VIP headquarters, where every suspended and freestanding element in a guest-filled venue needed to be engineered and approved."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Design Review — We assess the concept for structural risk and certification scope",
+        "2. Load Analysis — Dead, live, rigging, and environmental loads are calculated",
+        "3. Documentation — Calculation packages and detail drawings are prepared for review",
+        "4. Engineer Coordination — A licensed engineer reviews, stamps, and signs off",
+        "5. Submittal — Stamped packages go to venues, fire marshals, and authorities",
+        "6. Build Verification — On-site checks confirm the build matches the approved documents"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Custom large-scale fabrication engineered for AKU World's helmet installation in New York",
+        "Outdoor-rated build experience from the Infinite Playlist Tour at Outside Lands and Stagecoach",
+        "Venue-approved structures for the Adidas VIP headquarters at Super Bowl 2020 in Miami",
+        "Design, drafting, fabrication, and engineering under one roof — no handoff gaps",
+        "Stamped documentation packages formatted for venue and authority submittal",
+        "Engineering considered from concept stage, not bolted on at the end"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Does every custom build need an engineering stamp?",
+          "answer": "Not every one — but most venues require stamped documents for flown elements, tall freestanding structures, and anything over or near an audience. We'll tell you early what's required for your specific venue and jurisdiction."
+        },
+        {
+          "question": "How long does engineering certification take?",
+          "answer": "It depends on complexity, but plan on two to four weeks from final drawings to stamped documents. Starting engineering review during design development — not after fabrication — is the single biggest schedule saver."
+        },
+        {
+          "question": "Can you certify a structure designed by someone else?",
+          "answer": "Yes. We regularly take designs from agencies and fabrication shops, develop the calculation and drawing packages, and coordinate the stamping with licensed engineers."
+        },
+        {
+          "question": "Do you handle outdoor and wind-load certification?",
+          "answer": "We do. Outdoor builds — like festival structures — require wind and environmental load analysis, and we prepare those calculations as part of the certification package."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    },
+    {
+      "title": "Infinite Playlist Tour",
+      "slug": "/work/infinite-playlist"
+    },
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/portfolio/aku-world/WideShot.jpeg",
+    "galleryImages": [
+      "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg",
+      "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
+    ]
+  }
+}

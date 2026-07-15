@@ -1,0 +1,124 @@
+{
+  "title": "Technical Direction",
+  "slug": "/services/technical-direction",
+  "seo": {
+    "title": "Technical Direction",
+    "description": "Beatrox provides technical direction for events and experiential builds — system design, crew leadership, and on-site show calling from Portland to anywhere.",
+    "og": {
+      "title": "Technical Direction | BEATROX",
+      "description": "Senior technical directors who own every system on your show — from drawings and budgets to load-in, show calling, and strike.",
+      "image": "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Technical Direction",
+    "subheadline": "One accountable lead for every technical system on your show — translating creative vision into buildable, safe, on-time reality.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Technical",
+  "capabilities": [
+    "Technical System Design & Specification",
+    "Cross-Discipline Crew Leadership",
+    "Vendor & Equipment Coordination",
+    "Load-In, Show & Strike Management",
+    "Power, Rigging & Signal Flow Planning",
+    "Show Calling & Cue Management",
+    "Budget & Schedule Oversight",
+    "On-Site Problem Solving"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Technical Direction?",
+      "content": "Technical direction is the discipline of turning a creative concept into a working production. A technical director (TD) sits between the design team and the build crew, owning every technical system on a project — audio, video, lighting, projection, rigging, power, networking, and interactive technology — and making sure they all work together, on budget, on schedule, and safely.\n\nYou need technical direction whenever a project has more moving parts than one person can track: multiple vendors, custom-fabricated elements, complex signal flow, or a venue with real constraints. The TD reads the drawings, questions the assumptions, coordinates the departments, and makes the hundreds of small decisions that determine whether load-in takes eight hours or eighteen.\n\nGood technical direction is invisible when it works. The show opens on time, the systems behave, and the creative team never has to think about the infrastructure underneath their vision. That invisibility is earned in pre-production — long before the first truck arrives."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Brand activations and experiential pop-ups",
+        "Broadcast and media events with live audiences",
+        "Projection-mapped buildings and large-format displays",
+        "Touring concert and festival productions",
+        "Corporate keynotes and product launches",
+        "Permanent installations and museum exhibits",
+        "Multi-room immersive environments"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "BEATROX technical directors arrive with a complete picture of your show: system designs, equipment schedules, power and rigging plots, crew assignments, and a production calendar that every vendor works from. We lead advance site surveys, run technical rehearsals, and call the show on event day — one voice on comms keeping lighting, video, audio, and scenic moving as a single system.\n\nOur directors have held technical authority on productions at real scale. On CNN: Road to 270, we worked with CNN and Obscura Digital to deliver a projection-mapped, interactive experience on the Empire State Building — coordinating creative technology and production workflows on one of the most scrutinized buildings in the world. For BuzzFeed's NewFronts at Moynihan Station, our team directed a custom-built stage with projection mapping, individually mapped orbs, media server programming, and full lighting design. And on Projekt X for Adriatique's worldwide 'X Future' tour, we directed the technical integration of a custom-fabricated, pixel- and laser-mappable stage element built to tour in any orientation."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Discovery — We review the creative brief, venue, budget, and timeline with your team",
+        "2. Technical Design — We spec systems, produce drawings, and identify risks early",
+        "3. Pre-Production — Vendors booked, crew assigned, schedules and load-in plans issued",
+        "4. Site Advance & Load-In — We survey the venue, then lead every department through build",
+        "5. Rehearsal & Show — Technical rehearsals, cue refinement, and show calling on event day",
+        "6. Strike & Wrap — Safe, efficient strike plus a post-event technical debrief"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Technical leadership on CNN: Road to 270 at the Empire State Building with Obscura Digital",
+        "Full technical direction of BuzzFeed's NewFronts production at Moynihan Station",
+        "Touring-grade direction on Projekt X, built for Adriatique's worldwide tour",
+        "One team covering design, build, and technical — no handoff gaps between disciplines",
+        "Portland-based with nationwide and international project experience",
+        "Directors who can design the system, not just operate it"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What's the difference between a technical director and a production manager?",
+          "answer": "The production manager owns schedule, budget, and logistics. The technical director owns the systems — how audio, video, lighting, rigging, and interactive tech are designed, integrated, and operated. On complex shows you need both, and they work as a pair."
+        },
+        {
+          "question": "When should we bring a technical director into the project?",
+          "answer": "As early as possible — ideally at concept stage. A TD involved early can flag unbuildable ideas, right-size the technical budget, and shape the design around the venue before money is spent on revisions."
+        },
+        {
+          "question": "Can you provide technical direction without handling the full production?",
+          "answer": "Yes. We frequently embed a technical director into a client's existing production team, leading the technical departments while your producers run the overall show."
+        },
+        {
+          "question": "Do your technical directors travel?",
+          "answer": "Absolutely. We're based in Portland, OR, but our directors have led productions in New York, Los Angeles, Miami, Zurich, and beyond — wherever the show is."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "CNN: Road to 270",
+      "slug": "/work/cnn-road-to-270"
+    },
+    {
+      "title": "BuzzFeed NewFronts",
+      "slug": "/work/buzzfeed"
+    },
+    {
+      "title": "Projekt X",
+      "slug": "/work/projekt-x"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg",
+    "galleryImages": [
+      "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-703a6f28.jpg",
+      "/images/deck/projekt-x/01-image46.jpg"
+    ]
+  }
+}
