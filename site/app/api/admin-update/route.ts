@@ -1,9 +1,36 @@
 import { NextResponse } from 'next/server'
 import { headers as getHeaders } from 'next/headers'
+import { revalidatePath } from 'next/cache'
 import { getPayload } from 'payload'
 import payloadConfig from '@/payload.config'
 
 export const dynamic = 'force-dynamic'
+
+function revalidateDocument(collection: string, doc: Record<string, unknown>) {
+  try {
+    const slug = typeof doc.slug === 'string' ? doc.slug : ''
+    if (!slug) return
+
+    if (collection === 'pages') {
+      revalidatePath(slug === 'home' ? '/' : `/${slug}`)
+      return
+    }
+
+    const prefixMap: Record<string, string> = {
+      projects: '/work',
+      services: '/services',
+      team: '/team',
+    }
+
+    const prefix = prefixMap[collection]
+    if (prefix) {
+      revalidatePath(`${prefix}/${slug}`)
+    }
+  } catch (err) {
+    // Don't fail the update if revalidation throws.
+    console.error('Revalidation failed:', err)
+  }
+}
 
 function getTopLevelField(path: string): string {
   return path.split('.')[0]
@@ -74,6 +101,8 @@ export async function PATCH(request: Request) {
         [topLevelField]: updateData[topLevelField],
       },
     })
+
+    revalidateDocument(collection, updated as Record<string, unknown>)
 
     return NextResponse.json({ success: true, doc: updated })
   } catch (error) {
