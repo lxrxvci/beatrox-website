@@ -3,14 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import CTASection from '@/components/CTASection'
-import { getProjectsByTag, getProjectTags, normalizeProjectTag } from '@/lib/json-content'
+import { normalizeProjectTag } from '@/lib/json-content'
+import { getProjectsByTagResolved, getProjectTagsResolved } from '@/lib/content'
+
+export const revalidate = 300
 
 interface Props {
   params: Promise<{ tag: string }>
 }
 
-export function generateStaticParams() {
-  return getProjectTags().map((tag) => ({ tag }))
+export async function generateStaticParams() {
+  const tags = await getProjectTagsResolved()
+  return tags.map((tag) => ({ tag }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -46,7 +50,7 @@ export default async function WorkTagPage({ params }: Props) {
   const normalizedTag = normalizeProjectTag(tag)
   if (!normalizedTag) notFound()
 
-  const projects = getProjectsByTag(normalizedTag)
+  const projects = await getProjectsByTagResolved(normalizedTag)
   if (projects.length === 0) notFound()
 
   const heroImage =

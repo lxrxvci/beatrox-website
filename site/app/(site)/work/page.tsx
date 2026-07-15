@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { getAllProjects, getProjectSlugs, getProjectTags, getWorkIndex, normalizeProjectSlug } from '@/lib/json-content'
+import { getWorkIndex, normalizeProjectSlug } from '@/lib/json-content'
+import { getAllProjectsResolved, getProjectSlugsResolved, getProjectTagsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import ParallaxHero from '@/components/ParallaxHero'
@@ -14,14 +15,16 @@ function humanize(tag: string) {
     .join(' ')
 }
 
+export const revalidate = 300
+
 export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getWorkIndex().seo)
 }
 
-export default function WorkPage() {
-  const projects = getAllProjects()
-  const slugs = getProjectSlugs()
-  const tags = getProjectTags()
+export default async function WorkPage() {
+  const projects = await getAllProjectsResolved()
+  const slugs = await getProjectSlugsResolved()
+  const tags = await getProjectTagsResolved()
   const projectsBySlug = new Map(projects.map((project) => [project.canonicalSlug, project]))
   const normalizedSlugs = slugs.map((slug) => normalizeProjectSlug(slug))
   const rows = normalizedSlugs

@@ -1,13 +1,15 @@
 import type { MetadataRoute } from 'next'
-import { getProjectSlugs, getProjectTags, getServiceSlugs } from '@/lib/json-content'
+import { getProjectSlugsResolved, getProjectTagsResolved, getServiceSlugsResolved } from '@/lib/content'
 import { readManifest } from '@/lib/youtube/storage'
 
 const BASE_URL = 'https://www.beatrox.com'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const projectSlugs = getProjectSlugs()
-  const projectTags = getProjectTags()
-  const serviceSlugs = getServiceSlugs()
+export const revalidate = 300
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const projectSlugs = await getProjectSlugsResolved()
+  const projectTags = await getProjectTagsResolved()
+  const serviceSlugs = await getServiceSlugsResolved()
   const videoManifest = readManifest()
 
   const rootPages: MetadataRoute.Sitemap = [
