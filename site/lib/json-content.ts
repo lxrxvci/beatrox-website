@@ -167,14 +167,33 @@ export interface WorkIndexContent extends SeoContentPage {}
 export interface ServicesIndexContent extends SeoContentPage {}
 
 export interface CMSPageBlock {
-  blockType: 'text' | 'gallery' | 'features' | 'cta' | 'video'
+  blockType:
+    | 'intro'
+    | 'text'
+    | 'gallery'
+    | 'features'
+    | 'capabilitiesGrid'
+    | 'philosophy'
+    | 'featuredWork'
+    | 'cta'
+    | 'video'
+    | 'ctaBar'
   heading?: string
   body?: unknown
   images?: Array<{ id?: string; url?: string; alt?: string }>
-  items?: Array<{ label: string }>
+  items?: Array<{ label?: string; icon?: string; title?: string; body?: unknown }>
+  columns?: Array<{ heading?: string; body?: unknown }>
+  projects?: Array<{
+    slug?: string
+    title?: string
+    hero?: { tags?: string[] }
+    images?: Array<{ url?: string; alt?: string }>
+    seo?: { og?: { image?: string } }
+  }>
   label?: string
   url?: string
   provider?: 'youtube' | 'vimeo' | 'instagram' | 'external'
+  cta?: { label?: string; url?: string }
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

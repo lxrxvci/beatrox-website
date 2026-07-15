@@ -84,6 +84,7 @@ export interface FAQBlock {
 export type ServiceBodyBlock = BodyBlock | TrustBlock | ProcessBlock | FAQBlock
 
 export interface Project {
+  id: string
   title: string
   slug: string
   canonicalSlug: string
@@ -107,6 +108,7 @@ export interface Project {
     partners: string[]
   }
   body: BodyBlock[]
+  contentBlocks?: CMSPageBlock[]
   images: ProjectImage[]
   videos?: VideoEmbed[]
 }
@@ -114,6 +116,7 @@ export interface Project {
 export interface CaseStudy extends Project {}
 
 export interface Service {
+  id: string
   title: string
   slug: string
   seo: SeoMeta
@@ -125,6 +128,7 @@ export interface Service {
   category: string
   capabilities: string[]
   body: ServiceBodyBlock[]
+  contentBlocks?: CMSPageBlock[]
   relatedWork: { title: string; slug: string }[]
   media?: {
     heroImage?: string
@@ -351,12 +355,89 @@ function extractProjectTags(doc: Record<string, unknown>): string[] {
   return uniqueStrings([...projectTags, ...heroTags])
 }
 
-function resolveCmsMediaUrl(media: unknown): string | undefined {
+export function resolveCmsMediaUrl(media: unknown): string | undefined {
   if (!media || typeof media !== 'object') return undefined
   const doc = media as { legacyUrl?: string; url?: string }
   if (doc.legacyUrl) return doc.legacyUrl
   if (doc.url) return doc.url
   return undefined
+}
+
+function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
+  return {
+    blockType: String(block.blockType || '') as CMSPageBlock['blockType'],
+    heading: block.heading ? String(block.heading) : undefined,
+    body: block.body,
+    images: Array.isArray(block.images)
+      ? block.images.map((img: unknown) => {
+          if (!img || typeof img !== 'object') return { url: '' }
+          const image = img as Record<string, unknown>
+          return {
+            id: image.id ? String(image.id) : undefined,
+            url: resolveCmsMediaUrl(image) || String(image.url || ''),
+            alt: image.alt ? String(image.alt) : undefined,
+          }
+        })
+      : undefined,
+    items: Array.isArray(block.items)
+      ? block.items.map((item: unknown) => {
+          if (!item || typeof item !== 'object') return { label: '' }
+          const row = item as Record<string, unknown>
+          return {
+            label: row.label ? String(row.label) : undefined,
+            icon: row.icon ? String(row.icon) : undefined,
+            title: row.title ? String(row.title) : undefined,
+            body: row.body,
+          }
+        })
+      : undefined,
+    columns: Array.isArray(block.columns)
+      ? block.columns.map((col: unknown) => {
+          if (!col || typeof col !== 'object') return { heading: '' }
+          const row = col as Record<string, unknown>
+          return {
+            heading: row.heading ? String(row.heading) : undefined,
+            body: row.body,
+          }
+        })
+      : undefined,
+    projects: Array.isArray(block.projects)
+      ? block.projects.map((project: unknown) => {
+          if (!project || typeof project !== 'object') return {}
+          const doc = project as Record<string, unknown>
+          return {
+            slug: doc.slug ? String(doc.slug) : undefined,
+            title: doc.title ? String(doc.title) : undefined,
+            hero: doc.hero as Record<string, unknown> | undefined,
+            images: Array.isArray(doc.images)
+              ? doc.images.map((img: unknown) => {
+                  if (!img || typeof img !== 'object') return {}
+                  const image = img as Record<string, unknown>
+                  return {
+                    url: resolveCmsMediaUrl(image) || String(image.url || ''),
+                    alt: image.alt ? String(image.alt) : undefined,
+                  }
+                })
+              : undefined,
+            seo: doc.seo as Record<string, unknown> | undefined,
+          }
+        })
+      : undefined,
+    label: block.label ? String(block.label) : undefined,
+    url: block.url ? String(block.url) : undefined,
+    provider: (block.provider as CMSPageBlock['provider']) || undefined,
+    cta:
+      block.cta && typeof block.cta === 'object'
+        ? {
+            label: (block.cta as Record<string, unknown>).label
+              ? String((block.cta as Record<string, unknown>).label)
+              : undefined,
+            url: (block.cta as Record<string, unknown>).url
+              ? String((block.cta as Record<string, unknown>).url)
+              : undefined,
+          }
+        : undefined,
+  }
 }
 
 function mapCmsProject(doc: Record<string, unknown>): Project {
@@ -371,6 +452,7 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
   })
 
   return {
+    id: String(doc.id || ''),
     title: String(doc.title || ''),
     slug: normalizeProjectSlug(String(doc.slug || '')),
     canonicalSlug: normalizeProjectSlug(String(doc.slug || '')),
@@ -410,6 +492,9 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
       content: block.content ? String(block.content) : undefined,
       items: asArray<Record<string, unknown>>(block.items).map((item) => String(item.value || '')).filter(Boolean),
     })),
+    contentBlocks: asArray<Record<string, unknown>>(doc.contentBlocks).map((block) =>
+      mapCmsContentBlock(block),
+    ) as CMSPageBlock[],
     images: images.filter((row) => row.url),
     videos: asArray<Record<string, unknown>>(doc.videos).map((video) => ({
       title: String(video.title || 'Video'),
@@ -423,6 +508,7 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
 
 function mapCmsService(doc: Record<string, unknown>): Service {
   return {
+    id: String(doc.id || ''),
     title: String(doc.title || ''),
     // JSON service files carry the route-prefixed form ("/services/<slug>"); match it exactly.
     slug: `/services/${normalizeServiceSlug(String(doc.slug || ''))}`,
@@ -467,6 +553,9 @@ function mapCmsService(doc: Record<string, unknown>): Service {
         items: asArray<Record<string, unknown>>(block.items).map((item) => String(item.value || '')).filter(Boolean),
       }
     }),
+    contentBlocks: asArray<Record<string, unknown>>(doc.contentBlocks).map((block) =>
+      mapCmsContentBlock(block),
+    ) as CMSPageBlock[],
     relatedWork: asArray<Record<string, unknown>>(doc.relatedWork).map((row) => ({
       title: String(row.title || ''),
       slug: String(row.slug || ''),
@@ -955,13 +1044,29 @@ export async function getContactResolved(): Promise<ReturnType<typeof getContact
 }
 
 export interface CMSPageBlock {
-  blockType: 'intro' | 'text' | 'gallery' | 'features' | 'capabilitiesGrid' | 'philosophy' | 'featuredWork' | 'cta' | 'video' | 'ctaBar'
+  blockType:
+    | 'intro'
+    | 'text'
+    | 'gallery'
+    | 'features'
+    | 'capabilitiesGrid'
+    | 'philosophy'
+    | 'featuredWork'
+    | 'cta'
+    | 'video'
+    | 'ctaBar'
   heading?: string
   body?: unknown
-  images?: unknown
-  items?: Array<{ label?: string; icon?: string; title?: string; body?: string }>
-  columns?: Array<{ heading?: string; body?: string }>
-  projects?: unknown
+  images?: Array<{ id?: string; url?: string; alt?: string }>
+  items?: Array<{ label?: string; icon?: string; title?: string; body?: unknown }>
+  columns?: Array<{ heading?: string; body?: unknown }>
+  projects?: Array<{
+    slug?: string
+    title?: string
+    hero?: { tags?: string[] }
+    images?: Array<{ url?: string; alt?: string }>
+    seo?: { og?: { image?: string } }
+  }>
   label?: string
   url?: string
   provider?: 'youtube' | 'vimeo' | 'instagram' | 'external'
@@ -969,6 +1074,7 @@ export interface CMSPageBlock {
 }
 
 export interface CMSPageData {
+  id: string
   title: string
   slug: string
   hero?: {
@@ -1104,6 +1210,45 @@ export async function getSeoDefaults(): Promise<SeoDefaultsSettings> {
   }
 }
 
+export async function getCMSPageSlugs(): Promise<string[]> {
+  try {
+    const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
+    const result = await payload.find({
+      collection: 'pages',
+      where: preview
+        ? {
+            slug: {
+              not_equals: 'home',
+            },
+          }
+        : {
+            slug: {
+              not_equals: 'home',
+            },
+            status: {
+              equals: 'published',
+            },
+            isEnabled: {
+              equals: true,
+            },
+          },
+      limit: 500,
+      select: {
+        slug: true,
+      },
+      draft: preview,
+    })
+
+    return (result.docs as Array<{ slug?: string }>)
+      .map((doc) => doc.slug)
+      .filter((slug): slug is string => typeof slug === 'string' && slug.length > 0)
+      .sort()
+  } catch {
+    return []
+  }
+}
+
 export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null> {
   try {
     const payload = await getPayloadClient()
@@ -1134,6 +1279,7 @@ export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null
 
     const page = result.docs[0] as unknown as
       | {
+          id: string
           title: string
           slug: string
           hero?: CMSPageData['hero']
@@ -1145,6 +1291,7 @@ export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null
     if (!page) return null
 
     return {
+      id: page.id,
       title: page.title,
       slug: page.slug,
       hero: page.hero,

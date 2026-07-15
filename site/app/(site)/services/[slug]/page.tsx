@@ -8,6 +8,7 @@ import JsonLd from '@/components/JsonLd'
 import { buildServiceSchema } from '@/lib/schema'
 import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
+import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 
 export const revalidate = 300
 
@@ -172,6 +173,11 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* WYSIWYG Content Blocks */}
+      {service.contentBlocks && service.contentBlocks.length > 0 && (
+        <CMSBlockRenderer blocks={service.contentBlocks} collection="services" documentId={service.id} />
+      )}
 
       {/* Related Work — example cards cited from past projects */}
       {relatedProjects.length > 0 && (

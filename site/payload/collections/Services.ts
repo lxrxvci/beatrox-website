@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { contentBlocks } from '../blocks/shared'
 import { getLivePath, getPreviewPath } from '../utils/previewLinks'
 
 function slugify(value: string): string {
@@ -146,6 +147,9 @@ export const Services: CollectionConfig = {
       name: 'body',
       type: 'array',
       labels: { singular: 'Body Block', plural: 'Body Blocks' },
+      admin: {
+        description: 'Deprecated — use Content Blocks below.',
+      },
       fields: [
         { name: 'type', type: 'text', required: true },
         { name: 'heading', type: 'text' },
@@ -160,6 +164,12 @@ export const Services: CollectionConfig = {
           ],
         },
       ],
+    },
+    {
+      name: 'contentBlocks',
+      type: 'blocks',
+      labels: { singular: 'Content Block', plural: 'Content Blocks' },
+      blocks: contentBlocks,
     },
     {
       name: 'relatedWork',

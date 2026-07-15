@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAboutResolved } from '@/lib/content'
+import { getAboutResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
+import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 
 export const revalidate = 300
 
@@ -14,11 +15,38 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function AboutPage() {
   const data = await getAboutResolved()
+  const cmsPage = await getCMSPageBySlug('about')
   const heroImage = data.media?.heroImage || '/og-default.jpg'
   const sectionImages = data.media?.sectionImages || []
   const story = data.sections.find((s) => s.type === 'text_block')
   const pillars = data.sections.find((s) => s.type === 'three_column')
   const capability = data.sections.find((s) => s.type === 'capabilities_summary')
+
+  if (cmsPage?.blocks && cmsPage.blocks.length > 0) {
+    return (
+      <article>
+        <section className="relative hero border-b border-white/10 overflow-hidden">
+          <Image
+            src={heroImage}
+            alt="About page hero"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/55 to-black/90" />
+          <div className="max-w-[1120px] mx-auto">
+            <p className="overline mb-4">About Us</p>
+            <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
+            <p className="text-base text-[var(--text-secondary)] mt-6 max-w-3xl leading-relaxed">
+              {data.hero.subheadline}
+            </p>
+          </div>
+        </section>
+        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} />
+      </article>
+    )
+  }
 
   return (
     <>

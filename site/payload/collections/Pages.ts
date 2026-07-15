@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { pageBlocks } from '../blocks/shared'
 import { getLivePath, getPreviewPath } from '../utils/previewLinks'
 
 function slugify(value: string): string {
@@ -341,129 +342,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'blocks',
       type: 'blocks',
-      blocks: [
-        {
-          slug: 'intro',
-          labels: { singular: 'Intro', plural: 'Intro Blocks' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            { name: 'body', type: 'richText', required: true },
-          ],
-        },
-        {
-          slug: 'text',
-          labels: { singular: 'Text', plural: 'Text Blocks' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            { name: 'body', type: 'richText', required: true },
-          ],
-        },
-        {
-          slug: 'gallery',
-          labels: { singular: 'Gallery', plural: 'Galleries' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            {
-              name: 'images',
-              type: 'upload',
-              relationTo: 'media',
-              hasMany: true,
-              required: true,
-            },
-          ],
-        },
-        {
-          slug: 'features',
-          labels: { singular: 'Features', plural: 'Feature Blocks' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            {
-              name: 'items',
-              type: 'array',
-              required: true,
-              fields: [{ name: 'label', type: 'text', required: true }],
-            },
-          ],
-        },
-        {
-          slug: 'capabilitiesGrid',
-          labels: { singular: 'Capabilities Grid', plural: 'Capabilities Grids' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            {
-              name: 'items',
-              type: 'array',
-              fields: [
-                { name: 'label', type: 'text', required: true },
-                { name: 'icon', type: 'text' },
-              ],
-            },
-          ],
-        },
-        {
-          slug: 'philosophy',
-          labels: { singular: 'Philosophy Columns', plural: 'Philosophy Column Blocks' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            {
-              name: 'columns',
-              type: 'array',
-              fields: [
-                { name: 'heading', type: 'text', required: true },
-                { name: 'body', type: 'textarea', required: true },
-              ],
-            },
-          ],
-        },
-        {
-          slug: 'featuredWork',
-          labels: { singular: 'Featured Work', plural: 'Featured Work Blocks' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            {
-              name: 'projects',
-              type: 'relationship',
-              relationTo: 'projects',
-              hasMany: true,
-            },
-          ],
-        },
-        {
-          slug: 'cta',
-          labels: { singular: 'CTA', plural: 'CTAs' },
-          fields: [
-            { name: 'heading', type: 'text', required: true },
-            { name: 'body', type: 'textarea' },
-            { name: 'label', type: 'text', required: true },
-            { name: 'url', type: 'text', required: true },
-          ],
-        },
-        {
-          slug: 'video',
-          labels: { singular: 'Video', plural: 'Videos' },
-          fields: [
-            { name: 'heading', type: 'text' },
-            { name: 'url', type: 'text', required: true },
-            { name: 'provider', type: 'select', defaultValue: 'external', options: ['youtube', 'vimeo', 'instagram', 'external'] },
-          ],
-        },
-        {
-          slug: 'ctaBar',
-          labels: { singular: 'CTA Bar', plural: 'CTA Bar Blocks' },
-          fields: [
-            { name: 'heading', type: 'text', required: true },
-            { name: 'body', type: 'textarea' },
-            {
-              name: 'cta',
-              type: 'group',
-              fields: [
-                { name: 'label', type: 'text', required: true },
-                { name: 'url', type: 'text', required: true },
-              ],
-            },
-          ],
-        },
-      ],
+      blocks: pageBlocks,
     },
   ],
 }

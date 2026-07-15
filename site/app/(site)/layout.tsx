@@ -5,6 +5,7 @@ import '../globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
+import { AdminEditProvider, AdminOverlay } from '@/components/admin'
 import JsonLd from '@/components/JsonLd'
 import { buildOrganizationSchema } from '@/lib/schema'
 import { Analytics } from '@vercel/analytics/react'
@@ -91,19 +92,22 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           <a href="#main-content" className="skip-link">
             Skip to content
           </a>
-          <SmoothScroll>
-            <Nav />
-            {/* Curtain wrapper: lifts to reveal the fixed footer on desktop */}
-            <main
-              id="main-content"
-              className="curtain-main relative z-10 bg-[var(--bg-primary)]"
-            >
-              {children}
-            </main>
-            <div className="curtain-footer lg:fixed lg:inset-x-0 lg:bottom-0 lg:z-0 lg:overflow-hidden">
-              <Footer />
-            </div>
-          </SmoothScroll>
+          <AdminEditProvider>
+            <SmoothScroll>
+              <Nav />
+              {/* Curtain wrapper: lifts to reveal the fixed footer on desktop */}
+              <main
+                id="main-content"
+                className="curtain-main relative z-10 bg-[var(--bg-primary)]"
+              >
+                {children}
+              </main>
+              <div className="curtain-footer lg:fixed lg:inset-x-0 lg:bottom-0 lg:z-0 lg:overflow-hidden">
+                <Footer />
+              </div>
+            </SmoothScroll>
+            <AdminOverlay />
+          </AdminEditProvider>
           <Analytics />
           {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
             <>

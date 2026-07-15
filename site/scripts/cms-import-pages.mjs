@@ -21,18 +21,34 @@ function normalizePageSlug(file, source) {
   return normalizeSlug(mapped || file.replace('.json', ''))
 }
 
+function toLexicalBody(value) {
+  if (!value) return undefined
+  if (typeof value === 'object' && value.root) return value
+  return toLexicalText(String(value))
+}
+
 async function mapSectionsToBlocks(source, token) {
   const sections = Array.isArray(source.sections) ? source.sections : []
   const blocks = await Promise.all(
     sections.map(async (section) => {
       const type = section.type || 'text_block'
+      if (type === 'intro') {
+        const body = toLexicalBody(section.body)
+        if (!body) return null
+        return {
+          blockType: 'intro',
+          heading: section.heading || '',
+          body,
+          cta: section.cta || undefined,
+        }
+      }
       if ((type === 'philosophy' || type === 'three_column') && Array.isArray(section.columns)) {
         return {
           blockType: 'philosophy',
           heading: section.heading || 'Philosophy',
           columns: section.columns.map((col) => ({
             heading: col.heading || '',
-            body: col.body || '',
+            body: toLexicalBody(col.body),
           })),
         }
       }
@@ -42,7 +58,7 @@ async function mapSectionsToBlocks(source, token) {
           heading: section.heading || 'Values',
           columns: section.items.map((item) => ({
             heading: item.title || item.heading || '',
-            body: item.body || '',
+            body: toLexicalBody(item.body),
           })),
         }
       }
@@ -76,7 +92,7 @@ async function mapSectionsToBlocks(source, token) {
         return {
           blockType: 'ctaBar',
           heading: section.heading || 'Ready to get started?',
-          body: section.body || '',
+          body: toLexicalBody(section.body),
           cta: { label: section.cta.label || 'Contact', url: section.cta.url || '/contact' },
         }
       }

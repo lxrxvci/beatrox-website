@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getHomepageResolved, getAllProjectsResolved } from '@/lib/content'
+import { getHomepageResolved, getAllProjectsResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import HeroMedia from '@/components/HeroMedia'
@@ -10,6 +10,7 @@ import BentoWorkGrid from '@/components/BentoWorkGrid'
 import CapabilitiesTicker from '@/components/CapabilitiesTicker'
 import Marquee from '@/components/Marquee'
 import MagneticButton from '@/components/MagneticButton'
+import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 
 export const revalidate = 300
 
@@ -35,6 +36,7 @@ const CAPABILITIES = [
 
 export default async function HomePage() {
   const data = await getHomepageResolved()
+  const cmsPage = await getCMSPageBySlug('home')
   const allProjects = await getAllProjectsResolved()
   const heroImage = data.media.heroImage || '/og-default.jpg'
   const galleryImages = data.media.galleryImages || []
@@ -45,6 +47,18 @@ export default async function HomePage() {
   const featured = featuredSlugs
     .map((slug) => ({ slug, project: projectsBySlug.get(slug) }))
     .filter((row): row is { slug: string; project: (typeof allProjects)[number] } => Boolean(row.project))
+
+  if (cmsPage?.blocks && cmsPage.blocks.length > 0) {
+    return (
+      <article>
+        <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
+          <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
+          <HomeHero />
+        </section>
+        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} />
+      </article>
+    )
+  }
 
   return (
     <>

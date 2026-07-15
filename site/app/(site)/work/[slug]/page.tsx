@@ -10,6 +10,7 @@ import ProjectGallery from '@/components/ProjectGallery'
 import MetadataSchematic from '@/components/MetadataSchematic'
 import KineticHeading from '@/components/KineticHeading'
 import NodeBullet from '@/components/NodeBullet'
+import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -125,6 +126,11 @@ export default async function ProjectPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* WYSIWYG Content Blocks */}
+      {project.contentBlocks && project.contentBlocks.length > 0 && (
+        <CMSBlockRenderer blocks={project.contentBlocks} collection="projects" documentId={project.id} />
+      )}
 
       {/* Gallery */}
       {validImages.length > 0 && (
