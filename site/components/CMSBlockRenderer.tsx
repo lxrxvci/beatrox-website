@@ -3,11 +3,22 @@ import Link from 'next/link'
 import type { CMSPageBlock } from '@/lib/json-content'
 import { LexicalReact, type LexicalNode } from '@/components/richtext'
 import { EditableRichText, EditableText } from '@/components/admin'
+import BentoWorkGrid from './BentoWorkGrid'
+
+interface BentoProjectInput {
+  slug: string
+  title: string
+  client?: string
+  tags?: string[]
+  image: string
+  alt?: string
+}
 
 interface Props {
   blocks: CMSPageBlock[]
   collection?: string
   documentId?: string
+  resolvedProjects?: BentoProjectInput[]
 }
 
 function hasLexicalRoot(value: unknown): value is { root: { children?: LexicalNode[] } } {
@@ -59,7 +70,7 @@ function renderEditableBody(
   )
 }
 
-export default function CMSBlockRenderer({ blocks, collection, documentId }: Props) {
+export default function CMSBlockRenderer({ blocks, collection, documentId, resolvedProjects }: Props) {
   return (
     <section className="border-t border-white/10">
       <div className="max-w-[1120px] mx-auto px-6 lg:px-10 py-16 space-y-20">
@@ -179,8 +190,24 @@ export default function CMSBlockRenderer({ blocks, collection, documentId }: Pro
           }
 
           if (block.blockType === 'featuredWork') {
-            const projects = block.projects
+            const projects = resolvedProjects && resolvedProjects.length > 0
+              ? resolvedProjects
+              : (block.projects as Array<{
+                  slug?: string
+                  title?: string
+                  hero?: { tags?: string[] }
+                  images?: Array<{ url?: string; alt?: string }>
+                  seo?: { og?: { image?: string } }
+                }> | undefined)
             if (!Array.isArray(projects) || projects.length === 0) return null
+            if (resolvedProjects) {
+              return (
+                <article key={key} className="space-y-6">
+                  {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
+                  <BentoWorkGrid projects={resolvedProjects} />
+                </article>
+              )
+            }
             return (
               <article key={key} className="space-y-6">
                 {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
