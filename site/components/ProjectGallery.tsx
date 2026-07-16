@@ -23,6 +23,7 @@ interface SizedImage extends GalleryImage {
 interface RowImage extends SizedImage {
   width: number
   height: number
+  fillWidth?: boolean
 }
 
 function getAspect(img: GalleryImage): number {
@@ -77,13 +78,19 @@ function buildRows(
   })
   if (row.length) rows.push(row)
 
-  // Scale each row to exactly fill the container width.
+  // Scale each row to fill the container width, but cap row height so a
+  // single very wide image doesn't create a giant row.
+  const absoluteMaxHeight = targetHeight * 1.35
   return rows.map((r) => {
-    const height = rowHeightFor(r, containerWidth, targetHeight, gap)
+    let height = rowHeightFor(r, containerWidth, targetHeight, gap)
+    const fillWidth = height <= absoluteMaxHeight
+    if (!fillWidth) height = absoluteMaxHeight
+
     return r.map((img) => ({
       ...img,
-      width: (height * img.aspect),
+      width: height * img.aspect,
       height,
+      fillWidth,
     }))
   })
 }
@@ -175,8 +182,8 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="flex"
-              style={{ gap: containerWidth < 640 ? 12 : 20 }}
+              className={`flex ${row.some((img) => !img.fillWidth) ? 'justify-center' : ''}`}
+              style={{ gap: containerWidth < 640 ? 8 : 14 }}
             >
               {row.map((img, i) => {
                 const index = rows.slice(0, rowIndex).reduce((sum, r) => sum + r.length, 0) + i
