@@ -33,6 +33,17 @@ function getAspect(img: GalleryImage): number {
   return 4 / 3
 }
 
+function rowHeightFor(
+  row: SizedImage[],
+  containerWidth: number,
+  targetHeight: number,
+  gap: number
+): number {
+  const totalWidth = row.reduce((sum, img) => sum + targetHeight * img.aspect, 0)
+  const totalGap = gap * (row.length - 1)
+  return totalWidth > 0 ? (targetHeight * (containerWidth - totalGap)) / totalWidth : targetHeight
+}
+
 function buildRows(
   images: SizedImage[],
   containerWidth: number,
@@ -41,36 +52,30 @@ function buildRows(
 ): RowImage[][] {
   if (!containerWidth || images.length === 0) return []
 
+  const minHeight = targetHeight * 0.62
   const rows: SizedImage[][] = []
   let row: SizedImage[] = []
-  let rowWidth = 0
 
-  // Group images into rows; start a new row once the row is ~75% full,
-  // but always allow at least one image per row.
   images.forEach((img) => {
-    const imgWidth = targetHeight * img.aspect
-    if (row.length > 0 && rowWidth + imgWidth > containerWidth * 0.75) {
+    const candidate = [...row, img]
+    const height = rowHeightFor(candidate, containerWidth, targetHeight, gap)
+
+    if (row.length > 0 && height < minHeight) {
       rows.push(row)
       row = [img]
-      rowWidth = imgWidth
     } else {
-      row.push(img)
-      rowWidth += imgWidth
+      row = candidate
     }
   })
   if (row.length) rows.push(row)
 
   // Scale each row to exactly fill the container width.
   return rows.map((r) => {
-    const totalWidth = r.reduce((sum, img) => sum + targetHeight * img.aspect, 0)
-    const totalGap = gap * (r.length - 1)
-    const scale = totalWidth > 0 ? (containerWidth - totalGap) / totalWidth : 1
-    const rowHeight = targetHeight * scale
-
+    const height = rowHeightFor(r, containerWidth, targetHeight, gap)
     return r.map((img) => ({
       ...img,
-      width: targetHeight * img.aspect * scale,
-      height: rowHeight,
+      width: (height * img.aspect),
+      height,
     }))
   })
 }
@@ -107,8 +112,8 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
 
   const rows = useMemo(() => {
     const isMobile = containerWidth < 640
-    const targetHeight = isMobile ? 180 : containerWidth < 1024 ? 240 : 320
-    const gap = isMobile ? 12 : 20
+    const targetHeight = isMobile ? 170 : containerWidth < 1024 ? 220 : 280
+    const gap = isMobile ? 10 : 16
     return buildRows(sizedImages, containerWidth, targetHeight, gap)
   }, [sizedImages, containerWidth])
 
