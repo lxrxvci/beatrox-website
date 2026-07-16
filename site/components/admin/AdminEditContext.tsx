@@ -39,8 +39,6 @@ export function AdminEditProvider({ children }: Props) {
     if (!value) setActiveField(null)
   }, [])
 
-  if (isAdmin === false) return <>{children}</>
-
   return (
     <AdminEditContext.Provider
       value={{
