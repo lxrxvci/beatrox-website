@@ -52,7 +52,8 @@ function buildRows(
 ): RowImage[][] {
   if (!containerWidth || images.length === 0) return []
 
-  const minHeight = targetHeight * 0.62
+  const minHeight = targetHeight * 0.82
+  const maxHeight = targetHeight * 1.18
   const rows: SizedImage[][] = []
   let row: SizedImage[] = []
 
@@ -60,12 +61,19 @@ function buildRows(
     const candidate = [...row, img]
     const height = rowHeightFor(candidate, containerWidth, targetHeight, gap)
 
-    if (row.length > 0 && height < minHeight) {
-      rows.push(row)
-      row = [img]
-    } else {
-      row = candidate
+    if (row.length > 0) {
+      if (height < minHeight) {
+        rows.push(row)
+        row = [img]
+        return
+      }
+      if (height > maxHeight && row.length >= 2) {
+        rows.push(row)
+        row = [img]
+        return
+      }
     }
+    row = candidate
   })
   if (row.length) rows.push(row)
 
@@ -112,8 +120,8 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
 
   const rows = useMemo(() => {
     const isMobile = containerWidth < 640
-    const targetHeight = isMobile ? 170 : containerWidth < 1024 ? 220 : 280
-    const gap = isMobile ? 10 : 16
+    const targetHeight = isMobile ? 150 : containerWidth < 1024 ? 195 : 240
+    const gap = isMobile ? 8 : 14
     return buildRows(sizedImages, containerWidth, targetHeight, gap)
   }, [sizedImages, containerWidth])
 
