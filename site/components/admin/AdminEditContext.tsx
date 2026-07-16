@@ -14,7 +14,15 @@ const AdminEditContext = createContext<AdminEditContextValue | null>(null)
 
 export function useAdminEdit() {
   const ctx = useContext(AdminEditContext)
-  if (!ctx) throw new Error('useAdminEdit must be used within AdminEditProvider')
+  if (!ctx) {
+    return {
+      isAdmin: false,
+      editMode: false,
+      setEditMode: () => {},
+      activeField: null,
+      setActiveField: () => {},
+    }
+  }
   return ctx
 }
 
