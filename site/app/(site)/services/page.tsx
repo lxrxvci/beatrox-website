@@ -118,42 +118,50 @@ export default async function ServicesPage() {
       </section>
 
       {/* Individual Service Cards */}
-      <section className="section border-b border-white/10">
-        <div className="max-w-[1120px] mx-auto">
+      <section className="section border-b border-[var(--border)]">
+        <div className="max-w-[1400px] mx-auto">
           <h2 className="heading-lg mb-10">Rental & Specialty Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-[1.3vw]">
             {rentalSpecialty.map((service) => {
               const slug = service.slug.replace(/^\/services\/+/, '')
               return (
                 <Link
                   key={slug}
                   href={`/services/${slug}`}
-                  className="relative bg-black p-7 md:p-8 group hover:bg-white/5 transition-colors block min-h-[18rem] overflow-hidden"
+                  className="group relative block aspect-video overflow-hidden bg-neutral-900"
+                  aria-label={service.title}
                 >
                   {service.media?.heroImage && (
                     <Image
                       src={service.media.heroImage}
-                      alt={`${service.title} media`}
+                      alt=""
                       fill
-                      sizes="(max-width: 1024px) 100vw, 25vw"
-                      className="object-cover opacity-35 group-hover:opacity-45 transition-opacity duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
                     />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
-                  <div className="relative">
-                  <p className="heading-sm text-white mb-3 group-hover:text-white transition-colors">
-                    {service.title}
-                  </p>
-                  <p className="text-sm text-white/70 tracking-widest uppercase mb-4">
-                    {service.category}
-                  </p>
-                  <p className="text-base text-white/75 leading-relaxed line-clamp-3">
-                    {service.hero.subheadline}
-                  </p>
-                  <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
-                    Learn more →
+                  <span
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent group-hover:from-black/95 group-hover:via-black/70 transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                    aria-hidden="true"
+                  />
+                  <span
+                    className="pointer-events-none absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                    aria-hidden="true"
+                  />
+                  <span className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">
+                    <span className="heading-sm text-white mb-2">
+                      {service.title}
+                    </span>
+                    <span className="text-xs text-white/70 tracking-widest uppercase mb-3">
+                      {service.category}
+                    </span>
+                    <span className="text-sm text-white/75 leading-relaxed line-clamp-2">
+                      {service.hero.subheadline}
+                    </span>
+                    <span className="inline-block mt-3 text-xs tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
+                      Learn more →
+                    </span>
                   </span>
-                  </div>
                 </Link>
               )
             })}
