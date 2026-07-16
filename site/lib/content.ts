@@ -41,6 +41,8 @@ export interface ProjectImage {
   alt: string
   filename?: string
   note?: string
+  width?: number
+  height?: number
 }
 
 export interface VideoEmbed {
@@ -442,12 +444,17 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
 
 function mapCmsProject(doc: Record<string, unknown>): Project {
   const images = asArray<Record<string, unknown>>(doc.images).map((row) => {
-    const media = row.media as unknown
+    const media = row.media as Record<string, unknown> | undefined
+    const url = resolveCmsMediaUrl(media) || String(row.legacyUrl || '')
+    const width = media?.width ? Number(media.width) : row.width ? Number(row.width) : undefined
+    const height = media?.height ? Number(media.height) : row.height ? Number(row.height) : undefined
     return {
-      url: resolveCmsMediaUrl(media) || String(row.legacyUrl || ''),
+      url,
       alt: String(row.alt || 'Project media'),
       filename: row.filename ? String(row.filename) : undefined,
       note: row.note ? String(row.note) : undefined,
+      width,
+      height,
     }
   })
 

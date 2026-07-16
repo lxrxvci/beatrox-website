@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { normalizeProjectSlug } from '@/lib/json-content'
 import { getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
+import { getImageDimensions } from '@/lib/image-dimensions'
 import { seoToMetadata } from '@/lib/metadata'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
@@ -43,7 +44,19 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) notFound()
 
   const validImages = project.images?.filter(img => img.url && img.url !== '') ?? []
-  const heroImage = validImages[0]
+
+  // Ensure every gallery image has dimensions for the mosaic layout.
+  const galleryImages = await Promise.all(
+    validImages.map(async (img) => {
+      if (img.width && img.height) return img
+      const dims = await getImageDimensions(img.url)
+      return dims ? { ...img, ...dims } : img
+    })
+  )
+
+  // Skip the hero image in the gallery so it doesn't appear twice.
+  const heroImage = galleryImages[0]
+  const galleryImagesWithoutHero = galleryImages.slice(1)
 
   return (
     <>
@@ -136,12 +149,9 @@ export default async function ProjectPage({ params }: Props) {
       )}
 
       {/* Gallery */}
-      {validImages.length > 0 && (
+      {galleryImagesWithoutHero.length > 0 && (
         <section className="border-t border-white/10">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-6 lg:py-8">
-            <p className="heading-sm text-white/75">Gallery</p>
-          </div>
-          <ProjectGallery images={validImages} />
+          <ProjectGallery images={galleryImagesWithoutHero} />
         </section>
       )}
 
