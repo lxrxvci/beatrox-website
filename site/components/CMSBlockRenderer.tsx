@@ -4,6 +4,7 @@ import type { CMSPageBlock } from '@/lib/json-content'
 import { LexicalReact, type LexicalNode } from '@/components/richtext'
 import { EditableRichText, EditableText } from '@/components/admin'
 import BentoWorkGrid from './BentoWorkGrid'
+import CapabilitiesGrid from './CapabilitiesGrid'
 
 interface BentoProjectInput {
   slug: string
@@ -154,17 +155,8 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
             if (items.length === 0) return null
             return (
               <article key={key} className="space-y-6">
-                {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
-                <div className="flex flex-wrap gap-3">
-                  {items.map((item, itemIndex) => (
-                    <span
-                      key={`${item.label}-${itemIndex}`}
-                      className="tag"
-                    >
-                      <EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.items.${itemIndex}.label`} value={item.label}>{item.label}</EditableText>
-                    </span>
-                  ))}
-                </div>
+                <h2 className="heading-md">Tech Capabilities</h2>
+                <CapabilitiesGrid items={items.filter((item): item is { label: string } => Boolean(item.label))} />
               </article>
             )
           }

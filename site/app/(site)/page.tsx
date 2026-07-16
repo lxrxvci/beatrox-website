@@ -7,7 +7,7 @@ import Reveal from '@/components/Reveal'
 import HeroMedia from '@/components/HeroMedia'
 import HomeHero from '@/components/HomeHero'
 import BentoWorkGrid from '@/components/BentoWorkGrid'
-import CapabilitiesTicker from '@/components/CapabilitiesTicker'
+import CapabilitiesGrid from '@/components/CapabilitiesGrid'
 import Marquee from '@/components/Marquee'
 import MagneticButton from '@/components/MagneticButton'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
@@ -18,21 +18,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const data = await getHomepageResolved()
   return seoToMetadata(data.seo)
 }
-
-const CAPABILITIES = [
-  'Custom Fabrication',
-  'LED Video Wall',
-  'Drone Light Shows',
-  'Stage Design',
-  'Experiential Events',
-  'Event Production',
-  'Immersive Environments',
-  'Laser Light Shows',
-  'Multimedia Displays',
-  'DJ Equipment Rentals',
-  'Audio Production',
-  'Projection Mapping',
-]
 
 export default async function HomePage() {
   const data = await getHomepageResolved()
@@ -125,10 +110,12 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ── Capabilities Ticker ───────────────────────────────────────────── */}
-      <section className="py-16 border-t border-[var(--border)] overflow-hidden" aria-label="Tech capabilities">
-        <h2 className="sr-only">Tech Capabilities</h2>
-        <CapabilitiesTicker items={CAPABILITIES} />
+      {/* ── Tech Capabilities Grid ────────────────────────────────────────── */}
+      <section className="section border-t border-[var(--border)]" aria-label="Tech capabilities">
+        <div className="max-w-[1400px] mx-auto">
+          <h2 className="heading-lg mb-10">Tech Capabilities</h2>
+          <CapabilitiesGrid />
+        </div>
       </section>
 
       {/* ── Featured Work ─────────────────────────────────────────────────── */}
