@@ -5,6 +5,7 @@ import { LexicalReact, type LexicalNode } from '@/components/richtext'
 import { EditableRichText, EditableText } from '@/components/admin'
 import BentoWorkGrid from './BentoWorkGrid'
 import CapabilitiesGrid from './CapabilitiesGrid'
+import Reveal from './Reveal'
 
 interface BentoProjectInput {
   slug: string
@@ -81,6 +82,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
           if (block.blockType === 'intro') {
             return (
               <article key={key} className="text-center max-w-3xl mx-auto space-y-6">
+                <span aria-hidden="true" className="block h-px w-14 bg-[var(--accent)] mx-auto" />
                 {block.heading && <h2 className="heading-lg"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <div className="prose prose-invert mx-auto">
                   {renderEditableBody(block.body, collection, documentId, `blocks.${index}.body`)}
@@ -141,7 +143,10 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
                 {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {items.map((item, itemIndex) => (
-                    <li key={`${item.label}-${itemIndex}`} className="text-base text-white/80">
+                    <li key={`${item.label}-${itemIndex}`} className="flex items-start gap-3 border border-white/10 bg-white/[0.03] p-4 text-base text-white/80">
+                      <span aria-hidden="true" className="mono text-[var(--accent)] shrink-0 pt-0.5">
+                        {String(itemIndex + 1).padStart(2, '0')}
+                      </span>
                       <EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.items.${itemIndex}.label`} value={item.label}>{item.label}</EditableText>
                     </li>
                   ))}
@@ -165,16 +170,28 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
             const columns = block.columns || []
             if (columns.length === 0) return null
             return (
-              <article key={key} className="space-y-8">
+              <article key={key} className="space-y-10">
                 {block.heading && <h2 className="heading-md text-center"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
                   {columns.map((col, colIndex) => (
-                    <div key={`${col.heading}-${colIndex}`}>
+                    <Reveal key={`${col.heading}-${colIndex}`} delayMs={colIndex * 120}>
+                      {col.image && (
+                        <div className="relative aspect-[4/3] bg-neutral-950 overflow-hidden mb-6">
+                          <Image
+                            src={col.image}
+                            alt={col.heading || 'Philosophy'}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            className="object-cover"
+                          />
+                        </div>
+                      )}
+                      <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(colIndex + 1).padStart(2, '0')}</p>
                       {col.heading && <h3 className="heading-sm text-white mb-4"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.columns.${colIndex}.heading`} value={col.heading}>{col.heading}</EditableText></h3>}
-                      <div className="prose prose-invert">
+                      <div className="text-white/75 leading-relaxed">
                       {renderEditableBody(col.body, collection, documentId, `blocks.${index}.columns.${colIndex}.body`)}
                     </div>
-                    </div>
+                    </Reveal>
                   ))}
                 </div>
               </article>
@@ -254,7 +271,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
                     {renderEditableBody(block.body, collection, documentId, `blocks.${index}.body`)}
                   </div>
                 )}
-                <Link href={block.url} className="btn-primary inline-block"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.label`} value={block.label}>{block.label}</EditableText>
+                <Link href={block.url} className="btn-primary btn-primary--accent inline-block"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.label`} value={block.label}>{block.label}</EditableText>
         </Link>
               </article>
             )
@@ -270,7 +287,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
                     {renderEditableBody(block.body, collection, documentId, `blocks.${index}.body`)}
                   </div>
                 )}
-                <Link href={block.cta.url} className="btn-primary inline-block"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.cta.label`} value={block.cta.label}>{block.cta.label}</EditableText>
+                <Link href={block.cta.url} className="btn-primary btn-primary--accent inline-block"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.cta.label`} value={block.cta.label}>{block.cta.label}</EditableText>
         </Link>
               </article>
             )

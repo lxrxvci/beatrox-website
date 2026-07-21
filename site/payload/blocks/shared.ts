@@ -96,6 +96,7 @@ export const philosophyBlock: Block = {
       name: 'columns',
       type: 'array',
       fields: [
+        { name: 'image', type: 'text' },
         { name: 'heading', type: 'text', required: true },
         createRichTextField({ name: 'body', required: true }),
       ],

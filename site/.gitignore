@@ -46,3 +46,4 @@ scripts/.tmp/
 
 # local CMS data (SQLite dev database)
 .cms-data/
+.audit-screenshots/

@@ -102,9 +102,16 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
   // overflow the viewport; the effect below measures on mount.
   const [containerWidth, setContainerWidth] = useState(0)
 
-  const sizedImages = useMemo<SizedImage[]>(
-    () => images.map((img) => ({ ...img, aspect: getAspect(img) })),
+  // Drop entries with no usable URL so they can't render as empty
+  // bordered black frames.
+  const galleryImages = useMemo(
+    () => images.filter((img) => img.url && img.url.trim() !== ''),
     [images]
+  )
+
+  const sizedImages = useMemo<SizedImage[]>(
+    () => galleryImages.map((img) => ({ ...img, aspect: getAspect(img) })),
+    [galleryImages]
   )
 
   // Measure container and respond to resize
@@ -143,15 +150,15 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
   const goPrev = useCallback(() => {
     setActiveIndex((current) => {
       if (current === null) return null
-      return current === 0 ? images.length - 1 : current - 1
+      return current === 0 ? galleryImages.length - 1 : current - 1
     })
-  }, [images.length])
+  }, [galleryImages.length])
   const goNext = useCallback(() => {
     setActiveIndex((current) => {
       if (current === null) return null
-      return current === images.length - 1 ? 0 : current + 1
+      return current === galleryImages.length - 1 ? 0 : current + 1
     })
-  }, [images.length])
+  }, [galleryImages.length])
 
   useEffect(() => {
     if (activeIndex === null) return
@@ -168,7 +175,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
     }
   }, [activeIndex, close, goPrev, goNext])
 
-  const activeImage = activeIndex !== null ? images[activeIndex] : null
+  const activeImage = activeIndex !== null ? galleryImages[activeIndex] : null
 
   return (
     <>
@@ -177,7 +184,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
           <div>
             <p className="heading-sm text-white/75">Gallery</p>
             <p className="mono text-xs text-white/40 mt-1 uppercase tracking-[0.2em]">
-              {images.length} {images.length === 1 ? 'image' : 'images'}
+              {galleryImages.length} {galleryImages.length === 1 ? 'image' : 'images'}
             </p>
           </div>
           <p className="hidden sm:block mono text-xs text-white/30 uppercase tracking-[0.2em]">
@@ -202,7 +209,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                     className="relative overflow-hidden bg-neutral-950 group text-left border border-white/5 max-w-full focus-visible:outline-2 focus-visible:outline-[var(--accent)]"
                     style={{ width: img.width, height: img.height, flexShrink: 0 }}
                     onClick={() => setActiveIndex(index)}
-                    aria-label={`Open image ${index + 1} of ${images.length}`}
+                    aria-label={`Open image ${index + 1} of ${galleryImages.length}`}
                   >
                     <Image
                       src={img.url}
@@ -213,7 +220,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                     />
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-3 sm:p-4">
                       <span className="mono text-[10px] text-white/60 uppercase tracking-[0.2em] mb-1">
-                        {String(index + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
+                        {String(index + 1).padStart(2, '0')} / {String(galleryImages.length).padStart(2, '0')}
                       </span>
                       {caption && (
                         <span className="text-xs text-white/90 line-clamp-2 leading-snug">
@@ -235,7 +242,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
             className="fixed inset-0 z-[80] flex flex-col items-center justify-center bg-black/92 backdrop-blur-[20px] p-4 md:p-8"
             role="dialog"
             aria-modal="true"
-            aria-label={`Image ${activeIndex + 1} of ${images.length}`}
+            aria-label={`Image ${activeIndex + 1} of ${galleryImages.length}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -251,7 +258,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                 ✕ Close
               </button>
               <p className="mono text-xs text-white/50 tabular-nums tracking-[0.15em]">
-                {String(activeIndex + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
+                {String(activeIndex + 1).padStart(2, '0')} / {String(galleryImages.length).padStart(2, '0')}
               </p>
             </div>
 
@@ -303,7 +310,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                   </p>
                 )}
                 <div className="flex justify-center gap-1.5">
-                  {images.map((_, i) => (
+                  {galleryImages.map((_, i) => (
                     <button
                       key={i}
                       type="button"

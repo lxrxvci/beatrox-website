@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
             <a
               href={`mailto:${data.contact.email}`}
-              className="text-sm text-white/70 hover:text-white transition-colors block mt-3"
+              className="text-sm text-[var(--accent)] hover:text-white transition-colors block mt-3"
             >
               {data.contact.email}
             </a>
@@ -49,7 +49,7 @@ export default function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
+                className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-[var(--accent)] transition-colors w-fit"
               >
                 {label}
               </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
             {/* Rentals lives on a separate SPA deployment — plain external anchor, no Next prefetch. */}
             <a
               href="https://app-ruby-pi-32.vercel.app/"
-              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
+              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-[var(--accent)] transition-colors w-fit"
             >
               Rentals
             </a>
@@ -69,7 +69,7 @@ export default function Footer() {
               href={data.social.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
+              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-[var(--accent)] transition-colors w-fit"
             >
               YouTube
             </a>
@@ -77,7 +77,7 @@ export default function Footer() {
               href={data.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
+              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-[var(--accent)] transition-colors w-fit"
             >
               Instagram
             </a>

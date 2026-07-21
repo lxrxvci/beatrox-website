@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: Props) {
               {project.body.map((block, i) => (
                 <div key={i}>
                   {block.heading && (
-                    <h2 className="heading-sm text-white/75 mb-4"><EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.heading`} value={block.heading}>{block.heading}</EditableText></h2>
+                    <h2 className="overline mb-4"><EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.heading`} value={block.heading}>{block.heading}</EditableText></h2>
                   )}
                   {block.content && (
                     <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
@@ -162,11 +162,11 @@ export default async function ProjectPage({ params }: Props) {
       {/* Bottom nav / CTA */}
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto mb-10">
-          <h2 className="heading-md mb-5">Ready to start your project?</h2>
+          <h2 className="heading-md mb-5">Ready to start your <span className="text-[var(--accent)]">project</span>?</h2>
           <p className="text-base text-white/70 mb-8 leading-relaxed">
             Let&apos;s bring your vision to life. Our team of creative and technical directors is ready to collaborate.
           </p>
-          <Link href="/book" className="btn-primary">Start Your Project</Link>
+          <Link href="/book" className="btn-primary btn-primary--accent">Start Your Project</Link>
         </div>
         <div className="max-w-[1400px] mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link href="/work" className="text-sm font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-white transition-colors">

@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import CTASection from '@/components/CTASection'
 import { normalizeProjectTag } from '@/lib/json-content'
 import { getProjectsByTagResolved, getProjectTagsResolved } from '@/lib/content'
+import { humanizeTag } from '@/lib/tags'
 
 export const revalidate = 300
 
@@ -21,22 +22,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tag } = await params
   const normalizedTag = normalizeProjectTag(tag)
   if (!normalizedTag) return {}
+  const displayTag = humanizeTag(normalizedTag)
   return {
-    title: `Work tagged "${normalizedTag}"`,
-    description: `Portfolio projects tagged ${normalizedTag}.`,
+    title: `Work tagged "${displayTag}"`,
+    description: `Portfolio projects tagged ${displayTag}.`,
     robots: {
       index: true,
       follow: true,
     },
     openGraph: {
-      title: `Work tagged "${normalizedTag}" — BEATROX`,
-      description: `Portfolio projects tagged ${normalizedTag}.`,
+      title: `Work tagged "${displayTag}" — BEATROX`,
+      description: `Portfolio projects tagged ${displayTag}.`,
       images: ['/og-default.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Work tagged "${normalizedTag}" — BEATROX`,
-      description: `Portfolio projects tagged ${normalizedTag}.`,
+      title: `Work tagged "${displayTag}" — BEATROX`,
+      description: `Portfolio projects tagged ${displayTag}.`,
       images: ['/og-default.jpg'],
     },
     alternates: {
@@ -53,6 +55,8 @@ export default async function WorkTagPage({ params }: Props) {
   const projects = await getProjectsByTagResolved(normalizedTag)
   if (projects.length === 0) notFound()
 
+  const displayTag = humanizeTag(normalizedTag)
+
   const heroImage =
     projects[0]?.images?.find((img) => img.url && img.url !== '')?.url ||
     projects[0]?.seo?.og?.image ||
@@ -68,7 +72,7 @@ export default async function WorkTagPage({ params }: Props) {
             ← Work
           </Link>
           <p className="heading-sm text-white/75 mb-3">Tag</p>
-          <h1 className="heading-xl max-w-3xl">{normalizedTag}</h1>
+          <h1 className="heading-xl max-w-3xl">{displayTag}</h1>
         </div>
       </section>
 
@@ -90,16 +94,26 @@ export default async function WorkTagPage({ params }: Props) {
                 />
                 <div className="project-card-overlay">
                   <div>
-                    <p className="heading-sm text-white leading-[1.4] mb-3">{project.title}</p>
+                    <p className="heading-sm text-white leading-[1.4] mb-3 break-words">{project.title}</p>
                     {project.metadata?.client && (
                       <p className="text-sm text-white/75 tracking-[0.12em] uppercase mb-3">
                         {project.metadata.client}
                       </p>
                     )}
-                    <div className="flex flex-wrap gap-1.5 mt-1">
-                      {(project.tags || []).slice(0, 4).map((projectTag) => (
-                        <span key={projectTag} className={`tag ${projectTag === normalizedTag ? 'border-white/60' : ''}`}>
-                          {projectTag}
+                    {/* Same minimal tag treatment as BentoWorkGrid: plain mono
+                        text (no bordered pills) capped at 2 below sm, so tags
+                        never crowd the card art on mobile. */}
+                    <div className="flex flex-wrap gap-x-2 gap-y-1 mt-1">
+                      {(project.tags || []).slice(0, 3).map((projectTag, tagIndex) => (
+                        <span
+                          key={projectTag}
+                          className={`mono text-[10px] sm:text-[11px] uppercase${
+                            projectTag === normalizedTag
+                              ? ' text-white'
+                              : ' text-[var(--text-secondary)]'
+                          }${tagIndex > 1 ? ' hidden sm:inline' : ''}`}
+                        >
+                          {humanizeTag(projectTag)}
                         </span>
                       ))}
                     </div>
@@ -112,12 +126,13 @@ export default async function WorkTagPage({ params }: Props) {
       </section>
 
       <CTASection
-        heading={`Interested in ${normalizedTag} projects?`}
+        heading={`Interested in ${displayTag} projects?`}
         subheading="Let's talk about how we can deliver the same impact for your event."
         primaryLabel="Start Your Project"
         primaryHref="/book"
         secondaryLabel="Explore Services"
         secondaryHref="/services"
+        accentWord={displayTag}
       />
     </>
   )

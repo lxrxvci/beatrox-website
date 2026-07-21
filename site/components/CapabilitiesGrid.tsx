@@ -111,7 +111,7 @@ export default function CapabilitiesGrid({ items }: CapabilitiesGridProps) {
             className="object-cover"
           />
           <span
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/25"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/50"
             aria-hidden="true"
           />
           <span

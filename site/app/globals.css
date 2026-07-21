@@ -104,6 +104,14 @@ html.lenis body {
   }
 }
 
+/* Brand-tinted native checkboxes / radios */
+@layer base {
+  input[type='checkbox'],
+  input[type='radio'] {
+    accent-color: var(--accent);
+  }
+}
+
 @layer components {
 /* Section utility — generous "luxury" spacing */
 .section {
@@ -243,6 +251,18 @@ html.lenis body {
   box-shadow: 0 10px 28px rgba(245, 240, 235, 0.16);
 }
 
+/* Accent variant — matches .btn-magnetic--accent on the homepage */
+.btn-primary--accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-primary--accent:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  box-shadow: 0 10px 28px rgba(200, 255, 0, 0.18);
+}
+
 .btn-ghost {
   display: inline-block;
   padding: 1rem 2.75rem;
@@ -347,15 +367,16 @@ html.lenis body {
   color: rgba(245, 240, 235, 0.75);
 }
 
-/* Project card hover overlay */
+/* Project card hover overlay — gradient kept strong enough that white text
+   stays legible on bright cards with baked-in image text (MYSHELTER, AKU WORLD). */
 .project-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.05) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.74) 60%, rgba(0, 0, 0, 0.22) 100%);
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: opacity 0.3s;
 }
 
@@ -364,10 +385,12 @@ html.lenis body {
 }
 
 /* Mobile cards are much smaller — tighter overlay padding so client, title,
-   and the 2-tag cap fit without clipping (see BentoWorkGrid). */
+   and the 2-tag cap fit without clipping (see BentoWorkGrid). No hover on
+   touch, so run the scrim at full strength. */
 @media (max-width: 767px) {
   .project-card-overlay {
     padding: 0.75rem;
+    opacity: 1;
   }
 }
 
@@ -593,4 +616,11 @@ html.lenis body {
   }
 }
 
+}
+
+/* Tailwind's `overline` text-decoration utility shares this class name and
+   lives in the later utilities layer, so it would beat the component rule
+   above — unlayered CSS wins over layered, killing the stray decoration. */
+.overline {
+  text-decoration-line: none;
 }

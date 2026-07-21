@@ -155,12 +155,12 @@ export default function BookingForm({ types }: BookingFormProps) {
 
       {/* Step 2: Select date and time */}
       <div className={step === 'datetime' ? 'block' : 'hidden'}>
-        <div className="flex items-center justify-between mb-7">
+        <div className="flex items-center justify-between gap-4 mb-7">
           <h2 className="heading-sm text-white/75">2. Select a date and time</h2>
           <button
             type="button"
             onClick={() => setStep('type')}
-            className="text-sm text-white/65 hover:text-white transition-colors"
+            className="text-sm text-white/65 hover:text-[var(--accent)] transition-colors shrink-0"
           >
             ← Back to types
           </button>
@@ -183,7 +183,7 @@ export default function BookingForm({ types }: BookingFormProps) {
             min={formatDateInputValue(tomorrow)}
             max={formatDateInputValue(maxDate)}
             onChange={(e) => handleDateChange(e.target.value)}
-            className="w-full sm:w-auto bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:outline-none focus:border-white transition-colors [color-scheme:dark]"
+            className="w-full sm:w-auto bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:outline-none focus:border-[var(--accent)] transition-colors [color-scheme:dark]"
           />
         </div>
 
@@ -215,12 +215,12 @@ export default function BookingForm({ types }: BookingFormProps) {
 
       {/* Step 3: Contact details */}
       <div className={step === 'details' ? 'block' : 'hidden'}>
-        <div className="flex items-center justify-between mb-7">
+        <div className="flex items-center justify-between gap-4 mb-7">
           <h2 className="heading-sm text-white/75">3. Your details</h2>
           <button
             type="button"
             onClick={() => setStep('datetime')}
-            className="text-sm text-white/65 hover:text-white transition-colors"
+            className="text-sm text-white/65 hover:text-[var(--accent)] transition-colors shrink-0"
           >
             ← Back to time
           </button>
@@ -268,7 +268,7 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="name"
                 type="text"
                 required
-                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors ${
+                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors ${
                   hasError('name') ? 'border-red-400/60' : 'border-white/25'
                 }`}
                 placeholder="Your Name"
@@ -284,7 +284,7 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="email"
                 type="email"
                 required
-                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors ${
+                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors ${
                   hasError('email') ? 'border-red-400/60' : 'border-white/25'
                 }`}
                 placeholder="Email Address"
@@ -299,7 +299,7 @@ export default function BookingForm({ types }: BookingFormProps) {
                 id="company"
                 name="company"
                 type="text"
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors"
                 placeholder="Company"
               />
             </div>
@@ -311,7 +311,7 @@ export default function BookingForm({ types }: BookingFormProps) {
                 id="phone"
                 name="phone"
                 type="tel"
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors"
                 placeholder="Phone Number"
               />
             </div>
@@ -326,7 +326,7 @@ export default function BookingForm({ types }: BookingFormProps) {
               name="projectSummary"
               required
               rows={6}
-              className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors resize-none ${
+              className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors resize-none ${
                 hasError('projectSummary') ? 'border-red-400/60' : 'border-white/25'
               }`}
               placeholder="Describe your vision, goals, and any specific requirements..."
@@ -340,7 +340,7 @@ export default function BookingForm({ types }: BookingFormProps) {
           <button
             type="submit"
             disabled={pending}
-            className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+            className="btn-primary btn-primary--accent disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {pending ? 'Booking…' : 'Confirm Booking'}
           </button>

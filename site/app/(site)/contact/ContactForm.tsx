@@ -76,7 +76,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
               type={field.type}
               required={field.required}
               defaultValue={field.id === 'company' ? '' : undefined}
-              className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
+              className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors"
               placeholder={field.label}
             />
             {fieldError(field.id)}
@@ -96,7 +96,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 id={field.id}
                 name={field.id}
                 required={field.required}
-                className="w-full bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:outline-none focus:border-[var(--accent)] transition-colors"
               >
                 <option value="">Select…</option>
                 {field.options.map((opt) => (
@@ -127,7 +127,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                       type="checkbox"
                       name="services"
                       value={opt}
-                      className="mt-1 w-4 h-4 accent-white"
+                      className="mt-1 w-4 h-4"
                     />
                     <span className="text-base text-white/80 leading-snug">{opt}</span>
                   </label>
@@ -150,7 +150,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 name={field.id}
                 type="date"
                 required={field.required}
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors [color-scheme:dark]"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors [color-scheme:dark]"
               />
               {fieldError(field.id)}
             </div>
@@ -169,7 +169,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 name={field.id}
                 required={field.required}
                 rows={6}
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors resize-none"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors resize-none"
                 placeholder={field.placeholder || field.label}
               />
               {fieldError(field.id)}
@@ -180,7 +180,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         return null
       })}
 
-      <button type="submit" disabled={pending} className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
+      <button type="submit" disabled={pending} className="btn-primary btn-primary--accent disabled:opacity-50 disabled:cursor-not-allowed">
         {pending ? 'Sending…' : submitLabel}
       </button>
     </form>

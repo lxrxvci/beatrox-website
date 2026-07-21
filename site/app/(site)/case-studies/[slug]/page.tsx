@@ -105,9 +105,6 @@ export default async function CaseStudyPage({ params }: Props) {
 
       {validImages.length > 0 && (
         <section className="border-t border-white/10">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4 mb-2">
-            <p className="heading-sm text-white/30">Gallery</p>
-          </div>
           <ProjectGallery images={validImages} />
         </section>
       )}

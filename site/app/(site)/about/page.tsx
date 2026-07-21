@@ -5,6 +5,7 @@ import { getAboutResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import Reveal from '@/components/Reveal'
 import { EditableText } from '@/components/admin'
 
 export const revalidate = 300
@@ -35,11 +36,11 @@ export default async function AboutPage() {
             sizes="100vw"
             className="object-cover opacity-35"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/55 to-black/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
           <div className="max-w-[1120px] mx-auto">
             <p className="overline mb-4">About Us</p>
             <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
-            <p className="text-base text-[var(--text-secondary)] mt-6 max-w-3xl leading-relaxed">
+            <p className="text-base text-white/85 mt-6 max-w-3xl leading-relaxed">
               <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="hero.subheadline" value={data.hero.subheadline}>
                 {data.hero.subheadline}
               </EditableText>
@@ -63,11 +64,11 @@ export default async function AboutPage() {
           sizes="100vw"
           className="object-cover opacity-35"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/55 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
         <div className="max-w-[1120px] mx-auto">
           <p className="overline mb-4">About Us</p>
           <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
-          <p className="text-base text-[var(--text-secondary)] mt-6 max-w-3xl leading-relaxed">{data.hero.subheadline}</p>
+          <p className="text-base text-white/85 mt-6 max-w-3xl leading-relaxed">{data.hero.subheadline}</p>
         </div>
       </section>
 
@@ -93,13 +94,22 @@ export default async function AboutPage() {
 
       {pillars?.columns && (
         <section className="section border-b border-white/10">
-          <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            {pillars.columns.map((col) => (
-              <div key={col.heading}>
-                <h3 className="heading-sm text-white mb-4">{col.heading}</h3>
-                <p className="text-base text-white/75 leading-relaxed">{col.body}</p>
-              </div>
-            ))}
+          <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
+            {pillars.columns.map((col, colIndex) => {
+              const image = sectionImages[colIndex + 1]
+              return (
+                <Reveal key={col.heading} delayMs={colIndex * 120}>
+                  {image && (
+                    <div className="relative aspect-[4/3] bg-neutral-950 overflow-hidden mb-6">
+                      <Image src={image} alt={col.heading} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                    </div>
+                  )}
+                  <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(colIndex + 1).padStart(2, '0')}</p>
+                  <h3 className="heading-sm text-white mb-4">{col.heading}</h3>
+                  <p className="text-base text-white/75 leading-relaxed">{col.body}</p>
+                </Reveal>
+              )
+            })}
           </div>
         </section>
       )}
@@ -120,12 +130,12 @@ export default async function AboutPage() {
       {/* CTA */}
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-5">Ready to work together?</h2>
+          <h2 className="heading-md mb-5">Ready to work <span className="text-[var(--accent)]">together</span>?</h2>
           <p className="text-base text-white/70 mb-8">
             Our team of creative and technical directors is ready to bring your vision to life.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/book" className="btn-primary">Book a Discovery Call</Link>
+            <Link href="/book" className="btn-primary btn-primary--accent">Book a Discovery Call</Link>
             <Link href="/work" className="btn-ghost">View Our Work</Link>
           </div>
         </div>

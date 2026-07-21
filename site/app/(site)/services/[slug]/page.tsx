@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getAllProjectsResolved, getServiceResolved, getServiceSlugsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
+import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
 import { buildServiceSchema } from '@/lib/schema'
 import NodeBullet from '@/components/NodeBullet'
@@ -90,7 +91,7 @@ export default async function ServicePage({ params }: Props) {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {block.items?.map((item, idx) => (
                           <div key={idx} className="flex items-start gap-3 text-base text-white/80">
-                            <span className="text-white/60 mt-0.5 shrink-0">✓</span>
+                            <span className="text-[var(--accent)] mt-0.5 shrink-0" aria-hidden="true">✓</span>
                             <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}><span>{item}</span></EditableText>
                           </div>
                         ))}
@@ -106,10 +107,10 @@ export default async function ServicePage({ params }: Props) {
                       <ol className="space-y-6">
                         {block.items?.map((item, idx) => (
                           <li key={idx} className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-white/30 text-white/80 text-base font-semibold rounded-sm">
+                            <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-[var(--accent)]/40 text-[var(--accent)] font-mono text-sm rounded-sm">
                               {idx + 1}
                             </span>
-                            <span className="text-base text-white/80 leading-relaxed pt-1"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item}</EditableText></span>
+                            <span className="text-base text-white/80 leading-relaxed pt-1"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item.replace(/^\d+[.)]\s*/, '')}</EditableText></span>
                           </li>
                         ))}
                       </ol>
@@ -124,7 +125,10 @@ export default async function ServicePage({ params }: Props) {
                       <div className="divide-y divide-white/10">
                         {(block.items as { question: string; answer: string }[])?.map((item, idx) => (
                           <div key={idx} className="py-5 first:pt-0 last:pb-0">
-                            <p className="text-base font-semibold text-white mb-2"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.question`} value={item.question}>{item.question}</EditableText></p>
+                            <p className="text-base font-semibold text-white mb-2 flex items-start gap-3">
+                              <span aria-hidden="true" className="text-[var(--accent)] shrink-0">+</span>
+                              <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.question`} value={item.question}>{item.question}</EditableText>
+                            </p>
                             <p className="text-base text-white/75 leading-relaxed"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.answer`} value={item.answer}>{item.answer}</EditableText></p>
                           </div>
                         ))}
@@ -209,8 +213,8 @@ export default async function ServicePage({ params }: Props) {
                         {project.metadata.client}
                       </p>
                       <p className="heading-sm text-white mb-3">{project.title}</p>
-                      <p className="text-base text-white/75 leading-relaxed line-clamp-2">
-                        {project.hero.subheadline}
+                      <p className="text-base text-white/75 leading-relaxed">
+                        {truncateAtWord(project.hero.subheadline)}
                       </p>
                       <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
                         View project →
@@ -227,10 +231,10 @@ export default async function ServicePage({ params }: Props) {
       {/* CTA */}
       <section className="section text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-5">Ready to get started?</h2>
+          <h2 className="heading-md mb-5">Ready to get <span className="text-[var(--accent)]">started</span>?</h2>
           <p className="text-base text-white/70 mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/book" className="btn-primary">Get in Touch</Link>
+            <Link href="/book" className="btn-primary btn-primary--accent">Get in Touch</Link>
             <Link href="/work" className="btn-ghost">View Our Work</Link>
           </div>
         </div>

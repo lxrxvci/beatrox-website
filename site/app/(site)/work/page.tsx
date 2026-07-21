@@ -74,9 +74,9 @@ export default async function WorkPage() {
       {/* CTA */}
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-5">Have a project in mind?</h2>
+          <h2 className="heading-md mb-5">Have a <span className="text-[var(--accent)]">project</span> in mind?</h2>
           <p className="text-base text-white/70 mb-8">Let&apos;s talk about how we can bring your vision to life.</p>
-          <Link href="/book" className="btn-primary">Start a Conversation</Link>
+          <Link href="/book" className="btn-primary btn-primary--accent">Start a Conversation</Link>
         </div>
       </section>
     </>

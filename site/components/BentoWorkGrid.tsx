@@ -50,12 +50,15 @@ export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGri
           />
           <div className="project-card-overlay">
             {/* No translate on mobile: the shift pushed copy past the card's
-                bottom edge on small cards, and hover doesn't exist on touch. */}
-            <div className="sm:translate-y-2 sm:group-hover:translate-y-0 transition-transform duration-500 ease-[var(--ease-expo-out)]">
+                bottom edge on small cards, and hover doesn't exist on touch.
+                w-full + min-w-0: the overlay is a row flex container, so
+                without an explicit width this div sizes to the longest word
+                (e.g. "DISENCHANTMENT") and clips instead of wrapping. */}
+            <div className="w-full min-w-0 sm:translate-y-2 sm:group-hover:translate-y-0 transition-transform duration-500 ease-[var(--ease-expo-out)]">
               {project.client && (
                 <p className="mono text-[var(--accent)] mb-1 sm:mb-2">{project.client}</p>
               )}
-              <p className="heading-md text-white leading-[1.2] mb-2 sm:mb-3">{project.title}</p>
+              <p className="heading-md text-white leading-[1.2] mb-2 sm:mb-3 break-words">{project.title}</p>
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-x-2 gap-y-1 mt-1">
                   {/* Mobile cards are too small for 3 tags — cap at 2 below sm. */}

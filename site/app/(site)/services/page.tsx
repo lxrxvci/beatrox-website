@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { getServicesIndex } from '@/lib/json-content'
 import { getAllServicesResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
+import { truncateAtWord } from '@/lib/text'
 import ParallaxHero from '@/components/ParallaxHero'
 
 export const revalidate = 300
@@ -98,15 +99,21 @@ export default async function ServicesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
             {CATEGORIES.map(cat => (
               <div key={cat.label}>
-                <h2 className="heading-sm text-white mb-6 pb-4 border-b border-white/10">{cat.label}</h2>
+                <h2 className="overline mb-6 pb-4 border-b border-white/10">{cat.label}</h2>
                 <ul className="space-y-3">
                   {cat.items.map(item => (
                     <li key={item.slug}>
                       <Link
                         href={`/services/${item.slug}`}
-                        className="text-sm text-white/75 leading-relaxed hover:text-white transition-colors"
+                        className="group flex items-baseline gap-2.5 text-sm text-white/75 leading-relaxed hover:text-white transition-colors"
                       >
-                        {item.label}
+                        <span
+                          aria-hidden="true"
+                          className="text-[var(--accent)] opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                        >
+                          →
+                        </span>
+                        <span>{item.label}</span>
                       </Link>
                     </li>
                   ))}
@@ -155,8 +162,8 @@ export default async function ServicesPage() {
                     <span className="text-xs text-white/70 tracking-widest uppercase mb-3">
                       {service.category}
                     </span>
-                    <span className="text-sm text-white/75 leading-relaxed line-clamp-2">
-                      {service.hero.subheadline}
+                    <span className="text-sm text-white/75 leading-relaxed">
+                      {truncateAtWord(service.hero.subheadline)}
                     </span>
                     <span className="inline-block mt-3 text-xs tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
                       Learn more →
@@ -172,14 +179,14 @@ export default async function ServicesPage() {
       {/* Consultation CTA */}
       <section className="section text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="heading-lg mb-5">Book a Consultation</h2>
+          <h2 className="heading-lg mb-5">Book a <span className="text-[var(--accent)]">Consultation</span></h2>
           <p className="text-base text-white/70 leading-relaxed mb-10">
             Our team of technical and creative directors can help you with your project.
             We specialize in bringing unique and bespoke ideas to life. We know that every project
             is different and we can tailor a custom solution that works for you and your budget.
             Book a discovery call and get professional advice today.
           </p>
-          <Link href="/book" className="btn-primary">Book a Discovery Call</Link>
+          <Link href="/book" className="btn-primary btn-primary--accent">Book a Discovery Call</Link>
         </div>
       </section>
     </>

@@ -116,6 +116,7 @@ export default async function VideoDetailPage({ params }: Props) {
         primaryHref="/contact"
         secondaryLabel="View Our Work"
         secondaryHref="/work"
+        accentWord="create"
       />
     </>
   )

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getAllServicesResolved } from '@/lib/content'
+import { truncateAtWord } from '@/lib/text'
 import ScrollPanel from './ScrollPanel'
 
 const PREFERRED_SLUGS = [
@@ -48,12 +49,12 @@ export default async function ServicesTeaser() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/25" />
             </div>
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
               <h3 className="heading-md mb-2 text-white">{service.title}</h3>
-              <p className="line-clamp-2 max-w-md text-sm leading-relaxed text-white/70">
-                {service.hero.subheadline}
+              <p className="max-w-md text-sm leading-relaxed text-white/70">
+                {truncateAtWord(service.hero.subheadline)}
               </p>
             </div>
           </Link>

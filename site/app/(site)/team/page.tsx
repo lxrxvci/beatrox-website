@@ -34,6 +34,7 @@ export default async function TeamPage() {
           <p className="overline mb-4">The Team</p>
           <KineticHeading text={data.hero.headline} className="heading-lg md:heading-xl max-w-3xl" />
           <p className="text-base text-white/70 mt-6 max-w-4xl leading-relaxed">{data.hero.subheadline}</p>
+          <span aria-hidden="true" className="block h-px w-16 bg-[var(--accent)] mt-8" />
         </div>
       </section>
 
@@ -57,7 +58,7 @@ export default async function TeamPage() {
                   )}
                   <div>
                     <h2 className="text-sm md:text-base tracking-[0.11em] uppercase text-white mb-2">
-                      {member.name} - {member.title}
+                      {member.name} <span aria-hidden="true" className="text-white/40">—</span> <span className="text-[var(--accent)]">{member.title}</span>
                     </h2>
                     <p className="text-base text-white/75 leading-relaxed">
                       {member.bio}
@@ -76,7 +77,7 @@ export default async function TeamPage() {
           <div className="max-w-xl mx-auto">
             <h2 className="heading-md mb-5">{data.cta.heading}</h2>
             <p className="text-base text-white/70 mb-8 leading-relaxed">{data.cta.body}</p>
-            <Link href={data.cta.url} className="btn-primary">{data.cta.label}</Link>
+            <Link href={data.cta.url} className="btn-primary btn-primary--accent">{data.cta.label}</Link>
           </div>
         </section>
       )}

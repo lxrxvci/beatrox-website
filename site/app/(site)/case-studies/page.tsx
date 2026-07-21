@@ -91,12 +91,12 @@ export default async function CaseStudiesPage() {
       {/* CTA */}
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-5">Have a project in mind?</h2>
+          <h2 className="heading-md mb-5">Have a <span className="text-[var(--accent)]">project</span> in mind?</h2>
           <p className="text-base text-white/70 mb-8 leading-relaxed">
             Let&apos;s talk about how we can bring your vision to life with our full-service production capabilities.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/book" className="btn-primary">Start Your Project</Link>
+            <Link href="/book" className="btn-primary btn-primary--accent">Start Your Project</Link>
             <Link href="/services" className="btn-ghost">Explore Services</Link>
           </div>
         </div>
