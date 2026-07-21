@@ -363,6 +363,14 @@ html.lenis body {
   opacity: 1;
 }
 
+/* Mobile cards are much smaller — tighter overlay padding so client, title,
+   and the 2-tag cap fit without clipping (see BentoWorkGrid). */
+@media (max-width: 767px) {
+  .project-card-overlay {
+    padding: 0.75rem;
+  }
+}
+
 .project-card {
   isolation: isolate;
 }
@@ -432,6 +440,10 @@ html.lenis body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+}
+/* Featured card spans both mobile columns so its overlay text fits */
+.work-card-featured {
+  grid-column: span 2;
 }
 @media (min-width: 768px) {
   .work-grid {

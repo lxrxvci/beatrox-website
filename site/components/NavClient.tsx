@@ -157,10 +157,18 @@ export default function NavClient({ links }: Props) {
       <div
         id="mobile-menu"
         className={`md:hidden overflow-hidden border-t border-[var(--border)] transition-[max-height,opacity] duration-300 ${
-          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 border-transparent'
+          open ? 'max-h-[28rem] opacity-100' : 'max-h-0 opacity-0 border-transparent'
         }`}
       >
         <div className="bg-[var(--bg-primary)] px-6 py-6 flex flex-col gap-5">
+          <Link
+            href="/"
+            className={`text-xs font-semibold tracking-[0.18em] uppercase transition-colors ${
+              pathname === '/' ? 'text-white' : 'text-white/80 hover:text-white'
+            }`}
+          >
+            Home
+          </Link>
           {links.map(({ label, href }) => {
             const resolved = resolveHref(href)
             const className =

@@ -31,12 +31,12 @@ export default function HomeHero({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
       >
-        Beatrox
+        Experiential Design &amp; Production
       </motion.p>
 
       <KineticHeading
         text={headline}
-        className="heading-xl max-w-[12ch] mb-8"
+        className="heading-xl max-w-[12ch] mb-8 max-[480px]:text-[2.6rem]"
         delay={0.3}
       />
 

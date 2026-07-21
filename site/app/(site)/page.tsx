@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import { getHomepageResolved, getFeaturedProjectsResolved, getCMSPageBySlug } from '@/lib/content'
+import { getHomepageResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
-import Reveal from '@/components/Reveal'
 import HeroMedia from '@/components/HeroMedia'
 import HomeHero from '@/components/HomeHero'
-import BentoWorkGrid from '@/components/BentoWorkGrid'
-import CapabilitiesGrid from '@/components/CapabilitiesGrid'
 import Marquee from '@/components/Marquee'
-import MagneticButton from '@/components/MagneticButton'
-import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import AboutTeaser from '@/components/home/AboutTeaser'
+import ServicesTeaser from '@/components/home/ServicesTeaser'
+import WorkTeaser from '@/components/home/WorkTeaser'
+import RentalsTeaser from '@/components/home/RentalsTeaser'
+import TeamTeaser from '@/components/home/TeamTeaser'
+import ContactSection from '@/components/home/ContactSection'
 
 export const revalidate = 300
 
@@ -21,18 +20,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function HomePage() {
   const data = await getHomepageResolved()
-  const cmsPage = await getCMSPageBySlug('home')
-  // Featured 4 projects for homepage grid — fetched with a narrow select
-  // instead of loading every project.
-  const featuredSlugs = ['run-for-the-oceans', 'aku-world', 'projekt-x', 'myshelter']
-  const featuredProjects = await getFeaturedProjectsResolved(featuredSlugs)
   const heroImage = data.media.heroImage || '/og-default.jpg'
   const galleryImages = data.media.galleryImages || []
-  const projectsBySlug = new Map(featuredProjects.map((project) => [project.canonicalSlug, project]))
-
-  const featured = featuredSlugs
-    .map((slug) => ({ slug, project: projectsBySlug.get(slug) }))
-    .filter((row): row is { slug: string; project: (typeof featuredProjects)[number] } => Boolean(row.project))
 
   // Resolved CMS hero copy; HomeHero falls back to its original hardcoded
   // strings when a field is empty.
@@ -44,49 +33,6 @@ export default async function HomePage() {
       data.hero.secondaryCta.label && data.hero.secondaryCta.url ? data.hero.secondaryCta : undefined,
   }
 
-  // Philosophy columns come from the resolved homepage sections; the literal
-  // list is the original hardcoded copy, kept as fallback.
-  const philosophyColumns = data.sections.find(
-    (section) => section.type === 'philosophy' && section.columns && section.columns.length > 0,
-  )?.columns ?? [
-    {
-      heading: 'Who We Are',
-      body: "Engineers, artists, and architects of awe. We build the things people can't stop talking about.",
-    },
-    {
-      heading: 'What We Do',
-      body: 'From concept to curtain call — design, fabrication, deployment, and operation. Full spectrum, zero compromise.',
-    },
-    {
-      heading: 'How We Do It',
-      body: "Your vision + our obsession. We prototype fast, iterate relentlessly, and only stop when it's extraordinary.",
-    },
-  ]
-
-  const bentoProjects = featured.map(({ project, slug }) => {
-    const firstImage = project.images?.find((img) => img.url && img.url !== '')
-    return {
-      slug,
-      title: project.title,
-      client: project.metadata?.client,
-      tags: project.hero?.tags,
-      image: firstImage?.url || project.seo?.og?.image || '/og-default.jpg',
-      alt: firstImage?.alt || project.title,
-    }
-  })
-
-  if (cmsPage?.blocks && cmsPage.blocks.length > 0) {
-    return (
-      <article>
-        <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
-          <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
-          <HomeHero {...heroProps} />
-        </section>
-        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} resolvedProjects={bentoProjects} />
-      </article>
-    )
-  }
-
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
@@ -95,95 +41,21 @@ export default async function HomePage() {
         <HomeHero {...heroProps} />
       </section>
 
-      {/* ── Philosophy ────────────────────────────────────────────────────── */}
-      <section className="section border-t border-white/10">
-        <Reveal className="max-w-[1120px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {philosophyColumns.map((col) => (
-              <div key={col.heading}>
-                <h2 className="heading-sm text-[var(--accent)] mb-4">{col.heading}</h2>
-                <p className="text-base text-white/75 leading-relaxed">{col.body}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </section>
-
-      {galleryImages.length > 0 && (
-        <section className="section border-t border-white/10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
-            {galleryImages.slice(0, 6).map((img, idx) => (
-              <div key={`${img}-${idx}`} className="relative h-52 md:h-64 bg-neutral-950 overflow-hidden">
-                <Image
-                  src={img}
-                  alt={`Homepage media ${idx + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ── Tech Capabilities Grid ────────────────────────────────────────── */}
-      <section className="section border-t border-[var(--border)]" aria-label="Tech capabilities">
-        <div className="max-w-[1400px] mx-auto">
-          <h2 className="heading-lg mb-10">Tech Capabilities</h2>
-          <CapabilitiesGrid />
-        </div>
-      </section>
-
-      {/* ── Featured Work ─────────────────────────────────────────────────── */}
-      <section className="section border-t border-white/10">
-        <Reveal className="max-w-[1120px] mx-auto">
-          <div className="flex items-end justify-between mb-10">
-            <h2 className="heading-lg">Work</h2>
-            <Link href="/work" className="text-sm font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-white transition-colors">
-              View All →
-            </Link>
-          </div>
-          <BentoWorkGrid
-            projects={featured.map(({ project, slug }) => {
-              const firstImage = project.images?.find(img => img.url && img.url !== '')
-              return {
-                slug,
-                title: project.title,
-                client: project.metadata?.client,
-                tags: project.hero?.tags,
-                image: firstImage?.url || project.seo?.og?.image || '/og-default.jpg',
-                alt: firstImage?.alt || project.title,
-              }
-            })}
-          />
-        </Reveal>
-      </section>
+      {/* ── Continuous-scroll teaser panels ──────────────────────────────── */}
+      <AboutTeaser />
+      <ServicesTeaser />
+      <WorkTeaser />
 
       {/* ── Infinite Marquee ──────────────────────────────────────────────── */}
-      <Marquee
-        items={(galleryImages.length > 0
-          ? galleryImages.slice(0, 8).map((img, idx) => ({ src: img, alt: `Project highlight ${idx + 1}` }))
-          : featured.map(({ project, slug }) => {
-              const firstImage = project.images?.find(img => img.url && img.url !== '')
-              return {
-                src: firstImage?.url || project.seo?.og?.image || '/og-default.jpg',
-                alt: `${project.title} (${slug})`,
-              }
-            })
-        )}
-      />
+      {galleryImages.length > 0 && (
+        <Marquee
+          items={galleryImages.slice(0, 8).map((img, idx) => ({ src: img, alt: `Project highlight ${idx + 1}` }))}
+        />
+      )}
 
-      {/* ── CTA Bar ───────────────────────────────────────────────────────── */}
-      <section className="section border-t border-[var(--border)] text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="heading-lg mb-5">Let&apos;s Build Something Extraordinary</h2>
-          <p className="text-base text-[var(--text-secondary)] mb-10 leading-relaxed">
-            Every great experience starts with a conversation.
-          </p>
-          <MagneticButton href="/book" variant="accent">Start a Project</MagneticButton>
-        </div>
-      </section>
+      <RentalsTeaser />
+      <TeamTeaser />
+      <ContactSection />
     </>
   )
 }
