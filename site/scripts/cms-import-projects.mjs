@@ -7,7 +7,6 @@ import {
   normalizeSlug,
   readJson,
   resolveMediaByLegacyUrl,
-  toLexicalText,
   upsertBySlug,
 } from './cms-import-utils.mjs'
 
@@ -45,48 +44,6 @@ function mapBody(body) {
         : { value: String(item ?? '') },
     ),
   }))
-}
-
-function mapContentBlocks(body) {
-  const blocks = []
-  for (const block of asArray(body)) {
-    const type = block.type || 'text'
-    const heading = block.heading || ''
-    const content = block.content || ''
-
-    if (type === 'video' || (block.url && /youtube|vimeo|instagram/i.test(block.provider || ''))) {
-      blocks.push({
-        blockType: 'video',
-        heading,
-        url: block.url || '',
-        provider: block.provider || 'external',
-      })
-      continue
-    }
-
-    if (type === 'gallery' && Array.isArray(block.images) && block.images.length > 0) {
-      // Gallery blocks in legacy JSON do not carry resolved media IDs; skip or map to text.
-      // A future migration can resolve each image via resolveMediaByLegacyUrl.
-      continue
-    }
-
-    const textParts = []
-    if (heading) textParts.push(heading)
-    if (content) textParts.push(content)
-    if (Array.isArray(block.items) && block.items.length > 0) {
-      textParts.push(block.items.map((item) => (typeof item === 'string' ? item : item.value || item.question || '')).join('\n'))
-    }
-
-    const textBody = textParts.join('\n\n').trim()
-    if (!textBody) continue
-
-    blocks.push({
-      blockType: 'text',
-      heading: type === 'heading' ? heading : undefined,
-      body: toLexicalText(textBody),
-    })
-  }
-  return blocks
 }
 
 export async function importProjects(token) {
@@ -137,7 +94,8 @@ export async function importProjects(token) {
           ogImageLegacyUrl: source?.seo?.og?.image || '',
         },
         body: mapBody(source.body),
-        contentBlocks: mapContentBlocks(source.body),
+        // NOTE: do not also seed contentBlocks from body — the page renders both
+        // fields, so populating them together duplicates every section on the site.
         images,
         videos: asArray(source.videos).map((video) => ({
           title: video.title || 'Video',

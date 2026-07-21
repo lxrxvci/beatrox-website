@@ -143,8 +143,8 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </section>
 
-      {/* WYSIWYG Content Blocks */}
-      {project.contentBlocks && project.contentBlocks.length > 0 && (
+      {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body wins) */}
+      {project.body.length === 0 && project.contentBlocks && project.contentBlocks.length > 0 && (
         <CMSBlockRenderer blocks={project.contentBlocks} collection="projects" documentId={project.id} />
       )}
 

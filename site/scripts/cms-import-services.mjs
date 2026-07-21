@@ -8,7 +8,6 @@ import {
   normalizeSlug,
   readJson,
   resolveMediaByLegacyUrl,
-  toLexicalText,
   upsertBySlug,
 } from './cms-import-utils.mjs'
 
@@ -31,53 +30,6 @@ function mapBody(body) {
         : { value: String(item ?? '') },
     ),
   }))
-}
-
-function mapContentBlocks(body) {
-  const blocks = []
-  for (const block of asArray(body)) {
-    const type = block.type || 'text'
-    const heading = block.heading || ''
-
-    if (type === 'faq' && Array.isArray(block.items) && block.items.length > 0) {
-      const faqText = block.items
-        .map((item) => `Q: ${item.question || ''}\nA: ${item.answer || ''}`)
-        .join('\n\n')
-      blocks.push({
-        blockType: 'text',
-        heading,
-        body: toLexicalText(faqText),
-      })
-      continue
-    }
-
-    if (type === 'video' || (block.url && /youtube|vimeo|instagram/i.test(block.provider || ''))) {
-      blocks.push({
-        blockType: 'video',
-        heading,
-        url: block.url || '',
-        provider: block.provider || 'external',
-      })
-      continue
-    }
-
-    const textParts = []
-    if (heading) textParts.push(heading)
-    if (block.content) textParts.push(block.content)
-    if (Array.isArray(block.items) && block.items.length > 0) {
-      textParts.push(block.items.map((item) => (typeof item === 'string' ? item : item.value || '')).join('\n'))
-    }
-
-    const textBody = textParts.join('\n\n').trim()
-    if (!textBody) continue
-
-    blocks.push({
-      blockType: 'text',
-      heading: type === 'heading' ? heading : undefined,
-      body: toLexicalText(textBody),
-    })
-  }
-  return blocks
 }
 
 async function mapGallery(images, token) {
@@ -134,7 +86,8 @@ export async function importServices(token) {
         },
         capabilities: asArray(source.capabilities).map((item) => ({ value: item })),
         body: mapBody(source.body),
-        contentBlocks: mapContentBlocks(source.body),
+        // NOTE: do not also seed contentBlocks from body — the page renders both
+        // fields, so populating them together duplicates every section on the site.
         relatedWork: await mapRelatedWork(source.relatedWork, token),
         media: {
           heroImage: heroImageDoc?.id,

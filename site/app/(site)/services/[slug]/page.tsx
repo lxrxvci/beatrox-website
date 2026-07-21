@@ -175,8 +175,8 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* WYSIWYG Content Blocks */}
-      {service.contentBlocks && service.contentBlocks.length > 0 && (
+      {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body wins) */}
+      {service.body.length === 0 && service.contentBlocks && service.contentBlocks.length > 0 && (
         <CMSBlockRenderer blocks={service.contentBlocks} collection="services" documentId={service.id} />
       )}
 
