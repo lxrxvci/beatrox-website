@@ -23,7 +23,7 @@ export const Services: CollectionConfig = {
     },
   },
   access: {
-    read: () => true,
+    read: ({ req: { user } }) => (user ? true : { _status: { equals: 'published' } }),
   },
   versions: {
     drafts: true,

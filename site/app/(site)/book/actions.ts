@@ -3,10 +3,12 @@
 import { addHours, format } from 'date-fns'
 import { toZonedTime, fromZonedTime } from 'date-fns-tz'
 import { getPayload } from 'payload'
+import { headers } from 'next/headers'
 import payloadConfig from '@/payload.config'
 import { getAvailableSlots } from '@/lib/scheduling/availability'
 import { createCalendarEvent } from '@/lib/scheduling/google-calendar'
 import { sendBookingConfirmation, sendInternalBookingNotification } from '@/lib/email'
+import { hashIp, isRateLimited } from '@/lib/rate-limit'
 
 const DEFAULT_TIMEZONE = 'America/Los_Angeles'
 
@@ -128,12 +130,30 @@ export async function bookConsultation(
   _prevState: BookingFormState,
   formData: FormData,
 ): Promise<BookingFormState> {
+  // Honeypot: hidden field humans never fill. Silently fake success for bots.
+  if (formData.get('website')?.toString().trim()) {
+    return {
+      success: true,
+      message: 'Your consultation is booked. You will receive a confirmation email shortly with meeting details.',
+    }
+  }
+
   const validation = validateBookingInput(formData)
   if (!validation.valid) {
     return {
       success: false,
       message: 'Please fix the errors below.',
       errors: validation.errors,
+    }
+  }
+
+  // Best-effort per-IP throttle (see lib/rate-limit.ts).
+  const headersList = await headers()
+  const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || null
+  if (isRateLimited(hashIp(ip))) {
+    return {
+      success: false,
+      message: 'Too many booking attempts. Please try again in a few minutes.',
     }
   }
 
@@ -184,6 +204,9 @@ export async function bookConsultation(
 
     const consultation = await payload.create({
       collection: 'consultations',
+      // Trusted server-side write — collection create access requires an
+      // authenticated user; this validated action is the public write path.
+      overrideAccess: true,
       data: {
         type: typeIdNumber,
         startTime: slotStart.toISOString(),
@@ -219,6 +242,8 @@ export async function bookConsultation(
       await payload.update({
         collection: 'consultations',
         id: consultation.id,
+        // Trusted server-side write of the Google Calendar sync fields.
+        overrideAccess: true,
         data: {
           googleCalendarEventId: calendarResult.eventId,
           googleMeetLink: calendarResult.meetLink,

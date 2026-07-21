@@ -42,7 +42,6 @@ export default function Footer() {
               ['About', '/about'],
               ['Work', '/work'],
               ['Services', '/services'],
-              ['Rentals', '/rentals'],
               ['Team', '/team'],
               ['Book', '/book'],
               ['Contact', '/contact'],
@@ -55,6 +54,13 @@ export default function Footer() {
                 {label}
               </Link>
             ))}
+            {/* Rentals lives on a separate SPA deployment — plain external anchor, no Next prefetch. */}
+            <a
+              href="https://app-ruby-pi-32.vercel.app/"
+              className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors w-fit"
+            >
+              Rentals
+            </a>
           </div>
 
           {/* Social */}

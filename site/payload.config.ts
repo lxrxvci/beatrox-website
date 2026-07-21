@@ -28,6 +28,12 @@ const dirname = path.dirname(filename)
 // the token must be a true runtime read (env vars change between deploys).
 const runtimeEnv = process.env
 
+// Never fall back to the dev secret in production — fail fast at config load.
+const payloadSecret = runtimeEnv.PAYLOAD_SECRET
+if (!payloadSecret && runtimeEnv.NODE_ENV === 'production') {
+  throw new Error('PAYLOAD_SECRET environment variable is required in production.')
+}
+
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -35,13 +41,13 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  secret: process.env.PAYLOAD_SECRET || 'dev-only-secret-change-me',
+  secret: payloadSecret || 'dev-only-secret-change-me',
   editor: lexicalEditor(),
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI || process.env.DATABASE_URL || 'postgresql://localhost:5432/beatrox',
     },
-    push: true,
+    push: runtimeEnv.NODE_ENV !== 'production',
   }),
   collections: [Users, Media, Redirects, ContactSubmissions, ConsultationTypes, AvailabilityRules, BlackoutDates, Consultations, Pages, Projects, CaseStudies, Services, Team],
   globals: [Navigation, SiteStyles, SeoDefaults],

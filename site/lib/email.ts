@@ -29,6 +29,16 @@ function formatBookingTime(date: Date, timezone: string): string {
   return format(zoned, "EEEE, MMMM do yyyy 'at' h:mm a")
 }
 
+// Escape user-controlled values before interpolating into HTML email bodies.
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
 async function sendEmail(options: {
   to: string | string[]
   subject: string
@@ -80,10 +90,10 @@ export async function sendBookingConfirmation(input: BookingConfirmationInput): 
 
   const html = `
     <div style="font-family: Inter, sans-serif; color: #111;">
-      <p>Hi ${input.name},</p>
-      <p>Your <strong>${input.consultationType}</strong> with BEATROX is confirmed for:</p>
-      <p style="font-size: 18px; font-weight: 600;">${timeText}</p>
-      ${input.meetLink ? `<p><a href="${input.meetLink}">Join Google Meet</a></p>` : '<p>Meeting details will be sent separately.</p>'}
+      <p>Hi ${escapeHtml(input.name)},</p>
+      <p>Your <strong>${escapeHtml(input.consultationType)}</strong> with BEATROX is confirmed for:</p>
+      <p style="font-size: 18px; font-weight: 600;">${escapeHtml(timeText)}</p>
+      ${input.meetLink ? `<p><a href="${escapeHtml(input.meetLink)}">Join Google Meet</a></p>` : '<p>Meeting details will be sent separately.</p>'}
       <p>If you need to reschedule, please reply to this email or contact us at <a href="mailto:hello@beatrox.com">hello@beatrox.com</a>.</p>
       <p>Looking forward to talking with you,<br>The BEATROX team</p>
     </div>
@@ -123,16 +133,16 @@ export async function sendInternalBookingNotification(input: InternalNotificatio
     <div style="font-family: Inter, sans-serif; color: #111;">
       <h2>New consultation booking</h2>
       <ul>
-        <li><strong>Type:</strong> ${input.consultationType}</li>
-        <li><strong>Name:</strong> ${input.name}</li>
-        <li><strong>Email:</strong> ${input.email}</li>
-        ${input.company ? `<li><strong>Company:</strong> ${input.company}</li>` : ''}
-        ${input.phone ? `<li><strong>Phone:</strong> ${input.phone}</li>` : ''}
-        <li><strong>Time:</strong> ${timeText}</li>
+        <li><strong>Type:</strong> ${escapeHtml(input.consultationType)}</li>
+        <li><strong>Name:</strong> ${escapeHtml(input.name)}</li>
+        <li><strong>Email:</strong> ${escapeHtml(input.email)}</li>
+        ${input.company ? `<li><strong>Company:</strong> ${escapeHtml(input.company)}</li>` : ''}
+        ${input.phone ? `<li><strong>Phone:</strong> ${escapeHtml(input.phone)}</li>` : ''}
+        <li><strong>Time:</strong> ${escapeHtml(timeText)}</li>
       </ul>
       <p><strong>Project summary:</strong></p>
-      <p>${input.projectSummary || ''}</p>
-      <p><a href="${input.adminUrl}">View in admin</a></p>
+      <p>${escapeHtml(input.projectSummary || '')}</p>
+      <p><a href="${escapeHtml(input.adminUrl)}">View in admin</a></p>
     </div>
   `
 

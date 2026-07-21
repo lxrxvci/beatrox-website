@@ -90,13 +90,13 @@ export default async function WorkTagPage({ params }: Props) {
                 />
                 <div className="project-card-overlay">
                   <div>
-                    <p className="heading-sm text-white mb-2">{project.title}</p>
+                    <p className="heading-sm text-white leading-[1.4] mb-3">{project.title}</p>
                     {project.metadata?.client && (
-                      <p className="text-sm text-white/75 tracking-[0.12em] uppercase mb-2">
+                      <p className="text-sm text-white/75 tracking-[0.12em] uppercase mb-3">
                         {project.metadata.client}
                       </p>
                     )}
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-1.5 mt-1">
                       {(project.tags || []).slice(0, 4).map((projectTag) => (
                         <span key={projectTag} className={`tag ${projectTag === normalizedTag ? 'border-white/60' : ''}`}>
                           {projectTag}

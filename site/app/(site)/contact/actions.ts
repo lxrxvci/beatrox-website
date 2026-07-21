@@ -3,7 +3,7 @@
 import { getPayload } from 'payload'
 import payloadConfig from '@/payload.config'
 import { headers } from 'next/headers'
-import crypto from 'crypto'
+import { hashIp, isRateLimited } from '@/lib/rate-limit'
 
 export interface FormState {
   success: boolean
@@ -11,15 +11,18 @@ export interface FormState {
   errors?: Record<string, string[]>
 }
 
-function hashIp(ip: string | null): string | undefined {
-  if (!ip) return undefined
-  return crypto.createHash('sha256').update(ip).digest('hex').slice(0, 16)
-}
-
 export async function submitContactForm(
   _prevState: FormState,
   formData: FormData,
 ): Promise<FormState> {
+  // Honeypot: hidden field humans never fill. Silently fake success for bots.
+  if (formData.get('website')?.toString().trim()) {
+    return {
+      success: true,
+      message: 'Thanks for reaching out! A member of the Beatrox team will be in touch within 1–2 business days.',
+    }
+  }
+
   const name = formData.get('name')?.toString().trim()
   const email = formData.get('email')?.toString().trim()
   const company = formData.get('company')?.toString().trim()
@@ -60,13 +63,21 @@ export async function submitContactForm(
     const payload = await getPayload({ config: payloadConfig })
     const headersList = await headers()
     const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || null
+    const ipHash = hashIp(ip)
+
+    if (isRateLimited(ipHash)) {
+      return {
+        success: false,
+        message: 'Too many submissions. Please try again in a few minutes.',
+      }
+    }
 
     const data: Record<string, unknown> = {
       name,
       email,
       message,
       source: 'website',
-      ipHash: hashIp(ip),
+      ipHash,
     }
 
     if (company) data.company = company
@@ -78,6 +89,9 @@ export async function submitContactForm(
 
     await payload.create({
       collection: 'contact-submissions',
+      // Trusted server-side write — collection create access requires an
+      // authenticated user; this validated action is the public write path.
+      overrideAccess: true,
       data,
     })
 

@@ -80,9 +80,14 @@ interface CapabilitiesGridProps {
 }
 
 export default function CapabilitiesGrid({ items }: CapabilitiesGridProps) {
-  const capabilities = items
+  const mapped = items
     ? items.map((item) => CAPABILITY_BY_LABEL.get(item.label)).filter(Boolean) as Capability[]
-    : DEFAULT_CAPABILITIES
+    : null
+  // CMS-driven label lists (e.g. the About page capabilities block) use a
+  // different vocabulary than the curated grid labels; when any label is
+  // unrecognized, fall back to the full default grid instead of rendering
+  // only the few tiles that happened to match.
+  const capabilities = mapped && mapped.length === (items?.length ?? 0) ? mapped : DEFAULT_CAPABILITIES
 
   if (capabilities.length === 0) return null
 
@@ -100,10 +105,14 @@ export default function CapabilitiesGrid({ items }: CapabilitiesGridProps) {
         >
           <Image
             src={cap.image}
-            alt=""
+            alt={cap.label}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"
+          />
+          <span
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/25"
+            aria-hidden="true"
           />
           <span
             className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 text-center text-white transition-colors duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:bg-black/50"

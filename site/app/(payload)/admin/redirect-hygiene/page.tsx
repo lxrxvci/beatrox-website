@@ -1,6 +1,16 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import { headers as getHeaders } from 'next/headers'
+import { getPayload } from 'payload'
+import payloadConfig from '@/payload.config'
 import { runRedirectHygiene } from '@/lib/redirects/hygiene'
+
+async function getAdminUser() {
+  const payload = await getPayload({ config: payloadConfig })
+  const headers = await getHeaders()
+  const { user } = await payload.auth({ headers })
+  return user
+}
 
 interface PageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>
@@ -15,11 +25,19 @@ function compact(input?: string | string[] | null) {
 
 async function applyFixesAction() {
   'use server'
+  const user = await getAdminUser()
+  if (!user) {
+    redirect('/admin/login')
+  }
   const report = await runRedirectHygiene(true)
   redirect(`/admin/redirect-hygiene?notice=Applied+redirect+hygiene.+deleted=${report.deleted},+updated=${report.updated}`)
 }
 
 export default async function RedirectHygieneAdminPage({ searchParams }: PageProps) {
+  const user = await getAdminUser()
+  if (!user) {
+    redirect('/admin/login')
+  }
   const params = await searchParams
   const notice = compact(params.notice)
   const report = await runRedirectHygiene(false)

@@ -57,6 +57,12 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         </div>
       )}
 
+      {/* Honeypot — off-screen; humans leave it blank, bots fill it. */}
+      <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }} aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-7">
         {textFields.slice(0, 4).map((field) => (
           <div key={field.id}>

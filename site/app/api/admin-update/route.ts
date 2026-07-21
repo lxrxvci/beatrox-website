@@ -9,22 +9,38 @@ export const dynamic = 'force-dynamic'
 function revalidateDocument(collection: string, doc: Record<string, unknown>) {
   try {
     const slug = typeof doc.slug === 'string' ? doc.slug : ''
-    if (!slug) return
 
     if (collection === 'pages') {
-      revalidatePath(slug === 'home' ? '/' : `/${slug}`)
+      if (slug) revalidatePath(slug === 'home' ? '/' : `/${slug}`)
+      // Homepage composes page content (hero/blocks), so any page edit may
+      // affect it.
+      revalidatePath('/')
+      return
+    }
+
+    if (collection === 'team') {
+      // Team members render on the /team index; there are no /team/[slug] pages.
+      revalidatePath('/team')
       return
     }
 
     const prefixMap: Record<string, string> = {
       projects: '/work',
       services: '/services',
-      team: '/team',
     }
 
     const prefix = prefixMap[collection]
     if (prefix) {
-      revalidatePath(`${prefix}/${slug}`)
+      if (slug) revalidatePath(`${prefix}/${slug}`)
+      // Index pages list every document, and the homepage features both
+      // projects and services.
+      revalidatePath(prefix)
+      revalidatePath('/')
+    }
+
+    if (collection === 'projects') {
+      // Tag pages are keyed by tag value; invalidate the whole dynamic segment.
+      revalidatePath('/work/tag/[tag]', 'page')
     }
   } catch (err) {
     // Don't fail the update if revalidation throws.
@@ -34,6 +50,21 @@ function revalidateDocument(collection: string, doc: Record<string, unknown>) {
 
 function getTopLevelField(path: string): string {
   return path.split('.')[0]
+}
+
+// Allowlist of writable collection -> field-path prefixes, derived from how
+// the admin inline-edit UI (components/admin/EditableText, EditableRichText)
+// actually calls this endpoint. Anything outside this list is rejected.
+const ALLOWED_UPDATE_PATHS: Record<string, string[]> = {
+  pages: ['hero.', 'consultationForm.', 'address.', 'contactInfo.', 'social.', 'emailSignup.', 'blocks.'],
+  projects: ['body.', 'contentBlocks.', 'blocks.'],
+  services: ['capabilities.', 'body.', 'contentBlocks.', 'blocks.'],
+}
+
+function isAllowedUpdate(collection: string, path: string): boolean {
+  const prefixes = ALLOWED_UPDATE_PATHS[collection]
+  if (!prefixes) return false
+  return prefixes.some((prefix) => path.startsWith(prefix))
 }
 
 function setPath(obj: Record<string, unknown>, path: string, value: unknown): void {
@@ -75,6 +106,10 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: 'Missing collection, id, or path' }, { status: 400 })
     }
 
+    if (typeof collection !== 'string' || typeof path !== 'string' || !isAllowedUpdate(collection, path)) {
+      return NextResponse.json({ error: 'Collection/path is not editable via this endpoint' }, { status: 400 })
+    }
+
     // Fetch current document
     const doc = await payload.findByID({
       collection,
@@ -107,7 +142,6 @@ export async function PATCH(request: Request) {
     return NextResponse.json({ success: true, doc: updated })
   } catch (error) {
     console.error('Admin update failed:', error)
-    const message = error instanceof Error ? error.message : 'Update failed'
-    return NextResponse.json({ error: message }, { status: 500 })
+    return NextResponse.json({ error: 'Update failed' }, { status: 500 })
   }
 }

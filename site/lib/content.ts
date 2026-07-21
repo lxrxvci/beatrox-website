@@ -594,6 +594,9 @@ export async function getAllProjectsResolved(): Promise<Project[]> {
       limit: 200,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     if (result.docs.length > 0) {
       return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
@@ -602,6 +605,58 @@ export async function getAllProjectsResolved(): Promise<Project[]> {
     console.warn('Failed to load projects from CMS; falling back to JSON:', error)
   }
   return getAllProjects()
+}
+
+/**
+ * Lightweight project lookup for the homepage featured grid: only the slugs
+ * asked for, and only the fields the cards read (title/slug/tags/hero/
+ * metadata/images/seo) — body, contentBlocks, and videos stay in Postgres.
+ */
+export async function getFeaturedProjectsResolved(slugs: string[]): Promise<Project[]> {
+  const canonicalSlugs = uniqueStrings(slugs.map((slug) => normalizeProjectSlug(slug)))
+  if (canonicalSlugs.length === 0) return []
+  try {
+    const payload = await getPayloadClient()
+    const preview = await isPreviewModeEnabled()
+    // Match both canonical slugs and the legacy "work/<slug>" stored form.
+    const slugCandidates = [...canonicalSlugs, ...canonicalSlugs.map((slug) => `work/${slug}`)]
+    const result = await payload.find({
+      collection: 'projects',
+      where: preview
+        ? {
+            slug: { in: slugCandidates },
+          }
+        : {
+            slug: { in: slugCandidates },
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
+      select: {
+        title: true,
+        slug: true,
+        tags: true,
+        hero: true,
+        metadata: true,
+        images: true,
+        seo: true,
+      },
+      limit: canonicalSlugs.length,
+      depth: 2,
+      draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
+    })
+    if (result.docs.length > 0) {
+      return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
+    }
+  } catch (error) {
+    console.warn('Failed to load featured projects from CMS; falling back to JSON:', error)
+  }
+  const bySlug = new Map(getAllProjects().map((project) => [project.canonicalSlug, project]))
+  return canonicalSlugs
+    .map((slug) => bySlug.get(slug))
+    .filter((project): project is Project => Boolean(project))
 }
 
 export async function getProjectResolved(slug: string): Promise<Project | null> {
@@ -624,6 +679,9 @@ export async function getProjectResolved(slug: string): Promise<Project | null> 
       limit: 1,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     const canonicalDoc = resultByCanonical.docs[0]
     if (canonicalDoc) return mapCmsProject(canonicalDoc as Record<string, unknown>)
@@ -642,6 +700,9 @@ export async function getProjectResolved(slug: string): Promise<Project | null> 
       limit: 1,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     const legacyDoc = legacyResult.docs[0]
     if (legacyDoc) return mapCmsProject(legacyDoc as Record<string, unknown>)
@@ -665,6 +726,9 @@ export async function getProjectSlugsResolved(): Promise<string[]> {
           },
       limit: 500,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     const slugs = uniqueStrings(
       result.docs
@@ -706,6 +770,9 @@ export async function getAllServicesResolved(): Promise<Service[]> {
       limit: 200,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     if (result.docs.length > 0) {
       return result.docs.map((doc) => mapCmsService(doc as Record<string, unknown>))
@@ -738,6 +805,9 @@ export async function getServiceResolved(slug: string): Promise<Service | null> 
       limit: 1,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     const doc = result.docs[0]
     if (doc) return mapCmsService(doc as Record<string, unknown>)
@@ -761,6 +831,9 @@ export async function getServiceSlugsResolved(): Promise<string[]> {
           },
       limit: 500,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     if (result.docs.length > 0) {
       return uniqueStrings(
@@ -792,6 +865,9 @@ export async function getTeamResolved() {
       limit: 200,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     const pageResult = await payload.find({
       collection: 'pages',
@@ -805,6 +881,9 @@ export async function getTeamResolved() {
       limit: 1,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     const page = pageResult.docs[0] as Record<string, unknown> | undefined
     const teamHeroImage = resolveCmsMediaUrl(((page?.seo as Record<string, unknown>)?.ogImage as unknown))
@@ -888,6 +967,9 @@ async function findCmsPageDoc(slug: string): Promise<CmsPageDoc | undefined> {
     limit: 1,
     depth: 2,
     draft: preview,
+    // Trusted server-side read: the where clause above already enforces
+    // published-only outside preview mode, and preview needs draft access.
+    overrideAccess: true,
   })
   return result.docs[0] as CmsPageDoc | undefined
 }
@@ -1161,6 +1243,9 @@ export async function getNavigationLinks(): Promise<NavigationLink[]> {
       sort: 'navOrder',
       limit: 50,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
 
     const pageLinks = pages.docs
@@ -1245,6 +1330,9 @@ export async function getCMSPageSlugs(): Promise<string[]> {
         slug: true,
       },
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
 
     return (result.docs as Array<{ slug?: string }>)
@@ -1282,6 +1370,9 @@ export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null
       limit: 1,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
 
     const page = result.docs[0] as unknown as
@@ -1342,6 +1433,9 @@ export async function getAllCaseStudiesResolved(): Promise<CaseStudy[]> {
       limit: 200,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     return result.docs.map((doc) => mapCmsCaseStudy(doc as Record<string, unknown>))
   } catch (error) {
@@ -1370,6 +1464,9 @@ export async function getCaseStudyResolved(slug: string): Promise<CaseStudy | nu
       limit: 1,
       depth: 2,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     const doc = result.docs[0]
     if (doc) return mapCmsCaseStudy(doc as Record<string, unknown>)
@@ -1393,6 +1490,9 @@ export async function getCaseStudySlugsResolved(): Promise<string[]> {
           },
       limit: 500,
       draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
     })
     return uniqueStrings(
       result.docs

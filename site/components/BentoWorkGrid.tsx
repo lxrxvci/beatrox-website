@@ -51,9 +51,9 @@ export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGri
               {project.client && (
                 <p className="mono text-[var(--accent)] mb-2">{project.client}</p>
               )}
-              <p className="heading-md text-white mb-2">{project.title}</p>
+              <p className="heading-md text-white leading-[1.2] mb-3">{project.title}</p>
               {project.tags && project.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-1">
                   {project.tags.slice(0, 3).map((tag) => (
                     <span key={tag} className="mono text-[11px] text-[var(--text-secondary)] uppercase">
                       {humanizeTag(tag)}

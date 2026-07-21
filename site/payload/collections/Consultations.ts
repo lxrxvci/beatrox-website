@@ -9,7 +9,9 @@ export const Consultations: CollectionConfig = {
   },
   access: {
     read: ({ req: { user } }) => Boolean(user),
-    create: () => true,
+    // Public bookings are written by the trusted server action
+    // (app/(site)/book/actions.ts) via the local API with overrideAccess.
+    create: ({ req: { user } }) => Boolean(user),
     update: ({ req: { user } }) => Boolean(user),
     delete: ({ req: { user } }) => Boolean(user),
   },
@@ -78,6 +80,10 @@ export const Consultations: CollectionConfig = {
         { label: 'Cancelled', value: 'cancelled' },
         { label: 'Completed', value: 'completed' },
       ],
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
     },
     {
       name: 'source',
@@ -87,6 +93,10 @@ export const Consultations: CollectionConfig = {
     {
       name: 'googleCalendarEventId',
       type: 'text',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
       admin: {
         readOnly: true,
         description: 'Auto-populated when synced to Google Calendar.',
@@ -95,6 +105,10 @@ export const Consultations: CollectionConfig = {
     {
       name: 'googleMeetLink',
       type: 'text',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
       admin: {
         readOnly: true,
         description: 'Auto-populated when a Google Meet conference is created.',
@@ -103,6 +117,10 @@ export const Consultations: CollectionConfig = {
     {
       name: 'internalNotes',
       type: 'textarea',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
       admin: {
         description: 'Private admin notes.',
       },

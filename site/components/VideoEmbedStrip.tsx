@@ -15,24 +15,45 @@ function directFile(video: VideoEmbed): string | null {
 export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps) {
   if (!videos.length) return null
 
+  // Seeded data often reuses one title (e.g. "Projekt X Deck Link") for
+  // several distinct embeds — suffix duplicates with an index so each card
+  // gets a distinguishable label; missing titles fall back to "Video N".
+  const titleCounts = new Map<string, number>()
+  videos.forEach((video) => {
+    const key = video.title?.trim() || ''
+    titleCounts.set(key, (titleCounts.get(key) ?? 0) + 1)
+  })
+  const seenCounts = new Map<string, number>()
+  const labelFor = (video: VideoEmbed, index: number): string => {
+    const base = video.title?.trim()
+    if (!base) return `Video ${index + 1}`
+    if ((titleCounts.get(base) ?? 0) > 1) {
+      const n = (seenCounts.get(base) ?? 0) + 1
+      seenCounts.set(base, n)
+      return `${base} ${n}`
+    }
+    return base
+  }
+
   return (
     <section className="section border-t border-white/10">
       <div className="max-w-[1400px] mx-auto">
         <h2 className="heading-sm text-white/75 mb-8">{title}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {videos.map((video) => {
+          {videos.map((video, index) => {
             const file = directFile(video)
+            const label = labelFor(video, index)
             return (
-              <article key={`${video.provider}-${video.title}`}>
+              <article key={`${video.provider}-${video.url || index}`}>
                 {file ? (
-                  <VideoPlayer src={file} title={video.title} />
+                  <VideoPlayer src={file} title={label} />
                 ) : (
                   <div className="border border-white/10 bg-black/70 backdrop-blur-sm">
                     <div className="aspect-video w-full bg-black">
                       {video.embedUrl ? (
                         <iframe
                           src={video.embedUrl}
-                          title={video.title}
+                          title={label}
                           className="h-full w-full"
                           loading="lazy"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -53,7 +74,7 @@ export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps)
                       )}
                     </div>
                     <div className="p-5 sm:p-6">
-                      <p className="heading-sm text-white mb-2">{video.title}</p>
+                      <p className="heading-sm text-white mb-2">{label}</p>
                       <p className="mono text-white/60">{video.provider.toUpperCase()}</p>
                     </div>
                   </div>

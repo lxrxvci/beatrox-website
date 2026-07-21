@@ -42,13 +42,13 @@ export default async function BookPage() {
         </div>
       </section>
 
-      <section className="section border-b border-white/10">
+      <section className="section border-b border-white/10 py-12 lg:py-20">
         <div className="max-w-[980px] mx-auto">
           <BookingForm types={types} />
         </div>
       </section>
 
-      <section className="section border-t border-white/10 text-center">
+      <section className="section border-t border-white/10 text-center py-12 lg:py-20">
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Prefer to send a message?</h2>
           <p className="text-base text-white/70 mb-8 leading-relaxed">

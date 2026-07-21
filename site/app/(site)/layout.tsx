@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { cookies } from 'next/headers'
 import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import '../globals.css'
 import Nav from '@/components/Nav'
@@ -55,25 +56,28 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
 })
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-heading',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '600', '700'],
 })
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
   display: 'swap',
-  weight: ['400', '700'],
+  weight: ['400'],
 })
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
   const styles = await getSiteStyles()
+  // httpOnly Payload session cookie — gates the admin-edit UI fetch only;
+  // writes are still authenticated server-side.
+  const maybeAdmin = (await cookies()).has('payload-token')
   const cssVars = {
     '--brand-primary': styles.brandPrimary,
     '--brand-secondary': styles.brandSecondary,
@@ -92,7 +96,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           <a href="#main-content" className="skip-link">
             Skip to content
           </a>
-          <AdminEditProvider>
+          <AdminEditProvider maybeAdmin={maybeAdmin}>
             <SmoothScroll>
               <Nav />
               {/* Curtain wrapper: lifts to reveal the fixed footer on desktop */}

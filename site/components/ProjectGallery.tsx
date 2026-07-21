@@ -98,7 +98,9 @@ function buildRows(
 export default function ProjectGallery({ images }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  const [containerWidth, setContainerWidth] = useState(1400)
+  // Start unmeasured (0 = render no rows) so the SSR/first paint can't
+  // overflow the viewport; the effect below measures on mount.
+  const [containerWidth, setContainerWidth] = useState(0)
 
   const sizedImages = useMemo<SizedImage[]>(
     () => images.map((img) => ({ ...img, aspect: getAspect(img) })),
@@ -112,7 +114,12 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
 
     const update = () => {
       const rect = el.getBoundingClientRect()
-      setContainerWidth(Math.max(320, Math.floor(rect.width)))
+      // Rows are laid out inside the container's horizontal padding, so
+      // measure the content box — otherwise every row overflows by the
+      // combined px-6/lg:px-10 padding and the page scrolls sideways.
+      const styles = window.getComputedStyle(el)
+      const paddingX = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight)
+      setContainerWidth(Math.max(320, Math.floor(rect.width - paddingX)))
     }
     update()
 
@@ -192,7 +199,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                   <motion.button
                     key={`${img.url}-${index}`}
                     layoutId={`gallery-${index}`}
-                    className="relative overflow-hidden bg-neutral-950 group text-left border border-white/5 focus-visible:outline-2 focus-visible:outline-[var(--accent)]"
+                    className="relative overflow-hidden bg-neutral-950 group text-left border border-white/5 max-w-full focus-visible:outline-2 focus-visible:outline-[var(--accent)]"
                     style={{ width: img.width, height: img.height, flexShrink: 0 }}
                     onClick={() => setActiveIndex(index)}
                     aria-label={`Open image ${index + 1} of ${images.length}`}

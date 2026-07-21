@@ -5,7 +5,6 @@ import { seoToMetadata } from '@/lib/metadata'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 import { EditableText } from '@/components/admin'
 
-export const dynamicParams = false
 export const revalidate = 300
 
 export async function generateStaticParams() {

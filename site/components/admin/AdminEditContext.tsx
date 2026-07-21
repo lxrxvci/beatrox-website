@@ -28,19 +28,24 @@ export function useAdminEdit() {
 
 interface Props {
   children: React.ReactNode
+  // Set server-side from the presence of the httpOnly `payload-token` cookie.
+  // Anonymous visitors skip the /api/admin-check fetch entirely; actual auth
+  // is still verified server-side on every write.
+  maybeAdmin?: boolean
 }
 
-export function AdminEditProvider({ children }: Props) {
-  const [isAdmin, setIsAdmin] = useState<boolean | null>(null)
+export function AdminEditProvider({ children, maybeAdmin = false }: Props) {
+  const [isAdmin, setIsAdmin] = useState<boolean | null>(maybeAdmin ? null : false)
   const [editMode, setEditMode] = useState(false)
   const [activeField, setActiveField] = useState<{ collection: string; id: string; path: string } | null>(null)
 
   useEffect(() => {
+    if (!maybeAdmin) return
     fetch('/api/admin-check')
       .then((res) => res.json())
       .then((data) => setIsAdmin(data.isAdmin === true))
       .catch(() => setIsAdmin(false))
-  }, [])
+  }, [maybeAdmin])
 
   const handleSetEditMode = useCallback((value: boolean) => {
     setEditMode(value)

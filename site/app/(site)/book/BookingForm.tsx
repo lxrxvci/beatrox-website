@@ -29,6 +29,14 @@ export default function BookingForm({ types }: BookingFormProps) {
   const [state, formAction, pending] = useActionState(bookConsultation, initialState)
   const [isPendingSlots, startTransition] = useTransition()
 
+  const fieldError = (id: string) =>
+    state.errors?.[id]?.map((err, i) => (
+      <p key={i} className="text-sm text-red-400 mt-2">
+        {err}
+      </p>
+    ))
+  const hasError = (id: string) => Boolean(state.errors?.[id]?.length)
+
   const [step, setStep] = useState<'type' | 'datetime' | 'details' | 'success'>('type')
   const [selectedType, setSelectedType] = useState<ConsultationType | null>(null)
   const [selectedDate, setSelectedDate] = useState<string>('')
@@ -244,6 +252,12 @@ export default function BookingForm({ types }: BookingFormProps) {
           <input type="hidden" name="endTime" value={selectedSlot?.endTime || ''} />
           <input type="hidden" name="timezone" value={selectedSlot?.timezone || ''} />
 
+          {/* Honeypot — off-screen; humans leave it blank, bots fill it. */}
+          <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }} aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="heading-sm text-white/75 block mb-2.5" htmlFor="name">
@@ -254,9 +268,12 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="name"
                 type="text"
                 required
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
+                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors ${
+                  hasError('name') ? 'border-red-400/60' : 'border-white/25'
+                }`}
                 placeholder="Your Name"
               />
+              {fieldError('name')}
             </div>
             <div>
               <label className="heading-sm text-white/75 block mb-2.5" htmlFor="email">
@@ -267,9 +284,12 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="email"
                 type="email"
                 required
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors"
+                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors ${
+                  hasError('email') ? 'border-red-400/60' : 'border-white/25'
+                }`}
                 placeholder="Email Address"
               />
+              {fieldError('email')}
             </div>
             <div>
               <label className="heading-sm text-white/75 block mb-2.5" htmlFor="company">
@@ -306,10 +326,16 @@ export default function BookingForm({ types }: BookingFormProps) {
               name="projectSummary"
               required
               rows={6}
-              className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors resize-none"
+              className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-white transition-colors resize-none ${
+                hasError('projectSummary') ? 'border-red-400/60' : 'border-white/25'
+              }`}
               placeholder="Describe your vision, goals, and any specific requirements..."
             />
+            {fieldError('projectSummary')}
           </div>
+
+          {fieldError('typeId')}
+          {fieldError('slot')}
 
           <button
             type="submit"

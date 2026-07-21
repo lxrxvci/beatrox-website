@@ -43,3 +43,6 @@ next-env.d.ts
 
 # CMS script bundles (esbuild output)
 scripts/.tmp/
+
+# local CMS data (SQLite dev database)
+.cms-data/

@@ -28,7 +28,7 @@ export const Projects: CollectionConfig = {
     },
   },
   access: {
-    read: () => true,
+    read: ({ req: { user } }) => (user ? true : { _status: { equals: 'published' } }),
   },
   versions: {
     drafts: true,

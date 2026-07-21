@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getHomepageResolved, getAllProjectsResolved, getCMSPageBySlug } from '@/lib/content'
+import { getHomepageResolved, getFeaturedProjectsResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import HeroMedia from '@/components/HeroMedia'
@@ -22,16 +22,46 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HomePage() {
   const data = await getHomepageResolved()
   const cmsPage = await getCMSPageBySlug('home')
-  const allProjects = await getAllProjectsResolved()
+  // Featured 4 projects for homepage grid — fetched with a narrow select
+  // instead of loading every project.
+  const featuredSlugs = ['run-for-the-oceans', 'aku-world', 'projekt-x', 'myshelter']
+  const featuredProjects = await getFeaturedProjectsResolved(featuredSlugs)
   const heroImage = data.media.heroImage || '/og-default.jpg'
   const galleryImages = data.media.galleryImages || []
-  const projectsBySlug = new Map(allProjects.map((project) => [project.canonicalSlug, project]))
+  const projectsBySlug = new Map(featuredProjects.map((project) => [project.canonicalSlug, project]))
 
-  // Featured 4 projects for homepage grid
-  const featuredSlugs = ['run-for-the-oceans', 'aku-world', 'projekt-x', 'myshelter']
   const featured = featuredSlugs
     .map((slug) => ({ slug, project: projectsBySlug.get(slug) }))
-    .filter((row): row is { slug: string; project: (typeof allProjects)[number] } => Boolean(row.project))
+    .filter((row): row is { slug: string; project: (typeof featuredProjects)[number] } => Boolean(row.project))
+
+  // Resolved CMS hero copy; HomeHero falls back to its original hardcoded
+  // strings when a field is empty.
+  const heroProps = {
+    headline: data.hero.headline || undefined,
+    subheadline: data.hero.subheadline || undefined,
+    cta: data.hero.cta.label && data.hero.cta.url ? data.hero.cta : undefined,
+    secondaryCta:
+      data.hero.secondaryCta.label && data.hero.secondaryCta.url ? data.hero.secondaryCta : undefined,
+  }
+
+  // Philosophy columns come from the resolved homepage sections; the literal
+  // list is the original hardcoded copy, kept as fallback.
+  const philosophyColumns = data.sections.find(
+    (section) => section.type === 'philosophy' && section.columns && section.columns.length > 0,
+  )?.columns ?? [
+    {
+      heading: 'Who We Are',
+      body: "Engineers, artists, and architects of awe. We build the things people can't stop talking about.",
+    },
+    {
+      heading: 'What We Do',
+      body: 'From concept to curtain call — design, fabrication, deployment, and operation. Full spectrum, zero compromise.',
+    },
+    {
+      heading: 'How We Do It',
+      body: "Your vision + our obsession. We prototype fast, iterate relentlessly, and only stop when it's extraordinary.",
+    },
+  ]
 
   const bentoProjects = featured.map(({ project, slug }) => {
     const firstImage = project.images?.find((img) => img.url && img.url !== '')
@@ -50,7 +80,7 @@ export default async function HomePage() {
       <article>
         <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
           <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
-          <HomeHero />
+          <HomeHero {...heroProps} />
         </section>
         <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} resolvedProjects={bentoProjects} />
       </article>
@@ -62,27 +92,14 @@ export default async function HomePage() {
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
         <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
-        <HomeHero />
+        <HomeHero {...heroProps} />
       </section>
 
       {/* ── Philosophy ────────────────────────────────────────────────────── */}
       <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                heading: 'Who We Are',
-                body: "Engineers, artists, and architects of awe. We build the things people can't stop talking about.",
-              },
-              {
-                heading: 'What We Do',
-                body: 'From concept to curtain call — design, fabrication, deployment, and operation. Full spectrum, zero compromise.',
-              },
-              {
-                heading: 'How We Do It',
-                body: "Your vision + our obsession. We prototype fast, iterate relentlessly, and only stop when it's extraordinary.",
-              },
-            ].map((col) => (
+            {philosophyColumns.map((col) => (
               <div key={col.heading}>
                 <h2 className="heading-sm text-[var(--accent)] mb-4">{col.heading}</h2>
                 <p className="text-base text-white/75 leading-relaxed">{col.body}</p>

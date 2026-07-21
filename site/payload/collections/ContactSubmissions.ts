@@ -9,7 +9,9 @@ export const ContactSubmissions: CollectionConfig = {
   },
   access: {
     read: ({ req: { user } }) => Boolean(user),
-    create: () => true,
+    // Public submissions are written by the trusted server action
+    // (app/(site)/contact/actions.ts) via the local API with overrideAccess.
+    create: ({ req: { user } }) => Boolean(user),
     update: ({ req: { user } }) => Boolean(user),
     delete: ({ req: { user } }) => Boolean(user),
   },
@@ -70,6 +72,10 @@ export const ContactSubmissions: CollectionConfig = {
         { label: 'Converted', value: 'converted' },
         { label: 'Archived', value: 'archived' },
       ],
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
     },
     {
       name: 'source',
@@ -79,6 +85,10 @@ export const ContactSubmissions: CollectionConfig = {
     {
       name: 'ipHash',
       type: 'text',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
     },
   ],
 }

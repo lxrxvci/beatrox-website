@@ -60,9 +60,12 @@ export async function getAvailableSlots(
 ): Promise<AvailableSlot[]> {
   const { consultationTypeId, from, to } = options
 
+  // Trusted server-side scheduling engine: bypass access control (collections
+  // are auth-only reads) so anonymous booking flows see rules/blackouts/bookings.
   const typeDoc = await payload.findByID({
     collection: 'consultation-types',
     id: consultationTypeId,
+    overrideAccess: true,
   })
 
   if (!typeDoc || !typeDoc.isEnabled) {
@@ -86,6 +89,7 @@ export async function getAvailableSlots(
     collection: 'availability-rules',
     where: { isEnabled: { equals: true } },
     limit: 1000,
+    overrideAccess: true,
   })
 
   const rules = rulesRes.docs.filter((rule) => ruleAppliesToType(rule, consultationTypeId))
@@ -103,6 +107,7 @@ export async function getAvailableSlots(
       },
     },
     limit: 1000,
+    overrideAccess: true,
   })
 
   const existingRes = await payload.find({
@@ -113,6 +118,7 @@ export async function getAvailableSlots(
       endTime: { greater_than_equal: effectiveFrom.toISOString() },
     },
     limit: 1000,
+    overrideAccess: true,
   })
 
   const existingBookings = existingRes.docs.map((doc) => ({
