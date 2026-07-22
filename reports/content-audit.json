@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-07-22T06:16:01.695Z",
+  "generatedAt": "2026-07-22T10:16:31.117Z",
   "mode": "read-only",
   "summary": {
     "projectsAudited": 17,
-    "servicesAudited": 40,
+    "servicesAudited": 46,
     "jsonBaselineProjects": 17,
-    "jsonBaselineServices": 40,
+    "jsonBaselineServices": 46,
     "projectsWithZeroImages": 0,
     "projectsWithMissingImagesOnDisk": 0,
     "projectsWithEmptyImageUrls": 0,
     "sharedImageClusters": 0,
-    "serviceHeroDuplicateClusters": 8,
-    "servicesInHeroDuplicateClusters": 21,
+    "serviceHeroDuplicateClusters": 7,
+    "servicesInHeroDuplicateClusters": 18,
     "servicesMissingHero": 0,
     "servicesWithBrokenRelatedWork": 0,
     "capabilityTiles": 12,
     "capabilityTilesWithInvalidHref": 0,
     "projectsWithSuggestedServiceTags": 14,
-    "totalSuggestedServiceTags": 60
+    "totalSuggestedServiceTags": 38
   },
   "projects": [
     {
@@ -31,7 +31,20 @@
         "experiential-event",
         "nft-miami"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "experiential-events",
+          "title": "Experiential Events"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        },
+        {
+          "slug": "immersive-environments",
+          "title": "Immersive Environments"
+        }
+      ],
       "images": {
         "total": 26,
         "emptyUrlCount": 0,
@@ -53,13 +66,6 @@
           "matchedOn": [
             "event"
           ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "matchedOn": [
-            "event"
-          ]
         }
       ]
     },
@@ -75,7 +81,32 @@
         "stage-design",
         "lighting-design"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "audio-production",
+          "title": "Audio Production"
+        },
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        },
+        {
+          "slug": "lighting-services",
+          "title": "Lighting Services"
+        },
+        {
+          "slug": "multimedia-displays",
+          "title": "Multimedia Displays"
+        },
+        {
+          "slug": "stage-design",
+          "title": "Stage Design"
+        }
+      ],
       "images": {
         "total": 18,
         "emptyUrlCount": 0,
@@ -84,32 +115,10 @@
       "sharedImages": [],
       "suggestedServiceTags": [
         {
-          "slug": "backline-stage-rental",
-          "title": "Backline & Stage Rental",
-          "matchedOn": [
-            "stage"
-          ]
-        },
-        {
           "slug": "event-planning-logistics",
           "title": "Event Planning & Logistics",
           "matchedOn": [
             "event"
-          ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "matchedOn": [
-            "event",
-            "production"
-          ]
-        },
-        {
-          "slug": "production-management",
-          "title": "Production Management",
-          "matchedOn": [
-            "production"
           ]
         },
         {
@@ -132,7 +141,12 @@
         "interactive",
         "case-study"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "projection-mapping",
+          "title": "Projection Mapping"
+        }
+      ],
       "images": {
         "total": 6,
         "emptyUrlCount": 0,
@@ -169,7 +183,28 @@
         "vr-experience",
         "lighting-design"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental"
+        },
+        {
+          "slug": "experiential-events",
+          "title": "Experiential Events"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        },
+        {
+          "slug": "lighting-services",
+          "title": "Lighting Services"
+        },
+        {
+          "slug": "stage-design",
+          "title": "Stage Design"
+        }
+      ],
       "images": {
         "total": 10,
         "emptyUrlCount": 0,
@@ -178,22 +213,8 @@
       "sharedImages": [],
       "suggestedServiceTags": [
         {
-          "slug": "backline-stage-rental",
-          "title": "Backline & Stage Rental",
-          "matchedOn": [
-            "stage"
-          ]
-        },
-        {
           "slug": "event-planning-logistics",
           "title": "Event Planning & Logistics",
-          "matchedOn": [
-            "event"
-          ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
           "matchedOn": [
             "event"
           ]
@@ -226,7 +247,32 @@
         "fabrication",
         "experiential-event"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "audio-production",
+          "title": "Audio Production"
+        },
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental"
+        },
+        {
+          "slug": "custom-fabrication",
+          "title": "Custom Fabrication"
+        },
+        {
+          "slug": "experiential-events",
+          "title": "Experiential Events"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        },
+        {
+          "slug": "stage-design",
+          "title": "Stage Design"
+        }
+      ],
       "images": {
         "total": 21,
         "emptyUrlCount": 0,
@@ -235,21 +281,6 @@
       "sharedImages": [],
       "suggestedServiceTags": [
         {
-          "slug": "backline-stage-rental",
-          "title": "Backline & Stage Rental",
-          "matchedOn": [
-            "stage"
-          ]
-        },
-        {
-          "slug": "custom-fabrication",
-          "title": "Custom Fabrication",
-          "matchedOn": [
-            "custom",
-            "fabrication"
-          ]
-        },
-        {
           "slug": "event-planning-logistics",
           "title": "Event Planning & Logistics",
           "matchedOn": [
@@ -257,25 +288,10 @@
           ]
         },
         {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "matchedOn": [
-            "event",
-            "production"
-          ]
-        },
-        {
           "slug": "interactive-ui-ux-design",
           "title": "Interactive UI / UX Design",
           "matchedOn": [
             "interactive"
-          ]
-        },
-        {
-          "slug": "production-management",
-          "title": "Production Management",
-          "matchedOn": [
-            "production"
           ]
         },
         {
@@ -325,7 +341,12 @@
         "deployment",
         "software"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "projection-mapping",
+          "title": "Projection Mapping"
+        }
+      ],
       "images": {
         "total": 42,
         "emptyUrlCount": 0,
@@ -387,7 +408,16 @@
         "permanent-installation",
         "ai-computer-vision"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "led-video-wall-rentals",
+          "title": "LED Video Wall Rentals"
+        },
+        {
+          "slug": "multimedia-displays",
+          "title": "Multimedia Displays"
+        }
+      ],
       "images": {
         "total": 1,
         "emptyUrlCount": 0,
@@ -400,13 +430,6 @@
           "title": "Interactive UI / UX Design",
           "matchedOn": [
             "interactive"
-          ]
-        },
-        {
-          "slug": "led-video-wall-rentals",
-          "title": "LED Video Wall Rentals",
-          "matchedOn": [
-            "wall"
           ]
         },
         {
@@ -436,7 +459,16 @@
         "experiential-event",
         "case-study"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "experiential-events",
+          "title": "Experiential Events"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        }
+      ],
       "images": {
         "total": 12,
         "emptyUrlCount": 0,
@@ -447,13 +479,6 @@
         {
           "slug": "event-planning-logistics",
           "title": "Event Planning & Logistics",
-          "matchedOn": [
-            "event"
-          ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
           "matchedOn": [
             "event"
           ]
@@ -471,7 +496,16 @@
         "event-production",
         "festival-activation"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "audio-production",
+          "title": "Audio Production"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        }
+      ],
       "images": {
         "total": 30,
         "emptyUrlCount": 0,
@@ -487,14 +521,6 @@
           ]
         },
         {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "matchedOn": [
-            "event",
-            "production"
-          ]
-        },
-        {
           "slug": "interactive-ui-ux-design",
           "title": "Interactive UI / UX Design",
           "matchedOn": [
@@ -506,13 +532,6 @@
           "title": "Media Server & Playback Solutions",
           "matchedOn": [
             "media"
-          ]
-        },
-        {
-          "slug": "production-management",
-          "title": "Production Management",
-          "matchedOn": [
-            "production"
           ]
         },
         {
@@ -536,7 +555,24 @@
         "product-launch",
         "retail-build"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "experiential-events",
+          "title": "Experiential Events"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        },
+        {
+          "slug": "immersive-environments",
+          "title": "Immersive Environments"
+        },
+        {
+          "slug": "stage-design",
+          "title": "Stage Design"
+        }
+      ],
       "images": {
         "total": 27,
         "emptyUrlCount": 0,
@@ -559,13 +595,6 @@
           "matchedOn": [
             "event"
           ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "matchedOn": [
-            "event"
-          ]
         }
       ]
     },
@@ -581,7 +610,12 @@
         "deployment",
         "software"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "projection-mapping",
+          "title": "Projection Mapping"
+        }
+      ],
       "images": {
         "total": 11,
         "emptyUrlCount": 0,
@@ -625,7 +659,28 @@
         "stage-design",
         "concert"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "audio-production",
+          "title": "Audio Production"
+        },
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental"
+        },
+        {
+          "slug": "custom-fabrication",
+          "title": "Custom Fabrication"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        },
+        {
+          "slug": "stage-design",
+          "title": "Stage Design"
+        }
+      ],
       "images": {
         "total": 21,
         "emptyUrlCount": 0,
@@ -633,35 +688,6 @@
       },
       "sharedImages": [],
       "suggestedServiceTags": [
-        {
-          "slug": "backline-stage-rental",
-          "title": "Backline & Stage Rental",
-          "matchedOn": [
-            "stage"
-          ]
-        },
-        {
-          "slug": "custom-fabrication",
-          "title": "Custom Fabrication",
-          "matchedOn": [
-            "custom",
-            "fabrication"
-          ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "matchedOn": [
-            "production"
-          ]
-        },
-        {
-          "slug": "production-management",
-          "title": "Production Management",
-          "matchedOn": [
-            "production"
-          ]
-        },
         {
           "slug": "set-scenic-assembly",
           "title": "Set & Scenic Assembly",
@@ -689,7 +715,16 @@
         "event-production",
         "marathon-activation"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "audio-production",
+          "title": "Audio Production"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        }
+      ],
       "images": {
         "total": 6,
         "emptyUrlCount": 0,
@@ -705,14 +740,6 @@
           ]
         },
         {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "matchedOn": [
-            "event",
-            "production"
-          ]
-        },
-        {
           "slug": "interactive-ui-ux-design",
           "title": "Interactive UI / UX Design",
           "matchedOn": [
@@ -724,13 +751,6 @@
           "title": "Media Server & Playback Solutions",
           "matchedOn": [
             "media"
-          ]
-        },
-        {
-          "slug": "production-management",
-          "title": "Production Management",
-          "matchedOn": [
-            "production"
           ]
         }
       ]
@@ -747,7 +767,20 @@
         "experiential-event",
         "super-bowl-2020"
       ],
-      "serviceTags": [],
+      "serviceTags": [
+        {
+          "slug": "experiential-events",
+          "title": "Experiential Events"
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production"
+        },
+        {
+          "slug": "projection-mapping",
+          "title": "Projection Mapping"
+        }
+      ],
       "images": {
         "total": 1,
         "emptyUrlCount": 0,
@@ -765,13 +798,6 @@
         {
           "slug": "event-planning-logistics",
           "title": "Event Planning & Logistics",
-          "matchedOn": [
-            "event"
-          ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
           "matchedOn": [
             "event"
           ]
@@ -886,65 +912,6 @@
             {
               "url": "/images/deck/g-man-experiential-campaign/03-image271.png",
               "fromProject": "g-man-experiential-campaign"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
-      "services": [
-        {
-          "slug": "backline-stage-rental",
-          "title": "Backline & Stage Rental",
-          "replacementCandidates": [
-            {
-              "url": "/images/deck/projekt-x/01-image46.jpg",
-              "fromProject": "projekt-x"
-            },
-            {
-              "url": "/images/deck/projekt-x/02-image49.jpg",
-              "fromProject": "projekt-x"
-            },
-            {
-              "url": "/images/deck/projekt-x/03-image41.jpg",
-              "fromProject": "projekt-x"
-            }
-          ]
-        },
-        {
-          "slug": "event-production",
-          "title": "Full Service Event Production",
-          "replacementCandidates": [
-            {
-              "url": "/images/deck/buzzfeed/01-image290.png",
-              "fromProject": "buzzfeed"
-            },
-            {
-              "url": "/images/deck/buzzfeed/02-image293.jpg",
-              "fromProject": "buzzfeed"
-            },
-            {
-              "url": "/images/deck/buzzfeed/03-image305.jpg",
-              "fromProject": "buzzfeed"
-            }
-          ]
-        },
-        {
-          "slug": "lighting-services",
-          "title": "Lighting Services",
-          "replacementCandidates": [
-            {
-              "url": "/images/deck/myshelter/01-image51.jpg",
-              "fromProject": "myshelter"
-            },
-            {
-              "url": "/images/deck/myshelter/02-image67.jpg",
-              "fromProject": "myshelter"
-            },
-            {
-              "url": "/images/deck/myshelter/03-image61.jpg",
-              "fromProject": "myshelter"
             }
           ]
         }
@@ -1069,41 +1036,41 @@
       ]
     },
     {
-      "heroImage": "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
+      "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
       "services": [
         {
-          "slug": "av-content-design",
-          "title": "Audio, Video & Lighting Content Design",
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental",
           "replacementCandidates": [
             {
-              "url": "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg",
-              "fromProject": "dubai-360-spherical-projection-theatre"
+              "url": "/images/deck/projekt-x/01-image46.jpg",
+              "fromProject": "projekt-x"
             },
             {
-              "url": "/images/deck/dubai-360-spherical-projection-theatre/03-image311.jpg",
-              "fromProject": "dubai-360-spherical-projection-theatre"
+              "url": "/images/deck/projekt-x/02-image49.jpg",
+              "fromProject": "projekt-x"
             },
             {
-              "url": "/images/deck/dubai-360-spherical-projection-theatre/04-image240.jpg",
-              "fromProject": "dubai-360-spherical-projection-theatre"
+              "url": "/images/deck/projekt-x/03-image41.jpg",
+              "fromProject": "projekt-x"
             }
           ]
         },
         {
-          "slug": "permit-submittal",
-          "title": "Permit Submittal",
+          "slug": "lighting-services",
+          "title": "Lighting Services",
           "replacementCandidates": [
             {
-              "url": "/images/deck/projecting-change-racing-extinction/02-image224.png",
-              "fromProject": "projecting-change-racing-extinction"
+              "url": "/images/deck/myshelter/01-image51.jpg",
+              "fromProject": "myshelter"
             },
             {
-              "url": "/images/deck/projecting-change-racing-extinction/03-image232.jpg",
-              "fromProject": "projecting-change-racing-extinction"
+              "url": "/images/deck/myshelter/02-image67.jpg",
+              "fromProject": "myshelter"
             },
             {
-              "url": "/images/deck/projecting-change-racing-extinction/04-image228.jpg",
-              "fromProject": "projecting-change-racing-extinction"
+              "url": "/images/deck/myshelter/03-image61.jpg",
+              "fromProject": "myshelter"
             }
           ]
         }
@@ -1257,25 +1224,25 @@
     },
     {
       "label": "Stage Design",
-      "href": "/services/set-scenic-assembly",
+      "href": "/services/stage-design",
       "valid": true,
       "imageExistsOnDisk": true
     },
     {
       "label": "Experiential Events",
-      "href": "/services/event-production",
+      "href": "/services/experiential-events",
       "valid": true,
       "imageExistsOnDisk": true
     },
     {
       "label": "Event Production",
-      "href": "/services/production-management",
+      "href": "/services/event-production",
       "valid": true,
       "imageExistsOnDisk": true
     },
     {
       "label": "Immersive Environments",
-      "href": "/services/environmental-design",
+      "href": "/services/immersive-environments",
       "valid": true,
       "imageExistsOnDisk": true
     },
@@ -1287,7 +1254,7 @@
     },
     {
       "label": "Multimedia Displays",
-      "href": "/services/av-system-integration",
+      "href": "/services/multimedia-displays",
       "valid": true,
       "imageExistsOnDisk": true
     },
@@ -1299,13 +1266,13 @@
     },
     {
       "label": "Audio Production",
-      "href": "/services/sound-equipment-rentals",
+      "href": "/services/audio-production",
       "valid": true,
       "imageExistsOnDisk": true
     },
     {
       "label": "Projection Mapping",
-      "href": "/services/av-content-design",
+      "href": "/services/projection-mapping",
       "valid": true,
       "imageExistsOnDisk": true
     }

@@ -120,5 +120,11 @@
       "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-703a6f28.jpg",
       "/images/deck/projekt-x/01-image46.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Vectorworks",
+    "Microsoft Excel",
+    "Smartsheet"
+  ],
+  "pageType": "tech"
 }

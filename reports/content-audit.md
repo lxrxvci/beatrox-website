@@ -1,20 +1,20 @@
 # Content & Image Audit
 
-_Generated 2026-07-22T06:16:01.695Z · Mode: read-only_
+_Generated 2026-07-22T10:16:31.117Z · Mode: read-only_
 
 ## Summary
 
 - Projects audited: **17** (JSON baseline: 17)
-- Services audited: **40** (JSON baseline: 40)
+- Services audited: **46** (JSON baseline: 46)
 - Projects with zero images: **0**
 - Projects with images missing on disk: **0**
 - Projects with empty image URLs: **0**
 - Image URLs shared across projects: **0 cluster(s)**
-- Services sharing a hero image: **8 cluster(s), 21 services**
+- Services sharing a hero image: **7 cluster(s), 18 services**
 - Services with no hero image: **0**
 - Services with broken Related Work links: **0**
 - Capability tiles checked: **12** — 0 with links not pointing to /services/
-- Projects with SUGGESTED service tags: **14** (60 suggestions)
+- Projects with SUGGESTED service tags: **14** (38 suggestions)
 
 > Service-tag suggestions are keyword guesses only. Confirm them on each project page in edit mode (“Services Used” → Edit). Nothing is changed by this report.
 
@@ -22,20 +22,20 @@ _Generated 2026-07-22T06:16:01.695Z · Mode: read-only_
 
 | Project | Type | Current service tags | Suggested service tags |
 | --- | --- | --- | --- |
-| AKU World | NFT Miami Experiential Event, Immersive Environment | — | Environmental Design (matched: environment, immersive); Event Planning & Logistics (matched: event); Full Service Event Production (matched: event) |
-| BuzzFeed NewFronts | Event Production, Multimedia Design, Stage Design, Lighting Design | — | Backline & Stage Rental (matched: stage); Event Planning & Logistics (matched: event); Full Service Event Production (matched: event, production); Production Management (matched: production); Staging & Rigging (matched: stage) |
-| CNN: Road to 270 | Projection Mapping, Interactive | — | Audio, Video & Lighting Content Design (matched: projection); Interactive UI / UX Design (matched: interactive) |
-| Create Our Future | Experiential Event, Stage Design, Concert, VR Experience, Lighting Design | — | Backline & Stage Rental (matched: stage); Event Planning & Logistics (matched: event); Full Service Event Production (matched: event); Realtime Content (AR, VR, XR) (matched: vr); Staging & Rigging (matched: stage) |
-| Destination | Interactive Art Canvas, Custom Scenic, Fabrication, Stage Design, Concert, Event Production | — | Backline & Stage Rental (matched: stage); Custom Fabrication (matched: custom, fabrication); Event Planning & Logistics (matched: event); Full Service Event Production (matched: event, production); Interactive UI / UX Design (matched: interactive); Production Management (matched: production); Set & Scenic Assembly (matched: scenic); Staging & Rigging (matched: stage) |
-| DUBAI 360: Spherical Projection Theatre | Projection Mapping, Content, Deployment, Software | — | Audio, Video & Lighting Content Design (matched: content, projection); Realtime Content (AR, VR, XR) (matched: content); Software Development (matched: software) |
-| FLIR Interactive History Wall | Interactive Media Display, Permanent Installation | — | Interactive UI / UX Design (matched: interactive); LED Video Wall Rentals (matched: wall); Media Server & Playback Solutions (matched: media); Permanent Installation (matched: installation, permanent) |
-| G-MAN Experiential Campaign | Experiential Event | — | Event Planning & Logistics (matched: event); Full Service Event Production (matched: event) |
-| Infinite Playlist Tour | Interactive Media Experience, Event Production, Festival Activation | — | Event Planning & Logistics (matched: event); Full Service Event Production (matched: event, production); Interactive UI / UX Design (matched: interactive); Media Server & Playback Solutions (matched: media); Production Management (matched: production); Tour Management (matched: tour) |
-| MyShelter | Experiential Event, Immersive Environment, Product Launch, Retail Build | — | Environmental Design (matched: environment, environmental, immersive); Event Planning & Logistics (matched: event); Full Service Event Production (matched: event) |
-| PROJECTING CHANGE: Racing Extinction | Projection Mapping, Content, Deployment, Software | — | Audio, Video & Lighting Content Design (matched: content, projection); Realtime Content (AR, VR, XR) (matched: content); Software Development (matched: software) |
-| Projekt X | Custom Fabricated Stage Element, Specialized Production | — | Backline & Stage Rental (matched: stage); Custom Fabrication (matched: custom, fabrication); Full Service Event Production (matched: production); Production Management (matched: production); Set & Scenic Assembly (matched: scenic); Staging & Rigging (matched: stage) |
-| Run for the Oceans | Interactive Media Experience, Event Production, Marathon Activation, Infinity Mirror | — | Event Planning & Logistics (matched: event); Full Service Event Production (matched: event, production); Interactive UI / UX Design (matched: interactive); Media Server & Playback Solutions (matched: media); Production Management (matched: production) |
-| Super Bowl 2020 | Super Bowl 2020 Experiential Event, Projection Mapping, Interactive AR | — | Audio, Video & Lighting Content Design (matched: projection); Event Planning & Logistics (matched: event); Full Service Event Production (matched: event); Interactive UI / UX Design (matched: interactive); Realtime Content (AR, VR, XR) (matched: ar) |
+| AKU World | NFT Miami Experiential Event, Immersive Environment | Experiential Events, Full Service Event Production, Immersive Environments | Environmental Design (matched: environment, immersive); Event Planning & Logistics (matched: event) |
+| BuzzFeed NewFronts | Event Production, Multimedia Design, Stage Design, Lighting Design | Audio Production, Backline & Stage Rental, Full Service Event Production, Lighting Services, Multimedia Displays, Stage Design | Event Planning & Logistics (matched: event); Staging & Rigging (matched: stage) |
+| CNN: Road to 270 | Projection Mapping, Interactive | Projection Mapping | Audio, Video & Lighting Content Design (matched: projection); Interactive UI / UX Design (matched: interactive) |
+| Create Our Future | Experiential Event, Stage Design, Concert, VR Experience, Lighting Design | Backline & Stage Rental, Experiential Events, Full Service Event Production, Lighting Services, Stage Design | Event Planning & Logistics (matched: event); Realtime Content (AR, VR, XR) (matched: vr); Staging & Rigging (matched: stage) |
+| Destination | Interactive Art Canvas, Custom Scenic, Fabrication, Stage Design, Concert, Event Production | Audio Production, Backline & Stage Rental, Custom Fabrication, Experiential Events, Full Service Event Production, Stage Design | Event Planning & Logistics (matched: event); Interactive UI / UX Design (matched: interactive); Set & Scenic Assembly (matched: scenic); Staging & Rigging (matched: stage) |
+| DUBAI 360: Spherical Projection Theatre | Projection Mapping, Content, Deployment, Software | Projection Mapping | Audio, Video & Lighting Content Design (matched: content, projection); Realtime Content (AR, VR, XR) (matched: content); Software Development (matched: software) |
+| FLIR Interactive History Wall | Interactive Media Display, Permanent Installation | LED Video Wall Rentals, Multimedia Displays | Interactive UI / UX Design (matched: interactive); Media Server & Playback Solutions (matched: media); Permanent Installation (matched: installation, permanent) |
+| G-MAN Experiential Campaign | Experiential Event | Experiential Events, Full Service Event Production | Event Planning & Logistics (matched: event) |
+| Infinite Playlist Tour | Interactive Media Experience, Event Production, Festival Activation | Audio Production, Full Service Event Production | Event Planning & Logistics (matched: event); Interactive UI / UX Design (matched: interactive); Media Server & Playback Solutions (matched: media); Tour Management (matched: tour) |
+| MyShelter | Experiential Event, Immersive Environment, Product Launch, Retail Build | Experiential Events, Full Service Event Production, Immersive Environments, Stage Design | Environmental Design (matched: environment, environmental, immersive); Event Planning & Logistics (matched: event) |
+| PROJECTING CHANGE: Racing Extinction | Projection Mapping, Content, Deployment, Software | Projection Mapping | Audio, Video & Lighting Content Design (matched: content, projection); Realtime Content (AR, VR, XR) (matched: content); Software Development (matched: software) |
+| Projekt X | Custom Fabricated Stage Element, Specialized Production | Audio Production, Backline & Stage Rental, Custom Fabrication, Full Service Event Production, Stage Design | Set & Scenic Assembly (matched: scenic); Staging & Rigging (matched: stage) |
+| Run for the Oceans | Interactive Media Experience, Event Production, Marathon Activation, Infinity Mirror | Audio Production, Full Service Event Production | Event Planning & Logistics (matched: event); Interactive UI / UX Design (matched: interactive); Media Server & Playback Solutions (matched: media) |
+| Super Bowl 2020 | Super Bowl 2020 Experiential Event, Projection Mapping, Interactive AR | Experiential Events, Full Service Event Production, Projection Mapping | Audio, Video & Lighting Content Design (matched: projection); Event Planning & Logistics (matched: event); Interactive UI / UX Design (matched: interactive); Realtime Content (AR, VR, XR) (matched: ar) |
 
 ## Projects
 
@@ -84,21 +84,6 @@ None — every project image is used by a single project.
   - candidate: `/images/deck/g-man-experiential-campaign/02-image262.png` (from project g-man-experiential-campaign)
   - candidate: `/images/deck/g-man-experiential-campaign/03-image271.png` (from project g-man-experiential-campaign)
 
-### `/images/verified/services/IMG_1801-8ce1969f.jpg` — shared by 3 services
-
-- **Backline & Stage Rental** (/services/backline-stage-rental)
-  - candidate: `/images/deck/projekt-x/01-image46.jpg` (from project projekt-x)
-  - candidate: `/images/deck/projekt-x/02-image49.jpg` (from project projekt-x)
-  - candidate: `/images/deck/projekt-x/03-image41.jpg` (from project projekt-x)
-- **Full Service Event Production** (/services/event-production)
-  - candidate: `/images/deck/buzzfeed/01-image290.png` (from project buzzfeed)
-  - candidate: `/images/deck/buzzfeed/02-image293.jpg` (from project buzzfeed)
-  - candidate: `/images/deck/buzzfeed/03-image305.jpg` (from project buzzfeed)
-- **Lighting Services** (/services/lighting-services)
-  - candidate: `/images/deck/myshelter/01-image51.jpg` (from project myshelter)
-  - candidate: `/images/deck/myshelter/02-image67.jpg` (from project myshelter)
-  - candidate: `/images/deck/myshelter/03-image61.jpg` (from project myshelter)
-
 ### `/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg` — shared by 3 services
 
 - **CNC Machining** (/services/cnc-machining)
@@ -129,16 +114,16 @@ None — every project image is used by a single project.
   - candidate: `/images/deck/dubai-360-spherical-projection-theatre/03-image311.jpg` (from project dubai-360-spherical-projection-theatre)
   - candidate: `/images/deck/dubai-360-spherical-projection-theatre/04-image240.jpg` (from project dubai-360-spherical-projection-theatre)
 
-### `/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png` — shared by 2 services
+### `/images/verified/services/IMG_1801-8ce1969f.jpg` — shared by 2 services
 
-- **Audio, Video & Lighting Content Design** (/services/av-content-design)
-  - candidate: `/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg` (from project dubai-360-spherical-projection-theatre)
-  - candidate: `/images/deck/dubai-360-spherical-projection-theatre/03-image311.jpg` (from project dubai-360-spherical-projection-theatre)
-  - candidate: `/images/deck/dubai-360-spherical-projection-theatre/04-image240.jpg` (from project dubai-360-spherical-projection-theatre)
-- **Permit Submittal** (/services/permit-submittal)
-  - candidate: `/images/deck/projecting-change-racing-extinction/02-image224.png` (from project projecting-change-racing-extinction)
-  - candidate: `/images/deck/projecting-change-racing-extinction/03-image232.jpg` (from project projecting-change-racing-extinction)
-  - candidate: `/images/deck/projecting-change-racing-extinction/04-image228.jpg` (from project projecting-change-racing-extinction)
+- **Backline & Stage Rental** (/services/backline-stage-rental)
+  - candidate: `/images/deck/projekt-x/01-image46.jpg` (from project projekt-x)
+  - candidate: `/images/deck/projekt-x/02-image49.jpg` (from project projekt-x)
+  - candidate: `/images/deck/projekt-x/03-image41.jpg` (from project projekt-x)
+- **Lighting Services** (/services/lighting-services)
+  - candidate: `/images/deck/myshelter/01-image51.jpg` (from project myshelter)
+  - candidate: `/images/deck/myshelter/02-image67.jpg` (from project myshelter)
+  - candidate: `/images/deck/myshelter/03-image61.jpg` (from project myshelter)
 
 ### `/images/portfolio/aku-world/WideShot.jpeg` — shared by 2 services
 
@@ -192,12 +177,12 @@ None.
 | Custom Fabrication | /services/custom-fabrication | yes |
 | LED Video Wall | /services/led-video-wall-rentals | yes |
 | Drone Light Shows | /services/drone-light-shows | yes |
-| Stage Design | /services/set-scenic-assembly | yes |
-| Experiential Events | /services/event-production | yes |
-| Event Production | /services/production-management | yes |
-| Immersive Environments | /services/environmental-design | yes |
+| Stage Design | /services/stage-design | yes |
+| Experiential Events | /services/experiential-events | yes |
+| Event Production | /services/event-production | yes |
+| Immersive Environments | /services/immersive-environments | yes |
 | Laser Light Shows | /services/laser-shows | yes |
-| Multimedia Displays | /services/av-system-integration | yes |
+| Multimedia Displays | /services/multimedia-displays | yes |
 | DJ Equipment Rentals | /services/dj-equipment-rentals | yes |
-| Audio Production | /services/sound-equipment-rentals | yes |
-| Projection Mapping | /services/av-content-design | yes |
+| Audio Production | /services/audio-production | yes |
+| Projection Mapping | /services/projection-mapping | yes |

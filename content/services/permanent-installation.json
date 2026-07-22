@@ -121,5 +121,12 @@
       "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
       "/images/portfolio/destination/IMG_8549.jpg"
     ]
-  }
+  },
+  "tech": [
+    "QSC Q-Sys",
+    "Crestron",
+    "Disguise",
+    "BrightSign"
+  ],
+  "pageType": "tech"
 }

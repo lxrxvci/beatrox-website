@@ -120,5 +120,13 @@
       "/images/portfolio/aku-world/KIOSKS2.jpg",
       "/images/verified/work/g-man-experiential-campaign/g_man_experiential_campaign_preview.png"
     ]
-  }
+  },
+  "tech": [
+    "TypeScript",
+    "React",
+    "Node.js",
+    "TouchDesigner",
+    "Python"
+  ],
+  "pageType": "tech"
 }

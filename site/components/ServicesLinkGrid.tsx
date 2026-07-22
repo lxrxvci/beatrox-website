@@ -10,9 +10,11 @@ export interface ServiceLinkGroup {
   items: ServiceLinkItem[]
 }
 
-// The full services catalog, grouped — previously inlined in
+// The full tech-capabilities catalog, grouped — previously inlined in
 // app/(site)/services/page.tsx. Moved here so the About page renders the
-// same list after the About↔Services content swap.
+// same list after the About↔Services content swap. Every entry is a tech
+// capability (pageType "tech") with a dedicated landing page at /tech/<slug>;
+// sold offerings like Custom Fabrication stay on /services and are not listed.
 export const SERVICE_CATEGORIES: ServiceLinkGroup[] = [
   {
     label: 'Design',
@@ -30,7 +32,6 @@ export const SERVICE_CATEGORIES: ServiceLinkGroup[] = [
   {
     label: 'Build',
     items: [
-      { label: 'Custom Fabrication', slug: 'custom-fabrication' },
       { label: 'Set and Scenic Assembly', slug: 'set-scenic-assembly' },
       { label: 'Staging and Rigging', slug: 'staging-rigging' },
       { label: 'Lighting Integration', slug: 'lighting-integration' },
@@ -83,7 +84,7 @@ const LOOKUP = new Map(
 interface ServicesLinkGridProps {
   /**
    * Optional CMS block items (capabilitiesGrid labels). When every label
-   * resolves to a catalog service, the CMS list is rendered (grouped by
+   * resolves to a catalog tech capability, the CMS list is rendered (grouped by
    * catalog category, preserving catalog order). Otherwise the full
    * catalog is shown — links never rot because of an unrecognized label.
    */
@@ -113,7 +114,7 @@ export default function ServicesLinkGrid({ items }: ServicesLinkGridProps) {
             {cat.items.map((item) => (
               <li key={item.slug}>
                 <Link
-                  href={`/services/${item.slug}`}
+                  href={`/tech/${item.slug}`}
                   className="group flex items-baseline gap-2.5 text-sm text-white/75 leading-relaxed hover:text-white transition-colors"
                 >
                   <span

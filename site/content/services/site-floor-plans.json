@@ -120,5 +120,11 @@
       "/images/deck/buzzfeed/02-image293.jpg",
       "/images/deck/cnn-road-to-270/01-image250.jpg"
     ]
-  }
+  },
+  "tech": [
+    "AutoCAD",
+    "Vectorworks",
+    "SketchUp"
+  ],
+  "pageType": "tech"
 }

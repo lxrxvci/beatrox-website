@@ -121,5 +121,12 @@
       "/images/deck/create-our-future/03-image91.jpg",
       "/images/portfolio/run-for-the-oceans/KMP_2618.jpg"
     ]
-  }
+  },
+  "tech": [
+    "ShopBot CNC",
+    "Fusion 360",
+    "Carpentry & Joinery",
+    "Metalwork & Welding"
+  ],
+  "pageType": "tech"
 }

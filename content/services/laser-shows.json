@@ -7,7 +7,7 @@
     "og": {
       "title": "Laser Light Shows — BEATROX",
       "description": "Professional laser systems choreographed to your music and brand — sky scanning, beam effects, and laser mapping for concerts and festivals.",
-      "image": "/og-default.jpg"
+      "image": "/images/verified/services/laser-shows/Laser-Show-Example1-97b60e2c.jpg"
     }
   },
   "hero": {
@@ -38,21 +38,24 @@
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "15+ years of experience in live event production",
-        "Full-service team from design to strike",
-        "Portland-based with nationwide coverage",
-        "Trusted by Adidas, Netflix, CNN, Amazon Music"
+        "ANSI Z136-compliant operation with certified laser safety officers on every show",
+        "FDA/CDRH variance permitting handled in-house — indoor and outdoor",
+        "Full-color RGB systems from 1W venue rigs to 40W+ sky scanners",
+        "Laser-mapped touring work — including the Projekt X set piece for Adriatique's X Future tour",
+        "Frame-accurate music sync — beat grids, timecode, MIDI, and Ableton Link",
+        "Unified spectacles — lasers integrated with LED, projection, and drone shows"
       ]
     },
     {
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call — We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization — See your event before it happens",
-        "3. Equipment & Crew — We source everything and assign the right team",
-        "4. On-Site Execution — Professional setup, operation, and strike",
-        "5. Post-Event Review — We ensure everything exceeded expectations"
+        "1. Creative & Venue Review — Music, sightlines, surfaces, and audience zones assessed",
+        "2. Show Programming — Beam choreography pre-visualized and locked to your tracks",
+        "3. Permitting & Safety Planning — Variance filings, beam-path calculations, safety zones",
+        "4. Rig & Align — Projectors positioned, focused, and verified against the safety plan",
+        "5. Live Operation — Certified operators run the show and adapt to the room in real time",
+        "6. Derig & Compliance Wrap — Equipment struck, authorities signed off, files archived"
       ]
     },
     {
@@ -96,16 +99,34 @@
       "type": "faq",
       "heading": "Frequently Asked Questions",
       "items": [
-        { "question": "How far in advance should I book?", "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability." },
-        { "question": "Do you travel outside Portland?", "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events." },
-        { "question": "What's included in the rental?", "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management." },
-        { "question": "Do I need a permit for a laser show?", "answer": "Most laser shows require a variance permit from the FDA/CDRH. We handle all permitting paperwork, including coordination with local authorities for outdoor shows. Indoor shows may also require venue-specific approvals." },
-        { "question": "Can lasers be used outdoors?", "answer": "Yes. Our systems are rated for outdoor use with weather-resistant enclosures. We coordinate with the FAA for sky-scanning shows and provide certified laser safety officers for all outdoor productions." }
+        {
+          "question": "How far in advance should I book?",
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+        },
+        {
+          "question": "Do you travel outside Portland?",
+          "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events."
+        },
+        {
+          "question": "What's included in the rental?",
+          "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
+        },
+        {
+          "question": "Do I need a permit for a laser show?",
+          "answer": "Most laser shows require a variance permit from the FDA/CDRH. We handle all permitting paperwork, including coordination with local authorities for outdoor shows. Indoor shows may also require venue-specific approvals."
+        },
+        {
+          "question": "Can lasers be used outdoors?",
+          "answer": "Yes. Our systems are rated for outdoor use with weather-resistant enclosures. We coordinate with the FAA for sky-scanning shows and provide certified laser safety officers for all outdoor productions."
+        }
       ]
     }
   ],
   "relatedWork": [
-    { "title": "Projekt X", "slug": "/work/projekt-x" }
+    {
+      "title": "Projekt X",
+      "slug": "/work/projekt-x"
+    }
   ],
   "media": {
     "heroImage": "/images/verified/services/laser-shows/Laser-Show-Example1-97b60e2c.jpg",
@@ -117,5 +138,6 @@
       "/images/verified/services/laser-shows/Laser-Show-Example3-Cairo-Egypt-Armin-Van-Buren-a5396ba5.jpg",
       "/images/verified/services/laser-shows/Laser-Show-Example4-fa5953e5.jpg"
     ]
-  }
+  },
+  "pageType": "service"
 }

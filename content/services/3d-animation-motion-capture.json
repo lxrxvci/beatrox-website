@@ -119,5 +119,14 @@
       "/images/deck/disenchantment/02-image82.jpg",
       "/images/verified/work/the-great-escape/the_great_escape_preview.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Cinema 4D",
+    "Blender",
+    "Maya",
+    "Unreal Engine",
+    "Xsens",
+    "Rokoko"
+  ],
+  "pageType": "tech"
 }

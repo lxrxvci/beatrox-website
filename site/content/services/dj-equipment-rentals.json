@@ -7,7 +7,7 @@
     "og": {
       "title": "DJ Equipment Rentals — BEATROX Portland",
       "description": "Industry-standard DJ equipment for world-class performances — Pioneer CDJ-3000, DJM mixers, and full booth packages from Beatrox.",
-      "image": "/og-default.jpg"
+      "image": "/images/verified/home/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear-9da90b24.jpg"
     }
   },
   "hero": {
@@ -38,21 +38,24 @@
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "15+ years of experience in live event production",
-        "Full-service team from design to strike",
-        "Portland-based with nationwide coverage",
-        "Trusted by Adidas, Netflix, CNN, Amazon Music"
+        "Rider-exact packages — CDJ-3000, DJM-900NXS2, and Technics SL-1200 systems matched to spec",
+        "Backup units on site at every event — duplicate CDJs, mixers, and cables for zero downtime",
+        "Custom DJ booths designed and fabricated in-house — LED facades and branded wraps",
+        "Touring-grade road cases for traveling acts",
+        "Festival-deployed — DJ rigs for Amazon Music Live activations at Outside Lands and Stagecoach",
+        "On-site technical support from load-in to last track"
       ]
     },
     {
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call — We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization — See your event before it happens",
-        "3. Equipment & Crew — We source everything and assign the right team",
-        "4. On-Site Execution — Professional setup, operation, and strike",
-        "5. Post-Event Review — We ensure everything exceeded expectations"
+        "1. Rider & Spec Review — We match exact models and firmware versions the artist requires",
+        "2. Package Configuration — Players, mixer, monitors, booth, and cabling assembled",
+        "3. Bench Test — Every unit and connection verified, media compatibility confirmed",
+        "4. Delivery & Setup — Booth placed, rig integrated with house audio and visuals",
+        "5. Show Support — Tech on site with backup units staged and ready",
+        "6. Strike & Return — Gear struck, inspected, and back in rotation same night"
       ]
     },
     {
@@ -97,16 +100,34 @@
       "type": "faq",
       "heading": "Frequently Asked Questions",
       "items": [
-        { "question": "How far in advance should I book?", "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability." },
-        { "question": "Do you travel outside Portland?", "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events." },
-        { "question": "What's included in the rental?", "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management." },
-        { "question": "Can you build a custom DJ booth?", "answer": "Yes. We design and fabricate custom DJ booths with LED integration, branded facades, and modular sizing — from intimate club setups to large festival stages." },
-        { "question": "Do you provide backup equipment?", "answer": "Yes. We maintain backup CDJs, mixers, and essential cables at every event. If any equipment fails, we swap it immediately with zero interruption to the performance." }
+        {
+          "question": "How far in advance should I book?",
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+        },
+        {
+          "question": "Do you travel outside Portland?",
+          "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events."
+        },
+        {
+          "question": "What's included in the rental?",
+          "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
+        },
+        {
+          "question": "Can you build a custom DJ booth?",
+          "answer": "Yes. We design and fabricate custom DJ booths with LED integration, branded facades, and modular sizing — from intimate club setups to large festival stages."
+        },
+        {
+          "question": "Do you provide backup equipment?",
+          "answer": "Yes. We maintain backup CDJs, mixers, and essential cables at every event. If any equipment fails, we swap it immediately with zero interruption to the performance."
+        }
       ]
     }
   ],
   "relatedWork": [
-    { "title": "Infinite Playlist", "slug": "/work/infinite-playlist" }
+    {
+      "title": "Infinite Playlist",
+      "slug": "/work/infinite-playlist"
+    }
   ],
   "media": {
     "heroImage": "/images/verified/home/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear-9da90b24.jpg",
@@ -115,5 +136,6 @@
       "/images/verified/services/dj-equipment-rentals/Pioneer-CDJ-3000-2000-DJM-a9-Nexus-NXS2-DJ-Equiopment-Rentals-416b9d21.png",
       "/images/verified/services/dj-equipment-rentals/RCF+and+QSC+Speakers+PA-+and+-Sound-System-and-Speaker-Packages+-+Rentals-91342dac.png"
     ]
-  }
+  },
+  "pageType": "service"
 }

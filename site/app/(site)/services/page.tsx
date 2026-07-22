@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { getServicesIndex } from '@/lib/json-content'
 import { getAllServicesResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
-import { truncateAtWord } from '@/lib/text'
 import ParallaxHero from '@/components/ParallaxHero'
 import CapabilitiesGrid, { type CapabilityItem } from '@/components/CapabilitiesGrid'
 
@@ -14,18 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getServicesIndex().seo)
 }
 
-// Original rental & specialty services — keep the card grid scoped to these
-const RENTAL_SPECIALTY_SLUGS = [
-  'backline-stage-rental', 'dj-equipment-rentals', 'drone-light-shows', 'event-production',
-  'laser-shows', 'led-video-wall-rentals', 'lighting-services', 'sound-equipment-rentals',
-]
-
 export default async function ServicesPage() {
   const services = await getAllServicesResolved()
   const servicesHero = services[0]?.media?.heroImage || '/og-default.jpg'
-  const rentalSpecialty = RENTAL_SPECIALTY_SLUGS
-    .map(slug => services.find(s => s.slug === `/services/${slug}`))
-    .filter((s): s is NonNullable<typeof s> => Boolean(s))
 
   // The capabilities tile grid is driven by the About page's capabilitiesGrid
   // CMS block (edited inline there), so one data source feeds both pages.
@@ -61,58 +50,6 @@ export default async function ServicesPage() {
         <div className="max-w-[1400px] mx-auto">
           <h2 className="heading-lg mb-10">Our Services</h2>
           <CapabilitiesGrid items={tiles} />
-        </div>
-      </section>
-
-      {/* Individual Service Cards */}
-      <section className="section border-b border-[var(--border)]">
-        <div className="max-w-[1400px] mx-auto">
-          <h2 className="heading-lg mb-10">Rental & Specialty Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-[1.3vw]">
-            {rentalSpecialty.map((service) => {
-              const slug = service.slug.replace(/^\/services\/+/, '')
-              return (
-                <Link
-                  key={slug}
-                  href={`/services/${slug}`}
-                  className="group relative block aspect-video overflow-hidden bg-neutral-900"
-                  aria-label={service.title}
-                >
-                  {service.media?.heroImage && (
-                    <Image
-                      src={service.media.heroImage}
-                      alt={service.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover"
-                    />
-                  )}
-                  <span
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent group-hover:from-black/95 group-hover:via-black/70 transition-all duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
-                    aria-hidden="true"
-                  />
-                  <span
-                    className="pointer-events-none absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
-                    aria-hidden="true"
-                  />
-                  <span className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">
-                    <span className="heading-sm text-white mb-2">
-                      {service.title}
-                    </span>
-                    <span className="text-xs text-white/70 tracking-widest uppercase mb-3">
-                      {service.category}
-                    </span>
-                    <span className="text-sm text-white/75 leading-relaxed">
-                      {truncateAtWord(service.hero.subheadline)}
-                    </span>
-                    <span className="inline-block mt-3 text-xs tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
-                      Learn more →
-                    </span>
-                  </span>
-                </Link>
-              )
-            })}
-          </div>
         </div>
       </section>
 

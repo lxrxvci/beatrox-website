@@ -120,5 +120,12 @@
       "/images/deck/disenchantment/01-image80.jpg",
       "/images/deck/projecting-change-racing-extinction/03-image232.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Unreal Engine",
+    "Vectorworks",
+    "Capture",
+    "WYSIWYG"
+  ],
+  "pageType": "tech"
 }

@@ -120,5 +120,12 @@
       "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-703a6f28.jpg",
       "/images/portfolio/projekt-x/VIDEO009_Moment.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Clear-Com",
+    "Vectorworks",
+    "Microsoft Excel",
+    "Google Workspace"
+  ],
+  "pageType": "tech"
 }

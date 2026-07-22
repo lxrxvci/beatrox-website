@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+/**
+ * One-off: run the services import with .env/.env.local loaded (the import
+ * script itself doesn't read env files and only auto-runs when executed
+ * directly). Requires a running site server (CMS_SEED_BASE_URL).
+ */
+import './load-env.mjs'
+import { login } from './cms-import-utils.mjs'
+import { importServices } from './cms-import-services.mjs'
+
+process.env.CMS_SEED_BASE_URL = process.env.CMS_SEED_BASE_URL || 'http://localhost:3000'
+
+const token = await login()
+const result = await importServices(token)
+console.log(`Imported services: ${result.count}`)
+process.exit(0)

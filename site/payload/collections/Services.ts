@@ -110,6 +110,29 @@ export const Services: CollectionConfig = {
     { name: 'isEnabled', type: 'checkbox', defaultValue: true },
     { name: 'category', type: 'text' },
     {
+      name: 'pageType',
+      type: 'select',
+      required: true,
+      defaultValue: 'service',
+      options: [
+        { label: 'Service (sold offering — /services/*)', value: 'service' },
+        { label: 'Tech (capability — /tech/*)', value: 'tech' },
+        { label: 'Rental (legacy rental page)', value: 'rental' },
+      ],
+      admin: {
+        description: 'Page type determines the route template and tag associations.',
+      },
+    },
+    {
+      name: 'tech',
+      type: 'array',
+      admin: {
+        description: 'Technologies behind this capability — shown as chips on tech pages. Display-only, never used for matching.',
+        condition: (data) => data?.pageType === 'tech',
+      },
+      fields: [{ name: 'value', type: 'text', required: true }],
+    },
+    {
       name: 'listOrder',
       type: 'number',
       defaultValue: 0,

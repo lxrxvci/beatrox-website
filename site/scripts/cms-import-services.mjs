@@ -78,6 +78,7 @@ export async function importServices(token) {
         status: 'published',
         isEnabled: true,
         category: source.category || '',
+        pageType: ['service', 'tech', 'rental'].includes(source.pageType) ? source.pageType : 'service',
         listOrder: (index + 1) * 10,
         hero: {
           headline: source?.hero?.headline || source.title || slug,
@@ -85,6 +86,7 @@ export async function importServices(token) {
           cta: source?.hero?.cta || { label: 'Contact', url: '/contact' },
         },
         capabilities: asArray(source.capabilities).map((item) => ({ value: item })),
+        tech: asArray(source.tech).map((item) => ({ value: item })),
         body: mapBody(source.body),
         // NOTE: do not also seed contentBlocks from body — the page renders both
         // fields, so populating them together duplicates every section on the site.

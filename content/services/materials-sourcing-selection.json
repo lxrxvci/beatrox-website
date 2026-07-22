@@ -121,5 +121,13 @@
       "/images/portfolio/destination/IMG_9610.jpg",
       "/images/deck/create-our-future/03-image91.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Material ConneXion",
+    "McMaster-Carr",
+    "Alro Steel",
+    "Tap Plastics",
+    "Grimco"
+  ],
+  "pageType": "tech"
 }

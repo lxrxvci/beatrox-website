@@ -120,5 +120,12 @@
       "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg",
       "/images/verified/work/create-our-future/IMG_2959-154e3954.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Vectorworks",
+    "Smartsheet",
+    "Monday.com",
+    "Microsoft Excel"
+  ],
+  "pageType": "tech"
 }

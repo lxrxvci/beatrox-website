@@ -120,5 +120,12 @@
       "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
       "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png"
     ]
-  }
+  },
+  "tech": [
+    "AutoCAD",
+    "Vectorworks",
+    "Bluebeam Revu",
+    "Accela ePermitting"
+  ],
+  "pageType": "tech"
 }

@@ -2,17 +2,17 @@
   "title": "LED Video Wall Rentals",
   "slug": "/services/led-video-wall-rentals",
   "seo": {
-    "title": "LED Video Wall Rentals \u2014 BEATROX",
-    "description": "Beatrox provides LED video wall rentals for events, concerts, activations, and installations \u2014 including panel sourcing, configuration, media server integration, and on-site LED technician support.",
+    "title": "LED Video Wall Rentals — BEATROX",
+    "description": "Beatrox provides LED video wall rentals for events, concerts, activations, and installations — including panel sourcing, configuration, media server integration, and on-site LED technician support.",
     "og": {
-      "title": "LED Video Wall Rentals \u2014 BEATROX Portland",
-      "description": "High-resolution LED panels for any footprint \u2014 with full media server integration, custom content, and on-site technical support from Beatrox.",
+      "title": "LED Video Wall Rentals — BEATROX Portland",
+      "description": "High-resolution LED panels for any footprint — with full media server integration, custom content, and on-site technical support from Beatrox.",
       "image": "/og-default.jpg"
     }
   },
   "hero": {
     "headline": "LED Video Wall Rentals",
-    "subheadline": "High-resolution LED panels for any footprint \u2014 with full media server integration, custom content, and on-site technical support.",
+    "subheadline": "High-resolution LED panels for any footprint — with full media server integration, custom content, and on-site technical support.",
     "cta": {
       "label": "Get a Free Quote",
       "url": "/book"
@@ -38,21 +38,24 @@
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "15+ years of experience in live event production",
-        "Full-service team from design to strike",
-        "Portland-based with nationwide coverage",
-        "Trusted by Adidas, Netflix, CNN, Amazon Music"
+        "Fine-pitch to festival-scale — 1.5mm indoor walls to 10mm outdoor rigs, 100ft+ wide",
+        "Non-standard builds — curved walls, columns, and infinity-mirror configurations",
+        "Infinity LED proven — the seamless wall-to-wall ocean chamber for Adidas x Parley Run for the Oceans",
+        "AR portal experience — free-standing LED walls for Amazon Music Live at Outside Lands and Stagecoach",
+        "Pixel-perfect playback — content mapped to exact wall dimensions, no scaling artifacts",
+        "On-site LED technician included with every rental"
       ]
     },
     {
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call \u2014 We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization \u2014 See your event before it happens",
-        "3. Equipment & Crew \u2014 We source everything and assign the right team",
-        "4. On-Site Execution \u2014 Professional setup, operation, and strike",
-        "5. Post-Event Review \u2014 We ensure everything exceeded expectations"
+        "1. Viewing & Venue Analysis — Viewing distances and ambient light define pixel pitch",
+        "2. Wall Design — Panel count, processors, rigging, and power engineered to the footprint",
+        "3. Content & Pixel Mapping — Media formatted to the wall's exact dimensions",
+        "4. Build & Calibration — Panels hung, mapped, and color-calibrated on site",
+        "5. Live Operation — LED tech and media server operator running every cue",
+        "6. Strike — Wall down, venue restored, gear road-cased and out"
       ]
     },
     {
@@ -74,7 +77,7 @@
     {
       "type": "service_detail",
       "heading": "Common Event Sizes & Pixel Pitch Guide",
-      "content": "Choosing the right pixel pitch ensures your content looks crisp from every seat. For intimate spaces and close-viewing activations, 1.5mm\u20132.5mm delivers broadcast-quality resolution. Mid-range viewing (10\u201330ft) works best with 2.9mm\u20133.9mm. For outdoor festivals and large venues where viewers are 50ft+ away, 6mm\u201310mm provides excellent brightness and cost efficiency. Our team helps you match the right panel to your venue and audience."
+      "content": "Choosing the right pixel pitch ensures your content looks crisp from every seat. For intimate spaces and close-viewing activations, 1.5mm–2.5mm delivers broadcast-quality resolution. Mid-range viewing (10–30ft) works best with 2.9mm–3.9mm. For outdoor festivals and large venues where viewers are 50ft+ away, 6mm–10mm provides excellent brightness and cost efficiency. Our team helps you match the right panel to your venue and audience."
     },
     {
       "type": "service_detail",
@@ -85,8 +88,8 @@
       "type": "specs",
       "heading": "Common Specifications",
       "items": [
-        "Indoor fine-pitch panels (1.5mm \u2013 3.9mm pixel pitch)",
-        "Outdoor high-brightness panels (6mm \u2013 10mm pixel pitch)",
+        "Indoor fine-pitch panels (1.5mm – 3.9mm pixel pitch)",
+        "Outdoor high-brightness panels (6mm – 10mm pixel pitch)",
         "ROE, Absen, and Unilumin panel options",
         "Scalable from 10x6ft to 100ft+ wide configurations",
         "Touring-grade road cases and rigging hardware"
@@ -98,7 +101,7 @@
       "items": [
         {
           "question": "How far in advance should I book?",
-          "answer": "We recommend booking at least 4\u20136 weeks in advance for standard rentals and 8\u201312 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
         },
         {
           "question": "Do you travel outside Portland?",
@@ -141,5 +144,6 @@
       "/images/verified/services/led-video-wall-rentals/Beatrox+-+LED+VIDEO+WALL+-+Custom+Configurations+-+Portland+-+Seattle-+PNW-+PNG-e13ce58e.jpg",
       "/images/verified/services/led-video-wall-rentals/PHOTOSFORDECK-83-a661568a.jpg"
     ]
-  }
+  },
+  "pageType": "service"
 }

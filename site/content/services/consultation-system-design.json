@@ -119,5 +119,12 @@
       "/images/deck/buzzfeed/01-image290.png",
       "/images/verified/work/el-camino/el_camino_preview.jpg"
     ]
-  }
+  },
+  "tech": [
+    "QSC Q-Sys",
+    "Dante",
+    "Crestron",
+    "Vectorworks"
+  ],
+  "pageType": "tech"
 }

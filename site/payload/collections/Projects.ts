@@ -175,6 +175,18 @@ export const Projects: CollectionConfig = {
       },
     },
     {
+      name: 'techTags',
+      type: 'relationship',
+      relationTo: 'services',
+      hasMany: true,
+      filterOptions: () => ({
+        pageType: { equals: 'tech' },
+      }),
+      admin: {
+        description: 'Technologies used on this project — drives /tech pages. Display-only: never used for project↔project relatedness.',
+      },
+    },
+    {
       name: 'seo',
       type: 'group',
       fields: [

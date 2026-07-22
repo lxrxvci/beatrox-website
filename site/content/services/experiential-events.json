@@ -1,0 +1,132 @@
+{
+  "title": "Experiential Events",
+  "slug": "/services/experiential-events",
+  "seo": {
+    "title": "Experiential Events",
+    "description": "Experiential event design and production — Beatrox creates immersive brand activations, pop-ups, and live experiences people line up to share.",
+    "og": {
+      "title": "Experiential Events | BEATROX",
+      "description": "Immersive brand activations and live experiences — designed, engineered, and produced by Beatrox for Adidas, Amazon Music, Toyota x MTV, and more.",
+      "image": "/images/verified/work/g-man-experiential-campaign/g_man_experiential_campaign_preview.png"
+    }
+  },
+  "hero": {
+    "headline": "Experiential Events",
+    "subheadline": "Brands come alive when people can step inside them. Beatrox designs and produces immersive activations and live experiences that turn audiences into participants.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Production",
+  "capabilities": [
+    "Brand Activation Concept & Design",
+    "Immersive Environment Builds",
+    "Interactive Technology Integration",
+    "AR Moments & Digital Takeaways",
+    "Live Performance Production",
+    "Festival & Pop-Up Activations",
+    "Content & Media Production",
+    "Full Event Logistics & Operations"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is an Experiential Event?",
+      "content": "An experiential event is a brand made physical. Instead of telling an audience what you stand for, you build a world they can walk into, touch, and share — a product launch staged inside the environment the product was made for, a festival footprint that fans choose over the main stage, a VIP space that sponsors' athletes actually want to post about.\n\nYou need experiential production when awareness isn't enough — when the goal is memory and advocacy. That means every element has to work as one: the environment, the interactive moments, the content, the staffing, and the logistics behind all of it. A single weak link and the magic becomes a queue.\n\nThe best experiential work is engineered like a show and judged like a photograph. Beatrox builds both halves — the technical systems that make moments reliable, and the creative layers that make them worth sharing."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Product launches and brand reveals",
+        "Festival activations and sponsored footprints",
+        "Pop-up retail and touring experiences",
+        "VIP lounges and hospitality environments",
+        "Sports and marquee-weekend activations",
+        "Interactive art and awareness campaigns",
+        "Press events and influencer moments"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Beatrox produces experiential events end to end: creative concepting, environmental and interactive design, custom fabrication, media and content production, and full on-site operations. One team carries the activation from first sketch to final strike.\n\nFor the G-MAN Experiential Campaign with Toyota x MTV in Los Angeles, we delivered an integrated experiential event around the MTV Music Awards. For Adidas at Super Bowl 2020, we transformed Ampersand Studios in Miami into an immersive VIP headquarters — projection-mapped architecture, an AR mirror with real-time physics driven by Kinect Azure, and a custom photo booth giving every guest a shareable digital takeaway. For the Infinite Playlist Tour with Amazon Music Live, we produced festival activations at Outside Lands and Stagecoach 2023 with reflective exteriors, custom murals, AR moments, and artist meet & greets hosted by Bimma Williams. For AKU World with AKU + FTX, we built a multi-room universe in New York with a projection-mapped main room, holographic displays, a 4D body scanner for minting digital avatars, and live performances synced to the room itself. And for Run for the Oceans with Adidas and Parley Ocean School, we turned a shipping container at Domino Park into a deep-ocean chamber with infinity LED walls and LIDAR-driven fish simulations."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Discovery — Brand goals, audience, footprint, and success metrics",
+        "2. Concept & Experience Design — The guest journey mapped moment by moment",
+        "3. Technical Design & Pre-Visualization — Interactive systems, renders, and floor plans approved up front",
+        "4. Fabrication & Content Production — Builds, media, and software developed in parallel",
+        "5. On-Site Production — Install, rehearsals, staffing, and live operation",
+        "6. Strike & Reporting — Clean removal plus the content and metrics your team needs"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Festival-proven — Amazon Music Live activations at Outside Lands and Stagecoach 2023",
+        "Marquee-weekend experience — the Adidas VIP headquarters at Super Bowl 2020 in Miami",
+        "Trusted by Toyota x MTV for the G-MAN Experiential Campaign in Los Angeles",
+        "Multi-room scale — AKU World's projection-mapped rooms, body scanner, and holographic displays",
+        "Interaction engineers — AR mirrors, LIDAR tracking, and real-time simulation built in-house",
+        "Design, fabrication, and operations under one roof — no handoff gaps"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How much lead time does an activation need?",
+          "answer": "For a custom build with interactive elements, plan on 8–12 weeks from concept lock to event day. Simpler footprints can move faster. Festival placements and marquee weekends book early, so the sooner we start, the more ambitious the activation can be."
+        },
+        {
+          "question": "Can you produce activations outside the Pacific Northwest?",
+          "answer": "Yes — our activations have run in Miami, New York, San Francisco, Indio, and Los Angeles. We manage freight, local labor, and venue coordination nationwide."
+        },
+        {
+          "question": "Can the experience include shareable digital takeaways?",
+          "answer": "That's one of our signatures. AR mirrors, custom photo booths, and motion-captured moments give every guest branded content to post — as we built for Adidas at Super Bowl 2020 and Amazon Music at Outside Lands."
+        },
+        {
+          "question": "Do you handle the technology as well as the build?",
+          "answer": "Everything. Projection mapping, LED, sensors, real-time simulation, audio, and lighting are designed and programmed by the same team that fabricates the environment — so nothing gets lost between vendors."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "G-MAN Experiential Campaign",
+      "slug": "/work/g-man-experiential-campaign"
+    },
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    },
+    {
+      "title": "Infinite Playlist Tour",
+      "slug": "/work/infinite-playlist"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/g-man-experiential-campaign/g_man_experiential_campaign_preview.png",
+    "galleryImages": [
+      "/images/verified/work/super-bowl-2020/IntroSlide2-83d69cc8.jpg",
+      "/images/verified/work/super-bowl-2020/ARMoment1-e19402c7.JPG",
+      "/images/verified/work/infinite-playlist/Outside+Lands+Amazon+Music-1-3163fc62.jpg",
+      "/images/portfolio/aku-world/Concert-WideAngle.jpg",
+      "/images/verified/work/run-for-the-oceans/KMP_2618-240ccea8.jpg"
+    ]
+  },
+  "pageType": "service"
+}

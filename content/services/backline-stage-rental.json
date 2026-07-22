@@ -2,17 +2,17 @@
   "title": "Backline & Stage Rental",
   "slug": "/services/backline-stage-rental",
   "seo": {
-    "title": "Backline & Stage Rental \u2014 BEATROX",
-    "description": "Beatrox provides professional backline and stage rental services for concerts, tours, and events \u2014 drum kits, guitar/bass amplifiers, keyboards, and full stage packages with setup support.",
+    "title": "Backline & Stage Rental — BEATROX",
+    "description": "Beatrox provides professional backline and stage rental services for concerts, tours, and events — drum kits, guitar/bass amplifiers, keyboards, and full stage packages with setup support.",
     "og": {
-      "title": "Backline & Stage Rental \u2014 BEATROX Portland",
-      "description": "Professional-grade backline and stage packages for concerts and tours \u2014 drum kits, amplifiers, keyboards, and staging from the Beatrox team.",
+      "title": "Backline & Stage Rental — BEATROX Portland",
+      "description": "Professional-grade backline and stage packages for concerts and tours — drum kits, amplifiers, keyboards, and staging from the Beatrox team.",
       "image": "/og-default.jpg"
     }
   },
   "hero": {
     "headline": "Backline & Stage Rental",
-    "subheadline": "Professional-grade backline and stage packages \u2014 so your artists hit the stage ready to perform, every time.",
+    "subheadline": "Professional-grade backline and stage packages — so your artists hit the stage ready to perform, every time.",
     "cta": {
       "label": "Get a Free Quote",
       "url": "/book"
@@ -32,7 +32,7 @@
   "body": [
     {
       "type": "intro",
-      "content": "Beatrox's backline and stage rental service is built for touring acts, festivals, and one-off concert productions. Our team \u2014 led by Joey Paulekas, who has toured with Odesza and global brands \u2014 understands exactly what artists and production managers need from a backline package."
+      "content": "Beatrox's backline and stage rental service is built for touring acts, festivals, and one-off concert productions. Our team — led by Joey Paulekas, who has toured with Odesza and global brands — understands exactly what artists and production managers need from a backline package."
     },
     {
       "type": "trust",
@@ -48,11 +48,11 @@
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call \u2014 We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization \u2014 See your event before it happens",
-        "3. Equipment & Crew \u2014 We source everything and assign the right team",
-        "4. On-Site Execution \u2014 Professional setup, operation, and strike",
-        "5. Post-Event Review \u2014 We ensure everything exceeded expectations"
+        "1. Discovery Call — We learn your vision, venue, and budget",
+        "2. Design & Pre-Visualization — See your event before it happens",
+        "3. Equipment & Crew — We source everything and assign the right team",
+        "4. On-Site Execution — Professional setup, operation, and strike",
+        "5. Post-Event Review — We ensure everything exceeded expectations"
       ]
     },
     {
@@ -74,12 +74,12 @@
     {
       "type": "service_detail",
       "heading": "Rider Matching Process",
-      "content": "We know that a backline package is only as good as its match to the artist's rider. Our process begins with a detailed review of your artist's technical requirements \u2014 drum brands, amp models, keyboard configurations, and monitor preferences. We cross-reference our inventory, source anything missing, and confirm every detail before load-in. Our goal is zero surprises on stage."
+      "content": "We know that a backline package is only as good as its match to the artist's rider. Our process begins with a detailed review of your artist's technical requirements — drum brands, amp models, keyboard configurations, and monitor preferences. We cross-reference our inventory, source anything missing, and confirm every detail before load-in. Our goal is zero surprises on stage."
     },
     {
       "type": "service_detail",
       "heading": "Touring Packages & Artist-Specific Configurations",
-      "content": "For touring acts, we build repeatable, road-ready packages that maintain consistency across every date. This includes matched drum kits, dialed-in amp settings, road-case packaging, and spares for critical gear. We can also configure artist-specific setups \u2014 from signature amp combinations to custom keyboard rigs \u2014 ensuring every show feels familiar and professional."
+      "content": "For touring acts, we build repeatable, road-ready packages that maintain consistency across every date. This includes matched drum kits, dialed-in amp settings, road-case packaging, and spares for critical gear. We can also configure artist-specific setups — from signature amp combinations to custom keyboard rigs — ensuring every show feels familiar and professional."
     },
     {
       "type": "specs",
@@ -99,7 +99,7 @@
       "items": [
         {
           "question": "How far in advance should I book?",
-          "answer": "We recommend booking at least 4\u20136 weeks in advance for standard rentals and 8\u201312 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
         },
         {
           "question": "Do you travel outside Portland?",
@@ -115,7 +115,7 @@
         },
         {
           "question": "Do you offer touring packages?",
-          "answer": "Absolutely. We build road-ready, repeatable touring packages with matched gear, road cases, and spares \u2014 ensuring consistency and reliability across every tour date."
+          "answer": "Absolutely. We build road-ready, repeatable touring packages with matched gear, road cases, and spares — ensuring consistency and reliability across every tour date."
         }
       ]
     }
@@ -133,5 +133,6 @@
   "media": {
     "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
     "galleryImages": []
-  }
+  },
+  "pageType": "rental"
 }

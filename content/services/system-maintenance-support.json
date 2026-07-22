@@ -120,5 +120,12 @@
       "/images/portfolio/destination/DESTINATION_SD_5of7.jpg",
       "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png"
     ]
-  }
+  },
+  "tech": [
+    "QSC Q-Sys",
+    "Crestron",
+    "Dante Domain Manager",
+    "Remote Monitoring & Diagnostics"
+  ],
+  "pageType": "tech"
 }

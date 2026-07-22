@@ -121,5 +121,12 @@
       "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
       "/images/verified/work/el-camino/el_camino_preview.jpg"
     ]
-  }
+  },
+  "tech": [
+    "ShopBot",
+    "Fusion 360",
+    "VCarve Pro",
+    "Rhino"
+  ],
+  "pageType": "tech"
 }

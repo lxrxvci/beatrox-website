@@ -120,5 +120,12 @@
       "/images/portfolio/aku-world/WideShot.jpeg",
       "/images/portfolio/run-for-the-oceans/KMP_2618.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Vectorworks",
+    "AutoCAD",
+    "Microsoft Excel",
+    "Google Workspace"
+  ],
+  "pageType": "tech"
 }

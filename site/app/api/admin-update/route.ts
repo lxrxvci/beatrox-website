@@ -45,6 +45,9 @@ function revalidateDocument(collection: string, doc: Record<string, unknown>) {
       // Service pages auto-list tagged projects; invalidate them all.
       revalidatePath('/services')
       revalidatePath('/services/[slug]', 'page')
+      // Tech pages list projects via techTags; invalidate them too.
+      revalidatePath('/tech')
+      revalidatePath('/tech/[slug]', 'page')
     }
   } catch (err) {
     // Don't fail the update if revalidation throws.
@@ -61,7 +64,7 @@ function getTopLevelField(path: string): string {
 // actually calls this endpoint. Anything outside this list is rejected.
 const ALLOWED_UPDATE_PATHS: Record<string, string[]> = {
   pages: ['hero.', 'consultationForm.', 'address.', 'contactInfo.', 'social.', 'emailSignup.', 'blocks.'],
-  projects: ['serviceTags', 'body.', 'contentBlocks.', 'blocks.'],
+  projects: ['serviceTags', 'techTags', 'body.', 'contentBlocks.', 'blocks.'],
   services: ['capabilities.', 'body.', 'contentBlocks.', 'blocks.'],
 }
 

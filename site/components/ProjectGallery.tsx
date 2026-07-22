@@ -104,10 +104,25 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
 
   // Drop entries with no usable URL so they can't render as empty
   // bordered black frames.
+  const [failedUrls, setFailedUrls] = useState<ReadonlySet<string>>(new Set())
   const galleryImages = useMemo(
-    () => images.filter((img) => img.url && img.url.trim() !== ''),
-    [images]
+    () =>
+      images.filter(
+        (img) => img.url && img.url.trim() !== '' && !failedUrls.has(img.url)
+      ),
+    [images, failedUrls]
   )
+
+  // Runtime 404s/optimizer failures would otherwise leave empty black frames
+  // in the mosaic — drop the failed URL and let the rows reflow.
+  const markFailed = useCallback((url: string) => {
+    setFailedUrls((prev) => {
+      if (prev.has(url)) return prev
+      const next = new Set(prev)
+      next.add(url)
+      return next
+    })
+  }, [])
 
   const sizedImages = useMemo<SizedImage[]>(
     () => galleryImages.map((img) => ({ ...img, aspect: getAspect(img) })),
@@ -177,6 +192,10 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
 
   const activeImage = activeIndex !== null ? galleryImages[activeIndex] : null
 
+  // Every entry failed to load (or none were provided) — render nothing
+  // rather than an empty header over a blank section.
+  if (galleryImages.length === 0) return null
+
   return (
     <>
       <div ref={containerRef} className="max-w-[1400px] mx-auto px-6 lg:px-10 pb-10">
@@ -217,6 +236,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                       fill
                       sizes={`${Math.round(img.width)}px`}
                       className="object-cover transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-110"
+                      onError={() => markFailed(img.url)}
                     />
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-3 sm:p-4">
                       <span className="mono text-[10px] text-white/60 uppercase tracking-[0.2em] mb-1">

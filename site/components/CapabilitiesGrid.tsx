@@ -36,7 +36,9 @@ const POSITION_CLASSES: Record<Exclude<CapabilityTextPosition, 'below' | 'hidden
 function Tile({ cap }: { cap: Capability }) {
   const position = cap.textPosition || 'center'
   const label = (
-    <span className="text-[clamp(1.25rem,2vw,1.75rem)] font-semibold leading-tight">{cap.label}</span>
+    <span className="font-[family-name:var(--font-heading)] text-[clamp(1.05rem,1.6vw,1.5rem)] font-semibold uppercase tracking-[0.08em] leading-snug">
+      {cap.label}
+    </span>
   )
 
   const image = (

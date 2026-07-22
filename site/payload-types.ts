@@ -506,6 +506,19 @@ export interface Service {
   isEnabled?: boolean | null;
   category?: string | null;
   /**
+   * Page type determines the route template and tag associations.
+   */
+  pageType: 'service' | 'tech' | 'rental';
+  /**
+   * Technologies behind this capability — shown as chips on tech pages. Display-only, never used for matching.
+   */
+  tech?:
+    | {
+        value: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
    * Lower numbers appear first in listings.
    */
   listOrder?: number | null;
@@ -810,6 +823,10 @@ export interface Project {
    * Services used on this project — drives service-page related work and the /work service tag cloud.
    */
   serviceTags?: (number | Service)[] | null;
+  /**
+   * Technologies used on this project — drives /tech pages. Display-only: never used for project↔project relatedness.
+   */
+  techTags?: (number | Service)[] | null;
   seo?: {
     title?: string | null;
     description?: string | null;
@@ -2338,6 +2355,7 @@ export interface ProjectsSelect<T extends boolean = true> {
             };
       };
   serviceTags?: T;
+  techTags?: T;
   seo?:
     | T
     | {
@@ -2568,6 +2586,13 @@ export interface ServicesSelect<T extends boolean = true> {
   status?: T;
   isEnabled?: T;
   category?: T;
+  pageType?: T;
+  tech?:
+    | T
+    | {
+        value?: T;
+        id?: T;
+      };
   listOrder?: T;
   parent?: T;
   hero?:

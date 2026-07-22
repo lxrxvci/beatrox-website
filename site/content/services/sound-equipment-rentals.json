@@ -7,7 +7,7 @@
     "og": {
       "title": "Sound Equipment Rentals — BEATROX Portland",
       "description": "Professional PA systems, consoles, and monitoring with experienced engineers — Beatrox sound equipment rentals for concerts and events.",
-      "image": "/og-default.jpg"
+      "image": "/images/verified/home/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals-1d18c704.jpg"
     }
   },
   "hero": {
@@ -38,21 +38,24 @@
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "15+ years of experience in live event production",
-        "Full-service team from design to strike",
-        "Portland-based with nationwide coverage",
-        "Trusted by Adidas, Netflix, CNN, Amazon Music"
+        "Touring-grade inventory — L-Acoustics, d&b audiotechnik, Meyer Sound, DiGiCo, and Midas",
+        "Engineer-led rentals — certified A1/A2 engineers available with every package",
+        "Venue-matched systems — coverage modeled from 100-person rooms to 5,000+ capacity",
+        "Professional RF coordination — clear wireless even in congested festival spectrum",
+        "Audio Engineer Joshua Vallejos brings 15+ years of touring and live sound experience",
+        "Deployed on productions for BuzzFeed and AKU World in New York"
       ]
     },
     {
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call — We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization — See your event before it happens",
-        "3. Equipment & Crew — We source everything and assign the right team",
-        "4. On-Site Execution — Professional setup, operation, and strike",
-        "5. Post-Event Review — We ensure everything exceeded expectations"
+        "1. Venue & Audience Assessment — Room size, acoustics, and coverage requirements",
+        "2. System Spec — PA, consoles, monitors, and wireless matched to the venue",
+        "3. Delivery & Deployment — Rig placed, cabled, and tuned to the room",
+        "4. Soundcheck Support — Inputs verified, monitors rung out, RF coordinated",
+        "5. Show Operation — Optional A1/A2 engineering from first note to encore",
+        "6. Strike & Pickup — System struck and out of your venue on schedule"
       ]
     },
     {
@@ -95,17 +98,38 @@
       "type": "faq",
       "heading": "Frequently Asked Questions",
       "items": [
-        { "question": "How far in advance should I book?", "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability." },
-        { "question": "Do you travel outside Portland?", "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events." },
-        { "question": "What's included in the rental?", "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management." },
-        { "question": "Do you provide an audio engineer?", "answer": "Yes. We offer experienced A1 (Front of House) and A2 (Monitor) engineers with touring and festival experience. Engineers can be added to any rental package." },
-        { "question": "Can you handle wireless microphones in a crowded RF environment?", "answer": "Absolutely. Our team performs professional RF coordination, scanning the venue, assigning clear frequencies, and monitoring for interference — ensuring reliable wireless performance even in congested urban or festival environments." }
+        {
+          "question": "How far in advance should I book?",
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+        },
+        {
+          "question": "Do you travel outside Portland?",
+          "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events."
+        },
+        {
+          "question": "What's included in the rental?",
+          "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
+        },
+        {
+          "question": "Do you provide an audio engineer?",
+          "answer": "Yes. We offer experienced A1 (Front of House) and A2 (Monitor) engineers with touring and festival experience. Engineers can be added to any rental package."
+        },
+        {
+          "question": "Can you handle wireless microphones in a crowded RF environment?",
+          "answer": "Absolutely. Our team performs professional RF coordination, scanning the venue, assigning clear frequencies, and monitoring for interference — ensuring reliable wireless performance even in congested urban or festival environments."
+        }
       ]
     }
   ],
   "relatedWork": [
-    { "title": "BuzzFeed", "slug": "/work/buzzfeed" },
-    { "title": "AKU World", "slug": "/work/aku-world" }
+    {
+      "title": "BuzzFeed",
+      "slug": "/work/buzzfeed"
+    },
+    {
+      "title": "AKU World",
+      "slug": "/work/aku-world"
+    }
   ],
   "media": {
     "heroImage": "/images/verified/home/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals-1d18c704.jpg",
@@ -115,5 +139,6 @@
       "/images/verified/services/sound-equipment-rentals/Microphone-Pacakges-Band-Backline-DI-Boxes-Drum-Mics-Handheld-Wireless-Mics-DirectBox-00bf529c.png",
       "/images/verified/services/dj-equipment-rentals/Pioneer-CDJ-3000-2000-DJM-a9-Nexus-NXS2-DJ-Equiopment-Rentals-416b9d21.png"
     ]
-  }
+  },
+  "pageType": "rental"
 }

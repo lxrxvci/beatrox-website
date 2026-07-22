@@ -119,5 +119,12 @@
       "/images/portfolio/run-for-the-oceans/KMP_2820.jpg",
       "/images/deck/infinite-playlist/01-image35.jpg"
     ]
-  }
+  },
+  "tech": [
+    "grandMA3",
+    "ETC Eos",
+    "Vectorworks Vision",
+    "Capture"
+  ],
+  "pageType": "tech"
 }

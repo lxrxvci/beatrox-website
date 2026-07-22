@@ -3,16 +3,17 @@ import { notFound, redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { normalizeProjectSlug } from '@/lib/json-content'
-import { getAllServicesResolved, getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
+import { getAllProjectsResolved, getAllServicesResolved, getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
 import { getImageDimensions } from '@/lib/image-dimensions'
 import { seoToMetadata } from '@/lib/metadata'
+import { truncateAtWord } from '@/lib/text'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
 import MetadataSchematic from '@/components/MetadataSchematic'
 import KineticHeading from '@/components/KineticHeading'
 import NodeBullet from '@/components/NodeBullet'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
-import { EditableServiceTags, EditableText } from '@/components/admin'
+import { EditableServiceTags, EditableTechTags, EditableText } from '@/components/admin'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -45,8 +46,30 @@ export default async function ProjectPage({ params }: Props) {
 
   const allServices = await getAllServicesResolved()
   const serviceOptions = allServices.map((s) => ({ id: s.id, title: s.title, slug: s.slug }))
+  const techOptions = allServices
+    .filter((s) => s.pageType === 'tech')
+    .map((s) => ({ id: s.id, title: s.title, slug: s.slug }))
 
-  const validImages = project.images?.filter(img => img.url && img.url !== '') ?? []
+  // Related projects: share ≥1 serviceTag with this project (service-only
+  // relatedness — tech tags are display-only), ranked by shared-tag count.
+  const currentServiceTagSlugs = new Set(
+    project.serviceTags.map((tag) => tag.slug.replace(/^\/services\/+/, '')),
+  )
+  const allProjects = await getAllProjectsResolved()
+  const relatedProjects = allProjects
+    .filter((candidate) => candidate.canonicalSlug !== project.canonicalSlug)
+    .map((candidate) => ({
+      project: candidate,
+      shared: candidate.serviceTags.filter((tag) =>
+        currentServiceTagSlugs.has(tag.slug.replace(/^\/services\/+/, '')),
+      ).length,
+    }))
+    .filter((entry) => entry.shared > 0)
+    .sort((a, b) => b.shared - a.shared || a.project.title.localeCompare(b.project.title))
+    .slice(0, 6)
+
+  // Drop entries with no usable URL so they can never render as empty frames.
+  const validImages = project.images?.filter(img => img.url && img.url.trim() !== '') ?? []
 
   // Ensure every gallery image has dimensions for the mosaic layout.
   const galleryImages = await Promise.all(
@@ -117,7 +140,7 @@ export default async function ProjectPage({ params }: Props) {
           />
 
           {/* Services used — chips link to service pages; owner can re-tag in edit mode */}
-          <div className="mt-12">
+          <div className="mt-14">
             <h2 className="overline mb-4">Services Used</h2>
             <EditableServiceTags
               collection="projects"
@@ -131,7 +154,7 @@ export default async function ProjectPage({ params }: Props) {
                     <Link
                       key={tag.id}
                       href={`/services/${tag.slug.replace(/^\/services\/+/, '')}`}
-                      className="px-3 py-1 text-xs uppercase tracking-wider border border-white/15 bg-white/[0.03] text-white/75 hover:text-white hover:border-[var(--accent)]/60 transition-colors"
+                      className="border border-white/10 rounded-full px-3 py-1 text-xs text-white/75 hover:text-white hover:border-[var(--accent)] transition-colors"
                     >
                       {tag.title}
                     </Link>
@@ -143,15 +166,42 @@ export default async function ProjectPage({ params }: Props) {
             </EditableServiceTags>
           </div>
 
+          {/* Tech used — chips link to /tech pages; owner can re-tag in edit mode */}
+          <div className="mt-8">
+            <h2 className="overline mb-4">Tech Used</h2>
+            <EditableTechTags
+              collection="projects"
+              documentId={project.id}
+              allTech={techOptions}
+              selectedIds={project.techTags.map((tag) => tag.id)}
+            >
+              <div className="flex flex-wrap gap-2">
+                {project.techTags.length > 0 ? (
+                  project.techTags.map((tag) => (
+                    <Link
+                      key={tag.id}
+                      href={tag.slug}
+                      className="border border-white/10 rounded-full px-3 py-1 text-xs text-white/75 hover:text-white hover:border-[var(--accent)] transition-colors"
+                    >
+                      {tag.title}
+                    </Link>
+                  ))
+                ) : (
+                  <span className="text-sm text-white/40">No tech tagged yet</span>
+                )}
+              </div>
+            </EditableTechTags>
+          </div>
+
           {/* Body */}
-          <div className="mt-16 max-w-3xl space-y-12">
+          <div className="mt-14 pt-14 border-t border-white/10 max-w-3xl space-y-12">
               {project.body.map((block, i) => (
                 <div key={i}>
                   {block.heading && (
                     <h2 className="overline mb-4"><EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.heading`} value={block.heading}>{block.heading}</EditableText></h2>
                   )}
                   {block.content && (
-                    <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
+                    <p className="text-base text-white/75 leading-relaxed whitespace-pre-line">
                       <EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.content`} value={block.content} multiline>
                         {block.content}
                       </EditableText>
@@ -187,6 +237,57 @@ export default async function ProjectPage({ params }: Props) {
 
       {project.videos && project.videos.length > 0 && (
         <VideoEmbedStrip title="Project Video" videos={project.videos} />
+      )}
+
+      {/* Related Projects — projects sharing ≥1 serviceTag, ranked by overlap */}
+      {relatedProjects.length > 0 && (
+        <section className="section border-t border-white/10">
+          <div className="max-w-[1120px] mx-auto">
+            <h2 className="heading-sm text-white/75 mb-8">Related Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
+              {relatedProjects.map(({ project: related }) => {
+                const image = related.images?.find((img) => img.url && img.url.trim() !== '')?.url
+                const imageAlt = related.images?.find((img) => img.url && img.url.trim() !== '')?.alt
+                return (
+                  <Link
+                    key={related.canonicalSlug}
+                    href={`/work/${related.canonicalSlug}`}
+                    className={`relative p-7 md:p-8 group transition-colors block overflow-hidden border border-white/10 ${
+                      image
+                        ? 'bg-black min-h-[16rem] hover:bg-white/5'
+                        : 'bg-white/[0.02] hover:bg-white/[0.05]'
+                    }`}
+                  >
+                    {image && (
+                      <>
+                        <Image
+                          src={image}
+                          alt={imageAlt || `${related.title} project image`}
+                          fill
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                          className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+                      </>
+                    )}
+                    <div className="relative">
+                      <p className="mono text-[var(--accent)] mb-3">
+                        {related.metadata.client}
+                      </p>
+                      <p className="heading-sm text-white mb-3">{related.title}</p>
+                      <p className="text-base text-white/75 leading-relaxed">
+                        {truncateAtWord(related.hero.subheadline)}
+                      </p>
+                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
+                        View project →
+                      </span>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* Bottom nav / CTA */}

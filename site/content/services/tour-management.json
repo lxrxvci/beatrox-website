@@ -120,5 +120,12 @@
       "/images/portfolio/aku-world/MainRoom4.jpg",
       "/images/portfolio/run-for-the-oceans/KMP_2820.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Master Tour",
+    "Vectorworks",
+    "Microsoft Excel",
+    "Google Workspace"
+  ],
+  "pageType": "tech"
 }

@@ -120,5 +120,13 @@
       "/images/portfolio/projekt-x/IMG_3944.jpg",
       "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-703a6f28.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Novastar",
+    "Brompton",
+    "QSC Q-Sys",
+    "Crestron",
+    "Dante"
+  ],
+  "pageType": "tech"
 }

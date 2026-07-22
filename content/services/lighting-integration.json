@@ -121,5 +121,13 @@
       "/images/portfolio/destination/IMG_9776.jpg",
       "/images/verified/work/the-great-escape/the_great_escape_preview.jpg"
     ]
-  }
+  },
+  "tech": [
+    "grandMA3",
+    "ETC Eos",
+    "DMX",
+    "sACN",
+    "Art-Net"
+  ],
+  "pageType": "tech"
 }

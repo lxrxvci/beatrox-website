@@ -2,17 +2,17 @@
   "title": "Full Service Event Production",
   "slug": "/services/event-production",
   "seo": {
-    "title": "Event Production Services \u2014 BEATROX",
+    "title": "Event Production Services — BEATROX",
     "description": "Beatrox provides full-service event production including planning, logistics, AV equipment sourcing, tour and production management, venue sourcing, permit submittal, and on-site labor.",
     "og": {
-      "title": "Full Service Event Production \u2014 BEATROX",
-      "description": "From first concept to final strike \u2014 Beatrox manages every layer of your event including AV, logistics, labor, venue, and production management.",
-      "image": "/og-default.jpg"
+      "title": "Full Service Event Production — BEATROX",
+      "description": "From first concept to final strike — Beatrox manages every layer of your event including AV, logistics, labor, venue, and production management.",
+      "image": "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-c030a121.jpg"
     }
   },
   "hero": {
     "headline": "Full Service Event Production",
-    "subheadline": "From first concept to final strike, we manage every layer of your event \u2014 so you can focus on your audience.",
+    "subheadline": "From first concept to final strike, we manage every layer of your event — so you can focus on your audience.",
     "cta": {
       "label": "Book a Free Consultation",
       "url": "/book"
@@ -32,14 +32,16 @@
   "body": [
     {
       "type": "intro",
-      "content": "Beatrox is a full-service event production partner. Whether you're producing a brand activation, a touring concert, an experiential pop-up, or a corporate event, our team handles everything \u2014 from pre-production planning to on-site technical direction and final strike."
+      "content": "Beatrox is a full-service event production partner. Whether you're producing a brand activation, a touring concert, an experiential pop-up, or a corporate event, our team handles everything — from pre-production planning to on-site technical direction and final strike."
     },
     {
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "15+ years of experience in live event production",
-        "Full-service team from design to strike",
+        "Produced BuzzFeed's 2016 NewFronts at Moynihan Station — custom stage, mapped orbs, and full show operations",
+        "Ran live performances and multi-room logistics for AKU World's NFT Miami event in New York",
+        "Delivered Adidas x Parley's Run for the Oceans activation at Domino Park, Brooklyn",
+        "Full-service team from design to strike — one accountable point of contact",
         "Portland-based with nationwide coverage",
         "Trusted by Adidas, Netflix, CNN, Amazon Music"
       ]
@@ -48,11 +50,12 @@
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call \u2014 We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization \u2014 See your event before it happens",
-        "3. Equipment & Crew \u2014 We source everything and assign the right team",
-        "4. On-Site Execution \u2014 Professional setup, operation, and strike",
-        "5. Post-Event Review \u2014 We ensure everything exceeded expectations"
+        "1. Discovery & Advance — Vision, venue, budget, rider, and run-of-show requirements",
+        "2. Production Design — Floor plans, pre-visualization, and technical plots approved up front",
+        "3. Logistics & Staffing — Equipment sourced, crew roles assigned, permits submitted",
+        "4. Load-In & Rehearsal — Systems installed, tested, and run before doors open",
+        "5. Show Execution — TD, PM, and department heads operating every cue live",
+        "6. Strike & Wrap — Clean load-out, venue handoff, and post-event review"
       ]
     },
     {
@@ -79,7 +82,7 @@
     {
       "type": "service_detail",
       "heading": "Venue Coordination & Timeline Examples",
-      "content": "Successful events depend on tight venue coordination. We create detailed production timelines \u2014 from load-in schedules and power distribution plans to security briefings and strike timelines. For a typical 500-person concert, we plan 8 hours of load-in, 2 hours of soundcheck, a 4-hour event window, and 4 hours of strike. For brand activations, we coordinate with venue managers on foot traffic, power drops, and permitting. Our timelines keep every vendor, artist, and venue aligned."
+      "content": "Successful events depend on tight venue coordination. We create detailed production timelines — from load-in schedules and power distribution plans to security briefings and strike timelines. For a typical 500-person concert, we plan 8 hours of load-in, 2 hours of soundcheck, a 4-hour event window, and 4 hours of strike. For brand activations, we coordinate with venue managers on foot traffic, power drops, and permitting. Our timelines keep every vendor, artist, and venue aligned."
     },
     {
       "type": "labor_roles",
@@ -100,7 +103,7 @@
       "items": [
         {
           "question": "How far in advance should I book?",
-          "answer": "We recommend booking at least 4\u20136 weeks in advance for standard rentals and 8\u201312 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
         },
         {
           "question": "Do you travel outside Portland?",
@@ -136,7 +139,14 @@
     }
   ],
   "media": {
-    "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
-    "galleryImages": []
-  }
+    "heroImage": "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-c030a121.jpg",
+    "galleryImages": [
+      "/images/verified/work/buzzfeed/Buzzfeed-NewfrontsTeamPhoto-b788d87b.jpg",
+      "/images/verified/work/buzzfeed/MediaWalls-Fabricated2-7b91becd.jpg",
+      "/images/verified/work/aku-world/MainRoom2-4154e8a2.jpg",
+      "/images/verified/work/run-for-the-oceans/KMP_2820-8e872a06.jpg",
+      "/images/verified/work/run-for-the-oceans/KMP_3614-06452977.jpg"
+    ]
+  },
+  "pageType": "service"
 }

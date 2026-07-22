@@ -92,6 +92,7 @@ export interface Project {
   canonicalSlug: string
   tags: string[]
   serviceTags: { id: string; slug: string; title: string }[]
+  techTags: { id: string; slug: string; title: string }[]
   seo: SeoMeta
   hero: {
     headline: string
@@ -129,6 +130,10 @@ export interface Service {
     cta: { label: string; url: string }
   }
   category: string
+  /** service = sold offering (/services/*), tech = capability (/tech/*), rental = legacy rental page */
+  pageType: 'service' | 'tech' | 'rental'
+  /** Technologies behind a tech capability — display-only chips, never used for matching. */
+  tech?: string[]
   capabilities: string[]
   body: ServiceBodyBlock[]
   contentBlocks?: CMSPageBlock[]
@@ -481,6 +486,16 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
         }
       })
       .filter((tag) => Boolean(tag.title)),
+    techTags: asArray<Record<string, unknown> | number>(doc.techTags)
+      .map((row) => {
+        if (typeof row !== 'object' || row === null) return { id: String(row), slug: '', title: '' }
+        return {
+          id: String(row.id || ''),
+          slug: `/tech/${normalizeServiceSlug(String(row.slug || ''))}`,
+          title: String(row.title || ''),
+        }
+      })
+      .filter((tag) => Boolean(tag.title)),
     seo: {
       title: String((doc.seo as unknown as Record<string, unknown>)?.title || ''),
       description: String((doc.seo as unknown as Record<string, unknown>)?.description || ''),
@@ -557,6 +572,8 @@ function mapCmsService(doc: Record<string, unknown>): Service {
       },
     },
     category: String(doc.category || ''),
+    pageType: (['service', 'tech', 'rental'].includes(String(doc.pageType)) ? String(doc.pageType) : 'service') as Service['pageType'],
+    tech: asArray<Record<string, unknown>>(doc.tech).map((item) => String(item.value || '')).filter(Boolean),
     capabilities: asArray<Record<string, unknown>>(doc.capabilities).map((item) => String(item.value || '')).filter(Boolean),
     body: asArray<Record<string, unknown>>(doc.body).map((block): ServiceBodyBlock => {
       const type = String(block.type || '')

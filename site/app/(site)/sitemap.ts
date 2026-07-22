@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getProjectSlugsResolved, getProjectTagsResolved, getServiceSlugsResolved, getCaseStudySlugsResolved } from '@/lib/content'
+import { getProjectSlugsResolved, getProjectTagsResolved, getAllServicesResolved, getCaseStudySlugsResolved } from '@/lib/content'
 import { readManifest } from '@/lib/youtube/storage'
 
 const BASE_URL = 'https://www.beatrox.com'
@@ -9,9 +9,14 @@ export const revalidate = 300
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectSlugs = await getProjectSlugsResolved()
   const projectTags = await getProjectTagsResolved()
-  const serviceSlugs = await getServiceSlugsResolved()
+  const services = await getAllServicesResolved()
   const caseStudySlugs = await getCaseStudySlugsResolved()
   const videoManifest = readManifest()
+
+  // Resolved docs carry the legacy "/services/<slug>" slug form regardless of pageType.
+  const bareSlug = (slug: string) => slug.replace(/^\/(services|tech)\/+/, '')
+  const serviceSlugs = services.filter((s) => s.pageType !== 'tech').map((s) => bareSlug(s.slug))
+  const techSlugs = services.filter((s) => s.pageType === 'tech').map((s) => bareSlug(s.slug))
 
   const rootPages: MetadataRoute.Sitemap = [
     {
@@ -37,6 +42,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/tech`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/team`,
@@ -94,6 +105,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
+  // Tech capabilities live at /tech/* (pageType 'tech'), excluded from /services above.
+  const techPages: MetadataRoute.Sitemap = techSlugs.map(slug => ({
+    url: `${BASE_URL}/tech/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   const caseStudyPages: MetadataRoute.Sitemap = caseStudySlugs.map(slug => ({
     url: `${BASE_URL}/case-studies/${slug}`,
     lastModified: new Date(),
@@ -110,5 +129,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     }))
 
-  return [...rootPages, ...projectPages, ...projectTagPages, ...servicePages, ...caseStudyPages, ...videoPages]
+  return [...rootPages, ...projectPages, ...projectTagPages, ...servicePages, ...techPages, ...caseStudyPages, ...videoPages]
 }

@@ -121,5 +121,10 @@
       "/images/verified/work/g-man-experiential-campaign/g_man_experiential_campaign_preview.png",
       "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Vectorworks",
+    "SketchUp"
+  ],
+  "pageType": "tech"
 }

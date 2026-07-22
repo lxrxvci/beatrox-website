@@ -7,7 +7,7 @@
     "og": {
       "title": "Drone Light Shows — BEATROX",
       "description": "Hundreds of synchronized drones painting the night sky with your story — custom choreographed drone light shows for festivals and brand activations.",
-      "image": "/og-default.jpg"
+      "image": "/images/verified/services/drone-light-shows/ship3-fdfa40c6.png"
     }
   },
   "hero": {
@@ -38,21 +38,24 @@
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "15+ years of experience in live event production",
-        "Full-service team from design to strike",
-        "Portland-based with nationwide coverage",
-        "Trusted by Adidas, Netflix, CNN, Amazon Music"
+        "Specialist-led — shows designed with Alan Curtiss, owner of Sky Lites Drone Shows",
+        "Full FAA pipeline handled in-house — Part 107 waivers, airspace authorization, NOTAMs",
+        "Custom choreography to your brand — logos, messages, and story-driven formations",
+        "Indoor and outdoor rated operations with certified remote pilots",
+        "Comprehensive liability insurance on every operation",
+        "Integrated with Beatrox laser, LED, and audio systems for unified spectacles"
       ]
     },
     {
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call — We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization — See your event before it happens",
-        "3. Equipment & Crew — We source everything and assign the right team",
-        "4. On-Site Execution — Professional setup, operation, and strike",
-        "5. Post-Event Review — We ensure everything exceeded expectations"
+        "1. Creative Brief — Story, brand assets, venue, and viewing distances defined",
+        "2. Formation Design & Pre-Visualization — Your show choreographed and rendered in 3D",
+        "3. Regulatory Approval — FAA waivers, airspace authorization, and NOTAM filings secured",
+        "4. Site Survey & Safety Planning — Launch zone, geofencing, and crowd separation confirmed",
+        "5. Show Operation — Certified pilots execute the choreographed flight live",
+        "6. Recovery & Review — Fleet recovered, airspace released, and footage delivered"
       ]
     },
     {
@@ -88,14 +91,34 @@
       "content": "Weather is a critical factor in outdoor drone operations. We monitor forecasts beginning 72 hours before your event and make go/no-go decisions based on wind speed, precipitation, and temperature thresholds. Generally, shows proceed in light rain and moderate winds up to 20 mph. Heavy rain, lightning, or sustained winds above 25 mph may require postponement or rescheduling. We build contingency plans into every production and communicate clearly with clients as conditions develop."
     },
     {
+      "type": "service_detail",
+      "heading": "Designing a Show That Reads From the Ground",
+      "content": "A drone show is a billboard the size of a skyline — but only if it's designed for the audience's vantage point. We choreograph formations around your primary viewing area, hold key brand moments long enough to photograph, and pace transitions so the sky never goes quiet. Logos and text are rendered in perspective-corrected formations so they read clearly from the crowd, and color palettes are chosen against your sky conditions — deep saturation for urban light glow, high-brightness whites for dark rural skies. Every design is reviewed with you in 3D pre-visualization before a single waiver is filed."
+    },
+    {
       "type": "faq",
       "heading": "Frequently Asked Questions",
       "items": [
-        { "question": "How far in advance should I book?", "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability." },
-        { "question": "Do you travel outside Portland?", "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events." },
-        { "question": "What's included in the rental?", "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management." },
-        { "question": "How many drones can you fly at once?", "answer": "We can operate shows ranging from 50 drones for intimate settings to 500+ drones for large-scale spectacles. The ideal count depends on your venue, viewing distance, and creative goals." },
-        { "question": "What happens if the weather is bad?", "answer": "We monitor conditions 72 hours out and will recommend postponement if wind, rain, or lightning exceed safe thresholds. We build contingency plans into every outdoor production and communicate with you throughout." }
+        {
+          "question": "How far in advance should I book?",
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+        },
+        {
+          "question": "Do you travel outside Portland?",
+          "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events."
+        },
+        {
+          "question": "What's included in the rental?",
+          "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
+        },
+        {
+          "question": "How many drones can you fly at once?",
+          "answer": "We can operate shows ranging from 50 drones for intimate settings to 500+ drones for large-scale spectacles. The ideal count depends on your venue, viewing distance, and creative goals."
+        },
+        {
+          "question": "What happens if the weather is bad?",
+          "answer": "We monitor conditions 72 hours out and will recommend postponement if wind, rain, or lightning exceed safe thresholds. We build contingency plans into every outdoor production and communicate with you throughout."
+        }
       ]
     }
   ],
@@ -110,5 +133,6 @@
       "/images/verified/services/drone-light-shows/dead-47810eb2.png",
       "/images/verified/services/drone-light-shows/sotrk-02e1bfcb.jpg"
     ]
-  }
+  },
+  "pageType": "service"
 }

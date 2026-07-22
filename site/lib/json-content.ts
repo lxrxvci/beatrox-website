@@ -82,6 +82,7 @@ export interface Project {
   canonicalSlug: string
   tags: string[]
   serviceTags: { id: string; slug: string; title: string }[]
+  techTags: { id: string; slug: string; title: string }[]
   seo: SeoMeta
   hero: {
     headline: string
@@ -115,6 +116,10 @@ export interface Service {
     cta: { label: string; url: string }
   }
   category: string
+  /** service = sold offering (/services/*), tech = capability (/tech/*), rental = legacy rental page */
+  pageType: 'service' | 'tech' | 'rental'
+  /** Technologies behind a tech capability — display-only chips, never used for matching. */
+  tech?: string[]
   capabilities: string[]
   body: ServiceBodyBlock[]
   relatedWork: { title: string; slug: string }[]
@@ -319,6 +324,7 @@ export function getAllProjects(): Project[] {
       canonicalSlug,
       tags,
       serviceTags: [],
+      techTags: [],
     }
   })
 }
@@ -335,6 +341,7 @@ export function getProject(slug: string): Project | null {
     canonicalSlug,
     tags,
     serviceTags: [],
+    techTags: [],
   }
 }
 

@@ -120,5 +120,14 @@
       "/images/portfolio/projekt-x/StillsFromVideo16.jpg",
       "/images/verified/work/the-great-escape/the_great_escape_preview.jpg"
     ]
-  }
+  },
+  "tech": [
+    "L-Acoustics",
+    "d&b audiotechnik",
+    "DiGiCo",
+    "ROE Visual",
+    "Disguise",
+    "grandMA"
+  ],
+  "pageType": "tech"
 }

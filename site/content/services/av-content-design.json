@@ -3,16 +3,16 @@
   "slug": "/services/av-content-design",
   "seo": {
     "title": "Audio, Video & Lighting Content Design",
-    "description": "Audio, video, and lighting content design for events and installations — Beatrox creates custom media, projection content, and synced visuals for any canvas.",
+    "description": "Custom content and motion graphics for events and installations — Beatrox creates video, real-time visuals, spatial audio, and lighting looks as one synchronized system.",
     "og": {
       "title": "Audio, Video & Lighting Content Design | BEATROX",
-      "description": "Custom video, projection content, spatial audio, and lighting looks — designed as one synchronized system for your event.",
-      "image": "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png"
+      "description": "Custom video, motion graphics, real-time visuals, spatial audio, and lighting looks — designed as one synchronized system for your event.",
+      "image": "/images/verified/work/run-for-the-oceans/DeckScreenCap1-349ca35d.png"
     }
   },
   "hero": {
     "headline": "Audio, Video & Lighting Content Design",
-    "subheadline": "Custom media designed for your canvas — video, projection content, audio, and lighting looks that work as one synchronized system.",
+    "subheadline": "Custom media designed for your canvas — video, motion graphics, real-time visuals, audio, and lighting looks that work as one synchronized system.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -21,45 +21,46 @@
   "category": "Design",
   "capabilities": [
     "Custom Video & Motion Graphics",
-    "Projection Mapping Content",
+    "Real-Time & Generative Visual Content",
     "LED Wall Content Design",
+    "Interactive & Sensor-Driven Content",
     "Spatial & Ambient Audio Design",
     "Lighting Look & Cue Design",
     "Timecode-Synced Show Content",
-    "Media Server Playback Programming",
     "Branded Visual Systems"
   ],
   "body": [
     {
       "type": "intro",
       "heading": "What is Audio, Video & Lighting Content Design?",
-      "content": "Content design is everything the audience sees and hears — the video on the LED wall, the imagery wrapped across a building, the soundscape in the room, and the lighting looks that tie it together. Designing these elements as one system, rather than three separate vendors, is what makes a show feel unified.\n\nYou need content design whenever your event has screens, projectors, speakers, or intelligent lighting — which is nearly every modern production. The content has to fit the exact pixel map of your displays, the geometry of your projection surfaces, and the timing of your show. Off-the-shelf visuals rarely do any of that.\n\nGreat content design starts with the story and the canvas. A spherical theatre, a landmark facade, and a conference main stage each demand completely different approaches to resolution, composition, contrast, and motion."
+      "content": "Content design is everything the audience sees and hears — the video on the LED wall, the motion graphics behind the keynote, the soundscape in the room, and the lighting looks that tie it together. Designing these elements as one system, rather than three separate vendors, is what makes a show feel unified.\n\nYou need content design whenever your event has screens, speakers, or intelligent lighting — which is nearly every modern production. The content has to fit the exact pixel map of your displays, the timing of your run-of-show, and the voice of your brand. Off-the-shelf visuals rarely do any of that.\n\nGreat content design starts with the story and the canvas. A festival activation, a corporate main stage, and a permanent lobby installation each demand completely different approaches to resolution, composition, contrast, and motion — and increasingly, content isn't a file at all, but a real-time system that responds to the audience."
     },
     {
       "type": "use_cases",
       "heading": "Common Applications",
       "items": [
-        "Projection mapping shows on buildings and structures",
         "LED wall content for stages and installations",
-        "Broadcast and election-night visual systems",
-        "Spatial audio for immersive environments",
+        "Real-time and generative visuals for live events",
+        "Interactive content driven by sensors and guests",
         "Branded motion graphics for keynotes and launches",
-        "Ambient content for museums, lobbies, and retail"
+        "Spatial audio for immersive environments",
+        "Ambient content for museums, lobbies, and retail",
+        "Broadcast and livestream visual packages"
       ]
     },
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "We produce custom video and motion graphics, projection mapping content aligned to your exact surfaces, LED wall media built to native pixel maps, spatial and ambient audio, and lighting looks — all programmed for timecode-accurate playback on professional media servers. Our team handles the full chain: creative direction, asset production, surface calibration, and on-site playback operation.\n\nFor the DUBAI 360 spherical projection theatre in Dubai Mall, we delivered content and deployment for DUBAI 360 & Obscura Digital on a fully spherical canvas — imagery engineered to surround the audience with no visible seams. With PROJECTING CHANGE: Racing Extinction for the Oceanic Preservation Society & Obscura Digital, projection content was designed for some of the world's most recognizable canvases, including the Empire State Building, the United Nations in New York, and the Vatican in Rome. And for CNN: Road to 270 with CNN & Obscura Digital, we built projection and interactive visual content on the Empire State Building for election-night storytelling at landmark scale."
+      "content": "We produce custom video and motion graphics, real-time and generative visuals, LED wall media built to native pixel maps, spatial and ambient audio, and lighting looks — all programmed for timecode-accurate playback. Our team handles the full chain: creative direction, asset production, and on-site playback operation.\n\nFor Run for the Oceans with Adidas and Parley Ocean School, we built the real-time content system itself — a flocking fish simulation and fluid simulation driven live by LIDAR tracking, alongside a curated collage of deep-ocean footage and plastic-waste information designed for the infinity LED environment. For the Infinite Playlist Tour with Amazon Music Live, we created AR moments with real-time physics simulations in TouchDesigner, giving festival guests at Outside Lands and Stagecoach shareable interactive content. For AKU World, our team produced real-time 3D worlds in Unreal Engine and Blender that ran linked to the live musical performances. And for the FLIR Interactive History Wall, we designed the complete visual language — FLIR's Iron Bow thermal gradient applied across a library of video content and animations, with AI-driven behavior that invites passers-by to explore."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Canvas & Story Audit — We study your surfaces, displays, and narrative goals",
+        "1. Canvas & Story Audit — We study your displays, playback systems, and narrative goals",
         "2. Creative Direction — Style frames and animatics establish the visual language",
-        "3. Content Production — Video, audio, and lighting looks built to spec",
-        "4. Calibration & Mapping — Content aligned to real geometry and pixel maps",
+        "3. Content Production — Video, motion graphics, audio, and lighting looks built to spec",
+        "4. Technical Formatting — Media rendered to exact pixel maps and playback specs",
         "5. Playback Programming — Media servers, timecode, and cue stacks configured",
         "6. Show Operation — Rehearsed, operated, and supported live on event day"
       ]
@@ -68,12 +69,12 @@
       "type": "trust",
       "heading": "Why BEATROX",
       "items": [
-        "Spherical theatre content for DUBAI 360 in Dubai Mall",
-        "Landmark projection content for the Empire State Building, the UN, and the Vatican",
-        "Election-night visual systems for CNN on the Empire State Building",
+        "Real-time content systems — LIDAR-driven flocking and fluid simulations for Adidas x Parley",
+        "Interactive AR content for Amazon Music Live at Outside Lands and Stagecoach 2023",
+        "Real-time 3D world creation in Unreal Engine for AKU World",
+        "Brand-language design — FLIR's Iron Bow thermal gradient as a complete visual system",
         "Content, audio, and lighting designed as one synchronized system",
-        "Timecode-accurate media server playback on every show",
-        "Experience across theatres, facades, stages, and installations"
+        "Timecode-accurate media server playback on every show"
       ]
     },
     {
@@ -81,8 +82,8 @@
       "heading": "Frequently Asked Questions",
       "items": [
         {
-          "question": "Can you design content for surfaces that aren't flat screens?",
-          "answer": "Yes — irregular surfaces are our specialty. We map content to domes, spheres, buildings, and scenic structures using the actual geometry of the canvas."
+          "question": "Can you create content that reacts to the audience in real time?",
+          "answer": "Yes — real-time content is a specialty. We build generative and interactive visuals in TouchDesigner and Unreal Engine that respond to sensors, tracking data, or live audio, as we did for Run for the Oceans and the Infinite Playlist Tour."
         },
         {
           "question": "Do you handle the playback systems too?",
@@ -90,34 +91,44 @@
         },
         {
           "question": "Can content be synced to a live show or broadcast?",
-          "answer": "Absolutely. We lock content to timecode and show calling for concerts, broadcasts, and run-of-show-driven corporate events, as we did for CNN: Road to 270."
+          "answer": "Absolutely. We lock content to timecode and show calling for concerts, broadcasts, and run-of-show-driven corporate events — including the official festival livestream content at Stagecoach for Amazon Music Live."
         },
         {
           "question": "What information do you need to quote content design?",
-          "answer": "Your canvas specs (screen sizes, surfaces, venue), show length, brand assets, and creative goals. From there we can scope production time and deliverables quickly."
+          "answer": "Your canvas specs (screen sizes, pixel maps, venue), show length, brand assets, and creative goals. From there we can scope production time and deliverables quickly."
         }
       ]
     }
   ],
   "relatedWork": [
     {
-      "title": "DUBAI 360: Spherical Projection Theatre",
-      "slug": "/work/dubai-360-spherical-projection-theatre"
+      "title": "Run for the Oceans",
+      "slug": "/work/run-for-the-oceans"
     },
     {
-      "title": "PROJECTING CHANGE: Racing Extinction",
-      "slug": "/work/projecting-change-racing-extinction"
+      "title": "FLIR Interactive History Wall",
+      "slug": "/work/flir"
     },
     {
-      "title": "CNN: Road to 270",
-      "slug": "/work/cnn-road-to-270"
+      "title": "AKU World",
+      "slug": "/work/aku-world"
     }
   ],
   "media": {
-    "heroImage": "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
+    "heroImage": "/images/verified/work/run-for-the-oceans/DeckScreenCap1-349ca35d.png",
     "galleryImages": [
-      "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg",
-      "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg"
+      "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg",
+      "/images/verified/work/aku-world/GalleryConcept-ba7fce3d.jpg",
+      "/images/verified/work/run-for-the-oceans/DeckScreenCap3-3c22fa9e.png"
     ]
-  }
+  },
+  "tech": [
+    "TouchDesigner",
+    "Notch",
+    "Adobe After Effects",
+    "Cinema 4D",
+    "Resolume Arena",
+    "Disguise"
+  ],
+  "pageType": "tech"
 }

@@ -1,0 +1,132 @@
+{
+  "title": "Projection Mapping",
+  "slug": "/services/projection-mapping",
+  "seo": {
+    "title": "Projection Mapping",
+    "description": "Projection mapping for buildings, stages, and immersive spaces — Beatrox designs, maps, and operates projection shows from ballrooms to the Empire State Building.",
+    "og": {
+      "title": "Projection Mapping | BEATROX",
+      "description": "Architecture turned into cinema — projection mapping design, calibration, and show operation by Beatrox, from brand activations to landmark facades.",
+      "image": "/images/verified/work/super-bowl-2020/Screen+Shots+For+Projection+Mapping2-8ae9cfec.jpg"
+    }
+  },
+  "hero": {
+    "headline": "Projection Mapping",
+    "subheadline": "Any surface can become a screen. Beatrox designs, maps, and operates projection shows that wrap architecture, stages, and entire rooms in light — precisely, reliably, and at any scale.",
+    "cta": {
+      "label": "Book a Consultation",
+      "url": "/book"
+    }
+  },
+  "category": "Technical",
+  "capabilities": [
+    "Architectural & Facade Projection Mapping",
+    "Stage & Scenic Surface Mapping",
+    "Spherical & Immersive Theatre Projection",
+    "Multi-Projector Blending & Calibration",
+    "Pre-Visualization & Surface Scanning",
+    "Mapped Content Production",
+    "Media Server Programming & Playback",
+    "Live Show Operation"
+  ],
+  "body": [
+    {
+      "type": "intro",
+      "heading": "What is Projection Mapping?",
+      "content": "Projection mapping is the craft of turning real-world geometry into a display. Instead of projecting onto a flat screen, content is engineered to the exact contours of a building, a stage set, a sphere, or an entire room — so the surface itself appears to move, transform, and tell the story. Done right, the projector vanishes and the architecture comes alive.\n\nYou need projection mapping when the venue is the message. A product launch that transforms the room around the guests, a stage design that shifts scene without moving a single flat, a landmark facade that becomes election-night television — these are moments no LED wall can replicate, because the canvas already means something.\n\nThe discipline is equal parts art and metrology. Surfaces are measured, projectors are positioned and blended to the millimeter, and content is warped to real geometry. Beatrox handles that full chain — and has done it on canvases from a Manhattan bodega to the Empire State Building."
+    },
+    {
+      "type": "use_cases",
+      "heading": "Common Applications",
+      "items": [
+        "Brand activations and product launches",
+        "Building and landmark facade shows",
+        "Stage and scenic projection for live performance",
+        "Immersive rooms and walkthrough environments",
+        "Spherical theatres and dome projection",
+        "Broadcast and election-night visual systems",
+        "Museum and exhibition installations"
+      ]
+    },
+    {
+      "type": "service_detail",
+      "heading": "What BEATROX Provides",
+      "content": "Beatrox delivers projection mapping end to end: surface analysis, projector system design, content production, multi-projector blending and calibration, media server programming, and live operation. The same team that maps the surface produces the content — so what you approve in pre-visualization is what appears on the wall.\n\nFor the DUBAI 360 spherical projection theatre in Dubai Mall, we delivered content and deployment for DUBAI 360 & Obscura Digital on a fully spherical canvas — imagery engineered to surround the audience with no visible seams. With PROJECTING CHANGE: Racing Extinction for the Oceanic Preservation Society & Obscura Digital, projection content was designed for some of the world's most recognizable canvases, including the Empire State Building, the United Nations in New York, and the Vatican in Rome. For CNN: Road to 270 with CNN & Obscura Digital, we built projection and interactive visual content on the Empire State Building for election-night storytelling at landmark scale. And at Super Bowl 2020 in Miami, we transformed Ampersand Studios into an immersive Adidas VIP headquarters — custom projection content pre-visualized and calibrated to wrap the architecture of the venue in dynamic branded visuals for the full Super Bowl weekend."
+    },
+    {
+      "type": "process",
+      "heading": "How We Work",
+      "items": [
+        "1. Surface Study — We measure or scan the canvas and assess sightlines and ambient light",
+        "2. System Design — Projector count, placement, lenses, and blending zones engineered",
+        "3. Pre-Visualization — The mapped show rendered on the real geometry for approval",
+        "4. Content Production — Imagery built to the surface's exact template and timing",
+        "5. Calibration & Alignment — Multi-projector blend, warp, and focus dialed on site",
+        "6. Show Operation — Media servers programmed, rehearsed, and operated live"
+      ]
+    },
+    {
+      "type": "trust",
+      "heading": "Why BEATROX",
+      "items": [
+        "Landmark-proven — the Empire State Building, the United Nations, and the Vatican",
+        "Spherical canvas experience — the DUBAI 360 projection theatre in Dubai Mall",
+        "Election-night scale — CNN: Road to 270 on the Empire State Building",
+        "Venue transformation for Adidas at Super Bowl 2020 in Miami",
+        "Content and calibration from one team — no gap between design and delivery",
+        "Every show pre-visualized on the real geometry before a projector is rigged"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What surfaces can be projection mapped?",
+          "answer": "Nearly anything that reflects light — buildings, stage sets, spheres, cars, water features, entire rooms. Irregular surfaces are our specialty: content is warped to the measured geometry, so the odder the canvas, the more striking the result."
+        },
+        {
+          "question": "Does projection mapping work outdoors?",
+          "answer": "Yes — with the right engineering. Outdoor shows account for ambient light, weather, and throw distances, and use high-lumen projector stacks. Our landmark facade work, including the Empire State Building and the Vatican, was all outdoor."
+        },
+        {
+          "question": "How long does it take to produce a mapping show?",
+          "answer": "A single-evening activation with existing content can turn around in a few weeks. A custom content show on a complex surface typically needs 6–10 weeks for surveying, content production, and calibration. We scope timelines during the surface study."
+        },
+        {
+          "question": "Can mapped content sync to a live show?",
+          "answer": "Absolutely. We lock projection content to timecode and show calling for concerts, broadcasts, and run-of-show-driven events — the same discipline behind CNN: Road to 270's election-night operation."
+        }
+      ]
+    }
+  ],
+  "relatedWork": [
+    {
+      "title": "Super Bowl 2020",
+      "slug": "/work/super-bowl-2020"
+    },
+    {
+      "title": "CNN: Road to 270",
+      "slug": "/work/cnn-road-to-270"
+    },
+    {
+      "title": "DUBAI 360: Spherical Projection Theatre",
+      "slug": "/work/dubai-360-spherical-projection-theatre"
+    },
+    {
+      "title": "PROJECTING CHANGE: Racing Extinction",
+      "slug": "/work/projecting-change-racing-extinction"
+    }
+  ],
+  "media": {
+    "heroImage": "/images/verified/work/super-bowl-2020/Screen+Shots+For+Projection+Mapping2-8ae9cfec.jpg",
+    "galleryImages": [
+      "/images/verified/work/super-bowl-2020/Screen+Shots+For+Projection+Mapping4-c7819ae2.jpg",
+      "/images/verified/work/super-bowl-2020/Screen+Shots+For+Projection+Mapping5-3a88ee2d.jpg",
+      "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg",
+      "/images/deck/dubai-360-spherical-projection-theatre/03-image311.jpg",
+      "/images/deck/projecting-change-racing-extinction/03-image232.jpg"
+    ]
+  },
+  "pageType": "service"
+}

@@ -120,5 +120,12 @@
       "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
       "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Disguise",
+    "Resolume Arena",
+    "Watchout",
+    "Pixera"
+  ],
+  "pageType": "tech"
 }

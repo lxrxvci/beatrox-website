@@ -120,5 +120,11 @@
       "/images/verified/work/el-camino/el_camino_preview.jpg",
       "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg"
     ]
-  }
+  },
+  "tech": [
+    "AutoCAD",
+    "Vectorworks",
+    "Rhino"
+  ],
+  "pageType": "tech"
 }

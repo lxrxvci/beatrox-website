@@ -119,5 +119,12 @@
       "/images/deck/g-man-experiential-campaign/01-image264.png",
       "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg"
     ]
-  }
+  },
+  "tech": [
+    "Figma",
+    "React",
+    "TouchDesigner",
+    "Electron"
+  ],
+  "pageType": "tech"
 }

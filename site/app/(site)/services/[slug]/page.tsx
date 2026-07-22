@@ -34,6 +34,9 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params
   const service = await getServiceResolved(slug)
   if (!service) notFound()
+  // Tech capabilities live at /tech/[slug] — the 301s in next.config.ts cover
+  // old /services links; this guards direct hits that bypass the redirect.
+  if (service.pageType === 'tech') notFound()
   const heroImage = service.media?.heroImage || '/og-default.jpg'
   const gallery = service.media?.galleryImages || []
   const inlineMedia = gallery.filter((img) => img && img !== heroImage)
@@ -105,7 +108,7 @@ export default async function ServicePage({ params }: Props) {
                       )}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {block.items?.map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-3 text-base text-white/80">
+                          <div key={idx} className="flex items-start gap-3 text-base text-white/75">
                             <span className="text-[var(--accent)] mt-0.5 shrink-0" aria-hidden="true">✓</span>
                             <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}><span>{item}</span></EditableText>
                           </div>
@@ -125,7 +128,7 @@ export default async function ServicePage({ params }: Props) {
                             <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-[var(--accent)]/40 text-[var(--accent)] font-mono text-sm rounded-sm">
                               {idx + 1}
                             </span>
-                            <span className="text-base text-white/80 leading-relaxed pt-1"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item.replace(/^\d+[.)]\s*/, '')}</EditableText></span>
+                            <span className="text-base text-white/75 leading-relaxed pt-1"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item.replace(/^\d+[.)]\s*/, '')}</EditableText></span>
                           </li>
                         ))}
                       </ol>
@@ -159,7 +162,7 @@ export default async function ServicePage({ params }: Props) {
                         <h2 className="heading-sm text-white/75 mb-4"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.heading`} value={bodyBlock.heading}>{bodyBlock.heading}</EditableText></h2>
                       )}
                       {bodyBlock.content && (
-                        <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
+                        <p className="text-base text-white/75 leading-relaxed whitespace-pre-line">
                           {bodyBlock.content}
                         </p>
                       )}
@@ -178,12 +181,12 @@ export default async function ServicePage({ params }: Props) {
                   })()}
                 </div>
                 {inlineMedia[i] && (
-                  <div className="relative w-full h-[40vh] md:h-[62vh] bg-black border border-white/10 overflow-hidden">
+                  <div className="relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
                     <Image
                       src={inlineMedia[i]}
                       alt={`${service.title} image ${i + 1}`}
                       fill
-                      sizes="100vw"
+                      sizes="(max-width: 1120px) 100vw, 880px"
                       className="object-contain"
                     />
                   </div>
@@ -206,23 +209,30 @@ export default async function ServicePage({ params }: Props) {
             <h2 className="heading-sm text-white/75 mb-8">See It in Action</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
               {allRelatedProjects.map(({ work, project }) => {
-                const image = project.images?.[0]?.url
+                const image = project.images?.find((img) => img.url && img.url.trim() !== '')?.url
+                const imageAlt = project.images?.find((img) => img.url && img.url.trim() !== '')?.alt
                 return (
                   <Link
                     key={work.slug}
                     href={work.slug}
-                    className="relative bg-black p-7 md:p-8 group hover:bg-white/5 transition-colors block min-h-[16rem] overflow-hidden border border-white/10"
+                    className={`relative p-7 md:p-8 group transition-colors block overflow-hidden border border-white/10 ${
+                      image
+                        ? 'bg-black min-h-[16rem] hover:bg-white/5'
+                        : 'bg-white/[0.02] hover:bg-white/[0.05]'
+                    }`}
                   >
                     {image && (
-                      <Image
-                        src={image}
-                        alt={project.images[0].alt || `${project.title} project image`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 50vw"
-                        className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
-                      />
+                      <>
+                        <Image
+                          src={image}
+                          alt={imageAlt || `${project.title} project image`}
+                          fill
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                          className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+                      </>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
                     <div className="relative">
                       <p className="mono text-[var(--accent)] mb-3">
                         {project.metadata.client}

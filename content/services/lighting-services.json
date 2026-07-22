@@ -2,17 +2,17 @@
   "title": "Lighting Services",
   "slug": "/services/lighting-services",
   "seo": {
-    "title": "Lighting Design & Services \u2014 BEATROX",
-    "description": "Beatrox provides full-spectrum lighting services \u2014 from environmental and stage lighting design and pre-visualization to lighting integration, programming, and live operation for events and installations.",
+    "title": "Lighting Design & Services — BEATROX",
+    "description": "Beatrox provides full-spectrum lighting services — from environmental and stage lighting design and pre-visualization to lighting integration, programming, and live operation for events and installations.",
     "og": {
-      "title": "Lighting Design & Services \u2014 BEATROX",
-      "description": "Lighting that transforms spaces and elevates every moment \u2014 designed, programmed, and operated by Beatrox for events, concerts, and permanent installations.",
+      "title": "Lighting Design & Services — BEATROX",
+      "description": "Lighting that transforms spaces and elevates every moment — designed, programmed, and operated by Beatrox for events, concerts, and permanent installations.",
       "image": "/og-default.jpg"
     }
   },
   "hero": {
     "headline": "Lighting Services",
-    "subheadline": "Lighting that transforms spaces and elevates every moment \u2014 designed, programmed, and operated by our experienced team.",
+    "subheadline": "Lighting that transforms spaces and elevates every moment — designed, programmed, and operated by our experienced team.",
     "cta": {
       "label": "Book a Free Consultation",
       "url": "/book"
@@ -32,7 +32,7 @@
   "body": [
     {
       "type": "intro",
-      "content": "Lighting is the invisible hand that shapes every experience. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, Beatrox's lighting team designs systems that serve your vision \u2014 technically and aesthetically."
+      "content": "Lighting is the invisible hand that shapes every experience. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, Beatrox's lighting team designs systems that serve your vision — technically and aesthetically."
     },
     {
       "type": "trust",
@@ -48,11 +48,11 @@
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call \u2014 We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization \u2014 See your event before it happens",
-        "3. Equipment & Crew \u2014 We source everything and assign the right team",
-        "4. On-Site Execution \u2014 Professional setup, operation, and strike",
-        "5. Post-Event Review \u2014 We ensure everything exceeded expectations"
+        "1. Discovery Call — We learn your vision, venue, and budget",
+        "2. Design & Pre-Visualization — See your event before it happens",
+        "3. Equipment & Crew — We source everything and assign the right team",
+        "4. On-Site Execution — Professional setup, operation, and strike",
+        "5. Post-Event Review — We ensure everything exceeded expectations"
       ]
     },
     {
@@ -71,7 +71,7 @@
     {
       "type": "service_detail",
       "heading": "From Concept to Operation",
-      "content": "Our lighting services begin at the design stage with full pre-visualization, allowing clients to see the lighting environment before a single fixture is hung. We then handle all integration, programming, and live operation \u2014 including DMX-controlled rigs, addressable LED systems, media server-driven content, and audio-reactive programming for immersive environments."
+      "content": "Our lighting services begin at the design stage with full pre-visualization, allowing clients to see the lighting environment before a single fixture is hung. We then handle all integration, programming, and live operation — including DMX-controlled rigs, addressable LED systems, media server-driven content, and audio-reactive programming for immersive environments."
     },
     {
       "type": "service_detail",
@@ -81,7 +81,7 @@
     {
       "type": "service_detail",
       "heading": "Benefits of Pre-Visualization",
-      "content": "Pre-visualization allows you to see your lighting design before investing in equipment and crew. Using 3D rendering software, we model your venue, fixture placement, and cue timing \u2014 giving you a realistic preview of every look. This reduces on-site programming time, minimizes surprises, and allows for faster client approvals. For complex shows, pre-viz can save hours of expensive load-in time and ensure your creative vision is achieved exactly as planned."
+      "content": "Pre-visualization allows you to see your lighting design before investing in equipment and crew. Using 3D rendering software, we model your venue, fixture placement, and cue timing — giving you a realistic preview of every look. This reduces on-site programming time, minimizes surprises, and allows for faster client approvals. For complex shows, pre-viz can save hours of expensive load-in time and ensure your creative vision is achieved exactly as planned."
     },
     {
       "type": "faq",
@@ -89,7 +89,7 @@
       "items": [
         {
           "question": "How far in advance should I book?",
-          "answer": "We recommend booking at least 4\u20136 weeks in advance for standard rentals and 8\u201312 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
         },
         {
           "question": "Do you travel outside Portland?",
@@ -105,7 +105,7 @@
         },
         {
           "question": "Do you offer permanent installation lighting?",
-          "answer": "Absolutely. We design and install permanent lighting for retail spaces, venues, architectural features, and brand environments \u2014 with ongoing maintenance and programming support."
+          "answer": "Absolutely. We design and install permanent lighting for retail spaces, venues, architectural features, and brand environments — with ongoing maintenance and programming support."
         }
       ]
     }
@@ -127,5 +127,6 @@
   "media": {
     "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
     "galleryImages": []
-  }
+  },
+  "pageType": "rental"
 }

@@ -42,22 +42,22 @@ export const DEFAULT_CAPABILITIES: Capability[] = [
   },
   {
     label: 'Stage Design',
-    href: '/services/set-scenic-assembly',
+    href: '/services/stage-design',
     image: '/images/capabilities/stage-design.jpg',
   },
   {
     label: 'Experiential Events',
-    href: '/services/event-production',
+    href: '/services/experiential-events',
     image: '/images/capabilities/experiential-events.jpg',
   },
   {
     label: 'Event Production',
-    href: '/services/production-management',
+    href: '/services/event-production',
     image: '/images/capabilities/event-production.jpg',
   },
   {
     label: 'Immersive Environments',
-    href: '/services/environmental-design',
+    href: '/services/immersive-environments',
     image: '/images/capabilities/immersive-environments.jpeg',
   },
   {
@@ -67,7 +67,7 @@ export const DEFAULT_CAPABILITIES: Capability[] = [
   },
   {
     label: 'Multimedia Displays',
-    href: '/services/av-system-integration',
+    href: '/services/multimedia-displays',
     image: '/images/capabilities/multimedia-displays.jpg',
   },
   {
@@ -77,12 +77,12 @@ export const DEFAULT_CAPABILITIES: Capability[] = [
   },
   {
     label: 'Audio Production',
-    href: '/services/sound-equipment-rentals',
+    href: '/services/audio-production',
     image: '/images/capabilities/audio-production.jpg',
   },
   {
     label: 'Projection Mapping',
-    href: '/services/av-content-design',
+    href: '/services/projection-mapping',
     image: '/images/capabilities/projection-mapping.jpg',
   },
 ]
