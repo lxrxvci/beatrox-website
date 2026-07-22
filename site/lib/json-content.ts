@@ -81,6 +81,7 @@ export interface Project {
   slug: string
   canonicalSlug: string
   tags: string[]
+  serviceTags: { id: string; slug: string; title: string }[]
   seo: SeoMeta
   hero: {
     headline: string
@@ -181,7 +182,7 @@ export interface CMSPageBlock {
   heading?: string
   body?: unknown
   images?: Array<{ id?: string; url?: string; alt?: string }>
-  items?: Array<{ label?: string; icon?: string; title?: string; body?: unknown }>
+  items?: Array<{ label?: string; icon?: string; title?: string; body?: unknown; image?: string; link?: string; textPosition?: 'center' | 'top' | 'bottom' | 'below' | 'hidden' }>
   columns?: Array<{ heading?: string; body?: unknown; image?: string }>
   projects?: Array<{
     slug?: string
@@ -317,6 +318,7 @@ export function getAllProjects(): Project[] {
       slug: canonicalSlug,
       canonicalSlug,
       tags,
+      serviceTags: [],
     }
   })
 }
@@ -332,6 +334,7 @@ export function getProject(slug: string): Project | null {
     slug: canonicalSlug,
     canonicalSlug,
     tags,
+    serviceTags: [],
   }
 }
 

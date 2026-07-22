@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWorkIndex, normalizeProjectSlug } from '@/lib/json-content'
-import { getAllProjectsResolved, getProjectSlugsResolved, getProjectTagsResolved } from '@/lib/content'
-import { humanizeTag } from '@/lib/tags'
+import { getAllProjectsResolved, getProjectSlugsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import Reveal from '@/components/Reveal'
 import ParallaxHero from '@/components/ParallaxHero'
 import BentoWorkGrid from '@/components/BentoWorkGrid'
-import LedTagWall from '@/components/LedTagWall'
+import ServiceTagCloud from '@/components/ServiceTagCloud'
 
 
 
@@ -20,11 +19,17 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function WorkPage() {
   const projects = await getAllProjectsResolved()
   const slugs = await getProjectSlugsResolved()
-  const tags = await getProjectTagsResolved()
-  const tagCounts = tags.reduce((acc, tag) => {
-    acc[tag] = projects.filter((p) => p.tags.includes(tag)).length
-    return acc
-  }, {} as Record<string, number>)
+  const serviceTagMap = new Map<string, { slug: string; title: string; count: number }>()
+  for (const project of projects) {
+    for (const tag of project.serviceTags || []) {
+      const bareSlug = tag.slug.replace(/^\/services\/+/, '')
+      if (!bareSlug) continue
+      const entry = serviceTagMap.get(bareSlug)
+      if (entry) entry.count += 1
+      else serviceTagMap.set(bareSlug, { slug: bareSlug, title: tag.title, count: 1 })
+    }
+  }
+  const serviceTags = [...serviceTagMap.values()].sort((a, b) => b.count - a.count)
   const projectsBySlug = new Map(projects.map((project) => [project.canonicalSlug, project]))
   const normalizedSlugs = slugs.map((slug) => normalizeProjectSlug(slug))
   const rows = normalizedSlugs
@@ -46,10 +51,13 @@ export default async function WorkPage() {
         minHeightClass="min-h-[94svh]"
       />
 
-      {tags.length > 0 && (
-        <LedTagWall
-          tags={tags.map((tag) => ({ slug: tag, label: humanizeTag(tag), count: tagCounts[tag] }))}
-        />
+      {serviceTags.length > 0 && (
+        <section className="section border-t border-white/10">
+          <Reveal className="max-w-[1120px] mx-auto">
+            <h2 className="heading-sm text-white/75 mb-8">Browse by Service</h2>
+            <ServiceTagCloud tags={serviceTags} />
+          </Reveal>
+        </section>
       )}
 
       {/* Project previews — asymmetric bento grid */}

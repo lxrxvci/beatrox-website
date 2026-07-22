@@ -3,7 +3,7 @@ import { notFound, redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { normalizeProjectSlug } from '@/lib/json-content'
-import { getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
+import { getAllServicesResolved, getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
 import { getImageDimensions } from '@/lib/image-dimensions'
 import { seoToMetadata } from '@/lib/metadata'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
@@ -12,7 +12,7 @@ import MetadataSchematic from '@/components/MetadataSchematic'
 import KineticHeading from '@/components/KineticHeading'
 import NodeBullet from '@/components/NodeBullet'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
-import { EditableText } from '@/components/admin'
+import { EditableServiceTags, EditableText } from '@/components/admin'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -42,6 +42,9 @@ export default async function ProjectPage({ params }: Props) {
   }
   const project = await getProjectResolved(canonicalSlug)
   if (!project) notFound()
+
+  const allServices = await getAllServicesResolved()
+  const serviceOptions = allServices.map((s) => ({ id: s.id, title: s.title, slug: s.slug }))
 
   const validImages = project.images?.filter(img => img.url && img.url !== '') ?? []
 
@@ -112,6 +115,33 @@ export default async function ProjectPage({ params }: Props) {
               { label: 'Partners', values: project.metadata.partners ?? [] },
             ]}
           />
+
+          {/* Services used — chips link to service pages; owner can re-tag in edit mode */}
+          <div className="mt-12">
+            <h2 className="overline mb-4">Services Used</h2>
+            <EditableServiceTags
+              collection="projects"
+              documentId={project.id}
+              allServices={serviceOptions}
+              selectedIds={project.serviceTags.map((tag) => tag.id)}
+            >
+              <div className="flex flex-wrap gap-2">
+                {project.serviceTags.length > 0 ? (
+                  project.serviceTags.map((tag) => (
+                    <Link
+                      key={tag.id}
+                      href={`/services/${tag.slug.replace(/^\/services\/+/, '')}`}
+                      className="px-3 py-1 text-xs uppercase tracking-wider border border-white/15 bg-white/[0.03] text-white/75 hover:text-white hover:border-[var(--accent)]/60 transition-colors"
+                    >
+                      {tag.title}
+                    </Link>
+                  ))
+                ) : (
+                  <span className="text-sm text-white/40">No services tagged yet</span>
+                )}
+              </div>
+            </EditableServiceTags>
+          </div>
 
           {/* Body */}
           <div className="mt-16 max-w-3xl space-y-12">

@@ -2,127 +2,115 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import {
+  DEFAULT_CAPABILITIES,
+  type Capability,
+  type CapabilityItem,
+  type CapabilityTextPosition,
+} from '@/lib/capabilities'
 
-export interface Capability {
-  label: string
-  href: string
-  image: string
+export type { Capability, CapabilityItem, CapabilityTextPosition }
+export { DEFAULT_CAPABILITIES }
+
+function normalizeLabel(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
 }
 
-const DEFAULT_CAPABILITIES: Capability[] = [
-  {
-    label: 'Custom Fabrication',
-    href: '/work/projekt-x',
-    image: '/images/capabilities/custom-fabrication.jpg',
-  },
-  {
-    label: 'LED Video Wall',
-    href: '/services/led-video-wall-rentals',
-    image: '/images/capabilities/led-video-wall.jpg',
-  },
-  {
-    label: 'Drone Light Shows',
-    href: '/services/drone-light-shows',
-    image: '/images/capabilities/drone-light-shows.png',
-  },
-  {
-    label: 'Stage Design',
-    href: '/work/create-our-future',
-    image: '/images/capabilities/stage-design.jpg',
-  },
-  {
-    label: 'Experiential Events',
-    href: '/work/aku-world',
-    image: '/images/capabilities/experiential-events.jpg',
-  },
-  {
-    label: 'Event Production',
-    href: '/work/run-for-the-oceans',
-    image: '/images/capabilities/event-production.jpg',
-  },
-  {
-    label: 'Immersive Environments',
-    href: '/work/myshelter',
-    image: '/images/capabilities/immersive-environments.jpeg',
-  },
-  {
-    label: 'Laser Light Shows',
-    href: '/services/laser-shows',
-    image: '/images/capabilities/laser-light-shows.jpg',
-  },
-  {
-    label: 'Multimedia Displays',
-    href: '/work/flir',
-    image: '/images/capabilities/multimedia-displays.jpg',
-  },
-  {
-    label: 'DJ Equipment Rentals',
-    href: '/services/dj-equipment-rentals',
-    image: '/images/capabilities/dj-equipment-rentals.jpg',
-  },
-  {
-    label: 'Audio Production',
-    href: '/services/sound-equipment-rentals',
-    image: '/images/capabilities/audio-production.jpg',
-  },
-  {
-    label: 'Projection Mapping',
-    href: '/work/super-bowl-2020',
-    image: '/images/capabilities/projection-mapping.jpg',
-  },
-]
-
-const CAPABILITY_BY_LABEL = new Map(DEFAULT_CAPABILITIES.map((c) => [c.label, c]))
+const CAPABILITY_BY_LABEL = new Map(DEFAULT_CAPABILITIES.map((c) => [normalizeLabel(c.label), c]))
 
 interface CapabilitiesGridProps {
-  /** Optional capability labels to render. Each label is mapped to the old site's image + link. */
-  items?: Array<{ label: string }>
+  /** CMS block items. Explicit image/link/textPosition win; otherwise the label maps to the curated default tile. */
+  items?: CapabilityItem[]
+}
+
+const POSITION_CLASSES: Record<Exclude<CapabilityTextPosition, 'below' | 'hidden'>, string> = {
+  center: 'items-center justify-center text-center',
+  top: 'items-start justify-center text-center pt-6',
+  bottom: 'items-end justify-center text-center pb-6',
+}
+
+function Tile({ cap }: { cap: Capability }) {
+  const position = cap.textPosition || 'center'
+  const label = (
+    <span className="text-[clamp(1.25rem,2vw,1.75rem)] font-semibold leading-tight">{cap.label}</span>
+  )
+
+  const image = (
+    <Image
+      src={cap.image}
+      alt={cap.label}
+      fill
+      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+      className="object-cover"
+    />
+  )
+
+  if (position === 'below') {
+    return (
+      <Link href={cap.href} className="group block" aria-label={cap.label}>
+        <span className="relative block aspect-video overflow-hidden bg-neutral-900">{image}</span>
+        <span className="block pt-3 text-white/85 group-hover:text-white transition-colors">{label}</span>
+      </Link>
+    )
+  }
+
+  return (
+    <Link
+      href={cap.href}
+      className="group relative block aspect-video overflow-hidden bg-neutral-900"
+      aria-label={cap.label}
+    >
+      {image}
+      <span
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/50"
+        aria-hidden="true"
+      />
+      {position !== 'hidden' && (
+        <span
+          className={`pointer-events-none absolute inset-0 flex bg-black/0 text-white transition-colors duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:bg-black/50 ${POSITION_CLASSES[position]}`}
+          aria-hidden="true"
+        >
+          {label}
+        </span>
+      )}
+    </Link>
+  )
 }
 
 export default function CapabilitiesGrid({ items }: CapabilitiesGridProps) {
+  // CMS-driven label lists use a different vocabulary than the curated grid
+  // labels (e.g. "3D Animation & Motion Capture"); matching is normalized
+  // (& ↔ and, case, punctuation). Explicit per-item fields always win.
   const mapped = items
-    ? items.map((item) => CAPABILITY_BY_LABEL.get(item.label)).filter(Boolean) as Capability[]
+    ? items
+        .map((item) => {
+          const base = CAPABILITY_BY_LABEL.get(normalizeLabel(item.label))
+          if (!base && !item.image) return null
+          return {
+            label: item.label,
+            href: item.link || base?.href || '/services',
+            image: item.image || base?.image || '',
+            textPosition: item.textPosition || base?.textPosition,
+          } as Capability
+        })
+        .filter((cap): cap is Capability => Boolean(cap && cap.image))
     : null
-  // CMS-driven label lists (e.g. the About page capabilities block) use a
-  // different vocabulary than the curated grid labels; when any label is
-  // unrecognized, fall back to the full default grid instead of rendering
-  // only the few tiles that happened to match.
-  const capabilities = mapped && mapped.length === (items?.length ?? 0) ? mapped : DEFAULT_CAPABILITIES
+
+  const capabilities = mapped && mapped.length > 0 ? mapped : DEFAULT_CAPABILITIES
 
   if (capabilities.length === 0) return null
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-[1.3vw]"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-[1.3vw]"
       style={{ width: 'auto' }}
     >
       {capabilities.map((cap) => (
-        <Link
-          key={cap.label}
-          href={cap.href}
-          className="group relative block aspect-video overflow-hidden bg-neutral-900"
-          aria-label={cap.label}
-        >
-          <Image
-            src={cap.image}
-            alt={cap.label}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover"
-          />
-          <span
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/50"
-            aria-hidden="true"
-          />
-          <span
-            className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 text-center text-white transition-colors duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:bg-black/50"
-            aria-hidden="true"
-          >
-            <span className="text-[clamp(1.25rem,2vw,1.75rem)] font-semibold leading-tight">
-              {cap.label}
-            </span>
-          </span>
-        </Link>
+        <Tile key={cap.label} cap={cap} />
       ))}
     </div>
   )

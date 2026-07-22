@@ -91,6 +91,7 @@ export interface Project {
   slug: string
   canonicalSlug: string
   tags: string[]
+  serviceTags: { id: string; slug: string; title: string }[]
   seo: SeoMeta
   hero: {
     headline: string
@@ -351,7 +352,7 @@ function extractProjectTags(doc: Record<string, unknown>): string[] {
   const projectTags = asArray<Record<string, unknown>>(doc.tags)
     .map((row) => normalizeProjectTag(String(row.tag || '')))
     .filter(Boolean)
-  const heroTags = asArray<Record<string, unknown>>((doc.hero as Record<string, unknown>)?.tags)
+  const heroTags = asArray<Record<string, unknown>>((doc.hero as unknown as Record<string, unknown>)?.tags)
     .map((row) => normalizeProjectTag(String(row.tag || '')))
     .filter(Boolean)
   return uniqueStrings([...projectTags, ...heroTags])
@@ -373,7 +374,7 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
     images: Array.isArray(block.images)
       ? block.images.map((img: unknown) => {
           if (!img || typeof img !== 'object') return { url: '' }
-          const image = img as Record<string, unknown>
+          const image = img as unknown as Record<string, unknown>
           return {
             id: image.id ? String(image.id) : undefined,
             url: resolveCmsMediaUrl(image) || String(image.url || ''),
@@ -384,19 +385,24 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
     items: Array.isArray(block.items)
       ? block.items.map((item: unknown) => {
           if (!item || typeof item !== 'object') return { label: '' }
-          const row = item as Record<string, unknown>
+          const row = item as unknown as Record<string, unknown>
           return {
             label: row.label ? String(row.label) : undefined,
             icon: row.icon ? String(row.icon) : undefined,
             title: row.title ? String(row.title) : undefined,
             body: row.body,
+            image: row.image ? String(row.image) : undefined,
+            link: row.link ? String(row.link) : undefined,
+            textPosition: row.textPosition
+              ? (String(row.textPosition) as 'center' | 'top' | 'bottom' | 'below' | 'hidden')
+              : undefined,
           }
         })
       : undefined,
     columns: Array.isArray(block.columns)
       ? block.columns.map((col: unknown) => {
           if (!col || typeof col !== 'object') return { heading: '' }
-          const row = col as Record<string, unknown>
+          const row = col as unknown as Record<string, unknown>
           return {
             heading: row.heading ? String(row.heading) : undefined,
             body: row.body,
@@ -406,22 +412,22 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
     projects: Array.isArray(block.projects)
       ? block.projects.map((project: unknown) => {
           if (!project || typeof project !== 'object') return {}
-          const doc = project as Record<string, unknown>
+          const doc = project as unknown as Record<string, unknown>
           return {
             slug: doc.slug ? String(doc.slug) : undefined,
             title: doc.title ? String(doc.title) : undefined,
-            hero: doc.hero as Record<string, unknown> | undefined,
+            hero: doc.hero as unknown as Record<string, unknown> | undefined,
             images: Array.isArray(doc.images)
               ? doc.images.map((img: unknown) => {
                   if (!img || typeof img !== 'object') return {}
-                  const image = img as Record<string, unknown>
+                  const image = img as unknown as Record<string, unknown>
                   return {
                     url: resolveCmsMediaUrl(image) || String(image.url || ''),
                     alt: image.alt ? String(image.alt) : undefined,
                   }
                 })
               : undefined,
-            seo: doc.seo as Record<string, unknown> | undefined,
+            seo: doc.seo as unknown as Record<string, unknown> | undefined,
           }
         })
       : undefined,
@@ -431,11 +437,11 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
     cta:
       block.cta && typeof block.cta === 'object'
         ? {
-            label: (block.cta as Record<string, unknown>).label
-              ? String((block.cta as Record<string, unknown>).label)
+            label: (block.cta as unknown as Record<string, unknown>).label
+              ? String((block.cta as unknown as Record<string, unknown>).label)
               : undefined,
-            url: (block.cta as Record<string, unknown>).url
-              ? String((block.cta as Record<string, unknown>).url)
+            url: (block.cta as unknown as Record<string, unknown>).url
+              ? String((block.cta as unknown as Record<string, unknown>).url)
               : undefined,
           }
         : undefined,
@@ -444,7 +450,7 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
 
 function mapCmsProject(doc: Record<string, unknown>): Project {
   const images = asArray<Record<string, unknown>>(doc.images).map((row) => {
-    const media = row.media as Record<string, unknown> | undefined
+    const media = row.media as unknown as Record<string, unknown> | undefined
     const url = resolveCmsMediaUrl(media) || String(row.legacyUrl || '')
     const width = media?.width ? Number(media.width) : row.width ? Number(row.width) : undefined
     const height = media?.height ? Number(media.height) : row.height ? Number(row.height) : undefined
@@ -464,34 +470,45 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
     slug: normalizeProjectSlug(String(doc.slug || '')),
     canonicalSlug: normalizeProjectSlug(String(doc.slug || '')),
     tags: extractProjectTags(doc),
+    serviceTags: asArray<Record<string, unknown> | number>(doc.serviceTags)
+      .map((row) => {
+        // Depth-populated relationship docs arrive as objects; bare IDs carry no usable label.
+        if (typeof row !== 'object' || row === null) return { id: String(row), slug: '', title: '' }
+        return {
+          id: String(row.id || ''),
+          slug: `/services/${normalizeServiceSlug(String(row.slug || ''))}`,
+          title: String(row.title || ''),
+        }
+      })
+      .filter((tag) => Boolean(tag.title)),
     seo: {
-      title: String((doc.seo as Record<string, unknown>)?.title || ''),
-      description: String((doc.seo as Record<string, unknown>)?.description || ''),
+      title: String((doc.seo as unknown as Record<string, unknown>)?.title || ''),
+      description: String((doc.seo as unknown as Record<string, unknown>)?.description || ''),
       og: {
-        title: String((doc.seo as Record<string, unknown>)?.ogTitle || ''),
-        description: String((doc.seo as Record<string, unknown>)?.ogDescription || ''),
+        title: String((doc.seo as unknown as Record<string, unknown>)?.ogTitle || ''),
+        description: String((doc.seo as unknown as Record<string, unknown>)?.ogDescription || ''),
         image:
-          resolveCmsMediaUrl((doc.seo as Record<string, unknown>)?.ogImage) ||
-          String((doc.seo as Record<string, unknown>)?.ogImageLegacyUrl || '') ||
+          resolveCmsMediaUrl((doc.seo as unknown as Record<string, unknown>)?.ogImage) ||
+          String((doc.seo as unknown as Record<string, unknown>)?.ogImageLegacyUrl || '') ||
           '/og-default.jpg',
       },
     },
     hero: {
-      headline: String((doc.hero as Record<string, unknown>)?.headline || ''),
-      subheadline: String((doc.hero as Record<string, unknown>)?.subheadline || ''),
-      tags: asArray<Record<string, unknown>>((doc.hero as Record<string, unknown>)?.tags).map((t) => String(t.tag || '')),
+      headline: String((doc.hero as unknown as Record<string, unknown>)?.headline || ''),
+      subheadline: String((doc.hero as unknown as Record<string, unknown>)?.subheadline || ''),
+      tags: asArray<Record<string, unknown>>((doc.hero as unknown as Record<string, unknown>)?.tags).map((t) => String(t.tag || '')),
     },
     metadata: {
-      client: String((doc.metadata as Record<string, unknown>)?.client || ''),
-      location: (doc.metadata as Record<string, unknown>)?.location ? String((doc.metadata as Record<string, unknown>).location) : undefined,
-      locations: asArray<Record<string, unknown>>((doc.metadata as Record<string, unknown>)?.locations).map((l) => String(l.location || '')).filter(Boolean),
-      type: String((doc.metadata as Record<string, unknown>)?.type || ''),
-      tech: asArray<Record<string, unknown>>((doc.metadata as Record<string, unknown>)?.tech).map((v) => String(v.value || '')).filter(Boolean),
-      techniques: asArray<Record<string, unknown>>((doc.metadata as Record<string, unknown>)?.techniques).map((v) => String(v.value || '')).filter(Boolean),
-      materials: asArray<Record<string, unknown>>((doc.metadata as Record<string, unknown>)?.materials).map((v) => String(v.value || '')).filter(Boolean),
-      spec: asArray<Record<string, unknown>>((doc.metadata as Record<string, unknown>)?.spec).map((v) => String(v.value || '')).filter(Boolean),
-      software: asArray<Record<string, unknown>>((doc.metadata as Record<string, unknown>)?.software).map((v) => String(v.value || '')).filter(Boolean),
-      partners: asArray<Record<string, unknown>>((doc.metadata as Record<string, unknown>)?.partners).map((v) => String(v.name || '')).filter(Boolean),
+      client: String((doc.metadata as unknown as Record<string, unknown>)?.client || ''),
+      location: (doc.metadata as unknown as Record<string, unknown>)?.location ? String((doc.metadata as unknown as Record<string, unknown>).location) : undefined,
+      locations: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.locations).map((l) => String(l.location || '')).filter(Boolean),
+      type: String((doc.metadata as unknown as Record<string, unknown>)?.type || ''),
+      tech: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.tech).map((v) => String(v.value || '')).filter(Boolean),
+      techniques: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.techniques).map((v) => String(v.value || '')).filter(Boolean),
+      materials: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.materials).map((v) => String(v.value || '')).filter(Boolean),
+      spec: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.spec).map((v) => String(v.value || '')).filter(Boolean),
+      software: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.software).map((v) => String(v.value || '')).filter(Boolean),
+      partners: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.partners).map((v) => String(v.name || '')).filter(Boolean),
     },
     body: asArray<Record<string, unknown>>(doc.body).map((block) => ({
       type: String(block.type || ''),
@@ -520,23 +537,23 @@ function mapCmsService(doc: Record<string, unknown>): Service {
     // JSON service files carry the route-prefixed form ("/services/<slug>"); match it exactly.
     slug: `/services/${normalizeServiceSlug(String(doc.slug || ''))}`,
     seo: {
-      title: String((doc.seo as Record<string, unknown>)?.title || ''),
-      description: String((doc.seo as Record<string, unknown>)?.description || ''),
+      title: String((doc.seo as unknown as Record<string, unknown>)?.title || ''),
+      description: String((doc.seo as unknown as Record<string, unknown>)?.description || ''),
       og: {
-        title: String((doc.seo as Record<string, unknown>)?.ogTitle || ''),
-        description: String((doc.seo as Record<string, unknown>)?.ogDescription || ''),
+        title: String((doc.seo as unknown as Record<string, unknown>)?.ogTitle || ''),
+        description: String((doc.seo as unknown as Record<string, unknown>)?.ogDescription || ''),
         image:
-          resolveCmsMediaUrl((doc.seo as Record<string, unknown>)?.ogImage) ||
-          String((doc.seo as Record<string, unknown>)?.ogImageLegacyUrl || '') ||
+          resolveCmsMediaUrl((doc.seo as unknown as Record<string, unknown>)?.ogImage) ||
+          String((doc.seo as unknown as Record<string, unknown>)?.ogImageLegacyUrl || '') ||
           '/og-default.jpg',
       },
     },
     hero: {
-      headline: String((doc.hero as Record<string, unknown>)?.headline || ''),
-      subheadline: String((doc.hero as Record<string, unknown>)?.subheadline || ''),
+      headline: String((doc.hero as unknown as Record<string, unknown>)?.headline || ''),
+      subheadline: String((doc.hero as unknown as Record<string, unknown>)?.subheadline || ''),
       cta: {
-        label: String(((doc.hero as Record<string, unknown>)?.cta as Record<string, unknown>)?.label || 'Contact'),
-        url: String(((doc.hero as Record<string, unknown>)?.cta as Record<string, unknown>)?.url || '/contact'),
+        label: String(((doc.hero as unknown as Record<string, unknown>)?.cta as unknown as Record<string, unknown>)?.label || 'Contact'),
+        url: String(((doc.hero as unknown as Record<string, unknown>)?.cta as unknown as Record<string, unknown>)?.url || '/contact'),
       },
     },
     category: String(doc.category || ''),
@@ -569,9 +586,9 @@ function mapCmsService(doc: Record<string, unknown>): Service {
     })),
     media: {
       heroImage:
-        resolveCmsMediaUrl(((doc.media as Record<string, unknown>)?.heroImage as unknown)) ||
-        String((doc.media as Record<string, unknown>)?.heroImageLegacyUrl || ''),
-      galleryImages: asArray<Record<string, unknown>>((doc.media as Record<string, unknown>)?.galleryImages)
+        resolveCmsMediaUrl(((doc.media as unknown as Record<string, unknown>)?.heroImage as unknown)) ||
+        String((doc.media as unknown as Record<string, unknown>)?.heroImageLegacyUrl || ''),
+      galleryImages: asArray<Record<string, unknown>>((doc.media as unknown as Record<string, unknown>)?.galleryImages)
         .map((item) => resolveCmsMediaUrl(item.media as unknown) || String(item.legacyUrl || ''))
         .filter(Boolean),
     },
@@ -599,7 +616,7 @@ export async function getAllProjectsResolved(): Promise<Project[]> {
       overrideAccess: true,
     })
     if (result.docs.length > 0) {
-      return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
+      return result.docs.map((doc) => mapCmsProject(doc as unknown as Record<string, unknown>))
     }
   } catch (error) {
     console.warn('Failed to load projects from CMS; falling back to JSON:', error)
@@ -648,7 +665,7 @@ export async function getFeaturedProjectsResolved(slugs: string[]): Promise<Proj
       overrideAccess: true,
     })
     if (result.docs.length > 0) {
-      return result.docs.map((doc) => mapCmsProject(doc as Record<string, unknown>))
+      return result.docs.map((doc) => mapCmsProject(doc as unknown as Record<string, unknown>))
     }
   } catch (error) {
     console.warn('Failed to load featured projects from CMS; falling back to JSON:', error)
@@ -684,7 +701,7 @@ export async function getProjectResolved(slug: string): Promise<Project | null> 
       overrideAccess: true,
     })
     const canonicalDoc = resultByCanonical.docs[0]
-    if (canonicalDoc) return mapCmsProject(canonicalDoc as Record<string, unknown>)
+    if (canonicalDoc) return mapCmsProject(canonicalDoc as unknown as Record<string, unknown>)
 
     const legacyResult = await payload.find({
       collection: 'projects',
@@ -705,7 +722,7 @@ export async function getProjectResolved(slug: string): Promise<Project | null> 
       overrideAccess: true,
     })
     const legacyDoc = legacyResult.docs[0]
-    if (legacyDoc) return mapCmsProject(legacyDoc as Record<string, unknown>)
+    if (legacyDoc) return mapCmsProject(legacyDoc as unknown as Record<string, unknown>)
   } catch (error) {
     console.warn(`Failed to load project from CMS for slug "${canonicalSlug}"; falling back to JSON:`, error)
   }
@@ -732,7 +749,7 @@ export async function getProjectSlugsResolved(): Promise<string[]> {
     })
     const slugs = uniqueStrings(
       result.docs
-        .map((doc) => normalizeProjectSlug(String((doc as Record<string, unknown>).slug || '')))
+        .map((doc) => normalizeProjectSlug(String((doc as unknown as Record<string, unknown>).slug || '')))
         .filter(Boolean),
     ).sort()
     if (slugs.length > 0) return slugs
@@ -775,7 +792,7 @@ export async function getAllServicesResolved(): Promise<Service[]> {
       overrideAccess: true,
     })
     if (result.docs.length > 0) {
-      return result.docs.map((doc) => mapCmsService(doc as Record<string, unknown>))
+      return result.docs.map((doc) => mapCmsService(doc as unknown as Record<string, unknown>))
     }
   } catch (error) {
     console.warn('Failed to load services from CMS; falling back to JSON:', error)
@@ -810,7 +827,7 @@ export async function getServiceResolved(slug: string): Promise<Service | null> 
       overrideAccess: true,
     })
     const doc = result.docs[0]
-    if (doc) return mapCmsService(doc as Record<string, unknown>)
+    if (doc) return mapCmsService(doc as unknown as Record<string, unknown>)
   } catch (error) {
     console.warn(`Failed to load service from CMS for slug "${slug}"; falling back to JSON:`, error)
   }
@@ -838,7 +855,7 @@ export async function getServiceSlugsResolved(): Promise<string[]> {
     if (result.docs.length > 0) {
       return uniqueStrings(
         result.docs
-          .map((doc) => normalizeServiceSlug(String((doc as Record<string, unknown>).slug || '')))
+          .map((doc) => normalizeServiceSlug(String((doc as unknown as Record<string, unknown>).slug || '')))
           .filter(Boolean),
       ).sort()
     }
@@ -885,8 +902,8 @@ export async function getTeamResolved() {
       // published-only outside preview mode, and preview needs draft access.
       overrideAccess: true,
     })
-    const page = pageResult.docs[0] as Record<string, unknown> | undefined
-    const teamHeroImage = resolveCmsMediaUrl(((page?.seo as Record<string, unknown>)?.ogImage as unknown))
+    const page = pageResult.docs[0] as unknown as Record<string, unknown> | undefined
+    const teamHeroImage = resolveCmsMediaUrl(((page?.seo as unknown as Record<string, unknown>)?.ogImage as unknown))
     if (teamMembersResult.docs.length === 0) return fallback
 
     return {
@@ -894,21 +911,21 @@ export async function getTeamResolved() {
       // JSON content carries the route-prefixed form ("/team"); match it exactly.
       slug: page?.slug ? `/${String(page.slug).replace(/^\/+/, '')}` : fallback.slug,
       seo: {
-        title: String(((page?.seo as Record<string, unknown>)?.title as string) || fallback.seo.title),
-        description: String(((page?.seo as Record<string, unknown>)?.description as string) || fallback.seo.description),
+        title: String(((page?.seo as unknown as Record<string, unknown>)?.title as string) || fallback.seo.title),
+        description: String(((page?.seo as unknown as Record<string, unknown>)?.description as string) || fallback.seo.description),
         og: {
-          title: String(((page?.seo as Record<string, unknown>)?.ogTitle as string) || fallback.seo.og.title),
-          description: String(((page?.seo as Record<string, unknown>)?.ogDescription as string) || fallback.seo.og.description),
+          title: String(((page?.seo as unknown as Record<string, unknown>)?.ogTitle as string) || fallback.seo.og.title),
+          description: String(((page?.seo as unknown as Record<string, unknown>)?.ogDescription as string) || fallback.seo.og.description),
           image: teamHeroImage || fallback.seo.og.image,
         },
       },
       hero: {
-        headline: String(((page?.hero as Record<string, unknown>)?.headline as string) || fallback.hero.headline),
-        subheadline: String(((page?.hero as Record<string, unknown>)?.subheadline as string) || fallback.hero.subheadline),
+        headline: String(((page?.hero as unknown as Record<string, unknown>)?.headline as string) || fallback.hero.headline),
+        subheadline: String(((page?.hero as unknown as Record<string, unknown>)?.subheadline as string) || fallback.hero.subheadline),
       },
       members: teamMembersResult.docs.map((doc) => {
-        const row = doc as Record<string, unknown>
-        const photo = row.photo as Record<string, unknown> | undefined
+        const row = doc as unknown as Record<string, unknown>
+        const photo = row.photo as unknown as Record<string, unknown> | undefined
         return {
           name: String(row.name || ''),
           title: String(row.title || ''),
@@ -933,7 +950,7 @@ export async function getTeamResolved() {
 
 function lexicalNodeToPlaintext(node: unknown): string {
   if (!node || typeof node !== 'object') return ''
-  const n = node as Record<string, unknown>
+  const n = node as unknown as Record<string, unknown>
   if (typeof n.text === 'string') return n.text
   const children = Array.isArray(n.children) ? n.children : []
   const text = children.map((child) => lexicalNodeToPlaintext(child)).join('')
@@ -971,11 +988,11 @@ async function findCmsPageDoc(slug: string): Promise<CmsPageDoc | undefined> {
     // published-only outside preview mode, and preview needs draft access.
     overrideAccess: true,
   })
-  return result.docs[0] as CmsPageDoc | undefined
+  return result.docs[0] as unknown as CmsPageDoc | undefined
 }
 
 function pageSeo(page: CmsPageDoc | undefined, fallback: SeoMeta): SeoMeta {
-  const seo = ((page?.seo as Record<string, unknown> | undefined) || {})
+  const seo = ((page?.seo as unknown as Record<string, unknown> | undefined) || {})
   return {
     title: String(seo.title || fallback.title),
     description: String(seo.description || fallback.description),
@@ -988,7 +1005,7 @@ function pageSeo(page: CmsPageDoc | undefined, fallback: SeoMeta): SeoMeta {
 }
 
 function pageMediaAssets(page: CmsPageDoc | undefined): { heroImage: string; galleryImages: string[] } {
-  const media = ((page?.media as Record<string, unknown> | undefined) || {})
+  const media = ((page?.media as unknown as Record<string, unknown> | undefined) || {})
   return {
     heroImage: resolveCmsMediaUrl(media.heroImage) || String(media.heroImageLegacyUrl || ''),
     galleryImages: asArray<Record<string, unknown>>(media.galleryImages)
@@ -998,7 +1015,7 @@ function pageMediaAssets(page: CmsPageDoc | undefined): { heroImage: string; gal
 }
 
 function pageHeroCta(value: unknown, fallback: { label: string; url: string }): { label: string; url: string } {
-  const cta = ((value as Record<string, unknown> | undefined) || {})
+  const cta = ((value as unknown as Record<string, unknown> | undefined) || {})
   return {
     label: String(cta.label || fallback.label),
     url: String(cta.url || fallback.url),
@@ -1010,7 +1027,7 @@ export async function getHomepageResolved(): Promise<Homepage> {
   try {
     const page = await findCmsPageDoc('home')
     if (!page) return fallback
-    const hero = ((page.hero as Record<string, unknown> | undefined) || {})
+    const hero = ((page.hero as unknown as Record<string, unknown> | undefined) || {})
     const media = pageMediaAssets(page)
     return {
       ...fallback,
@@ -1040,7 +1057,7 @@ export async function getAboutResolved(): Promise<ReturnType<typeof getAbout>> {
   try {
     const page = await findCmsPageDoc('about')
     if (!page) return fallback
-    const hero = ((page.hero as Record<string, unknown> | undefined) || {})
+    const hero = ((page.hero as unknown as Record<string, unknown> | undefined) || {})
     const media = pageMediaAssets(page)
     return {
       ...fallback,
@@ -1069,12 +1086,12 @@ export async function getContactResolved(): Promise<ReturnType<typeof getContact
   try {
     const page = await findCmsPageDoc('contact')
     if (!page) return fallback
-    const hero = ((page.hero as Record<string, unknown> | undefined) || {})
-    const address = ((page.address as Record<string, unknown> | undefined) || {})
-    const contactInfo = ((page.contactInfo as Record<string, unknown> | undefined) || {})
-    const social = ((page.social as Record<string, unknown> | undefined) || {})
-    const form = ((page.consultationForm as Record<string, unknown> | undefined) || {})
-    const signup = ((page.emailSignup as Record<string, unknown> | undefined) || {})
+    const hero = ((page.hero as unknown as Record<string, unknown> | undefined) || {})
+    const address = ((page.address as unknown as Record<string, unknown> | undefined) || {})
+    const contactInfo = ((page.contactInfo as unknown as Record<string, unknown> | undefined) || {})
+    const social = ((page.social as unknown as Record<string, unknown> | undefined) || {})
+    const form = ((page.consultationForm as unknown as Record<string, unknown> | undefined) || {})
+    const signup = ((page.emailSignup as unknown as Record<string, unknown> | undefined) || {})
     const cmsFields = asArray<Record<string, unknown>>(form.fields).map((field) => ({
       id: String(field.id || ''),
       label: String(field.label || ''),
@@ -1147,7 +1164,7 @@ export interface CMSPageBlock {
   heading?: string
   body?: unknown
   images?: Array<{ id?: string; url?: string; alt?: string }>
-  items?: Array<{ label?: string; icon?: string; title?: string; body?: unknown }>
+  items?: Array<{ label?: string; icon?: string; title?: string; body?: unknown; image?: string; link?: string; textPosition?: 'center' | 'top' | 'bottom' | 'below' | 'hidden' }>
   columns?: Array<{ heading?: string; body?: unknown }>
   projects?: Array<{
     slug?: string
@@ -1192,6 +1209,34 @@ async function getPayloadClient() {
     })
   }
   return payloadClientPromise
+}
+
+export interface MediaLibraryItem {
+  id: string
+  url: string
+  filename: string
+}
+
+// Lightweight media list for the inline gallery editor's library picker.
+export async function getMediaLibrary(): Promise<MediaLibraryItem[]> {
+  try {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'media',
+      limit: 200,
+      depth: 0,
+      overrideAccess: true,
+    })
+    return result.docs
+      .map((doc) => ({
+        id: String(doc.id),
+        url: doc.url || doc.legacyUrl || '',
+        filename: doc.filename || '',
+      }))
+      .filter((item) => item.url !== '')
+  } catch {
+    return []
+  }
 }
 
 function resolveMediaUrl(media: unknown): string | undefined {
@@ -1437,7 +1482,7 @@ export async function getAllCaseStudiesResolved(): Promise<CaseStudy[]> {
       // published-only outside preview mode, and preview needs draft access.
       overrideAccess: true,
     })
-    return result.docs.map((doc) => mapCmsCaseStudy(doc as Record<string, unknown>))
+    return result.docs.map((doc) => mapCmsCaseStudy(doc as unknown as Record<string, unknown>))
   } catch (error) {
     console.error('Failed to load case studies from CMS:', error)
     return []
@@ -1469,7 +1514,7 @@ export async function getCaseStudyResolved(slug: string): Promise<CaseStudy | nu
       overrideAccess: true,
     })
     const doc = result.docs[0]
-    if (doc) return mapCmsCaseStudy(doc as Record<string, unknown>)
+    if (doc) return mapCmsCaseStudy(doc as unknown as Record<string, unknown>)
   } catch (error) {
     console.error(`Failed to load case study from CMS for slug "${canonicalSlug}":`, error)
   }
@@ -1496,7 +1541,7 @@ export async function getCaseStudySlugsResolved(): Promise<string[]> {
     })
     return uniqueStrings(
       result.docs
-        .map((doc) => normalizeCaseStudySlug(String((doc as Record<string, unknown>).slug || '')))
+        .map((doc) => normalizeCaseStudySlug(String((doc as unknown as Record<string, unknown>).slug || '')))
         .filter(Boolean),
     ).sort()
   } catch (error) {

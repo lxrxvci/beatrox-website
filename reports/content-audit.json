@@ -1,0 +1,1313 @@
+{
+  "generatedAt": "2026-07-22T06:16:01.695Z",
+  "mode": "read-only",
+  "summary": {
+    "projectsAudited": 17,
+    "servicesAudited": 40,
+    "jsonBaselineProjects": 17,
+    "jsonBaselineServices": 40,
+    "projectsWithZeroImages": 0,
+    "projectsWithMissingImagesOnDisk": 0,
+    "projectsWithEmptyImageUrls": 0,
+    "sharedImageClusters": 0,
+    "serviceHeroDuplicateClusters": 8,
+    "servicesInHeroDuplicateClusters": 21,
+    "servicesMissingHero": 0,
+    "servicesWithBrokenRelatedWork": 0,
+    "capabilityTiles": 12,
+    "capabilityTilesWithInvalidHref": 0,
+    "projectsWithSuggestedServiceTags": 14,
+    "totalSuggestedServiceTags": 60
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "AKU World",
+      "slug": "aku-world",
+      "status": "published",
+      "type": "NFT Miami Experiential Event, Immersive Environment",
+      "tags": [
+        "immersive-environment",
+        "experiential-event",
+        "nft-miami"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 26,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "environmental-design",
+          "title": "Environmental Design",
+          "matchedOn": [
+            "environment",
+            "immersive"
+          ]
+        },
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "BuzzFeed NewFronts",
+      "slug": "buzzfeed",
+      "status": "published",
+      "type": "Event Production, Multimedia Design, Stage Design, Lighting Design",
+      "tags": [
+        "event-production",
+        "multimedia-design",
+        "stage-design",
+        "lighting-design"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 18,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental",
+          "matchedOn": [
+            "stage"
+          ]
+        },
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event",
+            "production"
+          ]
+        },
+        {
+          "slug": "production-management",
+          "title": "Production Management",
+          "matchedOn": [
+            "production"
+          ]
+        },
+        {
+          "slug": "staging-rigging",
+          "title": "Staging & Rigging",
+          "matchedOn": [
+            "stage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "CNN: Road to 270",
+      "slug": "cnn-road-to-270",
+      "status": "published",
+      "type": "Projection Mapping, Interactive",
+      "tags": [
+        "projection-mapping",
+        "interactive",
+        "case-study"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 6,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "av-content-design",
+          "title": "Audio, Video & Lighting Content Design",
+          "matchedOn": [
+            "projection"
+          ]
+        },
+        {
+          "slug": "interactive-ui-ux-design",
+          "title": "Interactive UI / UX Design",
+          "matchedOn": [
+            "interactive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Create Our Future",
+      "slug": "create-our-future",
+      "status": "published",
+      "type": "Experiential Event, Stage Design, Concert, VR Experience, Lighting Design",
+      "tags": [
+        "stage-design",
+        "concert",
+        "experiential-event",
+        "vr-experience",
+        "lighting-design"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 10,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental",
+          "matchedOn": [
+            "stage"
+          ]
+        },
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "realtime-content-ar-vr-xr",
+          "title": "Realtime Content (AR, VR, XR)",
+          "matchedOn": [
+            "vr"
+          ]
+        },
+        {
+          "slug": "staging-rigging",
+          "title": "Staging & Rigging",
+          "matchedOn": [
+            "stage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Destination",
+      "slug": "destination",
+      "status": "published",
+      "type": "Interactive Art Canvas, Custom Scenic, Fabrication, Stage Design, Concert, Event Production",
+      "tags": [
+        "interactive-art-canvas",
+        "custom-scenic",
+        "fabrication",
+        "experiential-event"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 21,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental",
+          "matchedOn": [
+            "stage"
+          ]
+        },
+        {
+          "slug": "custom-fabrication",
+          "title": "Custom Fabrication",
+          "matchedOn": [
+            "custom",
+            "fabrication"
+          ]
+        },
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event",
+            "production"
+          ]
+        },
+        {
+          "slug": "interactive-ui-ux-design",
+          "title": "Interactive UI / UX Design",
+          "matchedOn": [
+            "interactive"
+          ]
+        },
+        {
+          "slug": "production-management",
+          "title": "Production Management",
+          "matchedOn": [
+            "production"
+          ]
+        },
+        {
+          "slug": "set-scenic-assembly",
+          "title": "Set & Scenic Assembly",
+          "matchedOn": [
+            "scenic"
+          ]
+        },
+        {
+          "slug": "staging-rigging",
+          "title": "Staging & Rigging",
+          "matchedOn": [
+            "stage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Disenchantment",
+      "slug": "disenchantment",
+      "status": "published",
+      "type": "COMIC-CON Exhibition",
+      "tags": [
+        "comic-con-exhibition",
+        "case-study"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 12,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": []
+    },
+    {
+      "id": "7",
+      "title": "DUBAI 360: Spherical Projection Theatre",
+      "slug": "dubai-360-spherical-projection-theatre",
+      "status": "published",
+      "type": "Projection Mapping, Content, Deployment, Software",
+      "tags": [
+        "projection-mapping",
+        "content",
+        "deployment",
+        "software"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 42,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "av-content-design",
+          "title": "Audio, Video & Lighting Content Design",
+          "matchedOn": [
+            "content",
+            "projection"
+          ]
+        },
+        {
+          "slug": "realtime-content-ar-vr-xr",
+          "title": "Realtime Content (AR, VR, XR)",
+          "matchedOn": [
+            "content"
+          ]
+        },
+        {
+          "slug": "software-development",
+          "title": "Software Development",
+          "matchedOn": [
+            "software"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "El Camino",
+      "slug": "el-camino",
+      "status": "published",
+      "type": "COMIC-CON Exhibition",
+      "tags": [
+        "comic-con-exhibition",
+        "case-study"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 11,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": []
+    },
+    {
+      "id": "9",
+      "title": "FLIR Interactive History Wall",
+      "slug": "flir",
+      "status": "published",
+      "type": "Interactive Media Display, Permanent Installation",
+      "tags": [
+        "interactive-media-display",
+        "permanent-installation",
+        "ai-computer-vision"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 1,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "interactive-ui-ux-design",
+          "title": "Interactive UI / UX Design",
+          "matchedOn": [
+            "interactive"
+          ]
+        },
+        {
+          "slug": "led-video-wall-rentals",
+          "title": "LED Video Wall Rentals",
+          "matchedOn": [
+            "wall"
+          ]
+        },
+        {
+          "slug": "media-server-playback-solutions",
+          "title": "Media Server & Playback Solutions",
+          "matchedOn": [
+            "media"
+          ]
+        },
+        {
+          "slug": "permanent-installation",
+          "title": "Permanent Installation",
+          "matchedOn": [
+            "installation",
+            "permanent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "G-MAN Experiential Campaign",
+      "slug": "g-man-experiential-campaign",
+      "status": "published",
+      "type": "Experiential Event",
+      "tags": [
+        "experiential-event",
+        "case-study"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 12,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Infinite Playlist Tour",
+      "slug": "infinite-playlist",
+      "status": "published",
+      "type": "Interactive Media Experience, Event Production, Festival Activation",
+      "tags": [
+        "interactive-media-experience",
+        "event-production",
+        "festival-activation"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 30,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event",
+            "production"
+          ]
+        },
+        {
+          "slug": "interactive-ui-ux-design",
+          "title": "Interactive UI / UX Design",
+          "matchedOn": [
+            "interactive"
+          ]
+        },
+        {
+          "slug": "media-server-playback-solutions",
+          "title": "Media Server & Playback Solutions",
+          "matchedOn": [
+            "media"
+          ]
+        },
+        {
+          "slug": "production-management",
+          "title": "Production Management",
+          "matchedOn": [
+            "production"
+          ]
+        },
+        {
+          "slug": "tour-management",
+          "title": "Tour Management",
+          "matchedOn": [
+            "tour"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "MyShelter",
+      "slug": "myshelter",
+      "status": "published",
+      "type": "Experiential Event, Immersive Environment, Product Launch, Retail Build",
+      "tags": [
+        "environmental-design",
+        "immersive-experience",
+        "product-launch",
+        "retail-build"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 27,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "environmental-design",
+          "title": "Environmental Design",
+          "matchedOn": [
+            "environment",
+            "environmental",
+            "immersive"
+          ]
+        },
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "PROJECTING CHANGE: Racing Extinction",
+      "slug": "projecting-change-racing-extinction",
+      "status": "published",
+      "type": "Projection Mapping, Content, Deployment, Software",
+      "tags": [
+        "projection-mapping",
+        "content",
+        "deployment",
+        "software"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 11,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "av-content-design",
+          "title": "Audio, Video & Lighting Content Design",
+          "matchedOn": [
+            "content",
+            "projection"
+          ]
+        },
+        {
+          "slug": "realtime-content-ar-vr-xr",
+          "title": "Realtime Content (AR, VR, XR)",
+          "matchedOn": [
+            "content"
+          ]
+        },
+        {
+          "slug": "software-development",
+          "title": "Software Development",
+          "matchedOn": [
+            "software"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Projekt X",
+      "slug": "projekt-x",
+      "status": "published",
+      "type": "Custom Fabricated Stage Element, Specialized Production",
+      "tags": [
+        "custom-scenic",
+        "fabrication",
+        "stage-design",
+        "concert"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 21,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental",
+          "matchedOn": [
+            "stage"
+          ]
+        },
+        {
+          "slug": "custom-fabrication",
+          "title": "Custom Fabrication",
+          "matchedOn": [
+            "custom",
+            "fabrication"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "production"
+          ]
+        },
+        {
+          "slug": "production-management",
+          "title": "Production Management",
+          "matchedOn": [
+            "production"
+          ]
+        },
+        {
+          "slug": "set-scenic-assembly",
+          "title": "Set & Scenic Assembly",
+          "matchedOn": [
+            "scenic"
+          ]
+        },
+        {
+          "slug": "staging-rigging",
+          "title": "Staging & Rigging",
+          "matchedOn": [
+            "stage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Run for the Oceans",
+      "slug": "run-for-the-oceans",
+      "status": "published",
+      "type": "Interactive Media Experience, Event Production, Marathon Activation, Infinity Mirror",
+      "tags": [
+        "interactive-media-experience",
+        "event-production",
+        "marathon-activation"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 6,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event",
+            "production"
+          ]
+        },
+        {
+          "slug": "interactive-ui-ux-design",
+          "title": "Interactive UI / UX Design",
+          "matchedOn": [
+            "interactive"
+          ]
+        },
+        {
+          "slug": "media-server-playback-solutions",
+          "title": "Media Server & Playback Solutions",
+          "matchedOn": [
+            "media"
+          ]
+        },
+        {
+          "slug": "production-management",
+          "title": "Production Management",
+          "matchedOn": [
+            "production"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Super Bowl 2020",
+      "slug": "super-bowl-2020",
+      "status": "published",
+      "type": "Super Bowl 2020 Experiential Event, Projection Mapping, Interactive AR",
+      "tags": [
+        "projection-mapping",
+        "interactive-ar",
+        "experiential-event",
+        "super-bowl-2020"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 1,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": [
+        {
+          "slug": "av-content-design",
+          "title": "Audio, Video & Lighting Content Design",
+          "matchedOn": [
+            "projection"
+          ]
+        },
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "matchedOn": [
+            "event"
+          ]
+        },
+        {
+          "slug": "interactive-ui-ux-design",
+          "title": "Interactive UI / UX Design",
+          "matchedOn": [
+            "interactive"
+          ]
+        },
+        {
+          "slug": "realtime-content-ar-vr-xr",
+          "title": "Realtime Content (AR, VR, XR)",
+          "matchedOn": [
+            "ar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "The Great Escape",
+      "slug": "the-great-escape",
+      "status": "published",
+      "type": "Product Launch Experience",
+      "tags": [
+        "product-launch-experience",
+        "case-study"
+      ],
+      "serviceTags": [],
+      "images": {
+        "total": 14,
+        "emptyUrlCount": 0,
+        "missingOnDisk": []
+      },
+      "sharedImages": [],
+      "suggestedServiceTags": []
+    }
+  ],
+  "sharedImageClusters": [],
+  "serviceHeroDuplicateClusters": [
+    {
+      "heroImage": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+      "services": [
+        {
+          "slug": "3d-animation-motion-capture",
+          "title": "3D Animation & Motion Capture",
+          "replacementCandidates": [
+            {
+              "url": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+              "fromProject": "super-bowl-2020"
+            },
+            {
+              "url": "/images/deck/disenchantment/01-image80.jpg",
+              "fromProject": "disenchantment"
+            },
+            {
+              "url": "/images/deck/disenchantment/02-image82.jpg",
+              "fromProject": "disenchantment"
+            }
+          ]
+        },
+        {
+          "slug": "labor-hire-crew-roles",
+          "title": "Labor Hire & Crew Roles (TD, PM, A1/A2, V1/V2, L1/L2)",
+          "replacementCandidates": [
+            {
+              "url": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+              "fromProject": "super-bowl-2020"
+            },
+            {
+              "url": "/images/deck/buzzfeed/01-image290.png",
+              "fromProject": "buzzfeed"
+            },
+            {
+              "url": "/images/deck/buzzfeed/02-image293.jpg",
+              "fromProject": "buzzfeed"
+            }
+          ]
+        },
+        {
+          "slug": "materials-sourcing-selection",
+          "title": "Materials Sourcing & Selection",
+          "replacementCandidates": [
+            {
+              "url": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg",
+              "fromProject": "super-bowl-2020"
+            },
+            {
+              "url": "/images/deck/create-our-future/01-image70.png",
+              "fromProject": "create-our-future"
+            },
+            {
+              "url": "/images/deck/create-our-future/02-image72.png",
+              "fromProject": "create-our-future"
+            }
+          ]
+        },
+        {
+          "slug": "software-development",
+          "title": "Software Development",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/g-man-experiential-campaign/01-image264.png",
+              "fromProject": "g-man-experiential-campaign"
+            },
+            {
+              "url": "/images/deck/g-man-experiential-campaign/02-image262.png",
+              "fromProject": "g-man-experiential-campaign"
+            },
+            {
+              "url": "/images/deck/g-man-experiential-campaign/03-image271.png",
+              "fromProject": "g-man-experiential-campaign"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heroImage": "/images/verified/services/IMG_1801-8ce1969f.jpg",
+      "services": [
+        {
+          "slug": "backline-stage-rental",
+          "title": "Backline & Stage Rental",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/projekt-x/01-image46.jpg",
+              "fromProject": "projekt-x"
+            },
+            {
+              "url": "/images/deck/projekt-x/02-image49.jpg",
+              "fromProject": "projekt-x"
+            },
+            {
+              "url": "/images/deck/projekt-x/03-image41.jpg",
+              "fromProject": "projekt-x"
+            }
+          ]
+        },
+        {
+          "slug": "event-production",
+          "title": "Full Service Event Production",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/buzzfeed/01-image290.png",
+              "fromProject": "buzzfeed"
+            },
+            {
+              "url": "/images/deck/buzzfeed/02-image293.jpg",
+              "fromProject": "buzzfeed"
+            },
+            {
+              "url": "/images/deck/buzzfeed/03-image305.jpg",
+              "fromProject": "buzzfeed"
+            }
+          ]
+        },
+        {
+          "slug": "lighting-services",
+          "title": "Lighting Services",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/myshelter/01-image51.jpg",
+              "fromProject": "myshelter"
+            },
+            {
+              "url": "/images/deck/myshelter/02-image67.jpg",
+              "fromProject": "myshelter"
+            },
+            {
+              "url": "/images/deck/myshelter/03-image61.jpg",
+              "fromProject": "myshelter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heroImage": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg",
+      "services": [
+        {
+          "slug": "cnc-machining",
+          "title": "CNC Machining",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/el-camino/01-image134.jpg",
+              "fromProject": "el-camino"
+            },
+            {
+              "url": "/images/deck/el-camino/02-image115.jpg",
+              "fromProject": "el-camino"
+            },
+            {
+              "url": "/images/deck/el-camino/03-image116.jpg",
+              "fromProject": "el-camino"
+            }
+          ]
+        },
+        {
+          "slug": "consultation-system-design",
+          "title": "Consultation & System Design",
+          "replacementCandidates": [
+            {
+              "url": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg",
+              "fromProject": "flir"
+            },
+            {
+              "url": "/images/deck/el-camino/01-image134.jpg",
+              "fromProject": "el-camino"
+            },
+            {
+              "url": "/images/deck/el-camino/02-image115.jpg",
+              "fromProject": "el-camino"
+            }
+          ]
+        },
+        {
+          "slug": "system-maintenance-support",
+          "title": "System Maintenance & Support",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/destination/01-image77.png",
+              "fromProject": "destination"
+            },
+            {
+              "url": "/images/deck/destination/02-image86.png",
+              "fromProject": "destination"
+            },
+            {
+              "url": "/images/deck/destination/03-image111.jpg",
+              "fromProject": "destination"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heroImage": "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png",
+      "services": [
+        {
+          "slug": "media-server-playback-solutions",
+          "title": "Media Server & Playback Solutions",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            },
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/03-image311.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            },
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/04-image240.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            }
+          ]
+        },
+        {
+          "slug": "permanent-installation",
+          "title": "Permanent Installation",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/destination/01-image77.png",
+              "fromProject": "destination"
+            },
+            {
+              "url": "/images/deck/destination/02-image86.png",
+              "fromProject": "destination"
+            },
+            {
+              "url": "/images/deck/destination/03-image111.jpg",
+              "fromProject": "destination"
+            }
+          ]
+        },
+        {
+          "slug": "pre-visualization",
+          "title": "Pre-Visualization",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            },
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/03-image311.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            },
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/04-image240.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heroImage": "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
+      "services": [
+        {
+          "slug": "av-content-design",
+          "title": "Audio, Video & Lighting Content Design",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/02-image246.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            },
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/03-image311.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            },
+            {
+              "url": "/images/deck/dubai-360-spherical-projection-theatre/04-image240.jpg",
+              "fromProject": "dubai-360-spherical-projection-theatre"
+            }
+          ]
+        },
+        {
+          "slug": "permit-submittal",
+          "title": "Permit Submittal",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/projecting-change-racing-extinction/02-image224.png",
+              "fromProject": "projecting-change-racing-extinction"
+            },
+            {
+              "url": "/images/deck/projecting-change-racing-extinction/03-image232.jpg",
+              "fromProject": "projecting-change-racing-extinction"
+            },
+            {
+              "url": "/images/deck/projecting-change-racing-extinction/04-image228.jpg",
+              "fromProject": "projecting-change-racing-extinction"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heroImage": "/images/portfolio/aku-world/WideShot.jpeg",
+      "services": [
+        {
+          "slug": "engineering-certification",
+          "title": "Engineering Certification",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/aku-world/01-image27.jpg",
+              "fromProject": "aku-world"
+            },
+            {
+              "url": "/images/deck/aku-world/02-image20.jpg",
+              "fromProject": "aku-world"
+            },
+            {
+              "url": "/images/deck/aku-world/03-image15.jpg",
+              "fromProject": "aku-world"
+            }
+          ]
+        },
+        {
+          "slug": "event-planning-logistics",
+          "title": "Event Planning & Logistics",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/aku-world/01-image27.jpg",
+              "fromProject": "aku-world"
+            },
+            {
+              "url": "/images/deck/aku-world/02-image20.jpg",
+              "fromProject": "aku-world"
+            },
+            {
+              "url": "/images/deck/aku-world/03-image15.jpg",
+              "fromProject": "aku-world"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heroImage": "/images/portfolio/aku-world/Concert-WideAngle.jpg",
+      "services": [
+        {
+          "slug": "lighting-design",
+          "title": "Lighting Design",
+          "replacementCandidates": [
+            {
+              "url": "/images/portfolio/run-for-the-oceans/KMP_2618.jpg",
+              "fromProject": "run-for-the-oceans"
+            },
+            {
+              "url": "/images/portfolio/run-for-the-oceans/KMP_2820.jpg",
+              "fromProject": "run-for-the-oceans"
+            },
+            {
+              "url": "/images/portfolio/run-for-the-oceans/KMP_3614.jpg",
+              "fromProject": "run-for-the-oceans"
+            }
+          ]
+        },
+        {
+          "slug": "staging-rigging",
+          "title": "Staging & Rigging",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/aku-world/01-image27.jpg",
+              "fromProject": "aku-world"
+            },
+            {
+              "url": "/images/deck/aku-world/02-image20.jpg",
+              "fromProject": "aku-world"
+            },
+            {
+              "url": "/images/deck/aku-world/03-image15.jpg",
+              "fromProject": "aku-world"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heroImage": "/images/portfolio/myshelter/Middle.jpg",
+      "services": [
+        {
+          "slug": "production-management",
+          "title": "Production Management",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/cnn-road-to-270/01-image250.jpg",
+              "fromProject": "cnn-road-to-270"
+            },
+            {
+              "url": "/images/deck/cnn-road-to-270/02-image235.jpg",
+              "fromProject": "cnn-road-to-270"
+            },
+            {
+              "url": "/images/deck/cnn-road-to-270/03-image239.jpg",
+              "fromProject": "cnn-road-to-270"
+            }
+          ]
+        },
+        {
+          "slug": "set-scenic-assembly",
+          "title": "Set & Scenic Assembly",
+          "replacementCandidates": [
+            {
+              "url": "/images/deck/myshelter/01-image51.jpg",
+              "fromProject": "myshelter"
+            },
+            {
+              "url": "/images/deck/myshelter/02-image67.jpg",
+              "fromProject": "myshelter"
+            },
+            {
+              "url": "/images/deck/myshelter/03-image61.jpg",
+              "fromProject": "myshelter"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "servicesMissingHero": [],
+  "servicesWithBrokenRelatedWork": [],
+  "projectsWithZeroImages": [],
+  "capabilityTiles": [
+    {
+      "label": "Custom Fabrication",
+      "href": "/services/custom-fabrication",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "LED Video Wall",
+      "href": "/services/led-video-wall-rentals",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Drone Light Shows",
+      "href": "/services/drone-light-shows",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Stage Design",
+      "href": "/services/set-scenic-assembly",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Experiential Events",
+      "href": "/services/event-production",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Event Production",
+      "href": "/services/production-management",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Immersive Environments",
+      "href": "/services/environmental-design",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Laser Light Shows",
+      "href": "/services/laser-shows",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Multimedia Displays",
+      "href": "/services/av-system-integration",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "DJ Equipment Rentals",
+      "href": "/services/dj-equipment-rentals",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Audio Production",
+      "href": "/services/sound-equipment-rentals",
+      "valid": true,
+      "imageExistsOnDisk": true
+    },
+    {
+      "label": "Projection Mapping",
+      "href": "/services/av-content-design",
+      "valid": true,
+      "imageExistsOnDisk": true
+    }
+  ]
+}

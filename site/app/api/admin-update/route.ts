@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { headers as getHeaders } from 'next/headers'
 import { revalidatePath } from 'next/cache'
 import { getPayload } from 'payload'
+import type { CollectionSlug } from 'payload'
 import payloadConfig from '@/payload.config'
 
 export const dynamic = 'force-dynamic'
@@ -41,6 +42,9 @@ function revalidateDocument(collection: string, doc: Record<string, unknown>) {
     if (collection === 'projects') {
       // Tag pages are keyed by tag value; invalidate the whole dynamic segment.
       revalidatePath('/work/tag/[tag]', 'page')
+      // Service pages auto-list tagged projects; invalidate them all.
+      revalidatePath('/services')
+      revalidatePath('/services/[slug]', 'page')
     }
   } catch (err) {
     // Don't fail the update if revalidation throws.
@@ -57,7 +61,7 @@ function getTopLevelField(path: string): string {
 // actually calls this endpoint. Anything outside this list is rejected.
 const ALLOWED_UPDATE_PATHS: Record<string, string[]> = {
   pages: ['hero.', 'consultationForm.', 'address.', 'contactInfo.', 'social.', 'emailSignup.', 'blocks.'],
-  projects: ['body.', 'contentBlocks.', 'blocks.'],
+  projects: ['serviceTags', 'body.', 'contentBlocks.', 'blocks.'],
   services: ['capabilities.', 'body.', 'contentBlocks.', 'blocks.'],
 }
 
@@ -110,9 +114,13 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: 'Collection/path is not editable via this endpoint' }, { status: 400 })
     }
 
+    // Validated above against ALLOWED_UPDATE_PATHS, so the slug is one of the
+    // known editable collections.
+    const collectionSlug = collection as CollectionSlug
+
     // Fetch current document
     const doc = await payload.findByID({
-      collection,
+      collection: collectionSlug,
       id,
       depth: 0,
     })
@@ -130,14 +138,14 @@ export async function PATCH(request: Request) {
 
     // Update document
     const updated = await payload.update({
-      collection,
+      collection: collectionSlug,
       id,
       data: {
         [topLevelField]: updateData[topLevelField],
       },
     })
 
-    revalidateDocument(collection, updated as Record<string, unknown>)
+    revalidateDocument(collection, updated as unknown as Record<string, unknown>)
 
     return NextResponse.json({ success: true, doc: updated })
   } catch (error) {

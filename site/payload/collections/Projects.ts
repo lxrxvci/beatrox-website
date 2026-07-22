@@ -20,6 +20,7 @@ export const Projects: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'status', 'listOrder', 'updatedAt'],
+    group: 'Content',
     livePreview: {
       url: ({ data }) => {
         const slug = typeof data?.slug === 'string' ? normalizeProjectSlug(data.slug) : ''
@@ -163,6 +164,15 @@ export const Projects: CollectionConfig = {
         { name: 'spec', type: 'array', fields: [{ name: 'value', type: 'text', required: true }] },
         { name: 'software', type: 'array', fields: [{ name: 'value', type: 'text', required: true }] },
       ],
+    },
+    {
+      name: 'serviceTags',
+      type: 'relationship',
+      relationTo: 'services',
+      hasMany: true,
+      admin: {
+        description: 'Services used on this project — drives service-page related work and the /work service tag cloud.',
+      },
     },
     {
       name: 'seo',

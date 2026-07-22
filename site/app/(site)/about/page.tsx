@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAboutResolved, getCMSPageBySlug } from '@/lib/content'
+import { getAboutResolved, getCMSPageBySlug, getMediaLibrary } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
@@ -25,6 +25,7 @@ export default async function AboutPage() {
   const capability = data.sections.find((s) => s.type === 'capabilities_summary')
 
   if (cmsPage?.blocks && cmsPage.blocks.length > 0) {
+    const mediaLibrary = await getMediaLibrary()
     return (
       <article>
         <section className="relative hero border-b border-white/10 overflow-hidden">
@@ -47,7 +48,7 @@ export default async function AboutPage() {
             </p>
           </div>
         </section>
-        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} />
+        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} mediaLibrary={mediaLibrary} />
       </article>
     )
   }

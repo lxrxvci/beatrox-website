@@ -82,6 +82,28 @@ export const capabilitiesGridBlock: Block = {
       fields: [
         { name: 'label', type: 'text', required: true },
         { name: 'icon', type: 'text' },
+        {
+          name: 'image',
+          type: 'text',
+          admin: { description: 'Tile image path (e.g. /images/capabilities/foo.jpg). Defaults to the curated tile for this label.' },
+        },
+        {
+          name: 'link',
+          type: 'text',
+          admin: { description: 'Tile link (e.g. /services/custom-fabrication). Defaults to the curated tile for this label.' },
+        },
+        {
+          name: 'textPosition',
+          type: 'select',
+          defaultValue: 'center',
+          options: [
+            { label: 'Center overlay', value: 'center' },
+            { label: 'Top overlay', value: 'top' },
+            { label: 'Bottom overlay', value: 'bottom' },
+            { label: 'Below image', value: 'below' },
+            { label: 'Hidden', value: 'hidden' },
+          ],
+        },
       ],
     },
   ],

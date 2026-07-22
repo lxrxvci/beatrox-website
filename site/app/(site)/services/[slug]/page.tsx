@@ -48,6 +48,21 @@ export default async function ServicePage({ params }: Props) {
     })
     .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
 
+  // Auto-append projects tagged with this service (manual picks first, deduped, capped at 6)
+  const bareServiceSlug = service.slug.replace(/^\/services\/+/, '')
+  const seenSlugs = new Set(relatedProjects.map(({ project }) => project.canonicalSlug))
+  const tagMatchedProjects = projects
+    .filter(
+      (project) =>
+        !seenSlugs.has(project.canonicalSlug) &&
+        (project.serviceTags || []).some((tag) => {
+          const bareTagSlug = tag.slug.replace(/^\/services\/+/, '')
+          return bareTagSlug === bareServiceSlug
+        }),
+    )
+    .map((project) => ({ work: { title: project.title, slug: `/work/${project.canonicalSlug}` }, project }))
+  const allRelatedProjects = [...relatedProjects, ...tagMatchedProjects].slice(0, 6)
+
   return (
     <>
       <ParallaxHero
@@ -185,12 +200,12 @@ export default async function ServicePage({ params }: Props) {
       )}
 
       {/* Related Work — example cards cited from past projects */}
-      {relatedProjects.length > 0 && (
+      {allRelatedProjects.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
             <h2 className="heading-sm text-white/75 mb-8">See It in Action</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
-              {relatedProjects.map(({ work, project }) => {
+              {allRelatedProjects.map(({ work, project }) => {
                 const image = project.images?.[0]?.url
                 return (
                   <Link

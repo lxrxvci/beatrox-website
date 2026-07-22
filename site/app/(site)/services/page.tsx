@@ -2,71 +2,17 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getServicesIndex } from '@/lib/json-content'
-import { getAllServicesResolved } from '@/lib/content'
+import { getAllServicesResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import ParallaxHero from '@/components/ParallaxHero'
+import CapabilitiesGrid, { type CapabilityItem } from '@/components/CapabilitiesGrid'
 
 export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getServicesIndex().seo)
 }
-
-const CATEGORIES = [
-  {
-    label: 'Design',
-    items: [
-      { label: 'Environmental Design', slug: 'environmental-design' },
-      { label: 'Lighting Design', slug: 'lighting-design' },
-      { label: 'Pre-Visualization', slug: 'pre-visualization' },
-      { label: '3D Animation and Motion Capture', slug: '3d-animation-motion-capture' },
-      { label: 'Realtime Content (AR, VR, XR)', slug: 'realtime-content-ar-vr-xr' },
-      { label: 'Audio, Video, and Lighting Content Design', slug: 'av-content-design' },
-      { label: 'Consultation and System Design', slug: 'consultation-system-design' },
-      { label: 'Interactive UI / UX Design', slug: 'interactive-ui-ux-design' },
-    ],
-  },
-  {
-    label: 'Build',
-    items: [
-      { label: 'Custom Fabrication', slug: 'custom-fabrication' },
-      { label: 'Set and Scenic Assembly', slug: 'set-scenic-assembly' },
-      { label: 'Staging and Rigging', slug: 'staging-rigging' },
-      { label: 'Lighting Integration', slug: 'lighting-integration' },
-      { label: 'Trade and Convention Booths', slug: 'trade-convention-booths' },
-      { label: 'Permanent Installation', slug: 'permanent-installation' },
-      { label: 'CNC Machining', slug: 'cnc-machining' },
-      { label: 'Materials Sourcing and Selection', slug: 'materials-sourcing-selection' },
-    ],
-  },
-  {
-    label: 'Technical',
-    items: [
-      { label: 'Technical Direction', slug: 'technical-direction' },
-      { label: 'Drafting and Detail Drawings', slug: 'drafting-detail-drawings' },
-      { label: 'Engineering Certification', slug: 'engineering-certification' },
-      { label: 'Software Development', slug: 'software-development' },
-      { label: 'Site and Floor Plans', slug: 'site-floor-plans' },
-      { label: 'Technical Documentation', slug: 'technical-documentation' },
-      { label: 'Media Server and Playback Solutions', slug: 'media-server-playback-solutions' },
-      { label: 'AV System Integration', slug: 'av-system-integration' },
-    ],
-  },
-  {
-    label: 'Production',
-    items: [
-      { label: 'Event Planning and Logistics', slug: 'event-planning-logistics' },
-      { label: 'AV Equipment Sourcing and Rentals', slug: 'av-equipment-sourcing-rentals' },
-      { label: 'Tour Management', slug: 'tour-management' },
-      { label: 'Production Management', slug: 'production-management' },
-      { label: 'Labor Hire Roles: TD, PM, A1 A2, V1 V2, L1, L2', slug: 'labor-hire-crew-roles' },
-      { label: 'Venue Sourcing and Booking', slug: 'venue-sourcing-booking' },
-      { label: 'Permit Submittal', slug: 'permit-submittal' },
-      { label: 'System Maintenance and Support', slug: 'system-maintenance-support' },
-    ],
-  },
-]
 
 // Original rental & specialty services — keep the card grid scoped to these
 const RENTAL_SPECIALTY_SLUGS = [
@@ -81,6 +27,24 @@ export default async function ServicesPage() {
     .map(slug => services.find(s => s.slug === `/services/${slug}`))
     .filter((s): s is NonNullable<typeof s> => Boolean(s))
 
+  // The capabilities tile grid is driven by the About page's capabilitiesGrid
+  // CMS block (edited inline there), so one data source feeds both pages.
+  // Only items the owner has enriched (image or link set) render as tiles —
+  // the seeded 32-label service vocabulary is for the text list, so without
+  // enrichment the grid falls back to the curated default tiles.
+  const aboutPage = await getCMSPageBySlug('about')
+  const capabilitiesBlock = aboutPage?.blocks?.find((b) => b.blockType === 'capabilitiesGrid')
+  const capabilityItems: CapabilityItem[] | undefined = capabilitiesBlock?.items
+    ?.filter((item) => Boolean(item.label) && (item.image || item.link))
+    .map((item) => ({
+      label: item.label as string,
+      image: item.image,
+      link: item.link,
+      textPosition: item.textPosition,
+    }))
+
+  const tiles = capabilityItems && capabilityItems.length > 0 ? capabilityItems : undefined
+
   return (
     <>
       <ParallaxHero
@@ -92,35 +56,11 @@ export default async function ServicesPage() {
         minHeightClass="min-h-[94svh]"
       />
 
-      {/* 4-Category Grid */}
+      {/* Capabilities image grid (swapped from the About page — title stays here) */}
       <section className="section border-b border-white/10">
-        <div className="max-w-[1120px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <h2 className="heading-lg mb-10">Our Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-            {CATEGORIES.map(cat => (
-              <div key={cat.label}>
-                <h2 className="overline mb-6 pb-4 border-b border-white/10">{cat.label}</h2>
-                <ul className="space-y-3">
-                  {cat.items.map(item => (
-                    <li key={item.slug}>
-                      <Link
-                        href={`/services/${item.slug}`}
-                        className="group flex items-baseline gap-2.5 text-sm text-white/75 leading-relaxed hover:text-white transition-colors"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className="text-[var(--accent)] opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
-                        >
-                          →
-                        </span>
-                        <span>{item.label}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <CapabilitiesGrid items={tiles} />
         </div>
       </section>
 
