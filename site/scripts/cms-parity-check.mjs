@@ -10,6 +10,11 @@
  * Normalization (rendering-equivalent, reviewed and accepted):
  *   - `''` and `undefined`/missing keys are treated as equal
  *   - empty arrays are treated as missing
+ *   - DB artifacts (`id`, `createdAt`, `updatedAt`) are ignored — never rendered
+ *   - CMS `contentBlocks` (absent from the JSON baseline) are skipped when the
+ *     CMS doc also has `body` — the renderer prefers `body`, so blocks are
+ *     never rendered there. When CMS `body` is empty, block plain-text is
+ *     compared against the JSON `body` (the migration source)
  *   Everything else is compared exactly and reported field-by-field.
  *
  * Also fails if:
@@ -66,6 +71,12 @@ console.warn = (...args) => {
 }
 
 // ─── Normalization + diff engine ─────────────────────────────────────────────
+
+// DB/upload artifacts absent from the JSON baseline — either never rendered
+// (ids, timestamps) or optional enrichment the renderer treats as optional
+// (image width/height, used only as layout hints when present).
+const IGNORED_KEYS = new Set(['id', 'createdAt', 'updatedAt', 'width', 'height', 'serviceTags'])
+
 function norm(value) {
   if (value === undefined || value === null || value === '') return undefined
   if (Array.isArray(value)) {
@@ -75,12 +86,66 @@ function norm(value) {
   if (typeof value === 'object') {
     const out = {}
     for (const key of Object.keys(value)) {
+      if (IGNORED_KEYS.has(key)) continue
       const nested = norm(value[key])
       if (nested !== undefined) out[key] = nested
     }
     return Object.keys(out).length > 0 ? out : undefined
   }
   return value
+}
+
+// ─── contentBlocks ↔ body text bridge ────────────────────────────────────────
+// CMS docs carry `contentBlocks` (Lexical blocks migrated from the legacy
+// `body` array); the JSON baseline only has `body`. Rendering equivalence =
+// the plain text of both is identical after whitespace normalization.
+
+function collectLexicalText(node, out) {
+  if (Array.isArray(node)) {
+    for (const item of node) collectLexicalText(item, out)
+    return
+  }
+  if (!node || typeof node !== 'object') return
+  if (node.type === 'text' && typeof node.text === 'string') {
+    out.push(node.text)
+    return
+  }
+  for (const value of Object.values(node)) collectLexicalText(value, out)
+}
+
+function contentBlocksToText(blocks) {
+  const out = []
+  collectLexicalText(blocks, out)
+  return out.join('\n')
+}
+
+function bodyToText(body) {
+  if (!Array.isArray(body)) return ''
+  const out = []
+  for (const block of body) {
+    if (!block || typeof block !== 'object') continue
+    if (block.heading) out.push(String(block.heading))
+    if (block.content) out.push(String(block.content))
+    for (const item of Array.isArray(block.items) ? block.items : []) {
+      if (typeof item === 'string') out.push(item)
+      else if (item && typeof item === 'object') {
+        // FAQ rows store {question, answer}; plain rows store {value}.
+        if (item.question) out.push(String(item.question))
+        if (item.answer) out.push(String(item.answer))
+        if (item.value) out.push(String(item.value))
+      }
+    }
+  }
+  return out.join('\n')
+}
+
+function normalizeText(text) {
+  return String(text)
+    .replace(/\r\n/g, '\n')
+    .split('\n')
+    .map((line) => line.replace(/\s+/g, ' ').trim())
+    .filter(Boolean)
+    .join('\n')
 }
 
 function diff(cmsValue, jsonValue, path, out) {
@@ -104,7 +169,31 @@ function diff(cmsValue, jsonValue, path, out) {
     return
   }
   if (typeof a === 'object') {
-    for (const key of new Set([...Object.keys(a), ...Object.keys(b)])) {
+    const aKeys = Object.keys(a)
+    const bKeys = Object.keys(b)
+
+    // contentBlocks bridge: CMS-only field, migrated from `body`. The
+    // frontend renders `body` when present (seeded docs carry both; body
+    // wins) and only falls back to contentBlocks when body is empty — so
+    // contentBlocks is rendering-irrelevant whenever body exists. Only when
+    // CMS body is empty do we compare normalized plain text against the
+    // JSON body. The raw key is skipped either way.
+    let skipKeys
+    if ('contentBlocks' in a && !('contentBlocks' in b)) {
+      if (!('body' in a)) {
+        const cmsText = normalizeText(contentBlocksToText(a.contentBlocks))
+        const jsonText = normalizeText(bodyToText(b.body))
+        if (cmsText !== jsonText) {
+          out.push(
+            `${path}.contentBlocks↔body: text mismatch (CMS ${cmsText.length} chars vs JSON ${jsonText.length} chars)`,
+          )
+        }
+      }
+      skipKeys = new Set(['contentBlocks'])
+    }
+
+    for (const key of new Set([...aKeys, ...bKeys])) {
+      if (skipKeys?.has(key)) continue
       diff(a[key], b[key], path ? `${path}.${key}` : key, out)
     }
     return

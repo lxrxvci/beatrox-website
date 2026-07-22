@@ -2,6 +2,7 @@
 
 import { useActionState, useState, useTransition } from 'react'
 import { bookConsultation, getAvailableSlotsForDate, type BookingFormState, type SlotOption } from './actions'
+import { AttributionFields } from '@/components/AttributionFields'
 
 interface ConsultationType {
   id: string
@@ -257,6 +258,9 @@ export default function BookingForm({ types }: BookingFormProps) {
             <label htmlFor="website">Website</label>
             <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
           </div>
+
+          {/* Marketing attribution (UTM/gclid) — hidden, first-touch. */}
+          <AttributionFields />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>

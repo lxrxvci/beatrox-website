@@ -5,6 +5,7 @@ export const AvailabilityRules: CollectionConfig = {
   admin: {
     useAsTitle: 'label',
     defaultColumns: ['label', 'dayOfWeek', 'startTime', 'endTime', 'timezone', 'isEnabled'],
+    group: 'Scheduling',
     description: 'Recurring weekly windows when consultations can be booked.',
   },
   access: {

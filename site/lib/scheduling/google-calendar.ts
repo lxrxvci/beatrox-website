@@ -117,3 +117,115 @@ export async function createCalendarEvent(
     return null
   }
 }
+
+export interface UpdateCalendarEventInput {
+  eventId: string
+  summary?: string
+  description?: string
+  startTime: Date
+  endTime: Date
+  timezone: string
+}
+
+/**
+ * Patch an existing event's time window (reschedule). Attendees are notified
+ * by Google (sendUpdates: 'all'). Returns false when unconfigured or on error.
+ */
+export async function updateCalendarEvent(input: UpdateCalendarEventInput): Promise<boolean> {
+  const credentials = getCredentials()
+  if (!credentials) {
+    console.warn('[google-calendar] Credentials missing; skipping calendar event update.')
+    return false
+  }
+
+  const calendar = getCalendarClient(credentials)
+  const calendarId = process.env.GOOGLE_CALENDAR_ID || 'primary'
+
+  try {
+    await calendar.events.patch({
+      calendarId,
+      eventId: input.eventId,
+      sendUpdates: 'all',
+      requestBody: {
+        ...(input.summary ? { summary: input.summary } : {}),
+        ...(input.description ? { description: input.description } : {}),
+        start: {
+          dateTime: input.startTime.toISOString(),
+          timeZone: input.timezone,
+        },
+        end: {
+          dateTime: input.endTime.toISOString(),
+          timeZone: input.timezone,
+        },
+      },
+    })
+    return true
+  } catch (error) {
+    console.error('[google-calendar] Failed to update calendar event:', error)
+    return false
+  }
+}
+
+/**
+ * Delete an event (cancellation). Attendees are notified by Google.
+ */
+export async function deleteCalendarEvent(eventId: string): Promise<boolean> {
+  const credentials = getCredentials()
+  if (!credentials) {
+    console.warn('[google-calendar] Credentials missing; skipping calendar event deletion.')
+    return false
+  }
+
+  const calendar = getCalendarClient(credentials)
+  const calendarId = process.env.GOOGLE_CALENDAR_ID || 'primary'
+
+  try {
+    await calendar.events.delete({
+      calendarId,
+      eventId,
+      sendUpdates: 'all',
+    })
+    return true
+  } catch (error) {
+    console.error('[google-calendar] Failed to delete calendar event:', error)
+    return false
+  }
+}
+
+export interface BusyInterval {
+  start: Date
+  end: Date
+}
+
+/**
+ * Busy intervals on the bookings calendar, so externally-created events
+ * block consultation slots. Returns [] when unconfigured or on error —
+ * availability must never break because Google is unreachable.
+ */
+export async function getBusyIntervals(timeMin: Date, timeMax: Date): Promise<BusyInterval[]> {
+  const credentials = getCredentials()
+  if (!credentials) {
+    return []
+  }
+
+  const calendar = getCalendarClient(credentials)
+  const calendarId = process.env.GOOGLE_CALENDAR_ID || 'primary'
+
+  try {
+    const response = await calendar.freebusy.query({
+      requestBody: {
+        timeMin: timeMin.toISOString(),
+        timeMax: timeMax.toISOString(),
+        items: [{ id: calendarId }],
+      },
+    })
+
+    const busy = response.data.calendars?.[calendarId]?.busy || []
+    return busy
+      .filter((entry) => entry.start && entry.end)
+      .map((entry) => ({ start: new Date(entry.start as string), end: new Date(entry.end as string) }))
+  } catch (error) {
+    console.error('[google-calendar] Failed to query free/busy:', error)
+    return []
+  }
+}

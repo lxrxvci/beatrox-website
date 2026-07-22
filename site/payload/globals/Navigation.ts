@@ -3,6 +3,7 @@ import type { GlobalConfig } from 'payload'
 export const Navigation: GlobalConfig = {
   slug: 'navigation',
   admin: {
+    group: 'Settings',
     description: 'Primary site navigation links shown in header/footer. Keep paths internal (start with /).',
   },
   fields: [

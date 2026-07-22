@@ -86,7 +86,7 @@ npm run cms:parity            # the gate (see below)
 - published+enabled counts per collection must equal JSON source counts
 - projects (slugs/list/every detail), services (slugs/list/every detail), team, **pages (home/about/contact)**, navigation, site-styles, seo-defaults — 68 comparisons
 - fails if any resolver logged a fallback warning (vacuous parity)
-- normalization rules (reviewed, rendering-equivalent): `''` ≡ missing, empty arrays ≡ missing
+- normalization rules (reviewed, rendering-equivalent): `''` ≡ missing, empty arrays ≡ missing, DB/upload artifacts (`id`, `createdAt`, `updatedAt`, image `width`/`height`) ignored, CMS `contentBlocks` skipped when `body` is present (the renderer prefers `body`); when CMS `body` is empty, block plain-text is compared against JSON `body`
 
 **Requirement: 100% parity before wiring any new domain to the CMS.** Fix seed data or mappers, never the JSON baseline.
 
@@ -106,6 +106,33 @@ npm run cms:parity            # the gate (see below)
 ## Redirects
 
 - The `redirects` collection is maintained by collection hooks (e.g., project slug changes) and the hygiene scripts (`npm run redirects:hygiene[:apply]`, admin `/admin/redirect-hygiene`), but **runtime redirect execution (`proxy.ts`) is currently disabled** (in `_disabled-site/`). Live redirects today are hardcoded in `next.config.ts` (e.g., `/rentals` → external app).
+
+## CRM, Scheduling & Admin Dashboard
+
+- **CRM collections**: `clients` (unified contact record; `afterChange` hooks on `contact-submissions` and `consultations` upsert-by-email and auto-link via `site/lib/crm/link-client.ts`), `deals` (pipeline: lead → proposal-sent → negotiating → won/lost; `closedAt` auto-set), `activities` (notes/tasks/call log; `completedAt` auto-set). Submissions also trigger an internal notification email (`sendContactNotification` in `site/lib/email.ts`) — previously only bookings notified.
+- **Admin nav groups**: CRM / Scheduling / Content / Settings (set via `admin.group` on each collection and global).
+- **Custom admin views** (registered in `payload.config.ts` → `admin.components.views`, components under `site/components/payload/`):
+  - `dashboard` — replaces the stock dashboard: KPI row (week-to-date leads/consults, proposals out, won MTD + revenue, pipeline value), GA4 traffic card, upcoming consultations, pipeline by stage, activity feed, quick actions. KPI math lives in `site/lib/kpi.ts` (shared with the weekly digest job).
+  - `/admin/calendar` — month grid of consultations, status-colored, click-through to the doc.
+- **Google Calendar two-way sync** (`site/lib/scheduling/google-calendar.ts`): cancelling a consultation deletes the GCal event, changing times on a confirmed booking patches it (attendees notified by Google). `freebusy.query` feeds the slot engine (`availability.ts`, 5-min `unstable_cache`) so external GCal events block booking slots.
+- **Jobs queue** (`site/payload/jobs/`, scheduled via task `schedule` crons + `autoRun` every 15 min; Vercel cron in `site/vercel.json` hits `/api/payload-jobs/run` so jobs run with zero traffic — protected by `CRON_SECRET`):
+  - `consultation-reminder` (hourly) — 24h reminder emails, stamps `reminderSentAt`.
+  - `stale-lead-nudge` (daily ~8am PT) — digest of inquiries at `new` / deals at `lead` for 3+ days.
+  - `weekly-kpi-digest` (Monday ~8am PT) — the KPI set from `strategy/operating-system/05_KPI_DASHBOARD.md`.
+- **Payload email**: `nodemailerAdapter` over Resend SMTP when `RESEND_API_KEY` is set (password resets etc.); otherwise console fallback, same as `lib/email.ts`.
+- **GA4 analytics**: `site/lib/analytics/ga4.ts` (`GA4_PROPERTY_ID` / `GA4_CLIENT_EMAIL` / `GA4_PRIVATE_KEY`, 1h cache, graceful placeholder when unset). Setup: `site/docs/GA4_SETUP.md`.
+- **Lead attribution**: `utm` group (source/medium/campaign/gclid) on `contact-submissions` and `consultations`, captured by `site/components/AttributionFields.tsx` (hidden inputs, first-touch via sessionStorage) and passed through both server actions. `linkOrCreateClient` backfills `acquisitionSource`/`acquisitionCampaign` on clients (first-touch only, never overwrites; bare gclid ⇒ `google-ads`). Dashboard traffic card shows a CRM lead-sources list independent of GA4.
+- **Proposals**: `deals` carry a `proposal` group (scopeItems/timeline/terms/validUntil), an auto-generated `proposalToken` (beforeValidate, unique), and `sentAt`/`viewedAt`/`acceptedAt`. Moving a deal to `proposal-sent` emails the client a public link (`sendProposalEmail`) once. Public page: `site/app/(site)/proposal/[token]/page.tsx` — token-gated (`overrideAccess`, noindex), stamps `viewedAt` on first view; print-to-PDF via browser. Acceptance stays manual (`acceptedAt`, no auto-close).
+- **`cms:types` / `cms:importmap` run through `scripts/cms-generate.mjs`** (esbuild → ESM, like the parity script) because the stock `payload` CLI loads the config via `require()` and crashes on top-level await in `@payloadcms/richtext-lexical`. The runner pins `PAYLOAD_TS_OUTPUT_PATH` and `importMap.baseDir` to the real `site/` root (bundling relocates the config into `scripts/.tmp/`). New env vars: `GA4_PROPERTY_ID`, `GA4_CLIENT_EMAIL`, `GA4_PRIVATE_KEY`, `CRON_SECRET`.
+
+## Content Architecture (July 2026 — post-Nathan-review)
+
+- **About↔Services swap**: the About page's "Tech Capabilities" section (CMS `capabilitiesGrid` block on the `about` pages doc) renders the services link list via `site/components/ServicesLinkGrid.tsx` (grouped catalog, `SERVICE_CATEGORIES`); the image tile grid moved to the Services index "Our Services" section (`services/page.tsx` renders `<CapabilitiesGrid items={…}>` fed from the same about-page block). Titles stay on their original pages per owner.
+- **Capability tiles** (`site/components/CapabilitiesGrid.tsx` + `site/lib/capabilities.ts`): all 12 link to `/services/*` landing pages (never `/work/*`); `lg:grid-cols-4`; label matching normalized (`&`↔`and`). Block items support optional `image`, `link`, `textPosition` (center/top/bottom/below/hidden) — see `capabilitiesGridBlock` in `site/payload/blocks/shared.ts`.
+- **Service tags**: `projects.serviceTags` (relationship → services, hasMany) — drives (a) service-hub auto-related work on `services/[slug]` (manual `relatedWork` first, tag-matched appended, deduped, cap 6), and (b) the `ServiceTagCloud` on `/work` ("Browse by Service", count-sized pills → service hubs). `serviceTags` is CMS-only: JSON fallback emits `[]`, and the parity gate ignores the key (`IGNORED_KEYS`).
+- **Inline editing widgets** (`site/components/admin/`): `EditableServiceTags` (chip multi-select on project pages → PATCHes `serviceTags` id array; `serviceTags` is allowlisted in `admin-update/route.ts`, which also revalidates `/services` + `/services/[slug]` on project updates) and `EditableGalleryGrid` (tile editor on the About page's capabilities section → PATCHes the whole `blocks.N.items` array with label/image/link/textPosition; media choices via `getMediaLibrary()` in `lib/content.ts`). Tile edits made on `/about` take effect on `/services` too (single data source: the about-page block).
+- **LedTagWall removed** from `/work` (component deleted); category/type string tags (`hero.tags`, `/work/tag/[tag]`) remain.
+- **Content audit**: `npm run content:audit` (read-only; `--apply-tags` opt-in writes suggested serviceTags for untagged projects) → `reports/content-audit.md` + `.json` at repo root: per-project images/tags/suggested serviceTags, duplicate service hero-image clusters with replacement candidates, tile link check, orphan checks.
 
 ## Rollback
 

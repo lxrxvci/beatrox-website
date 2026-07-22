@@ -46,12 +46,12 @@ async function upsertPage(payload: Awaited<ReturnType<typeof getPayload>>, page:
 
   const blocks =
     page.sections?.slice(0, 8).map((section) => ({
-      blockType: 'text',
+      blockType: 'text' as const,
       heading: section.heading || undefined,
       body: {
         root: {
           type: 'root',
-          format: '',
+          format: '' as const,
           indent: 0,
           version: 1,
           children: [
@@ -76,7 +76,7 @@ async function upsertPage(payload: Awaited<ReturnType<typeof getPayload>>, page:
               textStyle: '',
             },
           ],
-          direction: 'ltr',
+          direction: 'ltr' as const,
         },
       },
     })) || []

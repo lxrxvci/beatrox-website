@@ -2,6 +2,7 @@
 
 import { useActionState } from 'react'
 import { submitContactForm, type FormState } from './actions'
+import { AttributionFields } from '@/components/AttributionFields'
 
 interface Field {
   id: string
@@ -62,6 +63,9 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         <label htmlFor="website">Website</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
+
+      {/* Marketing attribution (UTM/gclid) — hidden, first-touch. */}
+      <AttributionFields />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-7">
         {textFields.slice(0, 4).map((field) => (

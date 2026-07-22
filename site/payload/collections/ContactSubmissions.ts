@@ -1,10 +1,13 @@
 import type { CollectionConfig } from 'payload'
+import { linkOrCreateClient } from '../../lib/crm/link-client'
+import { sendContactNotification } from '../../lib/email'
 
 export const ContactSubmissions: CollectionConfig = {
   slug: 'contact-submissions',
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'email', 'eventType', 'status', 'createdAt'],
+    group: 'CRM',
     description: 'Contact form submissions from the website.',
   },
   access: {
@@ -14,6 +17,56 @@ export const ContactSubmissions: CollectionConfig = {
     create: ({ req: { user } }) => Boolean(user),
     update: ({ req: { user } }) => Boolean(user),
     delete: ({ req: { user } }) => Boolean(user),
+  },
+  hooks: {
+    afterChange: [
+      async ({ doc, operation, req }) => {
+        if (operation !== 'create') return doc
+
+        // Link the submission to a client record (create the client on first touch).
+        if (!doc.client) {
+          const clientId = await linkOrCreateClient(req, {
+            name: doc.name,
+            email: doc.email,
+            company: doc.company,
+            source: 'contact-form',
+            attribution: doc.utm,
+          })
+          if (clientId) {
+            try {
+              await req.payload.update({
+                collection: 'contact-submissions',
+                id: doc.id,
+                data: { client: clientId },
+                overrideAccess: true,
+                req,
+              })
+            } catch {
+              // Client linking must not fail the intake flow.
+            }
+          }
+        }
+
+        // Notify the team — contact submissions previously had no notification.
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || ''
+        await sendContactNotification({
+          name: doc.name,
+          email: doc.email,
+          company: doc.company || undefined,
+          eventType: doc.eventType || undefined,
+          services: Array.isArray(doc.services)
+            ? doc.services.map((entry: { service?: string }) => entry.service).filter(Boolean)
+            : undefined,
+          eventDate: doc.eventDate || undefined,
+          location: doc.location || undefined,
+          budget: doc.budget || undefined,
+          message: doc.message,
+          adminUrl: `${siteUrl}/admin/collections/contact-submissions/${doc.id}`,
+        })
+
+        return doc
+      },
+    ],
   },
   fields: [
     {
@@ -62,6 +115,31 @@ export const ContactSubmissions: CollectionConfig = {
       required: true,
     },
     {
+      name: 'client',
+      type: 'relationship',
+      relationTo: 'clients',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
+      admin: {
+        readOnly: true,
+        description: 'Auto-linked client record.',
+      },
+    },
+    {
+      name: 'convertedToDeal',
+      type: 'relationship',
+      relationTo: 'deals',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
+      admin: {
+        description: 'Deal created from this submission, if converted.',
+      },
+    },
+    {
       name: 'status',
       type: 'select',
       defaultValue: 'new',
@@ -81,6 +159,19 @@ export const ContactSubmissions: CollectionConfig = {
       name: 'source',
       type: 'text',
       defaultValue: 'website',
+    },
+    {
+      name: 'utm',
+      type: 'group',
+      admin: {
+        description: 'Marketing attribution captured from the landing URL (first touch).',
+      },
+      fields: [
+        { name: 'source', type: 'text' },
+        { name: 'medium', type: 'text' },
+        { name: 'campaign', type: 'text' },
+        { name: 'gclid', type: 'text' },
+      ],
     },
     {
       name: 'ipHash',

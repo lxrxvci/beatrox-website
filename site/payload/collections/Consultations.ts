@@ -1,10 +1,13 @@
 import type { CollectionConfig } from 'payload'
+import { linkOrCreateClient } from '../../lib/crm/link-client'
+import { deleteCalendarEvent, updateCalendarEvent } from '../../lib/scheduling/google-calendar'
 
 export const Consultations: CollectionConfig = {
   slug: 'consultations',
   admin: {
     useAsTitle: 'clientName',
     defaultColumns: ['clientName', 'clientEmail', 'type', 'startTime', 'status'],
+    group: 'Scheduling',
     description: 'Booked consultations and discovery calls.',
   },
   access: {
@@ -14,6 +17,69 @@ export const Consultations: CollectionConfig = {
     create: ({ req: { user } }) => Boolean(user),
     update: ({ req: { user } }) => Boolean(user),
     delete: ({ req: { user } }) => Boolean(user),
+  },
+  hooks: {
+    afterChange: [
+      async ({ doc, operation, req }) => {
+        if (operation !== 'create') return doc
+
+        // Link the booking to a client record (create the client on first touch).
+        if (!doc.client) {
+          const clientId = await linkOrCreateClient(req, {
+            name: doc.clientName,
+            email: doc.clientEmail,
+            company: doc.clientCompany,
+            phone: doc.phone,
+            source: 'booking',
+            attribution: doc.utm,
+          })
+          if (clientId) {
+            try {
+              await req.payload.update({
+                collection: 'consultations',
+                id: doc.id,
+                data: { client: clientId },
+                overrideAccess: true,
+                req,
+              })
+            } catch {
+              // Client linking must not fail the booking flow.
+            }
+          }
+        }
+
+        return doc
+      },
+      // Two-way Google Calendar sync: cancel → delete event, reschedule → patch
+      // event. Only reacts to real diffs so the booking action's own follow-up
+      // update (stamping event ID / Meet link) does not re-trigger a patch.
+      async ({ doc, previousDoc, operation }) => {
+        if (operation !== 'update' || !previousDoc) return doc
+
+        const eventId = doc.googleCalendarEventId || previousDoc.googleCalendarEventId
+        if (!eventId) return doc
+
+        const becameCancelled = doc.status === 'cancelled' && previousDoc.status !== 'cancelled'
+        if (becameCancelled) {
+          await deleteCalendarEvent(eventId)
+          return doc
+        }
+
+        const timesChanged =
+          doc.status === 'confirmed' &&
+          (doc.startTime !== previousDoc.startTime || doc.endTime !== previousDoc.endTime)
+        if (timesChanged) {
+          await updateCalendarEvent({
+            eventId,
+            startTime: new Date(doc.startTime),
+            endTime: new Date(doc.endTime),
+            timezone: doc.timezone || 'America/Los_Angeles',
+          })
+        }
+
+        return doc
+      },
+    ],
   },
   fields: [
     {
@@ -89,6 +155,44 @@ export const Consultations: CollectionConfig = {
       name: 'source',
       type: 'text',
       defaultValue: 'website',
+    },
+    {
+      name: 'utm',
+      type: 'group',
+      admin: {
+        description: 'Marketing attribution captured from the landing URL (first touch).',
+      },
+      fields: [
+        { name: 'source', type: 'text' },
+        { name: 'medium', type: 'text' },
+        { name: 'campaign', type: 'text' },
+        { name: 'gclid', type: 'text' },
+      ],
+    },
+    {
+      name: 'client',
+      type: 'relationship',
+      relationTo: 'clients',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
+      admin: {
+        readOnly: true,
+        description: 'Auto-linked client record.',
+      },
+    },
+    {
+      name: 'reminderSentAt',
+      type: 'date',
+      access: {
+        create: ({ req: { user } }) => Boolean(user),
+        update: ({ req: { user } }) => Boolean(user),
+      },
+      admin: {
+        readOnly: true,
+        description: 'Auto-set when the 24h reminder email is sent.',
+      },
     },
     {
       name: 'googleCalendarEventId',

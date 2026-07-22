@@ -14,6 +14,7 @@ export const Team: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'title', 'status', 'order', 'updatedAt'],
+    group: 'Content',
     livePreview: {
       url: ({ data }) => {
         const slug = typeof data?.slug === 'string' ? data.slug : ''

@@ -13,6 +13,7 @@ export const ConsultationTypes: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'duration', 'isEnabled', 'listOrder'],
+    group: 'Scheduling',
     description: 'Types of meetings prospects can book.',
   },
   access: {

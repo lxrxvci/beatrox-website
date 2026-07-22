@@ -1,4 +1,10 @@
 {
+  "crons": [
+    {
+      "path": "/api/payload-jobs/run?allQueues=true&limit=25",
+      "schedule": "*/15 * * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -3,6 +3,7 @@ import type { GlobalConfig } from 'payload'
 export const SeoDefaults: GlobalConfig = {
   slug: 'seo-defaults',
   admin: {
+    group: 'Settings',
     description: 'Fallback SEO settings used when page-level values are missing.',
   },
   fields: [

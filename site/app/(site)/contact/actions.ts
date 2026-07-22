@@ -33,6 +33,14 @@ export async function submitContactForm(
   const message = formData.get('message')?.toString().trim()
   const services = formData.getAll('services').map((v) => v.toString().trim())
 
+  const utm = {
+    source: formData.get('utm_source')?.toString().trim() || undefined,
+    medium: formData.get('utm_medium')?.toString().trim() || undefined,
+    campaign: formData.get('utm_campaign')?.toString().trim() || undefined,
+    gclid: formData.get('gclid')?.toString().trim() || undefined,
+  }
+  const hasUtm = Object.values(utm).some(Boolean)
+
   const errors: Record<string, string[]> = {}
 
   if (!name || name.length < 2) {
@@ -72,27 +80,26 @@ export async function submitContactForm(
       }
     }
 
-    const data: Record<string, unknown> = {
-      name,
-      email,
-      message,
-      source: 'website',
-      ipHash,
-    }
-
-    if (company) data.company = company
-    if (eventType) data.eventType = eventType
-    if (services.length > 0) data.services = services.map((service) => ({ service }))
-    if (eventDate) data.eventDate = eventDate
-    if (location) data.location = location
-    if (budget) data.budget = budget
-
     await payload.create({
       collection: 'contact-submissions',
       // Trusted server-side write — collection create access requires an
       // authenticated user; this validated action is the public write path.
       overrideAccess: true,
-      data,
+      data: {
+        // Validated above — the errors guard guarantees these are present.
+        name: name!,
+        email: email!,
+        message: message!,
+        source: 'website',
+        ipHash,
+        ...(company ? { company } : {}),
+        ...(eventType ? { eventType } : {}),
+        ...(services.length > 0 ? { services: services.map((service) => ({ service })) } : {}),
+        ...(eventDate ? { eventDate } : {}),
+        ...(location ? { location } : {}),
+        ...(budget ? { budget } : {}),
+        ...(hasUtm ? { utm } : {}),
+      },
     })
 
     return {

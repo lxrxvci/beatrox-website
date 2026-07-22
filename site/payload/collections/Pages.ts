@@ -15,6 +15,7 @@ export const Pages: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'status', 'isEnabled', 'showInNav', 'navOrder', 'updatedAt'],
+    group: 'Content',
     livePreview: {
       url: ({ data }) => {
         const slug = typeof data?.slug === 'string' ? data.slug : ''

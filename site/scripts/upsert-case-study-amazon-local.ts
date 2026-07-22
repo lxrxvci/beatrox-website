@@ -58,7 +58,7 @@ function youtubeIdFromUrl(url: string): string {
   return match?.[1] || ''
 }
 
-async function resolveMediaIdByLegacyUrl(payload: Awaited<ReturnType<typeof getPayload>>, legacyUrl: string): Promise<string | number | undefined> {
+async function resolveMediaIdByLegacyUrl(payload: Awaited<ReturnType<typeof getPayload>>, legacyUrl: string): Promise<number | undefined> {
   if (!legacyUrl || !legacyUrl.startsWith('/')) return undefined
   const filename = legacyUrl.split('/').pop()
   if (!filename) return undefined
@@ -106,7 +106,7 @@ async function run() {
     const videoId = youtubeIdFromUrl(video.url || video.embedUrl || '')
     return {
       title: VIDEO_TITLE_BY_ID[videoId] || video.title || 'Campaign video',
-      provider: video.provider || 'youtube',
+      provider: (video.provider || 'youtube') as 'youtube' | 'vimeo' | 'instagram' | 'external',
       url: video.url || '',
       embedUrl: video.embedUrl || (videoId ? `https://www.youtube.com/embed/${videoId}` : ''),
     }
@@ -115,8 +115,8 @@ async function run() {
   const data = {
     title: CANONICAL_TITLE,
     slug: CANONICAL_SLUG,
-    status: 'published',
-    _status: 'published',
+    status: 'published' as const,
+    _status: 'published' as const,
     isEnabled: true,
     listOrder: 10,
     hero: {

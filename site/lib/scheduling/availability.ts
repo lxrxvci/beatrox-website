@@ -1,6 +1,8 @@
 import { addDays, addMinutes, format, isAfter, isBefore, isEqual } from 'date-fns'
 import { toZonedTime, fromZonedTime } from 'date-fns-tz'
+import { unstable_cache } from 'next/cache'
 import type { Payload } from 'payload'
+import { getBusyIntervals } from './google-calendar'
 
 export interface AvailableSlot {
   startTime: Date
@@ -35,6 +37,21 @@ function parseTimeOnDate(dateStr: string, timeStr: string, timezone: string): Da
 function overlaps(start1: Date, end1: Date, start2: Date, end2: Date): boolean {
   return (isBefore(start1, end2) || isEqual(start1, end2)) && isAfter(end1, start2)
 }
+
+// Externally-created Google Calendar events must block consultation slots.
+// Cached for 5 minutes so browsing the booking form doesn't hammer the API.
+// Dates cross the cache boundary as ISO strings.
+const getCachedBusyIntervals = unstable_cache(
+  async (timeMinISO: string, timeMaxISO: string) => {
+    const intervals = await getBusyIntervals(new Date(timeMinISO), new Date(timeMaxISO))
+    return intervals.map((interval) => ({
+      start: interval.start.toISOString(),
+      end: interval.end.toISOString(),
+    }))
+  },
+  ['gcal-busy-intervals'],
+  { revalidate: 300 },
+)
 
 function ruleAppliesToType(
   rule: Record<string, unknown>,
@@ -92,7 +109,7 @@ export async function getAvailableSlots(
     overrideAccess: true,
   })
 
-  const rules = rulesRes.docs.filter((rule) => ruleAppliesToType(rule, consultationTypeId))
+  const rules = rulesRes.docs.filter((rule) => ruleAppliesToType(rule as unknown as Record<string, unknown>, consultationTypeId))
 
   const fromDateStr = format(effectiveFrom, 'yyyy-MM-dd')
   const toDateStr = format(effectiveTo, 'yyyy-MM-dd')
@@ -127,7 +144,16 @@ export async function getAvailableSlots(
     timezone: (doc.timezone as string) || DEFAULT_TIMEZONE,
   }))
 
-  const blackoutRanges = (blackoutsRes.docs as Record<string, unknown>[]).map((doc) => {
+  // Round the window start down to the hour so the free/busy cache key is
+  // reusable across requests within the same hour.
+  const busyWindowStart = new Date(Math.floor(effectiveFrom.getTime() / 3_600_000) * 3_600_000)
+  const gcalBusy = await getCachedBusyIntervals(busyWindowStart.toISOString(), effectiveTo.toISOString())
+  const gcalBlocks = gcalBusy.map((block) => ({
+    start: new Date(block.start),
+    end: new Date(block.end),
+  }))
+
+  const blackoutRanges = (blackoutsRes.docs as unknown as Record<string, unknown>[]).map((doc) => {
     const dateStr = format(new Date(doc.date as string), 'yyyy-MM-dd')
     const tz = DEFAULT_TIMEZONE
     if (doc.isAllDay) {
@@ -181,8 +207,11 @@ export async function getAvailableSlots(
           const isBlockedByExisting = existingBookings.some((booking) =>
             overlaps(slotStart, slotEnd, booking.start, booking.end),
           )
+          const isBlockedByGCal = gcalBlocks.some((block) =>
+            overlaps(slotStart, slotEnd, block.start, block.end),
+          )
 
-          if (!isBlockedByBuffer && !isBlockedByBlackout && !isBlockedByExisting) {
+          if (!isBlockedByBuffer && !isBlockedByBlackout && !isBlockedByExisting && !isBlockedByGCal) {
             slots.push({ startTime: slotStart, endTime: slotEnd, timezone })
           }
 

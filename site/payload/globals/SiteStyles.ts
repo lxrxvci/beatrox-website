@@ -3,6 +3,7 @@ import type { GlobalConfig } from 'payload'
 export const SiteStyles: GlobalConfig = {
   slug: 'site-styles',
   admin: {
+    group: 'Settings',
     description: 'Brand-level visual settings used by frontend rendering.',
   },
   fields: [

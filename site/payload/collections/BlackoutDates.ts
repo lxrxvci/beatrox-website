@@ -5,6 +5,7 @@ export const BlackoutDates: CollectionConfig = {
   admin: {
     useAsTitle: 'label',
     defaultColumns: ['label', 'date', 'isAllDay', 'startTime', 'endTime', 'isEnabled'],
+    group: 'Scheduling',
     description: 'Specific dates or times blocked off from booking.',
   },
   access: {

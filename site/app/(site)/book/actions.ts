@@ -110,6 +110,13 @@ function validateBookingInput(formData: FormData): {
     return { valid: false, errors }
   }
 
+  const utm = {
+    source: formData.get('utm_source')?.toString().trim() || undefined,
+    medium: formData.get('utm_medium')?.toString().trim() || undefined,
+    campaign: formData.get('utm_campaign')?.toString().trim() || undefined,
+    gclid: formData.get('gclid')?.toString().trim() || undefined,
+  }
+
   return {
     valid: true,
     data: {
@@ -122,6 +129,7 @@ function validateBookingInput(formData: FormData): {
       company,
       phone,
       projectSummary,
+      ...(Object.values(utm).some(Boolean) ? { utm } : {}),
     },
   }
 }
@@ -167,7 +175,10 @@ export async function bookConsultation(
     company,
     phone,
     projectSummary,
-  } = validation.data as Record<string, string>
+    utm,
+  } = validation.data as Record<string, string> & {
+    utm?: { source?: string; medium?: string; campaign?: string; gclid?: string }
+  }
 
   try {
     const payload = await getPayload({ config: payloadConfig })
@@ -200,7 +211,13 @@ export async function bookConsultation(
       id: typeId,
     })
 
-    const typeIdNumber = /^(\d+)$/.test(typeId) ? parseInt(typeId, 10) : typeId
+    const typeIdNumber = Number.parseInt(typeId, 10)
+    if (!Number.isFinite(typeIdNumber)) {
+      return {
+        success: false,
+        message: 'Invalid consultation type. Please reload the page and try again.',
+      }
+    }
 
     const consultation = await payload.create({
       collection: 'consultations',
@@ -219,6 +236,7 @@ export async function bookConsultation(
         projectSummary: projectSummary || undefined,
         status: 'new',
         source: 'website',
+        ...(utm ? { utm } : {}),
       },
     })
 

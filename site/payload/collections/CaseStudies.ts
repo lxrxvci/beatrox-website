@@ -19,6 +19,7 @@ export const CaseStudies: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'status', 'listOrder', 'updatedAt'],
+    group: 'Content',
     livePreview: {
       url: ({ data }) => {
         const slug = typeof data?.slug === 'string' ? normalizeCaseStudySlug(data.slug) : ''
