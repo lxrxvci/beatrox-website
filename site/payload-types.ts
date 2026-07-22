@@ -128,12 +128,14 @@ export interface Config {
     navigation: Navigation;
     'site-styles': SiteStyle;
     'seo-defaults': SeoDefault;
+    'capability-tiles': CapabilityTile;
     'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
     navigation: NavigationSelect<false> | NavigationSelect<true>;
     'site-styles': SiteStylesSelect<false> | SiteStylesSelect<true>;
     'seo-defaults': SeoDefaultsSelect<false> | SeoDefaultsSelect<true>;
+    'capability-tiles': CapabilityTilesSelect<false> | CapabilityTilesSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
   locale: null;
@@ -2936,6 +2938,32 @@ export interface SeoDefault {
   createdAt?: string | null;
 }
 /**
+ * The image tile grid on the Services page ("Our Services"). Editable inline on /services in edit mode.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "capability-tiles".
+ */
+export interface CapabilityTile {
+  id: number;
+  items?:
+    | {
+        label: string;
+        /**
+         * Tile image path (e.g. /images/capabilities/foo.jpg).
+         */
+        image?: string | null;
+        /**
+         * Tile link (e.g. /services/custom-fabrication).
+         */
+        link?: string | null;
+        textPosition?: ('center' | 'top' | 'bottom' | 'below' | 'hidden') | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-jobs-stats".
  */
@@ -2997,6 +3025,24 @@ export interface SeoDefaultsSelect<T extends boolean = true> {
   defaultDescription?: T;
   defaultOgImage?: T;
   noindexByDefault?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "capability-tiles_select".
+ */
+export interface CapabilityTilesSelect<T extends boolean = true> {
+  items?:
+    | T
+    | {
+        label?: T;
+        image?: T;
+        link?: T;
+        textPosition?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

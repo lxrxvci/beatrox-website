@@ -43,6 +43,9 @@ export interface ProjectImage {
   note?: string
   width?: number
   height?: number
+  /** Index into the raw CMS `images` array (set by mapCmsProject before the
+   *  empty-url filter drops rows) so inline editing can target `images.N`. */
+  sourceIndex?: number
 }
 
 export interface VideoEmbed {
@@ -145,6 +148,8 @@ export interface Service {
 }
 
 export interface TeamMember {
+  /** Payload doc id — present on CMS-backed members, absent on JSON fallback. */
+  id?: string
   name: string
   title: string
   bio: string
@@ -454,7 +459,7 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
 }
 
 function mapCmsProject(doc: Record<string, unknown>): Project {
-  const images = asArray<Record<string, unknown>>(doc.images).map((row) => {
+  const images = asArray<Record<string, unknown>>(doc.images).map((row, index) => {
     const media = row.media as unknown as Record<string, unknown> | undefined
     const url = resolveCmsMediaUrl(media) || String(row.legacyUrl || '')
     const width = media?.width ? Number(media.width) : row.width ? Number(row.width) : undefined
@@ -466,6 +471,7 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
       note: row.note ? String(row.note) : undefined,
       width,
       height,
+      sourceIndex: index,
     }
   })
 
@@ -606,8 +612,10 @@ function mapCmsService(doc: Record<string, unknown>): Service {
         resolveCmsMediaUrl(((doc.media as unknown as Record<string, unknown>)?.heroImage as unknown)) ||
         String((doc.media as unknown as Record<string, unknown>)?.heroImageLegacyUrl || ''),
       galleryImages: asArray<Record<string, unknown>>((doc.media as unknown as Record<string, unknown>)?.galleryImages)
-        .map((item) => resolveCmsMediaUrl(item.media as unknown) || String(item.legacyUrl || ''))
-        .filter(Boolean),
+        // No .filter(Boolean) here: the array index doubles as the inline-edit
+        // field path (media.galleryImages.N), so empty rows must keep their
+        // slot. Renderers skip empty urls themselves.
+        .map((item) => resolveCmsMediaUrl(item.media as unknown) || String(item.legacyUrl || '')),
     },
   }
 }
@@ -944,6 +952,7 @@ export async function getTeamResolved() {
         const row = doc as unknown as Record<string, unknown>
         const photo = row.photo as unknown as Record<string, unknown> | undefined
         return {
+          id: String(row.id || ''),
           name: String(row.name || ''),
           title: String(row.title || ''),
           bio: String(row.bio || ''),
@@ -1251,6 +1260,44 @@ export async function getMediaLibrary(): Promise<MediaLibraryItem[]> {
         filename: doc.filename || '',
       }))
       .filter((item) => item.url !== '')
+  } catch {
+    return []
+  }
+}
+
+export interface CapabilityTileItem {
+  label: string
+  image?: string
+  link?: string
+  textPosition?: 'center' | 'top' | 'bottom' | 'below' | 'hidden'
+}
+
+/**
+ * The Services page tile grid, from the capability-tiles global (inline-
+ * editable on /services). Returns [] when unset — callers fall back to
+ * the curated defaults in lib/capabilities.
+ */
+export async function getCapabilityTiles(): Promise<CapabilityTileItem[]> {
+  try {
+    const payload = await getPayloadClient()
+    const global = await payload.findGlobal({ slug: 'capability-tiles', depth: 0 })
+    const items = (global as { items?: unknown[] }).items
+    if (!Array.isArray(items)) return []
+    return items
+      .map((row): CapabilityTileItem | null => {
+        if (!row || typeof row !== 'object') return null
+        const item = row as Record<string, unknown>
+        if (!item.label) return null
+        return {
+          label: String(item.label),
+          image: item.image ? String(item.image) : undefined,
+          link: item.link ? String(item.link) : undefined,
+          textPosition: item.textPosition
+            ? (String(item.textPosition) as CapabilityTileItem['textPosition'])
+            : undefined,
+        }
+      })
+      .filter((item): item is CapabilityTileItem => Boolean(item))
   } catch {
     return []
   }

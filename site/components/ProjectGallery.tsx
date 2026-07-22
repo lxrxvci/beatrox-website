@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'motion/react'
+import { EditableImage } from '@/components/admin'
+import type { MediaOption } from '@/components/admin/EditableImage'
 
 interface GalleryImage {
   url: string
@@ -10,10 +12,16 @@ interface GalleryImage {
   note?: string
   width?: number
   height?: number
+  /** Index into the project doc's raw `images` array (inline-edit field path). */
+  sourceIndex?: number
 }
 
 interface ProjectGalleryProps {
   images: GalleryImage[]
+  /** Inline-edit target — the project doc that owns these images. */
+  collection?: string
+  documentId?: string
+  mediaLibrary?: MediaOption[]
 }
 
 interface SizedImage extends GalleryImage {
@@ -95,7 +103,7 @@ function buildRows(
   })
 }
 
-export default function ProjectGallery({ images }: ProjectGalleryProps) {
+export default function ProjectGallery({ images, collection, documentId, mediaLibrary = [] }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   // Start unmeasured (0 = render no rows) so the SSR/first paint can't
@@ -230,14 +238,23 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                     onClick={() => setActiveIndex(index)}
                     aria-label={`Open image ${index + 1} of ${galleryImages.length}`}
                   >
-                    <Image
-                      src={img.url}
+                    <EditableImage
+                      collection={collection}
+                      documentId={documentId}
+                      fieldPath={`images.${img.sourceIndex ?? index + 1}`}
+                      value={img.url}
                       alt={img.alt}
-                      fill
-                      sizes={`${Math.round(img.width)}px`}
-                      className="object-cover transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-110"
-                      onError={() => markFailed(img.url)}
-                    />
+                      mediaLibrary={mediaLibrary}
+                    >
+                      <Image
+                        src={img.url}
+                        alt={img.alt}
+                        fill
+                        sizes={`${Math.round(img.width)}px`}
+                        className="object-cover transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-110"
+                        onError={() => markFailed(img.url)}
+                      />
+                    </EditableImage>
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-3 sm:p-4">
                       <span className="mono text-[10px] text-white/60 uppercase tracking-[0.2em] mb-1">
                         {String(index + 1).padStart(2, '0')} / {String(galleryImages.length).padStart(2, '0')}

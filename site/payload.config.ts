@@ -24,6 +24,7 @@ import { Consultations } from './payload/collections/Consultations.ts'
 import { Navigation } from './payload/globals/Navigation.ts'
 import { SiteStyles } from './payload/globals/SiteStyles.ts'
 import { SeoDefaults } from './payload/globals/SeoDefaults.ts'
+import { CapabilityTiles } from './payload/globals/CapabilityTiles.ts'
 import { consultationReminderTask } from './payload/jobs/consultation-reminder.ts'
 import { staleLeadNudgeTask } from './payload/jobs/stale-lead-nudge.ts'
 import { weeklyKpiDigestTask } from './payload/jobs/weekly-kpi-digest.ts'
@@ -105,7 +106,7 @@ export default buildConfig({
     push: runtimeEnv.NODE_ENV !== 'production',
   }),
   collections: [Users, Media, Redirects, ContactSubmissions, Clients, Deals, Activities, ConsultationTypes, AvailabilityRules, BlackoutDates, Consultations, Pages, Projects, CaseStudies, Services, Team],
-  globals: [Navigation, SiteStyles, SeoDefaults],
+  globals: [Navigation, SiteStyles, SeoDefaults, CapabilityTiles],
   plugins: [
     // Media files are served from Vercel Blob when a store is provisioned
     // (BLOB_READ_WRITE_TOKEN set). Without it, uploads stay on local disk and

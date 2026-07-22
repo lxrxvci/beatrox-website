@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { CMSPageBlock } from '@/lib/json-content'
 import { LexicalReact, type LexicalNode } from '@/components/richtext'
-import { EditableGalleryGrid, EditableRichText, EditableText } from '@/components/admin'
+import { EditableRichText, EditableText } from '@/components/admin'
 import BentoWorkGrid from './BentoWorkGrid'
 import ServicesLinkGrid from './ServicesLinkGrid'
 import Reveal from './Reveal'
@@ -73,7 +73,7 @@ function renderEditableBody(
   )
 }
 
-export default function CMSBlockRenderer({ blocks, collection, documentId, resolvedProjects, mediaLibrary }: Props) {
+export default function CMSBlockRenderer({ blocks, collection, documentId, resolvedProjects }: Props) {
   return (
     <section className="border-t border-white/10">
       <div className="max-w-[1120px] mx-auto px-6 lg:px-10 py-16 space-y-20">
@@ -164,24 +164,14 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
               textPosition?: 'center' | 'top' | 'bottom' | 'below' | 'hidden'
             } => Boolean(item.label))
             if (items.length === 0) return null
-            // About↔Services swap: this section renders the services link
-            // list; the image tile grid moved to the Services index page.
-            // The "Tech Capabilities" title stays on this page per owner.
-            // The block items are the single data source for both pages —
-            // the gallery widget edits them here (About page) and the
-            // Services page renders the same items via <CapabilitiesGrid />.
+            // About↔Services swap: this section renders the tech link list;
+            // the image tile grid lives on /services (driven by the
+            // capability-tiles global, editable inline there). The
+            // "Tech Capabilities" title stays on this page per owner.
             return (
               <article key={key} className="space-y-6">
                 <h2 className="heading-md">Tech Capabilities</h2>
-                <EditableGalleryGrid
-                  collection={collection}
-                  documentId={documentId}
-                  fieldPath={`blocks.${index}.items`}
-                  items={items.map(({ label, image, link, textPosition }) => ({ label, image, link, textPosition }))}
-                  mediaLibrary={mediaLibrary}
-                >
-                  <ServicesLinkGrid items={items} />
-                </EditableGalleryGrid>
+                <ServicesLinkGrid items={items} />
               </article>
             )
           }

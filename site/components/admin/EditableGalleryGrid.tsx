@@ -19,6 +19,8 @@ interface MediaOption {
 interface EditableGalleryGridProps {
   collection?: string
   documentId?: string
+  /** Global mode: target a global (e.g. 'capability-tiles') instead of a collection doc. */
+  globalSlug?: string
   fieldPath: string
   items: GalleryGridItem[]
   mediaLibrary?: MediaOption[]
@@ -39,6 +41,7 @@ const inputClasses =
 export default function EditableGalleryGrid({
   collection,
   documentId,
+  globalSlug,
   fieldPath,
   items,
   mediaLibrary = [],
@@ -49,6 +52,8 @@ export default function EditableGalleryGrid({
   const [draft, setDraft] = useState<GalleryGridItem[]>(items)
   const [isSaving, setIsSaving] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
+
+  const canSave = Boolean(globalSlug) || Boolean(collection && documentId)
 
   const updateItem = useCallback((index: number, patch: Partial<GalleryGridItem>) => {
     setDraft((prev) => prev.map((item, i) => (i === index ? { ...item, ...patch } : item)))
@@ -74,7 +79,7 @@ export default function EditableGalleryGrid({
   }, [])
 
   const handleSave = useCallback(async () => {
-    if (!collection || !documentId) return
+    if (!canSave) return
     setIsSaving(true)
     setSaveError(null)
     try {
@@ -90,15 +95,13 @@ export default function EditableGalleryGrid({
           return clean
         })
         .filter((item) => item.label.length > 0)
+      const body = globalSlug
+        ? { global: globalSlug, path: fieldPath, value }
+        : { collection, id: documentId, path: fieldPath, value }
       const res = await fetch('/api/admin-update', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          collection,
-          id: documentId,
-          path: fieldPath,
-          value,
-        }),
+        body: JSON.stringify(body),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -118,7 +121,7 @@ export default function EditableGalleryGrid({
     setSaveError(null)
   }, [items])
 
-  if (!editMode || !collection || !documentId) {
+  if (!editMode || !canSave) {
     return <>{children}</>
   }
 

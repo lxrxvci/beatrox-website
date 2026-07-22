@@ -63,9 +63,15 @@ function getTopLevelField(path: string): string {
 // the admin inline-edit UI (components/admin/EditableText, EditableRichText)
 // actually calls this endpoint. Anything outside this list is rejected.
 const ALLOWED_UPDATE_PATHS: Record<string, string[]> = {
-  pages: ['hero.', 'consultationForm.', 'address.', 'contactInfo.', 'social.', 'emailSignup.', 'blocks.'],
-  projects: ['serviceTags', 'techTags', 'body.', 'contentBlocks.', 'blocks.'],
-  services: ['capabilities.', 'body.', 'contentBlocks.', 'blocks.'],
+  pages: ['hero.', 'media.', 'consultationForm.', 'address.', 'contactInfo.', 'social.', 'emailSignup.', 'blocks.'],
+  projects: ['serviceTags', 'techTags', 'images.', 'body.', 'contentBlocks.', 'blocks.'],
+  services: ['capabilities.', 'media.', 'body.', 'contentBlocks.', 'blocks.'],
+  team: ['photo.'],
+}
+
+// Allowlist of writable global -> field-path prefixes (inline-edit UI).
+const ALLOWED_GLOBAL_UPDATE_PATHS: Record<string, string[]> = {
+  'capability-tiles': ['items'],
 }
 
 function isAllowedUpdate(collection: string, path: string): boolean {
@@ -107,7 +113,35 @@ export async function PATCH(request: Request) {
     }
 
     const body = await request.json()
-    const { collection, id, path, value } = body
+    const { collection, id, path, value, global: globalSlug } = body
+
+    // Global updates (e.g. capability-tiles items edited inline on /services).
+    if (globalSlug) {
+      if (typeof globalSlug !== 'string' || typeof path !== 'string') {
+        return NextResponse.json({ error: 'Missing global or path' }, { status: 400 })
+      }
+      const allowedPrefixes = ALLOWED_GLOBAL_UPDATE_PATHS[globalSlug]
+      if (!allowedPrefixes || !allowedPrefixes.some((prefix) => path.startsWith(prefix))) {
+        return NextResponse.json({ error: 'Global/path is not editable via this endpoint' }, { status: 400 })
+      }
+      // Mirror the collection flow: setPath on a copy, send only the
+      // top-level field that changed.
+      const currentGlobal = await payload.findGlobal({ slug: globalSlug as 'capability-tiles', depth: 0 })
+      const updateData: Record<string, unknown> = { ...(currentGlobal as unknown as Record<string, unknown>) }
+      setPath(updateData, path, value)
+      const topLevelField = getTopLevelField(path)
+      const updated = await payload.updateGlobal({
+        slug: globalSlug as 'capability-tiles',
+        data: { [topLevelField]: updateData[topLevelField] },
+      })
+      try {
+        revalidatePath('/services')
+        revalidatePath('/')
+      } catch {
+        // Revalidation must not fail the update.
+      }
+      return NextResponse.json({ success: true, doc: updated })
+    }
 
     if (!collection || !id || !path) {
       return NextResponse.json({ error: 'Missing collection, id, or path' }, { status: 400 })

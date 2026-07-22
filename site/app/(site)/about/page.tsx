@@ -6,7 +6,7 @@ import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 import Reveal from '@/components/Reveal'
-import { EditableText } from '@/components/admin'
+import { EditableImage, EditableText } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -29,14 +29,23 @@ export default async function AboutPage() {
     return (
       <article>
         <section className="relative hero border-b border-white/10 overflow-hidden">
-          <Image
-            src={heroImage}
-            alt="About page hero"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-35"
-          />
+          <EditableImage
+            collection="pages"
+            documentId={cmsPage.id}
+            fieldPath="media.heroImage"
+            bareRelationship
+            value={heroImage}
+            mediaLibrary={mediaLibrary}
+          >
+            <Image
+              src={heroImage}
+              alt="About page hero"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover opacity-35"
+            />
+          </EditableImage>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
           <div className="max-w-[1120px] mx-auto">
             <p className="overline mb-4">About Us</p>

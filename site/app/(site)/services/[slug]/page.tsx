@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllProjectsResolved, getServiceResolved, getServiceSlugsResolved } from '@/lib/content'
+import { getAllProjectsResolved, getMediaLibrary, getServiceResolved, getServiceSlugsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
@@ -10,7 +10,7 @@ import { buildServiceSchema } from '@/lib/schema'
 import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
-import { EditableText } from '@/components/admin'
+import { EditableImage, EditableText } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -37,9 +37,14 @@ export default async function ServicePage({ params }: Props) {
   // Tech capabilities live at /tech/[slug] — the 301s in next.config.ts cover
   // old /services links; this guards direct hits that bypass the redirect.
   if (service.pageType === 'tech') notFound()
+  const mediaLibrary = await getMediaLibrary()
   const heroImage = service.media?.heroImage || '/og-default.jpg'
   const gallery = service.media?.galleryImages || []
-  const inlineMedia = gallery.filter((img) => img && img !== heroImage)
+  // Keep the raw galleryImages index — it is the inline-edit field path
+  // (media.galleryImages.N). Empty/hero-duplicate rows are skipped at render.
+  const inlineMedia = gallery
+    .map((url, galleryIndex) => ({ url, galleryIndex }))
+    .filter((entry) => entry.url && entry.url !== heroImage)
 
   // Resolve relatedWork slugs (full paths like "/work/foo") against portfolio projects
   const projects = await getAllProjectsResolved()
@@ -68,18 +73,27 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <>
-      <ParallaxHero
-        imageSrc={heroImage}
-        imageAlt={`${service.title} hero`}
-        backHref="/services"
-        backLabel="← Services"
-        eyebrow={service.category}
-        title={service.title}
-        description={service.hero.subheadline}
-        ctaHref={service.hero.cta.url}
-        ctaLabel={service.hero.cta.label}
-        minHeightClass="min-h-[92svh]"
-      />
+      <EditableImage
+        collection="services"
+        documentId={service.id}
+        fieldPath="media.heroImage"
+        bareRelationship
+        value={heroImage}
+        mediaLibrary={mediaLibrary}
+      >
+        <ParallaxHero
+          imageSrc={heroImage}
+          imageAlt={`${service.title} hero`}
+          backHref="/services"
+          backLabel="← Services"
+          eyebrow={service.category}
+          title={service.title}
+          description={service.hero.subheadline}
+          ctaHref={service.hero.cta.url}
+          ctaLabel={service.hero.cta.label}
+          minHeightClass="min-h-[92svh]"
+        />
+      </EditableImage>
 
       {/* Capabilities */}
       <section className="section border-b border-white/10">
@@ -182,13 +196,21 @@ export default async function ServicePage({ params }: Props) {
                 </div>
                 {inlineMedia[i] && (
                   <div className="relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
-                    <Image
-                      src={inlineMedia[i]}
-                      alt={`${service.title} image ${i + 1}`}
-                      fill
-                      sizes="(max-width: 1120px) 100vw, 880px"
-                      className="object-contain"
-                    />
+                    <EditableImage
+                      collection="services"
+                      documentId={service.id}
+                      fieldPath={`media.galleryImages.${inlineMedia[i].galleryIndex}`}
+                      value={inlineMedia[i].url}
+                      mediaLibrary={mediaLibrary}
+                    >
+                      <Image
+                        src={inlineMedia[i].url}
+                        alt={`${service.title} image ${i + 1}`}
+                        fill
+                        sizes="(max-width: 1120px) 100vw, 880px"
+                        className="object-contain"
+                      />
+                    </EditableImage>
                   </div>
                 )}
               </article>

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getTeamResolved } from '@/lib/content'
+import { getMediaLibrary, getTeamResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
+import { EditableImage } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -14,6 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function TeamPage() {
   const data = await getTeamResolved()
+  const mediaLibrary = await getMediaLibrary()
   const sorted = [...data.members].sort((a, b) => a.order - b.order)
   const heroImage = data.media?.heroImage || '/og-default.jpg'
 
@@ -47,13 +49,22 @@ export default async function TeamPage() {
                 <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-5 md:gap-8 items-start">
                   {member.photo?.url && (
                     <div className="relative w-full max-w-[110px] md:max-w-[140px] aspect-square overflow-hidden bg-neutral-950 border border-white/10">
-                      <Image
-                        src={member.photo.url}
-                        alt={member.photo.alt || member.name}
-                        fill
-                        sizes="(max-width: 768px) 110px, 140px"
-                        className="object-cover"
-                      />
+                      <EditableImage
+                        collection="team"
+                        documentId={member.id}
+                        fieldPath="photo"
+                        value={member.photo.url}
+                        alt={member.photo.alt}
+                        mediaLibrary={mediaLibrary}
+                      >
+                        <Image
+                          src={member.photo.url}
+                          alt={member.photo.alt || member.name}
+                          fill
+                          sizes="(max-width: 768px) 110px, 140px"
+                          className="object-cover"
+                        />
+                      </EditableImage>
                     </div>
                   )}
                   <div>

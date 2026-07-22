@@ -1,6 +1,7 @@
 export { AdminEditProvider, useAdminEdit } from './AdminEditContext'
 export { default as AdminOverlay } from './AdminOverlay'
 export { default as EditableGalleryGrid } from './EditableGalleryGrid'
+export { default as EditableImage } from './EditableImage'
 export { default as EditableRichText } from './EditableRichText'
 export { default as EditableServiceTags } from './EditableServiceTags'
 export { default as EditableTechTags } from './EditableTechTags'

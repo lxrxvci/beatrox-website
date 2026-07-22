@@ -3,7 +3,7 @@ import { notFound, redirect } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { normalizeProjectSlug } from '@/lib/json-content'
-import { getAllProjectsResolved, getAllServicesResolved, getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
+import { getAllProjectsResolved, getAllServicesResolved, getMediaLibrary, getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
 import { getImageDimensions } from '@/lib/image-dimensions'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
@@ -13,7 +13,7 @@ import MetadataSchematic from '@/components/MetadataSchematic'
 import KineticHeading from '@/components/KineticHeading'
 import NodeBullet from '@/components/NodeBullet'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
-import { EditableServiceTags, EditableTechTags, EditableText } from '@/components/admin'
+import { EditableImage, EditableServiceTags, EditableTechTags, EditableText } from '@/components/admin'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -45,6 +45,7 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) notFound()
 
   const allServices = await getAllServicesResolved()
+  const mediaLibrary = await getMediaLibrary()
   const serviceOptions = allServices.map((s) => ({ id: s.id, title: s.title, slug: s.slug }))
   const techOptions = allServices
     .filter((s) => s.pageType === 'tech')
@@ -89,17 +90,26 @@ export default async function ProjectPage({ params }: Props) {
       {/* Hero */}
       <section className="relative hero min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
         {heroImage && (
-          <>
-            <Image
-              src={heroImage.url}
-              alt={heroImage.alt}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover opacity-40"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-          </>
+          <EditableImage
+            collection="projects"
+            documentId={project.id}
+            fieldPath={`images.${heroImage.sourceIndex ?? 0}`}
+            value={heroImage.url}
+            alt={heroImage.alt}
+            mediaLibrary={mediaLibrary}
+          >
+            <>
+              <Image
+                src={heroImage.url}
+                alt={heroImage.alt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover opacity-40"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+            </>
+          </EditableImage>
         )}
         <div className="relative max-w-[1400px] mx-auto w-full">
           <Link href="/work" className="mono text-white/60 hover:text-white transition-colors mb-8 inline-block">
@@ -231,7 +241,12 @@ export default async function ProjectPage({ params }: Props) {
       {/* Gallery */}
       {galleryImagesWithoutHero.length > 0 && (
         <section className="border-t border-white/10">
-          <ProjectGallery images={galleryImagesWithoutHero} />
+          <ProjectGallery
+            images={galleryImagesWithoutHero}
+            collection="projects"
+            documentId={project.id}
+            mediaLibrary={mediaLibrary}
+          />
         </section>
       )}
 

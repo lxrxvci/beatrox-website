@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getServicesIndex } from '@/lib/json-content'
-import { getAllServicesResolved, getCMSPageBySlug } from '@/lib/content'
+import { getAllServicesResolved, getCapabilityTiles, getMediaLibrary } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
-import CapabilitiesGrid, { type CapabilityItem } from '@/components/CapabilitiesGrid'
+import CapabilitiesGrid from '@/components/CapabilitiesGrid'
+import { EditableGalleryGrid } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -16,23 +17,11 @@ export default async function ServicesPage() {
   const services = await getAllServicesResolved()
   const servicesHero = services[0]?.media?.heroImage || '/og-default.jpg'
 
-  // The capabilities tile grid is driven by the About page's capabilitiesGrid
-  // CMS block (edited inline there), so one data source feeds both pages.
-  // Only items the owner has enriched (image or link set) render as tiles —
-  // the seeded 32-label service vocabulary is for the text list, so without
-  // enrichment the grid falls back to the curated default tiles.
-  const aboutPage = await getCMSPageBySlug('about')
-  const capabilitiesBlock = aboutPage?.blocks?.find((b) => b.blockType === 'capabilitiesGrid')
-  const capabilityItems: CapabilityItem[] | undefined = capabilitiesBlock?.items
-    ?.filter((item) => Boolean(item.label) && (item.image || item.link))
-    .map((item) => ({
-      label: item.label as string,
-      image: item.image,
-      link: item.link,
-      textPosition: item.textPosition,
-    }))
-
-  const tiles = capabilityItems && capabilityItems.length > 0 ? capabilityItems : undefined
+  // Tiles come from the capability-tiles global — inline-editable right on
+  // this page (image, link, text placement, order). Empty global → curated
+  // defaults from lib/capabilities.
+  const [tiles, mediaLibrary] = await Promise.all([getCapabilityTiles(), getMediaLibrary()])
+  const tileItems = tiles.length > 0 ? tiles : undefined
 
   return (
     <>
@@ -49,7 +38,14 @@ export default async function ServicesPage() {
       <section className="section border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <h2 className="heading-lg mb-10">Our Services</h2>
-          <CapabilitiesGrid items={tiles} />
+          <EditableGalleryGrid
+            globalSlug="capability-tiles"
+            fieldPath="items"
+            items={tileItems ?? []}
+            mediaLibrary={mediaLibrary}
+          >
+            <CapabilitiesGrid items={tileItems} />
+          </EditableGalleryGrid>
         </div>
       </section>
 
