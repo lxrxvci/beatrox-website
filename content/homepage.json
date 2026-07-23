@@ -11,7 +11,7 @@
     }
   },
   "hero": {
-    "headline": "We specialize in experiential design and event production",
+    "headline": "Building Unforgettable Worlds",
     "subheadline": "Pushing the limits of creativity and technology to craft inspiring, unforgettable stories for our audience.",
     "cta": {
       "label": "See Our Work",
@@ -19,7 +19,7 @@
     },
     "secondaryCta": {
       "label": "Book a Consultation",
-      "url": "/services"
+      "url": "/book"
     }
   },
   "sections": [
