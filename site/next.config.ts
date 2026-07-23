@@ -7,16 +7,16 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Rentals now lives on its own dedicated app.
+      // Rentals now lives on its own dedicated app (permanent — passes link equity).
       {
         source: '/rentals',
         destination: 'https://app-ruby-pi-32.vercel.app/',
-        permanent: false,
+        permanent: true,
       },
       {
         source: '/rentals/:path*',
         destination: 'https://app-ruby-pi-32.vercel.app/:path*',
-        permanent: false,
+        permanent: true,
       },
       // Tech capabilities moved from /services/* to dedicated /tech/* landing pages.
       ...[
