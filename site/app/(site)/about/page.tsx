@@ -12,7 +12,7 @@ export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getAboutResolved()
-  return seoToMetadata(data.seo)
+  return seoToMetadata(data.seo, '/about')
 }
 
 export default async function AboutPage() {

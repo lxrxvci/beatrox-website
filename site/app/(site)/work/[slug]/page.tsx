@@ -7,6 +7,8 @@ import { getAllProjectsResolved, getAllServicesResolved, getMediaLibrary, getPro
 import { getImageDimensions } from '@/lib/image-dimensions'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
+import JsonLd from '@/components/JsonLd'
+import { buildBreadcrumbSchema } from '@/lib/schema'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
 import MetadataSchematic from '@/components/MetadataSchematic'
@@ -31,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalSlug = normalizeProjectSlug(slug)
   const project = await getProjectResolved(canonicalSlug)
   if (!project) return {}
-  return seoToMetadata(project.seo)
+  return seoToMetadata(project.seo, `/work/${canonicalSlug}`)
 }
 
 export default async function ProjectPage({ params }: Props) {
@@ -323,6 +325,12 @@ export default async function ProjectPage({ params }: Props) {
           </Link>
         </div>
       </section>
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Work', path: '/work' },
+          { name: project.title, path: `/work/${canonicalSlug}` },
+        ])}
+      />
     </>
   )
 }

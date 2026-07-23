@@ -18,11 +18,15 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const caseStudy = await getCaseStudyResolved(normalizeCaseStudySlug(slug))
+  const canonicalSlug = normalizeCaseStudySlug(slug)
+  const caseStudy = await getCaseStudyResolved(canonicalSlug)
   if (!caseStudy) return {}
   return {
     title: caseStudy.seo.title,
     description: caseStudy.seo.description,
+    alternates: {
+      canonical: `/case-studies/${canonicalSlug}`,
+    },
     openGraph: {
       title: caseStudy.seo.og.title,
       description: caseStudy.seo.og.description,

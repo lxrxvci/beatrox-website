@@ -31,7 +31,7 @@ export async function generateMetadata({
     },
   }
 
-  return seoToMetadata(seo)
+  return seoToMetadata(seo, `/${slug}`)
 }
 
 export default async function CMSPage({

@@ -1,14 +1,26 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllServicesResolved } from '@/lib/content'
+import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
 
 export const revalidate = 300
 
-export const metadata: Metadata = {
-  title: 'Tech Capabilities',
-  description:
-    'The technical capabilities behind Beatrox productions — design, build, technical, and production expertise for experiential environments.',
+export async function generateMetadata(): Promise<Metadata> {
+  const description =
+    'The technical capabilities behind Beatrox productions — design, build, technical, and production expertise for experiential environments.'
+  return seoToMetadata(
+    {
+      title: 'Tech Capabilities',
+      description,
+      og: {
+        title: 'Tech Capabilities — BEATROX',
+        description,
+        image: '/og-default.jpg',
+      },
+    },
+    '/tech',
+  )
 }
 
 // Fixed category order mirrors the About "Tech Capabilities" grouping.
@@ -39,6 +51,47 @@ export default async function TechIndexPage() {
         description="The design, build, technical, and production capabilities behind every Beatrox environment."
         minHeightClass="min-h-[94svh]"
       />
+
+      {/* Intro — crawlable copy positioning the catalog: event technology,
+          AV integration, and technical event production */}
+      <section className="section border-b border-white/10">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white/70 leading-relaxed">
+            <div className="space-y-6">
+              <p>
+                Every Beatrox environment runs on event technology that has to work the first time, in
+                public, with no second take. These tech capabilities are the disciplines behind that
+                reliability — the design, build, technical, and production expertise we apply to
+                technical event production at every scale, from a single interactive kiosk to a
+                festival footprint. The catalog below is organized the way our projects run: design
+                first, then build, then the technical systems, then the production that carries it
+                through show day.
+              </p>
+              <p>
+                Our Portland team handles AV integration the way it should be done: audio, video,
+                lighting, and control engineered as one system rather than three vendor scopes stitched
+                together on load-in day. Design capabilities like environmental design, pre-visualization,
+                and real-time content let you see and approve the experience before a dollar is spent on
+                site.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <p>
+                Build capabilities — CNC machining, staging and rigging, lighting integration — turn
+                approved drawings into physical structures. And our technical and production capabilities
+                keep it all running: system design, engineering certification, media servers,
+                documentation, and the crews who operate it. Every capability is practiced in-house by
+                our Portland team and deployed nationwide — the people who design the system are the
+                people who build, integrate, and operate it.
+              </p>
+              <p>
+                Browse the capabilities below to see how each discipline works — or book a consultation
+                and we'll spec the right combination for your project.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Tech capability link grid — visual style mirrors the About/services link grid */}
       <section className="section border-b border-white/10">

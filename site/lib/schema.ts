@@ -115,3 +115,65 @@ export function buildServiceSchema(
     serviceType: serviceType || 'Experiential Design & Event Production',
   }
 }
+
+export interface FaqItem {
+  question: string
+  answer: string
+}
+
+export interface FaqPageSchema {
+  '@context': 'https://schema.org'
+  '@type': 'FAQPage'
+  mainEntity: {
+    '@type': 'Question'
+    name: string
+    acceptedAnswer: {
+      '@type': 'Answer'
+      text: string
+    }
+  }[]
+}
+
+export function buildFaqSchema(faqItems: FaqItem[]): FaqPageSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  }
+}
+
+export interface BreadcrumbItem {
+  name: string
+  path: string
+}
+
+export interface BreadcrumbListSchema {
+  '@context': 'https://schema.org'
+  '@type': 'BreadcrumbList'
+  itemListElement: {
+    '@type': 'ListItem'
+    position: number
+    name: string
+    item: string
+  }[]
+}
+
+export function buildBreadcrumbSchema(items: BreadcrumbItem[]): BreadcrumbListSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `https://www.beatrox.com${item.path}`,
+    })),
+  }
+}

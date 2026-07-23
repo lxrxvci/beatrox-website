@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import type { SeoMeta } from './content'
 
-export function seoToMetadata(seo: SeoMeta): Metadata {
+export function seoToMetadata(seo: SeoMeta, canonicalPath?: string): Metadata {
   return {
     title: seo.title,
     description: seo.description,
+    // Resolved against metadataBase (root layout: https://www.beatrox.com).
+    ...(canonicalPath ? { alternates: { canonical: canonicalPath } } : {}),
     robots: {
       index: true,
       follow: true,

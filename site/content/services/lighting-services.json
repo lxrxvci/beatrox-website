@@ -2,11 +2,11 @@
   "title": "Lighting Services",
   "slug": "/services/lighting-services",
   "seo": {
-    "title": "Lighting Design & Services — BEATROX",
-    "description": "Beatrox provides full-spectrum lighting services — from environmental and stage lighting design and pre-visualization to lighting integration, programming, and live operation for events and installations.",
+    "title": "Event Lighting Services Portland, OR",
+    "description": "Event lighting services in Portland, OR — design, pre-visualization, integration, programming, and live operation from one lighting team.",
     "og": {
-      "title": "Lighting Design & Services — BEATROX",
-      "description": "Lighting that transforms spaces and elevates every moment — designed, programmed, and operated by Beatrox for events, concerts, and permanent installations.",
+      "title": "Event Lighting Services Portland, OR | BEATROX",
+      "description": "Event lighting services in Portland, OR — design, pre-visualization, integration, programming, and live operation from one lighting team.",
       "image": "/og-default.jpg"
     }
   },
@@ -32,7 +32,7 @@
   "body": [
     {
       "type": "intro",
-      "content": "Lighting is the invisible hand that shapes every experience. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, Beatrox's lighting team designs systems that serve your vision — technically and aesthetically."
+      "content": "Lighting is the invisible hand that shapes every experience — and Beatrox's Portland, Oregon lighting team designs systems for events and installations nationwide. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, our designers serve your vision — technically and aesthetically."
     },
     {
       "type": "trust",

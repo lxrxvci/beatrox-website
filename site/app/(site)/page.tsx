@@ -15,7 +15,7 @@ export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getHomepageResolved()
-  return seoToMetadata(data.seo)
+  return seoToMetadata(data.seo, '/')
 }
 
 export default async function HomePage() {
@@ -49,7 +49,9 @@ export default async function HomePage() {
       {/* ── Infinite Marquee ──────────────────────────────────────────────── */}
       {galleryImages.length > 0 && (
         <Marquee
-          items={galleryImages.slice(0, 8).map((img, idx) => ({ src: img, alt: `Project highlight ${idx + 1}` }))}
+          // No per-image project metadata exists for the home gallery, so use
+          // one descriptive alt; Marquee's duplicated track is aria-hidden.
+          items={galleryImages.slice(0, 8).map((img) => ({ src: img, alt: 'BEATROX live event production installation' }))}
         />
       )}
 

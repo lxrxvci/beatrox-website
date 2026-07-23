@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getProjectSlugsResolved, getProjectTagsResolved, getAllServicesResolved, getCaseStudySlugsResolved } from '@/lib/content'
+import { getProjectSlugsResolved, getAllServicesResolved, getCaseStudySlugsResolved } from '@/lib/content'
 import { readManifest } from '@/lib/youtube/storage'
 
 const BASE_URL = 'https://www.beatrox.com'
@@ -8,7 +8,8 @@ export const revalidate = 300
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectSlugs = await getProjectSlugsResolved()
-  const projectTags = await getProjectTagsResolved()
+  // /work/tag/* pages are intentionally excluded — they're noindex
+  // (thin template pages, doorway-page risk).
   const services = await getAllServicesResolved()
   const caseStudySlugs = await getCaseStudySlugsResolved()
   const videoManifest = readManifest()
@@ -91,13 +92,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
-  const projectTagPages: MetadataRoute.Sitemap = projectTags.map(tag => ({
-    url: `${BASE_URL}/work/tag/${tag}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.5,
-  }))
-
   const servicePages: MetadataRoute.Sitemap = serviceSlugs.map(slug => ({
     url: `${BASE_URL}/services/${slug}`,
     lastModified: new Date(),
@@ -129,5 +123,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     }))
 
-  return [...rootPages, ...projectPages, ...projectTagPages, ...servicePages, ...techPages, ...caseStudyPages, ...videoPages]
+  return [...rootPages, ...projectPages, ...servicePages, ...techPages, ...caseStudyPages, ...videoPages]
 }

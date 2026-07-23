@@ -7,7 +7,7 @@ import { getRentals } from '@/lib/json-content'
 
 export async function generateMetadata(): Promise<Metadata> {
   const rentalsData = getRentals()
-  return seoToMetadata(rentalsData.seo)
+  return seoToMetadata(rentalsData.seo, '/rentals')
 }
 
 export default function RentalsPage() {

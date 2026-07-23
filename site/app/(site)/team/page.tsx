@@ -10,7 +10,7 @@ export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getTeamResolved()
-  return seoToMetadata(data.seo)
+  return seoToMetadata(data.seo, '/team')
 }
 
 export default async function TeamPage() {

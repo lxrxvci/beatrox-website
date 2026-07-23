@@ -2,11 +2,11 @@
   "title": "Technical Documentation",
   "slug": "/services/technical-documentation",
   "seo": {
-    "title": "Technical Documentation",
-    "description": "Beatrox produces technical documentation for events and installations — system diagrams, operating manuals, maintenance guides, and full as-built records.",
+    "title": "Technical Documentation Portland, OR",
+    "description": "Technical documentation in Portland, OR — system diagrams, operating manuals, and as-built records that keep productions repeatable.",
     "og": {
-      "title": "Technical Documentation | BEATROX",
-      "description": "System diagrams, operating manuals, and as-built documentation that keep complex productions running — and repeatable.",
+      "title": "Technical Documentation Portland, OR | BEATROX",
+      "description": "Technical documentation in Portland, OR — system diagrams, operating manuals, and as-built records that keep productions repeatable.",
       "image": "/images/deck/destination/01-image77.png"
     }
   },
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Technical Documentation?",
-      "content": "Technical documentation is the written record of how a production or installation actually works: system diagrams, signal flow, equipment schedules, operating procedures, maintenance guides, and as-built records. It's what allows someone who didn't build the system to run it, fix it, or rebuild it.\n\nYou need technical documentation whenever a system outlives the crew that installed it — a touring show with rotating technicians, a permanent installation maintained by in-house staff, or a brand activation that will be rebuilt in the next city. Without documentation, every handover is a game of telephone and every fault becomes a forensic investigation.\n\nDocumentation also protects the production itself. When the show manual defines power-up sequences, fallback procedures, and who owns which system, show day stops depending on any single person's memory. That's not bureaucracy — that's reliability."
+      "content": "Technical documentation is the written record of how a production or installation actually works — documentation Beatrox produces from Portland, Oregon for events and installations nationwide: system diagrams, signal flow, equipment schedules, operating procedures, maintenance guides, and as-built records. It's what allows someone who didn't build the system to run it, fix it, or rebuild it.\n\nYou need technical documentation whenever a system outlives the crew that installed it — a touring show with rotating technicians, a permanent installation maintained by in-house staff, or a brand activation that will be rebuilt in the next city. Without documentation, every handover is a game of telephone and every fault becomes a forensic investigation.\n\nDocumentation also protects the production itself. When the show manual defines power-up sequences, fallback procedures, and who owns which system, show day stops depending on any single person's memory. That's not bureaucracy — that's reliability."
     },
     {
       "type": "use_cases",

@@ -13,7 +13,7 @@ import ServiceTagCloud from '@/components/ServiceTagCloud'
 export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
-  return seoToMetadata(getWorkIndex().seo)
+  return seoToMetadata(getWorkIndex().seo, '/work')
 }
 
 export default async function WorkPage() {

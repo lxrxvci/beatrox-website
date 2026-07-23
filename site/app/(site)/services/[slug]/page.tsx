@@ -6,7 +6,7 @@ import { getAllProjectsResolved, getMediaLibrary, getServiceResolved, getService
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
-import { buildServiceSchema } from '@/lib/schema'
+import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, type FaqItem } from '@/lib/schema'
 import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = await getServiceResolved(slug)
   if (!service) return {}
-  return seoToMetadata(service.seo)
+  return seoToMetadata(service.seo, `/services/${slug}`)
 }
 
 export default async function ServicePage({ params }: Props) {
@@ -70,6 +70,11 @@ export default async function ServicePage({ params }: Props) {
     )
     .map((project) => ({ work: { title: project.title, slug: `/work/${project.canonicalSlug}` }, project }))
   const allRelatedProjects = [...relatedProjects, ...tagMatchedProjects].slice(0, 6)
+
+  // FAQ body blocks feed the FAQPage JSON-LD (rendered HTML stays unchanged).
+  const faqItems = service.body
+    .filter((block) => block.type === 'faq')
+    .flatMap((block) => (block.items as unknown as FaqItem[]) || [])
 
   return (
     <>
@@ -287,6 +292,13 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
       <JsonLd data={buildServiceSchema(service.title, service.hero.subheadline, service.category)} />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Services', path: '/services' },
+          { name: service.title, path: `/services/${slug}` },
+        ])}
+      />
+      {faqItems.length > 0 && <JsonLd data={buildFaqSchema(faqItems)} />}
     </>
   )
 }

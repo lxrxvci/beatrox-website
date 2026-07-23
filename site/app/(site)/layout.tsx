@@ -8,7 +8,7 @@ import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
 import { AdminEditProvider, AdminOverlay } from '@/components/admin'
 import JsonLd from '@/components/JsonLd'
-import { buildOrganizationSchema } from '@/lib/schema'
+import { buildLocalBusinessSchema, buildOrganizationSchema } from '@/lib/schema'
 import { Analytics } from '@vercel/analytics/react'
 import { getSeoDefaults, getSiteStyles } from '@/lib/content'
 
@@ -93,6 +93,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <body>
         <div className="bg-black text-white antialiased" style={cssVars}>
           <JsonLd data={buildOrganizationSchema()} />
+          <JsonLd data={buildLocalBusinessSchema()} />
           <a href="#main-content" className="skip-link">
             Skip to content
           </a>

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { getContactResolved, getCMSPageBySlug, getMediaLibrary } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
-import JsonLd from '@/components/JsonLd'
-import { buildLocalBusinessSchema } from '@/lib/schema'
 import ContactForm from './ContactForm'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
@@ -12,7 +10,7 @@ export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getContactResolved()
-  return seoToMetadata(data.seo)
+  return seoToMetadata(data.seo, '/contact')
 }
 
 export default async function ContactPage() {
@@ -101,7 +99,6 @@ export default async function ContactPage() {
           </div>
         </div>
       </section>
-      <JsonLd data={buildLocalBusinessSchema()} />
     </>
   )
 }

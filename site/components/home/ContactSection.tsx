@@ -24,6 +24,7 @@ export default async function ContactSection() {
       <div className="text-center">
         <p className="overline mb-4">Contact</p>
         <KineticHeading
+          as="h2"
           text="Let's Build Something Extraordinary"
           className="heading-lg md:heading-xl mx-auto max-w-4xl"
         />
