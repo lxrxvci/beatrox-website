@@ -2,7 +2,7 @@
   "title": "About",
   "slug": "/about",
   "seo": {
-    "title": "About BEATROX — Experiential Design & Event Production",
+    "title": "About BEATROX \u2014 Experiential Design & Event Production",
     "description": "Beatrox is a Portland, OR team of storytellers, engineers, designers, and technologists building world-class experiential events and immersive worlds.",
     "og": {
       "title": "About BEATROX",
@@ -22,22 +22,25 @@
     {
       "type": "text_block",
       "heading": "Our Story",
-      "body": "Beatrox was founded in Portland, Oregon with a single conviction: any idea, no matter how unconventional, is achievable. What started as a small collective of designers and technologists has grown into a full-service experiential design and event production company trusted by some of the world's most iconic brands.\n\nWith over 20 years of combined industry experience, our team has designed and produced events across the United States and internationally — from immersive retail activations for Adidas to large-scale stage fabrication for worldwide tours."
+      "body": "Beatrox was founded in Portland, Oregon with a single conviction: any idea, no matter how unconventional, is achievable. What started as a small collective of designers and technologists has grown into a full-service experiential design and event production company trusted by some of the world's most iconic brands.\n\nWith over 20 years of combined industry experience, our team has designed and produced events across the United States and internationally \u2014 from immersive retail activations for Adidas to large-scale stage fabrication for worldwide tours."
     },
     {
       "type": "three_column",
       "columns": [
         {
           "heading": "Who are we",
-          "body": "We are a team of imaginative storytellers who use technology to bring worlds to life. Our goal is to evoke emotions in our audience and create unforgettable experiences that take you on an exciting and informative journey. Our diverse team of creators, engineers, designers, architects, and technologists work together to turn even the most unconventional ideas into reality."
+          "body": "We are a team of imaginative storytellers who use technology to bring worlds to life. Our goal is to evoke emotions in our audience and create unforgettable experiences that take you on an exciting and informative journey. Our diverse team of creators, engineers, designers, architects, and technologists work together to turn even the most unconventional ideas into reality.",
+          "image": "/images/verified/home/L23640_00_CS_6500_N20_printmedium-4055b62a.jpg"
         },
         {
           "heading": "What we do",
-          "body": "Our services cover everything from experiential design and creative technology to specialized production and custom fabrication. We believe that any idea is achievable, and we are always experimenting with new tools and solutions to bring the best possible results to our clients. Whether it's a narrative or strategy, multimedia design or custom builds, our goal is always to create work that exceeds expectations."
+          "body": "Our services cover everything from experiential design and creative technology to specialized production and custom fabrication. We believe that any idea is achievable, and we are always experimenting with new tools and solutions to bring the best possible results to our clients. Whether it's a narrative or strategy, multimedia design or custom builds, our goal is always to create work that exceeds expectations.",
+          "image": "/images/verified/home/DSC02590-3988912b.jpg"
         },
         {
           "heading": "How we do it",
-          "body": "When we are on your team, collaboration is key. We value open and collaborative relationships with our clients and partners, working together to make great work that inspires wonder and human connection. We are passionate about what we do, and we are always pushing the limits of what is possible. Join us in creating something truly amazing."
+          "body": "When we are on your team, collaboration is key. We value open and collaborative relationships with our clients and partners, working together to make great work that inspires wonder and human connection. We are passionate about what we do, and we are always pushing the limits of what is possible. Join us in creating something truly amazing.",
+          "image": "/images/verified/home/DSC01789-71839f6f.JPG"
         }
       ]
     },

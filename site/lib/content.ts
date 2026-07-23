@@ -416,6 +416,7 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
           return {
             heading: row.heading ? String(row.heading) : undefined,
             body: row.body,
+            image: row.image ? String(row.image) : undefined,
           }
         })
       : undefined,
@@ -1191,7 +1192,7 @@ export interface CMSPageBlock {
   body?: unknown
   images?: Array<{ id?: string; url?: string; alt?: string }>
   items?: Array<{ label?: string; icon?: string; title?: string; body?: unknown; image?: string; link?: string; textPosition?: 'center' | 'top' | 'bottom' | 'below' | 'hidden' }>
-  columns?: Array<{ heading?: string; body?: unknown }>
+  columns?: Array<{ heading?: string; body?: unknown; image?: string }>
   projects?: Array<{
     slug?: string
     title?: string

@@ -179,10 +179,22 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
           if (block.blockType === 'philosophy') {
             const columns = block.columns || []
             if (columns.length === 0) return null
+            // Column-count-aware grid: 4 items (e.g. "What Drives Us" values)
+            // go 4-in-a-row on desktop / 2x2 on small screens instead of 3+1.
+            const gridClass =
+              columns.length === 4
+                ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14'
+                : columns.length === 2
+                  ? 'grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14'
+                  : 'grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14'
+            const imageSizes =
+              columns.length === 4
+                ? '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
+                : '(max-width: 768px) 100vw, 33vw'
             return (
               <article key={key} className="space-y-10">
                 {block.heading && <h2 className="heading-md text-center"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
+                <div className={gridClass}>
                   {columns.map((col, colIndex) => (
                     <Reveal key={`${col.heading}-${colIndex}`} delayMs={colIndex * 120}>
                       {col.image && (
@@ -191,7 +203,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
                             src={col.image}
                             alt={col.heading || 'Philosophy'}
                             fill
-                            sizes="(max-width: 768px) 100vw, 33vw"
+                            sizes={imageSizes}
                             className="object-cover"
                           />
                         </div>

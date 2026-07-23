@@ -49,6 +49,7 @@ async function mapSectionsToBlocks(source, token) {
           columns: section.columns.map((col) => ({
             heading: col.heading || '',
             body: toLexicalBody(col.body),
+            ...(col.image ? { image: col.image } : {}),
           })),
         }
       }
