@@ -42,6 +42,18 @@
   html {
     scroll-behavior: smooth;
   }
+  /* Lock horizontal panning on touch devices. `clip` (not `hidden`) avoids
+     creating a scroll container, so position:sticky and Lenis are unaffected. */
+  html,
+  body {
+    overflow-x: clip;
+  }
+  @supports not (overflow: clip) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+  }
 }
 
 /* Lenis smooth scroll */
