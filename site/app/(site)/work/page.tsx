@@ -113,7 +113,7 @@ export default async function WorkPage() {
       {serviceTags.length > 0 && (
         <section className="section border-t border-white/10">
           <Reveal className="max-w-[1120px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">Browse by Service</h2>
+            <h2 className="hud-label mb-8">Browse by Service</h2>
             <ServiceTagCloud tags={serviceTags} />
           </Reveal>
         </section>

@@ -8,7 +8,6 @@ import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, type FaqItem } from '@/lib/schema'
-import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 import ServiceBodySections from '@/components/ServiceBodySections'
@@ -102,7 +101,8 @@ export default async function ServicePage({ params }: Props) {
       const media = inlineMedia[index]
       if (!media) return null
       return (
-        <div className="relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+        <div className="card-glow scanlines relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+          <span className="hud-corners" aria-hidden="true" />
           <EditableImage
             collection="services"
             documentId={service.id}
@@ -129,8 +129,9 @@ export default async function ServicePage({ params }: Props) {
           <Link
             key={`${entry.project.canonicalSlug}-${entry.imageIndex}`}
             href={`/work/${entry.project.canonicalSlug}`}
-            className="relative block aspect-video bg-neutral-950 border border-white/10 overflow-hidden group"
+            className="card-glow scanlines relative block aspect-video bg-neutral-950 border border-white/10 overflow-hidden group"
           >
+            <span className="hud-corners" aria-hidden="true" />
             <Image
               src={entry.image.url}
               alt={entry.image.alt}
@@ -182,12 +183,13 @@ export default async function ServicePage({ params }: Props) {
             autoEntries={taggedAuto.map(toCurationItem)}
           />
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
-          <div>
-            <h2 className="heading-sm text-white/75 mb-6">Capabilities</h2>
+          <div className="hud-card self-start p-5 md:p-6">
+            <span className="hud-corners" aria-hidden="true" />
+            <h2 className="hud-label mb-6">Capabilities</h2>
             <ul className="space-y-3">
               {service.capabilities.map((cap, i) => (
                 <li key={cap} className="flex items-start gap-3 text-base text-white/75">
-                  <NodeBullet index={i} />
+                  <span className="hud-index shrink-0 mt-1.5" aria-hidden="true">{String(i + 1).padStart(2, '0')} ·</span>
                   <EditableText collection="services" documentId={service.id} fieldPath={`capabilities.${i}`} value={cap}><span>{cap}</span></EditableText>
                 </li>
               ))}
@@ -209,7 +211,7 @@ export default async function ServicePage({ params }: Props) {
       {leftoverImages.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">From Past Projects</h2>
+            <h2 className="hud-label mb-8">From Past Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {leftoverImages.map((entry) => (
                 <Link
@@ -217,7 +219,8 @@ export default async function ServicePage({ params }: Props) {
                   href={`/work/${entry.project.canonicalSlug}`}
                   className="group block"
                 >
-                  <div className="relative aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+                  <div className="card-glow scanlines relative aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+                    <span className="hud-corners" aria-hidden="true" />
                     <Image
                       src={entry.image.url}
                       alt={entry.image.alt}
@@ -240,7 +243,7 @@ export default async function ServicePage({ params }: Props) {
       {allRelatedProjects.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">See It in Action</h2>
+            <h2 className="hud-label mb-8">See It in Action</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
               {allRelatedProjects.map(({ work, project }) => {
                 const taggedThumb = taggedThumbByProject.get(project.canonicalSlug)
@@ -290,9 +293,9 @@ export default async function ServicePage({ params }: Props) {
       )}
 
       {/* CTA */}
-      <section className="section text-center">
+      <section className="section bg-blueprint text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-5">Ready to get <span className="text-[var(--accent)]">started</span>?</h2>
+          <h2 className="heading-md mb-5">Ready to get <span className="glow-text text-[var(--accent)]">started</span>?</h2>
           <p className="text-base text-white/70 mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/book" className="btn-primary btn-primary--accent">Get in Touch</Link>

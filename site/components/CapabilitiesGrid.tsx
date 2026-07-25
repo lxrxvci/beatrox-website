@@ -33,10 +33,11 @@ const POSITION_CLASSES: Record<Exclude<CapabilityTextPosition, 'below' | 'hidden
   bottom: 'items-end justify-center text-center pb-6',
 }
 
-function Tile({ cap }: { cap: Capability }) {
+function Tile({ cap, index }: { cap: Capability; index: number }) {
   const position = cap.textPosition || 'center'
   const label = (
     <span className="font-[family-name:var(--font-heading)] text-[clamp(1.05rem,1.6vw,1.5rem)] font-semibold uppercase tracking-[0.08em] leading-snug">
+      <span className="hud-index mr-2" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
       {cap.label}
     </span>
   )
@@ -47,14 +48,17 @@ function Tile({ cap }: { cap: Capability }) {
       alt={cap.label}
       fill
       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-      className="object-cover"
+      className="object-cover transition-all duration-500 group-hover:brightness-110"
     />
   )
 
   if (position === 'below') {
     return (
       <Link href={cap.href} className="group block" aria-label={cap.label}>
-        <span className="relative block aspect-video overflow-hidden bg-neutral-900">{image}</span>
+        <span className="card-glow scanlines relative block aspect-video overflow-hidden bg-neutral-900 border border-white/10">
+          <span className="hud-corners" aria-hidden="true" />
+          {image}
+        </span>
         <span className="block pt-3 text-white/85 group-hover:text-white transition-colors">{label}</span>
       </Link>
     )
@@ -63,9 +67,10 @@ function Tile({ cap }: { cap: Capability }) {
   return (
     <Link
       href={cap.href}
-      className="group relative block aspect-video overflow-hidden bg-neutral-900"
+      className="card-glow scanlines group relative block aspect-video overflow-hidden bg-neutral-900 border border-white/10"
       aria-label={cap.label}
     >
+      <span className="hud-corners" aria-hidden="true" />
       {image}
       <span
         className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/50"
@@ -111,8 +116,8 @@ export default function CapabilitiesGrid({ items }: CapabilitiesGridProps) {
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-[1.3vw]"
       style={{ width: 'auto' }}
     >
-      {capabilities.map((cap) => (
-        <Tile key={cap.label} cap={cap} />
+      {capabilities.map((cap, i) => (
+        <Tile key={cap.label} cap={cap} index={i} />
       ))}
     </div>
   )

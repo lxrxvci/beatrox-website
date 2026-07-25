@@ -240,9 +240,9 @@ export default async function ServicesPage() {
                       >
                         <span
                           aria-hidden="true"
-                          className="text-[var(--accent)] opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                          className="hud-index opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
                         >
-                          →
+                          ›
                         </span>
                         <span>{item.label}</span>
                       </Link>
