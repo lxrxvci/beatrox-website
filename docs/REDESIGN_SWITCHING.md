@@ -7,8 +7,9 @@ This project maintains **two front-ends**:
 | **Current site (baseline)** | `main` | Production (Vercel `beatrox-website`) |
 | **Alternative redesign** | `redesign` | Vercel preview deployment for the `redesign` branch |
 | **Cyberpunk aesthetic pass** | `cyberpunk` | Vercel preview deployment for the `cyberpunk` branch |
+| **Per-project themed work pages** | `project-themes` | Vercel preview deployment for the `project-themes` branch |
 
-The exact baseline commit is tagged **`baseline-pre-redesign`**. This tag is the permanent restore point for the current site. The `cyberpunk` branch (experiential-cyberpunk HUD aesthetic pass on the work/services/tech pages — presentation only, no content or CMS changes) has its own restore tag **`baseline-pre-cyberpunk`** and follows the same preview/promote/rollback workflow below.
+The exact baseline commit is tagged **`baseline-pre-redesign`**. This tag is the permanent restore point for the current site. The `cyberpunk` branch (experiential-cyberpunk HUD aesthetic pass on the work/services/tech pages — presentation only, no content or CMS changes) has its own restore tag **`baseline-pre-cyberpunk`** and follows the same preview/promote/rollback workflow below. The `project-themes` branch (per-project identities on all 17 `/work/[slug]` pages — scoped accent palettes, hero atmosphere canvas engines, and title reveal variants; presentation only, no content or CMS changes) has its own restore tag **`baseline-pre-project-themes`** and follows the same workflow.
 
 Redesign specification: `beatrox-redesign-plan-for-kimi27.md` (repo root).
 
