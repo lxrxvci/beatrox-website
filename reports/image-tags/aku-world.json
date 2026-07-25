@@ -1,0 +1,210 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/aku-world/01-image27.jpg",
+    "serviceSlugs": ["projection-mapping", "immersive-environments"],
+    "techSlugs": ["environmental-design"],
+    "confidence": "medium",
+    "note": "Immersive room with wall-to-wall projected AKU city scene and character figure"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/aku-world/02-image20.jpg",
+    "serviceSlugs": ["projection-mapping", "custom-fabrication", "immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Venue-wide panoramic projected wall, large helmet sculpture on pedestal, overhead fixtures"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/aku-world/03-image15.jpg",
+    "serviceSlugs": ["projection-mapping", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Dark room, panoramic blue cityscape wall visuals, helmet with glowing visor, visible ceiling rig"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/aku-world/04-image32.jpg",
+    "serviceSlugs": ["event-production", "stage-design"],
+    "techSlugs": ["staging-rigging", "lighting-design"],
+    "confidence": "medium",
+    "note": "Crowd facing stage with circular display, overhead truss with fixtures, orange wash"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/aku-world/05-image31.jpg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Purple-lit merch room, illuminated portal display cases, central logo pedestal"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/aku-world/06-image26.jpg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Two tall holographic-style portal displays showing mask and jacket, purple wash"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/aku-world/07-image36.jpg",
+    "serviceSlugs": ["multimedia-displays", "immersive-environments", "custom-fabrication"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "high",
+    "note": "Subway-lobby room: neon LED tubes, row of touchscreen kiosks, wall-mounted screens"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/aku-world/08-image30.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Large fabricated white dome body-scanner structure with internal lighting"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/aku-world/09-image39.jpg",
+    "serviceSlugs": ["custom-fabrication", "multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "high",
+    "note": "Dome body scanner flanked by two kiosk pedestals, purple wash"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/aku-world/10-image45.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "high",
+    "note": "Close-up of angled touchscreen kiosk showing 'TOUCH TO BEGIN' UI, red neon lighting"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/aku-world/11-image43.jpg",
+    "serviceSlugs": ["custom-fabrication", "immersive-environments"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "medium",
+    "note": "Photo collage: giant astronaut helmet installation in orange-lit room with visitors"
+  },
+  {
+    "index": 11,
+    "url": "/images/deck/aku-world/12-image37.jpg",
+    "serviceSlugs": ["event-production", "immersive-environments", "projection-mapping"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Collage: guests on benches in blue-lit space; lower strip shows crowd before glowing projection wall"
+  },
+  {
+    "index": 12,
+    "url": "/images/deck/aku-world/13-image42.jpg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Collage of gallery room: illuminated display cases with apparel, neon AKU globe sign"
+  },
+  {
+    "index": 13,
+    "url": "/images/deck/aku-world/14-image52.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Guests talking in purple-lit room; no production system beyond ambient designed lighting"
+  },
+  {
+    "index": 14,
+    "url": "/images/portfolio/aku-world/BodyScanner2.jpg",
+    "serviceSlugs": ["custom-fabrication", "multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "high",
+    "note": "Fabricated dome body scanner with flanking touchscreen kiosks, purple floor wash"
+  },
+  {
+    "index": 15,
+    "url": "/images/portfolio/aku-world/MainRoom4.jpg",
+    "serviceSlugs": ["projection-mapping", "custom-fabrication", "immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Main room: panoramic blue cityscape projected wall, helmet with glowing visor on reflective platform"
+  },
+  {
+    "index": 16,
+    "url": "/images/portfolio/aku-world/WideShot.jpeg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication", "immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Wide gallery shot: illuminated display cases both walls, central logo pedestal, blue/purple wash"
+  },
+  {
+    "index": 17,
+    "url": "/images/portfolio/aku-world/Concert-WideAngle.jpg",
+    "serviceSlugs": ["event-production", "stage-design", "multimedia-displays"],
+    "techSlugs": ["lighting-design", "staging-rigging"],
+    "confidence": "high",
+    "note": "Live concert: performers, crowd, circular logo screen, light-panel back wall, overhead truss"
+  },
+  {
+    "index": 18,
+    "url": "/images/portfolio/aku-world/MainRoom5.jpg",
+    "serviceSlugs": ["projection-mapping", "custom-fabrication", "immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Wide main room: panoramic projection walls both sides, central helmet sculpture, ceiling rig"
+  },
+  {
+    "index": 19,
+    "url": "/images/portfolio/aku-world/KIOSKS2.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "high",
+    "note": "Close-up touchscreen kiosk with 'TOUCH TO BEGIN' UI, red neon tubes"
+  },
+  {
+    "index": 20,
+    "url": "/images/portfolio/aku-world/KIOSKS.jpg",
+    "serviceSlugs": ["multimedia-displays", "immersive-environments", "custom-fabrication"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "high",
+    "note": "Subway-lobby: neon purple tube lighting, kiosk row, wall-mounted screens"
+  },
+  {
+    "index": 21,
+    "url": "/images/portfolio/aku-world/Gallery2.jpg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Two portal displays showing gold mask and jacket in purple-lit gallery"
+  },
+  {
+    "index": 22,
+    "url": "/images/portfolio/aku-world/Gallery1.jpg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication", "immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Gallery room wide: illuminated apparel display cases, central AKU logo pedestal, blue wash"
+  },
+  {
+    "index": 23,
+    "url": "/images/portfolio/aku-world/MainRoom2.jpg",
+    "serviceSlugs": ["event-production", "immersive-environments", "projection-mapping"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Collage: audience in blue-lit space; lower strip crowd silhouettes against glowing wall visuals"
+  },
+  {
+    "index": 24,
+    "url": "/images/portfolio/aku-world/GalleryConcept.jpg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Collage of gallery concept: display cases with apparel, neon AKU sign (may include renders)"
+  },
+  {
+    "index": 25,
+    "url": "/images/portfolio/aku-world/MainRoom1.jpg",
+    "serviceSlugs": ["custom-fabrication", "immersive-environments"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "medium",
+    "note": "Collage: giant helmet installation in orange-lit room with visitors"
+  }
+]

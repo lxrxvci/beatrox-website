@@ -1,0 +1,146 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/buzzfeed/01-image290.png",
+    "serviceSlugs": ["stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "speaker on custom stage, large screen, glowing blue circular orbs"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/buzzfeed/02-image293.jpg",
+    "serviceSlugs": ["stage-design", "event-production"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "wide shot of stage with multiple screens framed by colorful circular discs, audience"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/buzzfeed/03-image305.jpg",
+    "serviceSlugs": ["stage-design", "event-production"],
+    "techSlugs": ["lighting-design", "staging-rigging"],
+    "confidence": "medium",
+    "note": "stage with green-lit orbs and screens, overhead truss visible"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/buzzfeed/04-image301.png",
+    "serviceSlugs": ["stage-design", "event-production"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "empty venue, stage with BuzzFeed screens, red spot beams, red disc wall"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/buzzfeed/05-image297.png",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "large curved presentation screen showing BuzzFeed content"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/buzzfeed/06-image309.jpg",
+    "serviceSlugs": ["stage-design"],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "high",
+    "note": "3D pre-viz render of stage layout with screens and orbs"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/buzzfeed/07-image298.jpg",
+    "serviceSlugs": ["stage-design", "event-production"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "live performers on stage with screens and orange orb backdrop"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/buzzfeed/08-image230.jpg",
+    "serviceSlugs": ["experiential-events", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "pink-lit activation room with periodic-table wall installation"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/buzzfeed/09-image295.png",
+    "serviceSlugs": ["projection-mapping", "custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "faceted geometric sculptural structure with colorful projection-mapped facets"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/buzzfeed/10-image299.png",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "large wall with red/white projected graphic in dark venue"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/buzzfeed/11-image294.jpg",
+    "serviceSlugs": ["projection-mapping", "immersive-environments"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "room with green marbled projection covering walls, chairs inside"
+  },
+  {
+    "index": 11,
+    "url": "/images/deck/buzzfeed/12-image296.jpg",
+    "serviceSlugs": ["projection-mapping", "immersive-environments"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "same immersive room, green projection with text on wall"
+  },
+  {
+    "index": 12,
+    "url": "/images/deck/buzzfeed/13-image302.png",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "medium",
+    "note": "glowing interactive touch table and pedestal displays in blue room"
+  },
+  {
+    "index": 13,
+    "url": "/images/deck/buzzfeed/14-image300.png",
+    "serviceSlugs": ["immersive-environments", "projection-mapping"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "purple/blue immersive lounge with projections and geodesic structure"
+  },
+  {
+    "index": 14,
+    "url": "/images/deck/buzzfeed/15-image304.png",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "car with projection-mapped geometric visuals, mapped wall behind"
+  },
+  {
+    "index": 15,
+    "url": "/images/deck/buzzfeed/16-image310.png",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "medium",
+    "note": "woman gesturing at interactive wall showing her silhouette"
+  },
+  {
+    "index": 16,
+    "url": "/images/deck/buzzfeed/17-image308.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["av-content-design"],
+    "confidence": "medium",
+    "note": "2D animated character illustration (content frame, no hardware)"
+  },
+  {
+    "index": 17,
+    "url": "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-703a6f28.jpg",
+    "serviceSlugs": ["stage-design", "event-production"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "wide audience shot of stage with screens and colorful mapped orbs"
+  }
+]

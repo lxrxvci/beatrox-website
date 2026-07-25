@@ -1,0 +1,98 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/disenchantment/01-image80.jpg",
+    "serviceSlugs": ["custom-fabrication", "immersive-environments"],
+    "techSlugs": ["set-scenic-assembly", "trade-convention-booths"],
+    "confidence": "high",
+    "note": "Interior of themed 'poison shop' booth: scenic stone archway, wood shelving with prop potions, rope queue"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/disenchantment/02-image82.jpg",
+    "serviceSlugs": ["custom-fabrication", "immersive-environments"],
+    "techSlugs": ["set-scenic-assembly", "trade-convention-booths"],
+    "confidence": "high",
+    "note": "Booth interior corridor with themed shelving, 'Sold Out' prize wheel, stanchions"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/disenchantment/03-image83.jpg",
+    "serviceSlugs": ["custom-fabrication", "immersive-environments"],
+    "techSlugs": ["set-scenic-assembly", "trade-convention-booths"],
+    "confidence": "high",
+    "note": "Wide exterior of fabricated Disenchantment booth on convention floor, hanging header sign, character cutouts"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/disenchantment/04-image81.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "high",
+    "note": "Close-up of scenic shelving with prop bottles, skull decor, faux-stone valance"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/disenchantment/05-image84.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "medium",
+    "note": "Attendees entering scenic 'Keep Out' archway of booth walkthrough"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/disenchantment/06-image85.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Costumed performers (reaper, witch) in front of booth's scenic spinning-wheel backdrop"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/disenchantment/07-image88.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly", "trade-convention-booths"],
+    "confidence": "high",
+    "note": "Scenic booth wall: faux-stone facade, 'No Entry' door, backlit printed window graphic, 'Help Wanted' sign"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/disenchantment/08-image95.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "high",
+    "note": "'Recipes for Disaster' scenic bookshelf wall with printed graphics and character cutout on ladder"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/disenchantment/09-image103.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["trade-convention-booths"],
+    "confidence": "medium",
+    "note": "Group photo of team in front of booth's scenic shelving interior"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/disenchantment/10-image94.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": ["set-scenic-assembly", "trade-convention-booths"],
+    "confidence": "high",
+    "note": "Wide shot of fabricated booth with large Comic-Con crowd, header sign"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/disenchantment/11-image153.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": ["set-scenic-assembly", "trade-convention-booths"],
+    "confidence": "high",
+    "note": "Crowd queued at fabricated Disenchantment booth exterior"
+  },
+  {
+    "index": 11,
+    "url": "/images/verified/work/disenchantment/disenchantment_preview.jpg",
+    "serviceSlugs": ["custom-fabrication", "immersive-environments"],
+    "techSlugs": ["set-scenic-assembly", "trade-convention-booths"],
+    "confidence": "high",
+    "note": "Clean wide exterior of fabricated booth, header sign, 'Poison Shop' hanging sign, character cutouts"
+  }
+]

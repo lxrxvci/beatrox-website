@@ -1,0 +1,242 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/infinite-playlist/01-image35.jpg",
+    "serviceSlugs": ["custom-fabrication", "led-video-wall-rentals"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "foggy festival crowd; blue Amazon Music Live build exterior and main-stage LED screens visible"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/infinite-playlist/02-image2.jpg",
+    "serviceSlugs": ["experiential-events"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "purple LED-lit room with speaker stacks and neon Amazon Music Live sign"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/infinite-playlist/03-image21.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "guest posing before wall of multicolor LED light strips with Amazon Music sign"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/infinite-playlist/04-image28.jpg",
+    "serviceSlugs": ["custom-fabrication", "multimedia-displays"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "crowd inside activation; speaker-stack wall with embedded screen, LED strips, wall displays"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/infinite-playlist/05-image23.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "dancing crowd under magenta/purple wash lighting, backlit Outside Lands sign"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/infinite-playlist/06-image33.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "custom speaker-wall installation with blue/red LED lighting"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/infinite-playlist/07-image18.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "speaker stacks, LED ceiling glow and neon Amazon Music Live sign in purple-lit room"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/infinite-playlist/08-image40.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "speaker-wall DJ booth structure with moving-head fixtures, haze beams, LED accents"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/infinite-playlist/09-image38.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "LED strip tunnel room with camera robot arm, red/blue lighting"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/infinite-playlist/10-image19.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "camera robot arm in room walled with red LED tubes, spotlight beam"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/infinite-playlist/11-image53.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "robot arm, road cases and staff inside LED strip walled room"
+  },
+  {
+    "index": 11,
+    "url": "/images/deck/infinite-playlist/12-image25.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "blue LED light tunnel with robot arm overhead"
+  },
+  {
+    "index": 12,
+    "url": "/images/deck/infinite-playlist/13-image29.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "camera robot arm in blue LED-lined room with vertical light strips"
+  },
+  {
+    "index": 13,
+    "url": "/images/deck/infinite-playlist/14-image4.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "group of guests posing at multicolor LED strip video-booth backdrop"
+  },
+  {
+    "index": 14,
+    "url": "/images/deck/infinite-playlist/15-image10.png",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "high",
+    "note": "pair of 3D isometric pre-viz renders of the activation layout"
+  },
+  {
+    "index": 15,
+    "url": "/images/deck/infinite-playlist/16-image1.png",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "high",
+    "note": "3D render of booth exterior with LED wall zones and queue barricades"
+  },
+  {
+    "index": 16,
+    "url": "/images/deck/infinite-playlist/17-image11.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "festival atmosphere: Stagecoach sign, palm trees, ferris wheel; no identifiable production system"
+  },
+  {
+    "index": 17,
+    "url": "/images/deck/infinite-playlist/18-image3.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "reflective blue custom-built activation exterior with brand signage and entry queue"
+  },
+  {
+    "index": 18,
+    "url": "/images/deck/infinite-playlist/19-image5.jpg",
+    "serviceSlugs": ["led-video-wall-rentals"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "lounge with large LED video wall playing livestream content, LED strip accent lighting"
+  },
+  {
+    "index": 19,
+    "url": "/images/deck/infinite-playlist/20-image7.jpg",
+    "serviceSlugs": ["multimedia-displays", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "fabricated merch kiosk with large digital 'Wireless Earbuds' display, LED accent lighting"
+  },
+  {
+    "index": 20,
+    "url": "/images/deck/infinite-playlist/21-image6.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "medium",
+    "note": "photo booth kiosk with guests, LED-lit gradient wall panels"
+  },
+  {
+    "index": 21,
+    "url": "/images/deck/infinite-playlist/22-image8.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design", "lighting-design"],
+    "confidence": "high",
+    "note": "digital meet-and-greet schedule display, touchscreen tablet kiosk, LED strip accents"
+  },
+  {
+    "index": 22,
+    "url": "/images/deck/infinite-playlist/23-image9.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "night exterior of reflective build with illuminated Amazon Music Live sign and LED-lit entry"
+  },
+  {
+    "index": 23,
+    "url": "/images/deck/infinite-playlist/24-image16.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "photo booth machine and wall display of captured photo, LED accent lighting"
+  },
+  {
+    "index": 24,
+    "url": "/images/deck/infinite-playlist/25-image12.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "blue LED-lit tiered seating steps with Amazon Music Live sign"
+  },
+  {
+    "index": 25,
+    "url": "/images/deck/infinite-playlist/26-image13.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "blue LED-lit nook with digital 'Neon Cowboy Hat' merch giveaway display"
+  },
+  {
+    "index": 26,
+    "url": "/images/deck/infinite-playlist/27-image22.png",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization", "staging-rigging"],
+    "confidence": "medium",
+    "note": "3D structural model of build with overhead truss grid and access ramps"
+  },
+  {
+    "index": 27,
+    "url": "/images/deck/infinite-playlist/28-image14.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["drafting-detail-drawings", "pre-visualization"],
+    "confidence": "high",
+    "note": "screen photo of CAD model detailing wall corner LED strip extrusions"
+  },
+  {
+    "index": 28,
+    "url": "/images/deck/infinite-playlist/29-image17.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["drafting-detail-drawings", "pre-visualization", "lighting-design"],
+    "confidence": "high",
+    "note": "screen photo of CAD 3D interior model showing seating and lighting fixture layout"
+  },
+  {
+    "index": 29,
+    "url": "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg",
+    "serviceSlugs": ["custom-fabrication", "led-video-wall-rentals"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "festival crowd; blue Amazon Music Live build and Twin Peaks main stage with LED screens"
+  }
+]

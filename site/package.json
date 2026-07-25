@@ -27,7 +27,9 @@
     "redirects:hygiene": "python ./scripts/redirects_hygiene.py",
     "redirects:hygiene:apply": "python ./scripts/redirects_hygiene.py --apply",
     "youtube:sync": "node ./scripts/youtube-sync.mjs",
-    "seo:audit": "node ./scripts/seo-audit.mjs"
+    "seo:audit": "node ./scripts/seo-audit.mjs",
+    "tags:images": "esbuild scripts/apply-image-tags.mjs --bundle --platform=node --format=esm --outfile=scripts/.tmp/apply-image-tags.mjs --external:payload --external:@payloadcms/* --external:next --external:googleapis --external:resend --alias:next/headers=./scripts/stubs/next-headers-stub.mjs --tsconfig=tsconfig.json --log-level=warning && node scripts/.tmp/apply-image-tags.mjs",
+    "tags:images:apply": "esbuild scripts/apply-image-tags.mjs --bundle --platform=node --format=esm --outfile=scripts/.tmp/apply-image-tags.mjs --external:payload --external:@payloadcms/* --external:next --external:googleapis --external:resend --alias:next/headers=./scripts/stubs/next-headers-stub.mjs --tsconfig=tsconfig.json --log-level=warning && node scripts/.tmp/apply-image-tags.mjs --apply"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.85.1",

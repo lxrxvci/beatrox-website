@@ -1,0 +1,114 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/the-great-escape/01-image97.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "wall-mounted digital screen displaying game instructions"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/the-great-escape/02-image105.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "wide shot of custom-built branded escape-room structure with crowd"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/the-great-escape/03-image100.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "wide shot of fabricated activation structure with gold interior and crowd"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/the-great-escape/04-image101.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "branded shoe display pedestal inside gold vault set"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/the-great-escape/05-image106.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "printed instruction graphic on vault wall, no hardware visible"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/the-great-escape/06-image102.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "vault interior with prop shelf and branded gold walls"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/the-great-escape/07-image104.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "glass-walled branded activation structure exterior with banners"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/the-great-escape/08-image107.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "people beside printed instruction panel, no identifiable system"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/the-great-escape/09-image129.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "medium",
+    "note": "guests manipulating interactive puzzle wall under digital countdown timer"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/the-great-escape/10-image131.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "branded shoe display pedestals and UltraBoost banners"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/the-great-escape/11-image117.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "shoe display pedestal inside gold-walled vault"
+  },
+  {
+    "index": 11,
+    "url": "/images/deck/the-great-escape/12-image110.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "man reading printed instruction graphic"
+  },
+  {
+    "index": 12,
+    "url": "/images/deck/the-great-escape/13-image124.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "guests and staff at product table, no identifiable system"
+  },
+  {
+    "index": 13,
+    "url": "/images/verified/work/the-great-escape/the_great_escape_preview.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "wide shot of branded activation structure with crowd"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "url": "/images/portfolio/run-for-the-oceans/KMP_2618.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "immersive-environments"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "person inside infinity tunnel lined wall-to-wall with LED panels showing ocean content"
+  },
+  {
+    "index": 1,
+    "url": "/images/portfolio/run-for-the-oceans/KMP_2820.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "immersive-environments"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "LED infinity-mirror tunnel interior, bright blue ocean visuals on both walls"
+  },
+  {
+    "index": 2,
+    "url": "/images/portfolio/run-for-the-oceans/KMP_3614.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "immersive-environments"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "visitors inside LED tunnel with mirrored floor/ceiling and bold campaign text on screens"
+  },
+  {
+    "index": 3,
+    "url": "/images/portfolio/run-for-the-oceans/RTFO2019-PICS-KMP_2875.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "immersive-environments"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "person posing between LED walls displaying ocean/plastic-waste messaging, mirror reflections"
+  },
+  {
+    "index": 4,
+    "url": "/images/portfolio/run-for-the-oceans/DeckScreenCap1.png",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "medium",
+    "note": "design deck slide with 3D concept renders of the container exterior (whale graphic)"
+  },
+  {
+    "index": 5,
+    "url": "/images/portfolio/run-for-the-oceans/DeckScreenCap3.png",
+    "serviceSlugs": [],
+    "techSlugs": ["site-floor-plans"],
+    "confidence": "medium",
+    "note": "deck slide showing isometric event site layout / floor plan of activation"
+  }
+]

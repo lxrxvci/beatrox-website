@@ -1,0 +1,90 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/el-camino/01-image134.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "high",
+    "note": "Scenic garage set with El Camino car, branded wall, barrels, chain-link"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/el-camino/02-image115.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "high",
+    "note": "Fabricated interior scenic set: branded barrels, prop shelving, scenic walls"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/el-camino/03-image116.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Attendees photographing branded bee-logo barrel props"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/el-camino/04-image119.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Close-up of prop money barrel scenic prop"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/el-camino/05-image120.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "medium",
+    "note": "Costumed staff inside chain-link cage scenic set with barrel prop"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/el-camino/06-image122.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Costumed activation staff; branded barrel props visible behind"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/el-camino/07-image121.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "high",
+    "note": "Guests photographing car in branded garage scenic set"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/el-camino/08-image126.jpg",
+    "serviceSlugs": ["custom-fabrication", "experiential-events"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "high",
+    "note": "Photo-op with El Camino car in fabricated branded garage set"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/el-camino/09-image146.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Guests posing at branded El Camino photo-op backdrop wall"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/el-camino/13-image171.jpg",
+    "serviceSlugs": ["multimedia-displays"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "high",
+    "note": "Interactive kiosk UI: 'Send video by email' touchscreen keyboard screen"
+  },
+  {
+    "index": 10,
+    "url": "/images/verified/work/el-camino/el_camino_preview.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Close-up of prop money barrel scenic prop (preview image)"
+  }
+]

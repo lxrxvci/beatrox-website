@@ -1,0 +1,170 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/projekt-x/01-image46.jpg",
+    "serviceSlugs": ["custom-fabrication", "projection-mapping", "laser-shows"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "X scenic element with projected 'THE FUTURE' text on wings, green laser beams, crowd"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/projekt-x/02-image49.jpg",
+    "serviceSlugs": ["custom-fabrication", "led-video-wall-rentals", "laser-shows"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Red pixel-textured X wings, crossing white beams over crowd; LED vs projection ambiguous"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/projekt-x/03-image41.jpg",
+    "serviceSlugs": ["custom-fabrication", "projection-mapping"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Blue-lit X with 'X DEPARTED' text and lightning graphics on wing surfaces, spotlights, crowd"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/projekt-x/04-image34.jpg",
+    "serviceSlugs": ["stage-design", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Blue stage with X element center, draped ceiling treatment, crowd"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/projekt-x/05-image47.jpg",
+    "serviceSlugs": ["stage-design", "event-production"],
+    "techSlugs": ["staging-rigging", "lighting-design", "technical-direction"],
+    "confidence": "high",
+    "note": "Flown truss X/wing rig with LED battens over crowd, FOH control consoles with operators at bottom"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/projekt-x/06-image57.jpg",
+    "serviceSlugs": ["custom-fabrication", "led-video-wall-rentals"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "White line-art X outline with abstract line graphics on large display surface above crowd"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/projekt-x/07-image74.jpg",
+    "serviceSlugs": ["custom-fabrication", "dj-equipment-rentals"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Two DJs at CDJ/mixer decks with glowing blue/pink X element behind them"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/projekt-x/08-image75.jpg",
+    "serviceSlugs": ["laser-shows", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Magenta beam/laser fans over crowd, X element with red wing visible"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/projekt-x/09-image55.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "custom-fabrication", "laser-shows"],
+    "techSlugs": ["lighting-design", "lighting-integration"],
+    "confidence": "high",
+    "note": "Red pixel-mapped LED wings with horizontal white laser lines, X outline center, crowd"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/projekt-x/10-image50.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Lit X outline element in yellow/green wash over crowd silhouettes"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/projekt-x/11-image44.jpg",
+    "serviceSlugs": ["custom-fabrication", "projection-mapping", "laser-shows"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Duplicate of index 0: X with projected 'THE FUTURE' text, laser beams, crowd"
+  },
+  {
+    "index": 11,
+    "url": "/images/deck/projekt-x/12-image48.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly"],
+    "confidence": "medium",
+    "note": "Workshop/warehouse scene with X element being built and tested (low-res collage still)"
+  },
+  {
+    "index": 12,
+    "url": "/images/deck/projekt-x/13-image58.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly", "lighting-integration"],
+    "confidence": "high",
+    "note": "Physical X structure with edge-lit LED strips standing in fabrication workshop"
+  },
+  {
+    "index": 13,
+    "url": "/images/portfolio/projekt-x/IMG_3944.jpg",
+    "serviceSlugs": ["custom-fabrication", "led-video-wall-rentals", "laser-shows"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Duplicate of index 1: red pixel-textured X wings, crossing white beams, crowd"
+  },
+  {
+    "index": 14,
+    "url": "/images/portfolio/projekt-x/StillsFromVideo6.jpg",
+    "serviceSlugs": ["event-production", "custom-fabrication"],
+    "techSlugs": ["lighting-design", "lighting-integration"],
+    "confidence": "medium",
+    "note": "Wide crowd shot with LED batten strips lining ceiling, X logo element at stage end"
+  },
+  {
+    "index": 15,
+    "url": "/images/portfolio/projekt-x/StillsFromVideo12.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "custom-fabrication", "laser-shows"],
+    "techSlugs": ["lighting-design", "lighting-integration"],
+    "confidence": "high",
+    "note": "Duplicate of index 8: red LED wings, horizontal laser lines, X outline, crowd"
+  },
+  {
+    "index": 16,
+    "url": "/images/portfolio/projekt-x/StillsFromVideo14.jpg",
+    "serviceSlugs": ["custom-fabrication", "led-video-wall-rentals"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Duplicate of index 5: white line-art X outline with abstract graphics above crowd"
+  },
+  {
+    "index": 17,
+    "url": "/images/portfolio/projekt-x/StillsFromVideo15.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Large angled LED screens showing glitch/red content, X logo center, crowd"
+  },
+  {
+    "index": 18,
+    "url": "/images/portfolio/projekt-x/StillsFromVideo16.jpg",
+    "serviceSlugs": ["laser-shows", "custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Blue laser beams crossing in X formation over crowd, lit X element at center"
+  },
+  {
+    "index": 19,
+    "url": "/images/portfolio/projekt-x/StillsFromVideo8.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "custom-fabrication", "event-production"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Wide crowd shot with two angled LED screens showing content, X logo between them"
+  },
+  {
+    "index": 20,
+    "url": "/images/portfolio/projekt-x/VIDEO009_Moment.jpg",
+    "serviceSlugs": ["custom-fabrication", "dj-equipment-rentals"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Duplicate of index 6: two DJs at CDJ/mixer decks with glowing X element behind"
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/myshelter/01-image51.jpg",
+    "serviceSlugs": ["immersive-environments", "custom-fabrication"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "medium",
+    "note": "entrance with MYSHELTER wall signage, glowing foliage canopy, warm light, visitor silhouette"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/myshelter/02-image67.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "street exterior of bodega with crowd and taxi; no production system visible"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/myshelter/03-image61.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["environmental-design"],
+    "confidence": "medium",
+    "note": "MYSHELTER painted signage on boarded storefront doors with graffiti"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/myshelter/04-image69.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "graffiti-covered storefront windows; no production system visible"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/myshelter/05-image63.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "high",
+    "note": "corridor with vertical LED tubes, low fog, hanging street sign and foliage canopy"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/myshelter/06-image62.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "visitor posing in foggy corridor lined with vertical LED tubes"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/myshelter/07-image66.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "high",
+    "note": "LED tube corridor with hanging foliage canopy, custom sign, MYSHELTER end wall"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/myshelter/08-image56.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly", "environmental-design"],
+    "confidence": "high",
+    "note": "custom traffic-light prop and street signs with hanging foliage, warm lighting"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/myshelter/09-image54.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "two visitors taking selfie in foggy corridor; LED tube and street sign visible"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/myshelter/10-image59.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "jacket display rack with vertical LED tubes and fog"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/myshelter/11-image76.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "person standing in foggy corridor with vertical LED tubes, amber/pink wash"
+  },
+  {
+    "index": 11,
+    "url": "/images/deck/myshelter/12-image60.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "man on display platform with yellow LED strip edge and vertical LED tubes"
+  },
+  {
+    "index": 12,
+    "url": "/images/deck/myshelter/13-image65.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "high",
+    "note": "empty corridor with LED tubes, fog, hanging street sign, amber wash"
+  },
+  {
+    "index": 13,
+    "url": "/images/deck/myshelter/14-image68.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "same corridor in blue/purple lighting scene with LED tubes and hanging sign"
+  },
+  {
+    "index": 14,
+    "url": "/images/deck/myshelter/15-image64.jpg",
+    "serviceSlugs": ["immersive-environments", "custom-fabrication"],
+    "techSlugs": ["lighting-design", "set-scenic-assembly"],
+    "confidence": "high",
+    "note": "colorful scene with traffic-light prop, hanging foliage, geometric scenic shapes, LED tubes"
+  },
+  {
+    "index": 15,
+    "url": "/images/portfolio/myshelter/Middle.jpg",
+    "serviceSlugs": ["immersive-environments", "custom-fabrication"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "medium",
+    "note": "entrance with MYSHELTER letters and glowing green foliage canopy, visitor"
+  },
+  {
+    "index": 16,
+    "url": "/images/portfolio/myshelter/CooridorEmpty.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design", "environmental-design"],
+    "confidence": "high",
+    "note": "empty foggy corridor with vertical LED tubes, hanging sign and foliage"
+  },
+  {
+    "index": 17,
+    "url": "/images/portfolio/myshelter/CustomSign1.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["environmental-design"],
+    "confidence": "medium",
+    "note": "Adidas MYSHELTER logo wall in gold/yellow"
+  },
+  {
+    "index": 18,
+    "url": "/images/portfolio/myshelter/INTERIOR1.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["set-scenic-assembly", "environmental-design", "lighting-design"],
+    "confidence": "high",
+    "note": "custom traffic-light prop, street signs and hanging foliage in warm light"
+  },
+  {
+    "index": 19,
+    "url": "/images/portfolio/myshelter/IMG_9687.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "portrait of man in yellow jacket in amber-lit space; no identifiable system"
+  },
+  {
+    "index": 20,
+    "url": "/images/portfolio/myshelter/IMG_9700.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "jacket rack with vertical LED tube and fog, warm wash"
+  },
+  {
+    "index": 21,
+    "url": "/images/portfolio/myshelter/image-asset.png",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "MYSHELTER wall with LED tube light streaks; possibly a concept render"
+  },
+  {
+    "index": 22,
+    "url": "/images/portfolio/myshelter/IMG_9694.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "street exterior of bodega with crowd and taxi (duplicate of index 1)"
+  },
+  {
+    "index": 23,
+    "url": "/images/portfolio/myshelter/IMG_9699.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["environmental-design"],
+    "confidence": "medium",
+    "note": "MYSHELTER painted signage on boarded doors (duplicate of index 2)"
+  },
+  {
+    "index": 24,
+    "url": "/images/portfolio/myshelter/IMG_9681.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["environmental-design"],
+    "confidence": "medium",
+    "note": "bodega interior with branded yellow MYSHELTER retail display panels and fridges"
+  },
+  {
+    "index": 25,
+    "url": "/images/portfolio/myshelter/IMG_9675.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "branded storefront window display with yellow jackets in refrigerated case"
+  },
+  {
+    "index": 26,
+    "url": "/images/portfolio/myshelter/IMG_9673.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "close-up of yellow MyShelter jackets with product tags; product only"
+  }
+]

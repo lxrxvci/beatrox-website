@@ -1,0 +1,170 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/destination/01-image77.png",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "high",
+    "note": "Close-up of custom-built button controller console, hand pressing a button"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/destination/02-image86.png",
+    "serviceSlugs": ["led-video-wall-rentals", "stage-design", "event-production"],
+    "techSlugs": ["staging-rigging", "lighting-design"],
+    "confidence": "high",
+    "note": "Night concert: stage with truss towers, LED IMAG screen, stage lighting, painted canvas facade, large crowd"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/destination/03-image111.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["staging-rigging"],
+    "confidence": "high",
+    "note": "40-ft painted canvas structure with Adidas logo, scaffold towers both sides"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/destination/04-image89.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Performer posing in front of the painted canvas structure (backdrop clearly visible)"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/destination/05-image79.png",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "high",
+    "note": "3D render/pre-viz of the canvas tower structure with colorful paint stripes"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/destination/06-image87.png",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "high",
+    "note": "3D product render of the custom button controller on gray background"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/destination/07-image137.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "high",
+    "note": "Hands pressing buttons on custom controller console, paint color strips, truss behind"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/destination/08-image108.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "high",
+    "note": "Participant pressing button on Destination controller, painted canvas behind"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/destination/09-image73.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["staging-rigging"],
+    "confidence": "high",
+    "note": "Close-up of painted canvas with drips, Adidas logo, scaffold structure visible"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/destination/10-image109.jpg",
+    "serviceSlugs": ["event-production", "experiential-events"],
+    "techSlugs": ["lighting-design", "staging-rigging"],
+    "confidence": "medium",
+    "note": "Festival-wide night shot: uplit sculptural columns, truss with illuminated sign, tents, crowd, colored washes"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/destination/11-image114.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "stage-design", "event-production"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Concert stage at night with LED screen, haze and stage lighting, branded banner, crowd"
+  },
+  {
+    "index": 11,
+    "url": "/images/deck/destination/12-image113.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "stage-design", "event-production"],
+    "techSlugs": ["staging-rigging", "lighting-design"],
+    "confidence": "high",
+    "note": "Night concert: stage with truss towers, LED IMAG screen, stage lighting, painted canvas facade, large crowd"
+  },
+  {
+    "index": 12,
+    "url": "/images/deck/destination/13-image78.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "dj-equipment-rentals"],
+    "techSlugs": ["av-content-design"],
+    "confidence": "high",
+    "note": "DJ at decks/mixer in front of large LED wall showing branded Adidas/Journeys motion graphics"
+  },
+  {
+    "index": 13,
+    "url": "/images/portfolio/destination/IMG_5461.PNG",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "high",
+    "note": "3D render/pre-viz of the canvas tower structure (same render as index 4)"
+  },
+  {
+    "index": 14,
+    "url": "/images/portfolio/destination/midi_controller_v_white.png",
+    "serviceSlugs": [],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "high",
+    "note": "3D product render of the custom button controller (same render as index 5)"
+  },
+  {
+    "index": 15,
+    "url": "/images/portfolio/destination/PicsForDeck2.PNG",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": ["interactive-ui-ux-design"],
+    "confidence": "high",
+    "note": "Close-up of custom button controller console, hand pressing a button (same photo as index 0)"
+  },
+  {
+    "index": 16,
+    "url": "/images/portfolio/destination/PicsForDeck3.PNG",
+    "serviceSlugs": [],
+    "techSlugs": ["labor-hire-crew-roles"],
+    "confidence": "medium",
+    "note": "Crew in protective suits pouring/mixing paint on rooftop during install prep"
+  },
+  {
+    "index": 17,
+    "url": "/images/portfolio/destination/IMG_8549.jpg",
+    "serviceSlugs": ["custom-fabrication"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Performer posing in front of the painted canvas structure (same photo as index 3)"
+  },
+  {
+    "index": 18,
+    "url": "/images/portfolio/destination/DESTINATION_SD_5of7.jpg",
+    "serviceSlugs": ["event-production", "experiential-events"],
+    "techSlugs": ["lighting-design", "staging-rigging"],
+    "confidence": "medium",
+    "note": "Festival-wide night shot: uplit columns, truss with illuminated sign, tents, crowd (same photo as index 9)"
+  },
+  {
+    "index": 19,
+    "url": "/images/portfolio/destination/IMG_9610.jpg",
+    "serviceSlugs": ["led-video-wall-rentals", "stage-design", "event-production"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Concert stage at night with LED screen, haze and stage lighting, branded banner, crowd (same photo as index 10)"
+  },
+  {
+    "index": 20,
+    "url": "/images/portfolio/destination/IMG_9776.jpg",
+    "serviceSlugs": ["event-production"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Performer on stage in red wash and haze, crowd with hands up; no hardware clearly visible"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/cnn-road-to-270/01-image250.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Empire State Building facade covered in projected red/white/blue election-map content at night"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/cnn-road-to-270/02-image235.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "CNN 'Road to 270' graphics projected on Empire State Building above skyline"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/cnn-road-to-270/03-image239.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Empire State Building projection-mapped in red/white/blue patterns at night"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/cnn-road-to-270/04-image244.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Projected face and 'NEW YORK' text on building, rooftop projector enclosures with ducting in foreground"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/cnn-road-to-270/05-image229.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Rooftop array of large projector enclosures emitting bright projection beams into night sky"
+  },
+  {
+    "index": 5,
+    "url": "/images/verified/work/cnn-road-to-270/cnn_road_to_270_preview.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Duplicate of index 4: rooftop projector rig firing light beams"
+  }
+]

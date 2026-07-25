@@ -1,0 +1,90 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/projecting-change-racing-extinction/02-image224.png",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Night shot of Empire State Building with warm-toned wildlife imagery projected on facade"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/projecting-change-racing-extinction/03-image232.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Empire State Building with large projected scorpion/insect image on facade"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/projecting-change-racing-extinction/04-image228.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Empire State Building lit blue/green with large projected eye image"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/projecting-change-racing-extinction/05-image312.jpg",
+    "serviceSlugs": ["projection-mapping", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "St. Peter's Basilica facade with white leopard projection, large crowd watching in plaza"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/projecting-change-racing-extinction/06-image231.jpg",
+    "serviceSlugs": ["projection-mapping", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Building facade covered in colorful butterfly projections, crowd in foreground"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/projecting-change-racing-extinction/07-image237.jpg",
+    "serviceSlugs": ["projection-mapping", "experiential-events"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "Wide projector light beams (blue/yellow) shooting over crowd and buildings at dusk"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/projecting-change-racing-extinction/08-image270.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "St. Peter's Square colonnade and dome bathed in blue projected content (Obscura watermark)"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/projecting-change-racing-extinction/09-image238.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "Building facade with projected text/graphics, dome lit blue above"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/projecting-change-racing-extinction/10-image242.jpg",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": ["pre-visualization"],
+    "confidence": "medium",
+    "note": "Projection test on small physical scale model of building, hand with toy car"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/projecting-change-racing-extinction/11-image241.png",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": ["media-server-playback-solutions", "technical-direction"],
+    "confidence": "medium",
+    "note": "Rooftop projector arrays and operators at dual playback monitors overlooking projected building at dusk"
+  },
+  {
+    "index": 10,
+    "url": "/images/verified/work/projecting-change-racing-extinction/projecting_change_racing_extinction_preview.png",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": ["media-server-playback-solutions", "technical-direction"],
+    "confidence": "medium",
+    "note": "Same rooftop projection control position: projector banks, operators at monitors, domed building at dusk"
+  }
+]

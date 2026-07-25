@@ -1,0 +1,98 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/g-man-experiential-campaign/01-image264.png",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Toyota SUV inside teal immersive light tunnel with swirling patterns"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/g-man-experiential-campaign/02-image262.png",
+    "serviceSlugs": ["projection-mapping"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "light-line pattern wrapping car body contours; could be projection on car or tunnel reflections"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/g-man-experiential-campaign/03-image271.png",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "car rear inside radiating-line light tunnel"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/g-man-experiential-campaign/05-image265.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": [],
+    "confidence": "medium",
+    "note": "guests taking selfie with car and light tunnel backdrop visible"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/g-man-experiential-campaign/06-image267.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "crowd in dark venue with blue illuminated geometric structures"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/g-man-experiential-campaign/07-image266.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "crowd shot with blue lit geometric structures in background"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/g-man-experiential-campaign/08-image269.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "car side inside teal radiating-line light tunnel"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/g-man-experiential-campaign/09-image282.jpg",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "interior of immersive light tunnel converging on illuminated end screen"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/g-man-experiential-campaign/10-image283.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "radial blue/purple light beam installation with on-screen text; no clear laser hardware"
+  },
+  {
+    "index": 9,
+    "url": "/images/deck/g-man-experiential-campaign/11-image273.jpg",
+    "serviceSlugs": [],
+    "techSlugs": [],
+    "confidence": "high",
+    "note": "ornate clock-face graphic on black; no production system visible"
+  },
+  {
+    "index": 10,
+    "url": "/images/deck/g-man-experiential-campaign/12-image278.jpg",
+    "serviceSlugs": [],
+    "techSlugs": ["3d-animation-motion-capture"],
+    "confidence": "medium",
+    "note": "3D animated clockwork gears render in purple/blue"
+  },
+  {
+    "index": 11,
+    "url": "/images/verified/work/g-man-experiential-campaign/g_man_experiential_campaign_preview.png",
+    "serviceSlugs": ["immersive-environments"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Toyota SUV in teal immersive light tunnel (preview, same scene as index 0)"
+  }
+]

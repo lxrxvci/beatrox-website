@@ -1,0 +1,82 @@
+[
+  {
+    "index": 0,
+    "url": "/images/deck/create-our-future/01-image70.png",
+    "serviceSlugs": ["experiential-events"],
+    "techSlugs": ["realtime-content-ar-vr-xr", "interactive-ui-ux-design"],
+    "confidence": "medium",
+    "note": "Guest wearing VR headset with hand controllers at interactive avatar station; branded backdrop and wall screen"
+  },
+  {
+    "index": 1,
+    "url": "/images/deck/create-our-future/02-image72.png",
+    "serviceSlugs": ["projection-mapping", "stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Band on stage with geometric projection-mapped cyc wall and yellow/orange beam lighting"
+  },
+  {
+    "index": 2,
+    "url": "/images/deck/create-our-future/03-image91.jpg",
+    "serviceSlugs": ["projection-mapping", "stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Singer silhouette against blue/orange beams with wireframe projection content on rear wall"
+  },
+  {
+    "index": 3,
+    "url": "/images/deck/create-our-future/04-image96.jpg",
+    "serviceSlugs": ["projection-mapping", "stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Keyboardist and drummer under green/yellow beams; geometric line content on rear wall (projection vs laser ambiguous)"
+  },
+  {
+    "index": 4,
+    "url": "/images/deck/create-our-future/05-image92.jpg",
+    "serviceSlugs": ["projection-mapping", "stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Guitarist silhouette with blue/orange spot beams and projection-mapped wall content"
+  },
+  {
+    "index": 5,
+    "url": "/images/deck/create-our-future/06-image90.jpg",
+    "serviceSlugs": ["stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "medium",
+    "note": "Dark stage moment with single blue spot beam on performer; wall content barely visible"
+  },
+  {
+    "index": 6,
+    "url": "/images/deck/create-our-future/07-image98.jpg",
+    "serviceSlugs": ["projection-mapping", "stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Performer under blue wash with projection-mapped wireframe cubes across rear wall"
+  },
+  {
+    "index": 7,
+    "url": "/images/deck/create-our-future/08-image93.jpg",
+    "serviceSlugs": ["projection-mapping", "stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Wide stage shot, red/white spots, geometric projection content wrapping both walls"
+  },
+  {
+    "index": 8,
+    "url": "/images/deck/create-our-future/09-image71.jpg",
+    "serviceSlugs": ["projection-mapping", "stage-design", "immersive-environments"],
+    "techSlugs": ["lighting-design", "staging-rigging"],
+    "confidence": "medium",
+    "note": "Full-room wide shot: overhead truss grid, green beam show, wraparound projection wall, crowd silhouettes"
+  },
+  {
+    "index": 9,
+    "url": "/images/verified/work/create-our-future/IMG_2959-154e3954.jpg",
+    "serviceSlugs": ["projection-mapping", "stage-design"],
+    "techSlugs": ["lighting-design"],
+    "confidence": "high",
+    "note": "Performer at mic stand under blue spot with projection-mapped wireframe cubes on rear wall"
+  }
+]
