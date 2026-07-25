@@ -103,6 +103,10 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           <a href="#main-content" className="skip-link">
             Skip to content
           </a>
+          {/* Film-grain atmosphere — decorative noise overlay above page
+              backgrounds, below nav/admin chrome. Non-interactive, hidden
+              from assistive tech. */}
+          <div aria-hidden="true" className="grain-overlay" />
           <AdminEditProvider maybeAdmin={maybeAdmin}>
             <SmoothScroll>
               <Nav />
