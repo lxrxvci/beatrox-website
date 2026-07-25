@@ -1,5 +1,6 @@
 import React from 'react'
 import NodeBullet from '@/components/NodeBullet'
+import RevealOnScroll from '@/components/RevealOnScroll'
 import { EditableText } from '@/components/admin'
 import type { Service } from '@/lib/content'
 
@@ -24,7 +25,7 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
   return (
     <div className="space-y-14">
       {service.body.map((block, i) => (
-        <article key={i} className="space-y-8">
+        <RevealOnScroll key={i} className="space-y-8">
           <div>
             {block.type === 'trust' && (
               <div>
@@ -119,7 +120,7 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
             })()}
           </div>
           {renderAfterSection?.(i)}
-        </article>
+        </RevealOnScroll>
       ))}
     </div>
   )

@@ -5,6 +5,7 @@ import { getAllServicesResolved, getCapabilityTiles, getMediaLibrary } from '@/l
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
 import CapabilitiesGrid from '@/components/CapabilitiesGrid'
+import RevealOnScroll from '@/components/RevealOnScroll'
 import { EditableGalleryGrid } from '@/components/admin'
 
 export const revalidate = 300
@@ -211,6 +212,7 @@ export default async function ServicesPage() {
       <section className="section border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <h2 className="heading-lg mb-10">Our Services</h2>
+          <RevealOnScroll>
           <EditableGalleryGrid
             globalSlug="capability-tiles"
             fieldPath="items"
@@ -219,6 +221,7 @@ export default async function ServicesPage() {
           >
             <CapabilitiesGrid items={tileItems} />
           </EditableGalleryGrid>
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -228,8 +231,9 @@ export default async function ServicesPage() {
         <div className="max-w-[1400px] mx-auto">
           <h2 className="heading-lg mb-10">Every Service, A to Z</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-            {SERVICE_LINK_GROUPS.map((group) => (
-              <div key={group.label}>
+            {SERVICE_LINK_GROUPS.map((group, groupIndex) => (
+              <RevealOnScroll key={group.label} delayMs={groupIndex * 80}>
+              <div>
                 <h3 className="overline mb-6 pb-4 border-b border-white/10">{group.label}</h3>
                 <ul className="space-y-5">
                   {group.items.map((item) => (
@@ -251,6 +255,7 @@ export default async function ServicesPage() {
                   ))}
                 </ul>
               </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>

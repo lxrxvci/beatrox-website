@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getAllServicesResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
+import RevealOnScroll from '@/components/RevealOnScroll'
 
 export const revalidate = 300
 
@@ -98,7 +99,8 @@ export default async function TechIndexPage() {
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {categories.map((cat, catIndex) => (
-              <div key={cat.label} className="hud-card p-5 md:p-6">
+              <RevealOnScroll key={cat.label} delayMs={catIndex * 80}>
+              <div className="hud-card p-5 md:p-6">
                 <span className="hud-corners" aria-hidden="true" />
                 <h3 className="hud-label mb-6">
                   <span className="hud-index">{String(catIndex + 1).padStart(2, '0')}</span>
@@ -127,6 +129,7 @@ export default async function TechIndexPage() {
                   })}
                 </ul>
               </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>

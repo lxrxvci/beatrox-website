@@ -10,6 +10,7 @@ import JsonLd from '@/components/JsonLd'
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, type FaqItem } from '@/lib/schema'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import RevealOnScroll from '@/components/RevealOnScroll'
 import ServiceBodySections from '@/components/ServiceBodySections'
 import { EditableCuratedImages, EditableImage, EditableText } from '@/components/admin'
 
@@ -173,7 +174,8 @@ export default async function TechPage({ params }: Props) {
             autoEntries={taggedAuto.map(toCurationItem)}
           />
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
-          <div className="hud-card self-start p-5 md:p-6">
+          <RevealOnScroll className="self-start">
+          <div className="hud-card p-5 md:p-6">
             <span className="hud-corners" aria-hidden="true" />
             <h2 className="hud-label mb-2">Capabilities</h2>
             {service.category && (
@@ -205,6 +207,7 @@ export default async function TechPage({ params }: Props) {
               </div>
             )}
           </div>
+          </RevealOnScroll>
 
           {/* Body blocks — boxed cards, tagged photos interleaved between sections */}
           <ServiceBodySections service={service} renderAfterSection={renderAfterSection} />
@@ -222,6 +225,7 @@ export default async function TechPage({ params }: Props) {
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
             <h2 className="hud-label mb-8">From Past Projects</h2>
+            <RevealOnScroll>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {leftoverImages.map((entry) => (
                 <Link
@@ -245,6 +249,7 @@ export default async function TechPage({ params }: Props) {
                 </Link>
               ))}
             </div>
+            </RevealOnScroll>
           </div>
         </section>
       )}
@@ -254,6 +259,7 @@ export default async function TechPage({ params }: Props) {
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
             <h2 className="hud-label mb-8">Projects Using This Tech</h2>
+            <RevealOnScroll>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
               {techProjects.map((project) => {
                 const taggedThumb = taggedThumbByProject.get(project.canonicalSlug)
@@ -298,6 +304,7 @@ export default async function TechPage({ params }: Props) {
                 )
               })}
             </div>
+            </RevealOnScroll>
           </div>
         </section>
       )}
