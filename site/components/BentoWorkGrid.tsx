@@ -42,6 +42,7 @@ export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGri
           href={`/work/${project.slug}`}
           className={`project-card group relative overflow-hidden bg-neutral-950 block ${sizeFor(i)}`}
         >
+          <span className="hud-corners" aria-hidden="true" />
           <FluidImage
             src={project.image}
             alt={project.alt || project.title}
@@ -56,7 +57,7 @@ export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGri
                 (e.g. "DISENCHANTMENT") and clips instead of wrapping. */}
             <div className="w-full min-w-0 sm:translate-y-2 sm:group-hover:translate-y-0 transition-transform duration-500 ease-[var(--ease-expo-out)]">
               {project.client && (
-                <p className="mono text-[var(--accent)] mb-1 sm:mb-2">{project.client}</p>
+                <p className="glow-text mono text-[var(--accent)] mb-1 sm:mb-2">{project.client}</p>
               )}
               <p className="heading-md text-white leading-[1.2] mb-2 sm:mb-3 break-words">{project.title}</p>
               {project.tags && project.tags.length > 0 && (

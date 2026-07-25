@@ -8,9 +8,9 @@ import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, type FaqItem } from '@/lib/schema'
-import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import RevealOnScroll from '@/components/RevealOnScroll'
 import ServiceBodySections from '@/components/ServiceBodySections'
 import { EditableCuratedImages, EditableImage, EditableText } from '@/components/admin'
 
@@ -92,7 +92,8 @@ export default async function TechPage({ params }: Props) {
       const media = inlineMedia[index]
       if (!media) return null
       return (
-        <div className="relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+        <div className="card-glow scanlines relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+          <span className="hud-corners" aria-hidden="true" />
           <EditableImage
             collection="services"
             documentId={service.id}
@@ -119,8 +120,9 @@ export default async function TechPage({ params }: Props) {
           <Link
             key={`${entry.project.canonicalSlug}-${entry.imageIndex}`}
             href={`/work/${entry.project.canonicalSlug}`}
-            className="relative block aspect-video bg-neutral-950 border border-white/10 overflow-hidden group"
+            className="card-glow scanlines relative block aspect-video bg-neutral-950 border border-white/10 overflow-hidden group"
           >
+            <span className="hud-corners" aria-hidden="true" />
             <Image
               src={entry.image.url}
               alt={entry.image.alt}
@@ -172,15 +174,17 @@ export default async function TechPage({ params }: Props) {
             autoEntries={taggedAuto.map(toCurationItem)}
           />
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
-          <div>
-            <h2 className="heading-sm text-white/75 mb-2">Capabilities</h2>
+          <RevealOnScroll className="self-start">
+          <div className="hud-card p-5 md:p-6">
+            <span className="hud-corners" aria-hidden="true" />
+            <h2 className="hud-label mb-2">Capabilities</h2>
             {service.category && (
               <p className="mono text-white/50 mb-6">{service.category}</p>
             )}
             <ul className="space-y-3">
               {service.capabilities.map((cap, i) => (
                 <li key={cap} className="flex items-start gap-3 text-base text-white/75">
-                  <NodeBullet index={i} />
+                  <span className="hud-index shrink-0 mt-1.5" aria-hidden="true">{String(i + 1).padStart(2, '0')} ·</span>
                   <EditableText collection="services" documentId={service.id} fieldPath={`capabilities.${i}`} value={cap}><span>{cap}</span></EditableText>
                 </li>
               ))}
@@ -194,7 +198,7 @@ export default async function TechPage({ params }: Props) {
                   {service.tech.map((tech) => (
                     <li
                       key={tech}
-                      className="border border-white/10 rounded-full px-3 py-1 text-xs text-white/75 hover:text-white hover:border-[var(--accent)] transition-colors"
+                      className="hud-chip"
                     >
                       {tech}
                     </li>
@@ -203,6 +207,7 @@ export default async function TechPage({ params }: Props) {
               </div>
             )}
           </div>
+          </RevealOnScroll>
 
           {/* Body blocks — boxed cards, tagged photos interleaved between sections */}
           <ServiceBodySections service={service} renderAfterSection={renderAfterSection} />
@@ -219,7 +224,8 @@ export default async function TechPage({ params }: Props) {
       {leftoverImages.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">From Past Projects</h2>
+            <h2 className="hud-label mb-8">From Past Projects</h2>
+            <RevealOnScroll>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {leftoverImages.map((entry) => (
                 <Link
@@ -227,7 +233,8 @@ export default async function TechPage({ params }: Props) {
                   href={`/work/${entry.project.canonicalSlug}`}
                   className="group block"
                 >
-                  <div className="relative aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+                  <div className="card-glow scanlines relative aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+                    <span className="hud-corners" aria-hidden="true" />
                     <Image
                       src={entry.image.url}
                       alt={entry.image.alt}
@@ -242,6 +249,7 @@ export default async function TechPage({ params }: Props) {
                 </Link>
               ))}
             </div>
+            </RevealOnScroll>
           </div>
         </section>
       )}
@@ -250,7 +258,8 @@ export default async function TechPage({ params }: Props) {
       {techProjects.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">Projects Using This Tech</h2>
+            <h2 className="hud-label mb-8">Projects Using This Tech</h2>
+            <RevealOnScroll>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
               {techProjects.map((project) => {
                 const taggedThumb = taggedThumbByProject.get(project.canonicalSlug)
@@ -295,14 +304,15 @@ export default async function TechPage({ params }: Props) {
                 )
               })}
             </div>
+            </RevealOnScroll>
           </div>
         </section>
       )}
 
       {/* CTA */}
-      <section className="section text-center">
+      <section className="section bg-blueprint text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="heading-md mb-5">Ready to get <span className="text-[var(--accent)]">started</span>?</h2>
+          <h2 className="heading-md mb-5">Ready to get <span className="glow-text text-[var(--accent)]">started</span>?</h2>
           <p className="text-base text-white/70 mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/book" className="btn-primary btn-primary--accent">Get in Touch</Link>

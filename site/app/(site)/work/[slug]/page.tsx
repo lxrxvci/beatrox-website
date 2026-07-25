@@ -90,7 +90,7 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative hero min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
+      <section className="scanlines relative hero min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
         {heroImage && (
           <EditableImage
             collection="projects"
@@ -117,7 +117,7 @@ export default async function ProjectPage({ params }: Props) {
             </>
           </EditableImage>
         )}
-        <div className="relative max-w-[1400px] mx-auto w-full">
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full">
           <Link href="/work" className="mono text-white/60 hover:text-white transition-colors mb-8 inline-block">
             ← Work
           </Link>
@@ -170,7 +170,7 @@ export default async function ProjectPage({ params }: Props) {
                     <Link
                       key={tag.id}
                       href={`/services/${tag.slug.replace(/^\/services\/+/, '')}`}
-                      className="border border-white/10 rounded-full px-3 py-1 text-xs text-white/75 hover:text-white hover:border-[var(--accent)] transition-colors"
+                      className="hud-chip"
                     >
                       {tag.title}
                     </Link>
@@ -197,7 +197,7 @@ export default async function ProjectPage({ params }: Props) {
                     <Link
                       key={tag.id}
                       href={tag.slug}
-                      className="border border-white/10 rounded-full px-3 py-1 text-xs text-white/75 hover:text-white hover:border-[var(--accent)] transition-colors"
+                      className="hud-chip"
                     >
                       {tag.title}
                     </Link>

@@ -42,7 +42,9 @@ export default function ParallaxHero({
 
   return (
     <section className={`relative overflow-hidden border-b border-white/10 hero ${minHeightClass} flex items-end`}>
-      <div className="absolute inset-0">
+      {/* z-0 scopes the scanline/vignette pseudo-overlays (z-index 1) below
+          the hero copy, so they texture the photo without veiling text. */}
+      <div className="scanlines vignette absolute inset-0 z-0">
         <Image
           src={imageSrc}
           alt={imageAlt}

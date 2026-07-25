@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getAllServicesResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
+import RevealOnScroll from '@/components/RevealOnScroll'
 
 export const revalidate = 300
 
@@ -54,7 +55,7 @@ export default async function TechIndexPage() {
 
       {/* Intro — crawlable copy positioning the catalog: event technology,
           AV integration, and technical event production */}
-      <section className="section border-b border-white/10">
+      <section className="section bg-blueprint border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white/70 leading-relaxed">
             <div className="space-y-6">
@@ -96,10 +97,16 @@ export default async function TechIndexPage() {
       {/* Tech capability link grid — visual style mirrors the About/services link grid */}
       <section className="section border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-            {categories.map((cat) => (
-              <div key={cat.label}>
-                <h3 className="overline mb-6 pb-4 border-b border-white/10">{cat.label}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+            {categories.map((cat, catIndex) => (
+              <RevealOnScroll key={cat.label} delayMs={catIndex * 80}>
+              <div className="hud-card p-5 md:p-6">
+                <span className="hud-corners" aria-hidden="true" />
+                <h3 className="hud-label mb-6">
+                  <span className="hud-index">{String(catIndex + 1).padStart(2, '0')}</span>
+                  {' · '}
+                  {cat.label}
+                </h3>
                 <ul className="space-y-3">
                   {cat.items.map((service) => {
                     const slug = service.slug.replace(/^\/(services|tech)\/+/, '')
@@ -111,9 +118,9 @@ export default async function TechIndexPage() {
                         >
                           <span
                             aria-hidden="true"
-                            className="text-[var(--accent)] opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                            className="hud-index opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
                           >
-                            →
+                            ›
                           </span>
                           <span>{service.title}</span>
                         </Link>
@@ -122,15 +129,16 @@ export default async function TechIndexPage() {
                   })}
                 </ul>
               </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
       </section>
 
       {/* Consultation CTA */}
-      <section className="section text-center">
+      <section className="section bg-blueprint text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="heading-lg mb-5">Book a <span className="text-[var(--accent)]">Consultation</span></h2>
+          <h2 className="heading-lg mb-5">Book a <span className="glow-text text-[var(--accent)]">Consultation</span></h2>
           <p className="text-base text-white/70 leading-relaxed mb-10">
             Our team of technical and creative directors can help you with your project.
             Book a discovery call and get professional advice today.

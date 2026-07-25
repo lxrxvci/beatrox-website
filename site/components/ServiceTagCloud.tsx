@@ -15,7 +15,7 @@ export default function ServiceTagCloud({ tags }: ServiceTagCloudProps) {
           <Link
             key={bareSlug}
             href={`/services/${bareSlug}`}
-            className="inline-flex items-center gap-2 border border-white/10 rounded-full px-3 py-1 text-xs text-white/75 hover:text-white hover:border-[var(--accent)] transition-colors"
+            className="hud-chip"
           >
             <span>{tag.title}</span>
             <span className="text-[10px] text-white/40">{tag.count}</span>

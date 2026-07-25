@@ -10,6 +10,7 @@
   --text-tertiary: #4a4a4a;
   --accent: #c8ff00;
   --accent-dim: #9ecc00;
+  --accent-glow: rgba(200, 255, 0, 0.35);
   --border: #262626;
   --border-subtle: #1a1a1a;
 
@@ -416,11 +417,13 @@ html.lenis body {
   inset: 0;
   border: 1px solid rgba(245, 240, 235, 0.08);
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover::after {
   opacity: 1;
+  border-color: rgba(200, 255, 0, 0.5);
+  box-shadow: inset 0 0 24px rgba(200, 255, 0, 0.1);
 }
 
 /* Kinetic capabilities ticker */
@@ -635,4 +638,239 @@ html.lenis body {
    above — unlayered CSS wins over layered, killing the stray decoration. */
 .overline {
   text-decoration-line: none;
+}
+
+/* ── Cyberpunk atmosphere layer (unlayered so it beats Tailwind utilities) ── */
+
+/* Film grain — fixed full-viewport noise overlay rendered by (site)/layout.
+   Sits above page backgrounds (z-10 main) but below nav (z-50) and admin
+   chrome (z-9999); pointer-events-none + aria-hidden, purely decorative. */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+}
+
+/* Neon depth — soft acid-lime halo for accent text */
+.glow-text {
+  text-shadow: 0 0 18px var(--accent-glow);
+}
+
+/* Card glow hover — accent ring + faint outer bloom; pairs with any
+   bordered element (border-color transition included). */
+.card-glow {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.card-glow:hover {
+  border-color: rgba(200, 255, 0, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 0, 0.5),
+    0 0 24px rgba(200, 255, 0, 0.12);
+}
+
+/* Scanlines — CRT-style horizontal lines over hero/media blocks. Applied to
+   a positioned container (or an absolute inset-0 span); the ::after overlay
+   never intercepts pointer events. Container must establish positioning. */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06) 0,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* Blueprint grid — faint engineering-grid background for sections */
+.bg-blueprint {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Vignette — darkens media edges so hero photos feel projected, not pasted */
+.vignette::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+/* ── HUD card system ─────────────────────────────────────────────────────── */
+
+/* Corner-tick geometry shared by .hud-card, .corner-ticks, and .hud-corners:
+   10px acid-lime L-brackets. .hud-card draws the top-right / bottom-left
+   pair on itself; the optional child span .hud-corners draws top-left /
+   bottom-right, completing the four-corner frame. Used standalone,
+   .hud-corners / .corner-ticks give media frames a diagonal tick pair. */
+.hud-card,
+.corner-ticks {
+  position: relative;
+}
+
+.hud-card {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.hud-card:hover {
+  border-color: rgba(200, 255, 0, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 0, 0.5),
+    0 0 24px rgba(200, 255, 0, 0.12);
+}
+
+.hud-card::before,
+.hud-card::after,
+.corner-ticks::before,
+.corner-ticks::after,
+.hud-corners::before,
+.hud-corners::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  border: 0 solid var(--accent);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.hud-card::before {
+  top: 0;
+  right: 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
+}
+.hud-card::after {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+.corner-ticks::before,
+.hud-corners::before {
+  top: 0;
+  left: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+.corner-ticks::after,
+.hud-corners::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}
+
+/* .hud-corners — absolutely-positioned child span carrying a tick pair
+   (works on elements whose own pseudo-elements are already taken, e.g.
+   scanline media frames and project cards). */
+.hud-corners {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Mono accent index — 01 / 02 / 03 card and list indices */
+.hud-index {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+/* Bracketed section label — renders "[ LABEL ]" via CSS content so the
+   brackets can't be edited out in the CMS and stay purely presentational. */
+.hud-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+.hud-label::before,
+.hud-label::after {
+  color: var(--accent);
+  animation: hud-bracket-flicker 8s linear infinite;
+}
+.hud-label::before {
+  content: '[\00a0';
+}
+.hud-label::after {
+  content: '\00a0]';
+}
+
+/* Subtle accent flicker on the label brackets (killed by the global
+   prefers-reduced-motion rule, which zeroes all animation durations). */
+@keyframes hud-bracket-flicker {
+  0%,
+  91.9%,
+  93.1%,
+  95.9%,
+  97.1%,
+  100% {
+    opacity: 1;
+  }
+  92%,
+  96% {
+    opacity: 0.35;
+  }
+  97% {
+    opacity: 0.55;
+  }
+}
+
+/* HUD chip — mono squared chip for tag clouds and metadata tags; brackets
+   fade in on hover together with the accent glow. */
+.hud-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.hud-chip::before,
+.hud-chip::after {
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.hud-chip::before {
+  content: '[';
+}
+.hud-chip::after {
+  content: ']';
+}
+.hud-chip:hover,
+.hud-chip:focus-visible {
+  border-color: rgba(200, 255, 0, 0.6);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(200, 255, 0, 0.14);
+}
+.hud-chip:hover::before,
+.hud-chip:hover::after,
+.hud-chip:focus-visible::before,
+.hud-chip:focus-visible::after {
+  opacity: 1;
 }
