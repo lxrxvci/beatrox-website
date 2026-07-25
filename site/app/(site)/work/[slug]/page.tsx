@@ -18,6 +18,7 @@ import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 import { EditableImage, EditableServiceTags, EditableTechTags, EditableText } from '@/components/admin'
 import ThemedProjectShell from '@/components/work/ThemedProjectShell'
 import { getProjectTheme } from '@/components/work/project-themes'
+import ProjectAtmosphere from '@/components/work/engines/ProjectAtmosphere'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -122,6 +123,7 @@ export default async function ProjectPage({ params }: Props) {
             </>
           </EditableImage>
         )}
+        <ProjectAtmosphere engine={theme.engine} params={theme.engineParams} />
         <div className="relative z-10 max-w-[1400px] mx-auto w-full">
           <Link href="/work" className="mono text-white/60 hover:text-white transition-colors mb-8 inline-block">
             ← Work
