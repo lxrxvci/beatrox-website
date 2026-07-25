@@ -205,6 +205,20 @@ export const Services: CollectionConfig = {
       ],
     },
     {
+      name: 'curatedImages',
+      type: 'array',
+      labels: { singular: 'Curated Image', plural: 'Curated Images' },
+      admin: {
+        description: 'Pin or hide specific tagged photos on this page. Unlisted tagged images fill the highest free slot automatically.',
+      },
+      fields: [
+        { name: 'project', type: 'relationship', relationTo: 'projects', required: true },
+        { name: 'imageIndex', type: 'number', required: true },
+        { name: 'position', type: 'number', required: true },
+        { name: 'hidden', type: 'checkbox', defaultValue: false },
+      ],
+    },
+    {
       name: 'media',
       type: 'group',
       fields: [

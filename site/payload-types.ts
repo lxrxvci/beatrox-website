@@ -710,6 +710,18 @@ export interface Service {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Pin or hide specific tagged photos on this page. Unlisted tagged images fill the highest free slot automatically.
+   */
+  curatedImages?:
+    | {
+        project: number | Project;
+        imageIndex: number;
+        position: number;
+        hidden?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
   media?: {
     heroImage?: (number | null) | Media;
     heroImageLegacyUrl?: string | null;
@@ -1004,6 +1016,14 @@ export interface Project {
         alt: string;
         filename?: string | null;
         note?: string | null;
+        /**
+         * Backend-only — not shown on the project page. Drives which /services pages this photo appears on.
+         */
+        serviceTags?: (number | Service)[] | null;
+        /**
+         * Backend-only — not shown on the project page. Drives which /tech pages this photo appears on.
+         */
+        techTags?: (number | Service)[] | null;
         id?: string | null;
       }[]
     | null;
@@ -2475,6 +2495,8 @@ export interface ProjectsSelect<T extends boolean = true> {
         alt?: T;
         filename?: T;
         note?: T;
+        serviceTags?: T;
+        techTags?: T;
         id?: T;
       };
   videos?:
@@ -2720,6 +2742,15 @@ export interface ServicesSelect<T extends boolean = true> {
         project?: T;
         title?: T;
         slug?: T;
+        id?: T;
+      };
+  curatedImages?:
+    | T
+    | {
+        project?: T;
+        imageIndex?: T;
+        position?: T;
+        hidden?: T;
         id?: T;
       };
   media?:

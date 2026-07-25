@@ -36,6 +36,12 @@ export interface SeoContentPage {
   seo: SeoMeta
 }
 
+export interface ProjectImageTag {
+  id: string
+  slug: string
+  title: string
+}
+
 export interface ProjectImage {
   url: string
   alt: string
@@ -46,6 +52,10 @@ export interface ProjectImage {
   /** Index into the raw CMS `images` array (set by mapCmsProject before the
    *  empty-url filter drops rows) so inline editing can target `images.N`. */
   sourceIndex?: number
+  /** Backend-only tags — drive which /services|/tech pages this photo
+   *  appears on. Never rendered on public project pages. */
+  serviceTags: ProjectImageTag[]
+  techTags: ProjectImageTag[]
 }
 
 export interface VideoEmbed {
@@ -122,6 +132,14 @@ export interface Project {
 
 export interface CaseStudy extends Project {}
 
+export interface CuratedImageEntry {
+  /** Canonical (bare) slug of the pinned project. */
+  projectSlug: string
+  imageIndex: number
+  position: number
+  hidden?: boolean
+}
+
 export interface Service {
   id: string
   title: string
@@ -141,6 +159,8 @@ export interface Service {
   body: ServiceBodyBlock[]
   contentBlocks?: CMSPageBlock[]
   relatedWork: { title: string; slug: string }[]
+  /** Per-page pin/hide overrides for tagged photos (CMS-only; [] in JSON fallback). */
+  curatedImages: CuratedImageEntry[]
   media?: {
     heroImage?: string
     galleryImages?: string[]
@@ -260,6 +280,7 @@ export function getAllProjects(): Project[] {
       slug: canonicalSlug,
       canonicalSlug,
       tags,
+      images: withEmptyImageTags(legacy.images),
     }
   })
 }
@@ -275,19 +296,33 @@ export function getProject(slug: string): Project | null {
     slug: canonicalSlug,
     canonicalSlug,
     tags,
+    images: withEmptyImageTags(legacy.images),
   }
+}
+
+// Image-level tags are CMS-only; the JSON baseline carries none.
+function withEmptyImageTags(images: Project['images'] | undefined): Project['images'] {
+  return (images || []).map((img) => ({
+    ...img,
+    serviceTags: img.serviceTags ?? [],
+    techTags: img.techTags ?? [],
+  }))
 }
 
 export function getAllServices(): Service[] {
   const dir = path.join(CONTENT_ROOT, 'services')
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()
-  return files.map(file => readJson<Service>(path.join(dir, file)))
+  return files.map(file => ({
+    ...readJson<Service>(path.join(dir, file)),
+    // curatedImages is CMS-only; the JSON baseline carries none.
+    curatedImages: [],
+  }))
 }
 
 export function getService(slug: string): Service | null {
   const filePath = path.join(CONTENT_ROOT, 'services', `${slug}.json`)
   if (!fs.existsSync(filePath)) return null
-  return readJson<Service>(filePath)
+  return { ...readJson<Service>(filePath), curatedImages: [] }
 }
 
 export function getProjectSlugs(): string[] {
@@ -459,6 +494,20 @@ function mapCmsContentBlock(block: Record<string, unknown>): CMSPageBlock {
   }
 }
 
+function mapCmsImageTags(rows: unknown, routePrefix: '/services/' | '/tech/'): ProjectImageTag[] {
+  return asArray<Record<string, unknown> | number>(rows)
+    .map((row) => {
+      // Depth-populated relationship docs arrive as objects; bare IDs carry no usable label.
+      if (typeof row !== 'object' || row === null) return { id: String(row), slug: '', title: '' }
+      return {
+        id: String(row.id || ''),
+        slug: `${routePrefix}${normalizeServiceSlug(String(row.slug || ''))}`,
+        title: String(row.title || ''),
+      }
+    })
+    .filter((tag) => Boolean(tag.title))
+}
+
 function mapCmsProject(doc: Record<string, unknown>): Project {
   const images = asArray<Record<string, unknown>>(doc.images).map((row, index) => {
     const media = row.media as unknown as Record<string, unknown> | undefined
@@ -473,6 +522,8 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
       width,
       height,
       sourceIndex: index,
+      serviceTags: mapCmsImageTags(row.serviceTags, '/services/'),
+      techTags: mapCmsImageTags(row.techTags, '/tech/'),
     }
   })
 
@@ -608,6 +659,22 @@ function mapCmsService(doc: Record<string, unknown>): Service {
       title: String(row.title || ''),
       slug: String(row.slug || ''),
     })),
+    curatedImages: asArray<Record<string, unknown>>(doc.curatedImages)
+      .map((row): CuratedImageEntry | null => {
+        // Depth-populated relationship → resolve to the canonical bare slug.
+        // Bare-ID rows (unpopulated) can't be matched and are dropped.
+        const project = row.project as unknown
+        if (!project || typeof project !== 'object') return null
+        const projectSlug = normalizeProjectSlug(String((project as Record<string, unknown>).slug || ''))
+        if (!projectSlug) return null
+        return {
+          projectSlug,
+          imageIndex: Number(row.imageIndex ?? 0),
+          position: Number(row.position ?? 0),
+          hidden: row.hidden === true ? true : undefined,
+        }
+      })
+      .filter((row): row is CuratedImageEntry => Boolean(row)),
     media: {
       heroImage:
         resolveCmsMediaUrl(((doc.media as unknown as Record<string, unknown>)?.heroImage as unknown)) ||
@@ -795,6 +862,86 @@ export async function getProjectsByTagResolved(tag: string): Promise<Project[]> 
   if (!normalizedTag) return []
   const projects = await getAllProjectsResolved()
   return projects.filter((project) => project.tags.includes(normalizedTag))
+}
+
+export interface TaggedImageEntry {
+  project: Project
+  image: ProjectImage
+  /** Index into the project doc's raw `images` array (inline-edit field path). */
+  imageIndex: number
+}
+
+/** Bare-slug comparison for resolved tag slugs ("/services/<slug>" / "/tech/<slug>"). */
+function bareTagSlug(slug: string): string {
+  return slug.replace(/^\/(services|tech)\/+/, '')
+}
+
+/**
+ * All project images tagged with the given service/tech bare slug, in the
+ * stable automatic order: project order (getAllProjectsResolved sort), then
+ * image order within each project.
+ */
+export async function getTaggedImagesForSlug(
+  bareSlug: string,
+  kind: 'service' | 'tech',
+): Promise<TaggedImageEntry[]> {
+  const projects = await getAllProjectsResolved()
+  const entries: TaggedImageEntry[] = []
+  for (const project of projects) {
+    project.images.forEach((image, arrayIndex) => {
+      if (!image.url || image.url.trim() === '') return
+      const tags = kind === 'service' ? image.serviceTags : image.techTags
+      if ((tags || []).some((tag) => bareTagSlug(tag.slug) === bareSlug)) {
+        // sourceIndex is the raw CMS `images` row index — the same numbering
+        // Payload admin and the inline editor (images.N) use.
+        entries.push({ project, image, imageIndex: image.sourceIndex ?? arrayIndex })
+      }
+    })
+  }
+  return entries
+}
+
+function taggedImageKey(entry: { project: Project; imageIndex: number }): string {
+  return `${entry.project.canonicalSlug}#${entry.imageIndex}`
+}
+
+/**
+ * Merge the automatic tagged-image order with a page's curatedImages
+ * pin/hide overrides:
+ * 1. Entries with a `hidden` curated row are dropped.
+ * 2. Pinned entries are removed from the auto pool and inserted at their
+ *    `position` (ascending order, clamped to list length).
+ * 3. Remaining auto entries fill the free slots top-down — so a newly tagged
+ *    image (no curated row) lands in the highest unpinned slot.
+ */
+export function mergeCuratedTaggedImages(
+  tagged: TaggedImageEntry[],
+  curated: CuratedImageEntry[],
+): TaggedImageEntry[] {
+  if (curated.length === 0) return tagged
+
+  const hiddenKeys = new Set(
+    curated.filter((row) => row.hidden).map((row) => `${row.projectSlug}#${row.imageIndex}`),
+  )
+  const visible = tagged.filter((entry) => !hiddenKeys.has(taggedImageKey(entry)))
+
+  const pins = curated
+    .filter((row) => !row.hidden)
+    .slice()
+    .sort((a, b) => a.position - b.position)
+
+  const result = visible.filter(
+    (entry) => !pins.some((pin) => `${pin.projectSlug}#${pin.imageIndex}` === taggedImageKey(entry)),
+  )
+  for (const pin of pins) {
+    const entry = visible.find(
+      (candidate) => taggedImageKey(candidate) === `${pin.projectSlug}#${pin.imageIndex}`,
+    )
+    if (!entry) continue
+    const at = Math.max(0, Math.min(pin.position, result.length))
+    result.splice(at, 0, entry)
+  }
+  return result
 }
 
 export async function getAllServicesResolved(): Promise<Service[]> {

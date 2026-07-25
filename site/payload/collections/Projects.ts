@@ -234,6 +234,27 @@ export const Projects: CollectionConfig = {
         { name: 'alt', type: 'text', required: true },
         { name: 'filename', type: 'text' },
         { name: 'note', type: 'textarea' },
+        {
+          name: 'serviceTags',
+          type: 'relationship',
+          relationTo: 'services',
+          hasMany: true,
+          admin: {
+            description: 'Backend-only — not shown on the project page. Drives which /services pages this photo appears on.',
+          },
+        },
+        {
+          name: 'techTags',
+          type: 'relationship',
+          relationTo: 'services',
+          hasMany: true,
+          filterOptions: () => ({
+            pageType: { equals: 'tech' },
+          }),
+          admin: {
+            description: 'Backend-only — not shown on the project page. Drives which /tech pages this photo appears on.',
+          },
+        },
       ],
     },
     {

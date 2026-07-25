@@ -99,6 +99,10 @@ export default async function ProjectPage({ params }: Props) {
             value={heroImage.url}
             alt={heroImage.alt}
             mediaLibrary={mediaLibrary}
+            serviceOptions={serviceOptions}
+            techOptions={techOptions}
+            selectedServiceIds={(heroImage.serviceTags || []).map((tag) => tag.id)}
+            selectedTechIds={(heroImage.techTags || []).map((tag) => tag.id)}
           >
             <>
               <Image
@@ -248,6 +252,8 @@ export default async function ProjectPage({ params }: Props) {
             collection="projects"
             documentId={project.id}
             mediaLibrary={mediaLibrary}
+            serviceOptions={serviceOptions}
+            techOptions={techOptions}
           />
         </section>
       )}

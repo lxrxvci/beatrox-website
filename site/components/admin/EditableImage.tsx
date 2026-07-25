@@ -9,6 +9,12 @@ export interface MediaOption {
   filename: string
 }
 
+export interface TagOption {
+  id: string
+  title: string
+  slug: string
+}
+
 interface EditableImageProps {
   /** Collection mode: collection + documentId target a doc. */
   collection?: string
@@ -28,6 +34,14 @@ interface EditableImageProps {
   /** Current alt text. Pass undefined to hide the alt field. */
   alt?: string
   mediaLibrary: MediaOption[]
+  /** Optional per-image tag pickers (project gallery images only). When
+   *  present, the edit panel gains chip multi-selects that PATCH
+   *  `<fieldPath>.serviceTags` / `<fieldPath>.techTags` with numeric ID
+   *  arrays. Backend-only — never rendered publicly. */
+  serviceOptions?: TagOption[]
+  techOptions?: TagOption[]
+  selectedServiceIds?: string[]
+  selectedTechIds?: string[]
   children: React.ReactNode
 }
 
@@ -47,6 +61,10 @@ export default function EditableImage({
   value,
   alt,
   mediaLibrary,
+  serviceOptions,
+  techOptions,
+  selectedServiceIds = [],
+  selectedTechIds = [],
   children,
 }: EditableImageProps) {
   const { editMode } = useAdminEdit()
@@ -54,6 +72,8 @@ export default function EditableImage({
   const [manualPath, setManualPath] = useState(value)
   const [selectedMediaId, setSelectedMediaId] = useState('')
   const [draftAlt, setDraftAlt] = useState(alt ?? '')
+  const [draftServiceIds, setDraftServiceIds] = useState<string[]>(selectedServiceIds)
+  const [draftTechIds, setDraftTechIds] = useState<string[]>(selectedTechIds)
   const [isSaving, setIsSaving] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
 
@@ -77,6 +97,13 @@ export default function EditableImage({
     [collection, documentId, globalSlug],
   )
 
+  const toggleDraftId = useCallback(
+    (setter: React.Dispatch<React.SetStateAction<string[]>>) => (id: string) => {
+      setter((prev) => (prev.includes(id) ? prev.filter((v) => v !== id) : [...prev, id]))
+    },
+    [],
+  )
+
   const handleSave = useCallback(async () => {
     if (!canSave) return
     setIsSaving(true)
@@ -91,21 +118,38 @@ export default function EditableImage({
       if (alt !== undefined && draftAlt !== alt) {
         await patch(`${fieldPath}.alt`, draftAlt)
       }
+      if (serviceOptions) {
+        // Relationship fields store numeric IDs; drop anything that doesn't parse.
+        const ids = draftServiceIds.map((id) => Number(id)).filter((n) => !Number.isNaN(n))
+        const unchanged =
+          ids.length === selectedServiceIds.length &&
+          selectedServiceIds.every((id) => draftServiceIds.includes(id))
+        if (!unchanged) await patch(`${fieldPath}.serviceTags`, ids)
+      }
+      if (techOptions) {
+        const ids = draftTechIds.map((id) => Number(id)).filter((n) => !Number.isNaN(n))
+        const unchanged =
+          ids.length === selectedTechIds.length &&
+          selectedTechIds.every((id) => draftTechIds.includes(id))
+        if (!unchanged) await patch(`${fieldPath}.techTags`, ids)
+      }
       window.location.reload()
     } catch (err) {
       setSaveError(err instanceof Error ? err.message : 'Save failed')
     } finally {
       setIsSaving(false)
     }
-  }, [canSave, selectedMediaId, manualPath, value, alt, draftAlt, fieldPath, bareRelationship, patch])
+  }, [canSave, selectedMediaId, manualPath, value, alt, draftAlt, fieldPath, bareRelationship, serviceOptions, techOptions, selectedServiceIds, selectedTechIds, draftServiceIds, draftTechIds, patch])
 
   const handleCancel = useCallback(() => {
     setActive(false)
     setManualPath(value)
     setSelectedMediaId('')
     setDraftAlt(alt ?? '')
+    setDraftServiceIds(selectedServiceIds)
+    setDraftTechIds(selectedTechIds)
     setSaveError(null)
-  }, [value, alt])
+  }, [value, alt, selectedServiceIds, selectedTechIds])
 
   if (!editMode || !canSave) {
     return <>{children}</>
@@ -117,6 +161,8 @@ export default function EditableImage({
         onClick={(e) => {
           e.preventDefault()
           e.stopPropagation()
+          setDraftServiceIds(selectedServiceIds)
+          setDraftTechIds(selectedTechIds)
           setActive(true)
         }}
         className="relative inline-block w-full cursor-pointer rounded-sm hover:ring-1 hover:ring-[var(--accent)]/50 transition-all"
@@ -181,6 +227,58 @@ export default function EditableImage({
               disabled={isSaving}
             />
           </label>
+        )}
+
+        {serviceOptions && (
+          <span className="block space-y-1">
+            <span className="text-[10px] uppercase tracking-wider text-white/50">Services in this photo</span>
+            <span className="flex flex-wrap gap-2 max-h-32 overflow-y-auto pt-1">
+              {serviceOptions.map((option) => {
+                const selected = draftServiceIds.includes(option.id)
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    onClick={() => toggleDraftId(setDraftServiceIds)(option.id)}
+                    disabled={isSaving}
+                    className={`px-2 py-1 text-xs uppercase tracking-wider border rounded-sm transition-colors disabled:opacity-50 ${
+                      selected
+                        ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
+                        : 'bg-white/5 text-white/75 border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+                    }`}
+                  >
+                    {option.title}
+                  </button>
+                )
+              })}
+            </span>
+          </span>
+        )}
+
+        {techOptions && (
+          <span className="block space-y-1">
+            <span className="text-[10px] uppercase tracking-wider text-white/50">Tech in this photo</span>
+            <span className="flex flex-wrap gap-2 max-h-32 overflow-y-auto pt-1">
+              {techOptions.map((option) => {
+                const selected = draftTechIds.includes(option.id)
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    onClick={() => toggleDraftId(setDraftTechIds)(option.id)}
+                    disabled={isSaving}
+                    className={`px-2 py-1 text-xs uppercase tracking-wider border rounded-sm transition-colors disabled:opacity-50 ${
+                      selected
+                        ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
+                        : 'bg-white/5 text-white/75 border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+                    }`}
+                  >
+                    {option.title}
+                  </button>
+                )
+              })}
+            </span>
+          </span>
         )}
 
         <span className="flex items-center gap-2 pt-1">

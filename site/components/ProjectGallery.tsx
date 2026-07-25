@@ -4,7 +4,13 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'motion/react'
 import { EditableImage } from '@/components/admin'
-import type { MediaOption } from '@/components/admin/EditableImage'
+import type { MediaOption, TagOption } from '@/components/admin/EditableImage'
+
+interface GalleryImageTag {
+  id: string
+  slug: string
+  title: string
+}
 
 interface GalleryImage {
   url: string
@@ -14,6 +20,9 @@ interface GalleryImage {
   height?: number
   /** Index into the project doc's raw `images` array (inline-edit field path). */
   sourceIndex?: number
+  /** Backend-only per-image tags — editable in the panel, never rendered. */
+  serviceTags?: GalleryImageTag[]
+  techTags?: GalleryImageTag[]
 }
 
 interface ProjectGalleryProps {
@@ -22,6 +31,9 @@ interface ProjectGalleryProps {
   collection?: string
   documentId?: string
   mediaLibrary?: MediaOption[]
+  /** Tag pickers for the per-image edit panel (work pages only). */
+  serviceOptions?: TagOption[]
+  techOptions?: TagOption[]
 }
 
 interface SizedImage extends GalleryImage {
@@ -103,7 +115,7 @@ function buildRows(
   })
 }
 
-export default function ProjectGallery({ images, collection, documentId, mediaLibrary = [] }: ProjectGalleryProps) {
+export default function ProjectGallery({ images, collection, documentId, mediaLibrary = [], serviceOptions, techOptions }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   // Start unmeasured (0 = render no rows) so the SSR/first paint can't
@@ -245,6 +257,10 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
                       value={img.url}
                       alt={img.alt}
                       mediaLibrary={mediaLibrary}
+                      serviceOptions={serviceOptions}
+                      techOptions={techOptions}
+                      selectedServiceIds={(img.serviceTags || []).map((tag) => tag.id)}
+                      selectedTechIds={(img.techTags || []).map((tag) => tag.id)}
                     >
                       <Image
                         src={img.url}

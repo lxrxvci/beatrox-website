@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllProjectsResolved, getMediaLibrary, getServiceResolved, getServiceSlugsResolved } from '@/lib/content'
+import { getAllProjectsResolved, getMediaLibrary, getServiceResolved, getServiceSlugsResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
@@ -10,7 +11,8 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, type FaqItem
 import NodeBullet from '@/components/NodeBullet'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
-import { EditableImage, EditableText } from '@/components/admin'
+import ServiceBodySections from '@/components/ServiceBodySections'
+import { EditableCuratedImages, EditableImage, EditableText } from '@/components/admin'
 
 export const revalidate = 300
 
@@ -71,6 +73,77 @@ export default async function ServicePage({ params }: Props) {
     .map((project) => ({ work: { title: project.title, slug: `/work/${project.canonicalSlug}` }, project }))
   const allRelatedProjects = [...relatedProjects, ...tagMatchedProjects].slice(0, 6)
 
+  // Tagged photos: image-level serviceTags populate this page. Automatic order
+  // = project order → image order; curatedImages pins/hides override per page.
+  const taggedAuto = await getTaggedImagesForSlug(bareServiceSlug, 'service')
+  const effectiveImages = mergeCuratedTaggedImages(taggedAuto, service.curatedImages || [])
+  const hasTaggedImages = effectiveImages.length > 0
+  // 2 photos interleaved after each body section; the rest form the bottom gallery.
+  const leftoverImages = hasTaggedImages ? effectiveImages.slice(service.body.length * 2) : []
+  // Card thumbnails: this page's tagged photo per project (first non-empty image fallback).
+  const taggedThumbByProject = new Map<string, TaggedImageEntry>()
+  for (const entry of effectiveImages) {
+    if (!taggedThumbByProject.has(entry.project.canonicalSlug)) {
+      taggedThumbByProject.set(entry.project.canonicalSlug, entry)
+    }
+  }
+  const toCurationItem = (entry: TaggedImageEntry) => ({
+    projectId: entry.project.id,
+    projectSlug: entry.project.canonicalSlug,
+    projectTitle: entry.project.title,
+    imageIndex: entry.imageIndex,
+    url: entry.image.url,
+    alt: entry.image.alt,
+  })
+
+  const renderAfterSection = (index: number): ReactNode => {
+    if (!hasTaggedImages) {
+      // Untagged fallback: the legacy inline single-image behavior.
+      const media = inlineMedia[index]
+      if (!media) return null
+      return (
+        <div className="relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+          <EditableImage
+            collection="services"
+            documentId={service.id}
+            fieldPath={`media.galleryImages.${media.galleryIndex}`}
+            value={media.url}
+            mediaLibrary={mediaLibrary}
+          >
+            <Image
+              src={media.url}
+              alt={`${service.title} image ${index + 1}`}
+              fill
+              sizes="(max-width: 1120px) 100vw, 880px"
+              className="object-contain"
+            />
+          </EditableImage>
+        </div>
+      )
+    }
+    const row = effectiveImages.slice(index * 2, index * 2 + 2)
+    if (row.length === 0) return null
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {row.map((entry) => (
+          <Link
+            key={`${entry.project.canonicalSlug}-${entry.imageIndex}`}
+            href={`/work/${entry.project.canonicalSlug}`}
+            className="relative block aspect-video bg-neutral-950 border border-white/10 overflow-hidden group"
+          >
+            <Image
+              src={entry.image.url}
+              alt={entry.image.alt}
+              fill
+              sizes="(max-width: 640px) 100vw, 50vw"
+              className="object-cover transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-110"
+            />
+          </Link>
+        ))}
+      </div>
+    )
+  }
+
   // FAQ body blocks feed the FAQPage JSON-LD (rendered HTML stays unchanged).
   const faqItems = service.body
     .filter((block) => block.type === 'faq')
@@ -102,7 +175,13 @@ export default async function ServicePage({ params }: Props) {
 
       {/* Capabilities */}
       <section className="section border-b border-white/10">
-        <div className="max-w-[1120px] mx-auto grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
+        <div className="max-w-[1120px] mx-auto">
+          <EditableCuratedImages
+            documentId={service.id}
+            entries={effectiveImages.map(toCurationItem)}
+            autoEntries={taggedAuto.map(toCurationItem)}
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
           <div>
             <h2 className="heading-sm text-white/75 mb-6">Capabilities</h2>
             <ul className="space-y-3">
@@ -115,111 +194,8 @@ export default async function ServicePage({ params }: Props) {
             </ul>
           </div>
 
-          {/* Body blocks */}
-          <div className="space-y-14">
-            {service.body.map((block, i) => (
-              <article key={i} className="space-y-8">
-                <div>
-                  {block.type === 'trust' && (
-                    <div className="border border-white/10 bg-white/[0.03] rounded-sm p-6 md:p-8">
-                      {block.heading && (
-                        <h2 className="heading-sm text-white/75 mb-6">{block.heading}</h2>
-                      )}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {block.items?.map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-3 text-base text-white/75">
-                            <span className="text-[var(--accent)] mt-0.5 shrink-0" aria-hidden="true">✓</span>
-                            <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}><span>{item}</span></EditableText>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {block.type === 'process' && (
-                    <div>
-                      {block.heading && (
-                        <h2 className="heading-sm text-white/75 mb-6">{block.heading}</h2>
-                      )}
-                      <ol className="space-y-6">
-                        {block.items?.map((item, idx) => (
-                          <li key={idx} className="flex gap-4">
-                            <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-[var(--accent)]/40 text-[var(--accent)] font-mono text-sm rounded-sm">
-                              {idx + 1}
-                            </span>
-                            <span className="text-base text-white/75 leading-relaxed pt-1"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item.replace(/^\d+[.)]\s*/, '')}</EditableText></span>
-                          </li>
-                        ))}
-                      </ol>
-                    </div>
-                  )}
-
-                  {block.type === 'faq' && (
-                    <div>
-                      {block.heading && (
-                        <h2 className="heading-sm text-white/75 mb-6">{block.heading}</h2>
-                      )}
-                      <div className="divide-y divide-white/10">
-                        {(block.items as { question: string; answer: string }[])?.map((item, idx) => (
-                          <div key={idx} className="py-5 first:pt-0 last:pb-0">
-                            <p className="text-base font-semibold text-white mb-2 flex items-start gap-3">
-                              <span aria-hidden="true" className="text-[var(--accent)] shrink-0">+</span>
-                              <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.question`} value={item.question}>{item.question}</EditableText>
-                            </p>
-                            <p className="text-base text-white/75 leading-relaxed"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.answer`} value={item.answer}>{item.answer}</EditableText></p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {block.type !== 'trust' && block.type !== 'process' && block.type !== 'faq' && (() => {
-                    const bodyBlock = block as { heading?: string; content?: string; items?: string[] }
-                    return (
-                    <div>
-                      {bodyBlock.heading && (
-                        <h2 className="heading-sm text-white/75 mb-4"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.heading`} value={bodyBlock.heading}>{bodyBlock.heading}</EditableText></h2>
-                      )}
-                      {bodyBlock.content && (
-                        <p className="text-base text-white/75 leading-relaxed whitespace-pre-line">
-                          {bodyBlock.content}
-                        </p>
-                      )}
-                      {bodyBlock.items && (
-                        <ul className="space-y-2 mt-2">
-                          {bodyBlock.items.map((item, itemIndex) => (
-                            <li key={item} className="flex items-start gap-3 text-base text-white/75">
-                              <NodeBullet index={itemIndex} />
-                              <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${itemIndex}`} value={item}><span>{item}</span></EditableText>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                    )
-                  })()}
-                </div>
-                {inlineMedia[i] && (
-                  <div className="relative w-full aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
-                    <EditableImage
-                      collection="services"
-                      documentId={service.id}
-                      fieldPath={`media.galleryImages.${inlineMedia[i].galleryIndex}`}
-                      value={inlineMedia[i].url}
-                      mediaLibrary={mediaLibrary}
-                    >
-                      <Image
-                        src={inlineMedia[i].url}
-                        alt={`${service.title} image ${i + 1}`}
-                        fill
-                        sizes="(max-width: 1120px) 100vw, 880px"
-                        className="object-contain"
-                      />
-                    </EditableImage>
-                  </div>
-                )}
-              </article>
-            ))}
+          {/* Body blocks — boxed cards, tagged photos interleaved between sections */}
+          <ServiceBodySections service={service} renderAfterSection={renderAfterSection} />
           </div>
         </div>
       </section>
@@ -229,6 +205,37 @@ export default async function ServicePage({ params }: Props) {
         <CMSBlockRenderer blocks={service.contentBlocks} collection="services" documentId={service.id} />
       )}
 
+      {/* From Past Projects — tagged photos not interleaved between body sections */}
+      {leftoverImages.length > 0 && (
+        <section className="section border-b border-white/10">
+          <div className="max-w-[1120px] mx-auto">
+            <h2 className="heading-sm text-white/75 mb-8">From Past Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {leftoverImages.map((entry) => (
+                <Link
+                  key={`${entry.project.canonicalSlug}-${entry.imageIndex}`}
+                  href={`/work/${entry.project.canonicalSlug}`}
+                  className="group block"
+                >
+                  <div className="relative aspect-video bg-neutral-950 border border-white/10 overflow-hidden">
+                    <Image
+                      src={entry.image.url}
+                      alt={entry.image.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-110"
+                    />
+                  </div>
+                  <p className="mono text-xs text-white/40 mt-2 uppercase tracking-[0.2em]">
+                    {entry.project.title}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Related Work — example cards cited from past projects */}
       {allRelatedProjects.length > 0 && (
         <section className="section border-b border-white/10">
@@ -236,8 +243,10 @@ export default async function ServicePage({ params }: Props) {
             <h2 className="heading-sm text-white/75 mb-8">See It in Action</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
               {allRelatedProjects.map(({ work, project }) => {
-                const image = project.images?.find((img) => img.url && img.url.trim() !== '')?.url
-                const imageAlt = project.images?.find((img) => img.url && img.url.trim() !== '')?.alt
+                const taggedThumb = taggedThumbByProject.get(project.canonicalSlug)
+                const fallbackImage = project.images?.find((img) => img.url && img.url.trim() !== '')
+                const image = taggedThumb?.image.url || fallbackImage?.url
+                const imageAlt = taggedThumb?.image.alt || fallbackImage?.alt
                 return (
                   <Link
                     key={work.slug}

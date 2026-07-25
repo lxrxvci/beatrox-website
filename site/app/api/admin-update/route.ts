@@ -65,7 +65,7 @@ function getTopLevelField(path: string): string {
 const ALLOWED_UPDATE_PATHS: Record<string, string[]> = {
   pages: ['hero.', 'media.', 'consultationForm.', 'address.', 'contactInfo.', 'social.', 'emailSignup.', 'blocks.'],
   projects: ['serviceTags', 'techTags', 'images.', 'body.', 'contentBlocks.', 'blocks.'],
-  services: ['capabilities.', 'media.', 'body.', 'contentBlocks.', 'blocks.'],
+  services: ['capabilities.', 'curatedImages', 'media.', 'body.', 'contentBlocks.', 'blocks.'],
   team: ['photo.'],
 }
 
