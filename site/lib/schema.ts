@@ -58,10 +58,10 @@ export function buildOrganizationSchema(): OrganizationSchema {
     logo: 'https://www.beatrox.com/og-default.jpg',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '8625 NE Halsey St',
+      streetAddress: '1313 SE 3rd Ave',
       addressLocality: 'Portland',
       addressRegion: 'OR',
-      postalCode: '97220',
+      postalCode: '97214',
       addressCountry: 'US',
     },
     sameAs: [
@@ -80,10 +80,10 @@ export function buildLocalBusinessSchema(): LocalBusinessSchema {
     logo: 'https://www.beatrox.com/og-default.jpg',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '8625 NE Halsey St',
+      streetAddress: '1313 SE 3rd Ave',
       addressLocality: 'Portland',
       addressRegion: 'OR',
-      postalCode: '97220',
+      postalCode: '97214',
       addressCountry: 'US',
     },
     sameAs: [

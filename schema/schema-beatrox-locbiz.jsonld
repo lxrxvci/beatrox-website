@@ -11,16 +11,16 @@
   "email": "hello@beatrox.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "8625 NE Halsey St",
+    "streetAddress": "1313 SE 3rd Ave",
     "addressLocality": "Portland",
     "addressRegion": "OR",
-    "postalCode": "97220",
+    "postalCode": "97214",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 45.5051,
-    "longitude": -122.6750
+    "latitude": 45.5134853,
+    "longitude": -122.6629198
   },
   "areaServed": [
     {
