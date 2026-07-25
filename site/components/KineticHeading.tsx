@@ -6,6 +6,9 @@ import { SplitText } from 'gsap/SplitText'
 
 gsap.registerPlugin(SplitText)
 
+/** Hero reveal variants used by per-project themes. 'rise' is the legacy behavior. */
+export type KineticIntro = 'laser-draw' | 'glitch' | 'iris' | 'wipe' | 'rise'
+
 interface KineticHeadingProps {
   text: string
   as?: 'h1' | 'h2' | 'h3'
@@ -14,6 +17,8 @@ interface KineticHeadingProps {
   delay?: number
   /** Per-character stagger in seconds. */
   stagger?: number
+  /** Reveal choreography. Defaults to 'rise' (the original masked char slide). */
+  intro?: KineticIntro
 }
 
 /**
@@ -27,6 +32,7 @@ export default function KineticHeading({
   className = '',
   delay = 0.3,
   stagger = 0.03,
+  intro = 'rise',
 }: KineticHeadingProps) {
   const ref = useRef<HTMLHeadingElement | null>(null)
   const [ready, setReady] = useState(false)
@@ -80,15 +86,68 @@ export default function KineticHeading({
       })
 
       ctx = gsap.context(() => {
-        gsap.from(splitInstance.chars, {
-          yPercent: 120,
-          opacity: 0,
-          duration: 0.8,
-          ease: 'power4.out',
-          stagger,
-          delay,
-          onStart: () => setReady(true),
-        })
+        const onStart = () => setReady(true)
+        switch (intro) {
+          case 'wipe':
+            // Whole words slide up behind their masks, left to right.
+            gsap.from(splitInstance.words, {
+              yPercent: 110,
+              duration: 0.9,
+              ease: 'power4.out',
+              stagger: 0.09,
+              delay,
+              onStart,
+            })
+            break
+          case 'iris':
+            // Chars bloom outward from the center of the heading.
+            gsap.from(splitInstance.chars, {
+              opacity: 0,
+              scale: 0.3,
+              duration: 0.7,
+              ease: 'back.out(1.6)',
+              stagger: { each: stagger, from: 'center' },
+              delay,
+              onStart,
+            })
+            break
+          case 'glitch':
+            // Signal-noise reveal: chars jitter in from random offsets.
+            gsap.from(splitInstance.chars, {
+              opacity: 0,
+              xPercent: () => gsap.utils.random(-50, 50),
+              skewX: () => gsap.utils.random(-25, 25),
+              duration: 0.5,
+              ease: 'power3.out',
+              stagger: { each: stagger * 0.7, from: 'random' },
+              delay,
+              onStart,
+            })
+            break
+          case 'laser-draw':
+            // Left-to-right burn-in with a bright glow that cools off.
+            gsap.from(splitInstance.chars, {
+              opacity: 0,
+              textShadow: '0 0 26px currentColor',
+              duration: 0.45,
+              ease: 'power2.out',
+              stagger: { each: stagger * 0.9, from: 'start' },
+              delay,
+              onStart,
+            })
+            break
+          case 'rise':
+          default:
+            gsap.from(splitInstance.chars, {
+              yPercent: 120,
+              opacity: 0,
+              duration: 0.8,
+              ease: 'power4.out',
+              stagger,
+              delay,
+              onStart,
+            })
+        }
       }, el)
     }
 
@@ -104,7 +163,7 @@ export default function KineticHeading({
       ctx?.revert()
       split?.revert()
     }
-  }, [text, delay, stagger])
+  }, [text, delay, stagger, intro])
 
   return (
     <Tag

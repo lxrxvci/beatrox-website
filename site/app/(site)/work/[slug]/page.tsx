@@ -16,6 +16,8 @@ import KineticHeading from '@/components/KineticHeading'
 import NodeBullet from '@/components/NodeBullet'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 import { EditableImage, EditableServiceTags, EditableTechTags, EditableText } from '@/components/admin'
+import ThemedProjectShell from '@/components/work/ThemedProjectShell'
+import { getProjectTheme } from '@/components/work/project-themes'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -87,8 +89,11 @@ export default async function ProjectPage({ params }: Props) {
   const heroImage = galleryImages[0]
   const galleryImagesWithoutHero = galleryImages.slice(1)
 
+  // Per-project identity: accent palette, hero intro variant, atmosphere engine.
+  const theme = getProjectTheme(canonicalSlug)
+
   return (
-    <>
+    <ThemedProjectShell slug={canonicalSlug}>
       {/* Hero */}
       <section className="scanlines relative hero min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
         {heroImage && (
@@ -124,7 +129,7 @@ export default async function ProjectPage({ params }: Props) {
           {project.metadata.client && (
             <p className="mono text-[var(--accent)] mb-3">{project.metadata.client}</p>
           )}
-          <KineticHeading text={project.title} className="heading-xl max-w-3xl" />
+          <KineticHeading text={project.title} className="heading-xl max-w-3xl" intro={theme.heroIntro} />
         </div>
       </section>
 
@@ -337,6 +342,6 @@ export default async function ProjectPage({ params }: Props) {
           { name: project.title, path: `/work/${canonicalSlug}` },
         ])}
       />
-    </>
+    </ThemedProjectShell>
   )
 }

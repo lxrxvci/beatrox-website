@@ -10,7 +10,10 @@
   --text-tertiary: #4a4a4a;
   --accent: #c8ff00;
   --accent-dim: #9ecc00;
-  --accent-glow: rgba(200, 255, 0, 0.35);
+  --accent-glow: rgba(var(--accent-rgb), 0.35);
+  /* RGB triplet of --accent for rgba() composites; per-project themes
+     override it alongside --accent so glows/hovers re-skin automatically. */
+  --accent-rgb: 200, 255, 0;
   --border: #262626;
   --border-subtle: #1a1a1a;
 
@@ -273,7 +276,7 @@ html.lenis body {
 .btn-primary--accent:hover {
   background: var(--accent);
   color: var(--bg-primary);
-  box-shadow: 0 10px 28px rgba(200, 255, 0, 0.18);
+  box-shadow: 0 10px 28px rgba(var(--accent-rgb), 0.18);
 }
 
 .btn-ghost {
@@ -422,8 +425,8 @@ html.lenis body {
 
 .project-card:hover::after {
   opacity: 1;
-  border-color: rgba(200, 255, 0, 0.5);
-  box-shadow: inset 0 0 24px rgba(200, 255, 0, 0.1);
+  border-color: rgba(var(--accent-rgb), 0.5);
+  box-shadow: inset 0 0 24px rgba(var(--accent-rgb), 0.1);
 }
 
 /* Kinetic capabilities ticker */
@@ -667,10 +670,10 @@ html.lenis body {
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .card-glow:hover {
-  border-color: rgba(200, 255, 0, 0.5);
+  border-color: rgba(var(--accent-rgb), 0.5);
   box-shadow:
-    0 0 0 1px rgba(200, 255, 0, 0.5),
-    0 0 24px rgba(200, 255, 0, 0.12);
+    0 0 0 1px rgba(var(--accent-rgb), 0.5),
+    0 0 24px rgba(var(--accent-rgb), 0.12);
 }
 
 /* Scanlines — CRT-style horizontal lines over hero/media blocks. Applied to
@@ -727,10 +730,10 @@ html.lenis body {
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .hud-card:hover {
-  border-color: rgba(200, 255, 0, 0.5);
+  border-color: rgba(var(--accent-rgb), 0.5);
   box-shadow:
-    0 0 0 1px rgba(200, 255, 0, 0.5),
-    0 0 24px rgba(200, 255, 0, 0.12);
+    0 0 0 1px rgba(var(--accent-rgb), 0.5),
+    0 0 24px rgba(var(--accent-rgb), 0.12);
 }
 
 .hud-card::before,
@@ -864,9 +867,9 @@ html.lenis body {
 }
 .hud-chip:hover,
 .hud-chip:focus-visible {
-  border-color: rgba(200, 255, 0, 0.6);
+  border-color: rgba(var(--accent-rgb), 0.6);
   color: #ffffff;
-  box-shadow: 0 0 14px rgba(200, 255, 0, 0.14);
+  box-shadow: 0 0 14px rgba(var(--accent-rgb), 0.14);
 }
 .hud-chip:hover::before,
 .hud-chip:hover::after,
