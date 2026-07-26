@@ -68,7 +68,11 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
 
   // ── Beat 2: brand-phrase montage (word-grouped char stagger) ──────────
   const m0 = 2.5
+  // Card 1 keeps its montage-opening explosion; card 3 (HUMAN CONNECTION)
+  // gets a matching radial burst just before its arrival. Card 2 stays
+  // static. No timing changes — bursts live inside the cards' windows.
   tl.call(() => r.getParticles()?.scatter(), undefined, m0 - 0.05)
+  tl.call(() => r.getParticles()?.scatter({ radial: true }), undefined, m0 + 2 * CARD - 0.05)
   cards.forEach((card, i) => {
     const t = m0 + i * CARD
     const index = card.querySelector('.intro-type-card__index')

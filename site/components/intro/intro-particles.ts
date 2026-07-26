@@ -24,8 +24,14 @@ import { gsap } from 'gsap'
 export interface IntroParticlesHandle {
   /** Start the staggered assembly into the pre-sampled text. */
   morphTo(text?: string): void
-  /** Staggered dissolve back out into a loose drift. */
-  scatter(): void
+  /**
+   * Staggered dissolve back out into a loose drift. Default flavor blows
+   * targets to random wide positions (card 1). `{ radial: true }` projects
+   * targets outward from screen center instead — an explosion whose travel
+   * lines radiate, used for the card-3 burst (plan: keep whichever flavor
+   * reads better in captured frames).
+   */
+  scatter(options?: { radial?: boolean }): void
   /** Part the field like a curtain for the hero match-frame. */
   part(): void
   /** Stop all motion immediately (user skipped to the dissolve). */
@@ -365,15 +371,36 @@ export async function initIntroParticles(
         })
       }
     },
-    scatter() {
+    scatter(options) {
       if (dead) return
       captureFrom(clock())
       const { w, h } = visible()
+      const radial = options?.radial === true
       for (let i = 0; i < COUNT; i++) {
         const i3 = i * 3
-        to[i3] = (Math.random() - 0.5) * w * 1.6
-        to[i3 + 1] = (Math.random() - 0.5) * h * 1.6
-        to[i3 + 2] = (Math.random() - 0.5) * 26
+        if (radial) {
+          // Radial burst: push each particle further out along its own
+          // direction from screen center (+ jitter), so travel lines
+          // radiate. Near-center particles get a random spoke.
+          const x = from[i3]
+          const y = from[i3 + 1]
+          const len = Math.hypot(x, y)
+          if (len > 0.5) {
+            const extend = w * (0.22 + seeds[i] * 0.4)
+            to[i3] = (x / len) * (len + extend) + (Math.random() - 0.5) * w * 0.18
+            to[i3 + 1] = (y / len) * (len + extend) + (Math.random() - 0.5) * h * 0.18
+          } else {
+            const a = seeds[i] * TAU
+            const r = w * (0.4 + seeds[(i * 7) % COUNT] * 0.35)
+            to[i3] = Math.cos(a) * r
+            to[i3 + 1] = Math.sin(a) * r * (h / w)
+          }
+          to[i3 + 2] = from[i3 + 2] * 1.8 + (Math.random() - 0.5) * 14
+        } else {
+          to[i3] = (Math.random() - 0.5) * w * 1.6
+          to[i3 + 1] = (Math.random() - 0.5) * h * 1.6
+          to[i3 + 2] = (Math.random() - 0.5) * 26
+        }
         // Staggered dissolve-out: seeded jitter delays, accelerate away.
         delays[i] = seeds[(i * 13) % COUNT] * 0.3
         durs[i] = 0.55 + seeds[i] * 0.3
