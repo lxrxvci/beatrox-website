@@ -949,6 +949,14 @@ html.lenis body {
   display: inline-block;
   will-change: transform, opacity;
 }
+/* Atomic word groups — phrases wrap between words only, never mid-word */
+.intro-type-card__wordgroup {
+  display: inline-block;
+  white-space: nowrap;
+}
+.intro-type-card__wordgroup + .intro-type-card__wordgroup {
+  margin-left: 0.28em;
+}
 
 /* Beat 1 caption under the particle logotype */
 .intro-caption {

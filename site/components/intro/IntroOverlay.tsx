@@ -11,8 +11,37 @@ import IntroCanvas from './IntroCanvas'
 import IntroImageStreaks from './IntroImageStreaks'
 import type { IntroGateProps } from './IntroGate'
 
-/** Beat 2 kinetic type cards — mirrors the page's section order. */
-const TYPE_CARDS = ['Design', 'Production', 'Rentals', 'Immersive Tech']
+/** Beat 2 brand-phrase cards — matched to MONTAGE_IMAGES order. */
+const TYPE_CARDS = ['Creativity Without Limits', 'Technical Excellence', 'Human Connection']
+
+/**
+ * KineticHeading-style size clamp: multi-word phrases must never clip on
+ * narrow viewports. Words are kept atomic (unbreakable), so measure the
+ * longest word against the card width and shrink the font until it fits.
+ */
+function clampCardWordSizes(cards: (HTMLDivElement | null)[]) {
+  for (const card of cards) {
+    const word = card?.querySelector<HTMLElement>('.intro-type-card__word')
+    if (!card || !word) continue
+    const label = word.getAttribute('aria-label') || word.textContent || ''
+    const longest = label.split(/\s+/).reduce((a, b) => (b.length > a.length ? b : a), '')
+    if (!longest) continue
+    word.style.fontSize = ''
+    const styles = window.getComputedStyle(word)
+    const baseSize = parseFloat(styles.fontSize)
+    const context = document.createElement('canvas').getContext('2d')
+    if (!context || !Number.isFinite(baseSize)) continue
+    context.font = `${styles.fontWeight} ${styles.fontSize} ${styles.fontFamily}`
+    const letterSpacing = parseFloat(styles.letterSpacing) || 0
+    const sample = longest.toUpperCase()
+    const wordWidth =
+      context.measureText(sample).width + letterSpacing * Math.max(0, sample.length - 1)
+    const available = card.clientWidth * 0.92
+    if (available > 0 && wordWidth > available) {
+      word.style.fontSize = `${Math.max(20, Math.floor(baseSize * (available / wordWidth)))}px`
+    }
+  }
+}
 
 /**
  * First-visit intro overlay (see beatrox-intro-overlay-plan.md).
@@ -51,7 +80,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
     // Late init (slow chunk): if the timeline is still inside beat 1,
     // trigger the logotype morph that its callback missed.
     const tl = tlRef.current
-    if (tl && tl.isActive() && tl.time() < 1.5) h.morphTo('BEATROX')
+    if (tl && tl.isActive() && tl.time() < 2.0) h.morphTo('BEATROX')
   }, [])
   const handleParticlesFail = useCallback(() => {
     // Graceful no-op (plan §4): the intro continues as a DOM-only sequence.
@@ -189,6 +218,10 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
         return
       }
 
+      // Multi-word phrases must fit before the timeline reveals them —
+      // measure with real font metrics (fonts are settled by end of beat 0).
+      clampCardWordSizes(cardsRef.current)
+
       tl = buildIntroTimeline({
         root,
         counterWrap,
@@ -301,15 +334,20 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
         {/* Beat 2: gallery image streaks (clip-path wipes) */}
         <IntroImageStreaks images={galleryImages} register={registerStreak} />
 
-        {/* Beat 2: kinetic type cards (per-character spans so the timeline
-            can stagger letters; the word stays accessible via aria-label) */}
+        {/* Beat 2: brand-phrase cards — per-word groups (unbreakable) of
+            per-character spans so the timeline can stagger letters; the
+            phrase stays accessible via aria-label */}
         {TYPE_CARDS.map((label, i) => (
           <div key={label} ref={setCardRef(i)} className="intro-type-card opacity-0">
             <span className="intro-type-card__index">{String(i + 1).padStart(2, '0')}</span>
             <span className="intro-type-card__word" aria-label={label}>
-              {label.split('').map((ch, j) => (
-                <span key={j} aria-hidden="true" className="intro-type-card__char">
-                  {ch === ' ' ? ' ' : ch}
+              {label.split(' ').map((wordText, w) => (
+                <span key={w} aria-hidden="true" className="intro-type-card__wordgroup">
+                  {wordText.split('').map((ch, j) => (
+                    <span key={j} className="intro-type-card__char">
+                      {ch}
+                    </span>
+                  ))}
                 </span>
               ))}
             </span>
