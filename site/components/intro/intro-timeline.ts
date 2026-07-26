@@ -9,10 +9,11 @@ import type { IntroParticlesHandle } from './intro-particles'
  *   0.00–0.40  counter wrapper exits (expo.in)
  *   0.10–1.75  beat 1: particles morph to "BEATROX" (1.3s converge), mono
  *              caption dwells a beat longer than the original cut
- *   1.85–~5.0  beat 2: kinetic type cards, ~0.78s each (was 0.62s), with
+ *   2.0–~5.1   beat 2: kinetic type cards, ~0.78s each (was 0.62s), with
  *              per-character expo.out entrances and considered power3.in
- *              exits; gallery streaks as directional ~180ms masked wipes
- *              with a slow 1.12→1.0 scale settle
+ *              exits; each card is paired with a category-matched work
+ *              image (montage-images.ts) whose streak wipe opens at
+ *              card_t + 0.06 — word and image hit together (beat-locked)
  *   ~5.2–6.9   beat 3: hero match-frame (same image, same headline) fades
  *              in at scale 1.06 → 1.0 (the mesh3d "dive"); particles part
  *   label      beat 4: "dissolve" — overlay crossfades onto the real hero
@@ -99,12 +100,15 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
   })
   const montageEnd = m0 + cards.length * CARD
 
-  // Gallery image streaks: ~180ms directional masked wipes (alternating
-  // pass-through direction) with a slow scale settle — reads as an
-  // intentional flash, not a glitch.
-  r.streaks.forEach((streak, i) => {
-    const t = m0 + 0.35 + i * (CARD * 1.25)
-    if (t + 0.6 > montageEnd) return
+  // Gallery streaks are BEAT-LOCKED to their card (client feedback): streak
+  // i belongs to card i and its wipe opens at card_t + 0.06 — exactly as the
+  // card's chars start landing, so word and category image hit together.
+  // Flash lifecycle unchanged: 180ms expo.out wipe → 1.12→1.0 scale settle
+  // → 180ms expo.in exit, gone by +0.56s (before the card's own exit).
+  cards.forEach((_, i) => {
+    const streak = r.streaks[i]
+    if (!streak) return
+    const t = m0 + i * CARD + 0.06
     const fromLeft = i % 2 === 0
     tl.set(streak, { opacity: 1 }, t)
     tl.fromTo(

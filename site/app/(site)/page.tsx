@@ -11,6 +11,7 @@ import RentalsTeaser from '@/components/home/RentalsTeaser'
 import TeamTeaser from '@/components/home/TeamTeaser'
 import ContactSection from '@/components/home/ContactSection'
 import IntroGate from '@/components/intro/IntroGate'
+import { MONTAGE_IMAGES } from '@/components/intro/montage-images'
 
 export const revalidate = 300
 
@@ -49,7 +50,9 @@ export default async function HomePage() {
         }
         ctaLabel={heroProps.cta?.label || 'See Our Work'}
         secondaryCtaLabel={heroProps.secondaryCta?.label || 'Book a Consultation'}
-        galleryImages={galleryImages.slice(0, 3)}
+        // Category-matched work images for the montage streaks — NOT the
+        // homepage gallery pool (client feedback). Mobile uses the first 3.
+        galleryImages={[...MONTAGE_IMAGES]}
       />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}

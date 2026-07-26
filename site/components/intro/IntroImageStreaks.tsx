@@ -32,7 +32,9 @@ export default function IntroImageStreaks({ images, register }: IntroImageStreak
           {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral
               flash frame; preloaded during beat 0, gone within seconds */}
           <img src={src} alt="" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-black/25" />
+          {/* 40% scrim keeps the card word legible over bright flashes
+              (streak layer stays below the card text layer) */}
+          <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
     </>
