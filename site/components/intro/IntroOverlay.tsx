@@ -65,6 +65,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
   const heroMediaRef = useRef<HTMLDivElement | null>(null)
   const heroTextRef = useRef<HTMLDivElement | null>(null)
   const skipRef = useRef<HTMLButtonElement | null>(null)
+  const brandRef = useRef<HTMLParagraphElement | null>(null)
   const cardsRef = useRef<(HTMLDivElement | null)[]>([])
   const streaksRef = useRef<(HTMLDivElement | null)[]>([])
   // Phase 3 wires the particle scene in here; null = WebGL unavailable.
@@ -212,7 +213,8 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
       const heroMedia = heroMediaRef.current
       const heroText = heroTextRef.current
       const skipButton = skipRef.current
-      if (!root || !counterWrap || !caption || !heroLayer || !heroMedia || !heroText || !skipButton) {
+      const brandMarker = brandRef.current
+      if (!root || !counterWrap || !caption || !heroLayer || !heroMedia || !heroText || !skipButton || !brandMarker) {
         // DOM went away — bail out cleanly rather than trapping scroll.
         finishImmediately()
         return
@@ -232,6 +234,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
         heroMedia,
         heroText,
         skipButton,
+        brandMarker,
         canvas: root.querySelector('canvas'),
         getParticles: () => particlesRef.current,
         mobile: window.innerWidth < 768,
@@ -359,8 +362,10 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
           Experiential Design &amp; Event Production
         </p>
 
-        {/* Brand marker, top-left (nav is covered by this overlay) */}
-        <p className="hud-label absolute left-6 top-6 z-40 lg:left-10 lg:top-8">
+        {/* Brand marker, top-left (nav is covered by this overlay). Fades
+            out at the start of beat 3 so it never double-exposes with the
+            real nav logo during the dissolve. */}
+        <p ref={brandRef} className="hud-label absolute left-6 top-6 z-40 lg:left-10 lg:top-8">
           BEATROX — EXPERIENCE SYSTEMS
         </p>
 

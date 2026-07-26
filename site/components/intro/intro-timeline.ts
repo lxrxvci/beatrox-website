@@ -36,6 +36,9 @@ export interface IntroTimelineRefs {
   heroMedia: HTMLElement
   heroText: HTMLElement
   skipButton: HTMLElement
+  /** Top-left brand marker — fades out at beat-3 start so it never
+      double-exposes with the real nav logo during the dissolve. */
+  brandMarker: HTMLElement
   /** Particle canvas (Phase 3) — null when WebGL failed/unavailable. */
   canvas: HTMLElement | null
   /** Lazy accessor: particles may still be initializing when built. */
@@ -149,6 +152,7 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
   )
   tl.fromTo(r.heroText, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, h0 + 0.65)
   tl.to(r.skipButton, { opacity: 0, duration: 0.3 }, h0)
+  tl.to(r.brandMarker, { opacity: 0, duration: 0.3, ease: 'power1.in' }, h0)
 
   // ── Beat 4: seamless dissolve onto the real hero (timing unchanged) ───
   const d0 = h0 + 2.6 // match-frame hold: 1.9s → 2.6s so the landing breathes
@@ -157,12 +161,11 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
   // Intro headline exits fast so the real HomeHero stagger (starting now)
   // never double-renders text on top of it.
   tl.to(r.heroText, { opacity: 0, duration: 0.4, ease: 'power2.inOut' }, d0)
-  tl.fromTo(
-    r.root,
-    { opacity: 1, filter: 'blur(0px)' },
-    { opacity: 0, filter: 'blur(8px)', duration: 0.8, ease: 'power2.inOut' },
-    d0
-  )
+  // Opacity-only crossfade: an animated full-viewport blur (0→8px) made
+  // the whole screen defocus then refocus mid-dissolve and spiked the GPU
+  // (client-reported "glitchy friction"). Both layers are pixel-identical
+  // here, so a plain fade is invisible.
+  tl.fromTo(r.root, { opacity: 1 }, { opacity: 0, duration: 0.8, ease: 'power2.inOut' }, d0)
   tl.call(r.onFinish, undefined, d0 + 0.82)
 
   return tl
