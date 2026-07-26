@@ -200,8 +200,13 @@ export async function initIntroParticles(
       if (pts[i + 1] < minY) minY = pts[i + 1]
       if (pts[i + 1] > maxY) maxY = pts[i + 1]
     }
-    const { w } = visible()
-    const scale = (w * 0.66) / Math.max(1, maxX - minX)
+    const { h } = visible()
+    // Fit portrait viewports: the word's rendered width fraction is
+    // 0.66 * min(1, aspect) / aspect — identical to the long-standing
+    // desktop geometry (aspect >= 1 → 0.66/aspect), but caps portrait
+    // screens at 66% width instead of overflowing (mobile showed "EATRO"
+    // clipped at ~143% width).
+    const scale = (h * 0.66 * Math.min(1, camera.aspect)) / Math.max(1, maxX - minX)
     const cx = (minX + maxX) / 2
     const cy = (minY + maxY) / 2
 
@@ -258,6 +263,11 @@ export async function initIntroParticles(
 
   // Sampled during init — the font race has all of beat 0 to finish, so
   // beat 1 starts deterministically. If sampling fails, morphTo retries.
+  // Set the real device aspect FIRST: resize() only runs after this, and
+  // visible() feeds the morph-target scale (portrait overflow fix).
+  camera.aspect =
+    (canvas.clientWidth || window.innerWidth) / (canvas.clientHeight || window.innerHeight)
+  camera.updateProjectionMatrix()
   morphReady = await prepareMorph('BEATROX')
 
   // ── Per-frame position blend ──────────────────────────────────────────
