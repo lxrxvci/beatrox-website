@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { gsap } from 'gsap'
 import { getLenis } from '@/components/lenis-store'
 import { INTRO_COMPLETE_EVENT } from './intro-storage'
@@ -27,7 +28,7 @@ const TYPE_CARDS = ['Design', 'Production', 'Rentals', 'Immersive Tech']
  * intent) seeks to the dissolve — never a hard cut. Mounted exclusively
  * by IntroGate; unmounts itself when the timeline completes.
  */
-export default function IntroOverlay({ heroImage, headline, galleryImages }: IntroGateProps) {
+export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabel, secondaryCtaLabel, galleryImages }: IntroGateProps) {
   const rootRef = useRef<HTMLDivElement | null>(null)
   const counterWrapRef = useRef<HTMLDivElement | null>(null)
   const captionRef = useRef<HTMLParagraphElement | null>(null)
@@ -245,7 +246,12 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
 
   if (done) return null
 
-  return (
+  // Portal to <body>: the page renders inside <main className="curtain-main
+  // relative z-10">, whose stacking context would trap the overlay's z-index
+  // below the nav (z-50). At body level z-[100] sits above content/nav/grain
+  // and below the admin overlay (z-9999). Client-only mount (ssr:false), so
+  // document is always available here.
+  return createPortal(
     <div
       ref={rootRef}
       className="fixed inset-0 z-[100] overflow-hidden bg-black"
@@ -275,6 +281,18 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
               <p className="overline mb-6">Experiential Design &amp; Production</p>
               <div className="heading-xl mb-8 max-w-[12ch] uppercase max-[480px]:text-[2.6rem]">
                 {headline}
+              </div>
+              {/* Invisible replicas of the real hero's subheadline + CTA row
+                  (same classes, same copy) so the justify-end layout puts the
+                  headline at the real hero's exact final position — without
+                  them the match-frame headline would sit ~100px too low and
+                  the handoff would visibly jump. */}
+              <p className="mb-10 max-w-[48ch] text-lg leading-relaxed text-[var(--text-secondary)] opacity-0">
+                {subheadline}
+              </p>
+              <div className="flex flex-wrap gap-4 opacity-0">
+                <span className="btn-magnetic">{ctaLabel}</span>
+                <span className="btn-magnetic btn-magnetic--accent">{secondaryCtaLabel}</span>
               </div>
             </div>
           </div>
@@ -321,6 +339,7 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
       >
         Skip intro
       </button>
-    </div>
+    </div>,
+    document.body
   )
 }

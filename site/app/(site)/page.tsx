@@ -41,6 +41,14 @@ export default async function HomePage() {
       <IntroGate
         heroImage={heroImage}
         headline={data.hero.headline || 'Building Unforgettable Worlds'}
+        // Same fallback strings HomeHero applies — the intro's beat-3
+        // match-frame must reproduce the real hero's exact final layout.
+        subheadline={
+          data.hero.subheadline ||
+          'Laser. Drone. Code. Canvas. We engineer moments that defy expectation.'
+        }
+        ctaLabel={heroProps.cta?.label || 'See Our Work'}
+        secondaryCtaLabel={heroProps.secondaryCta?.label || 'Book a Consultation'}
         galleryImages={galleryImages.slice(0, 3)}
       />
 
