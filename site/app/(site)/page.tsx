@@ -47,7 +47,7 @@ export default async function HomePage() {
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
         <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
-        <HomeHero {...heroProps} />
+        <HomeHero {...heroProps} introControlled />
       </section>
 
       {/* ── Continuous-scroll teaser panels ──────────────────────────────── */}

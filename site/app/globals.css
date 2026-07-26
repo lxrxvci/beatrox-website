@@ -914,3 +914,45 @@ html.lenis body {
   border-color: rgba(200, 255, 0, 0.55);
   box-shadow: 0 0 16px rgba(200, 255, 0, 0.12);
 }
+
+/* Beat 2: kinetic type cards (center-screen, GSAP-driven in/out) */
+.intro-type-card {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  text-align: center;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.intro-type-card__index {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+}
+.intro-type-card__word {
+  font-family: var(--font-heading), 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(2.6rem, 9vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+/* Beat 1 caption under the particle logotype */
+.intro-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
