@@ -78,10 +78,11 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
 
   const handleParticlesReady = useCallback((h: IntroParticlesHandle) => {
     particlesRef.current = h
-    // Late init (slow chunk): if the timeline is still inside beat 1,
-    // trigger the logotype morph that its callback missed.
+    // Late init (slow chunk): the timeline's own morphTo call fires at
+    // 4.75s via the lazy accessor, so it needs no help before that — only
+    // catch up if the finale window already started (and hasn't ended).
     const tl = tlRef.current
-    if (tl && tl.isActive() && tl.time() < 2.0) h.morphTo('BEATROX')
+    if (tl && tl.isActive() && tl.time() >= 4.75 && tl.time() < 7.2) h.morphTo('BEATROX')
   }, [])
   const handleParticlesFail = useCallback(() => {
     // Graceful no-op (plan §4): the intro continues as a DOM-only sequence.
