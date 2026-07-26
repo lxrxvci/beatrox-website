@@ -3,6 +3,7 @@ import { getHomepageResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import HeroMedia from '@/components/HeroMedia'
 import HomeHero from '@/components/HomeHero'
+import LivingHeroImage from '@/components/home/LivingHeroImage'
 import Marquee from '@/components/Marquee'
 import AboutTeaser from '@/components/home/AboutTeaser'
 import ServicesTeaser from '@/components/home/ServicesTeaser'
@@ -58,6 +59,10 @@ export default async function HomePage() {
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
         <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
+        {/* WebGL "living hero" layer — self-gates to the projekt-x hero
+            image; renders nothing for any other src, reduced-motion users,
+            or WebGL failure. Static <Image> above stays the LCP/fallback. */}
+        <LivingHeroImage src={heroImage} />
         <HomeHero {...heroProps} introControlled />
       </section>
 
