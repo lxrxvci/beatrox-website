@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { getTeamResolved } from '@/lib/content'
 import ScrollPanel from './ScrollPanel'
+import TeamTile from './TeamTile'
 
 export default async function TeamTeaser() {
   const data = await getTeamResolved()
@@ -23,21 +23,13 @@ export default async function TeamTeaser() {
       </div>
       <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
         {members.map((member) => (
-          <div key={member.name} className="group">
-            {member.photo?.url && (
-              <div className="relative mb-4 aspect-square overflow-hidden border border-white/10 bg-neutral-950">
-                <Image
-                  src={member.photo.url}
-                  alt={member.photo.alt || member.name}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover grayscale transition duration-700 group-hover:grayscale-0"
-                />
-              </div>
-            )}
-            <p className="text-sm font-semibold uppercase tracking-[0.11em] text-white">{member.name}</p>
-            <p className="mt-1 text-sm text-white">{member.title}</p>
-          </div>
+          <TeamTile
+            key={member.name}
+            name={member.name}
+            title={member.title}
+            photoUrl={member.photo?.url}
+            photoAlt={member.photo?.alt}
+          />
         ))}
       </div>
     </ScrollPanel>
