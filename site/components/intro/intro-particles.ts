@@ -237,7 +237,8 @@ export async function initIntroParticles(
     morphTo(text = 'BEATROX') {
       if (dead) return
       void sampleText(text).then((ok) => {
-        if (ok && !dead) retarget(1.05)
+        // 1.3s converge — beat 1 dwells longer in the slowed-down pacing.
+        if (ok && !dead) retarget(1.3)
       })
     },
     scatter() {
@@ -249,7 +250,7 @@ export async function initIntroParticles(
         to[i3 + 1] = (Math.random() - 0.5) * h * 1.6
         to[i3 + 2] = (Math.random() - 0.5) * 26
       }
-      retarget(0.7, 'power3.out')
+      retarget(0.85, 'power3.out')
     },
     part() {
       if (dead) return

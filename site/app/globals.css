@@ -944,6 +944,11 @@ html.lenis body {
   line-height: 1;
   color: var(--text-primary);
 }
+/* Per-character spans for the GSAP letter stagger (see intro-timeline.ts) */
+.intro-type-card__char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
 
 /* Beat 1 caption under the particle logotype */
 .intro-caption {

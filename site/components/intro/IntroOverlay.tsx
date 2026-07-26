@@ -51,7 +51,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
     // Late init (slow chunk): if the timeline is still inside beat 1,
     // trigger the logotype morph that its callback missed.
     const tl = tlRef.current
-    if (tl && tl.isActive() && tl.time() < 1.2) h.morphTo('BEATROX')
+    if (tl && tl.isActive() && tl.time() < 1.5) h.morphTo('BEATROX')
   }, [])
   const handleParticlesFail = useCallback(() => {
     // Graceful no-op (plan §4): the intro continues as a DOM-only sequence.
@@ -301,11 +301,18 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
         {/* Beat 2: gallery image streaks (clip-path wipes) */}
         <IntroImageStreaks images={galleryImages} register={registerStreak} />
 
-        {/* Beat 2: kinetic type cards */}
+        {/* Beat 2: kinetic type cards (per-character spans so the timeline
+            can stagger letters; the word stays accessible via aria-label) */}
         {TYPE_CARDS.map((label, i) => (
           <div key={label} ref={setCardRef(i)} className="intro-type-card opacity-0">
             <span className="intro-type-card__index">{String(i + 1).padStart(2, '0')}</span>
-            <span className="intro-type-card__word">{label}</span>
+            <span className="intro-type-card__word" aria-label={label}>
+              {label.split('').map((ch, j) => (
+                <span key={j} aria-hidden="true" className="intro-type-card__char">
+                  {ch === ' ' ? ' ' : ch}
+                </span>
+              ))}
+            </span>
           </div>
         ))}
 
