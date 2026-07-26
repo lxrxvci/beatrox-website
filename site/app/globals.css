@@ -902,3 +902,98 @@ html.lenis body {
 .hud-chip:focus-visible::after {
   opacity: 1;
 }
+
+/* ── First-visit intro overlay ─────────────────────────────────────────────
+   mesh3d-style preloader: oversized % counter bottom-left, JetBrains Mono
+   microcopy, acid-lime accent used sparingly. Motion is GSAP-driven from
+   components/intro; only static styles live here. */
+.intro-counter {
+  font-family: var(--font-heading), 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(4.5rem, 18vw, 15rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+.intro-counter__unit {
+  font-size: 0.22em;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-left: 0.08em;
+}
+
+/* Skip control — real button, keyboard-focusable (Esc also bound) */
+.intro-skip {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.65rem 1.1rem;
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.intro-skip:hover,
+.intro-skip:focus-visible {
+  color: var(--accent);
+  border-color: rgba(200, 255, 0, 0.55);
+  box-shadow: 0 0 16px rgba(200, 255, 0, 0.12);
+}
+
+/* Beat 2: kinetic type cards (center-screen, GSAP-driven in/out) */
+.intro-type-card {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  text-align: center;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.intro-type-card__index {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+}
+.intro-type-card__word {
+  font-family: var(--font-heading), 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(2.6rem, 9vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--text-primary);
+}
+/* Per-character spans for the GSAP letter stagger (see intro-timeline.ts) */
+.intro-type-card__char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+/* Atomic word groups — phrases wrap between words only, never mid-word */
+.intro-type-card__wordgroup {
+  display: inline-block;
+  white-space: nowrap;
+}
+.intro-type-card__wordgroup + .intro-type-card__wordgroup {
+  margin-left: 0.28em;
+}
+
+/* Beat 1 caption under the particle logotype */
+.intro-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
