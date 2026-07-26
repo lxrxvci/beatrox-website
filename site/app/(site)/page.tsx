@@ -10,6 +10,7 @@ import WorkTeaser from '@/components/home/WorkTeaser'
 import RentalsTeaser from '@/components/home/RentalsTeaser'
 import TeamTeaser from '@/components/home/TeamTeaser'
 import ContactSection from '@/components/home/ContactSection'
+import IntroGate from '@/components/intro/IntroGate'
 
 export const revalidate = 300
 
@@ -35,6 +36,14 @@ export default async function HomePage() {
 
   return (
     <>
+      {/* First-visit intro overlay — client-gated, zero SSR; nothing renders
+          for repeat visits, reduced-motion users, or crawlers. */}
+      <IntroGate
+        heroImage={heroImage}
+        headline={data.hero.headline || 'Building Unforgettable Worlds'}
+        galleryImages={galleryImages.slice(0, 3)}
+      />
+
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
         <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
