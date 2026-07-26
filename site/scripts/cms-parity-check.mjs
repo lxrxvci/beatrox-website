@@ -75,7 +75,7 @@ console.warn = (...args) => {
 // DB/upload artifacts absent from the JSON baseline — either never rendered
 // (ids, timestamps) or optional enrichment the renderer treats as optional
 // (image width/height, used only as layout hints when present).
-const IGNORED_KEYS = new Set(['id', 'createdAt', 'updatedAt', 'width', 'height', 'serviceTags', 'techTags', 'sourceIndex'])
+const IGNORED_KEYS = new Set(['id', 'createdAt', 'updatedAt', 'width', 'height', 'serviceTags', 'techTags', 'sourceIndex', 'stats'])
 
 function norm(value) {
   if (value === undefined || value === null || value === '') return undefined
