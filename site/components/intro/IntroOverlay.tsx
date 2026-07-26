@@ -6,6 +6,7 @@ import { getLenis } from '@/components/lenis-store'
 import { INTRO_COMPLETE_EVENT } from './intro-storage'
 import { buildIntroTimeline, INTRO_DISSOLVE_LABEL } from './intro-timeline'
 import type { IntroParticlesHandle } from './intro-particles'
+import IntroCanvas from './IntroCanvas'
 import IntroImageStreaks from './IntroImageStreaks'
 import type { IntroGateProps } from './IntroGate'
 
@@ -41,6 +42,15 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
 
   const [counter, setCounter] = useState(0)
   const [done, setDone] = useState(false)
+  const [webglFailed, setWebglFailed] = useState(false)
+
+  const handleParticlesReady = useCallback((h: IntroParticlesHandle) => {
+    particlesRef.current = h
+  }, [])
+  const handleParticlesFail = useCallback(() => {
+    // Graceful no-op (plan §4): the intro continues as a DOM-only sequence.
+    setWebglFailed(true)
+  }, [])
 
   const registerCard = useCallback((i: number, el: HTMLDivElement | null) => {
     cardsRef.current[i] = el
@@ -235,6 +245,11 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
       {/* Visual layers are decorative; the skip button below stays outside
           the aria-hidden subtree so it remains focusable/announced. */}
       <div aria-hidden="true" className="absolute inset-0">
+        {/* Particle backdrop (beats 0–3); absent when WebGL is unavailable */}
+        {!webglFailed && (
+          <IntroCanvas onReady={handleParticlesReady} onFail={handleParticlesFail} />
+        )}
+
         {/* Beat 3: hero match-frame — same image URL, same gradient scrims
             and same container/headline classes as the real hero, so the
             beat-4 crossfade lands on an identical first frame. */}
