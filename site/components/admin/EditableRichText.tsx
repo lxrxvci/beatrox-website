@@ -7,7 +7,7 @@ import type { LexicalNode } from './InlineLexicalEditor'
 
 const InlineLexicalEditor = dynamic(() => import('./InlineLexicalEditor'), {
   ssr: false,
-  loading: () => <div className="p-4 text-white/60">Loading editor…</div>,
+  loading: () => <div className="p-4 text-white">Loading editor…</div>,
 })
 
 interface EditableRichTextProps {
@@ -111,7 +111,7 @@ export default function EditableRichText({
           )}
           {isSaving && (
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center z-30">
-              <span className="text-white/80">Saving…</span>
+              <span className="text-white">Saving…</span>
             </div>
           )}
         </div>

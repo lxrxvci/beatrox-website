@@ -15,11 +15,11 @@ export default async function RentalsTeaser() {
       <div className="max-w-2xl">
         <p className="overline mb-4">Rentals</p>
         <h2 className="heading-lg mb-6">Need the gear without the show?</h2>
-        <p className="mb-4 text-base leading-relaxed text-white/80">
+        <p className="mb-4 text-base leading-relaxed text-white">
           LED walls, sound, lighting, backline, and staging — the same
           production-grade inventory, available dry-hire.
         </p>
-        <p className="text-base leading-relaxed text-white/60">
+        <p className="text-base leading-relaxed text-white">
           Our rentals shop lives on its own site with live inventory and booking.
         </p>
       </div>

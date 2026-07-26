@@ -36,7 +36,7 @@ export default async function BookPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="overline mb-4">Schedule</p>
           <KineticHeading text="Book a Consultation" className="heading-xl" />
-          <p className="text-base text-white/70 mt-6 max-w-xl leading-relaxed">
+          <p className="text-base text-white mt-6 max-w-xl leading-relaxed">
             Pick a time that works for you and we'll send a calendar invite with a Google Meet link.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default async function BookPage() {
       <section className="section border-t border-white/10 text-center py-12 lg:py-20">
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Prefer to send a message?</h2>
-          <p className="text-base text-white/70 mb-8 leading-relaxed">
+          <p className="text-base text-white mb-8 leading-relaxed">
             Use our contact form and a member of the team will get back to you within 1–2 business days.
           </p>
           <a href="/contact" className="btn-primary">Contact Us</a>

@@ -69,10 +69,10 @@ export default async function WorkTagPage({ params }: Props) {
         <Image src={heroImage} alt={`Projects tagged ${normalizedTag}`} fill priority sizes="100vw" className="object-cover opacity-35" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="relative max-w-[1400px] mx-auto w-full">
-          <Link href="/work" className="text-sm tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors mb-6 inline-block">
+          <Link href="/work" className="text-sm tracking-[0.18em] uppercase text-white hover:text-white transition-colors mb-6 inline-block">
             ← Work
           </Link>
-          <p className="heading-sm text-white/75 mb-3">Tag</p>
+          <p className="heading-sm text-white mb-3">Tag</p>
           <h1 className="heading-xl max-w-3xl">{displayTag}</h1>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default async function WorkTagPage({ params }: Props) {
                   <div>
                     <p className="heading-sm text-white leading-[1.4] mb-3 break-words">{project.title}</p>
                     {project.metadata?.client && (
-                      <p className="text-sm text-white/75 tracking-[0.12em] uppercase mb-3">
+                      <p className="text-sm text-white tracking-[0.12em] uppercase mb-3">
                         {project.metadata.client}
                       </p>
                     )}
@@ -111,7 +111,7 @@ export default async function WorkTagPage({ params }: Props) {
                           className={`mono text-[10px] sm:text-[11px] uppercase${
                             projectTag === normalizedTag
                               ? ' text-white'
-                              : ' text-[var(--text-secondary)]'
+                              : ' text-white'
                           }${tagIndex > 1 ? ' hidden sm:inline' : ''}`}
                         >
                           {humanizeTag(projectTag)}

@@ -23,7 +23,7 @@ export default async function AboutTeaser() {
         <h2 className="heading-lg mb-6">
           We don&apos;t just produce events. We engineer awe.
         </h2>
-        <p className="mb-10 max-w-md text-base leading-relaxed text-white/80">
+        <p className="mb-10 max-w-md text-base leading-relaxed text-white">
           Engineers, artists, and architects of the unforgettable — building the
           things people can&apos;t stop talking about.
         </p>

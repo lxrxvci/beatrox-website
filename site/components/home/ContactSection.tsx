@@ -28,14 +28,14 @@ export default async function ContactSection() {
           text="Let's Build Something Extraordinary"
           className="heading-lg md:heading-xl mx-auto max-w-4xl"
         />
-        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70">
+        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white">
           Every great experience starts with a conversation.
         </p>
         <p className="mt-6 flex flex-col items-center justify-center gap-2 text-base md:flex-row md:gap-8">
-          <a href={`mailto:${email}`} className="text-white/85 underline-offset-4 transition-colors hover:text-[var(--accent)] hover:underline">
+          <a href={`mailto:${email}`} className="text-white underline-offset-4 transition-colors hover:text-[var(--accent)] hover:underline">
             {email}
           </a>
-          <a href={`tel:${phone}`} className="text-white/85 underline-offset-4 transition-colors hover:text-[var(--accent)] hover:underline">
+          <a href={`tel:${phone}`} className="text-white underline-offset-4 transition-colors hover:text-[var(--accent)] hover:underline">
             {phoneFormatted || phone}
           </a>
         </p>

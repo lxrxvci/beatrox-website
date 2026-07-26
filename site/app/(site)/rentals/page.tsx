@@ -34,7 +34,7 @@ export default function RentalsPage() {
           <div className="max-w-[1120px] mx-auto">
             <div className="mb-10">
               <h2 className="heading-lg mb-3">{category.name}</h2>
-              <p className="text-base text-white/70 leading-relaxed max-w-2xl">
+              <p className="text-base text-white leading-relaxed max-w-2xl">
                 {category.description}
               </p>
             </div>
@@ -50,8 +50,8 @@ export default function RentalsPage() {
                     <span
                       className={`inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.12em] uppercase px-3 py-1.5 ${
                         item.available
-                          ? 'bg-white/10 text-white/80'
-                          : 'bg-white/5 text-white/55'
+                          ? 'bg-white/10 text-white'
+                          : 'bg-white/5 text-white'
                       }`}
                     >
                       <span
@@ -67,7 +67,7 @@ export default function RentalsPage() {
                     {item.name}
                   </h3>
 
-                  <p className="text-base text-white/75 leading-relaxed mb-5 flex-grow">
+                  <p className="text-base text-white leading-relaxed mb-5 flex-grow">
                     {item.description}
                   </p>
 
@@ -76,7 +76,7 @@ export default function RentalsPage() {
                     {item.specs.map((spec, i) => (
                       <li
                         key={spec}
-                        className="text-sm text-white/65 leading-relaxed flex items-start gap-2.5"
+                        className="text-sm text-white leading-relaxed flex items-start gap-2.5"
                       >
                         <NodeBullet index={i} />
                         {spec}
@@ -94,7 +94,7 @@ export default function RentalsPage() {
       <section className="section text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="heading-lg mb-5">{cta.heading}</h2>
-          <p className="text-base text-white/70 leading-relaxed mb-10">
+          <p className="text-base text-white leading-relaxed mb-10">
             {cta.subheading}
           </p>
           <Link href={cta.url} className="btn-primary">

@@ -59,7 +59,7 @@ export default function ParallaxHero({
 
       <div className="relative max-w-[1400px] mx-auto w-full">
         {backHref && backLabel && (
-          <Link href={backHref} className="mono text-white/60 hover:text-white transition-colors mb-8 inline-block">
+          <Link href={backHref} className="mono text-white hover:text-white transition-colors mb-8 inline-block">
             {backLabel}
           </Link>
         )}
@@ -76,7 +76,7 @@ export default function ParallaxHero({
         <KineticHeading text={title} className="heading-xl max-w-4xl" delay={0.3} />
         {description && (
           <motion.p
-            className="text-base text-[var(--text-secondary)] mt-6 max-w-2xl leading-relaxed"
+            className="text-base text-white mt-6 max-w-2xl leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}

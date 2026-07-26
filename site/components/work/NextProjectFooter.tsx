@@ -46,7 +46,7 @@ export default function NextProjectFooter({ project }: NextProjectFooterProps) {
             </p>
           )}
           <h2 className="heading-xl max-w-4xl">{project.title}</h2>
-          <span className="mono mt-10 inline-block uppercase tracking-[0.22em] text-white/60 group-hover:text-white transition-colors">
+          <span className="mono mt-10 inline-block uppercase tracking-[0.22em] text-white group-hover:text-white transition-colors">
             View case study →
           </span>
         </div>

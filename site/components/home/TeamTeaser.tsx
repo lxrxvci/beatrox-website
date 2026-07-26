@@ -16,7 +16,7 @@ export default async function TeamTeaser() {
         </div>
         <Link
           href="/team"
-          className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white"
+          className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:text-white"
         >
           Meet the Team →
         </Link>
@@ -36,7 +36,7 @@ export default async function TeamTeaser() {
               </div>
             )}
             <p className="text-sm font-semibold uppercase tracking-[0.11em] text-white">{member.name}</p>
-            <p className="mt-1 text-sm text-white/60">{member.title}</p>
+            <p className="mt-1 text-sm text-white">{member.title}</p>
           </div>
         ))}
       </div>

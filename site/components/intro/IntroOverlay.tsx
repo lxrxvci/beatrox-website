@@ -324,7 +324,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
                   headline at the real hero's exact final position — without
                   them the match-frame headline would sit ~100px too low and
                   the handoff would visibly jump. */}
-              <p className="mb-10 max-w-[48ch] text-lg leading-relaxed text-[var(--text-secondary)] opacity-0">
+              <p className="mb-10 max-w-[48ch] text-lg leading-relaxed text-white opacity-0">
                 {subheadline}
               </p>
               <div className="flex flex-wrap gap-4 opacity-0">

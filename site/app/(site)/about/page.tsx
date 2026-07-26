@@ -50,7 +50,7 @@ export default async function AboutPage() {
           <div className="max-w-[1120px] mx-auto">
             <p className="overline mb-4">About Us</p>
             <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
-            <p className="text-base text-white/85 mt-6 max-w-3xl leading-relaxed">
+            <p className="text-base text-white mt-6 max-w-3xl leading-relaxed">
               <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="hero.subheadline" value={data.hero.subheadline}>
                 {data.hero.subheadline}
               </EditableText>
@@ -78,7 +78,7 @@ export default async function AboutPage() {
         <div className="max-w-[1120px] mx-auto">
           <p className="overline mb-4">About Us</p>
           <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
-          <p className="text-base text-white/85 mt-6 max-w-3xl leading-relaxed">{data.hero.subheadline}</p>
+          <p className="text-base text-white mt-6 max-w-3xl leading-relaxed">{data.hero.subheadline}</p>
         </div>
       </section>
 
@@ -86,11 +86,11 @@ export default async function AboutPage() {
       <section className="section border-b border-white/10">
         <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-8 md:gap-12 items-start">
           <div className="space-y-6">
-            <h2 className="heading-sm text-white/75">Who are we</h2>
+            <h2 className="heading-sm text-white">Who are we</h2>
             <blockquote className="heading-md text-[var(--accent)] !normal-case tracking-normal leading-snug">
               &ldquo;We don&apos;t just produce events. We engineer awe.&rdquo;
             </blockquote>
-            <p className="text-base text-white/80 leading-relaxed whitespace-pre-line">
+            <p className="text-base text-white leading-relaxed whitespace-pre-line">
               {story?.body || data.hero.subheadline}
             </p>
           </div>
@@ -116,7 +116,7 @@ export default async function AboutPage() {
                   )}
                   <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(colIndex + 1).padStart(2, '0')}</p>
                   <h3 className="heading-sm text-white mb-4">{col.heading}</h3>
-                  <p className="text-base text-white/75 leading-relaxed">{col.body}</p>
+                  <p className="text-base text-white leading-relaxed">{col.body}</p>
                 </Reveal>
               )
             })}
@@ -127,10 +127,10 @@ export default async function AboutPage() {
       {capability?.categories && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">Tech Capabilities</h2>
+            <h2 className="heading-sm text-white mb-8">Tech Capabilities</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-8">
               {capability.categories.flatMap((cat) => cat.items).map((item) => (
-                <p key={item} className="text-sm text-white/75">{item}</p>
+                <p key={item} className="text-sm text-white">{item}</p>
               ))}
             </div>
           </div>
@@ -141,7 +141,7 @@ export default async function AboutPage() {
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Ready to work <span className="text-[var(--accent)]">together</span>?</h2>
-          <p className="text-base text-white/70 mb-8">
+          <p className="text-base text-white mb-8">
             Our team of creative and technical directors is ready to bring your vision to life.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

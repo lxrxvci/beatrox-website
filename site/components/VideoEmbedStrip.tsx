@@ -48,7 +48,7 @@ export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps)
   return (
     <section className="section border-t border-white/10">
       <div className="max-w-[1400px] mx-auto">
-        <h2 className="heading-sm text-white/75 mb-8">{title}</h2>
+        <h2 className="heading-sm text-white mb-8">{title}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {videos.map((video, index) => {
             const file = directFile(video)
@@ -80,7 +80,7 @@ export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps)
                               href={video.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-sm uppercase tracking-[0.16em] text-white/80 hover:text-white transition-colors"
+                              className="text-sm uppercase tracking-[0.16em] text-white hover:text-white transition-colors"
                             >
                               Open video source
                             </a>
@@ -90,7 +90,7 @@ export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps)
                     )}
                     <div className="p-5 sm:p-6">
                       <p className="heading-sm text-white mb-2">{label}</p>
-                      <p className="mono text-white/60">{video.provider.toUpperCase()}</p>
+                      <p className="mono text-white">{video.provider.toUpperCase()}</p>
                     </div>
                   </div>
                 )}

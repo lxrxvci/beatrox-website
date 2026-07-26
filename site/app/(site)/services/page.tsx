@@ -161,7 +161,7 @@ export default async function ServicesPage() {
               A Full-Service Event Production Company in <span className="text-[var(--accent)]">Portland, Oregon</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white/70 leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white leading-relaxed">
             <div className="space-y-6">
               <p>
                 Beatrox is a full-service event production company headquartered in Portland, Oregon, and
@@ -240,7 +240,7 @@ export default async function ServicesPage() {
                     <li key={item.slug}>
                       <Link
                         href={`/services/${item.slug}`}
-                        className="group flex items-baseline gap-2.5 text-sm text-white/75 leading-relaxed hover:text-white transition-colors"
+                        className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
                       >
                         <span
                           aria-hidden="true"
@@ -250,7 +250,7 @@ export default async function ServicesPage() {
                         </span>
                         <span>{item.label}</span>
                       </Link>
-                      <p className="mt-1 text-xs text-white/50 leading-relaxed">{item.blurb}</p>
+                      <p className="mt-1 text-xs text-white leading-relaxed">{item.blurb}</p>
                     </li>
                   ))}
                 </ul>
@@ -267,7 +267,7 @@ export default async function ServicesPage() {
       <section className="section text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="heading-lg mb-5">Book a <span className="text-[var(--accent)]">Consultation</span></h2>
-          <p className="text-base text-white/70 leading-relaxed mb-10">
+          <p className="text-base text-white leading-relaxed mb-10">
             Our team of technical and creative directors can help you with your project.
             We specialize in bringing unique and bespoke ideas to life. We know that every project
             is different and we can tailor a custom solution that works for you and your budget.

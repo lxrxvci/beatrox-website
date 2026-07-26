@@ -57,7 +57,7 @@ export default async function TechIndexPage() {
           AV integration, and technical event production */}
       <section className="section bg-blueprint border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white/70 leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white leading-relaxed">
             <div className="space-y-6">
               <p>
                 Every Beatrox environment runs on event technology that has to work the first time, in
@@ -114,7 +114,7 @@ export default async function TechIndexPage() {
                       <li key={slug}>
                         <Link
                           href={`/tech/${slug}`}
-                          className="group flex items-baseline gap-2.5 text-sm text-white/75 leading-relaxed hover:text-white transition-colors"
+                          className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
                         >
                           <span
                             aria-hidden="true"
@@ -139,7 +139,7 @@ export default async function TechIndexPage() {
       <section className="section bg-blueprint text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="heading-lg mb-5">Book a <span className="glow-text text-[var(--accent)]">Consultation</span></h2>
-          <p className="text-base text-white/70 leading-relaxed mb-10">
+          <p className="text-base text-white leading-relaxed mb-10">
             Our team of technical and creative directors can help you with your project.
             Book a discovery call and get professional advice today.
           </p>

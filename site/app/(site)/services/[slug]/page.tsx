@@ -190,7 +190,7 @@ export default async function ServicePage({ params }: Props) {
             <h2 className="hud-label mb-6">Capabilities</h2>
             <ul className="space-y-3">
               {service.capabilities.map((cap, i) => (
-                <li key={cap} className="flex items-start gap-3 text-base text-white/75">
+                <li key={cap} className="flex items-start gap-3 text-base text-white">
                   <span className="hud-index shrink-0 mt-1.5" aria-hidden="true">{String(i + 1).padStart(2, '0')} ·</span>
                   <EditableText collection="services" documentId={service.id} fieldPath={`capabilities.${i}`} value={cap}><span>{cap}</span></EditableText>
                 </li>
@@ -233,7 +233,7 @@ export default async function ServicePage({ params }: Props) {
                       className="object-cover transition-all duration-500 group-hover:scale-[1.02] group-hover:brightness-110"
                     />
                   </div>
-                  <p className="mono text-xs text-white/40 mt-2 uppercase tracking-[0.2em]">
+                  <p className="mono text-xs text-white mt-2 uppercase tracking-[0.2em]">
                     {entry.project.title}
                   </p>
                 </Link>
@@ -283,10 +283,10 @@ export default async function ServicePage({ params }: Props) {
                         {project.metadata.client}
                       </p>
                       <p className="heading-sm text-white mb-3">{project.title}</p>
-                      <p className="text-base text-white/75 leading-relaxed">
+                      <p className="text-base text-white leading-relaxed">
                         {truncateAtWord(project.hero.subheadline)}
                       </p>
-                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
+                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white group-hover:text-white transition-colors">
                         View project →
                       </span>
                     </div>
@@ -303,7 +303,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="section bg-blueprint text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Ready to get <span className="glow-text text-[var(--accent)]">started</span>?</h2>
-          <p className="text-base text-white/70 mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
+          <p className="text-base text-white mb-8 leading-relaxed">Book a discovery call and get professional advice today.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/book" className="btn-primary btn-primary--accent">Get in Touch</Link>
             <Link href="/work" className="btn-ghost">View Our Work</Link>

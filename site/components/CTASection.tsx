@@ -37,7 +37,7 @@ export default function CTASection({
     <section className="section border-t border-white/10 text-center">
       <div className="max-w-3xl mx-auto">
         <h2 className="heading-lg mb-5">{renderHeading(heading, accentWord)}</h2>
-        <p className="text-base text-white/70 mb-10 leading-relaxed max-w-xl mx-auto">
+        <p className="text-base text-white mb-10 leading-relaxed max-w-xl mx-auto">
           {subheading}
         </p>
         <div className="flex flex-wrap gap-4 justify-center">

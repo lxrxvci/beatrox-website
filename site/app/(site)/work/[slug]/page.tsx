@@ -149,14 +149,14 @@ export default async function ProjectPage({ params }: Props) {
         <ProjectAtmosphere engine={theme.engine} params={theme.engineParams} />
         <Link
           href="/work"
-          className="absolute top-24 left-6 lg:left-10 z-20 mono text-[11px] uppercase tracking-[0.24em] text-white/40 hover:text-white transition-colors"
+          className="absolute top-24 left-6 lg:left-10 z-20 mono text-[11px] uppercase tracking-[0.24em] text-white hover:text-white transition-colors"
         >
           ← Work
         </Link>
         <div className="relative z-10 max-w-[1400px] mx-auto w-full">
           <KineticHeading text={project.title} className="heading-xl max-w-3xl" intro={theme.heroIntro} />
           {(project.metadata.client || heroLocation || project.metadata.type) && (
-            <p className="mono mt-6 uppercase tracking-[0.22em] text-white/60">
+            <p className="mono mt-6 uppercase tracking-[0.22em] text-white">
               {project.metadata.client && (
                 <span className="text-[var(--accent)]">{project.metadata.client}</span>
               )}
@@ -196,7 +196,7 @@ export default async function ProjectPage({ params }: Props) {
                     </Link>
                   ))
                 ) : (
-                  <span className="text-sm text-white/40">No services tagged yet</span>
+                  <span className="text-sm text-white">No services tagged yet</span>
                 )}
               </div>
             </EditableServiceTags>
@@ -223,7 +223,7 @@ export default async function ProjectPage({ params }: Props) {
                     </Link>
                   ))
                 ) : (
-                  <span className="text-sm text-white/40">No tech tagged yet</span>
+                  <span className="text-sm text-white">No tech tagged yet</span>
                 )}
               </div>
             </EditableTechTags>
@@ -238,7 +238,7 @@ export default async function ProjectPage({ params }: Props) {
                     <h2 className="overline mb-4"><EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.heading`} value={block.heading}>{block.heading}</EditableText></h2>
                   )}
                   {block.content && (
-                    <p className={`${i === 0 ? 'text-xl text-white/90' : 'text-base text-white/75'} leading-relaxed whitespace-pre-line`}>
+                    <p className={`${i === 0 ? 'text-xl text-white' : 'text-base text-white'} leading-relaxed whitespace-pre-line`}>
                       <EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.content`} value={block.content} multiline>
                         {block.content}
                       </EditableText>
@@ -247,7 +247,7 @@ export default async function ProjectPage({ params }: Props) {
                   {block.items && (
                     <ul className="space-y-2 mt-2">
                       {block.items.map((item, itemIndex) => (
-                        <li key={item} className="flex items-start gap-3 text-base text-white/75">
+                        <li key={item} className="flex items-start gap-3 text-base text-white">
                         <NodeBullet index={itemIndex} />
                         <EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.items.${itemIndex}`} value={item}><span>{item}</span></EditableText>
                       </li>
@@ -330,7 +330,7 @@ export default async function ProjectPage({ params }: Props) {
       {relatedProjects.length > 0 && (
         <section className="section border-t border-white/10 py-14 lg:py-20">
           <div className="max-w-[1120px] mx-auto">
-            <h2 className="heading-sm text-white/75 mb-8">Related Projects</h2>
+            <h2 className="heading-sm text-white mb-8">Related Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
               {relatedProjects.map(({ project: related }) => {
                 const image = related.images?.find((img) => img.url && img.url.trim() !== '')?.url
@@ -362,10 +362,10 @@ export default async function ProjectPage({ params }: Props) {
                         {related.metadata.client}
                       </p>
                       <p className="heading-sm text-white mb-3">{related.title}</p>
-                      <p className="text-base text-white/75 leading-relaxed">
+                      <p className="text-base text-white leading-relaxed">
                         {truncateAtWord(related.hero.subheadline)}
                       </p>
-                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white/75 group-hover:text-white transition-colors">
+                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white group-hover:text-white transition-colors">
                         View project →
                       </span>
                     </div>
@@ -383,10 +383,10 @@ export default async function ProjectPage({ params }: Props) {
       {/* Bottom nav row */}
       <section className="border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <Link href="/work" className="text-sm font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-white transition-colors">
+          <Link href="/work" className="text-sm font-semibold tracking-[0.18em] uppercase text-white hover:text-white transition-colors">
             ← All Projects
           </Link>
-          <Link href="/services" className="text-sm font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-white transition-colors">
+          <Link href="/services" className="text-sm font-semibold tracking-[0.18em] uppercase text-white hover:text-white transition-colors">
             Explore Services →
           </Link>
         </div>

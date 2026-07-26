@@ -27,7 +27,7 @@ export default function MetadataSchematic({ cells }: MetadataSchematicProps) {
             </p>
             <div className="space-y-1.5">
               {cell.values.filter(Boolean).map((v) => (
-                <p key={v} className="text-[15px] md:text-base text-white/75 leading-relaxed break-words">
+                <p key={v} className="text-[15px] md:text-base text-white leading-relaxed break-words">
                   {v}
                 </p>
               ))}

@@ -36,7 +36,7 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
                   {block.items?.map((item, idx) => (
                     <div
                       key={idx}
-                      className="hud-card flex items-start gap-3 p-4 md:p-5 text-base text-white/75"
+                      className="hud-card flex items-start gap-3 p-4 md:p-5 text-base text-white"
                     >
                       <span className="hud-corners" aria-hidden="true" />
                       <span className="glow-text text-[var(--accent)] mt-0.5 shrink-0" aria-hidden="true">✓</span>
@@ -62,7 +62,7 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
                       <span className="hud-index inline-flex items-center justify-center px-2 py-1 mb-3 border border-[var(--accent)]/40">
                         {String(idx + 1).padStart(2, '0')}
                       </span>
-                      <span className="block text-base text-white/75 leading-relaxed"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item.replace(/^\d+[.)]\s*/, '')}</EditableText></span>
+                      <span className="block text-base text-white leading-relaxed"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}`} value={item}>{item.replace(/^\d+[.)]\s*/, '')}</EditableText></span>
                     </li>
                   ))}
                 </ol>
@@ -82,7 +82,7 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
                         <span aria-hidden="true" className="text-[var(--accent)] shrink-0">+</span>
                         <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.question`} value={item.question}>{item.question}</EditableText>
                       </p>
-                      <p className="text-base text-white/75 leading-relaxed"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.answer`} value={item.answer}>{item.answer}</EditableText></p>
+                      <p className="text-base text-white leading-relaxed"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.items.${idx}.answer`} value={item.answer}>{item.answer}</EditableText></p>
                     </div>
                   ))}
                 </div>
@@ -97,7 +97,7 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
                   <h2 className="hud-label mb-4"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.heading`} value={bodyBlock.heading}>{bodyBlock.heading}</EditableText></h2>
                 )}
                 {bodyBlock.content && (
-                  <p className="text-base text-white/75 leading-relaxed whitespace-pre-line">
+                  <p className="text-base text-white leading-relaxed whitespace-pre-line">
                     {bodyBlock.content}
                   </p>
                 )}
@@ -106,7 +106,7 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
                     {bodyBlock.items.map((item, itemIndex) => (
                       <div
                         key={item}
-                        className="hud-card flex items-start gap-3 p-4 md:p-5 text-base text-white/75"
+                        className="hud-card flex items-start gap-3 p-4 md:p-5 text-base text-white"
                       >
                         <span className="hud-corners" aria-hidden="true" />
                         <NodeBullet index={itemIndex} />

@@ -144,7 +144,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
                 {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {items.map((item, itemIndex) => (
-                    <li key={`${item.label}-${itemIndex}`} className="flex items-start gap-3 border border-white/10 bg-white/[0.03] p-4 text-base text-white/80">
+                    <li key={`${item.label}-${itemIndex}`} className="flex items-start gap-3 border border-white/10 bg-white/[0.03] p-4 text-base text-white">
                       <span aria-hidden="true" className="mono text-[var(--accent)] shrink-0 pt-0.5">
                         {String(itemIndex + 1).padStart(2, '0')}
                       </span>
@@ -210,7 +210,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
                       )}
                       <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(colIndex + 1).padStart(2, '0')}</p>
                       {col.heading && <h3 className="heading-sm text-white mb-4"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.columns.${colIndex}.heading`} value={col.heading}>{col.heading}</EditableText></h3>}
-                      <div className="text-white/75 leading-relaxed">
+                      <div className="text-white leading-relaxed">
                       {renderEditableBody(col.body, collection, documentId, `blocks.${index}.columns.${colIndex}.body`)}
                     </div>
                     </Reveal>
@@ -271,7 +271,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
                           <div>
                             <h3 className="heading-sm text-white">{p.title}</h3>
                             {p.hero?.tags && p.hero.tags.length > 0 && (
-                              <p className="text-xs text-white/60 mt-1">{p.hero.tags.join(' / ')}</p>
+                              <p className="text-xs text-white mt-1">{p.hero.tags.join(' / ')}</p>
                             )}
                           </div>
                         </div>
@@ -320,7 +320,7 @@ export default function CMSBlockRenderer({ blocks, collection, documentId, resol
             return (
               <article key={key} className="space-y-4">
                 {block.heading && <h2 className="heading-md"><EditableText collection={collection} documentId={documentId} fieldPath={`blocks.${index}.heading`} value={block.heading}>{block.heading}</EditableText></h2>}
-                <p className="text-base text-white/75">
+                <p className="text-base text-white">
                   {block.provider ? `${block.provider.toUpperCase()} video: ` : 'Video: '}
                   <a href={block.url} target="_blank" rel="noreferrer" className="underline">
                     {block.url}

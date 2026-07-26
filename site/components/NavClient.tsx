@@ -35,7 +35,7 @@ function RollingLink({
   external?: boolean
 }) {
   const className = `rolling-link text-xs font-semibold tracking-[0.18em] uppercase ${
-    active ? 'text-white' : 'text-white/75'
+    active ? 'text-white' : 'text-white'
   }`
   const inner = (
     <>
@@ -164,7 +164,7 @@ export default function NavClient({ links }: Props) {
           <Link
             href="/"
             className={`text-xs font-semibold tracking-[0.18em] uppercase transition-colors ${
-              pathname === '/' ? 'text-white' : 'text-white/80 hover:text-white'
+              pathname === '/' ? 'text-white' : 'text-white hover:text-white'
             }`}
           >
             Home
@@ -172,7 +172,7 @@ export default function NavClient({ links }: Props) {
           {links.map(({ label, href }) => {
             const resolved = resolveHref(href)
             const className =
-              'text-xs font-semibold tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors'
+              'text-xs font-semibold tracking-[0.18em] uppercase text-white hover:text-white transition-colors'
             return resolved.external ? (
               <a key={href} href={resolved.href} className={className}>
                 {label}

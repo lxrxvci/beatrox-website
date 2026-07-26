@@ -55,7 +55,7 @@ export default async function WorkPage() {
       <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto space-y-8">
           <h2 className="heading-md">Selected Work for Brands That Don&apos;t Do Small</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base text-white/75 leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base text-white leading-relaxed">
             <div className="space-y-4">
               <p>
                 Beatrox productions have carried some of the world&apos;s most recognizable names. For Netflix,
@@ -123,7 +123,7 @@ export default async function WorkPage() {
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Have a <span className="text-[var(--accent)]">project</span> in mind?</h2>
-          <p className="text-base text-white/70 mb-8">Let&apos;s talk about how we can bring your vision to life.</p>
+          <p className="text-base text-white mb-8">Let&apos;s talk about how we can bring your vision to life.</p>
           <Link href="/book" className="btn-primary btn-primary--accent">Start a Conversation</Link>
         </div>
       </section>

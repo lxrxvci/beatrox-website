@@ -71,26 +71,26 @@ export default async function ProposalPage({ params }: PageProps) {
     <main id="main-content" className="pt-32 pb-24 px-6 lg:px-10">
       <div className="max-w-[860px] mx-auto space-y-12">
         <header className="space-y-6 border-b border-white/10 pb-10">
-          <p className="heading-sm text-white/40">BEATROX — Proposal</p>
+          <p className="heading-sm text-white">BEATROX — Proposal</p>
           <h1 className="heading-lg">{deal.title}</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white/60">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white">
             {client && (
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Prepared for</p>
-                <p className="text-white/85">{client.name}</p>
+                <p className="text-white text-xs uppercase tracking-wider mb-1">Prepared for</p>
+                <p className="text-white">{client.name}</p>
                 {client.company && <p>{client.company}</p>}
               </div>
             )}
             {issuedDate && (
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Issued</p>
-                <p className="text-white/85">{issuedDate}</p>
+                <p className="text-white text-xs uppercase tracking-wider mb-1">Issued</p>
+                <p className="text-white">{issuedDate}</p>
               </div>
             )}
             {validUntil && (
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Valid until</p>
-                <p className="text-white/85">{validUntil}</p>
+                <p className="text-white text-xs uppercase tracking-wider mb-1">Valid until</p>
+                <p className="text-white">{validUntil}</p>
               </div>
             )}
           </div>
@@ -98,25 +98,25 @@ export default async function ProposalPage({ params }: PageProps) {
 
         {scopeItems.length > 0 && (
           <section className="space-y-6">
-            <h2 className="heading-sm text-white/75">Scope of Work</h2>
+            <h2 className="heading-sm text-white">Scope of Work</h2>
             <div className="divide-y divide-white/10 border-y border-white/10">
               {scopeItems.map((item, index) => (
                 <div key={item.id || index} className="py-5 flex items-start justify-between gap-6">
                   <div className="space-y-1">
                     <p className="text-base font-semibold text-white">{item.title}</p>
                     {item.description && (
-                      <p className="text-sm text-white/60 leading-relaxed whitespace-pre-line">{item.description}</p>
+                      <p className="text-sm text-white leading-relaxed whitespace-pre-line">{item.description}</p>
                     )}
                   </div>
                   {typeof item.price === 'number' && item.price > 0 && (
-                    <p className="text-base text-white/85 font-mono whitespace-nowrap">{money(item.price)}</p>
+                    <p className="text-base text-white font-mono whitespace-nowrap">{money(item.price)}</p>
                   )}
                 </div>
               ))}
             </div>
             {total > 0 && (
               <div className="flex items-center justify-between pt-2">
-                <p className="heading-sm text-white/75">Total Investment</p>
+                <p className="heading-sm text-white">Total Investment</p>
                 <p className="text-2xl font-semibold font-mono">{money(total)}</p>
               </div>
             )}
@@ -125,28 +125,28 @@ export default async function ProposalPage({ params }: PageProps) {
 
         {deal.proposal?.timeline && (
           <section className="space-y-3">
-            <h2 className="heading-sm text-white/75">Timeline</h2>
-            <p className="text-base text-white/70 leading-relaxed whitespace-pre-line">{deal.proposal.timeline}</p>
+            <h2 className="heading-sm text-white">Timeline</h2>
+            <p className="text-base text-white leading-relaxed whitespace-pre-line">{deal.proposal.timeline}</p>
           </section>
         )}
 
         {deal.proposal?.terms && (
           <section className="space-y-3">
-            <h2 className="heading-sm text-white/75">Terms</h2>
-            <p className="text-base text-white/70 leading-relaxed whitespace-pre-line">{deal.proposal.terms}</p>
+            <h2 className="heading-sm text-white">Terms</h2>
+            <p className="text-base text-white leading-relaxed whitespace-pre-line">{deal.proposal.terms}</p>
           </section>
         )}
 
         <footer className="border-t border-white/10 pt-8 space-y-3">
-          <h2 className="heading-sm text-white/75">Next Steps</h2>
-          <p className="text-base text-white/70 leading-relaxed">
+          <h2 className="heading-sm text-white">Next Steps</h2>
+          <p className="text-base text-white leading-relaxed">
             To accept this proposal or ask questions, reply to your proposal email or contact us at{' '}
             <a href="mailto:hello@beatrox.com" className="text-white underline underline-offset-4">
               hello@beatrox.com
             </a>
             .
           </p>
-          <p className="text-xs text-white/40">You can print or save this page as a PDF from your browser.</p>
+          <p className="text-xs text-white">You can print or save this page as a PDF from your browser.</p>
         </footer>
       </div>
     </main>

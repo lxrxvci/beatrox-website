@@ -115,7 +115,7 @@ export default function ServicesLinkGrid({ items }: ServicesLinkGridProps) {
               <li key={item.slug}>
                 <Link
                   href={`/tech/${item.slug}`}
-                  className="group flex items-baseline gap-2.5 text-sm text-white/75 leading-relaxed hover:text-white transition-colors"
+                  className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
                 >
                   <span
                     aria-hidden="true"

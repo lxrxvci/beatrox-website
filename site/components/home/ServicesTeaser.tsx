@@ -29,7 +29,7 @@ export default async function ServicesTeaser() {
         </div>
         <Link
           href="/services"
-          className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white"
+          className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:text-white"
         >
           All Services →
         </Link>
@@ -53,7 +53,7 @@ export default async function ServicesTeaser() {
             </div>
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
               <h3 className="heading-md mb-2 text-white">{service.title}</h3>
-              <p className="max-w-md text-sm leading-relaxed text-white/70">
+              <p className="max-w-md text-sm leading-relaxed text-white">
                 {truncateAtWord(service.hero.subheadline)}
               </p>
             </div>

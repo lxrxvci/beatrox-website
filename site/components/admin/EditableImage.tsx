@@ -188,7 +188,7 @@ export default function EditableImage({
         </span>
 
         <label className="block space-y-1">
-          <span className="text-[10px] uppercase tracking-wider text-white/50">From media library</span>
+          <span className="text-[10px] uppercase tracking-wider text-white">From media library</span>
           <select
             className="w-full bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-[var(--accent)]"
             value={selectedMediaId}
@@ -205,7 +205,7 @@ export default function EditableImage({
         </label>
 
         <label className="block space-y-1">
-          <span className="text-[10px] uppercase tracking-wider text-white/50">Or image path</span>
+          <span className="text-[10px] uppercase tracking-wider text-white">Or image path</span>
           <input
             type="text"
             className="w-full bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-[var(--accent)]"
@@ -218,7 +218,7 @@ export default function EditableImage({
 
         {alt !== undefined && (
           <label className="block space-y-1">
-            <span className="text-[10px] uppercase tracking-wider text-white/50">Alt text</span>
+            <span className="text-[10px] uppercase tracking-wider text-white">Alt text</span>
             <input
               type="text"
               className="w-full bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-[var(--accent)]"
@@ -231,7 +231,7 @@ export default function EditableImage({
 
         {serviceOptions && (
           <span className="block space-y-1">
-            <span className="text-[10px] uppercase tracking-wider text-white/50">Services in this photo</span>
+            <span className="text-[10px] uppercase tracking-wider text-white">Services in this photo</span>
             <span className="flex flex-wrap gap-2 max-h-32 overflow-y-auto pt-1">
               {serviceOptions.map((option) => {
                 const selected = draftServiceIds.includes(option.id)
@@ -244,7 +244,7 @@ export default function EditableImage({
                     className={`px-2 py-1 text-xs uppercase tracking-wider border rounded-sm transition-colors disabled:opacity-50 ${
                       selected
                         ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
-                        : 'bg-white/5 text-white/75 border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+                        : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
                     }`}
                   >
                     {option.title}
@@ -257,7 +257,7 @@ export default function EditableImage({
 
         {techOptions && (
           <span className="block space-y-1">
-            <span className="text-[10px] uppercase tracking-wider text-white/50">Tech in this photo</span>
+            <span className="text-[10px] uppercase tracking-wider text-white">Tech in this photo</span>
             <span className="flex flex-wrap gap-2 max-h-32 overflow-y-auto pt-1">
               {techOptions.map((option) => {
                 const selected = draftTechIds.includes(option.id)
@@ -270,7 +270,7 @@ export default function EditableImage({
                     className={`px-2 py-1 text-xs uppercase tracking-wider border rounded-sm transition-colors disabled:opacity-50 ${
                       selected
                         ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
-                        : 'bg-white/5 text-white/75 border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+                        : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
                     }`}
                   >
                     {option.title}

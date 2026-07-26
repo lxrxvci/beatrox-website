@@ -18,7 +18,7 @@ export default function ServiceTagCloud({ tags }: ServiceTagCloudProps) {
             className="hud-chip"
           >
             <span>{tag.title}</span>
-            <span className="text-[10px] text-white/40">{tag.count}</span>
+            <span className="text-[10px] text-white">{tag.count}</span>
           </Link>
         )
       })}

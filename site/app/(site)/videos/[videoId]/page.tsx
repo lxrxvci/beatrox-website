@@ -76,9 +76,9 @@ export default async function VideoDetailPage({ params }: Props) {
       <section className="section">
         <div className="max-w-[1000px] mx-auto space-y-6">
           <header>
-            <p className="text-sm text-white/65 uppercase tracking-[0.14em] mb-2">{video.privacyStatus}</p>
+            <p className="text-sm text-white uppercase tracking-[0.14em] mb-2">{video.privacyStatus}</p>
             <h1 className="heading-lg mb-4">{video.title}</h1>
-            <p className="text-base text-white/75 whitespace-pre-line">{video.description}</p>
+            <p className="text-base text-white whitespace-pre-line">{video.description}</p>
           </header>
 
           <div className="aspect-video border border-white/10 bg-black">
@@ -93,12 +93,12 @@ export default async function VideoDetailPage({ params }: Props) {
             />
           </div>
 
-          <div className="text-sm text-white/65">
+          <div className="text-sm text-white">
             <p>Published: {video.publishedAt || 'Unknown'}</p>
             <p>Duration: {video.duration || 'Unknown'}</p>
             <p>
               Source:{' '}
-              <a href={video.url} target="_blank" rel="noopener noreferrer" className="text-white/85 hover:text-white">
+              <a href={video.url} target="_blank" rel="noopener noreferrer" className="text-white hover:text-white">
                 Watch on YouTube
               </a>
             </p>

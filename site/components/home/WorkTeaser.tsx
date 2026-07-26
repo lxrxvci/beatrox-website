@@ -34,7 +34,7 @@ export default async function WorkTeaser() {
         </div>
         <Link
           href="/work"
-          className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white"
+          className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:text-white"
         >
           View All Work →
         </Link>

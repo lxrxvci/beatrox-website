@@ -186,7 +186,7 @@ export default function EditableCuratedImages({
       <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--accent)]">
         Arrange photos
       </p>
-      <p className="mono text-white/50 text-xs">
+      <p className="mono text-white text-xs">
         Reorder or hide this page&apos;s photos. Untouched photos stay automatic — newly tagged
         photos fill the highest free slot.
       </p>
@@ -200,8 +200,8 @@ export default function EditableCuratedImages({
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={item.url} alt={item.alt} className="w-16 h-10 object-cover rounded-sm shrink-0" />
             <span className="flex-1 min-w-0">
-              <span className="block mono text-xs text-white/80 truncate">{item.projectTitle}</span>
-              <span className="block text-[10px] text-white/40">
+              <span className="block mono text-xs text-white truncate">{item.projectTitle}</span>
+              <span className="block text-[10px] text-white">
                 #{index + 1} · image {item.imageIndex + 1}
               </span>
             </span>
@@ -228,7 +228,7 @@ export default function EditableCuratedImages({
                 type="button"
                 onClick={() => hide(index)}
                 disabled={isSaving}
-                className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white/75 border border-white/20 rounded-sm disabled:opacity-50"
+                className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 rounded-sm disabled:opacity-50"
               >
                 Hide
               </button>
@@ -239,7 +239,7 @@ export default function EditableCuratedImages({
 
       {draftHidden.length > 0 && (
         <div className="space-y-2">
-          <p className="text-[10px] uppercase tracking-wider text-white/50">Hidden</p>
+          <p className="text-[10px] uppercase tracking-wider text-white">Hidden</p>
           <ul className="space-y-2">
             {draftHidden.map((item, index) => (
               <li
@@ -248,14 +248,14 @@ export default function EditableCuratedImages({
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.url} alt={item.alt} className="w-16 h-10 object-cover rounded-sm shrink-0" />
-                <span className="flex-1 min-w-0 mono text-xs text-white/60 truncate">
+                <span className="flex-1 min-w-0 mono text-xs text-white truncate">
                   {item.projectTitle}
                 </span>
                 <button
                   type="button"
                   onClick={() => unhide(index)}
                   disabled={isSaving}
-                  className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white/75 border border-white/20 rounded-sm disabled:opacity-50 shrink-0"
+                  className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 rounded-sm disabled:opacity-50 shrink-0"
                 >
                   Show
                 </button>

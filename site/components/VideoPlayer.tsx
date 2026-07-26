@@ -194,7 +194,7 @@ export default function VideoPlayer({ src, poster, title }: VideoPlayerProps) {
               )}
             </button>
 
-            <span className="mono text-white/70 text-xs tabular-nums">
+            <span className="mono text-white text-xs tabular-nums">
               {fmt(videoRef.current?.currentTime ?? 0)} / {fmt(videoRef.current?.duration ?? 0)}
             </span>
 
@@ -232,7 +232,7 @@ export default function VideoPlayer({ src, poster, title }: VideoPlayerProps) {
                 if (videoRef.current) videoRef.current.playbackRate = s
               }}
               aria-label="Playback speed"
-              className="mono bg-transparent text-white/80 text-xs border border-white/25 px-1.5 py-1 cursor-pointer"
+              className="mono bg-transparent text-white text-xs border border-white/25 px-1.5 py-1 cursor-pointer"
             >
               {SPEEDS.map((s) => (
                 <option key={s} value={s} className="bg-black">

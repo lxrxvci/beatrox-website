@@ -93,9 +93,9 @@ export default function BookingForm({ types }: BookingFormProps) {
     return (
       <div className="border border-white/20 bg-white/5 p-10 md:p-12 text-center" role="status" aria-live="polite">
         <h2 className="heading-md text-white mb-5">You're Booked</h2>
-        <p className="text-base text-white/70 leading-relaxed mb-6">{state.message}</p>
+        <p className="text-base text-white leading-relaxed mb-6">{state.message}</p>
         {state.startTime && state.timezone && (
-          <p className="text-base text-white/85 mb-2">
+          <p className="text-base text-white mb-2">
             <strong>{state.startTime}</strong> {state.timezone}
           </p>
         )}
@@ -123,9 +123,9 @@ export default function BookingForm({ types }: BookingFormProps) {
 
       {/* Step 1: Select type */}
       <div className={step === 'type' ? 'block' : 'hidden'}>
-        <h2 className="heading-sm text-white/75 mb-7">1. Choose a consultation type</h2>
+        <h2 className="heading-sm text-white mb-7">1. Choose a consultation type</h2>
         {types.length === 0 ? (
-          <p className="text-base text-white/70">No consultation types are available right now.</p>
+          <p className="text-base text-white">No consultation types are available right now.</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {types.map((type) => (
@@ -144,9 +144,9 @@ export default function BookingForm({ types }: BookingFormProps) {
                   )}
                   <span className="heading-sm text-white">{type.name}</span>
                 </span>
-                <span className="text-sm text-white/65 block mb-2">{type.duration} minutes</span>
+                <span className="text-sm text-white block mb-2">{type.duration} minutes</span>
                 {type.description && (
-                  <span className="text-base text-white/70 leading-relaxed">{type.description}</span>
+                  <span className="text-base text-white leading-relaxed">{type.description}</span>
                 )}
               </button>
             ))}
@@ -157,24 +157,24 @@ export default function BookingForm({ types }: BookingFormProps) {
       {/* Step 2: Select date and time */}
       <div className={step === 'datetime' ? 'block' : 'hidden'}>
         <div className="flex items-center justify-between gap-4 mb-7">
-          <h2 className="heading-sm text-white/75">2. Select a date and time</h2>
+          <h2 className="heading-sm text-white">2. Select a date and time</h2>
           <button
             type="button"
             onClick={() => setStep('type')}
-            className="text-sm text-white/65 hover:text-[var(--accent)] transition-colors shrink-0"
+            className="text-sm text-white hover:text-[var(--accent)] transition-colors shrink-0"
           >
             ← Back to types
           </button>
         </div>
 
         {selectedType && (
-          <p className="text-base text-white/70 mb-5">
+          <p className="text-base text-white mb-5">
             Booking a <strong className="text-white">{selectedType.name}</strong> ({selectedType.duration} min)
           </p>
         )}
 
         <div className="mb-7">
-          <label className="heading-sm text-white/75 block mb-2.5" htmlFor="booking-date">
+          <label className="heading-sm text-white block mb-2.5" htmlFor="booking-date">
             Date
           </label>
           <input
@@ -188,7 +188,7 @@ export default function BookingForm({ types }: BookingFormProps) {
           />
         </div>
 
-        {isPendingSlots && <p className="text-base text-white/65">Loading available times…</p>}
+        {isPendingSlots && <p className="text-base text-white">Loading available times…</p>}
 
         {slotError && !isPendingSlots && (
           <p className="text-base text-red-200 bg-red-400/10 border border-red-400/30 p-4 mb-5">{slotError}</p>
@@ -196,7 +196,7 @@ export default function BookingForm({ types }: BookingFormProps) {
 
         {slots.length > 0 && !isPendingSlots && (
           <div>
-            <p className="heading-sm text-white/75 block mb-4">Available times</p>
+            <p className="heading-sm text-white block mb-4">Available times</p>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
               {slots.map((slot) => (
                 <button
@@ -206,7 +206,7 @@ export default function BookingForm({ types }: BookingFormProps) {
                   className="border border-white/15 bg-transparent hover:bg-white/5 hover:border-white/35 py-3.5 text-center transition-colors"
                 >
                   <span className="text-base text-white">{slot.displayTime}</span>
-                  <span className="text-sm text-white/60 block">{slot.displayPeriod}</span>
+                  <span className="text-sm text-white block">{slot.displayPeriod}</span>
                 </button>
               ))}
             </div>
@@ -217,11 +217,11 @@ export default function BookingForm({ types }: BookingFormProps) {
       {/* Step 3: Contact details */}
       <div className={step === 'details' ? 'block' : 'hidden'}>
         <div className="flex items-center justify-between gap-4 mb-7">
-          <h2 className="heading-sm text-white/75">3. Your details</h2>
+          <h2 className="heading-sm text-white">3. Your details</h2>
           <button
             type="button"
             onClick={() => setStep('datetime')}
-            className="text-sm text-white/65 hover:text-[var(--accent)] transition-colors shrink-0"
+            className="text-sm text-white hover:text-[var(--accent)] transition-colors shrink-0"
           >
             ← Back to time
           </button>
@@ -229,7 +229,7 @@ export default function BookingForm({ types }: BookingFormProps) {
 
         {selectedSlot && (
           <div className="border border-white/15 bg-white/5 p-5 mb-7">
-            <p className="text-base text-white/70">
+            <p className="text-base text-white">
               <span className="text-white">{selectedType?.name}</span> on{' '}
               <span className="text-white">
                 {new Date(selectedSlot.startTime).toLocaleDateString(undefined, {
@@ -264,7 +264,7 @@ export default function BookingForm({ types }: BookingFormProps) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="name">
+              <label className="heading-sm text-white block mb-2.5" htmlFor="name">
                 Your Name *
               </label>
               <input
@@ -272,7 +272,7 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="name"
                 type="text"
                 required
-                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors ${
+                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors ${
                   hasError('name') ? 'border-red-400/60' : 'border-white/25'
                 }`}
                 placeholder="Your Name"
@@ -280,7 +280,7 @@ export default function BookingForm({ types }: BookingFormProps) {
               {fieldError('name')}
             </div>
             <div>
-              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="email">
+              <label className="heading-sm text-white block mb-2.5" htmlFor="email">
                 Email Address *
               </label>
               <input
@@ -288,7 +288,7 @@ export default function BookingForm({ types }: BookingFormProps) {
                 name="email"
                 type="email"
                 required
-                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors ${
+                className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors ${
                   hasError('email') ? 'border-red-400/60' : 'border-white/25'
                 }`}
                 placeholder="Email Address"
@@ -296,33 +296,33 @@ export default function BookingForm({ types }: BookingFormProps) {
               {fieldError('email')}
             </div>
             <div>
-              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="company">
+              <label className="heading-sm text-white block mb-2.5" htmlFor="company">
                 Company / Organization
               </label>
               <input
                 id="company"
                 name="company"
                 type="text"
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors"
                 placeholder="Company"
               />
             </div>
             <div>
-              <label className="heading-sm text-white/75 block mb-2.5" htmlFor="phone">
+              <label className="heading-sm text-white block mb-2.5" htmlFor="phone">
                 Phone Number
               </label>
               <input
                 id="phone"
                 name="phone"
                 type="tel"
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors"
                 placeholder="Phone Number"
               />
             </div>
           </div>
 
           <div>
-            <label className="heading-sm text-white/75 block mb-2.5" htmlFor="projectSummary">
+            <label className="heading-sm text-white block mb-2.5" htmlFor="projectSummary">
               Tell Us About Your Project *
             </label>
             <textarea
@@ -330,7 +330,7 @@ export default function BookingForm({ types }: BookingFormProps) {
               name="projectSummary"
               required
               rows={6}
-              className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors resize-none ${
+              className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors resize-none ${
                 hasError('projectSummary') ? 'border-red-400/60' : 'border-white/25'
               }`}
               placeholder="Describe your vision, goals, and any specific requirements..."

@@ -31,7 +31,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
     return (
       <div className="border border-white/20 bg-white/5 p-10 md:p-12 text-center" role="status" aria-live="polite">
         <h3 className="heading-sm text-white mb-4">Message Sent</h3>
-        <p className="text-base text-white/70 leading-relaxed">{successMessage}</p>
+        <p className="text-base text-white leading-relaxed">{successMessage}</p>
       </div>
     )
   }
@@ -70,7 +70,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-7">
         {textFields.slice(0, 4).map((field) => (
           <div key={field.id}>
-            <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
+            <label className="heading-sm text-white block mb-2.5" htmlFor={field.id}>
               {field.label}
               {field.required && ' *'}
             </label>
@@ -80,7 +80,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
               type={field.type}
               required={field.required}
               defaultValue={field.id === 'company' ? '' : undefined}
-              className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors"
+              className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors"
               placeholder={field.label}
             />
             {fieldError(field.id)}
@@ -92,7 +92,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'select' && field.options) {
           return (
             <div key={field.id}>
-              <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
+              <label className="heading-sm text-white block mb-2.5" htmlFor={field.id}>
                 {field.label}
                 {field.required && ' *'}
               </label>
@@ -117,7 +117,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'multiselect' && field.options) {
           return (
             <div key={field.id}>
-              <span className="heading-sm text-white/75 block mb-4">
+              <span className="heading-sm text-white block mb-4">
                 {field.label}
                 {field.required && ' *'}
               </span>
@@ -133,7 +133,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                       value={opt}
                       className="mt-1 w-4 h-4"
                     />
-                    <span className="text-base text-white/80 leading-snug">{opt}</span>
+                    <span className="text-base text-white leading-snug">{opt}</span>
                   </label>
                 ))}
               </div>
@@ -145,7 +145,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'date') {
           return (
             <div key={field.id}>
-              <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
+              <label className="heading-sm text-white block mb-2.5" htmlFor={field.id}>
                 {field.label}
                 {field.required && ' *'}
               </label>
@@ -154,7 +154,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 name={field.id}
                 type="date"
                 required={field.required}
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors [color-scheme:dark]"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors [color-scheme:dark]"
               />
               {fieldError(field.id)}
             </div>
@@ -164,7 +164,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
         if (field.type === 'textarea') {
           return (
             <div key={field.id}>
-              <label className="heading-sm text-white/75 block mb-2.5" htmlFor={field.id}>
+              <label className="heading-sm text-white block mb-2.5" htmlFor={field.id}>
                 {field.label}
                 {field.required && ' *'}
               </label>
@@ -173,7 +173,7 @@ export default function ContactForm({ fields, submitLabel, successMessage }: Con
                 name={field.id}
                 required={field.required}
                 rows={6}
-                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white/55 focus:outline-none focus:border-[var(--accent)] transition-colors resize-none"
+                className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder:text-white focus:outline-none focus:border-[var(--accent)] transition-colors resize-none"
                 placeholder={field.placeholder || field.label}
               />
               {fieldError(field.id)}

@@ -32,7 +32,7 @@ export default function AdminOverlay() {
       </button>
       {editMode && (
         <div className="absolute bottom-full right-0 mb-3 w-64 p-3 bg-[var(--bg-elevated)] border border-white/10 rounded-sm shadow-2xl">
-          <p className="text-xs text-white/70">
+          <p className="text-xs text-white">
             Click any highlighted block to edit it inline. Press Esc to exit.
           </p>
         </div>

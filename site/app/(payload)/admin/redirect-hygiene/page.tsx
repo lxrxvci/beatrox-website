@@ -46,13 +46,13 @@ export default async function RedirectHygieneAdminPage({ searchParams }: PagePro
     <section className="pt-28 pb-20 px-6 lg:px-10">
       <div className="max-w-[1100px] mx-auto space-y-6">
         <header className="space-y-2">
-          <p className="heading-sm text-white/40">Payload Admin Tool</p>
+          <p className="heading-sm text-white">Payload Admin Tool</p>
           <h1 className="heading-lg">Redirect Hygiene</h1>
-          <p className="text-sm text-white/60 max-w-3xl">
+          <p className="text-sm text-white max-w-3xl">
             Detects self-redirects, chain flatten opportunities, and loop risks. Safe auto-fixes apply to self redirects
             and chain flatten updates. Loop risks are flagged for manual review.
           </p>
-          <p className="text-xs text-white/45">
+          <p className="text-xs text-white">
             Tip: predeploy script equivalent is <code>npm run redirects:hygiene</code> and <code>npm run redirects:hygiene:apply</code>.
           </p>
         </header>
@@ -60,7 +60,7 @@ export default async function RedirectHygieneAdminPage({ searchParams }: PagePro
         {notice && <p className="text-xs border border-emerald-500/40 bg-emerald-500/10 px-4 py-3">{notice}</p>}
 
         <div className="border border-white/10 p-5 space-y-4">
-          <h2 className="heading-sm text-white/85">Current Scan</h2>
+          <h2 className="heading-sm text-white">Current Scan</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
             <div className="border border-white/10 p-3">Scanned: {report.scanned}</div>
             <div className="border border-white/10 p-3">Self: {report.issues.filter((i) => i.kind === 'self_redirect').length}</div>
@@ -80,18 +80,18 @@ export default async function RedirectHygieneAdminPage({ searchParams }: PagePro
         </div>
 
         <div className="border border-white/10 p-5 space-y-3">
-          <h2 className="heading-sm text-white/85">Issues</h2>
+          <h2 className="heading-sm text-white">Issues</h2>
           {report.issues.length === 0 ? (
-            <p className="text-xs text-white/55">No issues detected.</p>
+            <p className="text-xs text-white">No issues detected.</p>
           ) : (
             <ul className="space-y-2 text-xs">
               {report.issues.map((issue, idx) => (
                 <li key={`${issue.kind}-${issue.from}-${idx}`} className="border border-white/10 p-3">
-                  <p className="text-white/85">
+                  <p className="text-white">
                     [{issue.kind}] {issue.from} -&gt; {issue.to}
                   </p>
-                  {issue.suggestedTo && <p className="text-white/60">Suggested destination: {issue.suggestedTo}</p>}
-                  {issue.path && <p className="text-white/45">Path: {issue.path.join(' -> ')}</p>}
+                  {issue.suggestedTo && <p className="text-white">Suggested destination: {issue.suggestedTo}</p>}
+                  {issue.path && <p className="text-white">Path: {issue.path.join(' -> ')}</p>}
                 </li>
               ))}
             </ul>

@@ -53,10 +53,10 @@ export default async function CaseStudyPage({ params }: Props) {
           </>
         )}
         <div className="relative max-w-[1400px] mx-auto w-full px-6 lg:px-10 pb-16">
-          <Link href="/case-studies" className="text-[0.65rem] tracking-[0.2em] uppercase text-white/30 hover:text-white transition-colors mb-8 inline-block">
+          <Link href="/case-studies" className="text-[0.65rem] tracking-[0.2em] uppercase text-white hover:text-white transition-colors mb-8 inline-block">
             ← Case Studies
           </Link>
-          <p className="heading-sm text-white/40 mb-3">{caseStudy.metadata.type}</p>
+          <p className="heading-sm text-white mb-3">{caseStudy.metadata.type}</p>
           <h1 className="heading-xl max-w-3xl">{caseStudy.title}</h1>
         </div>
       </section>
@@ -67,20 +67,20 @@ export default async function CaseStudyPage({ params }: Props) {
             <aside className="space-y-8">
               {caseStudy.metadata.client && (
                 <div>
-                  <p className="heading-sm text-white/30 mb-2">Client</p>
-                  <p className="text-sm text-white/80">{caseStudy.metadata.client}</p>
+                  <p className="heading-sm text-white mb-2">Client</p>
+                  <p className="text-sm text-white">{caseStudy.metadata.client}</p>
                 </div>
               )}
               {caseStudy.metadata.location && (
                 <div>
-                  <p className="heading-sm text-white/30 mb-2">Location</p>
-                  <p className="text-sm text-white/80">{caseStudy.metadata.location}</p>
+                  <p className="heading-sm text-white mb-2">Location</p>
+                  <p className="text-sm text-white">{caseStudy.metadata.location}</p>
                 </div>
               )}
               {caseStudy.metadata.type && (
                 <div>
-                  <p className="heading-sm text-white/30 mb-2">Type</p>
-                  <p className="text-sm text-white/80">{caseStudy.metadata.type}</p>
+                  <p className="heading-sm text-white mb-2">Type</p>
+                  <p className="text-sm text-white">{caseStudy.metadata.type}</p>
                 </div>
               )}
             </aside>
@@ -88,13 +88,13 @@ export default async function CaseStudyPage({ params }: Props) {
             <div className="space-y-12">
               {caseStudy.body.map((block, i) => (
                 <div key={i}>
-                  {block.heading && <h2 className="heading-sm text-white/40 mb-4">{block.heading}</h2>}
-                  {block.content && <p className="text-sm text-white/75 leading-relaxed whitespace-pre-line">{block.content}</p>}
+                  {block.heading && <h2 className="heading-sm text-white mb-4">{block.heading}</h2>}
+                  {block.content && <p className="text-sm text-white leading-relaxed whitespace-pre-line">{block.content}</p>}
                   {block.items && (
                     <ul className="space-y-2 mt-2">
                       {block.items.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-sm text-white/70">
-                          <span className="text-white/20 mt-1">—</span>
+                        <li key={item} className="flex items-start gap-3 text-sm text-white">
+                          <span className="text-white mt-1">—</span>
                           <span>{item}</span>
                         </li>
                       ))}

@@ -231,7 +231,7 @@ export function LexicalReact({ nodes, parentTag: Parent = React.Fragment }: Lexi
                   sizes="(max-width: 768px) 100vw, 80vw"
                 />
                 {fields?.caption && (
-                  <figcaption className="mt-2 text-sm text-white/60">
+                  <figcaption className="mt-2 text-sm text-white">
                     {typeof fields.caption === 'string' ? (
                       fields.caption
                     ) : (

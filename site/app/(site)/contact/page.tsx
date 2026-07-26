@@ -25,7 +25,7 @@ export default async function ContactPage() {
         <div className="max-w-[1400px] mx-auto">
           <p className="overline mb-4">Get in Touch</p>
           <KineticHeading text={data.hero.headline} className="heading-xl max-w-3xl" />
-          <p className="text-base text-white/70 mt-6 max-w-xl leading-relaxed">
+          <p className="text-base text-white mt-6 max-w-xl leading-relaxed">
             <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="hero.subheadline" value={data.hero.subheadline}>
               {data.hero.subheadline}
             </EditableText>
@@ -41,12 +41,12 @@ export default async function ContactPage() {
       <section className="section border-b border-white/10">
         <div className="max-w-[980px] mx-auto">
           <div>
-            <h2 className="heading-sm text-white/75 mb-6">
+            <h2 className="heading-sm text-white mb-6">
               <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="consultationForm.heading" value={data.consultationForm.heading}>
                 {data.consultationForm.heading}
               </EditableText>
             </h2>
-            <p className="text-base text-white/70 mb-8 md:mb-10 leading-relaxed">
+            <p className="text-base text-white mb-8 md:mb-10 leading-relaxed">
               <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="consultationForm.description" value={data.consultationForm.description} multiline>
                 {data.consultationForm.description}
               </EditableText>
@@ -58,7 +58,7 @@ export default async function ContactPage() {
             />
 
             <div className="mt-12 md:mt-14 pt-8 md:pt-10 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-              <p className="text-sm text-white/65">
+              <p className="text-sm text-white">
                 <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="address.formatted" value={data.address.formatted} multiline>
                   {data.address.formatted}
                 </EditableText>
@@ -68,7 +68,7 @@ export default async function ContactPage() {
                   href={data.social.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors"
+                  className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-white transition-colors"
                 >
                   YouTube
                 </a>
@@ -76,7 +76,7 @@ export default async function ContactPage() {
                   href={data.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold tracking-[0.14em] uppercase text-white/65 hover:text-white transition-colors"
+                  className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-white transition-colors"
                 >
                   Instagram
                 </a>
@@ -90,7 +90,7 @@ export default async function ContactPage() {
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Prefer to reach out directly?</h2>
-          <p className="text-base text-white/70 mb-8 leading-relaxed">
+          <p className="text-base text-white mb-8 leading-relaxed">
             Our team is available Monday–Friday, 9am–6pm PST. We typically respond within 1–2 business days.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

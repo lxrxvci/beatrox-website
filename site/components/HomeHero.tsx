@@ -83,7 +83,7 @@ export default function HomeHero({
       )}
 
       <motion.p
-        className="text-lg text-[var(--text-secondary)] max-w-[48ch] mb-10 leading-relaxed"
+        className="text-lg text-white max-w-[48ch] mb-10 leading-relaxed"
         initial={{ opacity: 0 }}
         animate={active ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}

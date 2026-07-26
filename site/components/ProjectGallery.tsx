@@ -221,12 +221,12 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
       <div ref={containerRef} className="max-w-[1400px] mx-auto px-6 lg:px-10 pb-10">
         <div className="flex items-end justify-between mb-6">
           <div>
-            <p className="heading-sm text-white/75">Gallery</p>
-            <p className="mono text-xs text-white/40 mt-1 uppercase tracking-[0.2em]">
+            <p className="heading-sm text-white">Gallery</p>
+            <p className="mono text-xs text-white mt-1 uppercase tracking-[0.2em]">
               {galleryImages.length} {galleryImages.length === 1 ? 'image' : 'images'}
             </p>
           </div>
-          <p className="hidden sm:block mono text-xs text-white/30 uppercase tracking-[0.2em]">
+          <p className="hidden sm:block mono text-xs text-white uppercase tracking-[0.2em]">
             Click to expand
           </p>
         </div>
@@ -272,11 +272,11 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
                       />
                     </EditableImage>
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-3 sm:p-4">
-                      <span className="mono text-[10px] text-white/60 uppercase tracking-[0.2em] mb-1">
+                      <span className="mono text-[10px] text-white uppercase tracking-[0.2em] mb-1">
                         {String(index + 1).padStart(2, '0')} / {String(galleryImages.length).padStart(2, '0')}
                       </span>
                       {caption && (
-                        <span className="text-xs text-white/90 line-clamp-2 leading-snug">
+                        <span className="text-xs text-white line-clamp-2 leading-snug">
                           {caption}
                         </span>
                       )}
@@ -304,20 +304,20 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
             {/* Top bar */}
             <div className="absolute top-0 left-0 right-0 flex items-center justify-between p-4 md:p-6">
               <button
-                className="text-white/70 hover:text-white mono text-xs uppercase tracking-[0.15em] transition-colors"
+                className="text-white hover:text-white mono text-xs uppercase tracking-[0.15em] transition-colors"
                 onClick={close}
                 autoFocus
               >
                 ✕ Close
               </button>
-              <p className="mono text-xs text-white/50 tabular-nums tracking-[0.15em]">
+              <p className="mono text-xs text-white tabular-nums tracking-[0.15em]">
                 {String(activeIndex + 1).padStart(2, '0')} / {String(galleryImages.length).padStart(2, '0')}
               </p>
             </div>
 
             {/* Prev */}
             <button
-              className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-[var(--accent)] transition-colors text-3xl md:text-4xl p-2"
+              className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white hover:text-[var(--accent)] transition-colors text-3xl md:text-4xl p-2"
               onClick={(e) => {
                 e.stopPropagation()
                 goPrev()
@@ -344,7 +344,7 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
 
             {/* Next */}
             <button
-              className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-[var(--accent)] transition-colors text-3xl md:text-4xl p-2"
+              className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white hover:text-[var(--accent)] transition-colors text-3xl md:text-4xl p-2"
               onClick={(e) => {
                 e.stopPropagation()
                 goNext()
@@ -358,7 +358,7 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
               <div className="max-w-3xl mx-auto text-center">
                 {(activeImage.note || activeImage.alt) && (
-                  <p className="text-sm md:text-base text-white/80 mb-4">
+                  <p className="text-sm md:text-base text-white mb-4">
                     {activeImage.note || activeImage.alt}
                   </p>
                 )}

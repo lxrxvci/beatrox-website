@@ -61,7 +61,7 @@ export default function BreakoutFigure({ img, index }: BreakoutFigureProps) {
           <span className="mono text-[10px] uppercase tracking-[0.24em] text-[var(--accent)] block mb-2">
             Plate {String(index + 1).padStart(2, '0')}
           </span>
-          <span className="text-sm text-white/85 leading-snug">{caption}</span>
+          <span className="text-sm text-white leading-snug">{caption}</span>
         </figcaption>
       )}
     </figure>

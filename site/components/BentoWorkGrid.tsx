@@ -66,7 +66,7 @@ export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGri
                   {project.tags.slice(0, 3).map((tag, tagIndex) => (
                     <span
                       key={tag}
-                      className={`mono text-[10px] sm:text-[11px] text-[var(--text-secondary)] uppercase${
+                      className={`mono text-[10px] sm:text-[11px] text-white uppercase${
                         tagIndex > 1 ? ' hidden sm:inline' : ''
                       }`}
                     >

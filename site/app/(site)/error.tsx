@@ -19,7 +19,7 @@ export default function Error({
       <div className="max-w-[1120px] mx-auto w-full">
         <p className="overline mb-4">Something went wrong</p>
         <h1 className="heading-xl max-w-3xl mb-6">Technical difficulties.</h1>
-        <p className="text-base text-[var(--text-secondary)] max-w-xl leading-relaxed mb-10">
+        <p className="text-base text-white max-w-xl leading-relaxed mb-10">
           An unexpected error occurred while loading this page. Please try again.
         </p>
         <div className="flex flex-wrap gap-4">

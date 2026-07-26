@@ -152,7 +152,7 @@ export default function EditableGalleryGrid({
     <div className="relative rounded-sm ring-2 ring-[var(--accent)] ring-offset-2 ring-offset-black">
       <div className="pointer-events-none">{children}</div>
       <div className="mt-4 border border-white/15 bg-neutral-950/95 p-4 space-y-3">
-        <p className="mono text-white/60">
+        <p className="mono text-white">
           Edit tiles — the grid updates after saving.
         </p>
         {draft.map((item, index) => (
@@ -212,7 +212,7 @@ export default function EditableGalleryGrid({
                   if (e.target.value) updateItem(index, { image: e.target.value })
                 }}
                 disabled={isSaving || mediaLibrary.length === 0}
-                className="bg-black/80 text-white/70 border border-white/20 rounded-sm px-2 py-1 text-sm focus:outline-none focus:border-[var(--accent)] sm:w-48 shrink-0"
+                className="bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1 text-sm focus:outline-none focus:border-[var(--accent)] sm:w-48 shrink-0"
               >
                 <option value="">Library…</option>
                 {mediaLibrary.map((media) => (
@@ -243,7 +243,7 @@ export default function EditableGalleryGrid({
                     className={`px-2 py-1 text-[10px] font-bold uppercase tracking-wider border rounded-sm transition-colors disabled:opacity-50 ${
                       selected
                         ? 'bg-[var(--accent)] text-black border-[var(--accent)]'
-                        : 'bg-white/5 text-white/70 border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+                        : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
                     }`}
                   >
                     {pos.label}

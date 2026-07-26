@@ -48,7 +48,7 @@ export default function ProjectStats({ stats, collection, documentId }: ProjectS
                     {stat.value}
                   </EditableText>
                 </p>
-                <p className="mono text-[11px] uppercase tracking-[0.24em] text-white/50 mt-4">
+                <p className="mono text-[11px] uppercase tracking-[0.24em] text-white mt-4">
                   <EditableText
                     collection={collection}
                     documentId={documentId}

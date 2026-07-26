@@ -59,7 +59,7 @@ function Tile({ cap, index }: { cap: Capability; index: number }) {
           <span className="hud-corners" aria-hidden="true" />
           {image}
         </span>
-        <span className="block pt-3 text-white/85 group-hover:text-white transition-colors">{label}</span>
+        <span className="block pt-3 text-white group-hover:text-white transition-colors">{label}</span>
       </Link>
     )
   }

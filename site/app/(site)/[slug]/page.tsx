@@ -65,7 +65,7 @@ export default async function CMSPage({
               </h1>
             )}
             {page.hero?.subheadline && (
-              <p className="text-base text-[var(--text-secondary)] mt-6 max-w-3xl leading-relaxed">
+              <p className="text-base text-white mt-6 max-w-3xl leading-relaxed">
                 <EditableText collection="pages" documentId={page.id} fieldPath="hero.subheadline" value={page.hero.subheadline}>
                   {page.hero.subheadline}
                 </EditableText>

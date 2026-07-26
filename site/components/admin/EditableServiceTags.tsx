@@ -99,7 +99,7 @@ export default function EditableServiceTags({
     <div className="relative rounded-sm ring-2 ring-[var(--accent)] ring-offset-2 ring-offset-black">
       <div className="pointer-events-none">{children}</div>
       <div className="absolute left-0 top-full mt-2 z-20 w-96 max-w-[90vw] border border-white/15 bg-neutral-950/95 backdrop-blur-sm p-3 shadow-xl">
-        <p className="mono text-white/60 mb-2">Services used on this project</p>
+        <p className="mono text-white mb-2">Services used on this project</p>
         <div className="flex flex-wrap gap-2 max-h-56 overflow-y-auto">
           {allServices.map((service) => {
             const selected = draft.includes(service.id)
@@ -112,7 +112,7 @@ export default function EditableServiceTags({
                 className={`px-2 py-1 text-xs uppercase tracking-wider border rounded-sm transition-colors disabled:opacity-50 ${
                   selected
                     ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
-                    : 'bg-white/5 text-white/75 border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+                    : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
                 }`}
               >
                 {service.title}

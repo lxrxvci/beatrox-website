@@ -61,7 +61,7 @@ const theme = {
     ol: 'list-decimal pl-6 mb-4',
     listitem: 'mb-2',
   },
-  quote: 'border-l-2 border-[var(--accent)] pl-5 italic my-8 text-white/75',
+  quote: 'border-l-2 border-[var(--accent)] pl-5 italic my-8 text-white',
   link: 'text-[var(--accent)] hover:underline',
   text: {
     bold: 'font-bold',
@@ -152,7 +152,7 @@ function Toolbar({ onSave, onCancel, isSaving }: ToolbarProps) {
       <button
         onClick={onCancel}
         disabled={isSaving}
-        className="px-3 py-1.5 text-sm text-white/70 hover:text-white transition-colors"
+        className="px-3 py-1.5 text-sm text-white hover:text-white transition-colors"
       >
         Cancel
       </button>
@@ -183,7 +183,7 @@ function ToolbarButton({
   return (
     <button
       onClick={onClick}
-      className={`px-2.5 py-1 text-sm border border-white/20 text-white/80 hover:bg-white/10 transition-colors ${
+      className={`px-2.5 py-1 text-sm border border-white/20 text-white hover:bg-white/10 transition-colors ${
         italic ? 'italic' : ''
       } ${underline ? 'underline' : ''} ${strike ? 'line-through' : ''}`}
     >
