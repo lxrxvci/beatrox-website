@@ -39,6 +39,7 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
   const streaksRef = useRef<(HTMLDivElement | null)[]>([])
   // Phase 3 wires the particle scene in here; null = WebGL unavailable.
   const particlesRef = useRef<IntroParticlesHandle | null>(null)
+  const tlRef = useRef<gsap.core.Timeline | null>(null)
 
   const [counter, setCounter] = useState(0)
   const [done, setDone] = useState(false)
@@ -46,6 +47,10 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
 
   const handleParticlesReady = useCallback((h: IntroParticlesHandle) => {
     particlesRef.current = h
+    // Late init (slow chunk): if the timeline is still inside beat 1,
+    // trigger the logotype morph that its callback missed.
+    const tl = tlRef.current
+    if (tl && tl.isActive() && tl.time() < 1.2) h.morphTo('BEATROX')
   }, [])
   const handleParticlesFail = useCallback(() => {
     // Graceful no-op (plan §4): the intro continues as a DOM-only sequence.
@@ -142,7 +147,9 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
       ...galleryImages.map(preload),
       import('./intro-particles').then(() => undefined, () => undefined),
     ])
-    const minTime = new Promise<void>((r) => window.setTimeout(r, 1250))
+    const minTime = new Promise<void>((r) =>
+      window.setTimeout(r, window.innerWidth < 768 ? 1000 : 1250)
+    )
 
     const counterObj = { v: 0 }
     const renderCounter = () => setCounter(Math.round(counterObj.v))
@@ -209,6 +216,7 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
           if (!disposed) setDone(true)
         },
       })
+      tlRef.current = tl
       tl.play()
       if (skipRequested) applySkip()
     }
@@ -224,6 +232,7 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
       window.clearTimeout(lenisRetry)
       crawl.kill()
       tl?.kill()
+      tlRef.current = null
       particlesRef.current?.dispose()
       particlesRef.current = null
       window.removeEventListener('keydown', onKey)
@@ -277,7 +286,7 @@ export default function IntroOverlay({ heroImage, headline, galleryImages }: Int
         {/* Beat 2: kinetic type cards */}
         {TYPE_CARDS.map((label, i) => (
           <div key={label} ref={setCardRef(i)} className="intro-type-card opacity-0">
-            <span className="intro-type-card__index">{String(i + 1).padStart(2, '0')} / 04</span>
+            <span className="intro-type-card__index">{String(i + 1).padStart(2, '0')}</span>
             <span className="intro-type-card__word">{label}</span>
           </div>
         ))}
