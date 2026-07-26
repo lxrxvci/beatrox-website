@@ -1,5 +1,6 @@
 import type { VideoEmbed } from '@/lib/json-content'
 import VideoPlayer from '@/components/VideoPlayer'
+import VideoPosterCard from '@/components/VideoPosterCard'
 
 interface VideoEmbedStripProps {
   title: string
@@ -10,6 +11,15 @@ interface VideoEmbedStripProps {
 function directFile(video: VideoEmbed): string | null {
   const url = video.url || ''
   return /\.(mp4|webm|mov|m4v)(\?|$)/i.test(url) ? url : null
+}
+
+/** YouTube video ID from an embed URL (/embed/<id>) or watch/share URL. */
+function youtubeId(video: VideoEmbed): string | null {
+  for (const src of [video.embedUrl ?? '', video.url ?? '']) {
+    const match = /(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([\w-]{6,})/.exec(src)
+    if (match) return match[1]
+  }
+  return null
 }
 
 export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps) {
@@ -43,36 +53,41 @@ export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps)
           {videos.map((video, index) => {
             const file = directFile(video)
             const label = labelFor(video, index)
+            const ytId = file ? null : youtubeId(video)
             return (
               <article key={`${video.provider}-${video.url || index}`}>
                 {file ? (
                   <VideoPlayer src={file} title={label} />
                 ) : (
-                  <div className="border border-white/10 bg-black/70 backdrop-blur-sm">
-                    <div className="aspect-video w-full bg-black">
-                      {video.embedUrl ? (
-                        <iframe
-                          src={video.embedUrl}
-                          title={label}
-                          className="h-full w-full"
-                          loading="lazy"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          referrerPolicy="strict-origin-when-cross-origin"
-                          allowFullScreen
-                        />
-                      ) : (
-                        <div className="h-full w-full flex items-center justify-center text-center px-6">
-                          <a
-                            href={video.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm uppercase tracking-[0.16em] text-white/80 hover:text-white transition-colors"
-                          >
-                            Open video source
-                          </a>
-                        </div>
-                      )}
-                    </div>
+                  <div className="corner-ticks border border-white/10 bg-black/70 backdrop-blur-sm">
+                    {ytId && video.embedUrl ? (
+                      <VideoPosterCard embedUrl={video.embedUrl} videoId={ytId} label={label} />
+                    ) : (
+                      <div className="aspect-video w-full bg-black">
+                        {video.embedUrl ? (
+                          <iframe
+                            src={video.embedUrl}
+                            title={label}
+                            className="h-full w-full"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                          />
+                        ) : (
+                          <div className="h-full w-full flex items-center justify-center text-center px-6">
+                            <a
+                              href={video.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm uppercase tracking-[0.16em] text-white/80 hover:text-white transition-colors"
+                            >
+                              Open video source
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    )}
                     <div className="p-5 sm:p-6">
                       <p className="heading-sm text-white mb-2">{label}</p>
                       <p className="mono text-white/60">{video.provider.toUpperCase()}</p>

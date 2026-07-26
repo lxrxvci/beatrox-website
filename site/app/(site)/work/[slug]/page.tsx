@@ -22,6 +22,7 @@ import { getProjectTheme } from '@/components/work/project-themes'
 import ProjectAtmosphere from '@/components/work/engines/ProjectAtmosphere'
 import ProjectStats from '@/components/work/ProjectStats'
 import BreakoutFigure from '@/components/work/BreakoutFigure'
+import NextProjectFooter from '@/components/work/NextProjectFooter'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -76,6 +77,10 @@ export default async function ProjectPage({ params }: Props) {
     .filter((entry) => entry.shared > 0)
     .sort((a, b) => b.shared - a.shared || a.project.title.localeCompare(b.project.title))
     .slice(0, 6)
+
+  // Next-project footer: the next project in resolved order, wrapping around.
+  const projectIndex = allProjects.findIndex((p) => p.canonicalSlug === project.canonicalSlug)
+  const nextProject = allProjects[(projectIndex + 1) % allProjects.length]
 
   // Drop entries with no usable URL so they can never render as empty frames.
   const validImages = project.images?.filter(img => img.url && img.url.trim() !== '') ?? []
@@ -170,32 +175,8 @@ export default async function ProjectPage({ params }: Props) {
       {/* Content */}
       <section className="section border-t border-white/10 pt-12 lg:pt-16">
         <div className="max-w-[1400px] mx-auto">
-          {/* Editorial schematic metadata */}
-          <MetadataSchematic
-            cells={[
-              { label: 'Client', values: [project.metadata.client ?? ''] },
-              {
-                label: 'Location',
-                values: project.metadata.location
-                  ? [project.metadata.location]
-                  : project.metadata.locations ?? [],
-              },
-              { label: 'Type', values: [project.metadata.type ?? ''] },
-              {
-                label: 'Tech',
-                values: [
-                  ...(project.metadata.tech ?? []),
-                  ...(project.metadata.techniques ?? []),
-                  ...(project.metadata.materials ?? []),
-                ],
-              },
-              { label: 'Spec', values: project.metadata.spec ?? [] },
-              { label: 'Partners', values: project.metadata.partners ?? [] },
-            ]}
-          />
-
           {/* Services used — chips link to service pages; owner can re-tag in edit mode */}
-          <div className="mt-14">
+          <div>
             <h2 className="overline mb-4">Services Used</h2>
             <EditableServiceTags
               collection="projects"
@@ -330,9 +311,37 @@ export default async function ProjectPage({ params }: Props) {
         <VideoEmbedStrip title="Project Video" videos={project.videos} />
       )}
 
+      {/* Credits — film-roll metadata below gallery/videos */}
+      <section className="border-t border-white/10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
+          <MetadataSchematic
+            cells={[
+              { label: 'Client', values: [project.metadata.client ?? ''] },
+              {
+                label: 'Location',
+                values: project.metadata.location
+                  ? [project.metadata.location]
+                  : project.metadata.locations ?? [],
+              },
+              { label: 'Type', values: [project.metadata.type ?? ''] },
+              {
+                label: 'Tech',
+                values: [
+                  ...(project.metadata.tech ?? []),
+                  ...(project.metadata.techniques ?? []),
+                  ...(project.metadata.materials ?? []),
+                ],
+              },
+              { label: 'Spec', values: project.metadata.spec ?? [] },
+              { label: 'Partners', values: project.metadata.partners ?? [] },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Related Projects — projects sharing ≥1 serviceTag, ranked by overlap */}
       {relatedProjects.length > 0 && (
-        <section className="section border-t border-white/10">
+        <section className="section border-t border-white/10 py-14 lg:py-20">
           <div className="max-w-[1120px] mx-auto">
             <h2 className="heading-sm text-white/75 mb-8">Related Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
@@ -381,16 +390,12 @@ export default async function ProjectPage({ params }: Props) {
         </section>
       )}
 
-      {/* Bottom nav / CTA */}
-      <section className="section border-t border-white/10 text-center">
-        <div className="max-w-xl mx-auto mb-10">
-          <h2 className="heading-md mb-5">Ready to start your <span className="text-[var(--accent)]">project</span>?</h2>
-          <p className="text-base text-white/70 mb-8 leading-relaxed">
-            Let&apos;s bring your vision to life. Our team of creative and technical directors is ready to collaborate.
-          </p>
-          <Link href="/book" className="btn-primary btn-primary--accent">Start Your Project</Link>
-        </div>
-        <div className="max-w-[1400px] mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      {/* Next-project footer — replaces the generic CTA on work pages */}
+      <NextProjectFooter project={nextProject} />
+
+      {/* Bottom nav row */}
+      <section className="border-t border-white/10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link href="/work" className="text-sm font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-white transition-colors">
             ← All Projects
           </Link>
