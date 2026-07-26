@@ -3,14 +3,6 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-import { EditableImage } from '@/components/admin'
-import type { MediaOption, TagOption } from '@/components/admin/EditableImage'
-
-interface BreakoutImageTag {
-  id: string
-  slug: string
-  title: string
-}
 
 interface BreakoutImage {
   url: string
@@ -18,21 +10,12 @@ interface BreakoutImage {
   note?: string
   width?: number
   height?: number
-  /** Index into the project doc's raw `images` array (inline-edit field path). */
-  sourceIndex?: number
-  serviceTags?: BreakoutImageTag[]
-  techTags?: BreakoutImageTag[]
 }
 
 interface BreakoutFigureProps {
   img: BreakoutImage
-  /** Position among the breakouts (caption numbering + path fallback). */
+  /** Position among the breakouts (caption numbering). */
   index: number
-  collection?: string
-  documentId?: string
-  mediaLibrary?: MediaOption[]
-  serviceOptions?: TagOption[]
-  techOptions?: TagOption[]
 }
 
 /**
@@ -40,17 +23,11 @@ interface BreakoutFigureProps {
  * ~21:9 image with a mono caption (note || alt) and a subtle scroll parallax
  * driven by motion/react. The inner frame is oversized by 8% top/bottom so
  * the ±6% drift never exposes the edges. Reduced-motion users get a static
- * image (no transform applied).
+ * image (no transform applied). Deliberately not inline-editable: the image
+ * stays editable through the gallery mosaic's EditableImage wrappers and the
+ * fieldPath audit admits no new image paths.
  */
-export default function BreakoutFigure({
-  img,
-  index,
-  collection,
-  documentId,
-  mediaLibrary = [],
-  serviceOptions,
-  techOptions,
-}: BreakoutFigureProps) {
+export default function BreakoutFigure({ img, index }: BreakoutFigureProps) {
   const ref = useRef<HTMLElement | null>(null)
   const reduceMotion = useReducedMotion()
   const { scrollYProgress } = useScroll({
@@ -70,26 +47,13 @@ export default function BreakoutFigure({
         className="absolute inset-x-0 -inset-y-[8%]"
         style={reduceMotion ? undefined : { y }}
       >
-        <EditableImage
-          collection={collection}
-          documentId={documentId}
-          fieldPath={`images.${img.sourceIndex ?? index + 1}`}
-          value={img.url}
+        <Image
+          src={img.url}
           alt={img.alt}
-          mediaLibrary={mediaLibrary}
-          serviceOptions={serviceOptions}
-          techOptions={techOptions}
-          selectedServiceIds={(img.serviceTags || []).map((tag) => tag.id)}
-          selectedTechIds={(img.techTags || []).map((tag) => tag.id)}
-        >
-          <Image
-            src={img.url}
-            alt={img.alt}
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-        </EditableImage>
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none" />
       {caption && (
@@ -103,3 +67,4 @@ export default function BreakoutFigure({
     </figure>
   )
 }
+

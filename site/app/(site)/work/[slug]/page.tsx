@@ -279,15 +279,7 @@ export default async function ProjectPage({ params }: Props) {
                 techOptions={techOptions}
               />
               {breakoutImages[i] && (
-                <BreakoutFigure
-                  img={breakoutImages[i]}
-                  index={i}
-                  collection="projects"
-                  documentId={project.id}
-                  mediaLibrary={mediaLibrary}
-                  serviceOptions={serviceOptions}
-                  techOptions={techOptions}
-                />
+                <BreakoutFigure img={breakoutImages[i]} index={i} />
               )}
             </Fragment>
           ))}
@@ -297,11 +289,6 @@ export default async function ProjectPage({ params }: Props) {
               key={img.url}
               img={img}
               index={galleryChunks.length + i}
-              collection="projects"
-              documentId={project.id}
-              mediaLibrary={mediaLibrary}
-              serviceOptions={serviceOptions}
-              techOptions={techOptions}
             />
           ))}
         </section>
