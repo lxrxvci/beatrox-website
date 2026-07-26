@@ -19,6 +19,7 @@ import { EditableImage, EditableServiceTags, EditableTechTags, EditableText } fr
 import ThemedProjectShell from '@/components/work/ThemedProjectShell'
 import { getProjectTheme } from '@/components/work/project-themes'
 import ProjectAtmosphere from '@/components/work/engines/ProjectAtmosphere'
+import ProjectStats from '@/components/work/ProjectStats'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -93,10 +94,13 @@ export default async function ProjectPage({ params }: Props) {
   // Per-project identity: accent palette, hero intro variant, atmosphere engine.
   const theme = getProjectTheme(canonicalSlug)
 
+  // Mono fact line under the hero title: CLIENT — LOCATION, TYPE.
+  const heroLocation = project.metadata.location ?? project.metadata.locations?.join(' · ') ?? ''
+
   return (
     <ThemedProjectShell slug={canonicalSlug}>
-      {/* Hero */}
-      <section className="scanlines relative hero min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
+      {/* Hero — full-viewport, elevated image with rebalanced gradient */}
+      <section className="scanlines relative hero min-h-[100svh] flex flex-col justify-end overflow-hidden bg-black">
         {heroImage && (
           <EditableImage
             collection="projects"
@@ -117,26 +121,40 @@ export default async function ProjectPage({ params }: Props) {
                 fill
                 priority
                 sizes="100vw"
-                className="object-cover opacity-40"
+                className="object-cover opacity-65"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent" />
             </>
           </EditableImage>
         )}
         <ProjectAtmosphere engine={theme.engine} params={theme.engineParams} />
+        <Link
+          href="/work"
+          className="absolute top-24 left-6 lg:left-10 z-20 mono text-[11px] uppercase tracking-[0.24em] text-white/40 hover:text-white transition-colors"
+        >
+          ← Work
+        </Link>
         <div className="relative z-10 max-w-[1400px] mx-auto w-full">
-          <Link href="/work" className="mono text-white/60 hover:text-white transition-colors mb-8 inline-block">
-            ← Work
-          </Link>
-          {project.metadata.client && (
-            <p className="mono text-[var(--accent)] mb-3">{project.metadata.client}</p>
-          )}
           <KineticHeading text={project.title} className="heading-xl max-w-3xl" intro={theme.heroIntro} />
+          {(project.metadata.client || heroLocation || project.metadata.type) && (
+            <p className="mono mt-6 uppercase tracking-[0.22em] text-white/60">
+              {project.metadata.client && (
+                <span className="text-[var(--accent)]">{project.metadata.client}</span>
+              )}
+              {project.metadata.client && (heroLocation || project.metadata.type) && ' — '}
+              {heroLocation}
+              {heroLocation && project.metadata.type && ', '}
+              {project.metadata.type}
+            </p>
+          )}
         </div>
       </section>
 
+      {/* Impact strip — huge accent numerals; hidden when the project has no stats */}
+      <ProjectStats stats={project.stats} collection="projects" documentId={project.id} />
+
       {/* Content */}
-      <section className="section border-t border-white/10">
+      <section className="section border-t border-white/10 pt-12 lg:pt-16">
         <div className="max-w-[1400px] mx-auto">
           {/* Editorial schematic metadata */}
           <MetadataSchematic

@@ -796,6 +796,17 @@ html.lenis body {
   color: var(--accent);
 }
 
+/* Impact stat numeral — huge accent figure for the work-page impact strip
+   (components/work/ProjectStats.tsx); labels use .mono. */
+.stat-numeral {
+  font-family: var(--font-heading), 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--accent);
+}
+
 /* Bracketed section label — renders "[ LABEL ]" via CSS content so the
    brackets can't be edited out in the CMS and stay purely presentational. */
 .hud-label {
