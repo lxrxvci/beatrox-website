@@ -841,6 +841,16 @@ export interface Project {
    * Technologies used on this project — drives /tech pages. Display-only: never used for project↔project relatedness.
    */
   techTags?: (number | Service)[] | null;
+  /**
+   * Impact numbers shown below the hero (e.g. value "40W+", label "RGB lasers"). Up to 4.
+   */
+  stats?:
+    | {
+        value: string;
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
   seo?: {
     title?: string | null;
     description?: string | null;
@@ -2378,6 +2388,13 @@ export interface ProjectsSelect<T extends boolean = true> {
       };
   serviceTags?: T;
   techTags?: T;
+  stats?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        id?: T;
+      };
   seo?:
     | T
     | {

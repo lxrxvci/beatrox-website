@@ -187,6 +187,19 @@ export const Projects: CollectionConfig = {
       },
     },
     {
+      name: 'stats',
+      type: 'array',
+      maxRows: 4,
+      labels: { singular: 'Stat', plural: 'Stats' },
+      admin: {
+        description: 'Impact numbers shown below the hero (e.g. value "40W+", label "RGB lasers"). Up to 4.',
+      },
+      fields: [
+        { name: 'value', type: 'text', required: true },
+        { name: 'label', type: 'text', required: true },
+      ],
+    },
+    {
       name: 'seo',
       type: 'group',
       fields: [

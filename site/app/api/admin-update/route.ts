@@ -64,7 +64,7 @@ function getTopLevelField(path: string): string {
 // actually calls this endpoint. Anything outside this list is rejected.
 const ALLOWED_UPDATE_PATHS: Record<string, string[]> = {
   pages: ['hero.', 'media.', 'consultationForm.', 'address.', 'contactInfo.', 'social.', 'emailSignup.', 'blocks.'],
-  projects: ['serviceTags', 'techTags', 'images.', 'body.', 'contentBlocks.', 'blocks.'],
+  projects: ['serviceTags', 'techTags', 'stats.', 'images.', 'body.', 'contentBlocks.', 'blocks.'],
   services: ['capabilities.', 'curatedImages', 'media.', 'body.', 'contentBlocks.', 'blocks.'],
   team: ['photo.'],
 }

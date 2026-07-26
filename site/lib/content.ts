@@ -128,6 +128,8 @@ export interface Project {
   contentBlocks?: CMSPageBlock[]
   images: ProjectImage[]
   videos?: VideoEmbed[]
+  /** CMS-only impact stats shown below the hero; JSON fallback emits []. */
+  stats: { value: string; label: string }[]
 }
 
 export interface CaseStudy extends Project {}
@@ -281,6 +283,7 @@ export function getAllProjects(): Project[] {
       canonicalSlug,
       tags,
       images: withEmptyImageTags(legacy.images),
+      stats: legacy.stats ?? [],
     }
   })
 }
@@ -297,6 +300,7 @@ export function getProject(slug: string): Project | null {
     canonicalSlug,
     tags,
     images: withEmptyImageTags(legacy.images),
+    stats: legacy.stats ?? [],
   }
 }
 
@@ -583,6 +587,9 @@ function mapCmsProject(doc: Record<string, unknown>): Project {
       software: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.software).map((v) => String(v.value || '')).filter(Boolean),
       partners: asArray<Record<string, unknown>>((doc.metadata as unknown as Record<string, unknown>)?.partners).map((v) => String(v.name || '')).filter(Boolean),
     },
+    stats: asArray<Record<string, unknown>>(doc.stats)
+      .map((row) => ({ value: String(row.value || ''), label: String(row.label || '') }))
+      .filter((row) => row.value && row.label),
     body: asArray<Record<string, unknown>>(doc.body).map((block) => ({
       type: String(block.type || ''),
       heading: block.heading ? String(block.heading) : undefined,

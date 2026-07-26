@@ -107,6 +107,8 @@ export interface Project {
   body: BodyBlock[]
   images: ProjectImage[]
   videos?: VideoEmbed[]
+  /** CMS-only impact stats — absent in the JSON baseline. */
+  stats?: { value: string; label: string }[]
 }
 
 export interface Service {
