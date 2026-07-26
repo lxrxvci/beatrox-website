@@ -93,11 +93,11 @@ float segDist(vec2 p, vec2 a, vec2 b, out float t) {
 // Emissive contribution of one arm: tight core + soft halo, modulated by a
 // breathing pulse and a chase band sweeping center (t=0) → tip (t=1).
 float armGlow(float d, float t, float phase, float time) {
-  float core = exp(-d * d / 0.0008);          // sigma ≈ 0.02 (y-units)
-  float halo = 0.30 * exp(-d / 0.06);
-  float breath = 0.55 + 0.45 * sin(time * 1.4 + phase);
+  float core = exp(-d * d / 0.00016);         // sigma ≈ 0.009 (y-units)
+  float halo = 0.10 * exp(-d / 0.035);
+  float breath = 0.60 + 0.40 * sin(time * 1.4 + phase);
   float sweep = fract(time / 6.0 + phase * 0.13) * 1.6 - 0.3;
-  float chase = 1.7 * exp(-pow((t - sweep) * 6.0, 2.0));
+  float chase = 1.4 * exp(-pow((t - sweep) * 6.0, 2.0));
   return (core + halo) * (breath + chase);
 }
 
@@ -105,23 +105,28 @@ void main() {
   vec2 tuv = vUv * u_uvScale + u_uvOffset;
 
   // ── Galaxy swirl (vortex UV distortion, radial falloff) ────────────────
-  vec2 p = vec2(tuv.x * u_imgAspect, tuv.y);
+  // p is aspect-corrected image space with y measured TOP-DOWN (GL texture
+  // v runs bottom-up, so flip here to match the measured region constants).
+  vec2 p = vec2(tuv.x * u_imgAspect, 1.0 - tuv.y);
   vec2 gc = vec2(GALAXY_C.x * u_imgAspect, GALAXY_C.y);
   vec2 dp = p - gc;
   float r = length(dp);
-  float fall = 1.0 - smoothstep(0.05, 0.40, r);
-  // Slow drift (~40s/rev peak) with a faint counter-sway so it feels alive.
-  float rot = (u_time * 0.157 + 0.35 * sin(u_time * 0.045)) * fall * fall;
+  float fall = 1.0 - smoothstep(0.05, 0.42, r);
+  float swirlFall = pow(fall, 1.5);
+  // Gentle churn: two oscillating layers (~40s / ~120s periods, ±~18° max)
+  // so the drape breathes without ever winding itself up.
+  float rot = (0.22 * sin(u_time * 0.157) + 0.10 * sin(u_time * 0.052 + 2.0)) * swirlFall;
   float cs = cos(rot);
   float sn = sin(rot);
-  vec2 sw = gc + mat2(cs, -sn, sn, cs) * dp * (1.0 + 0.02 * fall * sin(u_time * 0.3));
-  vec2 suv = clamp(vec2(sw.x / u_imgAspect, sw.y), 0.0, 1.0);
+  vec2 sw = gc + mat2(cs, -sn, sn, cs) * dp * (1.0 + 0.015 * fall * sin(u_time * 0.3));
+  vec2 suv = clamp(vec2(sw.x / u_imgAspect, 1.0 - sw.y), 0.0, 1.0);
 
   vec3 col = texture2D(u_texture, suv).rgb;
 
-  // Twinkle shimmer, confined to the drape region (±3% brightness).
+  // Twinkle shimmer, confined to the drape region (two noise octaves).
   float tw = vnoise(p * 26.0 + vec2(u_time * 1.3, -u_time * 0.9));
-  col *= 1.0 + u_fade * fall * 0.06 * (tw - 0.5);
+  tw = 0.65 * tw + 0.35 * vnoise(p * 61.0 - vec2(u_time * 2.1, u_time * 1.2));
+  col *= 1.0 + u_fade * fall * 0.09 * (tw - 0.5);
 
   // ── X light-up ─────────────────────────────────────────────────────────
   vec2 xc = vec2(X_C.x * u_imgAspect, X_C.y);
@@ -138,9 +143,11 @@ void main() {
   glow += armGlow(d3, t3, 4.6, u_time);
   // Hub where the arms cross.
   float dc = length(p - xc);
-  glow += 0.5 * exp(-dc * dc / 0.002) * (0.6 + 0.4 * sin(u_time * 1.4));
+  glow += 0.25 * exp(-dc * dc / 0.001) * (0.6 + 0.4 * sin(u_time * 1.4));
+  // Clamp so the hub (where all four arms overlap) never blows out.
+  glow = min(glow, 1.2);
 
-  col += GLOW_COL * glow * 0.85 * u_fade;
+  col += GLOW_COL * glow * 0.55 * u_fade;
 
   gl_FragColor = vec4(col, 1.0);
 }
@@ -167,13 +174,19 @@ export default function LivingHeroImage({ src }: { src: string }) {
       if (!width || !height) return
 
       let renderer: InstanceType<typeof THREE.WebGLRenderer>
+      // Pre-check context availability ourselves: constructing
+      // THREE.WebGLRenderer without one makes three log a console error
+      // before it throws — the static fallback must stay error-free.
+      const probe = document.createElement('canvas')
+      if (!probe.getContext('webgl2') && !probe.getContext('webgl')) return
       try {
         renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false })
       } catch {
         return // WebGL unavailable — static hero remains.
       }
+      const dpr = Math.min(window.devicePixelRatio, 2)
+      renderer.setPixelRatio(dpr)
       renderer.setSize(width, height)
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
       const canvas = renderer.domElement
       canvas.style.position = 'absolute'
       canvas.style.inset = '0'
@@ -182,36 +195,74 @@ export default function LivingHeroImage({ src }: { src: string }) {
       // Below the duplicated scrims, above the static image.
       wrap.prepend(canvas)
 
-      let texture: InstanceType<typeof THREE.Texture>
-      try {
-        texture = await new THREE.TextureLoader().loadAsync(src)
-      } catch {
+      // Reuse the already-decoded hero <img> from HeroMedia — i.e. the
+      // Next-optimized bitmap actually on screen — instead of fetching the
+      // raw file. That's what makes frame 0 pixel-identical to the static
+      // composite rather than just visually close.
+      const heroImg = wrap.closest('section')?.querySelector('img') ?? null
+      if (heroImg && !heroImg.complete) {
+        await heroImg.decode().catch(() => {})
+      }
+      if (disposed || !heroImg || !heroImg.naturalWidth) {
         renderer.dispose()
         canvas.remove()
         return
       }
+      const natW = heroImg.naturalWidth
+      const natH = heroImg.naturalHeight
+
+      // GPU bilinear sampling of the (huge) source bitmap differs visibly
+      // from the browser's high-quality object-cover downscale — thin LED
+      // lines and speckle shift enough to break the frame-0-identical
+      // contract. So pre-resize the bitmap to the cover scale through the
+      // 2D canvas high-quality resampler (measured to match the compositor
+      // far better than createImageBitmap resize); the shader then samples
+      // it ~1:1 and the frozen frame matches the static render.
+      const makeSource = async (
+        bw: number,
+        bh: number
+      ): Promise<{ source: HTMLCanvasElement; width: number; height: number }> => {
+        const scale = Math.max(bw / natW, bh / natH)
+        const rw = Math.max(1, Math.round(natW * scale))
+        const rh = Math.max(1, Math.round(natH * scale))
+        const c = document.createElement('canvas')
+        c.width = rw
+        c.height = rh
+        const c2d = c.getContext('2d')
+        if (c2d) {
+          c2d.imageSmoothingEnabled = true
+          c2d.imageSmoothingQuality = 'high'
+          c2d.drawImage(heroImg, 0, 0, rw, rh)
+        }
+        return { source: c, width: rw, height: rh }
+      }
+
+      const bw0 = Math.round(width * dpr)
+      const bh0 = Math.round(height * dpr)
+      const initial = await makeSource(bw0, bh0)
       if (disposed) {
-        texture.dispose()
         renderer.dispose()
         canvas.remove()
         return
       }
+      const texture = new THREE.Texture(initial.source)
+      texture.needsUpdate = true
+      texture.minFilter = THREE.LinearFilter
       texture.colorSpace = THREE.SRGBColorSpace
 
-      const img = texture.image as HTMLImageElement
-      const imgAspect = img.width / img.height
       const uniforms = {
         u_texture: { value: texture },
         u_time: { value: 0 },
         u_fade: { value: 0 },
-        u_imgAspect: { value: imgAspect },
+        u_imgAspect: { value: initial.width / initial.height },
         u_uvScale: { value: new THREE.Vector2(1, 1) },
         u_uvOffset: { value: new THREE.Vector2(0, 0) },
       }
 
-      // object-fit: cover mapping (FluidImage precedent).
-      const applyCover = (w: number, h: number) => {
-        const boxAspect = w / h
+      // object-fit: cover mapping (FluidImage precedent), in device pixels.
+      const applyCover = (bw: number, bh: number) => {
+        const imgAspect = uniforms.u_imgAspect.value
+        const boxAspect = bw / bh
         if (boxAspect > imgAspect) {
           uniforms.u_uvScale.value.set(1, imgAspect / boxAspect)
           uniforms.u_uvOffset.value.set(0, (1 - imgAspect / boxAspect) / 2)
@@ -220,7 +271,7 @@ export default function LivingHeroImage({ src }: { src: string }) {
           uniforms.u_uvOffset.value.set((1 - boxAspect / imgAspect) / 2, 0)
         }
       }
-      applyCover(width, height)
+      applyCover(bw0, bh0)
 
       const scene = new THREE.Scene()
       const camera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5, -0.5, 0, 1)
@@ -257,12 +308,25 @@ export default function LivingHeroImage({ src }: { src: string }) {
       })
       io.observe(wrap)
 
+      let texGen = 0
       const ro = new ResizeObserver(() => {
         const w = wrap.clientWidth
         const h = wrap.clientHeight
         if (!w || !h) return
         renderer.setSize(w, h)
-        applyCover(w, h)
+        const bw = Math.round(w * dpr)
+        const bh = Math.round(h * dpr)
+        applyCover(bw, bh)
+        // Rebuild the pre-resized source for the new size (generation
+        // counter guards against out-of-order async completions).
+        const gen = ++texGen
+        void makeSource(bw, bh).then((next) => {
+          if (disposed || gen !== texGen) return
+          texture.image = next.source
+          texture.needsUpdate = true
+          uniforms.u_imgAspect.value = next.width / next.height
+          applyCover(bw, bh)
+        })
       })
       ro.observe(wrap)
 
