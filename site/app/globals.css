@@ -807,6 +807,20 @@ html.lenis body {
   color: var(--accent);
 }
 
+/* Editorial body — work-page body blocks get mono index prefixes (01 /) on
+   their headings via a CSS counter, so EditableText markup stays untouched. */
+.editorial-body {
+  counter-reset: editorial-block;
+}
+.editorial-body > div {
+  counter-increment: editorial-block;
+}
+.editorial-body h2.overline::before {
+  content: counter(editorial-block, decimal-leading-zero) '\00a0/\00a0';
+  font-family: var(--font-mono), ui-monospace, monospace;
+  color: rgba(255, 255, 255, 0.35);
+}
+
 /* Bracketed section label — renders "[ LABEL ]" via CSS content so the
    brackets can't be edited out in the CMS and stay purely presentational. */
 .hud-label {

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
+import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { normalizeProjectSlug } from '@/lib/json-content'
@@ -20,6 +21,7 @@ import ThemedProjectShell from '@/components/work/ThemedProjectShell'
 import { getProjectTheme } from '@/components/work/project-themes'
 import ProjectAtmosphere from '@/components/work/engines/ProjectAtmosphere'
 import ProjectStats from '@/components/work/ProjectStats'
+import BreakoutFigure from '@/components/work/BreakoutFigure'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -90,6 +92,18 @@ export default async function ProjectPage({ params }: Props) {
   // Skip the hero image in the gallery so it doesn't appear twice.
   const heroImage = galleryImages[0]
   const galleryImagesWithoutHero = galleryImages.slice(1)
+
+  // Gallery staging: pull the widest landscape stills out of the flow to use
+  // as full-bleed breakout figures, then split the rest into thirds.
+  const landscapeImages = galleryImagesWithoutHero
+    .filter((img) => img.width && img.height && img.height > 0 && img.width / img.height >= 1.5)
+    .sort((a, b) => b.width! / b.height! - a.width! / a.height!)
+  const breakoutImages = landscapeImages.slice(0, 2)
+  const stagedImages = galleryImagesWithoutHero.filter((img) => !breakoutImages.includes(img))
+  const chunkSize = Math.ceil(stagedImages.length / 3)
+  const galleryChunks = [0, 1, 2]
+    .map((i) => stagedImages.slice(i * chunkSize, (i + 1) * chunkSize))
+    .filter((chunk) => chunk.length > 0)
 
   // Per-project identity: accent palette, hero intro variant, atmosphere engine.
   const theme = getProjectTheme(canonicalSlug)
@@ -234,15 +248,16 @@ export default async function ProjectPage({ params }: Props) {
             </EditableTechTags>
           </div>
 
-          {/* Body */}
-          <div className="mt-14 pt-14 border-t border-white/10 max-w-3xl space-y-12">
+          {/* Body — first block's content renders as a lede; headings get mono
+              index prefixes via the .editorial-body CSS counter (no markup changes) */}
+          <div className="editorial-body mt-14 pt-14 border-t border-white/10 max-w-3xl space-y-12">
               {project.body.map((block, i) => (
                 <div key={i}>
                   {block.heading && (
                     <h2 className="overline mb-4"><EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.heading`} value={block.heading}>{block.heading}</EditableText></h2>
                   )}
                   {block.content && (
-                    <p className="text-base text-white/75 leading-relaxed whitespace-pre-line">
+                    <p className={`${i === 0 ? 'text-xl text-white/90' : 'text-base text-white/75'} leading-relaxed whitespace-pre-line`}>
                       <EditableText collection="projects" documentId={project.id} fieldPath={`body.${i}.content`} value={block.content} multiline>
                         {block.content}
                       </EditableText>
@@ -269,17 +284,45 @@ export default async function ProjectPage({ params }: Props) {
         <CMSBlockRenderer blocks={project.contentBlocks} collection="projects" documentId={project.id} />
       )}
 
-      {/* Gallery */}
+      {/* Gallery — staged in thirds with full-bleed breakout figures between */}
       {galleryImagesWithoutHero.length > 0 && (
         <section className="border-t border-white/10">
-          <ProjectGallery
-            images={galleryImagesWithoutHero}
-            collection="projects"
-            documentId={project.id}
-            mediaLibrary={mediaLibrary}
-            serviceOptions={serviceOptions}
-            techOptions={techOptions}
-          />
+          {galleryChunks.map((chunk, i) => (
+            <Fragment key={i}>
+              <ProjectGallery
+                images={chunk}
+                collection="projects"
+                documentId={project.id}
+                mediaLibrary={mediaLibrary}
+                serviceOptions={serviceOptions}
+                techOptions={techOptions}
+              />
+              {breakoutImages[i] && (
+                <BreakoutFigure
+                  img={breakoutImages[i]}
+                  index={i}
+                  collection="projects"
+                  documentId={project.id}
+                  mediaLibrary={mediaLibrary}
+                  serviceOptions={serviceOptions}
+                  techOptions={techOptions}
+                />
+              )}
+            </Fragment>
+          ))}
+          {/* Leftover breakout figures when there are more figures than chunks */}
+          {breakoutImages.slice(galleryChunks.length).map((img, i) => (
+            <BreakoutFigure
+              key={img.url}
+              img={img}
+              index={galleryChunks.length + i}
+              collection="projects"
+              documentId={project.id}
+              mediaLibrary={mediaLibrary}
+              serviceOptions={serviceOptions}
+              techOptions={techOptions}
+            />
+          ))}
         </section>
       )}
 
