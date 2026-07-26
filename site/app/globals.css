@@ -486,6 +486,10 @@ html.lenis body {
 .work-card-featured {
   grid-column: span 2;
 }
+/* Odd remaining count: final card spans both mobile columns (no orphan) */
+.work-card-odd-last {
+  grid-column: span 2;
+}
 @media (min-width: 768px) {
   .work-grid {
     grid-template-columns: repeat(12, 1fr);
@@ -496,7 +500,8 @@ html.lenis body {
   .work-card-medium {
     grid-column: span 4;
   }
-  .work-card-wide {
+  .work-card-wide,
+  .work-card-odd-last {
     grid-column: span 6;
   }
 }

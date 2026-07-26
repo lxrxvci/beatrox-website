@@ -26,8 +26,14 @@ interface BentoWorkGridProps {
  * Collapses to a 2-column equal grid on mobile.
  */
 export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGridProps) {
+  // After the featured card the rest pair up as 2-col squares on mobile;
+  // when that remaining count is odd the final card spans both columns so
+  // it never sits orphaned at half width. Desktop bento spans unchanged.
+  const lastIsFullWidth = (projects.length - 1) % 2 === 1
   const sizeFor = (i: number) => {
     if (i === 0) return 'work-card-featured aspect-[16/9]'
+    if (i === projects.length - 1 && lastIsFullWidth)
+      return 'work-card-wide work-card-odd-last aspect-[3/2]'
     // Uniform squares on mobile: equal row heights, and the overlay copy
     // (client/title/2 tags) fits without clipping. Desktop keeps the bento.
     if (i === 1) return 'work-card-medium aspect-square sm:aspect-[4/5]'
@@ -61,12 +67,14 @@ export default function BentoWorkGrid({ projects, className = '' }: BentoWorkGri
               )}
               <p className="heading-md text-white leading-[1.2] mb-2 sm:mb-3 break-words">{project.title}</p>
               {project.tags && project.tags.length > 0 && (
-                <div className="flex flex-wrap gap-x-2 gap-y-1 mt-1">
+                // Mobile: single non-wrapping line, tags truncate instead of
+                // wrapping a 2nd line into the card edges. sm+ wraps as before.
+                <div className="flex flex-nowrap sm:flex-wrap gap-x-2 gap-y-1 mt-1 overflow-hidden">
                   {/* Mobile cards are too small for 3 tags — cap at 2 below sm. */}
                   {project.tags.slice(0, 3).map((tag, tagIndex) => (
                     <span
                       key={tag}
-                      className={`mono text-[10px] sm:text-[11px] text-white uppercase${
+                      className={`mono text-[10px] sm:text-[11px] text-white uppercase truncate min-w-0 shrink${
                         tagIndex > 1 ? ' hidden sm:inline' : ''
                       }`}
                     >
