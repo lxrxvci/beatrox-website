@@ -10,6 +10,7 @@ import JsonLd from '@/components/JsonLd'
 import { buildBreadcrumbSchema, buildFaqSchema, buildServiceSchema, type FaqItem } from '@/lib/schema'
 import ParallaxHero from '@/components/ParallaxHero'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import RelatedProjectCards from '@/components/RelatedProjectCards'
 import RevealOnScroll from '@/components/RevealOnScroll'
 import ServiceBodySections from '@/components/ServiceBodySections'
 import { EditableCuratedImages, EditableImage, EditableText } from '@/components/admin'
@@ -260,50 +261,20 @@ export default async function TechPage({ params }: Props) {
           <div className="max-w-[1120px] mx-auto">
             <h2 className="hud-label mb-8">Projects Using This Tech</h2>
             <RevealOnScroll>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
-              {techProjects.map((project) => {
+            <RelatedProjectCards
+              entries={techProjects.map((project) => {
                 const taggedThumb = taggedThumbByProject.get(project.canonicalSlug)
                 const fallbackImage = project.images?.find((img) => img.url && img.url.trim() !== '')
-                const image = taggedThumb?.image.url || fallbackImage?.url
-                const imageAlt = taggedThumb?.image.alt || fallbackImage?.alt
-                return (
-                  <Link
-                    key={project.canonicalSlug}
-                    href={`/work/${project.canonicalSlug}`}
-                    className={`relative p-7 md:p-8 group transition-colors block overflow-hidden border border-white/10 ${
-                      image
-                        ? 'bg-black min-h-[16rem] hover:bg-white/5'
-                        : 'bg-white/[0.02] hover:bg-white/[0.05]'
-                    }`}
-                  >
-                    {image && (
-                      <>
-                        <Image
-                          src={image}
-                          alt={imageAlt || `${project.title} project image`}
-                          fill
-                          sizes="(max-width: 640px) 100vw, 50vw"
-                          className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
-                      </>
-                    )}
-                    <div className="relative">
-                      <p className="mono text-[var(--accent)] mb-3">
-                        {project.metadata.client}
-                      </p>
-                      <p className="heading-sm text-white mb-3">{project.title}</p>
-                      <p className="text-base text-white leading-relaxed">
-                        {truncateAtWord(project.hero.subheadline)}
-                      </p>
-                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white group-hover:text-white transition-colors">
-                        View project →
-                      </span>
-                    </div>
-                  </Link>
-                )
+                return {
+                  slug: `/work/${project.canonicalSlug}`,
+                  title: project.title,
+                  client: project.metadata.client,
+                  subheadline: project.hero.subheadline,
+                  imageUrl: taggedThumb?.image.url || fallbackImage?.url,
+                  imageAlt: taggedThumb?.image.alt || fallbackImage?.alt,
+                }
               })}
-            </div>
+            />
             </RevealOnScroll>
           </div>
         </section>

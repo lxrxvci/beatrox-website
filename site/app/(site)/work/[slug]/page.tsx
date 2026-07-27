@@ -16,6 +16,7 @@ import MetadataSchematic from '@/components/MetadataSchematic'
 import KineticHeading from '@/components/KineticHeading'
 import NodeBullet from '@/components/NodeBullet'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import RelatedProjectCards from '@/components/RelatedProjectCards'
 import { EditableImage, EditableServiceTags, EditableTechTags, EditableText } from '@/components/admin'
 import ThemedProjectShell from '@/components/work/ThemedProjectShell'
 import { getProjectTheme } from '@/components/work/project-themes'
@@ -331,44 +332,19 @@ export default async function ProjectPage({ params }: Props) {
         <section className="section border-t border-white/10 py-14 lg:py-20">
           <div className="max-w-[1120px] mx-auto">
             <h2 className="heading-sm text-white mb-8">Related Projects</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {relatedProjects.map(({ project: related }) => {
-                const image = related.images?.find((img) => img.url && img.url.trim() !== '')?.url
-                const imageAlt = related.images?.find((img) => img.url && img.url.trim() !== '')?.alt
-                return (
-                  <Link
-                    key={related.canonicalSlug}
-                    href={`/work/${related.canonicalSlug}`}
-                    className="group block border border-white/10 bg-white/[0.02] overflow-hidden transition-all duration-300 hover:border-[rgba(var(--accent-rgb),0.65)] hover:shadow-[0_0_18px_rgba(var(--accent-rgb),0.3)]"
-                  >
-                    {image && (
-                      <div className="relative aspect-video bg-black overflow-hidden">
-                        <span className="hud-corners" aria-hidden="true" />
-                        <Image
-                          src={image}
-                          alt={imageAlt || `${related.title} project image`}
-                          fill
-                          sizes="(max-width: 640px) 100vw, 50vw"
-                          className="object-cover transition-all duration-500 group-hover:scale-[1.03] group-hover:brightness-110"
-                        />
-                      </div>
-                    )}
-                    <div className="p-5 md:p-6">
-                      <p className="mono text-[var(--accent)] mb-2">
-                        {related.metadata.client}
-                      </p>
-                      <p className="heading-sm text-white mb-2">{related.title}</p>
-                      <p className="text-sm text-white leading-relaxed">
-                        {truncateAtWord(related.hero.subheadline)}
-                      </p>
-                      <span className="inline-block mt-4 text-sm tracking-[0.14em] uppercase text-white group-hover:text-[var(--accent)] transition-colors">
-                        View project →
-                      </span>
-                    </div>
-                  </Link>
-                )
+            <RelatedProjectCards
+              entries={relatedProjects.map(({ project: related }) => {
+                const image = related.images?.find((img) => img.url && img.url.trim() !== '')
+                return {
+                  slug: `/work/${related.canonicalSlug}`,
+                  title: related.title,
+                  client: related.metadata.client,
+                  subheadline: related.hero.subheadline,
+                  imageUrl: image?.url,
+                  imageAlt: image?.alt,
+                }
               })}
-            </div>
+            />
           </div>
         </section>
       )}
