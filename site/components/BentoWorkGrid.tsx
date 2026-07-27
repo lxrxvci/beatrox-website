@@ -42,7 +42,12 @@ export default function BentoWorkGrid({ projects, className = '', textBelow = fa
     return 'work-card-wide'
   }
   const aspectFor = (i: number) => {
-    if (i === 0) return 'aspect-[16/9]'
+    // textBelow: the image div is a plain block and always needs a ratio.
+    // Overlay (/work): the featured Link is a grid item — no fixed ratio on
+    // desktop so it stretches to the row height set by the medium card,
+    // keeping row-1 bottoms aligned (the 16/9 ratio left it 36px short).
+    // Mobile keeps 16/9 in both variants.
+    if (i === 0) return textBelow ? 'aspect-[16/9]' : 'aspect-[16/9] sm:aspect-auto'
     if (i === projects.length - 1 && lastIsFullWidth) return 'aspect-[3/2]'
     // Uniform squares on mobile: equal row heights, and the overlay copy
     // (client/title/2 tags) fits without clipping. Desktop keeps the bento.
