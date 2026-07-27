@@ -39,19 +39,19 @@ export default async function ServicesTeaser() {
           <Link
             key={service.slug}
             href={service.slug}
-            className="group relative block overflow-hidden border border-white/10 bg-neutral-950"
+            className="group block border border-white/10 bg-white/[0.02] overflow-hidden transition-all duration-300 hover:border-[rgba(var(--accent-rgb),0.65)] hover:shadow-[0_0_18px_rgba(var(--accent-rgb),0.3)]"
           >
-            <div className="relative aspect-[16/10]">
+            <div className="relative aspect-[16/10] bg-black overflow-hidden">
+              <span className="hud-corners" aria-hidden="true" />
               <Image
                 src={service.media!.heroImage!}
                 alt={service.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-all duration-500 group-hover:scale-[1.03] group-hover:brightness-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/25" />
             </div>
-            <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+            <div className="p-5 md:p-6">
               <h3 className="heading-md mb-2 text-white">{service.title}</h3>
               <p className="max-w-md text-sm leading-relaxed text-white">
                 {truncateAtWord(service.hero.subheadline)}
