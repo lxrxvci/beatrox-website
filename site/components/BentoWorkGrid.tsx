@@ -35,23 +35,30 @@ export default function BentoWorkGrid({ projects, className = '', textBelow = fa
   // it never sits orphaned at half width. Desktop bento spans unchanged.
   const lastIsFullWidth = (projects.length - 1) % 2 === 1
   const spanFor = (i: number) => {
-    if (i === 0) return 'work-card-featured'
-    if (i === projects.length - 1 && lastIsFullWidth)
-      return 'work-card-wide work-card-odd-last'
-    if (i === 1) return 'work-card-medium'
+    if (textBelow) {
+      if (i === 0) return 'work-card-featured'
+      if (i === projects.length - 1 && lastIsFullWidth)
+        return 'work-card-wide work-card-odd-last'
+      if (i === 1) return 'work-card-medium'
+      return 'work-card-wide'
+    }
+    // Overlay (/work): featured spans the FULL width of both columns on
+    // desktop, then every remaining card pairs up evenly (17 projects →
+    // featured + 8 clean rows of 2, no asymmetric side card).
+    if (i === 0) return 'work-card-featured work-card-full'
     return 'work-card-wide'
   }
   const aspectFor = (i: number) => {
     // textBelow: the image div is a plain block and always needs a ratio.
-    // Overlay (/work): the featured Link is a grid item — no fixed ratio on
-    // desktop so it stretches to the row height set by the medium card,
-    // keeping row-1 bottoms aligned (the 16/9 ratio left it 36px short).
-    // Mobile keeps 16/9 in both variants.
-    if (i === 0) return textBelow ? 'aspect-[16/9]' : 'aspect-[16/9] sm:aspect-auto'
-    if (i === projects.length - 1 && lastIsFullWidth) return 'aspect-[3/2]'
-    // Uniform squares on mobile: equal row heights, and the overlay copy
-    // (client/title/2 tags) fits without clipping. Desktop keeps the bento.
-    if (i === 1) return 'aspect-square sm:aspect-[4/5]'
+    if (textBelow) {
+      if (i === 0) return 'aspect-[16/9]'
+      if (i === projects.length - 1 && lastIsFullWidth) return 'aspect-[3/2]'
+      if (i === 1) return 'aspect-square sm:aspect-[4/5]'
+      return 'aspect-square sm:aspect-[3/2]'
+    }
+    // Overlay (/work): featured is full-width 16/9 on every breakpoint;
+    // all remaining cards are even 3/2 pairs on desktop, squares on mobile.
+    if (i === 0) return 'aspect-[16/9]'
     return 'aspect-square sm:aspect-[3/2]'
   }
 

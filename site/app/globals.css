@@ -497,6 +497,11 @@ html.lenis body {
   .work-card-featured {
     grid-column: span 8;
   }
+  /* Full-width featured (/work overlay): spans all 12 columns so the
+     remaining cards pair up evenly */
+  .work-card-full {
+    grid-column: span 12;
+  }
   .work-card-medium {
     grid-column: span 4;
   }
