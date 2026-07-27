@@ -40,7 +40,7 @@ export default async function WorkTeaser() {
         </Link>
       </div>
       <div>
-        <BentoWorkGrid projects={bentoProjects} />
+        <BentoWorkGrid projects={bentoProjects} textBelow />
       </div>
     </ScrollPanel>
   )
