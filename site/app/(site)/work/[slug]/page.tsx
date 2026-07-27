@@ -331,7 +331,7 @@ export default async function ProjectPage({ params }: Props) {
         <section className="section border-t border-white/10 py-14 lg:py-20">
           <div className="max-w-[1120px] mx-auto">
             <h2 className="heading-sm text-white mb-8">Related Projects</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedProjects.map(({ project: related }) => {
                 const image = related.images?.find((img) => img.url && img.url.trim() !== '')?.url
                 const imageAlt = related.images?.find((img) => img.url && img.url.trim() !== '')?.alt
@@ -339,33 +339,29 @@ export default async function ProjectPage({ params }: Props) {
                   <Link
                     key={related.canonicalSlug}
                     href={`/work/${related.canonicalSlug}`}
-                    className={`relative p-7 md:p-8 group transition-colors block overflow-hidden border border-white/10 ${
-                      image
-                        ? 'bg-black min-h-[16rem] hover:bg-white/5'
-                        : 'bg-white/[0.02] hover:bg-white/[0.05]'
-                    }`}
+                    className="group block border border-white/10 bg-white/[0.02] overflow-hidden transition-all duration-300 hover:border-[rgba(var(--accent-rgb),0.65)] hover:shadow-[0_0_18px_rgba(var(--accent-rgb),0.3)]"
                   >
                     {image && (
-                      <>
+                      <div className="relative aspect-video bg-black overflow-hidden">
+                        <span className="hud-corners" aria-hidden="true" />
                         <Image
                           src={image}
                           alt={imageAlt || `${related.title} project image`}
                           fill
                           sizes="(max-width: 640px) 100vw, 50vw"
-                          className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
+                          className="object-cover transition-all duration-500 group-hover:scale-[1.03] group-hover:brightness-110"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
-                      </>
+                      </div>
                     )}
-                    <div className="relative">
-                      <p className="mono text-[var(--accent)] mb-3">
+                    <div className="p-5 md:p-6">
+                      <p className="mono text-[var(--accent)] mb-2">
                         {related.metadata.client}
                       </p>
-                      <p className="heading-sm text-white mb-3">{related.title}</p>
-                      <p className="text-base text-white leading-relaxed">
+                      <p className="heading-sm text-white mb-2">{related.title}</p>
+                      <p className="text-sm text-white leading-relaxed">
                         {truncateAtWord(related.hero.subheadline)}
                       </p>
-                      <span className="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-white group-hover:text-white transition-colors">
+                      <span className="inline-block mt-4 text-sm tracking-[0.14em] uppercase text-white group-hover:text-[var(--accent)] transition-colors">
                         View project →
                       </span>
                     </div>
