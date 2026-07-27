@@ -874,18 +874,19 @@ html.lenis body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--accent);
+  background: var(--accent);
   padding: 0.35rem 0.85rem;
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  color: #0a0a0a;
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 .hud-chip::before,
 .hud-chip::after {
-  color: var(--accent);
+  color: #0a0a0a;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -898,8 +899,9 @@ html.lenis body {
 .hud-chip:hover,
 .hud-chip:focus-visible {
   border-color: rgba(var(--accent-rgb), 0.6);
-  color: #ffffff;
-  box-shadow: 0 0 14px rgba(var(--accent-rgb), 0.14);
+  color: #0a0a0a;
+  filter: brightness(1.1);
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.35);
 }
 .hud-chip:hover::before,
 .hud-chip:hover::after,
