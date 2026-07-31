@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllProjectsResolved, getMediaLibrary, getServiceResolved, getServiceSlugsResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
+import { getProjectCardsResolved, getServiceResolved, getServiceSlugsResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
@@ -19,6 +19,7 @@ export const revalidate = 300
 
 interface Props {
   params: Promise<{ slug: string }>
+  preview?: boolean
 }
 
 export async function generateStaticParams() {
@@ -33,14 +34,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return seoToMetadata(service.seo, `/services/${slug}`)
 }
 
-export default async function ServicePage({ params }: Props) {
+export default async function ServicePage({ params, preview = false }: Props) {
   const { slug } = await params
-  const service = await getServiceResolved(slug)
+  const service = await getServiceResolved(slug, preview)
   if (!service) notFound()
   // Tech capabilities live at /tech/[slug] — the 301s in next.config.ts cover
   // old /services links; this guards direct hits that bypass the redirect.
   if (service.pageType === 'tech') notFound()
-  const mediaLibrary = await getMediaLibrary()
   const heroImage = service.media?.heroImage || '/og-default.jpg'
   const gallery = service.media?.galleryImages || []
   // Keep the raw galleryImages index — it is the inline-edit field path
@@ -49,8 +49,16 @@ export default async function ServicePage({ params }: Props) {
     .map((url, galleryIndex) => ({ url, galleryIndex }))
     .filter((entry) => entry.url && entry.url !== heroImage)
 
+  // Independent fetches in parallel: the related-cards list (slim fields —
+  // cards only read slug/title/client/hero/first image/tags) and the
+  // tagged-photo pool (full project docs, deduped per render via cache()).
+  const bareServiceSlug = service.slug.replace(/^\/services\/+/, '')
+  const [projects, taggedAuto] = await Promise.all([
+    getProjectCardsResolved(preview),
+    getTaggedImagesForSlug(bareServiceSlug, 'service', preview),
+  ])
+
   // Resolve relatedWork slugs (full paths like "/work/foo") against portfolio projects
-  const projects = await getAllProjectsResolved()
   const relatedProjects = (service.relatedWork || [])
     .map((work) => {
       const key = work.slug.replace(/^\/work\/+/, '')
@@ -60,7 +68,6 @@ export default async function ServicePage({ params }: Props) {
     .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
 
   // Auto-append projects tagged with this service (manual picks first, deduped, capped at 6)
-  const bareServiceSlug = service.slug.replace(/^\/services\/+/, '')
   const seenSlugs = new Set(relatedProjects.map(({ project }) => project.canonicalSlug))
   const tagMatchedProjects = projects
     .filter(
@@ -76,7 +83,6 @@ export default async function ServicePage({ params }: Props) {
 
   // Tagged photos: image-level serviceTags populate this page. Automatic order
   // = project order → image order; curatedImages pins/hides override per page.
-  const taggedAuto = await getTaggedImagesForSlug(bareServiceSlug, 'service')
   const effectiveImages = mergeCuratedTaggedImages(taggedAuto, service.curatedImages || [])
   const hasTaggedImages = effectiveImages.length > 0
   // 2 photos interleaved after each body section; the rest form the bottom gallery.
@@ -110,7 +116,6 @@ export default async function ServicePage({ params }: Props) {
             documentId={service.id}
             fieldPath={`media.galleryImages.${media.galleryIndex}`}
             value={media.url}
-            mediaLibrary={mediaLibrary}
           >
             <Image
               src={media.url}
@@ -160,7 +165,6 @@ export default async function ServicePage({ params }: Props) {
         fieldPath="media.heroImage"
         bareRelationship
         value={heroImage}
-        mediaLibrary={mediaLibrary}
       >
         <ParallaxHero
           imageSrc={heroImage}

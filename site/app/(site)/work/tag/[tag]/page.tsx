@@ -11,6 +11,7 @@ export const revalidate = 300
 
 interface Props {
   params: Promise<{ tag: string }>
+  preview?: boolean
 }
 
 export async function generateStaticParams() {
@@ -48,12 +49,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function WorkTagPage({ params }: Props) {
+export default async function WorkTagPage({ params, preview = false }: Props) {
   const { tag } = await params
   const normalizedTag = normalizeProjectTag(tag)
   if (!normalizedTag) notFound()
 
-  const projects = await getProjectsByTagResolved(normalizedTag)
+  const projects = await getProjectsByTagResolved(normalizedTag, preview)
   if (projects.length === 0) notFound()
 
   const displayTag = humanizeTag(normalizedTag)

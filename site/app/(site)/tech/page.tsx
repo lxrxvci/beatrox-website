@@ -27,8 +27,8 @@ export async function generateMetadata(): Promise<Metadata> {
 // Fixed category order mirrors the About "Tech Capabilities" grouping.
 const CATEGORY_ORDER = ['Design', 'Build', 'Technical', 'Production']
 
-export default async function TechIndexPage() {
-  const services = await getAllServicesResolved()
+export default async function TechIndexPage({ preview = false }: { preview?: boolean }) {
+  const services = await getAllServicesResolved(preview)
   const techServices = services.filter((service) => service.pageType === 'tech')
   const heroImage = techServices[0]?.media?.heroImage || '/og-default.jpg'
 

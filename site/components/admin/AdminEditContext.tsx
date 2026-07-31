@@ -1,6 +1,12 @@
 'use client'
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react'
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react'
+
+export interface AdminMediaItem {
+  id: string
+  url: string
+  filename: string
+}
 
 interface AdminEditContextValue {
   isAdmin: boolean | null
@@ -8,6 +14,10 @@ interface AdminEditContextValue {
   setEditMode: (value: boolean) => void
   activeField: { collection: string; id: string; path: string } | null
   setActiveField: (field: { collection: string; id: string; path: string } | null) => void
+  /** Media library for image pickers — loaded lazily from
+   *  /api/admin/media-library the first time edit mode turns on, so
+   *  anonymous renders neither fetch nor serialize it. */
+  mediaLibrary: AdminMediaItem[]
 }
 
 const AdminEditContext = createContext<AdminEditContextValue | null>(null)
@@ -21,6 +31,7 @@ export function useAdminEdit() {
       setEditMode: () => {},
       activeField: null,
       setActiveField: () => {},
+      mediaLibrary: [],
     }
   }
   return ctx
@@ -28,24 +39,34 @@ export function useAdminEdit() {
 
 interface Props {
   children: React.ReactNode
-  // Set server-side from the presence of the httpOnly `payload-token` cookie.
-  // Anonymous visitors skip the /api/admin-check fetch entirely; actual auth
-  // is still verified server-side on every write.
-  maybeAdmin?: boolean
 }
 
-export function AdminEditProvider({ children, maybeAdmin = false }: Props) {
-  const [isAdmin, setIsAdmin] = useState<boolean | null>(maybeAdmin ? null : false)
+export function AdminEditProvider({ children }: Props) {
+  // Admin status is always verified client-side against /api/admin-check so
+  // the server layout stays free of cookies() and pages can prerender.
+  // Anonymous visitors simply get isAdmin === false after hydration; actual
+  // auth is still verified server-side on every write.
+  const [isAdmin, setIsAdmin] = useState<boolean | null>(null)
   const [editMode, setEditMode] = useState(false)
   const [activeField, setActiveField] = useState<{ collection: string; id: string; path: string } | null>(null)
+  const [mediaLibrary, setMediaLibrary] = useState<AdminMediaItem[]>([])
+  const mediaLibraryRequested = useRef(false)
 
   useEffect(() => {
-    if (!maybeAdmin) return
     fetch('/api/admin-check')
       .then((res) => res.json())
       .then((data) => setIsAdmin(data.isAdmin === true))
       .catch(() => setIsAdmin(false))
-  }, [maybeAdmin])
+  }, [])
+
+  useEffect(() => {
+    if (!editMode || mediaLibraryRequested.current) return
+    mediaLibraryRequested.current = true
+    fetch('/api/admin/media-library')
+      .then((res) => (res.ok ? res.json() : { mediaLibrary: [] }))
+      .then((data) => setMediaLibrary(Array.isArray(data.mediaLibrary) ? data.mediaLibrary : []))
+      .catch(() => {})
+  }, [editMode])
 
   const handleSetEditMode = useCallback((value: boolean) => {
     setEditMode(value)
@@ -60,6 +81,7 @@ export function AdminEditProvider({ children, maybeAdmin = false }: Props) {
         setEditMode: handleSetEditMode,
         activeField,
         setActiveField,
+        mediaLibrary,
       }}
     >
       {children}

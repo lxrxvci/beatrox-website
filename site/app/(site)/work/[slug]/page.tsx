@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { normalizeProjectSlug } from '@/lib/json-content'
-import { getAllProjectsResolved, getAllServicesResolved, getMediaLibrary, getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
+import { getAllServicesResolved, getProjectCardsResolved, getProjectResolved, getProjectSlugsResolved } from '@/lib/content'
 import { getImageDimensions } from '@/lib/image-dimensions'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
@@ -27,6 +27,7 @@ import NextProjectFooter from '@/components/work/NextProjectFooter'
 
 interface Props {
   params: Promise<{ slug: string }>
+  preview?: boolean
 }
 
 export const revalidate = 300
@@ -44,18 +45,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return seoToMetadata(project.seo, `/work/${canonicalSlug}`)
 }
 
-export default async function ProjectPage({ params }: Props) {
+export default async function ProjectPage({ params, preview = false }: Props) {
   const { slug } = await params
   const canonicalSlug = normalizeProjectSlug(slug)
   if (!canonicalSlug) notFound()
   if (slug !== canonicalSlug) {
     redirect(`/work/${canonicalSlug}`)
   }
-  const project = await getProjectResolved(canonicalSlug)
+  const project = await getProjectResolved(canonicalSlug, preview)
   if (!project) notFound()
 
-  const allServices = await getAllServicesResolved()
-  const mediaLibrary = await getMediaLibrary()
+  // Independent fetches run in parallel; gallery dimension lookups below
+  // genuinely depend on the project, so they stay after it resolves.
+  const [allServices, allProjects] = await Promise.all([
+    getAllServicesResolved(preview),
+    // Slim card fields only — the related/next sections never touch body,
+    // contentBlocks, or videos.
+    getProjectCardsResolved(preview),
+  ])
   const serviceOptions = allServices.map((s) => ({ id: s.id, title: s.title, slug: s.slug }))
   const techOptions = allServices
     .filter((s) => s.pageType === 'tech')
@@ -66,7 +73,6 @@ export default async function ProjectPage({ params }: Props) {
   const currentServiceTagSlugs = new Set(
     project.serviceTags.map((tag) => tag.slug.replace(/^\/services\/+/, '')),
   )
-  const allProjects = await getAllProjectsResolved()
   const relatedProjects = allProjects
     .filter((candidate) => candidate.canonicalSlug !== project.canonicalSlug)
     .map((candidate) => ({
@@ -128,7 +134,6 @@ export default async function ProjectPage({ params }: Props) {
             fieldPath={`images.${heroImage.sourceIndex ?? 0}`}
             value={heroImage.url}
             alt={heroImage.alt}
-            mediaLibrary={mediaLibrary}
             serviceOptions={serviceOptions}
             techOptions={techOptions}
             selectedServiceIds={(heroImage.serviceTags || []).map((tag) => tag.id)}
@@ -275,7 +280,6 @@ export default async function ProjectPage({ params }: Props) {
                 images={chunk}
                 collection="projects"
                 documentId={project.id}
-                mediaLibrary={mediaLibrary}
                 serviceOptions={serviceOptions}
                 techOptions={techOptions}
               />

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getContactResolved, getCMSPageBySlug, getMediaLibrary } from '@/lib/content'
+import { getContactResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import ContactForm from './ContactForm'
 import KineticHeading from '@/components/KineticHeading'
@@ -13,10 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(data.seo, '/contact')
 }
 
-export default async function ContactPage() {
-  const data = await getContactResolved()
-  const cmsPage = await getCMSPageBySlug('contact')
-  const mediaLibrary = cmsPage?.blocks && cmsPage.blocks.length > 0 ? await getMediaLibrary() : []
+export default async function ContactPage({ preview = false }: { preview?: boolean }) {
+  const data = await getContactResolved(preview)
+  const cmsPage = await getCMSPageBySlug('contact', preview)
 
   return (
     <>
@@ -34,7 +33,7 @@ export default async function ContactPage() {
       </section>
 
       {cmsPage?.blocks && cmsPage.blocks.length > 0 && (
-        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} mediaLibrary={mediaLibrary} />
+        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} />
       )}
 
       {/* Contact info + form */}

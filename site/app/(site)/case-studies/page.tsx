@@ -30,8 +30,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function CaseStudiesPage() {
-  const caseStudies = await getAllCaseStudiesResolved()
+export default async function CaseStudiesPage({ preview = false }: { preview?: boolean }) {
+  const caseStudies = await getAllCaseStudiesResolved(preview)
 
   return (
     <>

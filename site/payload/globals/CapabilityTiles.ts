@@ -1,10 +1,20 @@
 import type { GlobalConfig } from 'payload'
+import { revalidateGlobal } from '@/lib/revalidate'
 
 export const CapabilityTiles: GlobalConfig = {
   slug: 'capability-tiles',
   admin: {
     group: 'Content',
     description: 'The image tile grid on the Services page ("Our Services"). Editable inline on /services in edit mode.',
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        // Tiles render on /services and the layout shell; revalidateGlobal
+        // swallows its own errors so a failure can never block a save.
+        revalidateGlobal()
+      },
+    ],
   },
   access: {
     read: () => true,

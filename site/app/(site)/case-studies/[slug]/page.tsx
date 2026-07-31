@@ -8,6 +8,7 @@ import ProjectGallery from '@/components/ProjectGallery'
 
 interface Props {
   params: Promise<{ slug: string }>
+  preview?: boolean
 }
 
 export const revalidate = 300
@@ -35,9 +36,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function CaseStudyPage({ params }: Props) {
+export default async function CaseStudyPage({ params, preview = false }: Props) {
   const { slug } = await params
-  const caseStudy = await getCaseStudyResolved(normalizeCaseStudySlug(slug))
+  const caseStudy = await getCaseStudyResolved(normalizeCaseStudySlug(slug), preview)
   if (!caseStudy) notFound()
 
   const validImages = caseStudy.images?.filter((img) => img.url && img.url !== '') ?? []

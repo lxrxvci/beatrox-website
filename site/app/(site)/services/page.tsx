@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getServicesIndex } from '@/lib/json-content'
-import { getAllServicesResolved, getCapabilityTiles, getMediaLibrary } from '@/lib/content'
+import { getAllServicesResolved, getCapabilityTiles } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import ParallaxHero from '@/components/ParallaxHero'
 import CapabilitiesGrid from '@/components/CapabilitiesGrid'
@@ -118,14 +118,14 @@ const SERVICE_LINK_GROUPS: Array<{
   },
 ]
 
-export default async function ServicesPage() {
-  const services = await getAllServicesResolved()
+export default async function ServicesPage({ preview = false }: { preview?: boolean }) {
+  const services = await getAllServicesResolved(preview)
   const servicesHero = services[0]?.media?.heroImage || '/og-default.jpg'
 
   // Tiles come from the capability-tiles global — inline-editable right on
   // this page (image, link, text placement, order). Empty global → curated
   // defaults from lib/capabilities.
-  const [tiles, mediaLibrary] = await Promise.all([getCapabilityTiles(), getMediaLibrary()])
+  const tiles = await getCapabilityTiles()
   const tileItems = tiles.length > 0 ? tiles : undefined
 
   // ItemList schema for the 15 service detail pages (matches the link catalog below)
@@ -217,7 +217,6 @@ export default async function ServicesPage() {
             globalSlug="capability-tiles"
             fieldPath="items"
             items={tileItems ?? []}
-            mediaLibrary={mediaLibrary}
           >
             <CapabilitiesGrid items={tileItems} />
           </EditableGalleryGrid>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getMediaLibrary, getTeamResolved } from '@/lib/content'
+import { getTeamResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 import { EditableImage } from '@/components/admin'
@@ -13,9 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(data.seo, '/team')
 }
 
-export default async function TeamPage() {
-  const data = await getTeamResolved()
-  const mediaLibrary = await getMediaLibrary()
+export default async function TeamPage({ preview = false }: { preview?: boolean }) {
+  const data = await getTeamResolved(preview)
   const sorted = [...data.members].sort((a, b) => a.order - b.order)
   const heroImage = data.media?.heroImage || '/og-default.jpg'
 
@@ -55,7 +54,6 @@ export default async function TeamPage() {
                         fieldPath="photo"
                         value={member.photo.url}
                         alt={member.photo.alt}
-                        mediaLibrary={mediaLibrary}
                       >
                         <Image
                           src={member.photo.url}

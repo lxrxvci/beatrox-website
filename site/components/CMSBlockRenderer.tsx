@@ -21,7 +21,6 @@ interface Props {
   collection?: string
   documentId?: string
   resolvedProjects?: BentoProjectInput[]
-  mediaLibrary?: { id: string; url: string; filename: string }[]
 }
 
 function hasLexicalRoot(value: unknown): value is { root: { children?: LexicalNode[] } } {

@@ -28,5 +28,8 @@ export async function GET(request: Request) {
   const state = await draftMode()
   state.enable()
 
-  return NextResponse.redirect(new URL(path, url.origin))
+  // Render previews through the dedicated dynamic preview route so the public
+  // routes stay static/ISR (no draftMode() in their render path).
+  const target = path === '/' ? '/preview/home' : `/preview${path}`
+  return NextResponse.redirect(new URL(target, url.origin))
 }

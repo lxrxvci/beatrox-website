@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
+import { cache } from 'react'
 import { getPayload } from 'payload'
-import { draftMode } from 'next/headers'
 import payloadConfig from '@/payload.config'
 import {
   FALLBACK_NAVIGATION,
@@ -388,15 +388,6 @@ function uniqueStrings(values: string[]): string[] {
   return [...new Set(values.filter(Boolean))]
 }
 
-async function isPreviewModeEnabled(): Promise<boolean> {
-  try {
-    const state = await draftMode()
-    return Boolean(state.isEnabled)
-  } catch {
-    return false
-  }
-}
-
 function extractProjectTags(doc: Record<string, unknown>): string[] {
   const projectTags = asArray<Record<string, unknown>>(doc.tags)
     .map((row) => normalizeProjectTag(String(row.tag || '')))
@@ -695,10 +686,9 @@ function mapCmsService(doc: Record<string, unknown>): Service {
   }
 }
 
-export async function getAllProjectsResolved(): Promise<Project[]> {
+async function getAllProjectsResolvedUncached(preview = false): Promise<Project[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'projects',
       where: preview
@@ -724,17 +714,65 @@ export async function getAllProjectsResolved(): Promise<Project[]> {
   return getAllProjects()
 }
 
+// Per-render memoized: duplicate calls within one render (e.g. a page body
+// and a tagged-image helper) share a single Payload query. cache() keys by
+// arguments, so the preview flag is part of the key.
+export const getAllProjectsResolved = cache(getAllProjectsResolvedUncached)
+
+/**
+ * Lightweight project list for card rendering (related projects, next-project
+ * footer, service/tech "See It in Action" cards): the same published set and
+ * listOrder sort as getAllProjectsResolved, but only the fields cards read —
+ * title/slug/serviceTags/techTags/hero/metadata/images at depth 1. Body,
+ * contentBlocks, videos, stats, and second-level populations stay in Postgres.
+ */
+export const getProjectCardsResolved = cache(async (preview = false): Promise<Project[]> => {
+  try {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'projects',
+      where: preview
+        ? undefined
+        : {
+            status: { equals: 'published' },
+            isEnabled: { equals: true },
+          },
+      sort: 'listOrder',
+      limit: 200,
+      depth: 1,
+      select: {
+        title: true,
+        slug: true,
+        serviceTags: true,
+        techTags: true,
+        hero: true,
+        metadata: true,
+        images: true,
+      },
+      draft: preview,
+      // Trusted server-side reads: the where clauses above already enforce
+      // published-only outside preview mode, and preview needs draft access.
+      overrideAccess: true,
+    })
+    if (result.docs.length > 0) {
+      return result.docs.map((doc) => mapCmsProject(doc as unknown as Record<string, unknown>))
+    }
+  } catch (error) {
+    console.warn('Failed to load project cards from CMS; falling back to JSON:', error)
+  }
+  return getAllProjects()
+})
+
 /**
  * Lightweight project lookup for the homepage featured grid: only the slugs
  * asked for, and only the fields the cards read (title/slug/tags/hero/
  * metadata/images/seo) — body, contentBlocks, and videos stay in Postgres.
  */
-export async function getFeaturedProjectsResolved(slugs: string[]): Promise<Project[]> {
+export async function getFeaturedProjectsResolved(slugs: string[], preview = false): Promise<Project[]> {
   const canonicalSlugs = uniqueStrings(slugs.map((slug) => normalizeProjectSlug(slug)))
   if (canonicalSlugs.length === 0) return []
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     // Match both canonical slugs and the legacy "work/<slug>" stored form.
     const slugCandidates = [...canonicalSlugs, ...canonicalSlugs.map((slug) => `work/${slug}`)]
     const result = await payload.find({
@@ -776,12 +814,11 @@ export async function getFeaturedProjectsResolved(slugs: string[]): Promise<Proj
     .filter((project): project is Project => Boolean(project))
 }
 
-export async function getProjectResolved(slug: string): Promise<Project | null> {
+async function getProjectResolvedUncached(slug: string, preview = false): Promise<Project | null> {
   const canonicalSlug = normalizeProjectSlug(slug)
   if (!canonicalSlug) return null
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const resultByCanonical = await payload.find({
       collection: 'projects',
       where: preview
@@ -829,22 +866,22 @@ export async function getProjectResolved(slug: string): Promise<Project | null> 
   return getProject(canonicalSlug)
 }
 
+// Per-render memoized: generateMetadata and the page body of work/[slug]
+// both resolve the same project; they now share one Payload query.
+export const getProjectResolved = cache(getProjectResolvedUncached)
+
 export async function getProjectSlugsResolved(): Promise<string[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'projects',
-      where: preview
-        ? undefined
-        : {
-            status: { equals: 'published' },
-            isEnabled: { equals: true },
-          },
+      where: {
+        status: { equals: 'published' },
+        isEnabled: { equals: true },
+      },
       limit: 500,
-      draft: preview,
-      // Trusted server-side reads: the where clauses above already enforce
-      // published-only outside preview mode, and preview needs draft access.
+      // Trusted server-side read: the where clause above enforces
+      // published-only.
       overrideAccess: true,
     })
     const slugs = uniqueStrings(
@@ -864,10 +901,10 @@ export async function getProjectTagsResolved(): Promise<string[]> {
   return uniqueStrings(projects.flatMap((project) => project.tags.map((tag) => normalizeProjectTag(tag)))).sort()
 }
 
-export async function getProjectsByTagResolved(tag: string): Promise<Project[]> {
+export async function getProjectsByTagResolved(tag: string, preview = false): Promise<Project[]> {
   const normalizedTag = normalizeProjectTag(tag)
   if (!normalizedTag) return []
-  const projects = await getAllProjectsResolved()
+  const projects = await getAllProjectsResolved(preview)
   return projects.filter((project) => project.tags.includes(normalizedTag))
 }
 
@@ -891,8 +928,9 @@ function bareTagSlug(slug: string): string {
 export async function getTaggedImagesForSlug(
   bareSlug: string,
   kind: 'service' | 'tech',
+  preview = false,
 ): Promise<TaggedImageEntry[]> {
-  const projects = await getAllProjectsResolved()
+  const projects = await getAllProjectsResolved(preview)
   const entries: TaggedImageEntry[] = []
   for (const project of projects) {
     project.images.forEach((image, arrayIndex) => {
@@ -951,10 +989,9 @@ export function mergeCuratedTaggedImages(
   return result
 }
 
-export async function getAllServicesResolved(): Promise<Service[]> {
+async function getAllServicesResolvedUncached(preview = false): Promise<Service[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'services',
       where: preview
@@ -980,12 +1017,13 @@ export async function getAllServicesResolved(): Promise<Service[]> {
   return getAllServices()
 }
 
-export async function getServiceResolved(slug: string): Promise<Service | null> {
+export const getAllServicesResolved = cache(getAllServicesResolvedUncached)
+
+async function getServiceResolvedUncached(slug: string, preview = false): Promise<Service | null> {
   const bareSlug = normalizeServiceSlug(slug)
   if (!bareSlug) return null
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     // Seeded docs store the slug as "services/<slug>"; accept any caller form.
     const candidates = [`services/${bareSlug}`, bareSlug, `/services/${bareSlug}`]
     const result = await payload.find({
@@ -1014,22 +1052,20 @@ export async function getServiceResolved(slug: string): Promise<Service | null> 
   return getService(bareSlug)
 }
 
+export const getServiceResolved = cache(getServiceResolvedUncached)
+
 export async function getServiceSlugsResolved(): Promise<string[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'services',
-      where: preview
-        ? undefined
-        : {
-            status: { equals: 'published' },
-            isEnabled: { equals: true },
-          },
+      where: {
+        status: { equals: 'published' },
+        isEnabled: { equals: true },
+      },
       limit: 500,
-      draft: preview,
-      // Trusted server-side reads: the where clauses above already enforce
-      // published-only outside preview mode, and preview needs draft access.
+      // Trusted server-side read: the where clause above enforces
+      // published-only.
       overrideAccess: true,
     })
     if (result.docs.length > 0) {
@@ -1045,11 +1081,10 @@ export async function getServiceSlugsResolved(): Promise<string[]> {
   return getServiceSlugs()
 }
 
-export async function getTeamResolved() {
+export async function getTeamResolved(preview = false) {
   const fallback = getTeam()
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const teamMembersResult = await payload.find({
       collection: 'team',
       where: preview
@@ -1154,9 +1189,8 @@ export function lexicalToPlaintext(richText: unknown): string {
 
 type CmsPageDoc = Record<string, unknown>
 
-async function findCmsPageDoc(slug: string): Promise<CmsPageDoc | undefined> {
+async function findCmsPageDoc(slug: string, preview = false): Promise<CmsPageDoc | undefined> {
   const payload = await getPayloadClient()
-  const preview = await isPreviewModeEnabled()
   const result = await payload.find({
     collection: 'pages',
     where: preview
@@ -1203,10 +1237,10 @@ function pageHeroCta(value: unknown, fallback: { label: string; url: string }): 
   }
 }
 
-export async function getHomepageResolved(): Promise<Homepage> {
+export async function getHomepageResolved(preview = false): Promise<Homepage> {
   const fallback = getHomepage()
   try {
-    const page = await findCmsPageDoc('home')
+    const page = await findCmsPageDoc('home', preview)
     if (!page) return fallback
     const hero = ((page.hero as unknown as Record<string, unknown> | undefined) || {})
     const media = pageMediaAssets(page)
@@ -1233,10 +1267,10 @@ export async function getHomepageResolved(): Promise<Homepage> {
   }
 }
 
-export async function getAboutResolved(): Promise<ReturnType<typeof getAbout>> {
+export async function getAboutResolved(preview = false): Promise<ReturnType<typeof getAbout>> {
   const fallback = getAbout()
   try {
-    const page = await findCmsPageDoc('about')
+    const page = await findCmsPageDoc('about', preview)
     if (!page) return fallback
     const hero = ((page.hero as unknown as Record<string, unknown> | undefined) || {})
     const media = pageMediaAssets(page)
@@ -1262,10 +1296,10 @@ export async function getAboutResolved(): Promise<ReturnType<typeof getAbout>> {
   }
 }
 
-export async function getContactResolved(): Promise<ReturnType<typeof getContact>> {
+export async function getContactResolved(preview = false): Promise<ReturnType<typeof getContact>> {
   const fallback = getContact()
   try {
-    const page = await findCmsPageDoc('contact')
+    const page = await findCmsPageDoc('contact', preview)
     if (!page) return fallback
     const hero = ((page.hero as unknown as Record<string, unknown> | undefined) || {})
     const address = ((page.address as unknown as Record<string, unknown> | undefined) || {})
@@ -1399,7 +1433,9 @@ export interface MediaLibraryItem {
 }
 
 // Lightweight media list for the inline gallery editor's library picker.
-export async function getMediaLibrary(): Promise<MediaLibraryItem[]> {
+// Only called from the auth-gated /api/admin/media-library route — public
+// page renders neither fetch nor serialize it.
+async function getMediaLibraryUncached(): Promise<MediaLibraryItem[]> {
   try {
     const payload = await getPayloadClient()
     const result = await payload.find({
@@ -1419,6 +1455,8 @@ export async function getMediaLibrary(): Promise<MediaLibraryItem[]> {
     return []
   }
 }
+
+export const getMediaLibrary = cache(getMediaLibraryUncached)
 
 export interface CapabilityTileItem {
   label: string
@@ -1465,10 +1503,9 @@ function resolveMediaUrl(media: unknown): string | undefined {
   return undefined
 }
 
-export async function getNavigationLinks(): Promise<NavigationLink[]> {
+async function getNavigationLinksUncached(): Promise<NavigationLink[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const nav = await payload.findGlobal({
       slug: 'navigation',
       depth: 1,
@@ -1495,20 +1532,15 @@ export async function getNavigationLinks(): Promise<NavigationLink[]> {
 
     const pages = await payload.find({
       collection: 'pages',
-      where: preview
-        ? {
-            showInNav: { equals: true },
-          }
-        : {
-            status: { equals: 'published' },
-            isEnabled: { equals: true },
-            showInNav: { equals: true },
-          },
+      where: {
+        status: { equals: 'published' },
+        isEnabled: { equals: true },
+        showInNav: { equals: true },
+      },
       sort: 'navOrder',
       limit: 50,
-      draft: preview,
-      // Trusted server-side reads: the where clauses above already enforce
-      // published-only outside preview mode, and preview needs draft access.
+      // Trusted server-side read: the where clause above enforces
+      // published-only.
       overrideAccess: true,
     })
 
@@ -1530,7 +1562,9 @@ export async function getNavigationLinks(): Promise<NavigationLink[]> {
   }
 }
 
-export async function getSiteStyles(): Promise<SiteStyleSettings> {
+export const getNavigationLinks = cache(getNavigationLinksUncached)
+
+async function getSiteStylesUncached(): Promise<SiteStyleSettings> {
   try {
     const payload = await getPayloadClient()
     const styles = await payload.findGlobal({ slug: 'site-styles' })
@@ -1547,7 +1581,9 @@ export async function getSiteStyles(): Promise<SiteStyleSettings> {
   }
 }
 
-export async function getSeoDefaults(): Promise<SeoDefaultsSettings> {
+export const getSiteStyles = cache(getSiteStylesUncached)
+
+async function getSeoDefaultsUncached(): Promise<SeoDefaultsSettings> {
   try {
     const payload = await getPayloadClient()
     const seo = await payload.findGlobal({ slug: 'seo-defaults' })
@@ -1566,36 +1602,30 @@ export async function getSeoDefaults(): Promise<SeoDefaultsSettings> {
   }
 }
 
+export const getSeoDefaults = cache(getSeoDefaultsUncached)
+
 export async function getCMSPageSlugs(): Promise<string[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'pages',
-      where: preview
-        ? {
-            slug: {
-              not_equals: 'home',
-            },
-          }
-        : {
-            slug: {
-              not_equals: 'home',
-            },
-            status: {
-              equals: 'published',
-            },
-            isEnabled: {
-              equals: true,
-            },
-          },
+      where: {
+        slug: {
+          not_equals: 'home',
+        },
+        status: {
+          equals: 'published',
+        },
+        isEnabled: {
+          equals: true,
+        },
+      },
       limit: 500,
       select: {
         slug: true,
       },
-      draft: preview,
-      // Trusted server-side reads: the where clauses above already enforce
-      // published-only outside preview mode, and preview needs draft access.
+      // Trusted server-side read: the where clause above enforces
+      // published-only.
       overrideAccess: true,
     })
 
@@ -1608,10 +1638,9 @@ export async function getCMSPageSlugs(): Promise<string[]> {
   }
 }
 
-export async function getCMSPageBySlug(slug: string): Promise<CMSPageData | null> {
+export async function getCMSPageBySlug(slug: string, preview = false): Promise<CMSPageData | null> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'pages',
       where: preview
@@ -1681,10 +1710,9 @@ function mapCmsCaseStudy(doc: Record<string, unknown>): CaseStudy {
   }
 }
 
-export async function getAllCaseStudiesResolved(): Promise<CaseStudy[]> {
+export async function getAllCaseStudiesResolved(preview = false): Promise<CaseStudy[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'case-studies',
       where: preview
@@ -1708,12 +1736,11 @@ export async function getAllCaseStudiesResolved(): Promise<CaseStudy[]> {
   }
 }
 
-export async function getCaseStudyResolved(slug: string): Promise<CaseStudy | null> {
+export async function getCaseStudyResolved(slug: string, preview = false): Promise<CaseStudy | null> {
   const canonicalSlug = normalizeCaseStudySlug(slug)
   if (!canonicalSlug) return null
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'case-studies',
       where: preview
@@ -1743,19 +1770,15 @@ export async function getCaseStudyResolved(slug: string): Promise<CaseStudy | nu
 export async function getCaseStudySlugsResolved(): Promise<string[]> {
   try {
     const payload = await getPayloadClient()
-    const preview = await isPreviewModeEnabled()
     const result = await payload.find({
       collection: 'case-studies',
-      where: preview
-        ? undefined
-        : {
-            status: { equals: 'published' },
-            isEnabled: { equals: true },
-          },
+      where: {
+        status: { equals: 'published' },
+        isEnabled: { equals: true },
+      },
       limit: 500,
-      draft: preview,
-      // Trusted server-side reads: the where clauses above already enforce
-      // published-only outside preview mode, and preview needs draft access.
+      // Trusted server-side read: the where clause above enforces
+      // published-only.
       overrideAccess: true,
     })
     return uniqueStrings(

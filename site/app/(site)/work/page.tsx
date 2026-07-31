@@ -16,8 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getWorkIndex().seo, '/work')
 }
 
-export default async function WorkPage() {
-  const projects = await getAllProjectsResolved()
+export default async function WorkPage({ preview = false }: { preview?: boolean }) {
+  const projects = await getAllProjectsResolved(preview)
   const slugs = await getProjectSlugsResolved()
   const serviceTagMap = new Map<string, { slug: string; title: string; count: number }>()
   for (const project of projects) {

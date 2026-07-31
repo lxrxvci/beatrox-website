@@ -20,8 +20,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(data.seo, '/')
 }
 
-export default async function HomePage() {
-  const data = await getHomepageResolved()
+export default async function HomePage({ preview = false }: { preview?: boolean }) {
+  const data = await getHomepageResolved(preview)
   const heroImage = data.media.heroImage || '/og-default.jpg'
   const galleryImages = data.media.galleryImages || []
 

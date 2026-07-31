@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAboutResolved, getCMSPageBySlug, getMediaLibrary } from '@/lib/content'
+import { getAboutResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
@@ -15,9 +15,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(data.seo, '/about')
 }
 
-export default async function AboutPage() {
-  const data = await getAboutResolved()
-  const cmsPage = await getCMSPageBySlug('about')
+export default async function AboutPage({ preview = false }: { preview?: boolean }) {
+  const data = await getAboutResolved(preview)
+  const cmsPage = await getCMSPageBySlug('about', preview)
   const heroImage = data.media?.heroImage || '/og-default.jpg'
   const sectionImages = data.media?.sectionImages || []
   const story = data.sections.find((s) => s.type === 'text_block')
@@ -25,7 +25,6 @@ export default async function AboutPage() {
   const capability = data.sections.find((s) => s.type === 'capabilities_summary')
 
   if (cmsPage?.blocks && cmsPage.blocks.length > 0) {
-    const mediaLibrary = await getMediaLibrary()
     return (
       <article>
         <section className="relative hero border-b border-white/10 overflow-hidden">
@@ -35,7 +34,6 @@ export default async function AboutPage() {
             fieldPath="media.heroImage"
             bareRelationship
             value={heroImage}
-            mediaLibrary={mediaLibrary}
           >
             <Image
               src={heroImage}
@@ -57,7 +55,7 @@ export default async function AboutPage() {
             </p>
           </div>
         </section>
-        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} mediaLibrary={mediaLibrary} />
+        <CMSBlockRenderer blocks={cmsPage.blocks} collection="pages" documentId={cmsPage.id} />
       </article>
     )
   }

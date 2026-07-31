@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { getLivePath, getPreviewPath } from '../utils/previewLinks'
+import { revalidateDocument } from '@/lib/revalidate'
 
 function slugify(value: string): string {
   return value
@@ -29,6 +30,13 @@ export const Team: CollectionConfig = {
     drafts: true,
   },
   hooks: {
+    afterChange: [
+      ({ doc }) => {
+        // Keep ISR pages fresh after admin-UI edits; revalidateDocument
+        // swallows its own errors so a failure can never block a save.
+        revalidateDocument('team', doc as Record<string, unknown>)
+      },
+    ],
     beforeValidate: [
       ({ data }) => {
         if (data && typeof data === 'object' && typeof data.name === 'string' && (!data.slug || typeof data.slug !== 'string')) {

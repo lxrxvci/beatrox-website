@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import type Lenis from 'lenis'
-import { setLenis } from '@/components/lenis-store'
+import { setLenis, getLenis } from '@/components/lenis-store'
 
 /**
  * Global Lenis smooth scroll, synced to the GSAP ticker so ScrollTrigger
@@ -12,6 +13,31 @@ import { setLenis } from '@/components/lenis-store'
  * initial bundle for visitors who never scroll (or opt out of motion).
  */
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const isPopNavigation = useRef(false)
+
+  // Lenis keeps its own internal scroll position across App Router
+  // navigations, which yanks freshly loaded pages back down to wherever the
+  // previous page was scrolled. Reset to the top on every pathname change —
+  // except back/forward (popstate), where Next restores the saved position
+  // and Lenis picks it up via the native scroll event.
+  useEffect(() => {
+    const onPopState = () => {
+      isPopNavigation.current = true
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
+
+  useEffect(() => {
+    if (isPopNavigation.current) {
+      isPopNavigation.current = false
+      return
+    }
+    getLenis()?.scrollTo(0, { immediate: true, force: true })
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (reduce) return

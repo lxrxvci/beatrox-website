@@ -32,3 +32,5 @@ assets/decks/*.pptx
 # Payload media uploads (local dev only; use cloud storage in production)
 site/public/uploads/
 site/public/media/
+# Archived legacy uploads (moved out of site/public — kept on disk, never deployed)
+_archive/

@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllProjectsResolved, getAllServicesResolved, getMediaLibrary, getServiceResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
+import { getAllServicesResolved, getProjectCardsResolved, getServiceResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
@@ -19,6 +19,7 @@ export const revalidate = 300
 
 interface Props {
   params: Promise<{ slug: string }>
+  preview?: boolean
 }
 
 // Resolved docs carry the legacy "/services/<slug>" slug form regardless of
@@ -41,11 +42,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return seoToMetadata(service.seo, `/tech/${slug}`)
 }
 
-export default async function TechPage({ params }: Props) {
+export default async function TechPage({ params, preview = false }: Props) {
   const { slug } = await params
-  const service = await getServiceResolved(slug)
+  const service = await getServiceResolved(slug, preview)
   if (!service || service.pageType !== 'tech') notFound()
-  const mediaLibrary = await getMediaLibrary()
   const heroImage = service.media?.heroImage || '/og-default.jpg'
   const gallery = service.media?.galleryImages || []
   // Keep the raw galleryImages index — it is the inline-edit field path
@@ -54,10 +54,17 @@ export default async function TechPage({ params }: Props) {
     .map((url, galleryIndex) => ({ url, galleryIndex }))
     .filter((entry) => entry.url && entry.url !== heroImage)
 
+  // Independent fetches in parallel: the tech-matched card list (slim
+  // fields) and the tagged-photo pool (full project docs, deduped per
+  // render via cache()).
+  const bareTechSlug = bareSlug(service.slug)
+  const [projects, taggedAuto] = await Promise.all([
+    getProjectCardsResolved(preview),
+    getTaggedImagesForSlug(bareTechSlug, 'tech', preview),
+  ])
+
   // Projects Using This Tech — association is techTags-only (never serviceTags):
   // a tech page lists work explicitly tagged with this tech capability.
-  const bareTechSlug = bareSlug(service.slug)
-  const projects = await getAllProjectsResolved()
   const techProjects = projects
     .filter((project) =>
       (project.techTags || []).some((tag) => bareSlug(tag.slug) === bareTechSlug),
@@ -66,7 +73,6 @@ export default async function TechPage({ params }: Props) {
 
   // Tagged photos: image-level techTags populate this page. Automatic order
   // = project order → image order; curatedImages pins/hides override per page.
-  const taggedAuto = await getTaggedImagesForSlug(bareTechSlug, 'tech')
   const effectiveImages = mergeCuratedTaggedImages(taggedAuto, service.curatedImages || [])
   const hasTaggedImages = effectiveImages.length > 0
   // 2 photos interleaved after each body section; the rest form the bottom gallery.
@@ -100,7 +106,6 @@ export default async function TechPage({ params }: Props) {
             documentId={service.id}
             fieldPath={`media.galleryImages.${media.galleryIndex}`}
             value={media.url}
-            mediaLibrary={mediaLibrary}
           >
             <Image
               src={media.url}
@@ -150,7 +155,6 @@ export default async function TechPage({ params }: Props) {
         fieldPath="media.heroImage"
         bareRelationship
         value={heroImage}
-        mediaLibrary={mediaLibrary}
       >
         <ParallaxHero
           imageSrc={heroImage}

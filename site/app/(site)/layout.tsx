@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { cookies } from 'next/headers'
 import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import '../globals.css'
 import Nav from '@/components/Nav'
@@ -81,9 +80,6 @@ export const viewport: Viewport = {
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
   const styles = await getSiteStyles()
-  // httpOnly Payload session cookie — gates the admin-edit UI fetch only;
-  // writes are still authenticated server-side.
-  const maybeAdmin = (await cookies()).has('payload-token')
   const cssVars = {
     '--brand-primary': styles.brandPrimary,
     '--brand-secondary': styles.brandSecondary,
@@ -107,7 +103,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
               backgrounds, below nav/admin chrome. Non-interactive, hidden
               from assistive tech. */}
           <div aria-hidden="true" className="grain-overlay" />
-          <AdminEditProvider maybeAdmin={maybeAdmin}>
+          <AdminEditProvider>
             <SmoothScroll>
               <Nav />
               {/* Curtain wrapper: lifts to reveal the fixed footer on desktop */}

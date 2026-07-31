@@ -33,7 +33,6 @@ interface EditableImageProps {
   value: string
   /** Current alt text. Pass undefined to hide the alt field. */
   alt?: string
-  mediaLibrary: MediaOption[]
   /** Optional per-image tag pickers (project gallery images only). When
    *  present, the edit panel gains chip multi-selects that PATCH
    *  `<fieldPath>.serviceTags` / `<fieldPath>.techTags` with numeric ID
@@ -50,7 +49,9 @@ interface EditableImageProps {
  * edit mode an "Image" badge opens a panel with a media-library picker,
  * a manual path input, and an alt field. Saves through /api/admin-update:
  * library pick → <fieldPath>.media (media doc id), manual path →
- * <fieldPath>.legacyUrl, alt → <fieldPath>.alt.
+ * <fieldPath>.legacyUrl, alt → <fieldPath>.alt. The media library itself
+ * comes from AdminEditContext (fetched lazily once edit mode turns on), so
+ * anonymous renders never carry it.
  */
 export default function EditableImage({
   collection,
@@ -60,14 +61,13 @@ export default function EditableImage({
   bareRelationship = false,
   value,
   alt,
-  mediaLibrary,
   serviceOptions,
   techOptions,
   selectedServiceIds = [],
   selectedTechIds = [],
   children,
 }: EditableImageProps) {
-  const { editMode } = useAdminEdit()
+  const { editMode, mediaLibrary } = useAdminEdit()
   const [active, setActive] = useState(false)
   const [manualPath, setManualPath] = useState(value)
   const [selectedMediaId, setSelectedMediaId] = useState('')

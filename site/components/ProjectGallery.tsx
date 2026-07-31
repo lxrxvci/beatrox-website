@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'motion/react'
 import { EditableImage } from '@/components/admin'
-import type { MediaOption, TagOption } from '@/components/admin/EditableImage'
+import type { TagOption } from '@/components/admin/EditableImage'
 
 interface GalleryImageTag {
   id: string
@@ -30,7 +30,6 @@ interface ProjectGalleryProps {
   /** Inline-edit target — the project doc that owns these images. */
   collection?: string
   documentId?: string
-  mediaLibrary?: MediaOption[]
   /** Tag pickers for the per-image edit panel (work pages only). */
   serviceOptions?: TagOption[]
   techOptions?: TagOption[]
@@ -115,7 +114,7 @@ function buildRows(
   })
 }
 
-export default function ProjectGallery({ images, collection, documentId, mediaLibrary = [], serviceOptions, techOptions }: ProjectGalleryProps) {
+export default function ProjectGallery({ images, collection, documentId, serviceOptions, techOptions }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   // Start unmeasured (0 = render no rows) so the SSR/first paint can't
@@ -256,7 +255,6 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
                       fieldPath={`images.${img.sourceIndex ?? index + 1}`}
                       value={img.url}
                       alt={img.alt}
-                      mediaLibrary={mediaLibrary}
                       serviceOptions={serviceOptions}
                       techOptions={techOptions}
                       selectedServiceIds={(img.serviceTags || []).map((tag) => tag.id)}
@@ -334,10 +332,15 @@ export default function ProjectGallery({ images, collection, documentId, mediaLi
               transition={{ duration: 0.45, ease: [0.76, 0, 0.24, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              {/* Lightbox goes through the optimizer (multi-MB originals are
+                  not served raw); max-w/max-h + intrinsic dims preserve the
+                  same contain-fit layout as the previous raw <img>. */}
+              <Image
                 src={activeImage.url}
                 alt={activeImage.alt}
+                width={activeImage.width ?? 1920}
+                height={activeImage.height ?? 1080}
+                sizes="100vw"
                 className="max-w-full max-h-[75vh] object-contain"
               />
             </motion.div>

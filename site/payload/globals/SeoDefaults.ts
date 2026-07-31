@@ -1,10 +1,20 @@
 import type { GlobalConfig } from 'payload'
+import { revalidateGlobal } from '@/lib/revalidate'
 
 export const SeoDefaults: GlobalConfig = {
   slug: 'seo-defaults',
   admin: {
     group: 'Settings',
     description: 'Fallback SEO settings used when page-level values are missing.',
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        // SEO defaults feed every page's metadata; revalidateGlobal swallows
+        // its own errors so a failure can never block a save.
+        revalidateGlobal()
+      },
+    ],
   },
   fields: [
     {

@@ -10,12 +10,6 @@ export interface GalleryGridItem {
   textPosition?: string
 }
 
-interface MediaOption {
-  id: string
-  url: string
-  filename: string
-}
-
 interface EditableGalleryGridProps {
   collection?: string
   documentId?: string
@@ -23,7 +17,6 @@ interface EditableGalleryGridProps {
   globalSlug?: string
   fieldPath: string
   items: GalleryGridItem[]
-  mediaLibrary?: MediaOption[]
   children: React.ReactNode
 }
 
@@ -44,10 +37,9 @@ export default function EditableGalleryGrid({
   globalSlug,
   fieldPath,
   items,
-  mediaLibrary = [],
   children,
 }: EditableGalleryGridProps) {
-  const { editMode } = useAdminEdit()
+  const { editMode, mediaLibrary } = useAdminEdit()
   const [active, setActive] = useState(false)
   const [draft, setDraft] = useState<GalleryGridItem[]>(items)
   const [isSaving, setIsSaving] = useState(false)

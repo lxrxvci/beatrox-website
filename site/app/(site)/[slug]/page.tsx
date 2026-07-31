@@ -36,11 +36,13 @@ export async function generateMetadata({
 
 export default async function CMSPage({
   params,
+  preview = false,
 }: {
   params: Promise<{ slug: string }>
+  preview?: boolean
 }) {
   const { slug } = await params
-  const page = await getCMSPageBySlug(slug)
+  const page = await getCMSPageBySlug(slug, preview)
   if (!page) notFound()
 
   const hasHero = page.hero && (page.hero.headline || page.hero.subheadline)

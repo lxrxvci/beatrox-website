@@ -1,10 +1,20 @@
 import type { GlobalConfig } from 'payload'
+import { revalidateGlobal } from '@/lib/revalidate'
 
 export const Navigation: GlobalConfig = {
   slug: 'navigation',
   admin: {
     group: 'Settings',
     description: 'Primary site navigation links shown in header/footer. Keep paths internal (start with /).',
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        // Navigation feeds every page via the root layout; revalidateGlobal
+        // swallows its own errors so a failure can never block a save.
+        revalidateGlobal()
+      },
+    ],
   },
   fields: [
     {

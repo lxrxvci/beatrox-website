@@ -1,10 +1,20 @@
 import type { GlobalConfig } from 'payload'
+import { revalidateGlobal } from '@/lib/revalidate'
 
 export const SiteStyles: GlobalConfig = {
   slug: 'site-styles',
   admin: {
     group: 'Settings',
     description: 'Brand-level visual settings used by frontend rendering.',
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        // Styles feed every page via the root layout; revalidateGlobal
+        // swallows its own errors so a failure can never block a save.
+        revalidateGlobal()
+      },
+    ],
   },
   fields: [
     {

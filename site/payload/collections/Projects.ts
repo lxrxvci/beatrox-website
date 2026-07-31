@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { contentBlocks } from '../blocks/shared'
 import { getLivePath, getPreviewPath } from '../utils/previewLinks'
+import { revalidateDocument } from '@/lib/revalidate'
 
 function slugify(value: string): string {
   return value
@@ -35,6 +36,13 @@ export const Projects: CollectionConfig = {
     drafts: true,
   },
   hooks: {
+    afterChange: [
+      ({ doc }) => {
+        // Keep ISR pages fresh after admin-UI edits; revalidateDocument
+        // swallows its own errors so a failure can never block a save.
+        revalidateDocument('projects', doc as Record<string, unknown>)
+      },
+    ],
     beforeValidate: [
       ({ data }) => {
         if (data && typeof data === 'object' && typeof data.title === 'string' && (!data.slug || typeof data.slug !== 'string')) {
