@@ -71,12 +71,16 @@ async function sendEmail(options: {
   try {
     const { Resend } = await import('resend')
     const resend = new Resend(apiKey)
-    const from = process.env.BOOKING_FROM_EMAIL || 'hello@beatrox.com'
+    // Sends go from the verified Resend domain (rental.beatrox.com) until
+    // beatrox.com is verified; replies route to admin@beatrox.com.
+    const from = process.env.BOOKING_FROM_EMAIL || 'Beatrox <admin@rental.beatrox.com>'
+    const replyTo = process.env.BOOKING_REPLY_TO_EMAIL || 'admin@beatrox.com'
 
     // The Resend SDK reports delivery API failures on the result object
     // instead of throwing, so check `error` explicitly.
     const { error } = await resend.emails.send({
       from,
+      replyTo,
       to: Array.isArray(options.to) ? options.to : [options.to],
       subject: options.subject,
       text: options.text,
@@ -103,7 +107,7 @@ export async function sendBookingConfirmation(input: BookingConfirmationInput): 
       ? `Google Meet link: ${input.meetLink}`
       : 'Our team will confirm this time and send your meeting link by email.',
     '',
-    'If you need to reschedule, please reply to this email or contact us at hello@beatrox.com.',
+    'If you need to reschedule, please reply to this email or contact us at admin@beatrox.com.',
     '',
     'Looking forward to talking with you,',
     'The BEATROX team',
@@ -115,7 +119,7 @@ export async function sendBookingConfirmation(input: BookingConfirmationInput): 
       <p>Your <strong>${escapeHtml(input.consultationType)}</strong> with BEATROX is booked for:</p>
       <p style="font-size: 18px; font-weight: 600;">${escapeHtml(timeText)}</p>
       ${input.meetLink ? `<p><a href="${escapeHtml(input.meetLink)}">Join Google Meet</a></p>` : '<p>Our team will confirm this time and send your meeting link by email.</p>'}
-      <p>If you need to reschedule, please reply to this email or contact us at <a href="mailto:hello@beatrox.com">hello@beatrox.com</a>.</p>
+      <p>If you need to reschedule, please reply to this email or contact us at <a href="mailto:admin@beatrox.com">admin@beatrox.com</a>.</p>
       <p>Looking forward to talking with you,<br>The BEATROX team</p>
     </div>
   `
@@ -131,7 +135,7 @@ export async function sendBookingConfirmation(input: BookingConfirmationInput): 
 }
 
 export async function sendInternalBookingNotification(input: InternalNotificationInput): Promise<void> {
-  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'hello@beatrox.com'
+  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'admin@beatrox.com'
   const timeText = `${formatBookingTime(input.startTime, input.timezone)} ${input.timezone}`
 
   const text = [
@@ -178,7 +182,7 @@ export async function sendInternalBookingNotification(input: InternalNotificatio
 }
 
 export async function sendContactNotification(input: ContactNotificationInput): Promise<void> {
-  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'hello@beatrox.com'
+  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'admin@beatrox.com'
 
   const detailRows: [string, string | undefined][] = [
     ['Name', input.name],
@@ -237,7 +241,7 @@ export async function sendConsultationReminder(input: BookingConfirmationInput):
       ? `Google Meet link: ${input.meetLink}`
       : 'If you do not have a meeting link yet, our team will send it by email before the call.',
     '',
-    'If you need to reschedule, please reply to this email or contact us at hello@beatrox.com.',
+    'If you need to reschedule, please reply to this email or contact us at admin@beatrox.com.',
     '',
     'The BEATROX team',
   ].join('\n')
@@ -248,7 +252,7 @@ export async function sendConsultationReminder(input: BookingConfirmationInput):
       <p>A reminder that your <strong>${escapeHtml(input.consultationType)}</strong> with BEATROX is coming up on:</p>
       <p style="font-size: 18px; font-weight: 600;">${escapeHtml(timeText)}</p>
       ${input.meetLink ? `<p><a href="${escapeHtml(input.meetLink)}">Join Google Meet</a></p>` : '<p>If you do not have a meeting link yet, our team will send it by email before the call.</p>'}
-      <p>If you need to reschedule, please reply to this email or contact us at <a href="mailto:hello@beatrox.com">hello@beatrox.com</a>.</p>
+      <p>If you need to reschedule, please reply to this email or contact us at <a href="mailto:admin@beatrox.com">admin@beatrox.com</a>.</p>
       <p>The BEATROX team</p>
     </div>
   `
@@ -268,7 +272,7 @@ export interface StaleLeadDigestInput {
 }
 
 export async function sendStaleLeadDigest(input: StaleLeadDigestInput): Promise<void> {
-  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'hello@beatrox.com'
+  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'admin@beatrox.com'
   const total = input.staleSubmissions.length + input.staleDeals.length
   if (total === 0) return
 
@@ -326,7 +330,7 @@ export interface WeeklyKpiDigestInput {
 }
 
 export async function sendWeeklyKpiDigest(input: WeeklyKpiDigestInput): Promise<void> {
-  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'hello@beatrox.com'
+  const notificationEmail = process.env.BOOKING_NOTIFICATION_EMAIL || 'admin@beatrox.com'
 
   const rows: [string, string][] = [
     ['New leads (this week)', String(input.leadsThisWeek)],

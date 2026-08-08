@@ -69,7 +69,7 @@ export default buildConfig({
   ...(runtimeEnv.RESEND_API_KEY
     ? {
         email: nodemailerAdapter({
-          defaultFromAddress: runtimeEnv.BOOKING_FROM_EMAIL || 'hello@beatrox.com',
+          defaultFromAddress: runtimeEnv.BOOKING_FROM_EMAIL || 'Beatrox <admin@rental.beatrox.com>',
           defaultFromName: 'BEATROX',
           skipVerify: true,
           transportOptions: {

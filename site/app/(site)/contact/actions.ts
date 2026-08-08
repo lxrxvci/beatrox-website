@@ -110,7 +110,7 @@ export async function submitContactForm(
     console.error('Contact submission error:', error)
     return {
       success: false,
-      message: 'Something went wrong. Please try again or email us directly at hello@beatrox.com.',
+      message: 'Something went wrong. Please try again or email us directly at admin@beatrox.com.',
     }
   }
 }

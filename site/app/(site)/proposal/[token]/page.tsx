@@ -141,8 +141,8 @@ export default async function ProposalPage({ params }: PageProps) {
           <h2 className="heading-sm text-white">Next Steps</h2>
           <p className="text-base text-white leading-relaxed">
             To accept this proposal or ask questions, reply to your proposal email or contact us at{' '}
-            <a href="mailto:hello@beatrox.com" className="text-white underline underline-offset-4">
-              hello@beatrox.com
+            <a href="mailto:admin@beatrox.com" className="text-white underline underline-offset-4">
+              admin@beatrox.com
             </a>
             .
           </p>
