@@ -1,8 +1,18 @@
-# GBP Blueprint: Beatrox
+# GBP Blueprint v2: Beatrox
 
-**Generated 2026-08-07 under explicit user override of the Elite gate (site is NOT Elite yet; composite 34/100). Fields mirror the current website and will need a parity re-check after remediation closes.**
-**Parity source: each field lists the website page or file it matches. All generated text is em dash free and within policy limits.**
-**Strategy note (client direction 2026-08-07): Beatrox is a global brand, not hyper-local. This GBP exists as the verified entity anchor for the Portland studio address and the review surface; it is NOT the hyper-local play. All Portland hyper-local SEO (rental-intent queries, local landing pages) belongs to rentals.beatrox.com. One profile only: a second GBP for the rentals arm at the same address is a suspension risk (GC-06/GC-07).**
+**Generated 2026-08-08 under explicit user override of the Elite gate (site composite 44/100; gate bypass requested directly). Supersedes the 2026-08-07 v1 blueprint.**
+**Parity source: each field lists the website page or file it matches. All generated text passed content_lint.py (no banned dashes) and the character limits in gbp-field-spec.md.**
+**Client intake confirmed 2026-08-08: founded 2011; exterior Beatrox signage exists at 1313 SE 3rd Ave. Rentals launches ON the main Beatrox profile now (rental services and the `Audiovisual equipment rental service` category included) and migrates to a dedicated `Beatrox Rentals` profile once rentals signage, a separate phone line, and verification assets exist (Appendix B).**
+
+## v1 to v2 change log (July 2026 protocol corrections)
+
+1. Q&A seeding REMOVED. Google killed the Q&A API (Nov 3, 2025) and removed the public Q&A section from Maps (Dec 3, 2025). Replacement: Ask Maps answers from profile fields + website + reviews. The v1 Q&A seeds migrate to website FAQ content (Section 11).
+2. FAQ rich results fully deprecated May 7, 2026. FAQPage schema stays as machine-readable grounding; never sold as a SERP feature (OP-39).
+3. Categories re-confirmed against three live 2026 taxonomy scrapes (Dalton Luka May 2026, Local Dominator Feb 2026, VOXA). `Audio visual consultant` downgraded to verify-in-picker; `Marketing agency` added.
+4. Address model resolved: SHOW the address (hybrid). Signage confirmed; address-shown is a new top-10 pack factor (Whitespark 2026).
+5. Diversity Update landing-page logic added (Sterling Sky Aug 2026; SEL case study Mar 2026).
+6. Two-phase profile roadmap added: `Beatrox` now, `Beatrox Rentals` at month 3 to 6 (Appendix B), per client confirmation that all independence conditions are achievable.
+7. Review ops updated: recency is the #11 pack factor (was #93); no keyword coaching (Sterling Sky controlled test); 2026 enforcement climate noted.
 
 ---
 
@@ -10,129 +20,196 @@
 
 `Beatrox`
 
-Compliance check: no keywords, taglines, locations, or service terms appended. Do NOT use "BEATROX" (all-caps words are prohibited unless the registered name is an acronym; the legal name is Beatrox LLC) and do NOT append "LLC" unless signage and invoices consistently show it. Parity: finding P5-03 tracks aligning site schema name to "Beatrox".
+Compliance: no keywords, taglines, locations, or service terms. Do NOT use "BEATROX" (all-caps prohibited unless a true acronym) and do NOT append "LLC" (legal suffix requires consistent real-world proof). Parity: LocalBusiness schema `name` is "Beatrox" (site/lib/schema.ts:110); footer copyright reads "Beatrox LLC".
 
 ## 2. Categories
 
-- **Primary:** `Event management company` (rationale: top revenue service is full-service event production; "this business IS an" event management company. No "event production company" category exists in the taxonomy; this is the closest specific match and reads B2B, unlike Event planner which pulls consumer/wedding intent.)
-- **Secondary (evidence-backed only, BrightLocal optimum is 4):**
-  1. `Event technology service` (LED walls, projection mapping, media servers, interactive installs; /services/led-video-wall-rentals, /services/projection-mapping, /services/media-server-playback-solutions)
-  2. `Audiovisual equipment rental service` (rentals arm; /services/sound-equipment-rentals, /services/dj-equipment-rentals, /services/backline-stage-rental)
-  3. `Video production service` (/services/audio-production, 3D animation, AV content design)
-  4. `Audio visual consultant` (/services/consultation-system-design, /services/av-system-integration, technical documentation)
+- **Primary:** `Event management company` (no "Event production company" category exists in the taxonomy; this is the closest specific match and reads B2B, unlike `Event planner`, which pulls consumer/wedding intent).
+- **Secondary (BrightLocal optimum is 4 additional):**
+  1. `Marketing agency` (the experiential marketing agency positioning; /services index H2 and intro copy)
+  2. `Event technology service` (LED walls, projection mapping, media servers; /services/led-video-wall-rentals, /tech pages)
+  3. `Audiovisual equipment rental service` (rentals arm; /services/sound-equipment-rentals, /services/dj-equipment-rentals, /services/backline-stage-rental). REMOVE from this profile the day the `Beatrox Rentals` profile launches (Appendix B).
+  4. `Video production service` (/services/audio-production, 3D animation, AV content design)
+- Verify-in-picker candidate: `Audio visual consultant` (unconfirmed in 2026 taxonomy scrapes; add only if present and evidenced by /tech/consultation pages).
+- Do NOT add: `Stage lighting equipment supplier` (supplier implies sales; use only if gear sales are real), `Party equipment rental service` (consumer intent; belongs on the rentals profile instead).
 
-Optional 5th if a growth vertical justifies it: `Stage lighting equipment supplier` (/services/lighting-services, /services/lighting-integration) or `Design agency` (environmental design, immersive environments).
-
-Parity: every category above has one or more live website service pages. Verify competitor category stacks manually in Maps before locking (finding P7-01). Change one category at a time; expect 2 to 4 weeks of fluctuation; primary-category changes can trigger re-verification.
+Parity: every category has live website pages. Before locking, extract the top-3 Portland pack competitors' category stacks via Maps page-source or GMBspy (finding P7-01). Change one category at a time; expect 2 to 4 weeks of fluctuation; primary changes can trigger re-verification.
 
 ## 3. Business Description (<=750 chars, first 250 engineered)
 
 ```
-Beatrox is an experiential design and event production company with a studio in Portland, Oregon, producing brand activations, festivals, corporate events, and permanent installations across the United States and worldwide.
+Beatrox is an experiential marketing agency and full-service event production company based in Portland, Oregon, producing brand activations, festivals, corporate events, and permanent installations across the United States and worldwide.
 
-Our team designs, builds, and runs every technical layer in house: LED video walls, drone light shows, laser shows, projection mapping, custom fabrication, lighting design, and full audio production.
+Our in-house team designs, builds, and runs every technical layer: LED video walls, drone light shows, laser shows, projection mapping, custom fabrication, lighting design, and concert-grade audio.
 
-Agencies, brands, and venues get one accountable partner from first sketch to final strike. Founded in 2020, our crew brings over 20 years of touring and broadcast experience, from Super Bowl activations to immersive environments for global clients.
+Agencies, brands, and venues get one accountable partner from first sketch to final strike. Founded in 2011, our crew brings over 20 years of touring and broadcast experience, from Super Bowl activations to immersive environments for global brands. Rentals serve the Portland metro and Pacific Northwest.
 ```
 
-Chars: 675/750 | Parity: homepage hero and services index positioning (site/content/homepage.json, site/content/services-index.json) | Policy: no URLs, no promos, no phone, no ALL-CAPS words, no em dashes.
+Chars: see lint report (validated <=750) | Parity: homepage positioning + /services intro ("full-service event production company and experiential marketing agency", services/page.tsx) + about.json founding story | Policy: no URLs, no promos, no phone, no ALL-CAPS prose words, no em dashes.
+Founding year CONFIRMED 2011 (client, 2026-08-08). GBP may offer an AI-drafted description in the edit flow; decline it and paste this text.
 
 ## 4. Services (mirror website service pages exactly)
 
 | # | Service name (<=58) | Description (<=300) | Price | Website source |
 |---|--------------------|---------------------|-------|----------------|
 | 1 | Full Service Event Production | Concept to strike: creative direction, technical design, fabrication, crewing, and show calling for brand activations, festivals, and corporate events. One accountable team from first sketch to final strike. | (blank) | /services/event-production |
-| 2 | LED Video Wall Rentals | Fine-pitch indoor panels to festival-scale outdoor walls, with processors, rigging, and LED technicians. Dry hire or full show support across the Portland metro and nationwide tours. | (blank) | /services/led-video-wall-rentals |
-| 3 | Drone Light Shows | Custom drone light shows with full FAA compliance, produced with Sky Lites Drone Shows. Choreographed formations for festivals, product launches, and city celebrations. | (blank) | /services/drone-light-shows |
-| 4 | Laser Light Shows | High-power aerial and graphic laser shows for concerts, festivals, and brand events. Variance handling, safety officer, and operation included. | (blank) | /services/laser-shows |
-| 5 | Projection Mapping | Building-scale projection mapping and interactive AR, from brand activations to landmark installs. Content, media servers, and alignment handled in house. | (blank) | /services/projection-mapping |
-| 6 | Custom Fabrication | CNC machining, scenic assembly, and custom builds for stages, booths, and permanent installations. Drafting, engineering certification, and permit submittal support. | (blank) | /services/custom-fabrication |
-| 7 | Lighting Design and Services | Lighting design, integration, and full-service event lighting: consoles, fixtures, and programmers for tours, festivals, and corporate shows. | (blank) | /services/lighting-services |
-| 8 | Sound Equipment Rentals | PA systems, line arrays, monitors, and microphones with audio engineers available. Concert-grade sound for events of any size. | (blank) | /services/sound-equipment-rentals |
-| 9 | DJ Equipment Rentals | Club-standard DJ gear: CDJs, mixers, controllers, and turntables. Delivery, setup, and tech support available across the Portland metro. | (blank) | /services/dj-equipment-rentals |
-| 10 | Backline and Stage Rental | Drum kits, amps, instruments, staging, and rigging for touring artists and festivals. Advance-friendly inventory with crew support. | (blank) | /services/backline-stage-rental |
-| 11 | Experiential Events | Immersive brand experiences: interactive installations, real-time AR/VR/XR content, and multimedia displays built to be shared. | (blank) | /services/experiential-events |
+| 2 | Experiential Events and Brand Activations | Immersive brand experiences: interactive installations, real-time AR/VR/XR content, and multimedia displays built to be shared. Designed and fabricated in house. | (blank) | /services/experiential-events |
+| 3 | LED Video Wall Rentals | Fine-pitch indoor panels to festival-scale outdoor walls, with processors, rigging, and LED technicians. Dry hire or full show support across the Portland metro and nationwide tours. | (blank) | /services/led-video-wall-rentals |
+| 4 | Drone Light Shows | Custom drone light shows with full FAA compliance, produced with Sky Lites Drone Shows. Choreographed formations for festivals, product launches, and city celebrations. | (blank) | /services/drone-light-shows |
+| 5 | Laser Light Shows | High-power aerial and graphic laser shows for concerts, festivals, and brand events. Variance handling, safety officer, and operation included. | (blank) | /services/laser-shows |
+| 6 | Projection Mapping | Building-scale projection mapping and interactive AR, from brand activations to landmark installs. Content, media servers, and alignment handled in house. | (blank) | /services/projection-mapping |
+| 7 | Custom Fabrication | CNC machining, scenic assembly, and custom builds for stages, booths, and permanent installations. Drafting, engineering certification, and permit submittal support. | (blank) | /services/custom-fabrication |
+| 8 | Lighting Design and Services | Lighting design, integration, and full-service event lighting: consoles, fixtures, and programmers for tours, festivals, and corporate shows. | (blank) | /services/lighting-services |
+| 9 | Sound Equipment Rentals | PA systems, line arrays, monitors, and microphones with audio engineers available. Concert-grade sound for events of any size. | (blank) | /services/sound-equipment-rentals |
+| 10 | DJ Equipment Rentals | Club-standard DJ gear: CDJs, mixers, controllers, and turntables. Delivery, setup, and tech support available across the Portland metro. | (blank) | /services/dj-equipment-rentals |
+| 11 | Backline and Stage Rental | Drum kits, amps, instruments, staging, and rigging for touring artists and festivals. Advance-friendly inventory with crew support. | (blank) | /services/backline-stage-rental |
 | 12 | Event Planning and Logistics | Venue sourcing, permits, site plans, production management, and tour management. The operational backbone behind complex shows. | (blank) | /services/event-planning-logistics |
 
-Predefined services selected: whatever Google's category-linked checklist offers that matches the live pages (check all that are genuinely offered). Custom services: the 12 above.
+Predefined services: check every category-linked service Google offers that is genuinely delivered (feeds "Provides X" justifications). Custom services: the 12 above. On Appendix B launch, move entries 3, 9, 10, 11 to the rentals profile and keep this list production-only.
+2026 note: Google shows AI-generated service summaries on knowledge panels, assembled from these entries plus the website; exact, consistent naming is the lever.
 
-## 5. Products (retail verticals)
+## 5. Products
 
 Not applicable: Beatrox is a service business. Use Services only.
 
 ## 6. Attributes (all applicable, category-gated)
 
-Set after category selection reveals the available set. Expected candidates: online appointments (weigh against justification suppression, GC-31), onsite services (same caveat), wheelchair accessible entrance/parking (only if true at 1313 SE 3rd Ave), accepts credit cards/NFC, LGBTQ+ friendly. Identity attributes (veteran-owned, etc.) only if accurate. Every attribute must be verifiable in person or on the website.
+Set after category selection reveals the available set. Candidates: wheelchair accessible entrance/parking (only if true at 1313 SE 3rd Ave), accepts credit cards/NFC, LGBTQ+ friendly, identity attributes only if accurate. Caveat: the "onsite services" and "online appointments" attributes can suppress justifications in the local pack (Sterling Sky test); if justifications never appear, remove those two and re-check after 48 hours. Every attribute must be verifiable in person or on the website.
 
-## 7. Hours
+## 7. Hours and Opening Date
 
-- Regular: proposed Mon-Fri 9:00 AM to 6:00 PM, Sat-Sun closed. CLIENT MUST CONFIRM before publishing; the website currently shows no hours anywhere (finding P1-02). Once confirmed, add the identical hours to /contact and to openingHoursSpecification in the LocalBusiness schema in the same release.
+- Opening date: set to the 2011 date on the Beatrox LLC registration (client to supply exact month and day). Google displays "15+ years in business" in local results; if left unset, Google infers the date from third parties and is often wrong.
+- Regular: Mon to Fri 9:00 AM to 6:00 PM, Sat to Sun closed. Parity DONE: stated on /contact and in openingHoursSpecification (site/lib/schema.ts:120-127).
+- Website copy fix queued: /contact says "PST"; Portland observes PDT in summer. Change to "PT" in the next content release.
 - Special hours: set proactively for all public holidays when Google prompts.
-- More hours: "Online service hours" if consultations are booked outside office hours.
-Note: open-at-time-of-search is a top pack factor. Never falsify hours.
+- More hours: "Online service hours" only if consultations genuinely happen outside office hours.
+- Open-at-time-of-search is a top-5 pack factor in 2026. Never falsify hours.
 
 ## 8. Contact and Links
 
-- Phone: `(503) 515-4715` (matches site/content/contact.json:29 exactly; schema E.164 +15035154715 carries identical digits)
-- Website: `https://www.beatrox.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing` (only after P1-04 domain wiring closes; until then do not create the profile website link against the vercel.app host)
+- Phone: `(503) 515-4715` (matches site/content/contact.json exactly; schema E.164 +15035154715 carries identical digits). If call tracking is ever added: tracking number primary, real number secondary.
+- Website: `https://www.beatrox.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing` (ONLY after the www.beatrox.com domain is wired, finding P1-04; never point the profile at the vercel.app host).
 - Appointment link: `https://www.beatrox.com/book?utm_source=google&utm_medium=organic&utm_campaign=gbp-appt`
-- GBP landing page decision: homepage. Single location, NAP visible in footer sitewide and on /contact, and no Diversity Update collision because the organic homepage and the pack listing reinforce the same entity.
+- GBP landing page decision (Diversity Update): homepage. The pack listing and the organic homepage reinforce the same entity for brand and Portland queries; the service queries are targeted by dedicated /services and /tech pages, deliberately different URLs from the GBP link, so no pack/organic self-collision.
 
-## 9. Service Area (hybrid: address shown, global brand)
+## 9. Service Area and Address Display (hybrid, confirmed)
 
-Address hidden: NO (hybrid; the studio receives clients by appointment). Service areas: keep minimal. Per client direction the brand is global, so do not stack 20 metro cities chasing local rankings. Set `Portland, OR` only, or none at all; the address itself anchors the local entity. GBP service areas do not drive ranking anyway (proximity to the address dominates), and the hyper-local rental play belongs to rentals.beatrox.com content, not this profile. Parity: matches the areaServed schema (Portland, OR plus United States).
+Address hidden: NO. Exterior Beatrox signage exists (client-confirmed 2026-08-08), the studio receives clients by appointment, and address-shown is a top-10 pack factor (Whitespark 2026, #7). Requirement: permanent signage must be maintained and the studio staffed during stated hours; both are verification subjects.
+Service areas: keep minimal. `Portland, OR` only. The brand is global, so do not stack 20 metros; GBP service areas do not drive ranking (proximity to the address dominates), and the hyper-local rental play belongs to rentals.beatrox.com content, not this profile. Parity: matches areaServed schema (Portland, OR + United States).
 
 ## 10. Media Plan
 
-- Logo: 720x720 PNG, the Beatrox symbol mark centered (asset exists at /brand/beatrox-symbol.png; export a square version)
-- Cover: 1024x576, a real show photo (LED wall live at an event), no text overlay
+- Logo: 720x720 PNG, Beatrox symbol mark centered (export square version of /brand/beatrox-symbol.png).
+- Cover: 1024x576, a real show photo (LED wall live at an event), no text overlay, no logo-as-cover.
 - Photo shot list (20+ minimum, real jobs only, no stock, no AI):
-  - 3+ exterior/interior of the 1313 SE 3rd Ave studio and signage
-  - 3+ team-at-work: fabrication shop, LED wall assembly, show calling position
-  - 4+ live show photos: LED walls, laser show, drone show, projection mapping
+  - 3+ exterior/interior of the 1313 SE 3rd Ave studio, including the signage (doubles as verification evidence)
+  - 3+ team-at-work: fabrication shop, LED wall assembly, show-calling position
+  - 4+ live shows: LED walls, laser show, drone show, projection mapping
   - 3+ rental inventory: LED panels, PA stacks, DJ gear, backline
-  - 3+ finished installs: trade show booths, permanent installations
-  - Source candidates already on the site: /work project galleries (Aku World, Run for the Oceans, Projekt X, Super Bowl 2020)
-- Video: 10 to 20s recap clip of a live show, 1080p under 75MB (existing showreel footage)
-- Cadence: 2 to 4 photos per week for the first 2 months, then monthly minimum. Geotagging: not used (debunked; Google strips EXIF).
+  - 3+ finished installs: booths, permanent installations
+  - Source candidates already on site: /work galleries (Run for the Oceans, Aku World, Projekt X, Myshelter)
+- Video: 10 to 20s live-show recap, 1080p under 75MB (existing showreel footage).
+- Cadence: 2 to 4 photos per week for 2 months, then monthly minimum. Geotagging: not used (debunked; Google strips EXIF on upload).
 
-## 11. Q&A Seeds (owner-posted)
+## 11. Ask Maps Readiness (replaces Q&A seeding; feature removed Dec 2025)
 
-| Question | Answer |
-|----------|--------|
-| Do you rent LED video walls in Portland? | Yes. Beatrox rents LED video walls from fine-pitch indoor panels to festival-scale outdoor walls, with processors, rigging, and LED technicians. We serve the Portland metro and support nationwide tours from our Portland studio. |
-| Can you produce a drone light show at my event in Oregon? | Yes. Beatrox produces custom drone light shows with full FAA compliance together with our partner Sky Lites Drone Shows. We handle choreography, permits, and operations for festivals, launches, and city celebrations across Oregon. |
-| What does full service event production include? | Full service event production at Beatrox covers creative direction, technical design, custom fabrication, AV and lighting, crewing, and show calling. You get one accountable team in Portland from first sketch to final strike. |
-| Do you work outside Portland? | Yes. Our studio is in the Central Eastside of Portland, Oregon, and we produce events and installations across the Portland metro, the Pacific Northwest, and nationwide tours. |
-| Can I visit your shop to plan my event? | Yes. Beatrox is a hybrid studio at 1313 SE 3rd Ave in Portland. Book a consultation through our website and we will schedule a discovery call or a site visit at the shop. |
-| Do you offer laser shows and projection mapping together? | Yes. Beatrox designs combined laser, projection mapping, and LED wall shows in house, including content, media servers, safety compliance, and operation. |
+Google's Q&A is gone; Gemini "Ask Maps" now answers from profile fields, reviews, posts, and WEBSITE content. The control surface is the website FAQ. The v1 Q&A seeds become on-site FAQ entries:
 
-## 12. Posts Calendar (4 weeks)
+| Question | Where it lives |
+|----------|----------------|
+| What does a full-service event production company do? | /services FAQ (live) |
+| What is the difference between an experiential marketing agency and an event production company? | /services FAQ (live) |
+| Do you work outside Portland, Oregon? | /services FAQ (live) |
+| Can I rent equipment without booking full production? | /services FAQ (live) |
+| How far in advance should we start the conversation? | /services FAQ (live) |
+| Do you rent LED video walls in Portland? | rentals.beatrox.com LED category page FAQ (Phase D) |
+| Can you produce a drone light show at my event in Oregon? | /services/drone-light-shows FAQ (verify present) |
+| Can I visit your shop to plan my event? | /contact page copy (add: visits by appointment) |
 
-| Week | Type | Topic | Copy (<=1,500) | Image 1200x900 |
-|------|------|-------|----------------|----------------|
-| 1 | Update | Profile launch / what Beatrox does | Beatrox is an experiential design and event production company in Portland, Oregon. From LED video walls and drone light shows to custom fabrication and full event production, our Central Eastside studio designs, builds, and runs every technical layer in house. Book a consultation to start your project. CTA: Book | Live show wide shot |
-| 2 | Update | LED video wall rentals | Fine-pitch indoor panels to festival-scale outdoor walls. Beatrox rents LED video walls with processors, rigging, and technicians across the Portland metro and nationwide. CTA: Learn more (link /services/led-video-wall-rentals with UTM) | LED wall close-up |
-| 3 | Update | Drone and laser shows | Custom drone light shows with full FAA compliance, plus high-power laser shows for festivals and brand events. Produced from Portland, staged anywhere. CTA: Learn more (/services/drone-light-shows with UTM) | Drone show night shot |
-| 4 | Update | Case study spotlight | From Super Bowl projection mapping to immersive brand activations, see the work our Portland team produces. CTA: Learn more (/work with UTM) | Best portfolio frame |
+Keep FAQPage schema on those pages: the rich result is dead, but the markup is still parsed by Google, AI engines, and voice assistants (OP-39, OP-67).
+
+## 12. Posts Calendar (4 weeks, then weekly cadence)
+
+Posts are an engagement and justification asset, not a ranking signal (Sterling Sky). Weekly minimum for an active-profile signal. 1200x900 images, central 80% safe zone, CTA button, UTM-tagged links.
+
+| Week | Type | Topic | Copy (<=1,500) | Image |
+|------|------|-------|----------------|-------|
+| 1 | Update | Profile launch | Beatrox is an experiential marketing agency and event production company in Portland, Oregon. From LED video walls and drone light shows to custom fabrication and full event production, our Central Eastside studio designs, builds, and runs every technical layer in house. Book a consultation to start your project. CTA: Book (/book, gbp-appt UTM) | Live show wide shot |
+| 2 | Update | LED video wall rentals | Fine-pitch indoor panels to festival-scale outdoor walls. Beatrox rents LED video walls with processors, rigging, and technicians across the Portland metro and nationwide. CTA: Learn more (/services/led-video-wall-rentals, gbp-post UTM) | LED wall close-up |
+| 3 | Update | Drone and laser shows | Custom drone light shows with full FAA compliance, plus high-power laser shows for festivals and brand events. Produced from Portland, staged anywhere. CTA: Learn more (/services/drone-light-shows, gbp-post UTM) | Drone show night shot |
+| 4 | Update | Case study spotlight | From Super Bowl activations to immersive brand environments at Comic-Con, see the work our Portland team produces for global brands. CTA: Learn more (/work, gbp-post UTM) | Best portfolio frame |
 
 ## 13. Review Operations
 
-- Ask script (email or SMS, same day as project wrap or final invoice): "Thank you for building with Beatrox. If the show landed the way you hoped, would you share a sentence or two about your experience on our Google profile? Mentioning the service we provided (for example LED video wall, drone show, or full event production) helps other Portland teams find us: [short review link]"
-- Response templates: positive: thank, name the service and event type, 50+ words, invite the next project. Neutral: acknowledge, clarify one fact, offer a direct line. Negative: respond within 24 hours, no defensiveness, move to a call, state the fix.
-- Response standard: 100 percent response rate, under 24 hours, personalized.
-- Platforms priority: Google first, then Clutch and LinkedIn (B2B vertical), then Facebook and Yelp for citation parity. Never: gating, incentives, or Yelp solicitation.
+- Trigger: project wrap, final invoice, or gear return. Ask every client, every time.
+- Ask script (email or SMS): "Thank you for building with Beatrox. If the show landed the way you hoped, would you share a sentence or two about your experience on our Google profile? It helps other teams find us: [short review link]"
+- Do NOT coach keywords. Sterling Sky's controlled test found keyword-rich reviews had no positive ranking effect; detailed, specific, unprompted language is what feeds AI review summaries. Never incentivize (2026 enforcement: 600% increase in review deletions, FTC fines per violation).
+- Velocity target: 4 to 8 new reviews per month, steady. Recency is the #11 pack factor in 2026 (was #93); a steady trickle beats any burst. The Portland rental incumbents show low review counts, so 6 to 12 months of steady velocity is a realistic pack-leadership path for the rentals profile.
+- Responses: 100% response rate, within 24 hours, 50+ words, personalized, name the service naturally. Negative: respond within 24h, no defensiveness, move to a call, state the fix.
+- Platforms: Google first, then Clutch and LinkedIn (B2B agency tier), then Facebook and Yelp for citation parity. Never solicit Yelp reviews (their policy).
 
-## 14. Verification and Suspension Avoidance
+## 14. Verification and Suspension Avoidance (2026)
 
-- Verify the domain in Search Console on the managing Google account BEFORE claiming (possible instant verification path).
-- Expect video verification. Shot list (hybrid storefront variant): street sign and building number at 1313 SE 3rd Ave, permanent exterior signage reading Beatrox, entrance, interior studio and fabrication shop, staff-only areas, equipment and inventory, unlock the door on camera. One continuous unedited take, 1 to 2 minutes, location services on.
-- Permanent signage at the address is required for a shown address (GC-04). Confirm it exists before creating the profile; if not, install signage first or run SAB configuration temporarily.
-- Edit spacing: about 1 week between high-trust edits (name, address, primary category, phone, website).
-- Keep reinstatement evidence on file: business registration for Beatrox LLC, utility bill for the address, lease, photos of signage.
-- Avoid major profile overhauls in April and October (algorithmic suspension sweeps).
-- Never create a second profile for the same business or address.
+- Verify www.beatrox.com in Search Console on the managing Google account BEFORE claiming (only real instant-verification path).
+- Expect video verification (2026 default; 30 to 40% first-attempt failure rate). Shot list, hybrid storefront variant: street sign + building number at 1313 SE 3rd Ave, permanent exterior signage reading Beatrox (confirmed exists), entrance, interior studio + fabrication shop, staff-only areas, equipment and inventory, unlock the door on camera. One continuous unedited take, 1 to 2 minutes, filmed in-app with location services ON, no faces.
+- Edit spacing: about 1 week between high-trust edits (name, address, primary category, phone, website). Batched edits are the top practitioner-seen suspension trigger.
+- Keep reinstatement evidence on file: Beatrox LLC registration, utility bill for the address, lease, signage photos.
+- Avoid major profile work in April and October (algorithmic suspension sweeps; April 27, 2026 wave documented). August/September 2026 is a clean window.
+- Never create a second profile for the same business, and never create a replacement profile if suspended (appeal the original).
 
 ## 15. Maintenance Cadence
 
-Weekly: one post, 2 to 4 photos, Q&A check, respond to all reviews within 24 hours. Monthly: hours audit, service list parity re-check against the website, review velocity review. Quarterly: category re-validation against the taxonomy (Google adds categories monthly), freshness updates to the linked homepage and service pages.
+Weekly: one post, 2 to 4 photos, respond to all reviews within 24 hours. Monthly: hours audit, service-list parity re-check against the website, review velocity review, special-hours check. Quarterly: category re-validation (taxonomy updates monthly), freshness updates to the linked homepage and service pages.
+
+---
+
+## Appendix B: `Beatrox Rentals` Profile (confirmed migration target)
+
+**Client decision 2026-08-08: rentals starts on the main `Beatrox` profile and migrates here once the independence assets exist.** Until then, the main profile carries the four rental service entries (Section 4, rows 3 and 9 to 11) and the `Audiovisual equipment rental service` category, and rental reviews accrue to the main profile.
+
+**Migration checklist (execute in this order, one high-trust change per week):**
+1. Install `Beatrox Rentals` signage at 1313 SE 3rd Ave; register a DBA if possible; provision the separate rentals phone line and update rentals.beatrox.com NAP to it.
+2. Complete the rentals site SSR remediation (Phase D) so rentals.beatrox.com stands alone with its own NAP footer, category pages, and LocalBusiness schema (@id https://rentals.beatrox.com/#localbusiness).
+3. Film the rentals verification video (rentals signage, warehouse inventory, staff-only access) BEFORE creating the profile.
+4. Create the `Beatrox Rentals` profile per this appendix. Never create it while the main profile is under review or inside its first 90 days.
+5. The week the rentals profile goes live: remove `Audiovisual equipment rental service` from the main profile's categories.
+6. The following week: remove the four rental service entries from the main profile (they live on the rentals profile from then on).
+7. Update the rentals GBP website link UTM and confirm the Diversity Update split (Section B5).
+Note: reviews already on the main profile stay there (Google does not transfer reviews between profiles); the rentals profile builds its own review stream from gear-return asks.
+
+### B1. Name
+`Beatrox Rentals` (sub-brand naming is explicitly allowed: Google's Nordstrom/Nordstrom Rack precedent)
+
+### B2. Categories
+- Primary: `Audiovisual equipment rental service`
+- Secondary: `Party equipment rental service`, `Event technology service`
+- Same-day action: remove `Audiovisual equipment rental service` from the Beatrox profile (zero-overlap rule).
+
+### B3. Description (<=750 chars)
+
+```
+Beatrox Rentals is an audiovisual equipment rental service in Portland, Oregon, supplying LED video walls, sound systems, DJ equipment, backline, staging, lighting, and laser systems for events across the Portland metro and Pacific Northwest.
+
+Every rental ships from our Central Eastside warehouse with delivery, setup, and experienced technicians available. From Oregon Convention Center ballrooms to festival main stages, our touring-grade inventory is the same gear our production crew runs at national events.
+
+Dry hire or full show support, single day or multi-week runs. Book online for same-week availability.
+```
+
+### B4. Services (6, mirror rentals.beatrox.com category pages)
+
+| # | Service name | Description (<=300) | Website source |
+|---|--------------|---------------------|----------------|
+| 1 | LED Video Wall Rentals | Fine-pitch indoor to festival-scale outdoor LED walls with processors, rigging, and technicians. Delivery and setup across Portland and the Pacific Northwest. | rentals.beatrox.com LED category |
+| 2 | Sound Equipment Rentals | PA systems, line arrays, monitors, and microphones, concert-grade, with audio engineers available. Serving Portland events of any size. | rentals.beatrox.com sound category |
+| 3 | DJ Equipment Rentals | Club-standard CDJs, mixers, controllers, and turntables with delivery, setup, and tech support across the Portland metro. | rentals.beatrox.com DJ category |
+| 4 | Backline and Stage Rental | Drum kits, amps, instruments, staging, and rigging for touring artists and festivals. Advance-friendly inventory with crew support. | rentals.beatrox.com backline category |
+| 5 | Lighting System Rentals | Event lighting packages: moving heads, washes, consoles, and control, with programmers available for shows across the Pacific Northwest. | rentals.beatrox.com lighting category |
+| 6 | Laser System Rentals | High-power laser systems with variance handling and safety officer included, for concerts, festivals, and brand events in Portland and beyond. | rentals.beatrox.com laser category |
+
+### B5. Links and Diversity Update split
+- Website: `https://rentals.beatrox.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing`
+- Appointment: `https://rentals.beatrox.com/booking?utm_source=google&utm_medium=organic&utm_campaign=gbp-appt` (or the live booking route)
+- Diversity Update: the GBP links to the rentals homepage; the page optimized organically for "led video wall rental portland" is the LED category page, a deliberately different URL, so pack and organic do not cannibalize each other.
+
+### B6. Everything else
+Hours: same Mon to Fri 9 to 6 unless the rental counter keeps different hours (confirm). Address: shown, same street address, with Beatrox Rentals signage (both brands' signage can coexist; each profile's video shows its own sign). Media: rental inventory, warehouse, loading, technician shots. Reviews: separate ask stream triggered on gear return. Posts: inventory spotlights, package deals (Offer posts with real terms), seasonal event prep.
