@@ -7,7 +7,7 @@ import type { Client, Deal } from '@/payload-types'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Proposal — BEATROX',
+  title: 'Proposal | BEATROX',
   robots: { index: false, follow: false },
 }
 
@@ -32,7 +32,7 @@ export default async function ProposalPage({ params }: PageProps) {
   const { token } = await params
   const payload = await getPayload({ config: payloadConfig })
 
-  // Public, token-gated read — the unguessable UUID is the access control.
+  // Public, token-gated read: the unguessable UUID is the access control.
   const result = await payload.find({
     collection: 'deals',
     where: { proposalToken: { equals: token } },
@@ -71,7 +71,7 @@ export default async function ProposalPage({ params }: PageProps) {
     <main id="main-content" className="pt-32 pb-24 px-6 lg:px-10">
       <div className="max-w-[860px] mx-auto space-y-12">
         <header className="space-y-6 border-b border-white/10 pb-10">
-          <p className="heading-sm text-white">BEATROX — Proposal</p>
+          <p className="heading-sm text-white">BEATROX | Proposal</p>
           <h1 className="heading-lg">{deal.title}</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white">
             {client && (

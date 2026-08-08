@@ -10,7 +10,7 @@ export interface ServiceLinkGroup {
   items: ServiceLinkItem[]
 }
 
-// The full tech-capabilities catalog, grouped — previously inlined in
+// The full tech-capabilities catalog, grouped, previously inlined in
 // app/(site)/services/page.tsx. Moved here so the About page renders the
 // same list after the About↔Services content swap. Every entry is a tech
 // capability (pageType "tech") with a dedicated landing page at /tech/<slug>;
@@ -86,7 +86,7 @@ interface ServicesLinkGridProps {
    * Optional CMS block items (capabilitiesGrid labels). When every label
    * resolves to a catalog tech capability, the CMS list is rendered (grouped by
    * catalog category, preserving catalog order). Otherwise the full
-   * catalog is shown — links never rot because of an unrecognized label.
+   * catalog is shown, links never rot because of an unrecognized label.
    */
   items?: Array<{ label: string }>
 }

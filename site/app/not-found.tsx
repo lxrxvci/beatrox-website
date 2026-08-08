@@ -13,7 +13,7 @@ export default function RootNotFound() {
     <main className="min-h-screen flex items-center bg-[var(--bg-primary)] text-[var(--text-primary)]">
       <section className="hero w-full">
         <div className="max-w-[1120px] mx-auto">
-          <p className="overline mb-4">404 — Page Not Found</p>
+          <p className="overline mb-4">404: Page Not Found</p>
           <h1 className="heading-xl max-w-3xl mb-6">This stage is dark.</h1>
           <p className="text-base text-white max-w-xl leading-relaxed mb-10">
             The page you&apos;re looking for doesn&apos;t exist or may have been moved.

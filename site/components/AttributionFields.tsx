@@ -37,7 +37,7 @@ export function AttributionFields() {
       try {
         sessionStorage.setItem(STORAGE_KEY, JSON.stringify(merged))
       } catch {
-        // Storage unavailable (private mode) — fields just stay empty.
+        // Storage unavailable (private mode), fields just stay empty.
       }
     }
     setValues(merged)

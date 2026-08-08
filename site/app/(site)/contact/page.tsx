@@ -102,7 +102,7 @@ export default async function ContactPage({ preview = false }: { preview?: boole
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Prefer to reach out directly?</h2>
           <p className="text-base text-white mb-8 leading-relaxed">
-            Our team is available Monday–Friday, 9am–6pm PST. We typically respond within 1–2 business days.
+            Our team is available Monday–Friday, 9am–6pm PT. We typically respond within 1–2 business days.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href={`mailto:${data.contact.email}`} className="btn-primary">Email Us</a>

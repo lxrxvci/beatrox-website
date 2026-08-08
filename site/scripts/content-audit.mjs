@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Content / image / tag audit (Phase 6) — READ-ONLY by default.
+ * Content / image / tag audit (Phase 6), READ-ONLY by default.
  *
  * Reports on every project and service:
  *   1. Per project: status, image inventory (empty urls, local paths missing
@@ -8,7 +8,7 @@
  *      serviceTags, and SUGGESTED serviceTags from keyword matching.
  *   2. Service hero-image duplicate clusters, with replacement candidates
  *      pulled from each service's manual relatedWork projects.
- *   3. Capability tile defaults (lib/capabilities.ts) — flags non-/services/ hrefs.
+ *   3. Capability tile defaults (lib/capabilities.ts), flags non-/services/ hrefs.
  *   4. Orphans: services with no hero image, projects with zero images,
  *      services whose relatedWork slugs don't resolve.
  *
@@ -81,7 +81,7 @@ function localFileExists(url) {
   return fs.existsSync(path.join(publicRoot, clean))
 }
 
-// ─── Project publish status (best effort — resolver only returns published) ─
+// ─── Project publish status (best effort, resolver only returns published) ─
 
 const statusBySlug = new Map()
 try {
@@ -97,7 +97,7 @@ try {
     statusBySlug.set(String(doc.slug || ''), String(doc.status || 'unknown'))
   }
 } catch {
-  // Status column unavailable — the report marks it as such.
+  // Status column unavailable, the report marks it as such.
 }
 
 // ─── Suggested serviceTags: keyword matching ────────────────────────────────
@@ -112,7 +112,7 @@ const serviceIndex = services.map((s) => {
 })
 const serviceBySlug = new Map(serviceIndex.map((s) => [s.slug, s]))
 
-// Term document frequency across services — terms shared by 3+ services are
+// Term document frequency across services, terms shared by 3+ services are
 // too generic to suggest on (e.g. "production", "design", "lighting").
 const termFrequency = new Map()
 for (const svc of serviceIndex) {
@@ -387,7 +387,7 @@ if (applyTags) {
     console.log(`[apply-tags] ${report.slug}: serviceTags <- ${ids.join(', ')} (${slugs.join(', ')})`)
     appliedTags.push({ slug: report.slug, serviceIds: ids, serviceSlugs: slugs })
   }
-  console.log(`[apply-tags] Done — ${appliedTags.length} project(s) updated. Pages refresh on next ISR revalidation.`)
+  console.log(`[apply-tags] Done: ${appliedTags.length} project(s) updated. Pages refresh on next ISR revalidation.`)
 }
 
 // ─── Report files ───────────────────────────────────────────────────────────
@@ -422,13 +422,13 @@ md.push(`- Image URLs shared across projects: **${summary.sharedImageClusters} c
 md.push(`- Services sharing a hero image: **${summary.serviceHeroDuplicateClusters} cluster(s), ${summary.servicesInHeroDuplicateClusters} services**`)
 md.push(`- Services with no hero image: **${summary.servicesMissingHero}**`)
 md.push(`- Services with broken Related Work links: **${summary.servicesWithBrokenRelatedWork}**`)
-md.push(`- Capability tiles checked: **${summary.capabilityTiles}** — ${summary.capabilityTilesWithInvalidHref} with links not pointing to /services/`)
+md.push(`- Capability tiles checked: **${summary.capabilityTiles}**, ${summary.capabilityTilesWithInvalidHref} with links not pointing to /services/`)
 md.push(`- Projects with SUGGESTED service tags: **${summary.projectsWithSuggestedServiceTags}** (${summary.totalSuggestedServiceTags} suggestions)`)
 md.push('')
 md.push('> Service-tag suggestions are keyword guesses only. Confirm them on each project page in edit mode (“Services Used” → Edit). Nothing is changed by this report.')
 md.push('')
 
-md.push('## Suggested Service Tags (SUGGESTED — needs your confirmation)')
+md.push('## Suggested Service Tags (SUGGESTED, needs your confirmation)')
 md.push('')
 if (projectsWithSuggestions.length === 0) {
   md.push('No suggestions.')
@@ -436,9 +436,9 @@ if (projectsWithSuggestions.length === 0) {
   md.push('| Project | Type | Current service tags | Suggested service tags |')
   md.push('| --- | --- | --- | --- |')
   for (const p of projectsWithSuggestions) {
-    const current = p.serviceTags.map((t) => t.title).join(', ') || '—'
+    const current = p.serviceTags.map((t) => t.title).join(', ') || '(none)'
     const suggested = p.suggestedServiceTags.map((s) => `${s.title} (matched: ${s.matchedOn.join(', ')})`).join('; ')
-    md.push(`| ${p.title} | ${p.type || '—'} | ${current} | ${suggested} |`)
+    md.push(`| ${p.title} | ${p.type || '(none)'} | ${current} | ${suggested} |`)
   }
 }
 md.push('')
@@ -453,18 +453,18 @@ for (const p of projectReports) {
   if (p.images.emptyUrlCount > 0) issues.push(`${p.images.emptyUrlCount} empty image URL(s)`)
   if (p.images.missingOnDisk.length > 0) issues.push(`${p.images.missingOnDisk.length} image(s) missing on disk`)
   if (p.sharedImages.length > 0) issues.push(`shares ${p.sharedImages.length} image(s) with other projects`)
-  const tagsType = [p.type, ...p.tags].filter(Boolean).join(', ') || '—'
-  md.push(`| ${p.title} | ${p.status} | ${p.images.total} | ${tagsType} | ${issues.join('; ') || '—'} |`)
+  const tagsType = [p.type, ...p.tags].filter(Boolean).join(', ') || '(none)'
+  md.push(`| ${p.title} | ${p.status} | ${p.images.total} | ${tagsType} | ${issues.join('; ') || '(none)'} |`)
 }
 md.push('')
 
 md.push('## Image URLs Shared Between Projects')
 md.push('')
 if (sharedImageClusters.length === 0) {
-  md.push('None — every project image is used by a single project.')
+  md.push('None: every project image is used by a single project.')
 } else {
   for (const cluster of sharedImageClusters) {
-    md.push(`- \`${cluster.url}\` — used by: ${cluster.projects.join(', ')}`)
+    md.push(`- \`${cluster.url}\`, used by: ${cluster.projects.join(', ')}`)
   }
 }
 md.push('')
@@ -472,10 +472,10 @@ md.push('')
 md.push('## Service Hero Image Duplicates')
 md.push('')
 if (serviceHeroDuplicateClusters.length === 0) {
-  md.push('None — every service has its own hero image.')
+  md.push('None: every service has its own hero image.')
 } else {
   for (const cluster of serviceHeroDuplicateClusters) {
-    md.push(`### \`${cluster.heroImage}\` — shared by ${cluster.services.length} services`)
+    md.push(`### \`${cluster.heroImage}\`, shared by ${cluster.services.length} services`)
     md.push('')
     for (const svc of cluster.services) {
       md.push(`- **${svc.title}** (/services/${svc.slug})`)
@@ -503,7 +503,7 @@ md.push('')
 md.push('## Broken Related Work Links (service → project)')
 md.push('')
 if (servicesWithBrokenRelatedWork.length === 0) {
-  md.push('None — every relatedWork entry resolves to a project.')
+  md.push('None: every relatedWork entry resolves to a project.')
 } else {
   for (const entry of servicesWithBrokenRelatedWork) {
     md.push(`- **${entry.title}** (/services/${entry.slug}): ${entry.brokenSlugs.join(', ')}`)

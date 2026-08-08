@@ -25,7 +25,7 @@ function resolveAcquisitionSource(attribution?: LinkClientInput['attribution']):
 /**
  * Find a client by email or create one, and stamp its last-activity time.
  * Used by the afterChange hooks of contact-submissions and consultations so
- * every public intake lands on a single client record. Never throws — intake
+ * every public intake lands on a single client record. Never throws, intake
  * flows must not fail because CRM linking failed.
  */
 export async function linkOrCreateClient(

@@ -2,7 +2,7 @@ import type { EngineDrawFn } from './CanvasEngine'
 import { num, str, withAlpha } from './util'
 
 /**
- * pixelgrid — LED-wall grid pulsing with travelling waves.
+ * pixelgrid, LED-wall grid pulsing with travelling waves.
  * Params: color, cell (px), speed, mode ('pulse' radial rings | 'wave' horizontal),
  *         intensity (0..1). Stateless: brightness of each cell is f(t).
  */

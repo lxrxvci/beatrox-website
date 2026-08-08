@@ -3,7 +3,7 @@ import { revalidatePath } from 'next/cache'
 // Shared ISR invalidation for CMS content. Used by the admin inline-edit
 // endpoint (app/api/admin-update) and by Payload afterChange hooks so edits
 // made through the full admin UI refresh the same paths. Every function here
-// swallows its own errors — revalidation must never fail a save.
+// swallows its own errors, revalidation must never fail a save.
 
 export function revalidateDocument(collection: string, doc: Record<string, unknown>) {
   try {

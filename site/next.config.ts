@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Rentals now lives on its own dedicated app (permanent — passes link equity).
+      // Rentals now lives on its own dedicated app (permanent, passes link equity).
       {
         source: '/rentals',
         destination: 'https://rentals.beatrox.com/',

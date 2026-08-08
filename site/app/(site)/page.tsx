@@ -43,12 +43,12 @@ export default async function HomePage({ preview = false }: { preview?: boolean 
           on the homepage only; other pages reference it by @id (OP-07/08). */}
       <JsonLd data={buildLocalBusinessSchema()} />
 
-      {/* First-visit intro overlay — client-gated, zero SSR; nothing renders
+      {/* First-visit intro overlay, client-gated, zero SSR; nothing renders
           for repeat visits, reduced-motion users, or crawlers. */}
       <IntroGate
         heroImage={heroImage}
         headline={data.hero.headline || 'Beatrox Experiential and Event Production'}
-        // Same fallback strings HomeHero applies — the intro's beat-3
+        // Same fallback strings HomeHero applies, the intro's beat-3
         // match-frame must reproduce the real hero's exact final layout.
         subheadline={
           data.hero.subheadline ||
@@ -56,7 +56,7 @@ export default async function HomePage({ preview = false }: { preview?: boolean 
         }
         ctaLabel={heroProps.cta?.label || 'See Our Work'}
         secondaryCtaLabel={heroProps.secondaryCta?.label || 'Book a Consultation'}
-        // Category-matched work images for the montage streaks — NOT the
+        // Category-matched work images for the montage streaks, NOT the
         // homepage gallery pool (client feedback). Mobile uses the first 3.
         galleryImages={[...MONTAGE_IMAGES]}
       />

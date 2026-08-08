@@ -7,7 +7,7 @@
  * - `?intro=0` is not present (kill switch)
  * `?intro=1` forces a replay for QA (still blocked by reduced-motion).
  *
- * All functions are client-only — callers must invoke them from effects.
+ * All functions are client-only, callers must invoke them from effects.
  */
 
 export const INTRO_STORAGE_KEY = 'beatrox-intro-seen'
@@ -26,7 +26,7 @@ export function hasSeenIntro(): boolean {
   try {
     return window.sessionStorage.getItem(INTRO_STORAGE_KEY) === '1'
   } catch {
-    // sessionStorage unavailable (private mode) — fail closed, no intro loops.
+    // sessionStorage unavailable (private mode), fail closed, no intro loops.
     return true
   }
 }
@@ -35,7 +35,7 @@ export function markIntroSeen(): void {
   try {
     window.sessionStorage.setItem(INTRO_STORAGE_KEY, '1')
   } catch {
-    /* private mode — intro simply may replay next load */
+    /* private mode, intro simply may replay next load */
   }
 }
 
@@ -43,7 +43,7 @@ export function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-/** Pure read — safe to call from multiple components; never mutates state. */
+/** Pure read, safe to call from multiple components; never mutates state. */
 export function shouldRunIntro(): boolean {
   if (prefersReducedMotion()) return false
   const mode = getIntroMode()

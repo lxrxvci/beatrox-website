@@ -3,12 +3,12 @@ import { api, assertCredentials, login, toLexicalText, BASE_URL } from './cms-im
 
 /**
  * One-off content fix: port the Squarespace "About Us" philosophy section to
- * the CMS "about" page — image-topped columns with the original Squarespace
+ * the CMS "about" page, image-topped columns with the original Squarespace
  * copy. Only the philosophy block's columns are touched; all other blocks are
  * passed through unchanged.
  *
  * Requires the `image` text field on philosophy columns (payload/blocks/shared.ts)
- * to be deployed first — do not run against production before that deploys.
+ * to be deployed first, do not run against production before that deploys.
  *
  * Usage:
  *   CMS_SEED_BASE_URL=https://beatrox-website.vercel.app node scripts/update-about-philosophy.mjs
@@ -56,7 +56,7 @@ async function main() {
     body: toLexicalText(col.body),
   }))
 
-  console.log(`Target: ${BASE_URL} — pages/${page.id}`)
+  console.log(`Target: ${BASE_URL}, pages/${page.id}`)
   console.log(`  philosophy block index: ${blockIndex}, columns: ${(block.columns || []).length} -> ${columns.length}`)
   for (const col of columns) {
     console.log(`  - "${col.heading}" image=${col.image}`)

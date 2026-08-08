@@ -8,7 +8,7 @@ export const revalidate = 300
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectSlugs = await getProjectSlugsResolved()
-  // /work/tag/* pages are intentionally excluded — they're noindex
+  // /work/tag/* pages are intentionally excluded, they're noindex
   // (thin template pages, doorway-page risk).
   const services = await getAllServicesResolved()
   const caseStudySlugs = await getCaseStudySlugsResolved()

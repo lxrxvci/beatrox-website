@@ -2,7 +2,7 @@ import type { EngineDrawFn } from './CanvasEngine'
 import { mulberry32, num, str, withAlpha } from './util'
 
 /**
- * equalizer — audio-style bars rising from the hero baseline.
+ * equalizer, audio-style bars rising from the hero baseline.
  * Params: color, bars, speed, height (max fraction of hero), alpha.
  * Stateless: each bar's level is a sum of sines of t.
  */

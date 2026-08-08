@@ -512,7 +512,7 @@ export interface Service {
    */
   pageType: 'service' | 'tech' | 'rental';
   /**
-   * Technologies behind this capability — shown as chips on tech pages. Display-only, never used for matching.
+   * Technologies behind this capability: shown as chips on tech pages. Display-only, never used for matching.
    */
   tech?:
     | {
@@ -543,7 +543,7 @@ export interface Service {
       }[]
     | null;
   /**
-   * Deprecated — use Content Blocks below.
+   * Deprecated: use Content Blocks below.
    */
   body?:
     | {
@@ -834,11 +834,11 @@ export interface Project {
       | null;
   };
   /**
-   * Services used on this project — drives service-page related work and the /work service tag cloud.
+   * Services used on this project: drives service-page related work and the /work service tag cloud.
    */
   serviceTags?: (number | Service)[] | null;
   /**
-   * Technologies used on this project — drives /tech pages. Display-only: never used for project↔project relatedness.
+   * Technologies used on this project: drives /tech pages. Display-only: never used for project↔project relatedness.
    */
   techTags?: (number | Service)[] | null;
   /**
@@ -862,7 +862,7 @@ export interface Project {
     ogImageLegacyUrl?: string | null;
   };
   /**
-   * Deprecated — use Content Blocks below.
+   * Deprecated: use Content Blocks below.
    */
   body?:
     | {
@@ -1027,11 +1027,11 @@ export interface Project {
         filename?: string | null;
         note?: string | null;
         /**
-         * Backend-only — not shown on the project page. Drives which /services pages this photo appears on.
+         * Backend-only: not shown on the project page. Drives which /services pages this photo appears on.
          */
         serviceTags?: (number | Service)[] | null;
         /**
-         * Backend-only — not shown on the project page. Drives which /tech pages this photo appears on.
+         * Backend-only: not shown on the project page. Drives which /tech pages this photo appears on.
          */
         techTags?: (number | Service)[] | null;
         id?: string | null;

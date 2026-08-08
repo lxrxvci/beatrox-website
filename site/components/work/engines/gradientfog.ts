@@ -2,7 +2,7 @@ import type { EngineDrawFn } from './CanvasEngine'
 import { mulberry32, num, str, withAlpha } from './util'
 
 /**
- * gradientfog — slow-drifting radial gradient blobs, additive blend.
+ * gradientfog, slow-drifting radial gradient blobs, additive blend.
  * Params: colors (string[]), count, speed, alpha (peak per-blob), scale.
  * Stateless: blob centers follow Lissajous paths from their seeds.
  */

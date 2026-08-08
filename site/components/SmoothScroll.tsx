@@ -18,7 +18,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
   // Lenis keeps its own internal scroll position across App Router
   // navigations, which yanks freshly loaded pages back down to wherever the
-  // previous page was scrolled. Reset to the top on every pathname change —
+  // previous page was scrolled. Reset to the top on every pathname change
   // except back/forward (popstate), where Next restores the saved position
   // and Lenis picks it up via the native scroll event.
   useEffect(() => {

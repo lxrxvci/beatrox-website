@@ -59,7 +59,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
   // genuinely depend on the project, so they stay after it resolves.
   const [allServices, allProjects] = await Promise.all([
     getAllServicesResolved(preview),
-    // Slim card fields only — the related/next sections never touch body,
+    // Slim card fields only, the related/next sections never touch body,
     // contentBlocks, or videos.
     getProjectCardsResolved(preview),
   ])
@@ -69,7 +69,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
     .map((s) => ({ id: s.id, title: s.title, slug: s.slug }))
 
   // Related projects: share ≥1 serviceTag with this project (service-only
-  // relatedness — tech tags are display-only), ranked by shared-tag count.
+  // relatedness, tech tags are display-only), ranked by shared-tag count.
   const currentServiceTagSlugs = new Set(
     project.serviceTags.map((tag) => tag.slug.replace(/^\/services\/+/, '')),
   )
@@ -120,12 +120,12 @@ export default async function ProjectPage({ params, preview = false }: Props) {
   // Per-project identity: accent palette, hero intro variant, atmosphere engine.
   const theme = getProjectTheme(canonicalSlug)
 
-  // Mono fact line under the hero title: CLIENT — LOCATION, TYPE.
+  // Mono fact line under the hero title: CLIENT · LOCATION, TYPE.
   const heroLocation = project.metadata.location ?? project.metadata.locations?.join(' · ') ?? ''
 
   return (
     <ThemedProjectShell slug={canonicalSlug}>
-      {/* Hero — full-viewport, elevated image with rebalanced gradient */}
+      {/* Hero, full-viewport, elevated image with rebalanced gradient */}
       <section className="scanlines relative hero min-h-[100svh] flex flex-col justify-end overflow-hidden bg-black">
         {heroImage && (
           <EditableImage
@@ -166,7 +166,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
               {project.metadata.client && (
                 <span className="text-[var(--accent)]">{project.metadata.client}</span>
               )}
-              {project.metadata.client && (heroLocation || project.metadata.type) && ' — '}
+              {project.metadata.client && (heroLocation || project.metadata.type) && ' · '}
               {heroLocation}
               {heroLocation && project.metadata.type && ', '}
               {project.metadata.type}
@@ -175,13 +175,13 @@ export default async function ProjectPage({ params, preview = false }: Props) {
         </div>
       </section>
 
-      {/* Impact strip — huge accent numerals; hidden when the project has no stats */}
+      {/* Impact strip, huge accent numerals; hidden when the project has no stats */}
       <ProjectStats stats={project.stats} collection="projects" documentId={project.id} />
 
       {/* Content */}
       <section className="section border-t border-white/10 pt-12 lg:pt-16">
         <div className="max-w-[1400px] mx-auto">
-          {/* Services used — chips link to service pages; owner can re-tag in edit mode */}
+          {/* Services used, chips link to service pages; owner can re-tag in edit mode */}
           <div>
             <h2 className="overline mb-4">Services Used</h2>
             <EditableServiceTags
@@ -208,7 +208,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
             </EditableServiceTags>
           </div>
 
-          {/* Tech used — chips link to /tech pages; owner can re-tag in edit mode */}
+          {/* Tech used, chips link to /tech pages; owner can re-tag in edit mode */}
           <div className="mt-8">
             <h2 className="overline mb-4">Tech Used</h2>
             <EditableTechTags
@@ -235,7 +235,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
             </EditableTechTags>
           </div>
 
-          {/* Body — first block's content renders as a lede; headings get mono
+          {/* Body, first block's content renders as a lede; headings get mono
               index prefixes via the .editorial-body CSS counter (no markup changes) */}
           <div className="editorial-body mt-14 pt-14 border-t border-white/10 max-w-3xl space-y-12">
               {project.body.map((block, i) => (
@@ -266,12 +266,12 @@ export default async function ProjectPage({ params, preview = false }: Props) {
         </div>
       </section>
 
-      {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body wins) */}
+      {/* WYSIWYG Content Blocks, only when no legacy body blocks exist (seeded docs carry both; body wins) */}
       {project.body.length === 0 && project.contentBlocks && project.contentBlocks.length > 0 && (
         <CMSBlockRenderer blocks={project.contentBlocks} collection="projects" documentId={project.id} />
       )}
 
-      {/* Gallery — staged in thirds with full-bleed breakout figures between */}
+      {/* Gallery, staged in thirds with full-bleed breakout figures between */}
       {galleryImagesWithoutHero.length > 0 && (
         <section className="border-t border-white/10">
           {galleryChunks.map((chunk, i) => (
@@ -303,7 +303,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
         <VideoEmbedStrip title="Project Video" videos={project.videos} />
       )}
 
-      {/* Credits — film-roll metadata below gallery/videos */}
+      {/* Credits, film-roll metadata below gallery/videos */}
       <section className="border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
           <MetadataSchematic
@@ -331,7 +331,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
         </div>
       </section>
 
-      {/* Related Projects — projects sharing ≥1 serviceTag, ranked by overlap */}
+      {/* Related Projects, projects sharing ≥1 serviceTag, ranked by overlap */}
       {relatedProjects.length > 0 && (
         <section className="section border-t border-white/10 py-14 lg:py-20">
           <div className="max-w-[1120px] mx-auto">
@@ -353,7 +353,7 @@ export default async function ProjectPage({ params, preview = false }: Props) {
         </section>
       )}
 
-      {/* Next-project footer — replaces the generic CTA on work pages */}
+      {/* Next-project footer, replaces the generic CTA on work pages */}
       <NextProjectFooter project={nextProject} />
 
       {/* Bottom nav row */}

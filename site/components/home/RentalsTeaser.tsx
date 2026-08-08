@@ -16,7 +16,7 @@ export default async function RentalsTeaser() {
         <p className="overline mb-4">Rentals</p>
         <h2 className="heading-lg mb-6">Need the gear without the show?</h2>
         <p className="mb-4 text-base leading-relaxed text-white">
-          LED walls, sound, lighting, backline, and staging — the same
+          LED walls, sound, lighting, backline, and staging: the same
           production-grade inventory, available dry-hire.
         </p>
         <p className="text-base leading-relaxed text-white">

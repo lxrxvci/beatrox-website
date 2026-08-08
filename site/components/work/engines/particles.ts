@@ -2,7 +2,7 @@ import type { EngineDrawFn } from './CanvasEngine'
 import { mulberry32, num, str, withAlpha } from './util'
 
 /**
- * particles — drifting motes, rain, embers, dust, stars.
+ * particles, drifting motes, rain, embers, dust, stars.
  * Params: color, count, speed, preset ('motes'|'rain'|'embers'|'dust'|'stars'),
  *         direction ('down'|'up'). Stateless: positions are pure functions of t.
  */

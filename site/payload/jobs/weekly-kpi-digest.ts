@@ -4,7 +4,7 @@ import { sendWeeklyKpiDigest } from '../../lib/email'
 import { getKpiSummary } from '../../lib/kpi'
 
 /**
- * Monday ~8am PT (15:00 UTC): email the weekly KPI digest — the metric set
+ * Monday ~8am PT (15:00 UTC): email the weekly KPI digest, the metric set
  * from strategy/operating-system/05_KPI_DASHBOARD.md.
  */
 export const weeklyKpiDigestTask: TaskConfig = {

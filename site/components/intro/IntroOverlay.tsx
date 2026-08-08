@@ -11,7 +11,7 @@ import IntroCanvas from './IntroCanvas'
 import IntroImageStreaks from './IntroImageStreaks'
 import type { IntroGateProps } from './IntroGate'
 
-/** Beat 2 brand-phrase cards — matched to MONTAGE_IMAGES order. */
+/** Beat 2 brand-phrase cards, matched to MONTAGE_IMAGES order. */
 const TYPE_CARDS = ['Creativity Without Limits', 'Technical Excellence', 'Human Connection']
 
 /**
@@ -54,7 +54,7 @@ function clampCardWordSizes(cards: (HTMLDivElement | null)[]) {
  * Scroll is locked (Lenis .stop() + body overflow) until the dissolve
  * starts; `intro:complete` fires at that moment so HomeHero's staggered
  * entrance begins in step with the fade. Skip (button / Esc / scroll
- * intent) seeks to the dissolve — never a hard cut. Mounted exclusively
+ * intent) seeks to the dissolve, never a hard cut. Mounted exclusively
  * by IntroGate; unmounts itself when the timeline completes.
  */
 export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabel, secondaryCtaLabel, galleryImages }: IntroGateProps) {
@@ -79,7 +79,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
   const handleParticlesReady = useCallback((h: IntroParticlesHandle) => {
     particlesRef.current = h
     // Late init (slow chunk): the timeline's own morphTo call fires at
-    // 4.75s via the lazy accessor, so it needs no help before that — only
+    // 4.75s via the lazy accessor, so it needs no help before that, only
     // catch up if the finale window already started (and hasn't ended).
     const tl = tlRef.current
     if (tl && tl.isActive() && tl.time() >= 4.75 && tl.time() < 7.2) h.morphTo('BEATROX')
@@ -216,12 +216,12 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
       const skipButton = skipRef.current
       const brandMarker = brandRef.current
       if (!root || !counterWrap || !caption || !heroLayer || !heroMedia || !heroText || !skipButton || !brandMarker) {
-        // DOM went away — bail out cleanly rather than trapping scroll.
+        // DOM went away, bail out cleanly rather than trapping scroll.
         finishImmediately()
         return
       }
 
-      // Multi-word phrases must fit before the timeline reveals them —
+      // Multi-word phrases must fit before the timeline reveals them
       // measure with real font metrics (fonts are settled by end of beat 0).
       clampCardWordSizes(cardsRef.current)
 
@@ -302,7 +302,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
           <IntroCanvas onReady={handleParticlesReady} onFail={handleParticlesFail} />
         )}
 
-        {/* Beat 3: hero match-frame — same image URL, same gradient scrims
+        {/* Beat 3: hero match-frame, same image URL, same gradient scrims
             and same container/headline classes as the real hero, so the
             beat-4 crossfade lands on an identical first frame. */}
         <div ref={heroLayerRef} className="absolute inset-0 z-10 opacity-0">
@@ -321,7 +321,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
               </div>
               {/* Invisible replicas of the real hero's subheadline + CTA row
                   (same classes, same copy) so the justify-end layout puts the
-                  headline at the real hero's exact final position — without
+                  headline at the real hero's exact final position, without
                   them the match-frame headline would sit ~100px too low and
                   the handoff would visibly jump. */}
               <p className="mb-10 max-w-[48ch] text-lg leading-relaxed text-white opacity-0">
@@ -338,7 +338,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
         {/* Beat 2: gallery image streaks (clip-path wipes) */}
         <IntroImageStreaks images={galleryImages} register={registerStreak} />
 
-        {/* Beat 2: brand-phrase cards — per-word groups (unbreakable) of
+        {/* Beat 2: brand-phrase cards, per-word groups (unbreakable) of
             per-character spans so the timeline can stagger letters; the
             phrase stays accessible via aria-label */}
         {TYPE_CARDS.map((label, i) => (
@@ -367,7 +367,7 @@ export default function IntroOverlay({ heroImage, headline, subheadline, ctaLabe
             out at the start of beat 3 so it never double-exposes with the
             real nav logo during the dissolve. */}
         <p ref={brandRef} className="hud-label absolute left-6 top-6 z-40 lg:left-10 lg:top-8">
-          BEATROX — EXPERIENCE SYSTEMS
+          BEATROX · EXPERIENCE SYSTEMS
         </p>
 
         {/* Beat 0: oversized progress counter, bottom-left */}

@@ -230,7 +230,7 @@ export async function DashboardView({ initPageResult }: AdminViewServerProps) {
       >
         {/* Traffic */}
         <div style={cardStyle}>
-          <SectionTitle>Traffic — last 30 days</SectionTitle>
+          <SectionTitle>Traffic: last 30 days</SectionTitle>
           {ga4 ? (
             <>
               <div style={{ display: 'flex', gap: '24px', marginBottom: '8px' }}>
@@ -278,11 +278,11 @@ export async function DashboardView({ initPageResult }: AdminViewServerProps) {
           ) : (
             <p style={{ fontSize: '13px', opacity: 0.6, margin: 0 }}>
               GA4 is not connected yet. Set <code>GA4_PROPERTY_ID</code>, <code>GA4_CLIENT_EMAIL</code>, and{' '}
-              <code>GA4_PRIVATE_KEY</code> — see <code>site/docs/GA4_SETUP.md</code>.
+              <code>GA4_PRIVATE_KEY</code>, then see <code>site/docs/GA4_SETUP.md</code>.
             </p>
           )}
 
-          {/* CRM first-touch attribution — independent of GA4. */}
+          {/* CRM first-touch attribution, independent of GA4. */}
           <div style={{ marginTop: '16px', borderTop: '1px solid var(--theme-elevation-150, #333)', paddingTop: '12px' }}>
             <div style={labelStyle}>Lead sources (CRM, first-touch)</div>
             {leadSources.length === 0 ? (
@@ -300,7 +300,7 @@ export async function DashboardView({ initPageResult }: AdminViewServerProps) {
 
         {/* Upcoming consultations */}
         <div style={cardStyle}>
-          <SectionTitle>Upcoming consultations — next 7 days</SectionTitle>
+          <SectionTitle>Upcoming consultations: next 7 days</SectionTitle>
           {upcomingRes.docs.length === 0 ? (
             <p style={{ fontSize: '13px', opacity: 0.6, margin: 0 }}>Nothing booked this week.</p>
           ) : (

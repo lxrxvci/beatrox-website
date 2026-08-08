@@ -161,7 +161,7 @@ export async function sendInternalBookingNotification(input: InternalNotificatio
 
   await sendEmail({
     to: notificationEmail,
-    subject: `New booking: ${input.consultationType} — ${input.name}`,
+    subject: `New booking: ${input.consultationType} for ${input.name}`,
     text,
     html,
   })
@@ -209,7 +209,7 @@ export async function sendContactNotification(input: ContactNotificationInput): 
 
   await sendEmail({
     to: notificationEmail,
-    subject: `New inquiry: ${input.name}${input.eventType ? ` — ${input.eventType}` : ''}`,
+    subject: `New inquiry: ${input.name}${input.eventType ? ` (${input.eventType})` : ''}`,
     text,
     html,
   })
@@ -261,10 +261,10 @@ export async function sendStaleLeadDigest(input: StaleLeadDigestInput): Promise<
   if (total === 0) return
 
   const submissionLines = input.staleSubmissions.map(
-    (s) => `• ${s.name} <${s.email}> — inquiry from ${s.createdAt.slice(0, 10)} (${input.adminUrl}/collections/contact-submissions/${s.id})`,
+    (s) => `• ${s.name} <${s.email}>, inquiry from ${s.createdAt.slice(0, 10)} (${input.adminUrl}/collections/contact-submissions/${s.id})`,
   )
   const dealLines = input.staleDeals.map(
-    (d) => `• ${d.title}${d.value ? ` — $${d.value.toLocaleString()}` : ''} — opened ${d.createdAt.slice(0, 10)} (${input.adminUrl}/collections/deals/${d.id})`,
+    (d) => `• ${d.title}${d.value ? ` ($${d.value.toLocaleString()})` : ''}, opened ${d.createdAt.slice(0, 10)} (${input.adminUrl}/collections/deals/${d.id})`,
   )
 
   const text = [
@@ -281,13 +281,13 @@ export async function sendStaleLeadDigest(input: StaleLeadDigestInput): Promise<
       ${submissionLines.length ? `<h3>Stale inquiries</h3><ul>${input.staleSubmissions
         .map(
           (s) =>
-            `<li>${escapeHtml(s.name)} &lt;${escapeHtml(s.email)}&gt; — inquiry from ${escapeHtml(s.createdAt.slice(0, 10))} — <a href="${escapeHtml(`${input.adminUrl}/collections/contact-submissions/${s.id}`)}">open</a></li>`,
+            `<li>${escapeHtml(s.name)} &lt;${escapeHtml(s.email)}&gt;, inquiry from ${escapeHtml(s.createdAt.slice(0, 10))} (<a href="${escapeHtml(`${input.adminUrl}/collections/contact-submissions/${s.id}`)}">open</a>)</li>`,
         )
         .join('')}</ul>` : ''}
       ${dealLines.length ? `<h3>Stale deals</h3><ul>${input.staleDeals
         .map(
           (d) =>
-            `<li>${escapeHtml(d.title)}${d.value ? ` — $${d.value.toLocaleString()}` : ''} — opened ${escapeHtml(d.createdAt.slice(0, 10))} — <a href="${escapeHtml(`${input.adminUrl}/collections/deals/${d.id}`)}">open</a></li>`,
+            `<li>${escapeHtml(d.title)}${d.value ? ` ($${d.value.toLocaleString()})` : ''}, opened ${escapeHtml(d.createdAt.slice(0, 10))} (<a href="${escapeHtml(`${input.adminUrl}/collections/deals/${d.id}`)}">open</a>)</li>`,
         )
         .join('')}</ul>` : ''}
     </div>
@@ -327,7 +327,7 @@ export async function sendWeeklyKpiDigest(input: WeeklyKpiDigestInput): Promise<
   ]
 
   const text = [
-    `BEATROX weekly KPIs — ${input.weekLabel}`,
+    `BEATROX weekly KPIs: ${input.weekLabel}`,
     '',
     ...rows.map(([label, value]) => `${label}: ${value}`),
     '',
@@ -374,7 +374,7 @@ export async function sendProposalEmail(input: ProposalEmailInput): Promise<void
   const text = [
     `Hi ${input.name},`,
     '',
-    `Your proposal from BEATROX — ${input.dealTitle} — is ready to review:`,
+    `Your proposal from BEATROX (${input.dealTitle}) is ready to review:`,
     '',
     input.proposalUrl,
     '',
@@ -390,7 +390,7 @@ export async function sendProposalEmail(input: ProposalEmailInput): Promise<void
   const html = `
     <div style="font-family: Inter, sans-serif; color: #111;">
       <p>Hi ${escapeHtml(input.name)},</p>
-      <p>Your proposal from BEATROX — <strong>${escapeHtml(input.dealTitle)}</strong> — is ready to review:</p>
+      <p>Your proposal from BEATROX (<strong>${escapeHtml(input.dealTitle)}</strong>) is ready to review:</p>
       <p><a href="${escapeHtml(input.proposalUrl)}" style="font-size: 16px; font-weight: 600;">View your proposal</a></p>
       ${validText ? `<p>${escapeHtml(validText)}</p>` : ''}
       <p>Reply to this email with any questions, or to accept the proposal.</p>

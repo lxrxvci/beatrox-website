@@ -9,7 +9,7 @@ interface IntroImageStreaksProps {
 }
 
 /**
- * Montage image flashes (beat 2) — plain DOM/CSS, no WebGL. Full-bleed
+ * Montage image flashes (beat 2), plain DOM/CSS, no WebGL. Full-bleed
  * gallery images streak across for ~140ms via GSAP-driven clip-path wipes
  * (see intro-timeline.ts). Fully transparent until the timeline sets them.
  */

@@ -32,11 +32,11 @@ import { weeklyKpiDigestTask } from './payload/jobs/weekly-kpi-digest.ts'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-// Read via indirection so Turbopack cannot inline the value at build time —
+// Read via indirection so Turbopack cannot inline the value at build time
 // the token must be a true runtime read (env vars change between deploys).
 const runtimeEnv = process.env
 
-// Never fall back to the dev secret in production — fail fast at config load.
+// Never fall back to the dev secret in production, fail fast at config load.
 const payloadSecret = runtimeEnv.PAYLOAD_SECRET
 if (!payloadSecret && runtimeEnv.NODE_ENV === 'production') {
   throw new Error('PAYLOAD_SECRET environment variable is required in production.')

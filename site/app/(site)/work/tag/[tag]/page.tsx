@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const normalizedTag = normalizeProjectTag(tag)
   if (!normalizedTag) return {}
   const displayTag = humanizeTag(normalizedTag)
-  const description = `${displayTag} projects by Beatrox, a Portland event production company — see related work.`
+  const description = `${displayTag} projects by Beatrox, a Portland event production company. See related work.`
   return {
     title: `Work tagged "${displayTag}"`,
     description,
@@ -33,13 +33,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       follow: true,
     },
     openGraph: {
-      title: `Work tagged "${displayTag}" — BEATROX`,
+      title: `Work tagged "${displayTag}" | BEATROX`,
       description,
       images: ['/og-default.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Work tagged "${displayTag}" — BEATROX`,
+      title: `Work tagged "${displayTag}" | BEATROX`,
       description,
       images: ['/og-default.jpg'],
     },

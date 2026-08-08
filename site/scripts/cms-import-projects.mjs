@@ -54,7 +54,7 @@ export async function importProjects(token) {
     const file = files[index]
     const source = readJson(path.join(PROJECTS_DIR, file))
     // Store the canonical bare slug (the collection's beforeValidate hook strips
-    // any "/work/" prefix anyway — looking up the prefixed form always misses).
+    // any "/work/" prefix anyway, looking up the prefixed form always misses).
     const slug = normalizeSlug(source.slug || file.replace('.json', '')).replace(/^work\/+/, '')
     const ogImageDoc = await resolveMediaByLegacyUrl(source?.seo?.og?.image, token)
     const images = await mapProjectImages(source.images, token)
@@ -94,7 +94,7 @@ export async function importProjects(token) {
           ogImageLegacyUrl: source?.seo?.og?.image || '',
         },
         body: mapBody(source.body),
-        // NOTE: do not also seed contentBlocks from body — the page renders both
+        // NOTE: do not also seed contentBlocks from body, the page renders both
         // fields, so populating them together duplicates every section on the site.
         images,
         videos: asArray(source.videos).map((video) => ({

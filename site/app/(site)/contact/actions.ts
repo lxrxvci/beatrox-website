@@ -82,11 +82,11 @@ export async function submitContactForm(
 
     await payload.create({
       collection: 'contact-submissions',
-      // Trusted server-side write — collection create access requires an
+      // Trusted server-side write: collection create access requires an
       // authenticated user; this validated action is the public write path.
       overrideAccess: true,
       data: {
-        // Validated above — the errors guard guarantees these are present.
+        // Validated above: the errors guard guarantees these are present.
         name: name!,
         email: email!,
         message: message!,

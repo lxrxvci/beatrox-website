@@ -179,7 +179,7 @@ export const Projects: CollectionConfig = {
       relationTo: 'services',
       hasMany: true,
       admin: {
-        description: 'Services used on this project — drives service-page related work and the /work service tag cloud.',
+        description: 'Services used on this project: drives service-page related work and the /work service tag cloud.',
       },
     },
     {
@@ -191,7 +191,7 @@ export const Projects: CollectionConfig = {
         pageType: { equals: 'tech' },
       }),
       admin: {
-        description: 'Technologies used on this project — drives /tech pages. Display-only: never used for project↔project relatedness.',
+        description: 'Technologies used on this project: drives /tech pages. Display-only: never used for project↔project relatedness.',
       },
     },
     {
@@ -226,7 +226,7 @@ export const Projects: CollectionConfig = {
       type: 'array',
       labels: { singular: 'Body Block', plural: 'Body Blocks' },
       admin: {
-        description: 'Deprecated — use Content Blocks below.',
+        description: 'Deprecated: use Content Blocks below.',
       },
       fields: [
         { name: 'type', type: 'text', required: true },
@@ -261,7 +261,7 @@ export const Projects: CollectionConfig = {
           relationTo: 'services',
           hasMany: true,
           admin: {
-            description: 'Backend-only — not shown on the project page. Drives which /services pages this photo appears on.',
+            description: 'Backend-only: not shown on the project page. Drives which /services pages this photo appears on.',
           },
         },
         {
@@ -273,7 +273,7 @@ export const Projects: CollectionConfig = {
             pageType: { equals: 'tech' },
           }),
           admin: {
-            description: 'Backend-only — not shown on the project page. Drives which /tech pages this photo appears on.',
+            description: 'Backend-only: not shown on the project page. Drives which /tech pages this photo appears on.',
           },
         },
       ],

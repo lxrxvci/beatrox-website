@@ -16,15 +16,15 @@ Generated: 2026-02-25T20:23:10.075Z
 
 ## Missing Project Images
 
-- `create-our-future`: index=0, filename=IMG_2957.jpg, note=CDN URL pending — source from Beatrox media library
-- `create-our-future`: index=1, filename=IMG_2958.jpg, note=CDN URL pending — source from Beatrox media library
-- `create-our-future`: index=2, filename=IMG_2959.jpg, note=CDN URL pending — source from Beatrox media library
-- `create-our-future`: index=3, filename=IMG_2960.jpg, note=CDN URL pending — source from Beatrox media library
-- `create-our-future`: index=4, filename=IMG_2961.jpg, note=CDN URL pending — source from Beatrox media library
-- `create-our-future`: index=5, filename=IMG_2962.jpg, note=CDN URL pending — source from Beatrox media library
-- `super-bowl-2020`: index=0, filename=ScreenShotsForProjectionMapping5.jpg, note=CDN URL pending — source from Beatrox media library
-- `super-bowl-2020`: index=1, filename=ScreenShotsForProjectionMapping4.jpg, note=CDN URL pending — source from Beatrox media library
-- `super-bowl-2020`: index=2, filename=ScreenShotsForProjectionMapping2.jpg, note=CDN URL pending — source from Beatrox media library
+- `create-our-future`: index=0, filename=IMG_2957.jpg, note=CDN URL pending, source from Beatrox media library
+- `create-our-future`: index=1, filename=IMG_2958.jpg, note=CDN URL pending, source from Beatrox media library
+- `create-our-future`: index=2, filename=IMG_2959.jpg, note=CDN URL pending, source from Beatrox media library
+- `create-our-future`: index=3, filename=IMG_2960.jpg, note=CDN URL pending, source from Beatrox media library
+- `create-our-future`: index=4, filename=IMG_2961.jpg, note=CDN URL pending, source from Beatrox media library
+- `create-our-future`: index=5, filename=IMG_2962.jpg, note=CDN URL pending, source from Beatrox media library
+- `super-bowl-2020`: index=0, filename=ScreenShotsForProjectionMapping5.jpg, note=CDN URL pending, source from Beatrox media library
+- `super-bowl-2020`: index=1, filename=ScreenShotsForProjectionMapping4.jpg, note=CDN URL pending, source from Beatrox media library
+- `super-bowl-2020`: index=2, filename=ScreenShotsForProjectionMapping2.jpg, note=CDN URL pending, source from Beatrox media library
 
 ## CDN URLs Not Yet Localized
 

@@ -78,7 +78,7 @@ export default function KineticHeading({
       split = splitInstance
 
       // Keep each word atomic so the browser never breaks mid-word
-      // (e.g. "CONSULTATIO|N") — wrapping happens between words only.
+      // (e.g. "CONSULTATIO|N"), wrapping happens between words only.
       splitInstance.words.forEach((word) => {
         const w = word as HTMLElement
         w.style.display = 'inline-block'

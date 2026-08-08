@@ -67,7 +67,7 @@ export default function BentoWorkGrid({ projects, className = '', textBelow = fa
       // Mobile: single non-wrapping line, tags truncate instead of
       // wrapping a 2nd line into the card edges. sm+ wraps as before.
       <div className="flex flex-nowrap sm:flex-wrap gap-x-2 gap-y-1 mt-1 overflow-hidden">
-        {/* Mobile cards are too small for 3 tags — cap at 2 below sm. */}
+        {/* Mobile cards are too small for 3 tags, cap at 2 below sm. */}
         {project.tags.slice(0, 3).map((tag, tagIndex) => (
           <span
             key={tag}

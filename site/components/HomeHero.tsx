@@ -75,7 +75,7 @@ export default function HomeHero({
       ) : (
         /* Keeps the h1 in the SSR HTML (SEO) while the intro owns the
            screen; swapped for the animated KineticHeading on intro:complete
-           (or immediately on repeat visits — no visual difference, both
+           (or immediately on repeat visits, no visual difference, both
            start hidden). */
         <h1 className="heading-xl max-w-[12ch] mb-8 uppercase opacity-0 max-[480px]:text-[2.6rem]">
           {headline}

@@ -129,7 +129,7 @@ html.lenis body {
 }
 
 @layer components {
-/* Section utility — generous "luxury" spacing */
+/* Section utility, generous "luxury" spacing */
 .section {
   padding: 6rem 1.5rem;
 }
@@ -139,7 +139,7 @@ html.lenis body {
   }
 }
 
-/* Hero utility — clears fixed 64px nav with consistent bottom padding */
+/* Hero utility, clears fixed 64px nav with consistent bottom padding */
 .hero {
   padding: 6rem 1.5rem 4rem;
 }
@@ -149,7 +149,7 @@ html.lenis body {
   }
 }
 
-/* Heading styles — display font, tight tracking, high-impact titles */
+/* Heading styles, display font, tight tracking, high-impact titles */
 .heading-xl {
   font-family: var(--font-heading), 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(3rem, 8vw, 7rem);
@@ -184,7 +184,7 @@ html.lenis body {
   text-transform: uppercase;
 }
 
-/* Overline label — accent-colored eyebrow text */
+/* Overline label, accent-colored eyebrow text */
 .overline {
   font-family: var(--font-heading), 'Space Grotesk', system-ui, sans-serif;
   font-size: 0.8rem;
@@ -267,7 +267,7 @@ html.lenis body {
   box-shadow: 0 10px 28px rgba(245, 240, 235, 0.16);
 }
 
-/* Accent variant — matches .btn-magnetic--accent on the homepage */
+/* Accent variant, matches .btn-magnetic--accent on the homepage */
 .btn-primary--accent {
   border-color: var(--accent);
   color: var(--accent);
@@ -383,7 +383,7 @@ html.lenis body {
   color: rgba(245, 240, 235, 0.75);
 }
 
-/* Project card hover overlay — gradient kept strong enough that white text
+/* Project card hover overlay, gradient kept strong enough that white text
    stays legible on bright cards with baked-in image text (MYSHELTER, AKU WORLD). */
 .project-card-overlay {
   position: absolute;
@@ -400,7 +400,7 @@ html.lenis body {
   opacity: 1;
 }
 
-/* Mobile cards are much smaller — tighter overlay padding so client, title,
+/* Mobile cards are much smaller, tighter overlay padding so client, title,
    and the 2-tag cap fit without clipping (see BentoWorkGrid). No hover on
    touch, so run the scrim at full strength. */
 @media (max-width: 767px) {
@@ -648,14 +648,14 @@ html.lenis body {
 
 /* Tailwind's `overline` text-decoration utility shares this class name and
    lives in the later utilities layer, so it would beat the component rule
-   above — unlayered CSS wins over layered, killing the stray decoration. */
+   above, unlayered CSS wins over layered, killing the stray decoration. */
 .overline {
   text-decoration-line: none;
 }
 
 /* ── Cyberpunk atmosphere layer (unlayered so it beats Tailwind utilities) ── */
 
-/* Film grain — fixed full-viewport noise overlay rendered by (site)/layout.
+/* Film grain, fixed full-viewport noise overlay rendered by (site)/layout.
    Sits above page backgrounds (z-10 main) but below nav (z-50) and admin
    chrome (z-9999); pointer-events-none + aria-hidden, purely decorative. */
 .grain-overlay {
@@ -669,12 +669,12 @@ html.lenis body {
   background-size: 300px 300px;
 }
 
-/* Neon depth — soft acid-lime halo for accent text */
+/* Neon depth, soft acid-lime halo for accent text */
 .glow-text {
   text-shadow: 0 0 18px var(--accent-glow);
 }
 
-/* Card glow hover — accent ring + faint outer bloom; pairs with any
+/* Card glow hover, accent ring + faint outer bloom; pairs with any
    bordered element (border-color transition included). */
 .card-glow {
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -686,7 +686,7 @@ html.lenis body {
     0 0 24px rgba(var(--accent-rgb), 0.12);
 }
 
-/* Scanlines — CRT-style horizontal lines over hero/media blocks. Applied to
+/* Scanlines, CRT-style horizontal lines over hero/media blocks. Applied to
    a positioned container (or an absolute inset-0 span); the ::after overlay
    never intercepts pointer events. Container must establish positioning. */
 .scanlines::after {
@@ -704,7 +704,7 @@ html.lenis body {
   );
 }
 
-/* Blueprint grid — faint engineering-grid background for sections */
+/* Blueprint grid, faint engineering-grid background for sections */
 .bg-blueprint {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -712,7 +712,7 @@ html.lenis body {
   background-size: 44px 44px;
 }
 
-/* Vignette — darkens media edges so hero photos feel projected, not pasted */
+/* Vignette, darkens media edges so hero photos feel projected, not pasted */
 .vignette::before {
   content: '';
   position: absolute;
@@ -788,7 +788,7 @@ html.lenis body {
   border-right-width: 1px;
 }
 
-/* .hud-corners — absolutely-positioned child span carrying a tick pair
+/* .hud-corners, absolutely-positioned child span carrying a tick pair
    (works on elements whose own pseudo-elements are already taken, e.g.
    scanline media frames and project cards). */
 .hud-corners {
@@ -798,7 +798,7 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Mono accent index — 01 / 02 / 03 card and list indices */
+/* Mono accent index, 01 / 02 / 03 card and list indices */
 .hud-index {
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 11px;
@@ -806,7 +806,7 @@ html.lenis body {
   color: var(--accent);
 }
 
-/* Impact stat numeral — huge accent figure for the work-page impact strip
+/* Impact stat numeral, huge accent figure for the work-page impact strip
    (components/work/ProjectStats.tsx); labels use .mono. */
 .stat-numeral {
   font-family: var(--font-heading), 'Space Grotesk', system-ui, sans-serif;
@@ -817,7 +817,7 @@ html.lenis body {
   color: var(--accent);
 }
 
-/* Editorial body — work-page body blocks get mono index prefixes (01 /) on
+/* Editorial body, work-page body blocks get mono index prefixes (01 /) on
    their headings via a CSS counter, so EditableText markup stays untouched. */
 .editorial-body {
   counter-reset: editorial-block;
@@ -831,7 +831,7 @@ html.lenis body {
   color: rgba(255, 255, 255, 0.35);
 }
 
-/* Bracketed section label — renders "[ LABEL ]" via CSS content so the
+/* Bracketed section label, renders "[ LABEL ]" via CSS content so the
    brackets can't be edited out in the CMS and stay purely presentational. */
 .hud-label {
   font-family: var(--font-mono), ui-monospace, monospace;
@@ -873,7 +873,7 @@ html.lenis body {
   }
 }
 
-/* HUD chip — mono squared chip for tag clouds and metadata tags; brackets
+/* HUD chip, mono squared chip for tag clouds and metadata tags; brackets
    fade in on hover together with the accent glow. */
 .hud-chip {
   display: inline-flex;
@@ -935,7 +935,7 @@ html.lenis body {
   margin-left: 0.08em;
 }
 
-/* Skip control — real button, keyboard-focusable (Esc also bound) */
+/* Skip control, real button, keyboard-focusable (Esc also bound) */
 .intro-skip {
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 11px;
@@ -989,7 +989,7 @@ html.lenis body {
   display: inline-block;
   will-change: transform, opacity;
 }
-/* Atomic word groups — phrases wrap between words only, never mid-word */
+/* Atomic word groups, phrases wrap between words only, never mid-word */
 .intro-type-card__wordgroup {
   display: inline-block;
   white-space: nowrap;

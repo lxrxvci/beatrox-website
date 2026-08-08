@@ -21,7 +21,7 @@ interface EditableImageProps {
   documentId?: string
   /** Global mode: target a global instead (e.g. 'capability-tiles'). */
   globalSlug?: string
-  /** Base path of the image group, WITHOUT .media/.legacyUrl/.alt suffix —
+  /** Base path of the image group, WITHOUT .media/.legacyUrl/.alt suffix
    *  e.g. 'media.heroImage', 'images.3', 'photo'. */
   fieldPath: string
   /** Set when the target is a BARE relationship field + sibling legacyUrl
@@ -36,7 +36,7 @@ interface EditableImageProps {
   /** Optional per-image tag pickers (project gallery images only). When
    *  present, the edit panel gains chip multi-selects that PATCH
    *  `<fieldPath>.serviceTags` / `<fieldPath>.techTags` with numeric ID
-   *  arrays. Backend-only — never rendered publicly. */
+   *  arrays. Backend-only, never rendered publicly. */
   serviceOptions?: TagOption[]
   techOptions?: TagOption[]
   selectedServiceIds?: string[]
@@ -195,7 +195,7 @@ export default function EditableImage({
             onChange={(e) => setSelectedMediaId(e.target.value)}
             disabled={isSaving}
           >
-            <option value="">— keep current —</option>
+            <option value="">(keep current)</option>
             {mediaLibrary.map((media) => (
               <option key={media.id} value={media.id}>
                 {media.filename || media.url}

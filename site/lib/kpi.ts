@@ -21,7 +21,7 @@ export interface KpiSummary {
 }
 
 /**
- * Weekly/monthly sales KPIs — the metric set from
+ * Weekly/monthly sales KPIs, the metric set from
  * strategy/operating-system/05_KPI_DASHBOARD.md. Shared by the admin
  * dashboard and the weekly digest job. Counts/sums run over small tables,
  * so plain find()+reduce is fine (no SQL aggregation needed).

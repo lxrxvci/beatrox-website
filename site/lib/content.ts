@@ -52,7 +52,7 @@ export interface ProjectImage {
   /** Index into the raw CMS `images` array (set by mapCmsProject before the
    *  empty-url filter drops rows) so inline editing can target `images.N`. */
   sourceIndex?: number
-  /** Backend-only tags — drive which /services|/tech pages this photo
+  /** Backend-only tags, drive which /services|/tech pages this photo
    *  appears on. Never rendered on public project pages. */
   serviceTags: ProjectImageTag[]
   techTags: ProjectImageTag[]
@@ -155,7 +155,7 @@ export interface Service {
   category: string
   /** service = sold offering (/services/*), tech = capability (/tech/*), rental = legacy rental page */
   pageType: 'service' | 'tech' | 'rental'
-  /** Technologies behind a tech capability — display-only chips, never used for matching. */
+  /** Technologies behind a tech capability, display-only chips, never used for matching. */
   tech?: string[]
   capabilities: string[]
   body: ServiceBodyBlock[]
@@ -170,7 +170,7 @@ export interface Service {
 }
 
 export interface TeamMember {
-  /** Payload doc id — present on CMS-backed members, absent on JSON fallback. */
+  /** Payload doc id, present on CMS-backed members, absent on JSON fallback. */
   id?: string
   name: string
   title: string
@@ -722,7 +722,7 @@ export const getAllProjectsResolved = cache(getAllProjectsResolvedUncached)
 /**
  * Lightweight project list for card rendering (related projects, next-project
  * footer, service/tech "See It in Action" cards): the same published set and
- * listOrder sort as getAllProjectsResolved, but only the fields cards read —
+ * listOrder sort as getAllProjectsResolved, but only the fields cards read
  * title/slug/serviceTags/techTags/hero/metadata/images at depth 1. Body,
  * contentBlocks, videos, stats, and second-level populations stay in Postgres.
  */
@@ -766,7 +766,7 @@ export const getProjectCardsResolved = cache(async (preview = false): Promise<Pr
 /**
  * Lightweight project lookup for the homepage featured grid: only the slugs
  * asked for, and only the fields the cards read (title/slug/tags/hero/
- * metadata/images/seo) — body, contentBlocks, and videos stay in Postgres.
+ * metadata/images/seo), body, contentBlocks, and videos stay in Postgres.
  */
 export async function getFeaturedProjectsResolved(slugs: string[], preview = false): Promise<Project[]> {
   const canonicalSlugs = uniqueStrings(slugs.map((slug) => normalizeProjectSlug(slug)))
@@ -937,7 +937,7 @@ export async function getTaggedImagesForSlug(
       if (!image.url || image.url.trim() === '') return
       const tags = kind === 'service' ? image.serviceTags : image.techTags
       if ((tags || []).some((tag) => bareTagSlug(tag.slug) === bareSlug)) {
-        // sourceIndex is the raw CMS `images` row index — the same numbering
+        // sourceIndex is the raw CMS `images` row index, the same numbering
         // Payload admin and the inline editor (images.N) use.
         entries.push({ project, image, imageIndex: image.sourceIndex ?? arrayIndex })
       }
@@ -956,7 +956,7 @@ function taggedImageKey(entry: { project: Project; imageIndex: number }): string
  * 1. Entries with a `hidden` curated row are dropped.
  * 2. Pinned entries are removed from the auto pool and inserted at their
  *    `position` (ascending order, clamped to list length).
- * 3. Remaining auto entries fill the free slots top-down — so a newly tagged
+ * 3. Remaining auto entries fill the free slots top-down, so a newly tagged
  *    image (no curated row) lands in the highest unpinned slot.
  */
 export function mergeCuratedTaggedImages(
@@ -1433,7 +1433,7 @@ export interface MediaLibraryItem {
 }
 
 // Lightweight media list for the inline gallery editor's library picker.
-// Only called from the auth-gated /api/admin/media-library route — public
+// Only called from the auth-gated /api/admin/media-library route, public
 // page renders neither fetch nor serialize it.
 async function getMediaLibraryUncached(): Promise<MediaLibraryItem[]> {
   try {
@@ -1467,7 +1467,7 @@ export interface CapabilityTileItem {
 
 /**
  * The Services page tile grid, from the capability-tiles global (inline-
- * editable on /services). Returns [] when unset — callers fall back to
+ * editable on /services). Returns [] when unset, callers fall back to
  * the curated defaults in lib/capabilities.
  */
 export async function getCapabilityTiles(): Promise<CapabilityTileItem[]> {

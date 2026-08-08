@@ -3,7 +3,8 @@ import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getProjectCardsResolved, getServiceResolved, getServiceSlugsResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
+import { getAllServicesResolved, getProjectCardsResolved, getServiceResolved, getServiceSlugsResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
+import { getRelatedTechSlugs } from '@/lib/service-tech-links'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
@@ -38,25 +39,37 @@ export default async function ServicePage({ params, preview = false }: Props) {
   const { slug } = await params
   const service = await getServiceResolved(slug, preview)
   if (!service) notFound()
-  // Tech capabilities live at /tech/[slug] — the 301s in next.config.ts cover
-  // old /services links; this guards direct hits that bypass the redirect.
+  // Tech capabilities live at /tech/[slug]; the 301s in next.config.ts cover
+  // old /services links, and this guards direct hits that bypass the redirect.
   if (service.pageType === 'tech') notFound()
   const heroImage = service.media?.heroImage || '/og-default.jpg'
   const gallery = service.media?.galleryImages || []
-  // Keep the raw galleryImages index — it is the inline-edit field path
+  // Keep the raw galleryImages index: it is the inline-edit field path
   // (media.galleryImages.N). Empty/hero-duplicate rows are skipped at render.
   const inlineMedia = gallery
     .map((url, galleryIndex) => ({ url, galleryIndex }))
     .filter((entry) => entry.url && entry.url !== heroImage)
 
-  // Independent fetches in parallel: the related-cards list (slim fields —
+  // Independent fetches in parallel: the related-cards list (slim fields,
   // cards only read slug/title/client/hero/first image/tags) and the
   // tagged-photo pool (full project docs, deduped per render via cache()).
   const bareServiceSlug = service.slug.replace(/^\/services\/+/, '')
-  const [projects, taggedAuto] = await Promise.all([
+  const [projects, taggedAuto, allServices] = await Promise.all([
     getProjectCardsResolved(preview),
     getTaggedImagesForSlug(bareServiceSlug, 'service', preview),
+    getAllServicesResolved(preview),
   ])
+
+  // Related Capabilities: curated /tech cross-links (P3-04 service mesh),
+  // resolved against live tech pages so a renamed or removed slug drops out.
+  const techTitleBySlug = new Map(
+    allServices
+      .filter((entry) => entry.pageType === 'tech')
+      .map((entry) => [entry.slug.replace(/^\/(services|tech)\/+/, ''), entry.title]),
+  )
+  const relatedTech = getRelatedTechSlugs(bareServiceSlug)
+    .map((techSlug) => ({ slug: techSlug, title: techTitleBySlug.get(techSlug) }))
+    .filter((entry): entry is { slug: string; title: string } => Boolean(entry.title))
 
   // Resolve relatedWork slugs (full paths like "/work/foo") against portfolio projects
   const relatedProjects = (service.relatedWork || [])
@@ -204,18 +217,18 @@ export default async function ServicePage({ params, preview = false }: Props) {
           </div>
           </RevealOnScroll>
 
-          {/* Body blocks — boxed cards, tagged photos interleaved between sections */}
+          {/* Body blocks: boxed cards, tagged photos interleaved between sections */}
           <ServiceBodySections service={service} renderAfterSection={renderAfterSection} />
           </div>
         </div>
       </section>
 
-      {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body wins) */}
+      {/* WYSIWYG Content Blocks: only when no legacy body blocks exist (seeded docs carry both; body wins) */}
       {service.body.length === 0 && service.contentBlocks && service.contentBlocks.length > 0 && (
         <CMSBlockRenderer blocks={service.contentBlocks} collection="services" documentId={service.id} />
       )}
 
-      {/* From Past Projects — tagged photos not interleaved between body sections */}
+      {/* From Past Projects: tagged photos not interleaved between body sections */}
       {leftoverImages.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
@@ -249,7 +262,7 @@ export default async function ServicePage({ params, preview = false }: Props) {
         </section>
       )}
 
-      {/* Related Work — example cards cited from past projects */}
+      {/* Related Work: example cards cited from past projects */}
       {allRelatedProjects.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
@@ -269,6 +282,35 @@ export default async function ServicePage({ params, preview = false }: Props) {
                 }
               })}
             />
+            </RevealOnScroll>
+          </div>
+        </section>
+      )}
+
+      {/* Related Capabilities: cross-links into the /tech catalog (P3-04) */}
+      {relatedTech.length > 0 && (
+        <section className="section border-b border-white/10">
+          <div className="max-w-[1120px] mx-auto">
+            <h2 className="hud-label mb-8">Related Capabilities</h2>
+            <RevealOnScroll>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-4">
+              {relatedTech.map((tech) => (
+                <li key={tech.slug}>
+                  <Link
+                    href={`/tech/${tech.slug}`}
+                    className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="hud-index text-[var(--accent)] opacity-70 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                    >
+                      ›
+                    </span>
+                    <span>{tech.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
             </RevealOnScroll>
           </div>
         </section>

@@ -4,7 +4,7 @@ import React, { useCallback, useMemo, useState } from 'react'
 import { useAdminEdit } from './AdminEditContext'
 
 export interface CuratedImageItem {
-  /** Payload project doc id (stringified number) — written back as Number(). */
+  /** Payload project doc id (stringified number), written back as Number(). */
   projectId: string
   projectSlug: string
   projectTitle: string
@@ -17,7 +17,7 @@ export interface CuratedImageItem {
 interface EditableCuratedImagesProps {
   /** Service doc that owns the curatedImages array. */
   documentId: string
-  /** The page's images in their current effective (merged) order — visible only. */
+  /** The page's images in their current effective (merged) order, visible only. */
   entries: CuratedImageItem[]
   /** All tagged images in the automatic order (project → image order),
    *  including any currently hidden ones. Diff baseline for Save. */
@@ -187,7 +187,7 @@ export default function EditableCuratedImages({
         Arrange photos
       </p>
       <p className="mono text-white text-xs">
-        Reorder or hide this page&apos;s photos. Untouched photos stay automatic — newly tagged
+        Reorder or hide this page&apos;s photos. Untouched photos stay automatic. Newly tagged
         photos fill the highest free slot.
       </p>
 

@@ -47,7 +47,7 @@ export const ContactSubmissions: CollectionConfig = {
           }
         }
 
-        // Notify the team — contact submissions previously had no notification.
+        // Notify the team, contact submissions previously had no notification.
         const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || ''
         await sendContactNotification({
           name: doc.name,

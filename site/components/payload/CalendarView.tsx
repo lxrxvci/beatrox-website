@@ -140,7 +140,7 @@ export async function CalendarView({ initPageResult, searchParams }: AdminViewSe
                           <Link
                             key={booking.id}
                             href={`/admin/collections/consultations/${booking.id}`}
-                            title={`${type?.name || 'Consultation'} — ${booking.clientName} (${booking.status})`}
+                            title={`${type?.name || 'Consultation'}: ${booking.clientName} (${booking.status})`}
                             style={{
                               display: 'block',
                               fontSize: '11px',

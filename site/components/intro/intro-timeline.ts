@@ -6,24 +6,24 @@ import type { IntroParticlesHandle } from './intro-particles'
  * direction: flash → montage → logotype finale → hero):
  *
  *   0.00–0.75  beat 1: counter exits (0.35s expo.in); STATIC LATTICE
- *              FLASH — the breathing field alone, with a brief opacity
+ *              FLASH, the breathing field alone, with a brief opacity
  *              swell (~0.45s) so the moment reads intentional. No word.
- *   0.80–4.55  beat 2: brand-phrase montage (m0 = 0.8, CARD = 1.25s —
+ *   0.80–4.55  beat 2: brand-phrase montage (m0 = 0.8, CARD = 1.25s
  *              unchanged): CREATIVITY WITHOUT LIMITS → TECHNICAL EXCELLENCE
  *              → HUMAN CONNECTION. Bursts as-is: scatter at 0.75 (card 1),
  *              radial burst at 3.25 (card 3), static on card 2. Chars are
  *              word-grouped and completion-locked to each streak wipe.
- *   4.75–7.30  beat 3: BEATROX FINALE — the card-3 explosion's particles
+ *   4.75–7.30  beat 3: BEATROX FINALE, the card-3 explosion's particles
  *              converge into the logotype (the exact staggered left-to-right
  *              assembly, moved verbatim from the old beat 1); caption dwells
  *              5.5–6.9; word holds.
  *   7.20–10.0  beat 4: part() at 7.2 (logotype parts like a curtain),
  *              hero match-frame h0 = 7.4 (unchanged mechanics), hold, then
- *   label      "dissolve" at 10.0 — opacity crossfade onto the real hero
+ *   label      "dissolve" at 10.0, opacity crossfade onto the real hero
  *              (800ms power2.inOut, unchanged).
  *
  * Beat 0 (preloader) is progress-driven and intentionally NOT stretched.
- * Skipping seeks to the "dissolve" label — never a hard cut.
+ * Skipping seeks to the "dissolve" label, never a hard cut.
  */
 
 export const INTRO_DISSOLVE_LABEL = 'dissolve'
@@ -35,14 +35,14 @@ export interface IntroTimelineRefs {
   cards: HTMLElement[]
   streaks: HTMLElement[]
   heroLayer: HTMLElement
-  /** Inner wrapper of the match-frame media — the scale (dive) target. */
+  /** Inner wrapper of the match-frame media, the scale (dive) target. */
   heroMedia: HTMLElement
   heroText: HTMLElement
   skipButton: HTMLElement
-  /** Top-left brand marker — fades out at the match-frame so it never
+  /** Top-left brand marker, fades out at the match-frame so it never
       double-exposes with the real nav logo during the dissolve. */
   brandMarker: HTMLElement
-  /** Particle canvas — null when WebGL failed/unavailable. */
+  /** Particle canvas, null when WebGL failed/unavailable. */
   canvas: HTMLElement | null
   /** Lazy accessor: particles may still be initializing when built. */
   getParticles: () => IntroParticlesHandle | null
@@ -58,7 +58,7 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
 
   // ── Beat 0 → 1: counter exits, then static lattice flash ─────────────
   tl.to(r.counterWrap, { opacity: 0, y: -24, duration: 0.35, ease: 'expo.in' }, 0.05)
-  // Brief opacity swell on the breathing field — reads as an intentional
+  // Brief opacity swell on the breathing field, reads as an intentional
   // beat, not a loading gap. The word does NOT assemble here anymore.
   if (r.canvas) {
     tl.fromTo(r.canvas, { opacity: 0.45 }, { opacity: 1, duration: 0.45, ease: 'power2.out' }, 0.1)
@@ -89,7 +89,7 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
     }
     // Completion-perfect sync: chars start at card_t − 0.04 in per-word
     // groups (0.025s between groups, 0.011s/char, 0.14s expo.out), so the
-    // last char locks at ≈ card_t + 0.24 — the frame the streak wipe
+    // last char locks at ≈ card_t + 0.24, the frame the streak wipe
     // finishes opening. Word + image complete together.
     wordGroups.forEach((group, gi) => {
       const chars = group.querySelectorAll('.intro-type-card__char')
@@ -110,7 +110,7 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
   })
 
   // Streak i is BEAT-LOCKED to card i: the wipe opens at card_t + 0.06 and
-  // completes at card_t + 0.24 — the same frame the phrase finishes
+  // completes at card_t + 0.24, the same frame the phrase finishes
   // forming. Flash lifecycle: 180ms expo.out wipe → 1.12→1.0 scale settle
   // → 180ms expo.in exit, gone by +0.56s.
   cards.forEach((_, i) => {
@@ -138,7 +138,7 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
     tl.set(streak, { opacity: 0 }, t + 0.56)
   })
 
-  // ── Beat 3: BEATROX finale — explosion converges into the logotype ────
+  // ── Beat 3: BEATROX finale, explosion converges into the logotype ────
   // Same assembly visual as the original beat 1 (staggered left-to-right
   // sweep, landing twinkle, drift lock), moved verbatim to ~4.75s; morphTo
   // captures live positions, so it converges from the card-3 field.
@@ -153,9 +153,9 @@ export function buildIntroTimeline(r: IntroTimelineRefs): gsap.core.Timeline {
 
   // ── Beat 4: part the logotype, hero match-frame (dissolve contract) ───
   // End states are unchanged (opacity 1, scale 1) and the dive settles
-  // exactly as the hold ends — the handoff stays pixel-exact.
+  // exactly as the hold ends, the handoff stays pixel-exact.
   const h0 = 7.4
-  const HOLD = 2.3 // trimmed from 2.6 — keeps measured runtime ≤ ~11.8s
+  const HOLD = 2.3 // trimmed from 2.6, keeps measured runtime ≤ ~11.8s
   tl.call(() => r.getParticles()?.part(), undefined, h0 - 0.2)
   if (r.canvas) tl.to(r.canvas, { opacity: 0, duration: 0.7, ease: 'power2.inOut' }, h0)
   tl.fromTo(r.heroLayer, { opacity: 0 }, { opacity: 1, duration: 0.75, ease: 'power2.inOut' }, h0)

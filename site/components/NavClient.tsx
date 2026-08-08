@@ -105,7 +105,7 @@ export default function NavClient({ links }: Props) {
         <Link
           href="/"
           className="flex items-center gap-2.5 text-white font-bold tracking-[0.22em] text-base uppercase hover:opacity-70 transition-opacity"
-          aria-label="BEATROX — Home"
+          aria-label="BEATROX Home"
         >
           <Image
             src="/brand/beatrox-symbol.png"

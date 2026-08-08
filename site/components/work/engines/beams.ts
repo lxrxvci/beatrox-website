@@ -2,7 +2,7 @@ import type { EngineDrawFn } from './CanvasEngine'
 import { mulberry32, num, str, withAlpha } from './util'
 
 /**
- * beams — sweeping light beams, additive glow.
+ * beams, sweeping light beams, additive glow.
  * Params: colors (string[]), count, speed, angle (deg, linear mode),
  *         mode: 'sweep' | 'radial', origin ('left'|'right'|'center').
  * Stateless: every beam's pose is a pure function of t.

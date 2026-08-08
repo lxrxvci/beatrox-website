@@ -10,7 +10,7 @@ import {
 
 // Enriched case study definitions. Copy is grounded only in each project's
 // source JSON (client, venue, type tags) plus the public context implied by
-// the project title — no invented metrics or unnamed technologies.
+// the project title, no invented metrics or unnamed technologies.
 const CASE_STUDIES = [
   {
     file: 'cnn-road-to-270.json',
@@ -177,7 +177,7 @@ const CASE_STUDIES = [
         type: 'objective',
         heading: 'Design Objective',
         content:
-          'Adidas engaged Beatrox to create "The Great Escape," a product launch experience in Los Angeles built around play and competition. The objective was to launch the product through participation — putting guests inside an escape-style experience rather than a conventional retail or press event.',
+          'Adidas engaged Beatrox to create "The Great Escape," a product launch experience in Los Angeles built around play and competition. The objective was to launch the product through participation, putting guests inside an escape-style experience rather than a conventional retail or press event.',
       },
       {
         type: 'approach',

@@ -2,7 +2,7 @@ import crypto from 'crypto'
 
 // Best-effort in-memory sliding-window rate limiter for public form actions.
 // NOTE: on serverless platforms each function instance has its own memory,
-// so this only limits per instance — for strict limiting use a shared store
+// so this only limits per instance, for strict limiting use a shared store
 // (e.g. Redis/Upstash). It still meaningfully blunts naive spam bursts.
 const WINDOW_MS = 10 * 60 * 1000
 const MAX_SUBMISSIONS = 5

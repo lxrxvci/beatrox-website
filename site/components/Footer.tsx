@@ -18,6 +18,9 @@ export default function Footer() {
               height={2102}
               className="h-24 w-auto mb-5"
             />
+            {/* Exact-case business name as plain text for NAP parity (name/address/phone).
+                The logo above renders stylized; crawlers need the literal string. */}
+            <p className="text-sm font-semibold text-white mb-2">Beatrox</p>
             {/* NAP must concatenate to the GBP address char-for-char:
                 "1313 SE 3rd Ave, Portland, OR 97214" (OP-61). */}
             <p className="text-sm text-white leading-relaxed">
@@ -56,7 +59,7 @@ export default function Footer() {
                 {label}
               </Link>
             ))}
-            {/* Rentals lives on a separate SPA deployment — plain external anchor, no Next prefetch. */}
+            {/* Rentals lives on a separate SPA deployment: plain external anchor, no Next prefetch. */}
             <a
               href="https://rentals.beatrox.com/"
               className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-[var(--accent)] transition-colors w-fit"

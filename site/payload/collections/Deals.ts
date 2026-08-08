@@ -19,7 +19,7 @@ export const Deals: CollectionConfig = {
   hooks: {
     beforeValidate: [
       ({ data }) => {
-        // Every deal gets a public proposal token up front — the proposal
+        // Every deal gets a public proposal token up front, the proposal
         // page at /proposal/[token] is reachable as soon as content exists.
         if (data && typeof data === 'object' && !data.proposalToken) {
           return { ...data, proposalToken: crypto.randomUUID() }

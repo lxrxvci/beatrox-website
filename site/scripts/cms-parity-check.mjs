@@ -10,9 +10,9 @@
  * Normalization (rendering-equivalent, reviewed and accepted):
  *   - `''` and `undefined`/missing keys are treated as equal
  *   - empty arrays are treated as missing
- *   - DB artifacts (`id`, `createdAt`, `updatedAt`) are ignored — never rendered
+ *   - DB artifacts (`id`, `createdAt`, `updatedAt`) are ignored, never rendered
  *   - CMS `contentBlocks` (absent from the JSON baseline) are skipped when the
- *     CMS doc also has `body` — the renderer prefers `body`, so blocks are
+ *     CMS doc also has `body`, the renderer prefers `body`, so blocks are
  *     never rendered there. When CMS `body` is empty, block plain-text is
  *     compared against the JSON `body` (the migration source)
  *   Everything else is compared exactly and reported field-by-field.
@@ -72,7 +72,7 @@ console.warn = (...args) => {
 
 // ─── Normalization + diff engine ─────────────────────────────────────────────
 
-// DB/upload artifacts absent from the JSON baseline — either never rendered
+// DB/upload artifacts absent from the JSON baseline, either never rendered
 // (ids, timestamps) or optional enrichment the renderer treats as optional
 // (image width/height, used only as layout hints when present).
 const IGNORED_KEYS = new Set(['id', 'createdAt', 'updatedAt', 'width', 'height', 'serviceTags', 'techTags', 'sourceIndex', 'stats'])
@@ -174,7 +174,7 @@ function diff(cmsValue, jsonValue, path, out) {
 
     // contentBlocks bridge: CMS-only field, migrated from `body`. The
     // frontend renders `body` when present (seeded docs carry both; body
-    // wins) and only falls back to contentBlocks when body is empty — so
+    // wins) and only falls back to contentBlocks when body is empty, so
     // contentBlocks is rendering-irrelevant whenever body exists. Only when
     // CMS body is empty do we compare normalized plain text against the
     // JSON body. The raw key is skipped either way.

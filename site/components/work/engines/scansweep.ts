@@ -2,7 +2,7 @@ import type { EngineDrawFn } from './CanvasEngine'
 import { mulberry32, num, str, withAlpha } from './util'
 
 /**
- * scansweep — a scan line with a soft trailing gradient sweeping the hero,
+ * scansweep, a scan line with a soft trailing gradient sweeping the hero,
  * plus faint static ticks (signal-noise texture) behind it.
  * Params: color, speed, axis ('x' vertical line | 'y' horizontal line),
  *         trail (0..1 length of the gradient tail), noise (tick count).

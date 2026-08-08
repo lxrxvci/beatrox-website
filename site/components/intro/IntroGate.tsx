@@ -11,7 +11,7 @@ const IntroOverlay = dynamic(() => import('./IntroOverlay'), { ssr: false })
 export interface IntroGateProps {
   heroImage: string
   headline: string
-  /** Effective (fallback-applied) hero copy — the beat-3 match-frame renders
+  /** Effective (fallback-applied) hero copy, the beat-3 match-frame renders
       invisible placeholders with these so its headline lands exactly where
       the real HomeHero's does. */
   subheadline: string

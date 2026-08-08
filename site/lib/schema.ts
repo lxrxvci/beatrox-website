@@ -154,6 +154,69 @@ export function buildServiceSchema(
   }
 }
 
+export interface PersonSchema {
+  '@context': 'https://schema.org'
+  '@type': 'Person'
+  '@id': string
+  name: string
+  jobTitle: string
+  description?: string
+  image?: string
+  sameAs?: string[]
+  worksFor: {
+    '@type': 'Organization'
+    '@id': string
+    name: string
+    url: string
+  }
+}
+
+/** Minimal shape the team schema needs; satisfied by TeamMember from
+    lib/content and by the team.json fallback data. */
+export interface TeamMemberInput {
+  name: string
+  title: string
+  bio?: string
+  photo?: { url: string; alt: string }
+  sameAs?: string[]
+}
+
+function personSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+/** One Person node per leadership/team member, each linked back to the
+    LocalBusiness entity (OP-05). sameAs and image are emitted only when the
+    source data actually carries them; nothing is invented. */
+export function buildTeamSchema(members: TeamMemberInput[]): PersonSchema[] {
+  return members.map((member) => {
+    const person: PersonSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': `${SITE_URL}/#person-${personSlug(member.name)}`,
+      name: member.name,
+      jobTitle: member.title,
+      worksFor: {
+        '@type': 'Organization',
+        '@id': LOCALBUSINESS_ID,
+        name: 'Beatrox',
+        url: SITE_URL,
+      },
+    }
+    if (member.bio) person.description = member.bio
+    if (member.photo?.url) {
+      person.image = member.photo.url.startsWith('http')
+        ? member.photo.url
+        : `${SITE_URL}${member.photo.url}`
+    }
+    if (member.sameAs?.length) person.sameAs = member.sameAs
+    return person
+  })
+}
+
 export interface FaqItem {
   question: string
   answer: string

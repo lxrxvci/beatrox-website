@@ -3,7 +3,7 @@ import { api, assertCredentials, login, BASE_URL } from './cms-import-utils.mjs'
 
 /**
  * One-off content fix: align the CMS "home" page hero with the scroll-story
- * redesign — statement headline and a "Book a Consultation" CTA that actually
+ * redesign, statement headline and a "Book a Consultation" CTA that actually
  * goes to /book (previously /services).
  *
  * Usage:
@@ -26,7 +26,7 @@ async function main() {
   const page = docs[0]
 
   const hero = page.hero || {}
-  console.log(`Target: ${BASE_URL} — pages/${page.id}`)
+  console.log(`Target: ${BASE_URL}, pages/${page.id}`)
   console.log(`  headline:     "${hero.headline}" -> "${HEADLINE}"`)
   console.log(`  secondaryCta: "${hero.secondaryCta?.label}" ${hero.secondaryCta?.url} -> ${SECONDARY_CTA_URL}`)
 

@@ -123,8 +123,8 @@ export const Services: CollectionConfig = {
       required: true,
       defaultValue: 'service',
       options: [
-        { label: 'Service (sold offering — /services/*)', value: 'service' },
-        { label: 'Tech (capability — /tech/*)', value: 'tech' },
+        { label: 'Service (sold offering: /services/*)', value: 'service' },
+        { label: 'Tech (capability: /tech/*)', value: 'tech' },
         { label: 'Rental (legacy rental page)', value: 'rental' },
       ],
       admin: {
@@ -135,7 +135,7 @@ export const Services: CollectionConfig = {
       name: 'tech',
       type: 'array',
       admin: {
-        description: 'Technologies behind this capability — shown as chips on tech pages. Display-only, never used for matching.',
+        description: 'Technologies behind this capability: shown as chips on tech pages. Display-only, never used for matching.',
         condition: (data) => data?.pageType === 'tech',
       },
       fields: [{ name: 'value', type: 'text', required: true }],
@@ -180,7 +180,7 @@ export const Services: CollectionConfig = {
       type: 'array',
       labels: { singular: 'Body Block', plural: 'Body Blocks' },
       admin: {
-        description: 'Deprecated — use Content Blocks below.',
+        description: 'Deprecated: use Content Blocks below.',
       },
       fields: [
         { name: 'type', type: 'text', required: true },

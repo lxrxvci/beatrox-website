@@ -3,7 +3,7 @@
  * One-off backfill: set `pageType` on existing service docs in the CMS DB
  * from the tagged JSON files in content/services/ (the source of truth).
  *
- * Unlike cms:import:services, this touches ONLY the pageType field — no
+ * Unlike cms:import:services, this touches ONLY the pageType field, no
  * content re-import, no clobbering of CMS edits. Needed because the DB docs
  * were seeded before pageType existed, so the parity gate reports
  * CMS="service" vs JSON="tech"/"rental" for 34 docs.

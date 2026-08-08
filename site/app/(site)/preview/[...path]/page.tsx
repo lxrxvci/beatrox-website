@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-// Non-CMS routes have no draft content — previewing them just shows the live page.
+// Non-CMS routes have no draft content, previewing them just shows the live page.
 const NON_CMS_SEGMENTS = new Set(['videos', 'book', 'proposal', 'rentals'])
 
 interface Props {

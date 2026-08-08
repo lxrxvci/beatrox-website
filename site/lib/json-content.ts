@@ -34,7 +34,7 @@ export interface ProjectImage {
   alt: string
   filename?: string
   note?: string
-  /** CMS-only backend tags — absent in the JSON baseline. */
+  /** CMS-only backend tags, absent in the JSON baseline. */
   serviceTags?: { id: string; slug: string; title: string }[]
   techTags?: { id: string; slug: string; title: string }[]
 }
@@ -107,7 +107,7 @@ export interface Project {
   body: BodyBlock[]
   images: ProjectImage[]
   videos?: VideoEmbed[]
-  /** CMS-only impact stats — absent in the JSON baseline. */
+  /** CMS-only impact stats, absent in the JSON baseline. */
   stats?: { value: string; label: string }[]
 }
 
@@ -123,12 +123,12 @@ export interface Service {
   category: string
   /** service = sold offering (/services/*), tech = capability (/tech/*), rental = legacy rental page */
   pageType: 'service' | 'tech' | 'rental'
-  /** Technologies behind a tech capability — display-only chips, never used for matching. */
+  /** Technologies behind a tech capability, display-only chips, never used for matching. */
   tech?: string[]
   capabilities: string[]
   body: ServiceBodyBlock[]
   relatedWork: { title: string; slug: string }[]
-  /** CMS-only per-page pin/hide overrides — absent in the JSON baseline. */
+  /** CMS-only per-page pin/hide overrides, absent in the JSON baseline. */
   curatedImages?: { projectSlug: string; imageIndex: number; position: number; hidden?: boolean }[]
   media?: {
     heroImage?: string

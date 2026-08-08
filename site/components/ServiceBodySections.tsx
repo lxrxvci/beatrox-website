@@ -6,7 +6,7 @@ import type { Service } from '@/lib/content'
 
 interface ServiceBodySectionsProps {
   service: Service
-  /** Rendered inside each article, after the body block — interleaved
+  /** Rendered inside each article, after the body block, interleaved
    *  2-up tagged-image row, fallback gallery image, or nothing. */
   renderAfterSection?: (index: number) => React.ReactNode
 }

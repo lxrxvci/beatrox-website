@@ -9,13 +9,13 @@ export const revalidate = 300
 
 export async function generateMetadata(): Promise<Metadata> {
   const description =
-    'The technical capabilities behind Beatrox productions — design, build, technical, and production expertise for experiential environments.'
+    'The technical capabilities behind Beatrox productions: design, build, technical, and production expertise for experiential environments.'
   return seoToMetadata(
     {
       title: 'Tech Capabilities',
       description,
       og: {
-        title: 'Tech Capabilities — BEATROX',
+        title: 'Tech Capabilities | BEATROX',
         description,
         image: '/og-default.jpg',
       },
@@ -53,8 +53,8 @@ export default async function TechIndexPage({ preview = false }: { preview?: boo
         minHeightClass="min-h-[94svh]"
       />
 
-      {/* Intro — crawlable copy positioning the catalog: event technology,
-          AV integration, and technical event production */}
+      {/* Intro: crawlable copy positioning the catalog (event technology,
+          AV integration, and technical event production) */}
       <section className="section bg-blueprint border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white leading-relaxed">
@@ -62,7 +62,7 @@ export default async function TechIndexPage({ preview = false }: { preview?: boo
               <p>
                 Every Beatrox environment runs on event technology that has to work the first time, in
                 public, with no second take. These tech capabilities are the disciplines behind that
-                reliability — the design, build, technical, and production expertise we apply to
+                reliability: the design, build, technical, and production expertise we apply to
                 technical event production at every scale, from a single interactive kiosk to a
                 festival footprint. The catalog below is organized the way our projects run: design
                 first, then build, then the technical systems, then the production that carries it
@@ -78,15 +78,15 @@ export default async function TechIndexPage({ preview = false }: { preview?: boo
             </div>
             <div className="space-y-6">
               <p>
-                Build capabilities — CNC machining, staging and rigging, lighting integration — turn
+                Build capabilities (CNC machining, staging and rigging, lighting integration) turn
                 approved drawings into physical structures. And our technical and production capabilities
                 keep it all running: system design, engineering certification, media servers,
                 documentation, and the crews who operate it. Every capability is practiced in-house by
-                our Portland team and deployed nationwide — the people who design the system are the
+                our Portland team and deployed nationwide. The people who design the system are the
                 people who build, integrate, and operate it.
               </p>
               <p>
-                Browse the capabilities below to see how each discipline works — or book a consultation
+                Browse the capabilities below to see how each discipline works, or book a consultation
                 and we'll spec the right combination for your project.
               </p>
             </div>
@@ -94,7 +94,7 @@ export default async function TechIndexPage({ preview = false }: { preview?: boo
         </div>
       </section>
 
-      {/* Tech capability link grid — visual style mirrors the About/services link grid */}
+      {/* Tech capability link grid: visual style mirrors the About/services link grid */}
       <section className="section border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
@@ -131,6 +131,29 @@ export default async function TechIndexPage({ preview = false }: { preview?: boo
               </div>
               </RevealOnScroll>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services cross-link: these capabilities roll up into the turnkey
+          offer pages (P3-04 service mesh) */}
+      <section className="section border-b border-white/10">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-xl">
+              <h2 className="heading-lg mb-4">Need the Full Service?</h2>
+              <p className="text-base text-white/60 leading-relaxed">
+                These capabilities roll up into turnkey offerings: event production, stage design,
+                LED video wall rentals, projection mapping, and more, each delivered end to end by
+                the same Portland team.
+              </p>
+            </div>
+            <Link
+              href="/services"
+              className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:text-[var(--accent)]"
+            >
+              Explore Beatrox Services →
+            </Link>
           </div>
         </div>
       </section>

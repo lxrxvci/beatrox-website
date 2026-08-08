@@ -1,9 +1,9 @@
 /**
- * Beat-2 montage imagery — one striking work-page image per brand-phrase
+ * Beat-2 montage imagery, one striking work-page image per brand-phrase
  * card, ordered to match TYPE_CARDS in IntroOverlay (client-approved):
  *
  *   01 CREATIVITY WITHOUT LIMITS → aku-world (AKU + FTX interactive
- *      touchscreen kiosk — client-picked)
+ *      touchscreen kiosk, client-picked)
  *   02 TECHNICAL EXCELLENCE      → projekt-x (X-wing precision rig)
  *   03 HUMAN CONNECTION          → destination (festival crowd at night)
  *

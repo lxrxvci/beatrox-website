@@ -13,6 +13,6 @@ for (const envFile of ['.env', '.env.local']) {
       process.env[key] = rawValue.replace(/^"(.*)"$/, '$1').replace(/^'(.*)'$/, '$1')
     }
   } catch {
-    // env file does not exist — fine
+    // env file does not exist, fine
   }
 }

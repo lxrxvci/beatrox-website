@@ -11,13 +11,13 @@ export async function generateMetadata(): Promise<Metadata> {
       follow: true,
     },
     openGraph: {
-      title: 'Videos — BEATROX',
+      title: 'Videos | BEATROX',
       description: 'Video library sourced from the BEATROX YouTube channel manifest.',
       images: ['/og-default.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Videos — BEATROX',
+      title: 'Videos | BEATROX',
       description: 'Video library sourced from the BEATROX YouTube channel manifest.',
       images: ['/og-default.jpg'],
     },

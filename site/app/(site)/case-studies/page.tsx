@@ -14,13 +14,13 @@ export async function generateMetadata(): Promise<Metadata> {
       follow: true,
     },
     openGraph: {
-      title: 'Case Studies — BEATROX',
+      title: 'Case Studies | BEATROX',
       description: 'Execution-focused case studies from BEATROX production work.',
       images: ['/og-default.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Case Studies — BEATROX',
+      title: 'Case Studies | BEATROX',
       description: 'Execution-focused case studies from BEATROX production work.',
       images: ['/og-default.jpg'],
     },

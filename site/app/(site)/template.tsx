@@ -7,7 +7,7 @@ import { MotionConfig, motion } from 'motion/react'
  * so each page enters with a fade + rise using the quart in-out easing
  * from the design tokens. MotionConfig disables transform animations
  * for prefers-reduced-motion users (resolved client-side, so server and
- * client markup stay identical — no hydration mismatch).
+ * client markup stay identical, no hydration mismatch).
  */
 export default function SiteTemplate({ children }: { children: React.ReactNode }) {
   return (

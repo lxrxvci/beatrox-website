@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 /**
- * Tag seeder — DRY-RUN by default; `--apply` writes.
+ * Tag seeder, DRY-RUN by default; `--apply` writes.
  *
  * For every published project (payload.find, depth 0):
  *   1. Suggests serviceTags with the keyword engine ported from
  *      content-audit.mjs, extended with aliases for the 6 new services
  *      (stage-design, immersive-environments, experiential-events,
  *      projection-mapping, multimedia-displays, audio-production). Only
- *      non-tech services (pageType !== 'tech') are targeted — relatedness is
+ *      non-tech services (pageType !== 'tech') are targeted, relatedness is
  *      service-only.
  *   2. Suggests techTags from metadata.type, hero.tags, and the free-text
  *      metadata tech/techniques/materials/software/spec arrays, mapped to
  *      services docs with pageType 'tech'. Precision over recall: only
  *      credible keyword hits are suggested.
  *
- * Idempotent: only fills fields that are currently EMPTY — existing tags are
+ * Idempotent: only fills fields that are currently EMPTY, existing tags are
  * never overwritten. Aliases pointing at slugs that don't exist in the CMS
  * are dropped, so a dry-run before the CMS import simply omits the new
  * services.
@@ -154,7 +154,7 @@ const techIndex = allServiceIndex.filter((s) => s.pageType === 'tech')
 const serviceBySlug = new Map(serviceIndex.map((s) => [s.slug, s]))
 const techBySlug = new Map(techIndex.map((s) => [s.slug, s]))
 
-// Term document frequency across services — terms shared by 3+ services are
+// Term document frequency across services, terms shared by 3+ services are
 // too generic to suggest on (e.g. "production", "design", "lighting").
 const termFrequency = new Map()
 for (const svc of serviceIndex) {
@@ -164,7 +164,7 @@ for (const svc of serviceIndex) {
 }
 
 // Stopwords carry no signal ("Backline & Stage Rental" normalizes to
-// "backline and stage rental" — without this, "AI & Computer Vision" would
+// "backline and stage rental", without this, "AI & Computer Vision" would
 // match on "and").
 const STOPWORDS = new Set(['and', 'the', 'of', 'for', 'a', 'an', 'in', 'on', 'to'])
 
@@ -205,7 +205,7 @@ const SERVICE_ALIASES = {
   foh: 'audio-production',
 }
 
-// Tech keyword map — only credible hits, precision over recall. Targets are
+// Tech keyword map, only credible hits, precision over recall. Targets are
 // the 31 tech capability slugs (services docs with pageType 'tech').
 const TECH_KEYWORDS = {
   // software & electronics
@@ -376,14 +376,14 @@ const reports = projects.map((doc) => {
 const fmt = (suggestions) =>
   suggestions.length > 0
     ? suggestions.map((s) => `${s.title} (${s.slug}) [matched: ${s.matchedOn.join(', ')}]`).join('; ')
-    : '—'
+    : '(none)'
 
 console.log('')
-console.log(`Tag seed ${apply ? '(APPLY)' : '(DRY-RUN — no writes)'} — ${reports.length} published project(s), ${serviceIndex.length} service(s), ${techIndex.length} tech page(s)`)
+console.log(`Tag seed ${apply ? '(APPLY)' : '(DRY-RUN, no writes)'}: ${reports.length} published project(s), ${serviceIndex.length} service(s), ${techIndex.length} tech page(s)`)
 console.log('')
 
 for (const report of reports) {
-  console.log(`${report.slug} — ${report.title}`)
+  console.log(`${report.slug}: ${report.title}`)
   console.log(`  serviceTags: ${report.serviceTagsEmpty ? fmt(report.suggestedServiceTags) : 'SKIP (already set)'}`)
   console.log(`  techTags:    ${report.techTagsEmpty ? fmt(report.suggestedTechTags) : 'SKIP (already set)'}`)
 }
@@ -445,7 +445,7 @@ console.log(`  techTags suggestions:        ${reports.reduce((n, r) => n + r.sug
 if (apply) {
   console.log(`  projects updated:            ${written.length}`)
 } else {
-  console.log('  mode: dry-run — re-run with --apply (npm run tags:seed:apply) to write')
+  console.log('  mode: dry-run, re-run with --apply (npm run tags:seed:apply) to write')
 }
 
 process.exit(0)

@@ -199,7 +199,7 @@ export interface BusyInterval {
 
 /**
  * Busy intervals on the bookings calendar, so externally-created events
- * block consultation slots. Returns [] when unconfigured or on error —
+ * block consultation slots. Returns [] when unconfigured or on error
  * availability must never break because Google is unreachable.
  */
 export async function getBusyIntervals(timeMin: Date, timeMax: Date): Promise<BusyInterval[]> {

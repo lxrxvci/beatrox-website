@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Per-image tag applier — DRY-RUN by default; `--apply` writes.
+ * Per-image tag applier, DRY-RUN by default; `--apply` writes.
  *
  * Reads AI-vision proposals from ../reports/image-tags/<project>.json
  * (produced by the contact-sheet vision pass; see
@@ -94,7 +94,7 @@ const idsFor = (slugs, pageType, warn) =>
 
 console.log('')
 console.log(
-  `Image tag apply ${apply ? '(APPLY)' : '(DRY-RUN — no writes)'} — ${proposals.size} project proposal file(s)` +
+  `Image tag apply ${apply ? '(APPLY)' : '(DRY-RUN, no writes)'}, ${proposals.size} project proposal file(s)` +
     (minConfidence ? `, confidence >= ${minConfidence}` : '') +
     (force ? ', --force overwriting tagged rows' : ''),
 )

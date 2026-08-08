@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 
 /**
  * Media-library list for the admin inline-edit UI. Auth-gated like
- * /api/admin-check so public pages never fetch or serialize the library —
+ * /api/admin-check so public pages never fetch or serialize the library
  * the admin context fetches this lazily when edit mode turns on.
  */
 export async function GET() {

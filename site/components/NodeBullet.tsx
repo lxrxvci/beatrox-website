@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 interface NodeBulletProps {
-  /** Stagger position — delays the draw animation by index × 100ms. */
+  /** Stagger position, delays the draw animation by index × 100ms. */
   index?: number
   className?: string
 }
@@ -11,7 +11,7 @@ interface NodeBulletProps {
 /**
  * Tech-styled node indicator (crosshair + center node) that draws itself
  * via stroke-dashoffset animation when scrolled into view. Replaces the
- * legacy "—" list bullets. Uses normalized pathLength so dash math is
+ * legacy dash list bullets. Uses normalized pathLength so dash math is
  * unit-free; transitions are instant for reduced-motion users (handled
  * by the global reduced-motion CSS rule).
  */

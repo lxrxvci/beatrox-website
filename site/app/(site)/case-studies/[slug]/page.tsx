@@ -95,7 +95,7 @@ export default async function CaseStudyPage({ params, preview = false }: Props) 
                     <ul className="space-y-2 mt-2">
                       {block.items.map((item) => (
                         <li key={item} className="flex items-start gap-3 text-sm text-white">
-                          <span className="text-white mt-1">—</span>
+                          <span className="text-white mt-1">·</span>
                           <span>{item}</span>
                         </li>
                       ))}

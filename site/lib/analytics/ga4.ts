@@ -123,7 +123,7 @@ async function fetchGa4Dashboard(days: number): Promise<Ga4DashboardData | null>
 
 /**
  * GA4 dashboard data, cached for 1 hour so the admin dashboard never blocks
- * on Google. Returns null when GA4 env vars are missing or the API fails —
+ * on Google. Returns null when GA4 env vars are missing or the API fails
  * callers render a "connect GA4" placeholder instead of erroring.
  */
 export async function getGa4Dashboard(days = 30): Promise<Ga4DashboardData | null> {

@@ -145,7 +145,7 @@ export default function EditableGalleryGrid({
       <div className="pointer-events-none">{children}</div>
       <div className="mt-4 border border-white/15 bg-neutral-950/95 p-4 space-y-3">
         <p className="mono text-white">
-          Edit tiles — the grid updates after saving.
+          Edit tiles. The grid updates after saving.
         </p>
         {draft.map((item, index) => (
           <div key={index} className="border border-white/10 bg-white/[0.03] p-3 space-y-2">

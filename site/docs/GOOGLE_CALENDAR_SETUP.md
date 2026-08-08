@@ -63,7 +63,7 @@ GOOGLE_CALENDAR_ID=primary
 
 1. Create at least one enabled `consultation-type` and at least one `availability-rule` in the Payload admin.
 2. Visit `/book` and complete a booking.
-3. Check the Google Calendar of the authorized account — an event with a Google Meet link should appear.
+3. Check the Google Calendar of the authorized account: an event with a Google Meet link should appear.
 4. The `consultations` doc in Payload will show the `googleCalendarEventId` and `googleMeetLink`.
 
 ## Troubleshooting

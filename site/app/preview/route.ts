@@ -16,7 +16,7 @@ export async function GET(request: Request) {
   const url = new URL(request.url)
   const path = safePath(url.searchParams.get('path') || '/')
 
-  // Verified Payload session check — rejects forged/expired tokens, unlike a
+  // Verified Payload session check, rejects forged/expired tokens, unlike a
   // raw cookie-substring check.
   const payload = await getPayload({ config: payloadConfig })
   const headers = await getHeaders()

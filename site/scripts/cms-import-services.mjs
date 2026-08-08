@@ -88,7 +88,7 @@ export async function importServices(token) {
         capabilities: asArray(source.capabilities).map((item) => ({ value: item })),
         tech: asArray(source.tech).map((item) => ({ value: item })),
         body: mapBody(source.body),
-        // NOTE: do not also seed contentBlocks from body — the page renders both
+        // NOTE: do not also seed contentBlocks from body, the page renders both
         // fields, so populating them together duplicates every section on the site.
         relatedWork: await mapRelatedWork(source.relatedWork, token),
         media: {

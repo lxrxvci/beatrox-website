@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Duplicate image remover — DRY-RUN by default; `--apply` writes.
+ * Duplicate image remover, DRY-RUN by default; `--apply` writes.
  *
  * Removes confirmed duplicate rows from project docs' `images` arrays
  * (later occurrence of a same-scene pair; reviewed visually in
  * reports/image-tags/dupe-pairs.jpg). The JSON fallback files
  * (site/content/portfolio + content/portfolio) are updated separately by
- * scripts/dedupe-project-images.py — run both, then `npm run cms:parity`.
+ * scripts/dedupe-project-images.py, run both, then `npm run cms:parity`.
  *
  * Run (from site/): `node` via esbuild bundle like tags:images.
  */
@@ -31,7 +31,7 @@ const REMOVALS = {
 
 const payload = await getPayload({ config })
 
-console.log(`\nDedupe project images ${apply ? '(APPLY)' : '(DRY-RUN — no writes)'}\n`)
+console.log(`\nDedupe project images ${apply ? '(APPLY)' : '(DRY-RUN, no writes)'}\n`)
 
 for (const [slug, removeIndices] of Object.entries(REMOVALS)) {
   const bare = slug

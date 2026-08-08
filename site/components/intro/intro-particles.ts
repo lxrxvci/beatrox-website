@@ -1,7 +1,7 @@
 import { gsap } from 'gsap'
 
 /**
- * Particle scene for the first-visit intro (three.js, vanilla — no R3F).
+ * Particle scene for the first-visit intro (three.js, vanilla, no R3F).
  * Dynamically imported by IntroCanvas so `three` never enters the initial
  * bundle; repeat visitors never download it (plan §4).
  *
@@ -10,13 +10,13 @@ import { gsap } from 'gsap'
  *
  * Scene: an additive-blended THREE.Points field (~8k desktop / ~3k low
  * tier) that idles as a breathing dot lattice (beat 0), then visibly
- * ASSEMBLES "BEATROX" (beat 1) — per-particle staggered easing with a
+ * ASSEMBLES "BEATROX" (beat 1), per-particle staggered easing with a
  * left-to-right sweep so the word draws itself across, x-sorted target
  * assignment so travel reads as convergence (not a shuffle), a 2.5%
  * acid-lime landing twinkle, and drift that locks once the word forms.
  * Scatter is staggered too (dissolve-out, not blob-out). "BEATROX" is
  * sampled once during init (font race finishes inside beat 0), so
- * morphTo() only starts the clock — a deterministic beat start.
+ * morphTo() only starts the clock, a deterministic beat start.
  *
  * Perf: O(COUNT) per frame, all arrays preallocated, no per-frame allocs.
  */
@@ -27,7 +27,7 @@ export interface IntroParticlesHandle {
   /**
    * Staggered dissolve back out into a loose drift. Default flavor blows
    * targets to random wide positions (card 1). `{ radial: true }` projects
-   * targets outward from screen center instead — an explosion whose travel
+   * targets outward from screen center instead, an explosion whose travel
    * lines radiate, used for the card-3 burst (plan: keep whichever flavor
    * reads better in captured frames).
    */
@@ -62,7 +62,7 @@ export async function initIntroParticles(
   const THREE = await import('three')
 
   // WebGL context creation can throw (or return null) on locked-down
-  // browsers — let the caller catch and continue DOM-only.
+  // browsers, let the caller catch and continue DOM-only.
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
@@ -155,7 +155,7 @@ export async function initIntroParticles(
   const startTime = performance.now()
   const clock = () => (performance.now() - startTime) / 1000
 
-  // ── Text sampling (runs ONCE at init — deterministic beat start) ──────
+  // ── Text sampling (runs ONCE at init, deterministic beat start) ──────
   /** Sample text pixels from an offscreen 2D canvas → world-space pairs. */
   const sampleTextPixels = async (text: string): Promise<Float32Array | null> => {
     try {
@@ -164,7 +164,7 @@ export async function initIntroParticles(
         new Promise((r) => setTimeout(r, 600)),
       ])
     } catch {
-      /* fall back to a generic sans — shape still reads */
+      /* fall back to a generic sans, shape still reads */
     }
     const cw = 1200
     const ch = 300
@@ -202,7 +202,7 @@ export async function initIntroParticles(
     }
     const { h } = visible()
     // Fit portrait viewports: the word's rendered width fraction is
-    // 0.66 * min(1, aspect) / aspect — identical to the long-standing
+    // 0.66 * min(1, aspect) / aspect, identical to the long-standing
     // desktop geometry (aspect >= 1 → 0.66/aspect), but caps portrait
     // screens at 66% width instead of overflowing (mobile showed "EATRO"
     // clipped at ~143% width).
@@ -221,7 +221,7 @@ export async function initIntroParticles(
   /**
    * Precompute morph targets + per-particle stagger.
    * Coherent assignment: sort particles by current x and ink pixels by x,
-   * assign rank-to-rank (stratified, tiny jitter) — every particle travels
+   * assign rank-to-rank (stratified, tiny jitter), every particle travels
    * a short readable path. delay_i sweeps left-to-right across the word
    * (~0.45s span) plus seeded jitter; dur_i varies ±0.2s per particle.
    */
@@ -261,7 +261,7 @@ export async function initIntroParticles(
     return true
   }
 
-  // Sampled during init — the font race has all of beat 0 to finish, so
+  // Sampled during init, the font race has all of beat 0 to finish, so
   // beat 1 starts deterministically. If sampling fails, morphTo retries.
   // Set the real device aspect FIRST: resize() only runs after this, and
   // visible() feeds the morph-target scale (portrait overflow fix).
@@ -303,7 +303,7 @@ export async function initIntroParticles(
       }
     }
     if (twinkleActive && t >= twinkleUntil) {
-      // Twinkle window closed — restore exact base colors and stop paying.
+      // Twinkle window closed, restore exact base colors and stop paying.
       colors.set(baseColors)
       colorsDirty = true
       twinkleActive = false
@@ -372,7 +372,7 @@ export async function initIntroParticles(
       if (morphReady) {
         begin()
       } else {
-        // Sampling failed at init (font race lost) — one lazy retry.
+        // Sampling failed at init (font race lost), one lazy retry.
         void prepareMorph(text).then((ok) => {
           if (ok) {
             morphReady = true

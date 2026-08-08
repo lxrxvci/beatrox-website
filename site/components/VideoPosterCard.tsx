@@ -5,7 +5,7 @@ import { useState } from 'react'
 interface VideoPosterCardProps {
   /** YouTube embed URL (https://www.youtube.com/embed/<id>). */
   embedUrl: string
-  /** YouTube video ID — used for the hqdefault poster thumbnail. */
+  /** YouTube video ID, used for the hqdefault poster thumbnail. */
   videoId: string
   label: string
 }

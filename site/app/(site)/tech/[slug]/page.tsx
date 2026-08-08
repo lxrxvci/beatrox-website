@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getAllServicesResolved, getProjectCardsResolved, getServiceResolved, getTaggedImagesForSlug, mergeCuratedTaggedImages, type TaggedImageEntry } from '@/lib/content'
+import { getRelatedServiceSlugs } from '@/lib/service-tech-links'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
@@ -23,7 +24,7 @@ interface Props {
 }
 
 // Resolved docs carry the legacy "/services/<slug>" slug form regardless of
-// pageType — strip either route prefix to get the bare slug.
+// pageType, so strip either route prefix to get the bare slug.
 function bareSlug(slug: string): string {
   return slug.replace(/^\/(services|tech)\/+/, '')
 }
@@ -48,7 +49,7 @@ export default async function TechPage({ params, preview = false }: Props) {
   if (!service || service.pageType !== 'tech') notFound()
   const heroImage = service.media?.heroImage || '/og-default.jpg'
   const gallery = service.media?.galleryImages || []
-  // Keep the raw galleryImages index — it is the inline-edit field path
+  // Keep the raw galleryImages index: it is the inline-edit field path
   // (media.galleryImages.N). Empty/hero-duplicate rows are skipped at render.
   const inlineMedia = gallery
     .map((url, galleryIndex) => ({ url, galleryIndex }))
@@ -58,12 +59,24 @@ export default async function TechPage({ params, preview = false }: Props) {
   // fields) and the tagged-photo pool (full project docs, deduped per
   // render via cache()).
   const bareTechSlug = bareSlug(service.slug)
-  const [projects, taggedAuto] = await Promise.all([
+  const [projects, taggedAuto, allServices] = await Promise.all([
     getProjectCardsResolved(preview),
     getTaggedImagesForSlug(bareTechSlug, 'tech', preview),
+    getAllServicesResolved(preview),
   ])
 
-  // Projects Using This Tech — association is techTags-only (never serviceTags):
+  // Related Services: reciprocal of the service-to-tech map (P3-04 service
+  // mesh), resolved against live offer pages so stale slugs drop out.
+  const serviceTitleBySlug = new Map(
+    allServices
+      .filter((entry) => entry.pageType !== 'tech')
+      .map((entry) => [bareSlug(entry.slug), entry.title]),
+  )
+  const relatedServices = getRelatedServiceSlugs(bareTechSlug)
+    .map((serviceSlug) => ({ slug: serviceSlug, title: serviceTitleBySlug.get(serviceSlug) }))
+    .filter((entry): entry is { slug: string; title: string } => Boolean(entry.title))
+
+  // Projects Using This Tech: association is techTags-only (never serviceTags),
   // a tech page lists work explicitly tagged with this tech capability.
   const techProjects = projects
     .filter((project) =>
@@ -195,7 +208,7 @@ export default async function TechPage({ params, preview = false }: Props) {
               ))}
             </ul>
 
-            {/* Technologies — display-only chips, never used for project matching */}
+            {/* Technologies: display-only chips, never used for project matching */}
             {service.tech && service.tech.length > 0 && (
               <div className="mt-10">
                 <h3 className="overline mb-4">Technologies</h3>
@@ -214,18 +227,18 @@ export default async function TechPage({ params, preview = false }: Props) {
           </div>
           </RevealOnScroll>
 
-          {/* Body blocks — boxed cards, tagged photos interleaved between sections */}
+          {/* Body blocks: boxed cards, tagged photos interleaved between sections */}
           <ServiceBodySections service={service} renderAfterSection={renderAfterSection} />
           </div>
         </div>
       </section>
 
-      {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body wins) */}
+      {/* WYSIWYG Content Blocks: only when no legacy body blocks exist (seeded docs carry both; body wins) */}
       {service.body.length === 0 && service.contentBlocks && service.contentBlocks.length > 0 && (
         <CMSBlockRenderer blocks={service.contentBlocks} collection="services" documentId={service.id} />
       )}
 
-      {/* From Past Projects — tagged photos not interleaved between body sections */}
+      {/* From Past Projects: tagged photos not interleaved between body sections */}
       {leftoverImages.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
@@ -259,7 +272,7 @@ export default async function TechPage({ params, preview = false }: Props) {
         </section>
       )}
 
-      {/* Projects Using This Tech — techTags-matched work only, hidden when empty */}
+      {/* Projects Using This Tech: techTags-matched work only, hidden when empty */}
       {techProjects.length > 0 && (
         <section className="section border-b border-white/10">
           <div className="max-w-[1120px] mx-auto">
@@ -279,6 +292,35 @@ export default async function TechPage({ params, preview = false }: Props) {
                 }
               })}
             />
+            </RevealOnScroll>
+          </div>
+        </section>
+      )}
+
+      {/* Related Services: reciprocal links back to the owning offer pages (P3-04) */}
+      {relatedServices.length > 0 && (
+        <section className="section border-b border-white/10">
+          <div className="max-w-[1120px] mx-auto">
+            <h2 className="hud-label mb-8">Related Services</h2>
+            <RevealOnScroll>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-4">
+              {relatedServices.map((related) => (
+                <li key={related.slug}>
+                  <Link
+                    href={`/services/${related.slug}`}
+                    className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="hud-index text-[var(--accent)] opacity-70 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                    >
+                      ›
+                    </span>
+                    <span>{related.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
             </RevealOnScroll>
           </div>
         </section>

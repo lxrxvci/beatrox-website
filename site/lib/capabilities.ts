@@ -1,4 +1,4 @@
-// Shared capability tile data — types plus the curated default grid for
+// Shared capability tile data, types plus the curated default grid for
 // CapabilitiesGrid. Lives in lib/ (plain TS, no JSX) so both the client
 // component and node scripts (scripts/content-audit.mjs) can import it
 // without bundling React/Next client modules.
@@ -21,7 +21,7 @@ export interface CapabilityItem {
 }
 
 // Default tile grid. Links point to dedicated service landing pages (never
-// /work/* projects). A few mappings are best-fit judgments — see
+// /work/* projects). A few mappings are best-fit judgments, see
 // reports/content-audit.md; each tile can be retargeted via the CMS block
 // or the inline gallery widget without code changes.
 export const DEFAULT_CAPABILITIES: Capability[] = [

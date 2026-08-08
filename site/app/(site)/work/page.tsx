@@ -51,7 +51,7 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
         minHeightClass="min-h-[94svh]"
       />
 
-      {/* Selected work — SEO intro */}
+      {/* Selected work, SEO intro */}
       <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto space-y-8">
           <h2 className="heading-md">Selected Work for Brands That Don&apos;t Do Small</h2>
@@ -61,13 +61,13 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
                 Beatrox productions have carried some of the world&apos;s most recognizable names. For Netflix,
                 we built Comic-Con exhibition environments for Disenchantment and El Camino. BuzzFeed trusted us
                 with the stage design, media walls, and full production of their NewFronts presentation in New
-                York. Adidas has returned to us repeatedly — from the Run for the Oceans activation with its
+                York. Adidas has returned to us repeatedly, from the Run for the Oceans activation with its
                 LIDAR-driven interactive whale projection, to the 40-foot interactive Destination canvas at
                 Horton Plaza with Journey&apos;s.
               </p>
               <p>
                 For Amazon Music&apos;s Infinite Playlist tour, we designed and produced interactive festival
-                experiences at Outside Lands and Stagecoach — custom photobooths, AR content, and stage
+                experiences at Outside Lands and Stagecoach: custom photobooths, AR content, and stage
                 production for artists including Mariah the Scientist. CNN brought us in for the Road to 270
                 election coverage, and for Super Bowl 2020 we built an interactive AR mirror experience for one
                 of the biggest audiences in sports.
@@ -76,14 +76,14 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
             <div className="space-y-4">
               <p>
                 Our projection work has reached genuine landmarks: the DUBAI 360 spherical projection theatre,
-                and large-format building projections for PROJECTING CHANGE: Racing Extinction — the campaign
+                and large-format building projections for PROJECTING CHANGE: Racing Extinction, the campaign
                 that put endangered species on the Empire State Building and the Vatican. Toyota x MTV tapped
                 us for the G-MAN experiential campaign, FLIR for a permanent interactive history wall, and AKU
                 World for an immersive NFT Miami environment complete with a 4D body scanner.
               </p>
               <p>
-                Every one of these productions was delivered end to end by one accountable team — design,
-                fabrication, AV integration, and show operation — from our headquarters in Portland, Oregon to
+                Every one of these productions was delivered end to end by one accountable team (design,
+                fabrication, AV integration, and show operation) from our headquarters in Portland, Oregon to
                 stages across the country. Explore the projects below.
               </p>
             </div>
@@ -91,7 +91,7 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
         </Reveal>
       </section>
 
-      {/* Project previews — asymmetric bento grid */}
+      {/* Project previews, asymmetric bento grid */}
       <section className="section border-t border-white/10">
         <Reveal className="max-w-[1120px] mx-auto">
           <BentoWorkGrid

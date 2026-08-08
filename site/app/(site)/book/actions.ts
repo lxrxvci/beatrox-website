@@ -221,7 +221,7 @@ export async function bookConsultation(
 
     const consultation = await payload.create({
       collection: 'consultations',
-      // Trusted server-side write — collection create access requires an
+      // Trusted server-side write: collection create access requires an
       // authenticated user; this validated action is the public write path.
       overrideAccess: true,
       data: {
@@ -241,7 +241,7 @@ export async function bookConsultation(
     })
 
     const calendarResult = await createCalendarEvent({
-      summary: `BEATROX ${typeDoc.name} — ${name}`,
+      summary: `BEATROX ${typeDoc.name}: ${name}`,
       description: [
         projectSummary,
         company ? `Company: ${company}` : '',

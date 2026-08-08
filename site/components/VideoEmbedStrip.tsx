@@ -26,7 +26,7 @@ export default function VideoEmbedStrip({ title, videos }: VideoEmbedStripProps)
   if (!videos.length) return null
 
   // Seeded data often reuses one title (e.g. "Projekt X Deck Link") for
-  // several distinct embeds — suffix duplicates with an index so each card
+  // several distinct embeds, suffix duplicates with an index so each card
   // gets a distinguishable label; missing titles fall back to "Video N".
   const titleCounts = new Map<string, number>()
   videos.forEach((video) => {

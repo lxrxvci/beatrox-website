@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getTeamResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
+import { buildTeamSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 import KineticHeading from '@/components/KineticHeading'
 import { EditableImage } from '@/components/admin'
 
@@ -20,6 +22,7 @@ export default async function TeamPage({ preview = false }: { preview?: boolean 
 
   return (
     <>
+      <JsonLd data={buildTeamSchema(sorted)} />
       {/* Header */}
       <section className="relative hero border-b border-white/10 overflow-hidden">
         <Image
@@ -67,7 +70,7 @@ export default async function TeamPage({ preview = false }: { preview?: boolean 
                   )}
                   <div>
                     <h2 className="text-sm md:text-base tracking-[0.11em] uppercase text-white mb-2">
-                      {member.name} <span aria-hidden="true" className="text-white">—</span> <span className="text-[var(--accent)]">{member.title}</span>
+                      {member.name} <span aria-hidden="true" className="text-white">·</span> <span className="text-[var(--accent)]">{member.title}</span>
                     </h2>
                     <p className="text-base text-white leading-relaxed">
                       {member.bio}

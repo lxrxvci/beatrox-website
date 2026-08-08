@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * Project stats seeder — DRY-RUN by default; `--apply` writes.
+ * Project stats seeder, DRY-RUN by default; `--apply` writes.
  *
  * Fills the optional `stats` array (impact strip below the hero) for every
  * published project that has none. Values are DRAFTS derived from each
  * project's own content (titles, subheadlines, metadata, vision-pass notes)
- * — review the dry-run output and refine in the CMS after applying.
+ * review the dry-run output and refine in the CMS after applying.
  *
  * Idempotent: projects with existing stats are skipped.
  * Run (from site/): bundle with esbuild like tags:images.
@@ -104,7 +104,7 @@ const projects = await payload.find({
   overrideAccess: true,
 })
 
-console.log(`\nProject stats seed ${apply ? '(APPLY)' : '(DRY-RUN — no writes)'}\n`)
+console.log(`\nProject stats seed ${apply ? '(APPLY)' : '(DRY-RUN, no writes)'}\n`)
 
 for (const doc of projects.docs) {
   const slug = String(doc.slug || '').replace(/^\/work\/+/, '')

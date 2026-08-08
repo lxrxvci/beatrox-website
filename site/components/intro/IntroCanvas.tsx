@@ -5,7 +5,7 @@ import type { IntroParticlesHandle } from './intro-particles'
 
 interface IntroCanvasProps {
   onReady: (handle: IntroParticlesHandle) => void
-  /** WebGL context creation/init failed — intro continues DOM-only. */
+  /** WebGL context creation/init failed, intro continues DOM-only. */
   onFail: () => void
 }
 

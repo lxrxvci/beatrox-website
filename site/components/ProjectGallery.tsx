@@ -20,14 +20,14 @@ interface GalleryImage {
   height?: number
   /** Index into the project doc's raw `images` array (inline-edit field path). */
   sourceIndex?: number
-  /** Backend-only per-image tags — editable in the panel, never rendered. */
+  /** Backend-only per-image tags, editable in the panel, never rendered. */
   serviceTags?: GalleryImageTag[]
   techTags?: GalleryImageTag[]
 }
 
 interface ProjectGalleryProps {
   images: GalleryImage[]
-  /** Inline-edit target — the project doc that owns these images. */
+  /** Inline-edit target, the project doc that owns these images. */
   collection?: string
   documentId?: string
   /** Tag pickers for the per-image edit panel (work pages only). */
@@ -133,7 +133,7 @@ export default function ProjectGallery({ images, collection, documentId, service
   )
 
   // Runtime 404s/optimizer failures would otherwise leave empty black frames
-  // in the mosaic — drop the failed URL and let the rows reflow.
+  // in the mosaic, drop the failed URL and let the rows reflow.
   const markFailed = useCallback((url: string) => {
     setFailedUrls((prev) => {
       if (prev.has(url)) return prev
@@ -156,7 +156,7 @@ export default function ProjectGallery({ images, collection, documentId, service
     const update = () => {
       const rect = el.getBoundingClientRect()
       // Rows are laid out inside the container's horizontal padding, so
-      // measure the content box — otherwise every row overflows by the
+      // measure the content box, otherwise every row overflows by the
       // combined px-6/lg:px-10 padding and the page scrolls sideways.
       const styles = window.getComputedStyle(el)
       const paddingX = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight)
@@ -211,7 +211,7 @@ export default function ProjectGallery({ images, collection, documentId, service
 
   const activeImage = activeIndex !== null ? galleryImages[activeIndex] : null
 
-  // Every entry failed to load (or none were provided) — render nothing
+  // Every entry failed to load (or none were provided), render nothing
   // rather than an empty header over a blank section.
   if (galleryImages.length === 0) return null
 

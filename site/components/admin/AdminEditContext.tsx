@@ -14,7 +14,7 @@ interface AdminEditContextValue {
   setEditMode: (value: boolean) => void
   activeField: { collection: string; id: string; path: string } | null
   setActiveField: (field: { collection: string; id: string; path: string } | null) => void
-  /** Media library for image pickers — loaded lazily from
+  /** Media library for image pickers, loaded lazily from
    *  /api/admin/media-library the first time edit mode turns on, so
    *  anonymous renders neither fetch nor serialize it. */
   mediaLibrary: AdminMediaItem[]

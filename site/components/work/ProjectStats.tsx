@@ -12,7 +12,7 @@ interface ProjectStatsProps {
   documentId: string
 }
 
-/** lg column count per stat total (CMS maxRows is 4) — literal class names so Tailwind emits them. */
+/** lg column count per stat total (CMS maxRows is 4), literal class names so Tailwind emits them. */
 const LG_COLS: Record<number, string> = {
   1: 'lg:grid-cols-1',
   2: 'lg:grid-cols-2',
