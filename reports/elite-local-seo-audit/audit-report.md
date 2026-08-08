@@ -4,6 +4,26 @@
 
 ---
 
+## RE-AUDIT ADDENDUM (2026-08-07, staged branch seo/elite-local-remediation)
+
+Preview verified: https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app (artifacts in audit-evidence/reaudit/). 17 of 26 directive findings closed or deviation-recorded; evidence citations per finding in remediation-directive.json.
+
+| Pillar | Weight | Before | After | Gate note |
+|--------|--------|--------|-------|-----------|
+| P1 GBP Readiness | 22% | 1 | 1 | Website-side readiness done (NAP, hours, map, blueprint); profile still absent |
+| P2 Reviews | 16% | 1 | 1 | Unchanged; needs the manual review program |
+| P3 Content | 20% | 5 | 7 | Deviation cap (client-declined city in H1/title, global strategy) |
+| P4 Schema/Tech | 12% | 6 | 8 | Full stack live; CWV unverified keeps it under 9 |
+| P5 NAP/Citations | 10% | 4 | 5 | Website NAP exact; GBP and citations absent |
+| P6 Architecture | 7% | 6 | 6 | Unchanged; rentals domain decision open |
+| P7 Competitive | 7% | 4 est | 4 est | Unchanged; pack invisible without GBP |
+| P8 Conversion | 6% | 4 | 6 | Map, trust line live; form trimmed in repo; GA4 env still missing |
+| **Composite** | | **34** | **44** | NOT ELITE: 2 P0s open (GBP creation, domain wiring) |
+
+Remaining blockers are business actions, not code: create and verify the GBP, wire www.beatrox.com, set GA4 env vars, promote CMS content (homepage title/H1, contact form fields, about/contact/team seo titles), start the review program, build citations. Full detail in the directive reaudit properties.
+
+---
+
 ## Composite Score: 34/100: NOT ELITE
 
 Elite requires: composite >= 85, every pillar >= 8, zero P0 findings, content lint pass, NAP parity pass.

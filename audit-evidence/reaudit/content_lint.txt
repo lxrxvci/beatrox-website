@@ -1,0 +1,1209 @@
+CONTENT LINT FAILED: 1208 violation(s):
+  - site/app/(site)/about/page.tsx:88: double hyphen as em dash found -> <blockquote className="heading-md text-[var(--accent)] !normal-case tracking-normal leading-snug">
+  - site/app/(site)/about/page.tsx:115: double hyphen as em dash found -> <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(colIndex + 1).padStart(2, '0')}</
+  - site/app/(site)/about/page.tsx:141: double hyphen as em dash found -> <h2 className="heading-md mb-5">Ready to work <span className="text-[var(--accent)]">together</span>
+  - site/app/(site)/about/page.tsx:146: double hyphen as em dash found -> <Link href="/book" className="btn-primary btn-primary--accent">Book a Discovery Call</Link>
+  - site/app/(site)/book/BookingForm.tsx:164: double hyphen as em dash found -> className="text-sm text-white hover:text-[var(--accent)] transition-colors shrink-0"
+  - site/app/(site)/book/BookingForm.tsx:187: double hyphen as em dash found -> className="w-full sm:w-auto bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:o
+  - site/app/(site)/book/BookingForm.tsx:224: double hyphen as em dash found -> className="text-sm text-white hover:text-[var(--accent)] transition-colors shrink-0"
+  - site/app/(site)/book/BookingForm.tsx:256: em dash found -> {/* Honeypot — off-screen; humans leave it blank, bots fill it. */}
+  - site/app/(site)/book/BookingForm.tsx:262: em dash found -> {/* Marketing attribution (UTM/gclid) — hidden, first-touch. */}
+  - site/app/(site)/book/BookingForm.tsx:275: double hyphen as em dash found -> className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white foc
+  - site/app/(site)/book/BookingForm.tsx:291: double hyphen as em dash found -> className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white foc
+  - site/app/(site)/book/BookingForm.tsx:306: double hyphen as em dash found -> className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder
+  - site/app/(site)/book/BookingForm.tsx:318: double hyphen as em dash found -> className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder
+  - site/app/(site)/book/BookingForm.tsx:333: double hyphen as em dash found -> className={`w-full bg-transparent border px-4 py-3.5 text-base text-white placeholder:text-white foc
+  - site/app/(site)/book/BookingForm.tsx:347: double hyphen as em dash found -> className="btn-primary btn-primary--accent disabled:opacity-50 disabled:cursor-not-allowed"
+  - site/app/(site)/book/actions.ts:224: em dash found -> // Trusted server-side write — collection create access requires an
+  - site/app/(site)/book/actions.ts:244: em dash found -> summary: `BEATROX ${typeDoc.name} — ${name}`,
+  - site/app/(site)/case-studies/[slug]/page.tsx:98: em dash found -> <span className="text-white mt-1">—</span>
+  - site/app/(site)/case-studies/page.tsx:17: em dash found -> title: 'Case Studies — BEATROX',
+  - site/app/(site)/case-studies/page.tsx:23: em dash found -> title: 'Case Studies — BEATROX',
+  - site/app/(site)/case-studies/page.tsx:76: double hyphen as em dash found -> <h2 className="heading-md text-white group-hover:text-[var(--accent)] transition-colors">
+  - site/app/(site)/case-studies/page.tsx:94: double hyphen as em dash found -> <h2 className="heading-md mb-5">Have a <span className="text-[var(--accent)]">project</span> in mind
+  - site/app/(site)/case-studies/page.tsx:99: double hyphen as em dash found -> <Link href="/book" className="btn-primary btn-primary--accent">Start Your Project</Link>
+  - site/app/(site)/contact/ContactForm.tsx:61: em dash found -> {/* Honeypot — off-screen; humans leave it blank, bots fill it. */}
+  - site/app/(site)/contact/ContactForm.tsx:67: em dash found -> {/* Marketing attribution (UTM/gclid) — hidden, first-touch. */}
+  - site/app/(site)/contact/ContactForm.tsx:83: double hyphen as em dash found -> className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder
+  - site/app/(site)/contact/ContactForm.tsx:103: double hyphen as em dash found -> className="w-full bg-black border border-white/25 px-4 py-3.5 text-base text-white focus:outline-non
+  - site/app/(site)/contact/ContactForm.tsx:157: double hyphen as em dash found -> className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder
+  - site/app/(site)/contact/ContactForm.tsx:176: double hyphen as em dash found -> className="w-full bg-transparent border border-white/25 px-4 py-3.5 text-base text-white placeholder
+  - site/app/(site)/contact/ContactForm.tsx:187: double hyphen as em dash found -> <button type="submit" disabled={pending} className="btn-primary btn-primary--accent disabled:opacity
+  - site/app/(site)/contact/actions.ts:85: em dash found -> // Trusted server-side write — collection create access requires an
+  - site/app/(site)/contact/actions.ts:89: em dash found -> // Validated above — the errors guard guarantees these are present.
+  - site/app/(site)/layout.tsx:54: double hyphen as em dash found -> variable: '--font-body',
+  - site/app/(site)/layout.tsx:61: double hyphen as em dash found -> variable: '--font-heading',
+  - site/app/(site)/layout.tsx:68: double hyphen as em dash found -> variable: '--font-mono',
+  - site/app/(site)/layout.tsx:82: double hyphen as em dash found -> '--brand-primary': styles.brandPrimary,
+  - site/app/(site)/layout.tsx:83: double hyphen as em dash found -> '--brand-secondary': styles.brandSecondary,
+  - site/app/(site)/layout.tsx:84: double hyphen as em dash found -> '--site-bg': styles.backgroundColor,
+  - site/app/(site)/layout.tsx:87: double hyphen as em dash found -> ...(styles.fontFamilyHeading !== 'inherit' && { '--font-heading': styles.fontFamilyHeading }),
+  - site/app/(site)/layout.tsx:88: double hyphen as em dash found -> ...(styles.fontFamilyBody !== 'inherit' && { '--font-body': styles.fontFamilyBody }),
+  - site/app/(site)/layout.tsx:100: em dash found -> {/* Film-grain atmosphere — decorative noise overlay above page
+  - site/app/(site)/layout.tsx:110: double hyphen as em dash found -> className="curtain-main relative z-10 bg-[var(--bg-primary)]"
+  - site/app/(site)/not-found.tsx:12: em dash found -> <p className="overline mb-4">404 — Page Not Found</p>
+  - site/app/(site)/page.tsx:46: em dash found -> {/* First-visit intro overlay — client-gated, zero SSR; nothing renders
+  - site/app/(site)/page.tsx:51: em dash found -> // Same fallback strings HomeHero applies — the intro's beat-3
+  - site/app/(site)/page.tsx:59: em dash found -> // Category-matched work images for the montage streaks — NOT the
+  - site/app/(site)/preview/[...path]/page.tsx:28: em dash found -> // Non-CMS routes have no draft content — previewing them just shows the live page.
+  - site/app/(site)/proposal/[token]/page.tsx:10: em dash found -> title: 'Proposal — BEATROX',
+  - site/app/(site)/proposal/[token]/page.tsx:35: em dash found -> // Public, token-gated read — the unguessable UUID is the access control.
+  - site/app/(site)/proposal/[token]/page.tsx:74: em dash found -> <p className="heading-sm text-white">BEATROX — Proposal</p>
+  - site/app/(site)/services/[slug]/page.tsx:41: em dash found -> // Tech capabilities live at /tech/[slug] — the 301s in next.config.ts cover
+  - site/app/(site)/services/[slug]/page.tsx:46: em dash found -> // Keep the raw galleryImages index — it is the inline-edit field path
+  - site/app/(site)/services/[slug]/page.tsx:52: em dash found -> // Independent fetches in parallel: the related-cards list (slim fields —
+  - site/app/(site)/services/[slug]/page.tsx:207: em dash found -> {/* Body blocks — boxed cards, tagged photos interleaved between sections */}
+  - site/app/(site)/services/[slug]/page.tsx:213: em dash found -> {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body win
+  - site/app/(site)/services/[slug]/page.tsx:218: em dash found -> {/* From Past Projects — tagged photos not interleaved between body sections */}
+  - site/app/(site)/services/[slug]/page.tsx:252: em dash found -> {/* Related Work — example cards cited from past projects */}
+  - site/app/(site)/services/[slug]/page.tsx:280: double hyphen as em dash found -> <h2 className="heading-md mb-5">Ready to get <span className="glow-text text-[var(--accent)]">starte
+  - site/app/(site)/services/[slug]/page.tsx:283: double hyphen as em dash found -> <Link href="/book" className="btn-primary btn-primary--accent">Get in Touch</Link>
+  - site/app/(site)/services/page.tsx:17: em dash found -> // Full text-link catalog of the 15 service pages — the 12 capability-tile
+  - site/app/(site)/services/page.tsx:30: em dash found -> blurb: 'Full-service event production from a Portland event production company — concept to final st
+  - site/app/(site)/services/page.tsx:35: em dash found -> blurb: 'Experiential marketing agency services — immersive brand activations people line up to share
+  - site/app/(site)/services/page.tsx:40: em dash found -> blurb: 'Stage design company for concerts, conferences, and brand events — designed, engineered, and
+  - site/app/(site)/services/page.tsx:55: em dash found -> blurb: 'LED video wall rental in Portland — fine-pitch to festival-scale panels with on-site technic
+  - site/app/(site)/services/page.tsx:60: em dash found -> blurb: 'Projection mapping in Portland and beyond — architecture turned into cinema, calibrated to t
+  - site/app/(site)/services/page.tsx:65: em dash found -> blurb: 'Multimedia displays — LED walls, kiosks, and interactive screens designed and integrated as 
+  - site/app/(site)/services/page.tsx:70: em dash found -> blurb: 'Custom fabrication in Portland — one-of-a-kind structures and scenic elements built in our o
+  - site/app/(site)/services/page.tsx:80: em dash found -> blurb: 'Audio production services — FOH and monitor engineering, RF coordination, and system tuning 
+  - site/app/(site)/services/page.tsx:85: em dash found -> blurb: 'Sound equipment rentals in Portland — PA systems, consoles, and monitoring with experienced 
+  - site/app/(site)/services/page.tsx:90: em dash found -> blurb: 'DJ equipment rental in Portland — Pioneer CDJs, mixers, and full booth packages with on-site
+  - site/app/(site)/services/page.tsx:95: em dash found -> blurb: 'Backline and stage rental in Portland — drum kits, amplifiers, and full stage packages backe
+  - site/app/(site)/services/page.tsx:105: em dash found -> blurb: 'Drone light shows — custom choreographed formations with full FAA compliance and operational
+  - site/app/(site)/services/page.tsx:110: em dash found -> blurb: 'Laser light shows — professional beam choreography, sky scanning, and laser mapping for any 
+  - site/app/(site)/services/page.tsx:115: em dash found -> blurb: 'Event lighting services in Portland — design, integration, programming, and live operation f
+  - site/app/(site)/services/page.tsx:125: em dash found -> // Tiles come from the capability-tiles global — inline-editable right on
+  - site/app/(site)/services/page.tsx:155: em dash found -> {/* Intro — crawlable positioning copy: who we are, what the services
+  - site/app/(site)/services/page.tsx:162: double hyphen as em dash found -> A Full-Service Event Production Company in <span className="text-[var(--accent)]">Portland, Oregon</
+  - site/app/(site)/services/page.tsx:172: em dash found -> directors bring over 20 years of combined experience — one partner accountable from
+  - site/app/(site)/services/page.tsx:182: double hyphen as em dash found -> <Link href="/services/event-production" className="text-[var(--accent)] hover:underline">Full-servic
+  - site/app/(site)/services/page.tsx:184: double hyphen as em dash found -> <Link href="/services/experiential-events" className="text-[var(--accent)] hover:underline">experien
+  - site/app/(site)/services/page.tsx:186: double hyphen as em dash found -> <Link href="/services/stage-design" className="text-[var(--accent)] hover:underline">Stage design</L
+  - site/app/(site)/services/page.tsx:188: double hyphen as em dash found -> <Link href="/services/custom-fabrication" className="text-[var(--accent)] hover:underline">custom fa
+  - site/app/(site)/services/page.tsx:190: double hyphen as em dash found -> <Link href="/services/immersive-environments" className="text-[var(--accent)] hover:underline">Immer
+  - site/app/(site)/services/page.tsx:191: double hyphen as em dash found -> <Link href="/services/projection-mapping" className="text-[var(--accent)] hover:underline">projectio
+  - site/app/(site)/services/page.tsx:192: double hyphen as em dash found -> <Link href="/services/multimedia-displays" className="text-[var(--accent)] hover:underline">multimed
+  - site/app/(site)/services/page.tsx:194: double hyphen as em dash found -> <Link href="/services/led-video-wall-rentals" className="text-[var(--accent)] hover:underline">LED v
+  - site/app/(site)/services/page.tsx:195: double hyphen as em dash found -> <Link href="/services/audio-production" className="text-[var(--accent)] hover:underline">audio produ
+  - site/app/(site)/services/page.tsx:196: double hyphen as em dash found -> <Link href="/services/dj-equipment-rentals" className="text-[var(--accent)] hover:underline">DJ equi
+  - site/app/(site)/services/page.tsx:197: double hyphen as em dash found -> <Link href="/services/drone-light-shows" className="text-[var(--accent)] hover:underline">drone ligh
+  - site/app/(site)/services/page.tsx:198: double hyphen as em dash found -> <Link href="/services/laser-shows" className="text-[var(--accent)] hover:underline">laser light show
+  - site/app/(site)/services/page.tsx:199: em dash found -> deliver the spectacle — engineered, permitted, and operated by the same team that
+  - site/app/(site)/services/page.tsx:200: em dash found -> designed it — with{' '}
+  - site/app/(site)/services/page.tsx:201: double hyphen as em dash found -> <Link href="/services/lighting-services" className="text-[var(--accent)] hover:underline">event ligh
+  - site/app/(site)/services/page.tsx:202: double hyphen as em dash found -> <Link href="/services/sound-equipment-rentals" className="text-[var(--accent)] hover:underline">soun
+  - site/app/(site)/services/page.tsx:203: double hyphen as em dash found -> <Link href="/services/backline-stage-rental" className="text-[var(--accent)] hover:underline">backli
+  - site/app/(site)/services/page.tsx:219: em dash found -> and landmark projections — work where there is no second take.
+  - site/app/(site)/services/page.tsx:225: em dash found -> Every service is delivered from our Portland headquarters and travels — from Oregon
+  - site/app/(site)/services/page.tsx:237: em dash found -> {/* Capabilities image grid (swapped from the About page — title stays here) */}
+  - site/app/(site)/services/page.tsx:256: em dash found -> {/* Full service catalog — every service page as a text link, including
+  - site/app/(site)/services/page.tsx:275: double hyphen as em dash found -> className="hud-index text-[var(--accent)] opacity-70 md:opacity-0 md:-translate-x-1 transition-all d
+  - site/app/(site)/services/page.tsx:297: double hyphen as em dash found -> <h2 className="heading-lg mb-5">Book a <span className="text-[var(--accent)]">Consultation</span></h
+  - site/app/(site)/services/page.tsx:304: double hyphen as em dash found -> <Link href="/book" className="btn-primary btn-primary--accent">Book a Discovery Call</Link>
+  - site/app/(site)/sitemap.ts:11: em dash found -> // /work/tag/* pages are intentionally excluded — they're noindex
+  - site/app/(site)/team/page.tsx:38: double hyphen as em dash found -> <span aria-hidden="true" className="block h-px w-16 bg-[var(--accent)] mt-8" />
+  - site/app/(site)/team/page.tsx:70: em dash found -> {member.name} <span aria-hidden="true" className="text-white">—</span> <span className="text-[var(--
+  - site/app/(site)/team/page.tsx:70: double hyphen as em dash found -> {member.name} <span aria-hidden="true" className="text-white">—</span> <span className="text-[var(--
+  - site/app/(site)/team/page.tsx:89: double hyphen as em dash found -> <Link href={data.cta.url} className="btn-primary btn-primary--accent">{data.cta.label}</Link>
+  - site/app/(site)/tech/[slug]/page.tsx:26: em dash found -> // pageType — strip either route prefix to get the bare slug.
+  - site/app/(site)/tech/[slug]/page.tsx:51: em dash found -> // Keep the raw galleryImages index — it is the inline-edit field path
+  - site/app/(site)/tech/[slug]/page.tsx:66: em dash found -> // Projects Using This Tech — association is techTags-only (never serviceTags):
+  - site/app/(site)/tech/[slug]/page.tsx:198: em dash found -> {/* Technologies — display-only chips, never used for project matching */}
+  - site/app/(site)/tech/[slug]/page.tsx:217: em dash found -> {/* Body blocks — boxed cards, tagged photos interleaved between sections */}
+  - site/app/(site)/tech/[slug]/page.tsx:223: em dash found -> {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body win
+  - site/app/(site)/tech/[slug]/page.tsx:228: em dash found -> {/* From Past Projects — tagged photos not interleaved between body sections */}
+  - site/app/(site)/tech/[slug]/page.tsx:262: em dash found -> {/* Projects Using This Tech — techTags-matched work only, hidden when empty */}
+  - site/app/(site)/tech/[slug]/page.tsx:290: double hyphen as em dash found -> <h2 className="heading-md mb-5">Ready to get <span className="glow-text text-[var(--accent)]">starte
+  - site/app/(site)/tech/[slug]/page.tsx:293: double hyphen as em dash found -> <Link href="/book" className="btn-primary btn-primary--accent">Get in Touch</Link>
+  - site/app/(site)/tech/page.tsx:12: em dash found -> 'The technical capabilities behind Beatrox productions — design, build, technical, and production ex
+  - site/app/(site)/tech/page.tsx:18: em dash found -> title: 'Tech Capabilities — BEATROX',
+  - site/app/(site)/tech/page.tsx:56: em dash found -> {/* Intro — crawlable copy positioning the catalog: event technology,
+  - site/app/(site)/tech/page.tsx:65: em dash found -> reliability — the design, build, technical, and production expertise we apply to
+  - site/app/(site)/tech/page.tsx:81: em dash found -> Build capabilities — CNC machining, staging and rigging, lighting integration — turn
+  - site/app/(site)/tech/page.tsx:85: em dash found -> our Portland team and deployed nationwide — the people who design the system are the
+  - site/app/(site)/tech/page.tsx:89: em dash found -> Browse the capabilities below to see how each discipline works — or book a consultation
+  - site/app/(site)/tech/page.tsx:97: em dash found -> {/* Tech capability link grid — visual style mirrors the About/services link grid */}
+  - site/app/(site)/tech/page.tsx:141: double hyphen as em dash found -> <h2 className="heading-lg mb-5">Book a <span className="glow-text text-[var(--accent)]">Consultation
+  - site/app/(site)/tech/page.tsx:146: double hyphen as em dash found -> <Link href="/book" className="btn-primary btn-primary--accent">Book a Discovery Call</Link>
+  - site/app/(site)/template.tsx:10: em dash found -> * client markup stay identical — no hydration mismatch).
+  - site/app/(site)/videos/page.tsx:14: em dash found -> title: 'Videos — BEATROX',
+  - site/app/(site)/videos/page.tsx:20: em dash found -> title: 'Videos — BEATROX',
+  - site/app/(site)/work/[slug]/page.tsx:62: em dash found -> // Slim card fields only — the related/next sections never touch body,
+  - site/app/(site)/work/[slug]/page.tsx:72: em dash found -> // relatedness — tech tags are display-only), ranked by shared-tag count.
+  - site/app/(site)/work/[slug]/page.tsx:123: em dash found -> // Mono fact line under the hero title: CLIENT — LOCATION, TYPE.
+  - site/app/(site)/work/[slug]/page.tsx:128: em dash found -> {/* Hero — full-viewport, elevated image with rebalanced gradient */}
+  - site/app/(site)/work/[slug]/page.tsx:167: double hyphen as em dash found -> <span className="text-[var(--accent)]">{project.metadata.client}</span>
+  - site/app/(site)/work/[slug]/page.tsx:169: em dash found -> {project.metadata.client && (heroLocation || project.metadata.type) && ' — '}
+  - site/app/(site)/work/[slug]/page.tsx:178: em dash found -> {/* Impact strip — huge accent numerals; hidden when the project has no stats */}
+  - site/app/(site)/work/[slug]/page.tsx:184: em dash found -> {/* Services used — chips link to service pages; owner can re-tag in edit mode */}
+  - site/app/(site)/work/[slug]/page.tsx:211: em dash found -> {/* Tech used — chips link to /tech pages; owner can re-tag in edit mode */}
+  - site/app/(site)/work/[slug]/page.tsx:238: em dash found -> {/* Body — first block's content renders as a lede; headings get mono
+  - site/app/(site)/work/[slug]/page.tsx:269: em dash found -> {/* WYSIWYG Content Blocks — only when no legacy body blocks exist (seeded docs carry both; body win
+  - site/app/(site)/work/[slug]/page.tsx:274: em dash found -> {/* Gallery — staged in thirds with full-bleed breakout figures between */}
+  - site/app/(site)/work/[slug]/page.tsx:306: em dash found -> {/* Credits — film-roll metadata below gallery/videos */}
+  - site/app/(site)/work/[slug]/page.tsx:334: em dash found -> {/* Related Projects — projects sharing ≥1 serviceTag, ranked by overlap */}
+  - site/app/(site)/work/[slug]/page.tsx:356: em dash found -> {/* Next-project footer — replaces the generic CTA on work pages */}
+  - site/app/(site)/work/page.tsx:54: em dash found -> {/* Selected work — SEO intro */}
+  - site/app/(site)/work/page.tsx:64: em dash found -> York. Adidas has returned to us repeatedly — from the Run for the Oceans activation with its
+  - site/app/(site)/work/page.tsx:70: em dash found -> experiences at Outside Lands and Stagecoach — custom photobooths, AR content, and stage
+  - site/app/(site)/work/page.tsx:79: em dash found -> and large-format building projections for PROJECTING CHANGE: Racing Extinction — the campaign
+  - site/app/(site)/work/page.tsx:85: em dash found -> Every one of these productions was delivered end to end by one accountable team — design,
+  - site/app/(site)/work/page.tsx:86: em dash found -> fabrication, AV integration, and show operation — from our headquarters in Portland, Oregon to
+  - site/app/(site)/work/page.tsx:94: em dash found -> {/* Project previews — asymmetric bento grid */}
+  - site/app/(site)/work/page.tsx:125: double hyphen as em dash found -> <h2 className="heading-md mb-5">Have a <span className="text-[var(--accent)]">project</span> in mind
+  - site/app/(site)/work/page.tsx:127: double hyphen as em dash found -> <Link href="/book" className="btn-primary btn-primary--accent">Start a Conversation</Link>
+  - site/app/(site)/work/tag/[tag]/page.tsx:27: em dash found -> const description = `${displayTag} projects by Beatrox, a Portland event production company — see re
+  - site/app/(site)/work/tag/[tag]/page.tsx:36: em dash found -> title: `Work tagged "${displayTag}" — BEATROX`,
+  - site/app/(site)/work/tag/[tag]/page.tsx:42: em dash found -> title: `Work tagged "${displayTag}" — BEATROX`,
+  - site/app/api/admin/media-library/route.ts:11: em dash found -> * /api/admin-check so public pages never fetch or serialize the library —
+  - site/app/globals.css:132: em dash found -> /* Section utility — generous "luxury" spacing */
+  - site/app/globals.css:142: em dash found -> /* Hero utility — clears fixed 64px nav with consistent bottom padding */
+  - site/app/globals.css:152: em dash found -> /* Heading styles — display font, tight tracking, high-impact titles */
+  - site/app/globals.css:187: em dash found -> /* Overline label — accent-colored eyebrow text */
+  - site/app/globals.css:270: em dash found -> /* Accent variant — matches .btn-magnetic--accent on the homepage */
+  - site/app/globals.css:386: em dash found -> /* Project card hover overlay — gradient kept strong enough that white text
+  - site/app/globals.css:403: em dash found -> /* Mobile cards are much smaller — tighter overlay padding so client, title,
+  - site/app/globals.css:651: em dash found -> above — unlayered CSS wins over layered, killing the stray decoration. */
+  - site/app/globals.css:658: em dash found -> /* Film grain — fixed full-viewport noise overlay rendered by (site)/layout.
+  - site/app/globals.css:672: em dash found -> /* Neon depth — soft acid-lime halo for accent text */
+  - site/app/globals.css:677: em dash found -> /* Card glow hover — accent ring + faint outer bloom; pairs with any
+  - site/app/globals.css:689: em dash found -> /* Scanlines — CRT-style horizontal lines over hero/media blocks. Applied to
+  - site/app/globals.css:707: em dash found -> /* Blueprint grid — faint engineering-grid background for sections */
+  - site/app/globals.css:715: em dash found -> /* Vignette — darkens media edges so hero photos feel projected, not pasted */
+  - site/app/globals.css:791: em dash found -> /* .hud-corners — absolutely-positioned child span carrying a tick pair
+  - site/app/globals.css:801: em dash found -> /* Mono accent index — 01 / 02 / 03 card and list indices */
+  - site/app/globals.css:809: em dash found -> /* Impact stat numeral — huge accent figure for the work-page impact strip
+  - site/app/globals.css:820: em dash found -> /* Editorial body — work-page body blocks get mono index prefixes (01 /) on
+  - site/app/globals.css:834: em dash found -> /* Bracketed section label — renders "[ LABEL ]" via CSS content so the
+  - site/app/globals.css:876: em dash found -> /* HUD chip — mono squared chip for tag clouds and metadata tags; brackets
+  - site/app/globals.css:938: em dash found -> /* Skip control — real button, keyboard-focusable (Esc also bound) */
+  - site/app/globals.css:992: em dash found -> /* Atomic word groups — phrases wrap between words only, never mid-word */
+  - site/app/not-found.tsx:13: double hyphen as em dash found -> <main className="min-h-screen flex items-center bg-[var(--bg-primary)] text-[var(--text-primary)]">
+  - site/app/not-found.tsx:16: em dash found -> <p className="overline mb-4">404 — Page Not Found</p>
+  - site/app/preview/route.ts:19: em dash found -> // Verified Payload session check — rejects forged/expired tokens, unlike a
+  - site/components/AttributionFields.tsx:40: em dash found -> // Storage unavailable (private mode) — fields just stay empty.
+  - site/components/BentoWorkGrid.tsx:70: em dash found -> {/* Mobile cards are too small for 3 tags — cap at 2 below sm. */}
+  - site/components/BentoWorkGrid.tsx:104: double hyphen as em dash found -> <p className="glow-text mono text-[var(--accent)] mb-1">{project.client}</p>
+  - site/components/BentoWorkGrid.tsx:131: double hyphen as em dash found -> <div className="w-full min-w-0 sm:translate-y-2 sm:group-hover:translate-y-0 transition-transform du
+  - site/components/BentoWorkGrid.tsx:133: double hyphen as em dash found -> <p className="glow-text mono text-[var(--accent)] mb-1 sm:mb-2">{project.client}</p>
+  - site/components/CMSBlockRenderer.tsx:85: double hyphen as em dash found -> <span aria-hidden="true" className="block h-px w-14 bg-[var(--accent)] mx-auto" />
+  - site/components/CMSBlockRenderer.tsx:147: double hyphen as em dash found -> <span aria-hidden="true" className="mono text-[var(--accent)] shrink-0 pt-0.5">
+  - site/components/CMSBlockRenderer.tsx:210: double hyphen as em dash found -> <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(colIndex + 1).padStart(2, '0')}</
+  - site/components/CMSBlockRenderer.tsx:295: double hyphen as em dash found -> <Link href={block.url} className="btn-primary btn-primary--accent inline-block"><EditableText collec
+  - site/components/CMSBlockRenderer.tsx:304: double hyphen as em dash found -> <article key={key} className="bg-[var(--bg-elevated)] border border-white/10 p-10 md:p-14 text-cente
+  - site/components/CMSBlockRenderer.tsx:311: double hyphen as em dash found -> <Link href={block.cta.url} className="btn-primary btn-primary--accent inline-block"><EditableText co
+  - site/components/CTASection.tsx:21: double hyphen as em dash found -> <span className="text-[var(--accent)]">{heading.slice(idx, idx + accentWord.length)}</span>
+  - site/components/CTASection.tsx:44: double hyphen as em dash found -> <Link href={primaryHref} className="btn-primary btn-primary--accent">
+  - site/components/CapabilitiesGrid.tsx:39: double hyphen as em dash found -> <span className="font-[family-name:var(--font-heading)] text-[clamp(1.05rem,1.6vw,1.5rem)] font-semi
+  - site/components/CapabilitiesGrid.tsx:64: double hyphen as em dash found -> className="mt-1 block font-mono text-[0.65rem] uppercase tracking-[0.2em] text-[var(--accent)] opaci
+  - site/components/CapabilitiesGrid.tsx:95: double hyphen as em dash found -> className="pointer-events-none absolute bottom-3 right-3 font-mono text-[0.65rem] uppercase tracking
+  - site/components/CapabilitiesTicker.tsx:132: double hyphen as em dash found -> className="heading-xl !text-[7vw] md:!text-[8vw] font-bold text-[var(--text-primary)] opacity-[0.15]
+  - site/components/Footer.tsx:29: double hyphen as em dash found -> className="text-sm text-[var(--accent)] hover:text-white transition-colors block mt-3"
+  - site/components/Footer.tsx:54: double hyphen as em dash found -> className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-[var(--accent)] t
+  - site/components/Footer.tsx:59: em dash found -> {/* Rentals lives on a separate SPA deployment — plain external anchor, no Next prefetch. */}
+  - site/components/Footer.tsx:62: double hyphen as em dash found -> className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-[var(--accent)] t
+  - site/components/Footer.tsx:74: double hyphen as em dash found -> className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-[var(--accent)] t
+  - site/components/Footer.tsx:82: double hyphen as em dash found -> className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-[var(--accent)] t
+  - site/components/HomeHero.tsx:78: em dash found -> (or immediately on repeat visits — no visual difference, both
+  - site/components/KineticHeading.tsx:81: em dash found -> // (e.g. "CONSULTATIO|N") — wrapping happens between words only.
+  - site/components/MagneticButton.tsx:18: double hyphen as em dash found -> * and a fill that expands from the cursor entry point (via --mx/--my
+  - site/components/MagneticButton.tsx:39: double hyphen as em dash found -> el.style.setProperty('--mx', `${e.clientX - rect.left}px`)
+  - site/components/MagneticButton.tsx:40: double hyphen as em dash found -> el.style.setProperty('--my', `${e.clientY - rect.top}px`)
+  - site/components/Marquee.tsx:52: double hyphen as em dash found -> <section className="ticker border-t border-[var(--border)] py-6" aria-label="Project highlights">
+  - site/components/MetadataSchematic.tsx:24: double hyphen as em dash found -> <div key={cell.label} className="bg-[var(--bg-primary)] p-6 md:p-7">
+  - site/components/MetadataSchematic.tsx:25: double hyphen as em dash found -> <p className="mono text-[11px] uppercase tracking-[0.22em] text-[var(--accent)] mb-3">
+  - site/components/NavClient.tsx:44: double hyphen as em dash found -> <span className="rolling-link__layer rolling-link__layer--bottom" aria-hidden="true">
+  - site/components/NavClient.tsx:49: double hyphen as em dash found -> <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 bg-[var(--accent)]" aria-hidden="true" />
+  - site/components/NavClient.tsx:94: double hyphen as em dash found -> className={`fixed top-0 left-0 right-0 z-50 transition-[transform,background-color,border-color] dur
+  - site/components/NavClient.tsx:98: double hyphen as em dash found -> ? 'bg-[var(--bg-primary)] border-b border-[var(--border)]'
+  - site/components/NavClient.tsx:100: double hyphen as em dash found -> ? 'bg-[rgba(10,10,10,0.8)] backdrop-blur-[12px] border-b border-[var(--border)]'
+  - site/components/NavClient.tsx:108: em dash found -> aria-label="BEATROX — Home"
+  - site/components/NavClient.tsx:159: double hyphen as em dash found -> className={`md:hidden overflow-hidden border-t border-[var(--border)] transition-[max-height,opacity
+  - site/components/NavClient.tsx:163: double hyphen as em dash found -> <div className="bg-[var(--bg-primary)] px-6 py-6 flex flex-col gap-5">
+  - site/components/NodeBullet.tsx:6: em dash found -> /** Stagger position — delays the draw animation by index × 100ms. */
+  - site/components/NodeBullet.tsx:14: em dash found -> * legacy "—" list bullets. Uses normalized pathLength so dash math is
+  - site/components/NodeBullet.tsx:56: double hyphen as em dash found -> <line x1="3" y1="10" x2="17" y2="10" stroke="var(--accent)" strokeWidth="1" style={stroke} />
+  - site/components/NodeBullet.tsx:57: double hyphen as em dash found -> <line x1="10" y1="3" x2="10" y2="17" stroke="var(--accent)" strokeWidth="1" style={stroke} />
+  - site/components/NodeBullet.tsx:58: double hyphen as em dash found -> <circle cx="10" cy="10" r="2.5" stroke="var(--accent)" strokeWidth="1" style={stroke} />
+  - site/components/ProjectGallery.tsx:23: em dash found -> /** Backend-only per-image tags — editable in the panel, never rendered. */
+  - site/components/ProjectGallery.tsx:30: em dash found -> /** Inline-edit target — the project doc that owns these images. */
+  - site/components/ProjectGallery.tsx:136: em dash found -> // in the mosaic — drop the failed URL and let the rows reflow.
+  - site/components/ProjectGallery.tsx:159: em dash found -> // measure the content box — otherwise every row overflows by the
+  - site/components/ProjectGallery.tsx:214: em dash found -> // Every entry failed to load (or none were provided) — render nothing
+  - site/components/ProjectGallery.tsx:247: double hyphen as em dash found -> className="relative overflow-hidden bg-neutral-950 group text-left border border-white/5 max-w-full 
+  - site/components/ProjectGallery.tsx:318: double hyphen as em dash found -> className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white hover:text-[var(--accent)] 
+  - site/components/ProjectGallery.tsx:350: double hyphen as em dash found -> className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white hover:text-[var(--accent)
+  - site/components/ProjectGallery.tsx:378: double hyphen as em dash found -> i === activeIndex ? 'w-6 bg-[var(--accent)]' : 'w-2 bg-white/20 hover:bg-white/40'
+  - site/components/RelatedProjectCards.tsx:28: double hyphen as em dash found -> className="group block border border-white/10 bg-white/[0.02] overflow-hidden transition-all duratio
+  - site/components/RelatedProjectCards.tsx:44: double hyphen as em dash found -> <p className="mono text-[var(--accent)] mb-2">{entry.client}</p>
+  - site/components/RelatedProjectCards.tsx:50: double hyphen as em dash found -> <span className="inline-block mt-4 text-sm tracking-[0.14em] uppercase text-white group-hover:text-[
+  - site/components/ServiceBodySections.tsx:9: em dash found -> /** Rendered inside each article, after the body block — interleaved
+  - site/components/ServiceBodySections.tsx:42: double hyphen as em dash found -> <span className="glow-text text-[var(--accent)] mt-0.5 shrink-0" aria-hidden="true">✓</span>
+  - site/components/ServiceBodySections.tsx:62: double hyphen as em dash found -> <span className="hud-index inline-flex items-center justify-center px-2 py-1 mb-3 border border-[var
+  - site/components/ServiceBodySections.tsx:82: double hyphen as em dash found -> <span aria-hidden="true" className="text-[var(--accent)] shrink-0">+</span>
+  - site/components/ServicesLinkGrid.tsx:13: em dash found -> // The full tech-capabilities catalog, grouped — previously inlined in
+  - site/components/ServicesLinkGrid.tsx:89: em dash found -> * catalog is shown — links never rot because of an unrecognized label.
+  - site/components/ServicesLinkGrid.tsx:122: double hyphen as em dash found -> className="text-[var(--accent)] opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-20
+  - site/components/SmoothScroll.tsx:21: em dash found -> // previous page was scrolled. Reset to the top on every pathname change —
+  - site/components/VideoEmbedStrip.tsx:29: em dash found -> // several distinct embeds — suffix duplicates with an index so each card
+  - site/components/VideoPlayer.tsx:137: double hyphen as em dash found -> className="relative aspect-video bg-[var(--bg-secondary)] overflow-hidden group outline-none focus-v
+  - site/components/VideoPlayer.tsx:176: double hyphen as em dash found -> className="w-full h-1 appearance-none bg-white/25 accent-[var(--accent)] cursor-pointer mb-3"
+  - site/components/VideoPlayer.tsx:183: double hyphen as em dash found -> className="text-white hover:text-[var(--accent)] transition-colors"
+  - site/components/VideoPlayer.tsx:211: double hyphen as em dash found -> className="text-white hover:text-[var(--accent)] transition-colors"
+  - site/components/VideoPlayer.tsx:252: double hyphen as em dash found -> className="text-white hover:text-[var(--accent)] transition-colors"
+  - site/components/VideoPosterCard.tsx:8: em dash found -> /** YouTube video ID — used for the hqdefault poster thumbnail. */
+  - site/components/VideoPosterCard.tsx:54: double hyphen as em dash found -> <span className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full border bord
+  - site/components/VideoPosterCard.tsx:55: double hyphen as em dash found -> <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 translate-x-0.5 fill-[var(--accent)]"
+  - site/components/admin/AdminEditContext.tsx:17: em dash found -> /** Media library for image pickers — loaded lazily from
+  - site/components/admin/AdminOverlay.tsx:27: double hyphen as em dash found -> ? 'bg-[var(--accent)] text-black'
+  - site/components/admin/AdminOverlay.tsx:28: double hyphen as em dash found -> : 'bg-[var(--bg-elevated)] text-white border border-white/20 hover:border-[var(--accent)]'
+  - site/components/admin/AdminOverlay.tsx:34: double hyphen as em dash found -> <div className="absolute bottom-full right-0 mb-3 w-64 p-3 bg-[var(--bg-elevated)] border border-whi
+  - site/components/admin/EditableCuratedImages.tsx:7: em dash found -> /** Payload project doc id (stringified number) — written back as Number(). */
+  - site/components/admin/EditableCuratedImages.tsx:20: em dash found -> /** The page's images in their current effective (merged) order — visible only. */
+  - site/components/admin/EditableCuratedImages.tsx:176: double hyphen as em dash found -> className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black ro
+  - site/components/admin/EditableCuratedImages.tsx:185: double hyphen as em dash found -> <div className="mb-8 border border-[var(--accent)] rounded-sm bg-neutral-950/95 p-4 space-y-3 shadow
+  - site/components/admin/EditableCuratedImages.tsx:186: double hyphen as em dash found -> <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--accent)]">
+  - site/components/admin/EditableCuratedImages.tsx:190: em dash found -> Reorder or hide this page&apos;s photos. Untouched photos stay automatic — newly tagged
+  - site/components/admin/EditableCuratedImages.tsx:273: double hyphen as em dash found -> className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black 
+  - site/components/admin/EditableGalleryGrid.tsx:32: double hyphen as em dash found -> 'bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1 text-sm focus:outline-none focus
+  - site/components/admin/EditableGalleryGrid.tsx:129: double hyphen as em dash found -> className="relative cursor-pointer rounded-sm hover:ring-1 hover:ring-[var(--accent)]/50 hover:ring-
+  - site/components/admin/EditableGalleryGrid.tsx:135: double hyphen as em dash found -> <span className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-bl
+  - site/components/admin/EditableGalleryGrid.tsx:144: double hyphen as em dash found -> <div className="relative rounded-sm ring-2 ring-[var(--accent)] ring-offset-2 ring-offset-black">
+  - site/components/admin/EditableGalleryGrid.tsx:148: em dash found -> Edit tiles — the grid updates after saving.
+  - site/components/admin/EditableGalleryGrid.tsx:153: double hyphen as em dash found -> <span aria-hidden="true" className="mono text-[var(--accent)] shrink-0">
+  - site/components/admin/EditableGalleryGrid.tsx:207: double hyphen as em dash found -> className="bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1 text-sm focus:outline-
+  - site/components/admin/EditableGalleryGrid.tsx:237: double hyphen as em dash found -> ? 'bg-[var(--accent)] text-black border-[var(--accent)]'
+  - site/components/admin/EditableGalleryGrid.tsx:238: double hyphen as em dash found -> : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+  - site/components/admin/EditableGalleryGrid.tsx:262: double hyphen as em dash found -> className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black ro
+  - site/components/admin/EditableImage.tsx:24: em dash found -> /** Base path of the image group, WITHOUT .media/.legacyUrl/.alt suffix —
+  - site/components/admin/EditableImage.tsx:39: em dash found -> *  arrays. Backend-only — never rendered publicly. */
+  - site/components/admin/EditableImage.tsx:168: double hyphen as em dash found -> className="relative inline-block w-full cursor-pointer rounded-sm hover:ring-1 hover:ring-[var(--acc
+  - site/components/admin/EditableImage.tsx:174: double hyphen as em dash found -> <span className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-bl
+  - site/components/admin/EditableImage.tsx:185: double hyphen as em dash found -> <span className="absolute left-0 right-0 top-0 z-20 mx-auto w-[min(26rem,92%)] bg-neutral-950/95 bor
+  - site/components/admin/EditableImage.tsx:186: double hyphen as em dash found -> <span className="block text-[10px] font-bold uppercase tracking-wider text-[var(--accent)]">
+  - site/components/admin/EditableImage.tsx:193: double hyphen as em dash found -> className="w-full bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1.5 text-sm focus
+  - site/components/admin/EditableImage.tsx:198: em dash found -> <option value="">— keep current —</option>
+  - site/components/admin/EditableImage.tsx:211: double hyphen as em dash found -> className="w-full bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1.5 text-sm focus
+  - site/components/admin/EditableImage.tsx:224: double hyphen as em dash found -> className="w-full bg-black/80 text-white border border-white/20 rounded-sm px-2 py-1.5 text-sm focus
+  - site/components/admin/EditableImage.tsx:246: double hyphen as em dash found -> ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
+  - site/components/admin/EditableImage.tsx:247: double hyphen as em dash found -> : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+  - site/components/admin/EditableImage.tsx:272: double hyphen as em dash found -> ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
+  - site/components/admin/EditableImage.tsx:273: double hyphen as em dash found -> : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+  - site/components/admin/EditableImage.tsx:291: double hyphen as em dash found -> className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black 
+  - site/components/admin/EditableRichText.tsx:87: double hyphen as em dash found -> ? 'ring-2 ring-[var(--accent)] ring-offset-2 ring-offset-black'
+  - site/components/admin/EditableRichText.tsx:88: double hyphen as em dash found -> : 'hover:ring-1 hover:ring-[var(--accent)]/50 hover:ring-offset-1 hover:ring-offset-black cursor-poi
+  - site/components/admin/EditableRichText.tsx:96: double hyphen as em dash found -> <span className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-bl
+  - site/components/admin/EditableServiceTags.tsx:84: double hyphen as em dash found -> className="relative cursor-pointer rounded-sm hover:ring-1 hover:ring-[var(--accent)]/50 hover:ring-
+  - site/components/admin/EditableServiceTags.tsx:90: double hyphen as em dash found -> <span className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-bl
+  - site/components/admin/EditableServiceTags.tsx:99: double hyphen as em dash found -> <div className="relative rounded-sm ring-2 ring-[var(--accent)] ring-offset-2 ring-offset-black">
+  - site/components/admin/EditableServiceTags.tsx:114: double hyphen as em dash found -> ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
+  - site/components/admin/EditableServiceTags.tsx:115: double hyphen as em dash found -> : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+  - site/components/admin/EditableServiceTags.tsx:127: double hyphen as em dash found -> className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black ro
+  - site/components/admin/EditableTechTags.tsx:84: double hyphen as em dash found -> className="relative cursor-pointer rounded-sm hover:ring-1 hover:ring-[var(--accent)]/50 hover:ring-
+  - site/components/admin/EditableTechTags.tsx:90: double hyphen as em dash found -> <span className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-bl
+  - site/components/admin/EditableTechTags.tsx:99: double hyphen as em dash found -> <div className="relative rounded-sm ring-2 ring-[var(--accent)] ring-offset-2 ring-offset-black">
+  - site/components/admin/EditableTechTags.tsx:114: double hyphen as em dash found -> ? 'bg-[var(--accent)] text-black border-[var(--accent)] font-bold'
+  - site/components/admin/EditableTechTags.tsx:115: double hyphen as em dash found -> : 'bg-white/5 text-white border-white/20 hover:border-[var(--accent)]/60 hover:text-white'
+  - site/components/admin/EditableTechTags.tsx:127: double hyphen as em dash found -> className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black ro
+  - site/components/admin/EditableText.tsx:76: double hyphen as em dash found -> className="relative inline-block cursor-pointer rounded-sm hover:ring-1 hover:ring-[var(--accent)]/5
+  - site/components/admin/EditableText.tsx:82: double hyphen as em dash found -> <span className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-bl
+  - site/components/admin/EditableText.tsx:91: double hyphen as em dash found -> bg-black/80 text-white border border-[var(--accent)] rounded-sm px-2 py-1
+  - site/components/admin/EditableText.tsx:92: double hyphen as em dash found -> focus:outline-none focus:ring-2 focus:ring-[var(--accent)] min-w-[12rem]
+  - site/components/admin/EditableText.tsx:126: double hyphen as em dash found -> className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--accent)] text-black ro
+  - site/components/admin/InlineLexicalEditor.tsx:57: double hyphen as em dash found -> h4: 'heading-sm mb-3 text-[var(--accent)]',
+  - site/components/admin/InlineLexicalEditor.tsx:64: double hyphen as em dash found -> quote: 'border-l-2 border-[var(--accent)] pl-5 italic my-8 text-white',
+  - site/components/admin/InlineLexicalEditor.tsx:65: double hyphen as em dash found -> link: 'text-[var(--accent)] hover:underline',
+  - site/components/admin/InlineLexicalEditor.tsx:137: double hyphen as em dash found -> <div className="flex flex-wrap items-center gap-2 p-3 bg-[var(--bg-elevated)] border border-white/10
+  - site/components/admin/InlineLexicalEditor.tsx:162: double hyphen as em dash found -> className="px-4 py-1.5 text-sm bg-[var(--accent)] text-black font-semibold hover:opacity-90 transiti
+  - site/components/admin/InlineLexicalEditor.tsx:261: double hyphen as em dash found -> <div className="min-h-[120px] p-4 bg-black/40 border border-[var(--accent)]/50 rounded-sm">
+  - site/components/home/AboutTeaser.tsx:7: em dash found -> // sectionImages[0] duplicates the hero image (IMG_3942) — two adjacent
+  - site/components/home/AboutTeaser.tsx:27: em dash found -> Engineers, artists, and architects of the unforgettable — building the
+  - site/components/home/ContactSection.tsx:35: double hyphen as em dash found -> <a href={`mailto:${email}`} className="text-white underline-offset-4 transition-colors hover:text-[v
+  - site/components/home/ContactSection.tsx:38: double hyphen as em dash found -> <a href={`tel:${phone}`} className="text-white underline-offset-4 transition-colors hover:text-[var(
+  - site/components/home/RentalsTeaser.tsx:19: em dash found -> LED walls, sound, lighting, backline, and staging — the same
+  - site/components/home/ServicesTeaser.tsx:24: double hyphen as em dash found -> <ScrollPanel id="services" variant="rise" className="border-t border-white/10 bg-[var(--bg-primary)]
+  - site/components/home/ServicesTeaser.tsx:42: double hyphen as em dash found -> className="group block border border-white/10 bg-white/[0.02] overflow-hidden transition-all duratio
+  - site/components/home/TeamTeaser.tsx:11: double hyphen as em dash found -> <ScrollPanel id="team" variant="stagger-side" className="border-t border-white/10 bg-[var(--bg-prima
+  - site/components/home/WorkTeaser.tsx:29: double hyphen as em dash found -> <ScrollPanel id="work" className="border-t border-white/10 bg-[var(--bg-primary)]">
+  - site/components/intro/IntroCanvas.tsx:8: em dash found -> /** WebGL context creation/init failed — intro continues DOM-only. */
+  - site/components/intro/IntroGate.tsx:14: em dash found -> /** Effective (fallback-applied) hero copy — the beat-3 match-frame renders
+  - site/components/intro/IntroImageStreaks.tsx:12: em dash found -> * Montage image flashes (beat 2) — plain DOM/CSS, no WebGL. Full-bleed
+  - site/components/intro/IntroImageStreaks.tsx:32: double hyphen as em dash found -> {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral
+  - site/components/intro/IntroOverlay.tsx:14: em dash found -> /** Beat 2 brand-phrase cards — matched to MONTAGE_IMAGES order. */
+  - site/components/intro/IntroOverlay.tsx:57: em dash found -> * intent) seeks to the dissolve — never a hard cut. Mounted exclusively
+  - site/components/intro/IntroOverlay.tsx:82: em dash found -> // 4.75s via the lazy accessor, so it needs no help before that — only
+  - site/components/intro/IntroOverlay.tsx:219: em dash found -> // DOM went away — bail out cleanly rather than trapping scroll.
+  - site/components/intro/IntroOverlay.tsx:224: em dash found -> // Multi-word phrases must fit before the timeline reveals them —
+  - site/components/intro/IntroOverlay.tsx:305: em dash found -> {/* Beat 3: hero match-frame — same image URL, same gradient scrims
+  - site/components/intro/IntroOverlay.tsx:310: double hyphen as em dash found -> {/* eslint-disable-next-line @next/next/no-img-element -- must be
+  - site/components/intro/IntroOverlay.tsx:324: em dash found -> headline at the real hero's exact final position — without
+  - site/components/intro/IntroOverlay.tsx:332: double hyphen as em dash found -> <span className="btn-magnetic btn-magnetic--accent">{secondaryCtaLabel}</span>
+  - site/components/intro/IntroOverlay.tsx:341: em dash found -> {/* Beat 2: brand-phrase cards — per-word groups (unbreakable) of
+  - site/components/intro/IntroOverlay.tsx:370: em dash found -> BEATROX — EXPERIENCE SYSTEMS
+  - site/components/intro/intro-particles.ts:4: em dash found -> * Particle scene for the first-visit intro (three.js, vanilla — no R3F).
+  - site/components/intro/intro-particles.ts:13: em dash found -> * ASSEMBLES "BEATROX" (beat 1) — per-particle staggered easing with a
+  - site/components/intro/intro-particles.ts:19: em dash found -> * morphTo() only starts the clock — a deterministic beat start.
+  - site/components/intro/intro-particles.ts:30: em dash found -> * targets outward from screen center instead — an explosion whose travel
+  - site/components/intro/intro-particles.ts:65: em dash found -> // browsers — let the caller catch and continue DOM-only.
+  - site/components/intro/intro-particles.ts:158: em dash found -> // ── Text sampling (runs ONCE at init — deterministic beat start) ──────
+  - site/components/intro/intro-particles.ts:167: em dash found -> /* fall back to a generic sans — shape still reads */
+  - site/components/intro/intro-particles.ts:205: em dash found -> // 0.66 * min(1, aspect) / aspect — identical to the long-standing
+  - site/components/intro/intro-particles.ts:224: em dash found -> * assign rank-to-rank (stratified, tiny jitter) — every particle travels
+  - site/components/intro/intro-particles.ts:264: em dash found -> // Sampled during init — the font race has all of beat 0 to finish, so
+  - site/components/intro/intro-particles.ts:306: em dash found -> // Twinkle window closed — restore exact base colors and stop paying.
+  - site/components/intro/intro-particles.ts:375: em dash found -> // Sampling failed at init (font race lost) — one lazy retry.
+  - site/components/intro/intro-storage.ts:10: em dash found -> * All functions are client-only — callers must invoke them from effects.
+  - site/components/intro/intro-storage.ts:29: em dash found -> // sessionStorage unavailable (private mode) — fail closed, no intro loops.
+  - site/components/intro/intro-storage.ts:38: em dash found -> /* private mode — intro simply may replay next load */
+  - site/components/intro/intro-storage.ts:46: em dash found -> /** Pure read — safe to call from multiple components; never mutates state. */
+  - site/components/intro/intro-timeline.ts:9: em dash found -> *              FLASH — the breathing field alone, with a brief opacity
+  - site/components/intro/intro-timeline.ts:11: em dash found -> *   0.80–4.55  beat 2: brand-phrase montage (m0 = 0.8, CARD = 1.25s —
+  - site/components/intro/intro-timeline.ts:16: em dash found -> *   4.75–7.30  beat 3: BEATROX FINALE — the card-3 explosion's particles
+  - site/components/intro/intro-timeline.ts:22: em dash found -> *   label      "dissolve" at 10.0 — opacity crossfade onto the real hero
+  - site/components/intro/intro-timeline.ts:26: em dash found -> * Skipping seeks to the "dissolve" label — never a hard cut.
+  - site/components/intro/intro-timeline.ts:38: em dash found -> /** Inner wrapper of the match-frame media — the scale (dive) target. */
+  - site/components/intro/intro-timeline.ts:42: em dash found -> /** Top-left brand marker — fades out at the match-frame so it never
+  - site/components/intro/intro-timeline.ts:45: em dash found -> /** Particle canvas — null when WebGL failed/unavailable. */
+  - site/components/intro/intro-timeline.ts:61: em dash found -> // Brief opacity swell on the breathing field — reads as an intentional
+  - site/components/intro/intro-timeline.ts:92: em dash found -> // last char locks at ≈ card_t + 0.24 — the frame the streak wipe
+  - site/components/intro/intro-timeline.ts:113: em dash found -> // completes at card_t + 0.24 — the same frame the phrase finishes
+  - site/components/intro/intro-timeline.ts:141: em dash found -> // ── Beat 3: BEATROX finale — explosion converges into the logotype ────
+  - site/components/intro/intro-timeline.ts:156: em dash found -> // exactly as the hold ends — the handoff stays pixel-exact.
+  - site/components/intro/intro-timeline.ts:158: em dash found -> const HOLD = 2.3 // trimmed from 2.6 — keeps measured runtime ≤ ~11.8s
+  - site/components/intro/montage-images.ts:2: em dash found -> * Beat-2 montage imagery — one striking work-page image per brand-phrase
+  - site/components/intro/montage-images.ts:6: em dash found -> *      touchscreen kiosk — client-picked)
+  - site/components/payload/CalendarView.tsx:19: double hyphen as em dash found -> new: 'var(--theme-warning-500, #d97706)',
+  - site/components/payload/CalendarView.tsx:20: double hyphen as em dash found -> confirmed: 'var(--theme-success-500, #059669)',
+  - site/components/payload/CalendarView.tsx:21: double hyphen as em dash found -> cancelled: 'var(--theme-error-500, #dc2626)',
+  - site/components/payload/CalendarView.tsx:22: double hyphen as em dash found -> completed: 'var(--theme-text, #888)',
+  - site/components/payload/CalendarView.tsx:69: double hyphen as em dash found -> border: '1px solid var(--theme-elevation-150, #333)',
+  - site/components/payload/CalendarView.tsx:76: double hyphen as em dash found -> <div style={{ padding: 'var(--gutter-h, 24px)', color: 'var(--theme-text)', maxWidth: '1400px' }}>
+  - site/components/payload/CalendarView.tsx:143: em dash found -> title={`${type?.name || 'Consultation'} — ${booking.clientName} (${booking.status})`}
+  - site/components/payload/CalendarView.tsx:152: double hyphen as em dash found -> ? 'var(--theme-elevation-300, #555)'
+  - site/components/payload/CalendarView.tsx:153: double hyphen as em dash found -> : type?.color || 'var(--theme-success-600, #047857)',
+  - site/components/payload/CalendarView.tsx:185: double hyphen as em dash found -> border: '1px solid var(--theme-elevation-150, #333)',
+  - site/components/payload/dashboard/DashboardView.tsx:11: double hyphen as em dash found -> background: 'var(--theme-elevation-50, #1a1a1a)',
+  - site/components/payload/dashboard/DashboardView.tsx:12: double hyphen as em dash found -> border: '1px solid var(--theme-elevation-150, #333)',
+  - site/components/payload/dashboard/DashboardView.tsx:56: double hyphen as em dash found -> <path d={path} fill="none" stroke="var(--theme-success-500, #059669)" strokeWidth="2" />
+  - site/components/payload/dashboard/DashboardView.tsx:175: double hyphen as em dash found -> <div style={{ padding: 'var(--gutter-h, 24px)', color: 'var(--theme-text)', maxWidth: '1400px' }}>
+  - site/components/payload/dashboard/DashboardView.tsx:195: double hyphen as em dash found -> border: '1px solid var(--theme-elevation-150, #333)',
+  - site/components/payload/dashboard/DashboardView.tsx:233: em dash found -> <SectionTitle>Traffic — last 30 days</SectionTitle>
+  - site/components/payload/dashboard/DashboardView.tsx:281: em dash found -> <code>GA4_PRIVATE_KEY</code> — see <code>site/docs/GA4_SETUP.md</code>.
+  - site/components/payload/dashboard/DashboardView.tsx:285: em dash found -> {/* CRM first-touch attribution — independent of GA4. */}
+  - site/components/payload/dashboard/DashboardView.tsx:286: double hyphen as em dash found -> <div style={{ marginTop: '16px', borderTop: '1px solid var(--theme-elevation-150, #333)', paddingTop
+  - site/components/payload/dashboard/DashboardView.tsx:303: em dash found -> <SectionTitle>Upcoming consultations — next 7 days</SectionTitle>
+  - site/components/payload/dashboard/DashboardView.tsx:323: double hyphen as em dash found -> borderBottom: '1px solid var(--theme-elevation-150, #333)',
+  - site/components/payload/dashboard/DashboardView.tsx:357: double hyphen as em dash found -> background: 'var(--theme-elevation-150, #333)',
+  - site/components/payload/dashboard/DashboardView.tsx:365: double hyphen as em dash found -> background: 'var(--theme-success-500, #059669)',
+  - site/components/payload/dashboard/DashboardView.tsx:395: double hyphen as em dash found -> borderBottom: '1px solid var(--theme-elevation-150, #333)',
+  - site/components/work/BreakoutFigure.tsx:61: double hyphen as em dash found -> <span className="mono text-[10px] uppercase tracking-[0.24em] text-[var(--accent)] block mb-2">
+  - site/components/work/NextProjectFooter.tsx:44: double hyphen as em dash found -> <p className="mono text-[var(--accent)] uppercase tracking-[0.22em] mb-4">
+  - site/components/work/ProjectStats.tsx:15: em dash found -> /** lg column count per stat total (CMS maxRows is 4) — literal class names so Tailwind emits them. 
+  - site/components/work/ThemedProjectShell.tsx:12: em dash found -> * existing markup — including every Editable* wrapper and fieldPath — lives
+  - site/components/work/ThemedProjectShell.tsx:20: double hyphen as em dash found -> style={{ ...themeToCssVars(theme), backgroundColor: 'var(--bg-primary)' } as CSSProperties}
+  - site/components/work/engines/beams.ts:5: em dash found -> * beams — sweeping light beams, additive glow.
+  - site/components/work/engines/equalizer.ts:5: em dash found -> * equalizer — audio-style bars rising from the hero baseline.
+  - site/components/work/engines/gradientfog.ts:5: em dash found -> * gradientfog — slow-drifting radial gradient blobs, additive blend.
+  - site/components/work/engines/particles.ts:5: em dash found -> * particles — drifting motes, rain, embers, dust, stars.
+  - site/components/work/engines/pixelgrid.ts:5: em dash found -> * pixelgrid — LED-wall grid pulsing with travelling waves.
+  - site/components/work/engines/scansweep.ts:5: em dash found -> * scansweep — a scan line with a soft trailing gradient sweeping the hero,
+  - site/components/work/project-themes.ts:2: em dash found -> * Per-project theme registry — "17 projects, 17 identities".
+  - site/components/work/project-themes.ts:33: em dash found -> /** Colors, density, speed, direction — consumed by the engine factory */
+  - site/components/work/project-themes.ts:38: em dash found -> /** Fallback for any project without a registry entry — the current site look. */
+  - site/components/work/project-themes.ts:48: em dash found -> // Metaverse city — violet fog drifting over the skyline.
+  - site/components/work/project-themes.ts:55: em dash found -> // NewFronts stage orbs — teal LED pulse.
+  - site/components/work/project-themes.ts:62: em dash found -> // Election-night projection — signal red scan with static.
+  - site/components/work/project-themes.ts:69: em dash found -> // Cyc-wall projection stage — warm amber wash.
+  - site/components/work/project-themes.ts:76: em dash found -> // Journey's minimal silver — sparse monochrome chrome motes.
+  - site/components/work/project-themes.ts:83: em dash found -> // Medieval poison shop — torch embers rising.
+  - site/components/work/project-themes.ts:90: em dash found -> // Spherical theatre — desert gold orbital beams.
+  - site/components/work/project-themes.ts:97: em dash found -> // Desert noir — heat-dust amber drift.
+  - site/components/work/project-themes.ts:104: em dash found -> // Thermal history wall — infrared horizontal sweep.
+  - site/components/work/project-themes.ts:111: em dash found -> // C-HR teal light tunnel — radial beams from the vanishing point.
+  - site/components/work/project-themes.ts:118: em dash found -> // Amazon Music — violet equalizer along the hero base.
+  - site/components/work/project-themes.ts:125: em dash found -> // Foggy LED bodega — amber rain and tube glow.
+  - site/components/work/project-themes.ts:132: em dash found -> // Racing Extinction — oceanic projection sweep.
+  - site/components/work/project-themes.ts:139: em dash found -> // Adriatique X — crimson laser show.
+  - site/components/work/project-themes.ts:146: em dash found -> // Ocean LED tunnel — rolling wave grid.
+  - site/components/work/project-themes.ts:153: em dash found -> // Marble projection — limestone haze.
+  - site/components/work/project-themes.ts:160: em dash found -> // Escape vaults — slow steel-and-gold scan.
+  - site/content/contact.json:15: em dash found -> "subheadline": "We love to collaborate and amplify your voice. We put your message at the center of 
+  - site/content/homepage.json:94: em dash found -> "body": "From experiential design and creative technology to specialized production and custom fabri
+  - site/content/portfolio/flir.json:5: em dash found -> "title": "FLIR Interactive History Wall — BEATROX Interactive Media Display",
+  - site/content/portfolio/flir.json:6: em dash found -> "description": "Beatrox created an AI-powered interactive history wall for FLIR at their Washington 
+  - site/content/portfolio/flir.json:8: em dash found -> "title": "FLIR Interactive History Wall — Washington DC",
+  - site/content/portfolio/flir.json:9: em dash found -> "description": "A touch-free LIDAR and AI computer vision history wall at FLIR HQ — multiple users, 
+  - site/content/portfolio/flir.json:15: em dash found -> "subheadline": "A permanent interactive media installation at FLIR HQ in Washington DC — LIDAR body 
+  - site/content/portfolio/flir.json:24: em dash found -> "location": "FLIR Headquarters — Washington, DC",
+  - site/content/portfolio/flir.json:51: em dash found -> "content": "Inspired by Apple's iconic springboard app launcher in macOS, the interactive media disp
+  - site/content/rentals.json:6: em dash found -> "description": "Professional event equipment rentals in Portland, OR — LED video walls, sound system
+  - site/content/rentals.json:15: em dash found -> "subheadline": "Industry-grade LED walls, sound systems, DJ equipment, lighting, lasers, and backlin
+  - site/content/rentals.json:21: em dash found -> "description": "High-resolution LED panels for any footprint — indoor, outdoor, and custom configura
+  - site/content/rentals.json:53: em dash found -> "description": "Break the rectangle with custom LED configurations — curved walls, infinity mirror s
+  - site/content/rentals.json:121: em dash found -> "description": "Industry-standard DJ equipment for world-class performances — delivered, set up, and
+  - site/content/rentals.json:170: em dash found -> "description": "Touring-quality drum kits configured to artist riders. From jazz combos to heavy roc
+  - site/content/rentals.json:199: em dash found -> "description": "Complete lighting packages from design to operation — DMX rigs, LED washes, moving h
+  - site/content/rentals.json:238: em dash found -> "description": "High-power professional laser systems for indoor and outdoor events — fully programm
+  - site/content/services/3d-animation-motion-capture.json:6: em dash found -> "description": "3D animation and motion capture in Portland, OR — real-time avatars, character anima
+  - site/content/services/3d-animation-motion-capture.json:9: em dash found -> "description": "3D animation and motion capture in Portland, OR — real-time avatars, character anima
+  - site/content/services/3d-animation-motion-capture.json:15: em dash found -> "subheadline": "Characters, avatars, and motion that respond to real people in real time — we bring 
+  - site/content/services/3d-animation-motion-capture.json:36: em dash found -> "content": "3D animation for live events is content that moves with purpose — characters, particles,
+  - site/content/services/3d-animation-motion-capture.json:53: em dash found -> "content": "We build the full pipeline: character and asset creation in Blender and Unreal Engine, r
+  - site/content/services/3d-animation-motion-capture.json:59: em dash found -> "1. Creative Brief — We define the interaction, characters, and emotional goal",
+  - site/content/services/3d-animation-motion-capture.json:60: em dash found -> "2. Asset & Character Development — 3D models, rigs, and animation built to spec",
+  - site/content/services/3d-animation-motion-capture.json:61: em dash found -> "3. Tracking & Interaction Build — Motion capture, computer vision, and sensor integration",
+  - site/content/services/3d-animation-motion-capture.json:62: em dash found -> "4. Real-Time Testing — Latency, tracking stability, and throughput tuned with real users",
+  - site/content/services/3d-animation-motion-capture.json:63: em dash found -> "5. Deployment — Hardware and software installed and calibrated on site",
+  - site/content/services/3d-animation-motion-capture.json:64: em dash found -> "6. Live Operation — Staffed operation and monitoring for the full event run"
+  - site/content/services/3d-animation-motion-capture.json:85: em dash found -> "answer": "No. We use markerless depth-sensing systems like Microsoft Kinect Azure, so guests simply
+  - site/content/services/3d-animation-motion-capture.json:93: em dash found -> "answer": "It depends on the interaction length, but our systems are designed for continuous traffic
+  - site/content/services/3d-animation-motion-capture.json:97: em dash found -> "answer": "Usually, yes. We build digital takeaways — photos, clips, or avatar content — into most i
+  - site/content/services/audio-production.json:6: em dash found -> "description": "Audio production services in Portland, OR — A1/A2 mixing, FOH and monitor engineerin
+  - site/content/services/audio-production.json:9: em dash found -> "description": "Audio production services in Portland, OR — A1/A2 mixing, FOH and monitor engineerin
+  - site/content/services/audio-production.json:15: em dash found -> "subheadline": "Great shows are heard before they're seen. Beatrox engineers live audio — FOH and mo
+  - site/content/services/audio-production.json:36: em dash found -> "content": "Audio production is the engineering discipline behind what an audience hears — system de
+  - site/content/services/audio-production.json:54: em dash found -> "content": "Beatrox provides complete live audio production: system design and tuning, FOH and monit
+  - site/content/services/audio-production.json:60: em dash found -> "1. Advance — Rider review, input lists, venue acoustics, and coverage requirements",
+  - site/content/services/audio-production.json:61: em dash found -> "2. System Design & Tuning — PA spec'd, deployed, and tuned to the room before doors",
+  - site/content/services/audio-production.json:62: em dash found -> "3. RF Coordination — Spectrum scanned, frequencies assigned, interference monitored live",
+  - site/content/services/audio-production.json:63: em dash found -> "4. Soundcheck & Line Check — Every input verified, monitor worlds dialed per artist",
+  - site/content/services/audio-production.json:64: em dash found -> "5. Show Mixing — A1 on the room, A2 on stage, playback and comms in lockstep",
+  - site/content/services/audio-production.json:65: em dash found -> "6. Strike & Archive — Clean load-out with recordings and show files delivered"
+  - site/content/services/audio-production.json:72: em dash found -> "Festival-proven — Amazon Music Live performances at Outside Lands and Stagecoach 2023",
+  - site/content/services/audio-production.json:73: em dash found -> "Artist-trusted mixes — live sets from Phantogram to Mariah the Scientist",
+  - site/content/services/audio-production.json:74: em dash found -> "RF discipline — professional frequency coordination in congested festival and urban spectrum",
+  - site/content/services/audio-production.json:75: em dash found -> "Hard-room experience — intelligible audio in spaces like Moynihan Station's main hall",
+  - site/content/services/audio-production.json:76: em dash found -> "Audio engineered with the show — synced to projection and lighting at AKU World",
+  - site/content/services/audio-production.json:86: em dash found -> "answer": "Rental is the gear; production is the outcome. Audio production means engineers own the r
+  - site/content/services/audio-production.json:90: em dash found -> "answer": "Yes. We advance every show against the rider — console, microphones, monitor configuratio
+  - site/content/services/audio-production.json:98: em dash found -> "answer": "Yes. We run dedicated broadcast mixes where the stream is the primary audience — as we di
+  - site/content/services/av-content-design.json:6: em dash found -> "description": "Event content design in Portland, OR — custom video, motion graphics, spatial audio,
+  - site/content/services/av-content-design.json:9: em dash found -> "description": "Event content design in Portland, OR — custom video, motion graphics, spatial audio,
+  - site/content/services/av-content-design.json:15: em dash found -> "subheadline": "Custom media designed for your canvas — video, motion graphics, real-time visuals, a
+  - site/content/services/av-content-design.json:36: em dash found -> "content": "Content design is everything the audience sees and hears — the video on the LED wall, th
+  - site/content/services/av-content-design.json:54: em dash found -> "content": "We produce custom video and motion graphics, real-time and generative visuals, LED wall 
+  - site/content/services/av-content-design.json:60: em dash found -> "1. Canvas & Story Audit — We study your displays, playback systems, and narrative goals",
+  - site/content/services/av-content-design.json:61: em dash found -> "2. Creative Direction — Style frames and animatics establish the visual language",
+  - site/content/services/av-content-design.json:62: em dash found -> "3. Content Production — Video, motion graphics, audio, and lighting looks built to spec",
+  - site/content/services/av-content-design.json:63: em dash found -> "4. Technical Formatting — Media rendered to exact pixel maps and playback specs",
+  - site/content/services/av-content-design.json:64: em dash found -> "5. Playback Programming — Media servers, timecode, and cue stacks configured",
+  - site/content/services/av-content-design.json:65: em dash found -> "6. Show Operation — Rehearsed, operated, and supported live on event day"
+  - site/content/services/av-content-design.json:72: em dash found -> "Real-time content systems — LIDAR-driven flocking and fluid simulations for Adidas x Parley",
+  - site/content/services/av-content-design.json:75: em dash found -> "Brand-language design — FLIR's Iron Bow thermal gradient as a complete visual system",
+  - site/content/services/av-content-design.json:86: em dash found -> "answer": "Yes — real-time content is a specialty. We build generative and interactive visuals in To
+  - site/content/services/av-content-design.json:90: em dash found -> "answer": "We do. Content design and media server playback programming go together — we configure th
+  - site/content/services/av-content-design.json:94: em dash found -> "answer": "Absolutely. We lock content to timecode and show calling for concerts, broadcasts, and ru
+  - site/content/services/av-equipment-sourcing-rentals.json:6: em dash found -> "description": "AV equipment rentals in Portland, OR — LED walls, projection, audio, and media serve
+  - site/content/services/av-equipment-sourcing-rentals.json:9: em dash found -> "description": "AV equipment rentals in Portland, OR — LED walls, projection, audio, and media serve
+  - site/content/services/av-equipment-sourcing-rentals.json:15: em dash found -> "subheadline": "The right gear, from the right vendors, engineered into a complete system — LED vide
+  - site/content/services/av-equipment-sourcing-rentals.json:36: em dash found -> "content": "AV equipment sourcing is the process of specifying, renting, and integrating the technic
+  - site/content/services/av-equipment-sourcing-rentals.json:54: em dash found -> "content": "We start with the creative and technical requirements, then spec the full system — proje
+  - site/content/services/av-equipment-sourcing-rentals.json:60: em dash found -> "1. Discovery — We define the creative goals and technical requirements",
+  - site/content/services/av-equipment-sourcing-rentals.json:61: em dash found -> "2. System Design — Full AV spec with power, signal, and redundancy plans",
+  - site/content/services/av-equipment-sourcing-rentals.json:62: em dash found -> "3. Sourcing — Quotes, vendor holds, and rental contracts secured",
+  - site/content/services/av-equipment-sourcing-rentals.json:63: em dash found -> "4. Prep & Test — Equipment prepped, configured, and bench-tested",
+  - site/content/services/av-equipment-sourcing-rentals.json:64: em dash found -> "5. Install & Operate — Delivery, setup, show operation, and strike",
+  - site/content/services/av-equipment-sourcing-rentals.json:65: em dash found -> "6. Reconcile — Returns, sub-rental closeout, and final cost reporting"
+  - site/content/services/av-equipment-sourcing-rentals.json:75: em dash found -> "One team designs, sources, and operates — no gap between spec and show",
+  - site/content/services/av-equipment-sourcing-rentals.json:86: em dash found -> "answer": "Yes. We can supply individual systems — an LED wall, a projection package, a PA — with or
+  - site/content/services/av-equipment-sourcing-rentals.json:94: em dash found -> "answer": "Every package we build includes redundancy planning — spare processors, backup playback, 
+  - site/content/services/av-system-integration.json:6: em dash found -> "description": "AV system integration in Portland, OR — audio, video, lighting, and control unified 
+  - site/content/services/av-system-integration.json:9: em dash found -> "description": "AV system integration in Portland, OR — audio, video, lighting, and control unified 
+  - site/content/services/av-system-integration.json:15: em dash found -> "subheadline": "Audio, video, lighting, and control unified into one reliable system — designed, ins
+  - site/content/services/av-system-integration.json:36: em dash found -> "content": "AV system integration is the work of making separate technologies behave as one system —
+  - site/content/services/av-system-integration.json:54: em dash found -> "content": "BEATROX integrates the full technical stack: system design and specification, signal flo
+  - site/content/services/av-system-integration.json:60: em dash found -> "1. Discovery — We map the experience goals, venue, and every system in scope",
+  - site/content/services/av-system-integration.json:61: em dash found -> "2. System Design — Signal flow, network architecture, and equipment are specified as one design",
+  - site/content/services/av-system-integration.json:62: em dash found -> "3. Build & Pre-Rig — Racks, cable, and control surfaces are assembled and tested off-site",
+  - site/content/services/av-system-integration.json:63: em dash found -> "4. Installation — Infrastructure is installed, terminated, and labeled on site",
+  - site/content/services/av-system-integration.json:64: em dash found -> "5. Commissioning — Systems are calibrated, cues are programmed, and failover is tested",
+  - site/content/services/av-system-integration.json:65: em dash found -> "6. Handover & Support — Operators are trained and documentation is delivered with ongoing support"
+  - site/content/services/av-system-integration.json:75: em dash found -> "One team spanning design, fabrication, and technical — integration without handoffs",
+  - site/content/services/av-system-integration.json:86: em dash found -> "answer": "Rental gets you equipment; integration gets you a system. Integration covers the design, 
+  - site/content/services/av-system-integration.json:94: em dash found -> "answer": "Both. Permanent work adds long-term requirements — maintenance access, monitoring, docume
+  - site/content/services/backline-stage-rental.json:6: em dash found -> "description": "Backline and stage rental in Portland, OR — drum kits, amplifiers, keyboards, and fu
+  - site/content/services/backline-stage-rental.json:9: em dash found -> "description": "Backline and stage rental in Portland, OR — drum kits, amplifiers, keyboards, and fu
+  - site/content/services/backline-stage-rental.json:15: em dash found -> "subheadline": "Professional-grade backline and stage packages — so your artists hit the stage ready
+  - site/content/services/backline-stage-rental.json:35: em dash found -> "content": "Beatrox's backline and stage rental service is built for touring acts, festivals, and on
+  - site/content/services/backline-stage-rental.json:51: em dash found -> "1. Discovery Call — We learn your vision, venue, and budget",
+  - site/content/services/backline-stage-rental.json:52: em dash found -> "2. Design & Pre-Visualization — See your event before it happens",
+  - site/content/services/backline-stage-rental.json:53: em dash found -> "3. Equipment & Crew — We source everything and assign the right team",
+  - site/content/services/backline-stage-rental.json:54: em dash found -> "4. On-Site Execution — Professional setup, operation, and strike",
+  - site/content/services/backline-stage-rental.json:55: em dash found -> "5. Post-Event Review — We ensure everything exceeded expectations"
+  - site/content/services/backline-stage-rental.json:77: em dash found -> "content": "We know that a backline package is only as good as its match to the artist's rider. Our 
+  - site/content/services/backline-stage-rental.json:82: em dash found -> "content": "For touring acts, we build repeatable, road-ready packages that maintain consistency acr
+  - site/content/services/backline-stage-rental.json:118: em dash found -> "answer": "Absolutely. We build road-ready, repeatable touring packages with matched gear, road case
+  - site/content/services/cnc-machining.json:6: em dash found -> "description": "CNC machining in Portland, OR — precision-cut acrylic, wood, and composite parts for
+  - site/content/services/cnc-machining.json:9: em dash found -> "description": "CNC machining in Portland, OR — precision-cut acrylic, wood, and composite parts for
+  - site/content/services/cnc-machining.json:36: em dash found -> "content": "CNC machining uses computer-controlled cutting tools to turn digital designs into physic
+  - site/content/services/cnc-machining.json:54: em dash found -> "content": "Beatrox provides CNC machining as part of our in-house fabrication capability: CAD-to-ma
+  - site/content/services/cnc-machining.json:60: em dash found -> "1. Design & File Prep — We develop or refine CAD files with machining and assembly in mind",
+  - site/content/services/cnc-machining.json:61: em dash found -> "2. Material Selection — Substrates chosen for the environment, finish, and budget",
+  - site/content/services/cnc-machining.json:62: em dash found -> "3. Machining — Parts are cut, checked against tolerance, and labeled for assembly",
+  - site/content/services/cnc-machining.json:63: em dash found -> "4. Finishing — Edges, surfaces, paint, and brand detailing completed in-house",
+  - site/content/services/cnc-machining.json:64: em dash found -> "5. Test-Fit — Components are dry-fit with their mating parts before leaving the shop",
+  - site/content/services/cnc-machining.json:65: em dash found -> "6. Delivery & Install — Kitted, labeled parts make on-site assembly fast and error-free"
+  - site/content/services/cnc-machining.json:72: em dash found -> "Precision installation work for FLIR — sensor and display housings in a permanent HQ environment",
+  - site/content/services/cnc-machining.json:86: em dash found -> "answer": "We machine acrylic, wood, and composite sheet goods — the core materials of scenic, signa
+  - site/content/services/cnc-machining.json:90: em dash found -> "answer": "Yes. We accept client CAD files and also develop machining-ready files in-house — either 
+  - site/content/services/cnc-machining.json:94: em dash found -> "answer": "Both. CNC is ideal for one-off prototypes, but its real power is repeatability — once the
+  - site/content/services/cnc-machining.json:98: em dash found -> "answer": "It can be, but it's most valuable integrated — when machining, fabrication, electronics, 
+  - site/content/services/consultation-system-design.json:6: em dash found -> "description": "Event system design consultation in Portland, OR — expert AV, lighting, and interact
+  - site/content/services/consultation-system-design.json:9: em dash found -> "description": "Event system design consultation in Portland, OR — expert AV, lighting, and interact
+  - site/content/services/consultation-system-design.json:15: em dash found -> "subheadline": "Before you buy, rent, or build — get a system designed to actually work. We engineer
+  - site/content/services/consultation-system-design.json:36: em dash found -> "content": "Consultation and system design is the thinking that happens before the spending — and Be
+  - site/content/services/consultation-system-design.json:53: em dash found -> "content": "Our consultation deliverables include system architecture diagrams, equipment schedules,
+  - site/content/services/consultation-system-design.json:59: em dash found -> "1. Discovery — We learn your goals, space, users, and budget reality",
+  - site/content/services/consultation-system-design.json:60: em dash found -> "2. Feasibility & Options — Approaches compared with honest cost and risk tradeoffs",
+  - site/content/services/consultation-system-design.json:61: em dash found -> "3. System Design — Architecture, equipment schedules, and signal flow documented",
+  - site/content/services/consultation-system-design.json:62: em dash found -> "4. Budget & Roadmap — Phased plans that match your funding and timeline",
+  - site/content/services/consultation-system-design.json:63: em dash found -> "5. Procurement & Build Support — Vendor selection, bid review, and installation oversight",
+  - site/content/services/consultation-system-design.json:64: em dash found -> "6. Commissioning & Handover — Testing, training, documentation, and maintenance plan"
+  - site/content/services/consultation-system-design.json:73: em dash found -> "Vendor-neutral recommendations — we spec what's right, not what we rent",
+  - site/content/services/consultation-system-design.json:75: em dash found -> "One team can consult, design, build, and operate — or hand off cleanly",
+  - site/content/services/consultation-system-design.json:85: em dash found -> "answer": "No. We're happy to consult independently — many clients take our system designs to bid or
+  - site/content/services/consultation-system-design.json:97: em dash found -> "answer": "Absolutely. Second-opinion reviews of vendor proposals are one of the fastest ways we sav
+  - site/content/services/custom-fabrication.json:6: em dash found -> "description": "Custom fabrication in Portland, OR — one-of-a-kind structures, scenic elements, and 
+  - site/content/services/custom-fabrication.json:9: em dash found -> "description": "Custom fabrication in Portland, OR — one-of-a-kind structures, scenic elements, and 
+  - site/content/services/custom-fabrication.json:26: em dash found -> "Mixed-Material Builds — Wood, Metal, Acrylic",
+  - site/content/services/custom-fabrication.json:37: em dash found -> "content": "Custom fabrication is the process of designing and building physical elements that can't
+  - site/content/services/custom-fabrication.json:55: em dash found -> "content": "Beatrox handles the full fabrication arc in-house: design development, engineering, shop
+  - site/content/services/custom-fabrication.json:61: em dash found -> "1. Discovery — We learn the creative vision, environment, load requirements, and budget",
+  - site/content/services/custom-fabrication.json:62: em dash found -> "2. Design Development — Concepts become pre-visualizations and material plans you can approve",
+  - site/content/services/custom-fabrication.json:63: em dash found -> "3. Engineering & Shop Drawings — Every build is drawn, detailed, and checked before a cut is made",
+  - site/content/services/custom-fabrication.json:64: em dash found -> "4. Fabrication & Prototyping — We build, test mechanisms, and verify fit in the shop first",
+  - site/content/services/custom-fabrication.json:65: em dash found -> "5. Finishing & QA — Surfaces, paint, and brand detailing are completed to spec",
+  - site/content/services/custom-fabrication.json:66: em dash found -> "6. Delivery & Install — Our team transports, assembles, and strikes the build on site"
+  - site/content/services/custom-fabrication.json:73: em dash found -> "Proven at festival scale — the 40-foot Destination canvas structure for Journey's x Adidas",
+  - site/content/services/custom-fabrication.json:74: em dash found -> "Permanent-installation grade — the FLIR history wall engineered for years of low-maintenance operat
+  - site/content/services/custom-fabrication.json:95: em dash found -> "answer": "Both. We build one-of-a-kind hero pieces as well as repeatable kits — for example, activa
+  - site/content/services/custom-fabrication.json:99: em dash found -> "answer": "Yes. Our builds have been delivered and installed across the country — from San Diego fes
+  - site/content/services/dj-equipment-rentals.json:6: em dash found -> "description": "DJ equipment rental in Portland, OR — Pioneer CDJ-3000s, DJM mixers, and full booth 
+  - site/content/services/dj-equipment-rentals.json:9: em dash found -> "description": "DJ equipment rental in Portland, OR — Pioneer CDJ-3000s, DJM mixers, and full booth 
+  - site/content/services/dj-equipment-rentals.json:15: em dash found -> "subheadline": "Industry-standard DJ equipment for world-class performances — delivered, set up, and
+  - site/content/services/dj-equipment-rentals.json:41: em dash found -> "Rider-exact packages — CDJ-3000, DJM-900NXS2, and Technics SL-1200 systems matched to spec",
+  - site/content/services/dj-equipment-rentals.json:42: em dash found -> "Backup units on site at every event — duplicate CDJs, mixers, and cables for zero downtime",
+  - site/content/services/dj-equipment-rentals.json:43: em dash found -> "Custom DJ booths designed and fabricated in-house — LED facades and branded wraps",
+  - site/content/services/dj-equipment-rentals.json:45: em dash found -> "Festival-deployed — DJ rigs for Amazon Music Live activations at Outside Lands and Stagecoach",
+  - site/content/services/dj-equipment-rentals.json:53: em dash found -> "1. Rider & Spec Review — We match exact models and firmware versions the artist requires",
+  - site/content/services/dj-equipment-rentals.json:54: em dash found -> "2. Package Configuration — Players, mixer, monitors, booth, and cabling assembled",
+  - site/content/services/dj-equipment-rentals.json:55: em dash found -> "3. Bench Test — Every unit and connection verified, media compatibility confirmed",
+  - site/content/services/dj-equipment-rentals.json:56: em dash found -> "4. Delivery & Setup — Booth placed, rig integrated with house audio and visuals",
+  - site/content/services/dj-equipment-rentals.json:57: em dash found -> "5. Show Support — Tech on site with backup units staged and ready",
+  - site/content/services/dj-equipment-rentals.json:58: em dash found -> "6. Strike & Return — Gear struck, inspected, and back in rotation same night"
+  - site/content/services/dj-equipment-rentals.json:80: em dash found -> "content": "The DJ booth is the visual centerpiece of any event. We offer custom booth designs rangi
+  - site/content/services/dj-equipment-rentals.json:85: em dash found -> "content": "We take artist riders seriously. Every DJ package is configured to match the exact model
+  - site/content/services/dj-equipment-rentals.json:117: em dash found -> "answer": "Yes. We design and fabricate custom DJ booths with LED integration, branded facades, and 
+  - site/content/services/drafting-detail-drawings.json:6: em dash found -> "description": "Drafting and detail drawings in Portland, OR — construction documents, fabrication s
+  - site/content/services/drafting-detail-drawings.json:9: em dash found -> "description": "Drafting and detail drawings in Portland, OR — construction documents, fabrication s
+  - site/content/services/drafting-detail-drawings.json:36: em dash found -> "content": "Drafting is how an idea becomes a set of instructions — and from our Portland, Oregon st
+  - site/content/services/drafting-detail-drawings.json:54: em dash found -> "content": "BEATROX produces full drafting packages in industry-standard CAD workflows: dimensioned 
+  - site/content/services/drafting-detail-drawings.json:60: em dash found -> "1. Brief & Survey — We gather creative intent, site dimensions, and venue constraints",
+  - site/content/services/drafting-detail-drawings.json:61: em dash found -> "2. Design Development — Concepts are modeled and resolved into buildable geometry",
+  - site/content/services/drafting-detail-drawings.json:62: em dash found -> "3. Drafting — Plans, sections, elevations, and detail views are produced and checked",
+  - site/content/services/drafting-detail-drawings.json:63: em dash found -> "4. Coordination — Drawings are shared with engineers, fabricators, and vendors for review",
+  - site/content/services/drafting-detail-drawings.json:64: em dash found -> "5. Issue & Revisions — Approved construction documents are released; changes are tracked",
+  - site/content/services/drafting-detail-drawings.json:65: em dash found -> "6. As-Builts — Final documentation reflects what was actually installed"
+  - site/content/services/drafting-detail-drawings.json:75: em dash found -> "Drafters who work beside our fabrication and technical teams — drawings that build",
+  - site/content/services/drafting-detail-drawings.json:86: em dash found -> "answer": "We work in standard CAD and 3D modeling tools — including Rhino3D and SolidWorks for comp
+  - site/content/services/drafting-detail-drawings.json:94: em dash found -> "answer": "They do. Our drafting packages are produced with engineering review in mind — loads, conn
+  - site/content/services/drone-light-shows.json:6: em dash found -> "description": "Drone light shows in Portland, OR — custom choreographed formations with full FAA co
+  - site/content/services/drone-light-shows.json:9: em dash found -> "description": "Drone light shows in Portland, OR — custom choreographed formations with full FAA co
+  - site/content/services/drone-light-shows.json:15: em dash found -> "subheadline": "Hundreds of synchronized drones painting the night sky with your story — a breathtak
+  - site/content/services/drone-light-shows.json:35: em dash found -> "content": "Drone light shows are the most awe-inspiring spectacle in live events today. Beatrox — t
+  - site/content/services/drone-light-shows.json:41: em dash found -> "Specialist-led — shows designed with Alan Curtiss, owner of Sky Lites Drone Shows",
+  - site/content/services/drone-light-shows.json:42: em dash found -> "Full FAA pipeline handled in-house — Part 107 waivers, airspace authorization, NOTAMs",
+  - site/content/services/drone-light-shows.json:43: em dash found -> "Custom choreography to your brand — logos, messages, and story-driven formations",
+  - site/content/services/drone-light-shows.json:53: em dash found -> "1. Creative Brief — Story, brand assets, venue, and viewing distances defined",
+  - site/content/services/drone-light-shows.json:54: em dash found -> "2. Formation Design & Pre-Visualization — Your show choreographed and rendered in 3D",
+  - site/content/services/drone-light-shows.json:55: em dash found -> "3. Regulatory Approval — FAA waivers, airspace authorization, and NOTAM filings secured",
+  - site/content/services/drone-light-shows.json:56: em dash found -> "4. Site Survey & Safety Planning — Launch zone, geofencing, and crowd separation confirmed",
+  - site/content/services/drone-light-shows.json:57: em dash found -> "5. Show Operation — Certified pilots execute the choreographed flight live",
+  - site/content/services/drone-light-shows.json:58: em dash found -> "6. Recovery & Review — Fleet recovered, airspace released, and footage delivered"
+  - site/content/services/drone-light-shows.json:81: em dash found -> "content": "Every drone light show requires FAA coordination. Beatrox handles the entire regulatory 
+  - site/content/services/drone-light-shows.json:86: em dash found -> "content": "Drone shows work in both environments with different considerations. Outdoor shows offer
+  - site/content/services/drone-light-shows.json:96: em dash found -> "content": "A drone show is a billboard the size of a skyline — but only if it's designed for the au
+  - site/content/services/engineering-certification.json:6: em dash found -> "description": "Engineering certification in Portland, OR — load analysis, stamped drawings, and ven
+  - site/content/services/engineering-certification.json:9: em dash found -> "description": "Engineering certification in Portland, OR — load analysis, stamped drawings, and ven
+  - site/content/services/engineering-certification.json:15: em dash found -> "subheadline": "Structural analysis and stamped engineering documentation that gets ambitious builds
+  - site/content/services/engineering-certification.json:36: em dash found -> "content": "Engineering certification is the formal verification that a structure is safe to build, 
+  - site/content/services/engineering-certification.json:54: em dash found -> "content": "BEATROX manages the full certification path: we prepare the calculation packages and dra
+  - site/content/services/engineering-certification.json:60: em dash found -> "1. Design Review — We assess the concept for structural risk and certification scope",
+  - site/content/services/engineering-certification.json:61: em dash found -> "2. Load Analysis — Dead, live, rigging, and environmental loads are calculated",
+  - site/content/services/engineering-certification.json:62: em dash found -> "3. Documentation — Calculation packages and detail drawings are prepared for review",
+  - site/content/services/engineering-certification.json:63: em dash found -> "4. Engineer Coordination — A licensed engineer reviews, stamps, and signs off",
+  - site/content/services/engineering-certification.json:64: em dash found -> "5. Submittal — Stamped packages go to venues, fire marshals, and authorities",
+  - site/content/services/engineering-certification.json:65: em dash found -> "6. Build Verification — On-site checks confirm the build matches the approved documents"
+  - site/content/services/engineering-certification.json:75: em dash found -> "Design, drafting, fabrication, and engineering under one roof — no handoff gaps",
+  - site/content/services/engineering-certification.json:86: em dash found -> "answer": "Not every one — but most venues require stamped documents for flown elements, tall freest
+  - site/content/services/engineering-certification.json:90: em dash found -> "answer": "It depends on complexity, but plan on two to four weeks from final drawings to stamped do
+  - site/content/services/engineering-certification.json:98: em dash found -> "answer": "We do. Outdoor builds — like festival structures — require wind and environmental load an
+  - site/content/services/environmental-design.json:6: em dash found -> "description": "Environmental design in Portland, OR — spatial layouts, scenic elements, and branded
+  - site/content/services/environmental-design.json:9: em dash found -> "description": "Environmental design in Portland, OR — spatial layouts, scenic elements, and branded
+  - site/content/services/environmental-design.json:15: em dash found -> "subheadline": "We shape how a space works — layouts, scenic elements, materials, and guest flow des
+  - site/content/services/environmental-design.json:36: em dash found -> "content": "Environmental design is the discipline of shaping a physical space into a coherent, bran
+  - site/content/services/environmental-design.json:54: em dash found -> "content": "Our environmental design work starts with the story your space needs to tell, then works
+  - site/content/services/environmental-design.json:60: em dash found -> "1. Discovery — Brand story, goals, audience, and venue constraints",
+  - site/content/services/environmental-design.json:61: em dash found -> "2. Concept Development — Mood boards, spatial concepts, and guest-flow narratives",
+  - site/content/services/environmental-design.json:62: em dash found -> "3. Design Development — Layouts, material palettes, and scenic documentation",
+  - site/content/services/environmental-design.json:63: em dash found -> "4. Pre-Visualization — The environment rendered and approved before anything is built",
+  - site/content/services/environmental-design.json:64: em dash found -> "5. Build & Install — Our fabrication and technical teams execute the design on site",
+  - site/content/services/environmental-design.json:65: em dash found -> "6. Support & Strike — Maintained through the run and removed cleanly"
+  - site/content/services/environmental-design.json:72: em dash found -> "Exhibition-grade work — the El Camino Comic-Con build for Netflix in New York",
+  - site/content/services/environmental-design.json:74: em dash found -> "Outdoor public-space experience — the Destination festival site at Horton Plaza Park",
+  - site/content/services/environmental-design.json:75: em dash found -> "Design, fabrication, and technical production under one roof — no handoff gaps",
+  - site/content/services/environmental-design.json:94: em dash found -> "answer": "Ideally 8–12 weeks before load-in. Design decisions drive fabrication lead times, equipme
+  - site/content/services/environmental-design.json:98: em dash found -> "answer": "Yes. We plan the spatial and scenic foundation so media, lighting, and interactive system
+  - site/content/services/event-planning-logistics.json:6: em dash found -> "description": "Event planning and logistics in Portland, OR — timelines, vendors, freight, and on-s
+  - site/content/services/event-planning-logistics.json:9: em dash found -> "description": "Event planning and logistics in Portland, OR — timelines, vendors, freight, and on-s
+  - site/content/services/event-planning-logistics.json:15: em dash found -> "subheadline": "End-to-end event planning and logistics for brand activations, festivals, and experi
+  - site/content/services/event-planning-logistics.json:36: em dash found -> "content": "Event planning and logistics is the discipline that turns a creative concept into a func
+  - site/content/services/event-planning-logistics.json:54: em dash found -> "content": "We act as the connective tissue across your entire production. Our team builds the maste
+  - site/content/services/event-planning-logistics.json:60: em dash found -> "1. Discovery — We map your goals, dates, venues, and constraints",
+  - site/content/services/event-planning-logistics.json:61: em dash found -> "2. Planning — Master timeline, budget framework, and vendor list",
+  - site/content/services/event-planning-logistics.json:62: em dash found -> "3. Coordination — Contracts, freight, crew, and site logistics locked in",
+  - site/content/services/event-planning-logistics.json:63: em dash found -> "4. Load-In — Scheduled, supervised build with daily checkpoints",
+  - site/content/services/event-planning-logistics.json:64: em dash found -> "5. Execution — Run-of-show management from doors to final cue",
+  - site/content/services/event-planning-logistics.json:65: em dash found -> "6. Strike & Wrap — Load-out, vendor closeout, and post-event review"
+  - site/content/services/event-planning-logistics.json:77: em dash found -> "In-house design, build, and technical teams — fewer handoffs, fewer surprises"
+  - site/content/services/event-planning-logistics.json:86: em dash found -> "answer": "For most experiential events we recommend engaging 8–12 weeks out; large festivals or mul
+  - site/content/services/event-planning-logistics.json:90: em dash found -> "answer": "Yes. We design scenic elements with transport in mind, crate them for safe freight, and m
+  - site/content/services/event-production.json:6: em dash found -> "description": "Full-service event production company in Portland, OR — planning, AV, logistics, lab
+  - site/content/services/event-production.json:9: em dash found -> "description": "Full-service event production company in Portland, OR — planning, AV, logistics, lab
+  - site/content/services/event-production.json:15: em dash found -> "subheadline": "From first concept to final strike, we manage every layer of your event — so you can
+  - site/content/services/event-production.json:35: em dash found -> "content": "Beatrox is a full-service event production company headquartered in Portland, Oregon, se
+  - site/content/services/event-production.json:41: em dash found -> "Produced BuzzFeed's 2016 NewFronts at Moynihan Station — custom stage, mapped orbs, and full show o
+  - site/content/services/event-production.json:44: em dash found -> "Full-service team from design to strike — one accountable point of contact",
+  - site/content/services/event-production.json:53: em dash found -> "1. Discovery & Advance — Vision, venue, budget, rider, and run-of-show requirements",
+  - site/content/services/event-production.json:54: em dash found -> "2. Production Design — Floor plans, pre-visualization, and technical plots approved up front",
+  - site/content/services/event-production.json:55: em dash found -> "3. Logistics & Staffing — Equipment sourced, crew roles assigned, permits submitted",
+  - site/content/services/event-production.json:56: em dash found -> "4. Load-In & Rehearsal — Systems installed, tested, and run before doors open",
+  - site/content/services/event-production.json:57: em dash found -> "5. Show Execution — TD, PM, and department heads operating every cue live",
+  - site/content/services/event-production.json:58: em dash found -> "6. Strike & Wrap — Clean load-out, venue handoff, and post-event review"
+  - site/content/services/event-production.json:85: em dash found -> "content": "Successful events depend on tight venue coordination. We create detailed production time
+  - site/content/services/experiential-events.json:6: em dash found -> "description": "Experiential marketing agency in Portland, OR — immersive brand activations and live
+  - site/content/services/experiential-events.json:9: em dash found -> "description": "Experiential marketing agency in Portland, OR — immersive brand activations and live
+  - site/content/services/experiential-events.json:36: em dash found -> "content": "An experiential event is a brand made physical — and as an experiential marketing agency
+  - site/content/services/experiential-events.json:54: em dash found -> "content": "Beatrox produces experiential events end to end: creative concepting, environmental and 
+  - site/content/services/experiential-events.json:60: em dash found -> "1. Discovery — Brand goals, audience, footprint, and success metrics",
+  - site/content/services/experiential-events.json:61: em dash found -> "2. Concept & Experience Design — The guest journey mapped moment by moment",
+  - site/content/services/experiential-events.json:62: em dash found -> "3. Technical Design & Pre-Visualization — Interactive systems, renders, and floor plans approved up
+  - site/content/services/experiential-events.json:63: em dash found -> "4. Fabrication & Content Production — Builds, media, and software developed in parallel",
+  - site/content/services/experiential-events.json:64: em dash found -> "5. On-Site Production — Install, rehearsals, staffing, and live operation",
+  - site/content/services/experiential-events.json:65: em dash found -> "6. Strike & Reporting — Clean removal plus the content and metrics your team needs"
+  - site/content/services/experiential-events.json:72: em dash found -> "Festival-proven — Amazon Music Live activations at Outside Lands and Stagecoach 2023",
+  - site/content/services/experiential-events.json:73: em dash found -> "Marquee-weekend experience — the Adidas VIP headquarters at Super Bowl 2020 in Miami",
+  - site/content/services/experiential-events.json:75: em dash found -> "Multi-room scale — AKU World's projection-mapped rooms, body scanner, and holographic displays",
+  - site/content/services/experiential-events.json:76: em dash found -> "Interaction engineers — AR mirrors, LIDAR tracking, and real-time simulation built in-house",
+  - site/content/services/experiential-events.json:77: em dash found -> "Design, fabrication, and operations under one roof — no handoff gaps"
+  - site/content/services/experiential-events.json:90: em dash found -> "answer": "Yes — our activations have run in Miami, New York, San Francisco, Indio, and Los Angeles.
+  - site/content/services/experiential-events.json:94: em dash found -> "answer": "That's one of our signatures. AR mirrors, custom photo booths, and motion-captured moment
+  - site/content/services/experiential-events.json:98: em dash found -> "answer": "Everything. Projection mapping, LED, sensors, real-time simulation, audio, and lighting a
+  - site/content/services/immersive-environments.json:6: em dash found -> "description": "Immersive environments in Portland, OR — projection mapping, spatial audio, LED, and
+  - site/content/services/immersive-environments.json:9: em dash found -> "description": "Immersive environments in Portland, OR — projection mapping, spatial audio, LED, and
+  - site/content/services/immersive-environments.json:28: em dash found -> "Atmospheric Effects — Fog, Haze, Scent",
+  - site/content/services/immersive-environments.json:36: em dash found -> "content": "An immersive environment is a space that stops behaving like a room — and Beatrox design
+  - site/content/services/immersive-environments.json:54: em dash found -> "content": "Beatrox designs and builds immersive environments end to end: spatial concept, surface a
+  - site/content/services/immersive-environments.json:60: em dash found -> "1. Discovery — Story, audience journey, and the physical constraints of the space",
+  - site/content/services/immersive-environments.json:61: em dash found -> "2. World Design — Spatial concepts, surface maps, and sensory layering defined",
+  - site/content/services/immersive-environments.json:62: em dash found -> "3. Pre-Visualization — Guests' views rendered and approved before build-out",
+  - site/content/services/immersive-environments.json:63: em dash found -> "4. Systems Integration — Projection, LED, audio, sensors, and atmospherics unified",
+  - site/content/services/immersive-environments.json:64: em dash found -> "5. Calibration & Tuning — Content aligned to real geometry, audio tuned to the room",
+  - site/content/services/immersive-environments.json:65: em dash found -> "6. Operation & Support — Run, maintained, and struck by the team that built it"
+  - site/content/services/immersive-environments.json:74: em dash found -> "Multi-room scale — AKU World's projection-mapped main room, subway lobby, and holographic gallery",
+  - site/content/services/immersive-environments.json:75: em dash found -> "Interaction built in — LIDAR, motion tracking, and audio-reactive systems programmed in-house",
+  - site/content/services/immersive-environments.json:76: em dash found -> "Hidden-infrastructure discipline — projectors, sensors, and cabling disappear into the scenery",
+  - site/content/services/immersive-environments.json:86: em dash found -> "answer": "Smaller than you'd think. MyShelter was a narrow, shuttered bodega previously used to sto
+  - site/content/services/immersive-environments.json:90: em dash found -> "answer": "Yes — interaction is one of our core tools. Scanning LIDAR, motion capture, and audio-rea
+  - site/content/services/immersive-environments.json:94: em dash found -> "answer": "Absolutely. Most of our environments are temporary — a festival weekend, a launch week, a
+  - site/content/services/immersive-environments.json:98: em dash found -> "answer": "We do. The team that builds the environment stays to run it — media servers, sensors, aud
+  - site/content/services/interactive-ui-ux-design.json:6: em dash found -> "description": "Interactive UI/UX design in Portland, OR — touch, motion, and sensor interfaces buil
+  - site/content/services/interactive-ui-ux-design.json:9: em dash found -> "description": "Interactive UI/UX design in Portland, OR — touch, motion, and sensor interfaces buil
+  - site/content/services/interactive-ui-ux-design.json:15: em dash found -> "subheadline": "Interfaces designed for crowds, not desks — touch, motion, and sensor experiences th
+  - site/content/services/interactive-ui-ux-design.json:36: em dash found -> "content": "Interactive UI/UX design for events is a different discipline from app or web design — o
+  - site/content/services/interactive-ui-ux-design.json:53: em dash found -> "content": "We design the complete interaction layer: UX flows mapped to real guest journeys, interf
+  - site/content/services/interactive-ui-ux-design.json:59: em dash found -> "1. Guest Journey Mapping — We define who interacts, where, and for how long",
+  - site/content/services/interactive-ui-ux-design.json:60: em dash found -> "2. UX Flows & Wireframes — Interaction paths designed for speed and clarity",
+  - site/content/services/interactive-ui-ux-design.json:61: em dash found -> "3. Visual & Motion Design — On-brand interfaces prototyped in Figma",
+  - site/content/services/interactive-ui-ux-design.json:62: em dash found -> "4. Interactive Prototyping — Real builds tested with real users and sensors",
+  - site/content/services/interactive-ui-ux-design.json:63: em dash found -> "5. Integration — UI married to hardware, sensors, and media systems",
+  - site/content/services/interactive-ui-ux-design.json:64: em dash found -> "6. On-Site Refinement — Final tuning against real crowd behavior at the event"
+  - site/content/services/interactive-ui-ux-design.json:89: em dash found -> "answer": "Yes. We design within your brand system — typography, color, motion language — so the exp
+  - site/content/services/interactive-ui-ux-design.json:93: em dash found -> "answer": "We do. Our UI/UX designers work directly with our TouchDesigner and software engineers, s
+  - site/content/services/interactive-ui-ux-design.json:97: em dash found -> "answer": "We prototype with the actual hardware and sensors, then run usability sessions with peopl
+  - site/content/services/labor-hire-crew-roles.json:6: em dash found -> "description": "Event crew labor hire in Portland, OR — vetted TDs, PMs, A1/A2s, V1/V2s, and L1/L2s 
+  - site/content/services/labor-hire-crew-roles.json:9: em dash found -> "description": "Event crew labor hire in Portland, OR — vetted TDs, PMs, A1/A2s, V1/V2s, and L1/L2s 
+  - site/content/services/labor-hire-crew-roles.json:15: em dash found -> "subheadline": "Vetted technical directors, production managers, audio, video, and lighting engineer
+  - site/content/services/labor-hire-crew-roles.json:36: em dash found -> "content": "Labor hire is how productions get the specialist crew they need without carrying a full-
+  - site/content/services/labor-hire-crew-roles.json:54: em dash found -> "content": "We staff productions from our own team and a trusted network of specialists we've worked
+  - site/content/services/labor-hire-crew-roles.json:60: em dash found -> "1. Scope — We define every role, skill set, and call time your show needs",
+  - site/content/services/labor-hire-crew-roles.json:61: em dash found -> "2. Match — Crew selected from our team and vetted network for exact fit",
+  - site/content/services/labor-hire-crew-roles.json:62: em dash found -> "3. Book — Contracts, rates, insurance, and scheduling confirmed",
+  - site/content/services/labor-hire-crew-roles.json:63: em dash found -> "4. Brief — Advance documents and show files distributed before load-in",
+  - site/content/services/labor-hire-crew-roles.json:64: em dash found -> "5. Supervise — On-site leadership through build, show, and strike",
+  - site/content/services/labor-hire-crew-roles.json:65: em dash found -> "6. Wrap — Timesheets reconciled and performance feedback collected"
+  - site/content/services/labor-hire-crew-roles.json:75: em dash found -> "Crew who are working show professionals — not a staffing agency's spreadsheet",
+  - site/content/services/labor-hire-crew-roles.json:86: em dash found -> "answer": "The 1s lead their department: the A1 mixes front of house, the V1 runs the main video sys
+  - site/content/services/labor-hire-crew-roles.json:90: em dash found -> "answer": "Yes. Single-role hires are common — a TD for a complex install, an A1 for a keynote, a me
+  - site/content/services/laser-shows.json:6: em dash found -> "description": "Laser light shows in Portland, OR — custom beam choreography, sky scanning, and lase
+  - site/content/services/laser-shows.json:9: em dash found -> "description": "Laser light shows in Portland, OR — custom beam choreography, sky scanning, and lase
+  - site/content/services/laser-shows.json:15: em dash found -> "subheadline": "High-powered laser systems choreographed to your music and brand — cutting through t
+  - site/content/services/laser-shows.json:35: em dash found -> "content": "Few effects command an audience's attention like a precisely choreographed laser show — 
+  - site/content/services/laser-shows.json:42: em dash found -> "FDA/CDRH variance permitting handled in-house — indoor and outdoor",
+  - site/content/services/laser-shows.json:44: em dash found -> "Laser-mapped touring work — including the Projekt X set piece for Adriatique's X Future tour",
+  - site/content/services/laser-shows.json:45: em dash found -> "Frame-accurate music sync — beat grids, timecode, MIDI, and Ableton Link",
+  - site/content/services/laser-shows.json:46: em dash found -> "Unified spectacles — lasers integrated with LED, projection, and drone shows"
+  - site/content/services/laser-shows.json:53: em dash found -> "1. Creative & Venue Review — Music, sightlines, surfaces, and audience zones assessed",
+  - site/content/services/laser-shows.json:54: em dash found -> "2. Show Programming — Beam choreography pre-visualized and locked to your tracks",
+  - site/content/services/laser-shows.json:55: em dash found -> "3. Permitting & Safety Planning — Variance filings, beam-path calculations, safety zones",
+  - site/content/services/laser-shows.json:56: em dash found -> "4. Rig & Align — Projectors positioned, focused, and verified against the safety plan",
+  - site/content/services/laser-shows.json:57: em dash found -> "5. Live Operation — Certified operators run the show and adapt to the room in real time",
+  - site/content/services/laser-shows.json:58: em dash found -> "6. Derig & Compliance Wrap — Equipment struck, authorities signed off, files archived"
+  - site/content/services/laser-shows.json:85: em dash found -> "content": "Beatrox laser shows can be programmed to any audio source — from prerecorded tracks with
+  - site/content/services/led-video-wall-rentals.json:6: em dash found -> "description": "LED video wall rentals in Portland, OR — fine-pitch to festival-scale panels with me
+  - site/content/services/led-video-wall-rentals.json:9: em dash found -> "description": "LED video wall rentals in Portland, OR — fine-pitch to festival-scale panels with me
+  - site/content/services/led-video-wall-rentals.json:15: em dash found -> "subheadline": "High-resolution LED panels for any footprint — with full media server integration, c
+  - site/content/services/led-video-wall-rentals.json:35: em dash found -> "content": "From intimate brand activations to massive festival stages, Beatrox delivers LED video w
+  - site/content/services/led-video-wall-rentals.json:41: em dash found -> "Fine-pitch to festival-scale — 1.5mm indoor walls to 10mm outdoor rigs, 100ft+ wide",
+  - site/content/services/led-video-wall-rentals.json:42: em dash found -> "Non-standard builds — curved walls, columns, and infinity-mirror configurations",
+  - site/content/services/led-video-wall-rentals.json:43: em dash found -> "Infinity LED proven — the seamless wall-to-wall ocean chamber for Adidas x Parley Run for the Ocean
+  - site/content/services/led-video-wall-rentals.json:44: em dash found -> "AR portal experience — free-standing LED walls for Amazon Music Live at Outside Lands and Stagecoac
+  - site/content/services/led-video-wall-rentals.json:45: em dash found -> "Pixel-perfect playback — content mapped to exact wall dimensions, no scaling artifacts",
+  - site/content/services/led-video-wall-rentals.json:53: em dash found -> "1. Viewing & Venue Analysis — Viewing distances and ambient light define pixel pitch",
+  - site/content/services/led-video-wall-rentals.json:54: em dash found -> "2. Wall Design — Panel count, processors, rigging, and power engineered to the footprint",
+  - site/content/services/led-video-wall-rentals.json:55: em dash found -> "3. Content & Pixel Mapping — Media formatted to the wall's exact dimensions",
+  - site/content/services/led-video-wall-rentals.json:56: em dash found -> "4. Build & Calibration — Panels hung, mapped, and color-calibrated on site",
+  - site/content/services/led-video-wall-rentals.json:57: em dash found -> "5. Live Operation — LED tech and media server operator running every cue",
+  - site/content/services/led-video-wall-rentals.json:58: em dash found -> "6. Strike — Wall down, venue restored, gear road-cased and out"
+  - site/content/services/lighting-design.json:6: em dash found -> "description": "Lighting design in Portland, OR — custom concepts, plots, and programming for concer
+  - site/content/services/lighting-design.json:9: em dash found -> "description": "Lighting design in Portland, OR — custom concepts, plots, and programming for concer
+  - site/content/services/lighting-design.json:36: em dash found -> "content": "Lighting design is the art and engineering of using light to shape how a space is experi
+  - site/content/services/lighting-design.json:53: em dash found -> "content": "We deliver the full lighting design package: creative concepting, fixture selection, sca
+  - site/content/services/lighting-design.json:59: em dash found -> "1. Discovery — We learn your creative goals, venue, budget, and show format",
+  - site/content/services/lighting-design.json:60: em dash found -> "2. Concept & Look Development — Color palettes, fixture choices, and key looks",
+  - site/content/services/lighting-design.json:61: em dash found -> "3. Plots & Technical Design — Scaled drawings, rig points, power and data plans",
+  - site/content/services/lighting-design.json:62: em dash found -> "4. Programming & Pre-Viz — Cues built and previewed before load-in",
+  - site/content/services/lighting-design.json:63: em dash found -> "5. Install & Focus — On-site rigging, aiming, and system commissioning",
+  - site/content/services/lighting-design.json:64: em dash found -> "6. Show Operation & Strike — Live operation, then clean, efficient load-out"
+  - site/content/services/lighting-design.json:74: em dash found -> "Designers who program and operate — one team from plot to show",
+  - site/content/services/lighting-design.json:93: em dash found -> "answer": "Six to ten weeks before the event is ideal. Fixture availability, rigging approvals, and 
+  - site/content/services/lighting-integration.json:6: em dash found -> "description": "Lighting integration in Portland, OR — LED video, fixtures, sensors, and control uni
+  - site/content/services/lighting-integration.json:9: em dash found -> "description": "Lighting integration in Portland, OR — LED video, fixtures, sensors, and control uni
+  - site/content/services/lighting-integration.json:15: em dash found -> "subheadline": "Lighting is only as good as its integration. Beatrox unifies LED video, fixtures, se
+  - site/content/services/lighting-integration.json:36: em dash found -> "content": "Lighting integration is the discipline of making every light-emitting element in a space
+  - site/content/services/lighting-integration.json:54: em dash found -> "content": "Beatrox integrates lighting as part of the whole system: LED video panel specification a
+  - site/content/services/lighting-integration.json:60: em dash found -> "1. Discovery & Creative Review — We learn what the space needs to do, not just how it should look",
+  - site/content/services/lighting-integration.json:61: em dash found -> "2. System Design — Fixture and panel spec, control architecture, power and data plans",
+  - site/content/services/lighting-integration.json:62: em dash found -> "3. Pre-Visualization & Programming — Looks and interactive behaviors are built before install",
+  - site/content/services/lighting-integration.json:63: em dash found -> "4. Install & Integration — Hardware goes in alongside scenic and AV as one coordinated build",
+  - site/content/services/lighting-integration.json:64: em dash found -> "5. Calibration & Rehearsal — Color, brightness, timing, and sensor response tuned on site",
+  - site/content/services/lighting-integration.json:65: em dash found -> "6. Show Operation & Support — Our team runs and maintains the system through the event"
+  - site/content/services/lighting-integration.json:72: em dash found -> "Infinity-grade LED environments — wall-to-wall ROE Black Pearl panels for Adidas x Parley Ocean Sch
+  - site/content/services/lighting-integration.json:73: em dash found -> "Sensor-reactive systems proven in public — LIDAR-driven light and media in Brooklyn",
+  - site/content/services/lighting-integration.json:77: em dash found -> "Full-service crew — design, install, calibration, and show operation"
+  - site/content/services/lighting-integration.json:86: em dash found -> "answer": "Yes. We build sensor-driven systems using LIDAR, computer vision, and motion tracking — l
+  - site/content/services/lighting-integration.json:94: em dash found -> "answer": "Yes — from timecode-locked programming to live operation, we sync lighting and media to p
+  - site/content/services/lighting-services.json:6: em dash found -> "description": "Event lighting services in Portland, OR — design, pre-visualization, integration, pr
+  - site/content/services/lighting-services.json:9: em dash found -> "description": "Event lighting services in Portland, OR — design, pre-visualization, integration, pr
+  - site/content/services/lighting-services.json:15: em dash found -> "subheadline": "Lighting that transforms spaces and elevates every moment — designed, programmed, an
+  - site/content/services/lighting-services.json:35: em dash found -> "content": "Lighting is the invisible hand that shapes every experience — and Beatrox's Portland, Or
+  - site/content/services/lighting-services.json:51: em dash found -> "1. Discovery Call — We learn your vision, venue, and budget",
+  - site/content/services/lighting-services.json:52: em dash found -> "2. Design & Pre-Visualization — See your event before it happens",
+  - site/content/services/lighting-services.json:53: em dash found -> "3. Equipment & Crew — We source everything and assign the right team",
+  - site/content/services/lighting-services.json:54: em dash found -> "4. On-Site Execution — Professional setup, operation, and strike",
+  - site/content/services/lighting-services.json:55: em dash found -> "5. Post-Event Review — We ensure everything exceeded expectations"
+  - site/content/services/lighting-services.json:74: em dash found -> "content": "Our lighting services begin at the design stage with full pre-visualization, allowing cl
+  - site/content/services/lighting-services.json:84: em dash found -> "content": "Pre-visualization allows you to see your lighting design before investing in equipment a
+  - site/content/services/lighting-services.json:108: em dash found -> "answer": "Absolutely. We design and install permanent lighting for retail spaces, venues, architect
+  - site/content/services/materials-sourcing-selection.json:6: em dash found -> "description": "Materials sourcing and selection in Portland, OR — substrates, finishes, and hardwar
+  - site/content/services/materials-sourcing-selection.json:9: em dash found -> "description": "Materials sourcing and selection in Portland, OR — substrates, finishes, and hardwar
+  - site/content/services/materials-sourcing-selection.json:36: em dash found -> "content": "Materials sourcing and selection is the unglamorous discipline that quietly decides whet
+  - site/content/services/materials-sourcing-selection.json:54: em dash found -> "content": "Beatrox handles materials as a first-class part of the build process: specification duri
+  - site/content/services/materials-sourcing-selection.json:60: em dash found -> "1. Requirements Review — We define the environment, codes, lifespan, and budget constraints",
+  - site/content/services/materials-sourcing-selection.json:61: em dash found -> "2. Specification — Materials and hardware are selected and documented against the design",
+  - site/content/services/materials-sourcing-selection.json:62: em dash found -> "3. Sourcing & Quoting — We leverage our supplier network for pricing, availability, and lead times"
+  - site/content/services/materials-sourcing-selection.json:63: em dash found -> "4. Samples & Mockups — Critical finishes and surfaces are reviewed physically before commitment",
+  - site/content/services/materials-sourcing-selection.json:64: em dash found -> "5. Procurement & Logistics — Orders are timed to the build schedule, with alternates on standby",
+  - site/content/services/materials-sourcing-selection.json:65: em dash found -> "6. On-Site Verification — Materials are checked at install so the finished build matches the spec"
+  - site/content/services/materials-sourcing-selection.json:73: em dash found -> "Projection-surface expertise — from the Create Our Future Cyclone Wall to mapped architecture",
+  - site/content/services/materials-sourcing-selection.json:76: em dash found -> "Budget fluency — we know where premium materials matter and where they don't",
+  - site/content/services/materials-sourcing-selection.json:86: em dash found -> "answer": "Yes. We spec weather-rated substrates, finishes, and hardware for outdoor builds — like D
+  - site/content/services/materials-sourcing-selection.json:90: em dash found -> "answer": "We do. We can spec recyclable substrates, reusable modular systems, and low-waste finish 
+  - site/content/services/materials-sourcing-selection.json:98: em dash found -> "answer": "Absolutely. Value engineering is part of the job — we know where premium materials change
+  - site/content/services/media-server-playback-solutions.json:6: em dash found -> "description": "Media server and playback solutions in Portland, OR — programming, warping, blending
+  - site/content/services/media-server-playback-solutions.json:9: em dash found -> "description": "Media server and playback solutions in Portland, OR — programming, warping, blending
+  - site/content/services/media-server-playback-solutions.json:15: em dash found -> "subheadline": "Frame-accurate content playback across any canvas — projection-mapped buildings, sph
+  - site/content/services/media-server-playback-solutions.json:36: em dash found -> "content": "Media servers are the engines that store, process, and play back video content across co
+  - site/content/services/media-server-playback-solutions.json:54: em dash found -> "content": "BEATROX designs, programs, and operates complete playback systems: server specification,
+  - site/content/services/media-server-playback-solutions.json:60: em dash found -> "1. System Design — We spec servers, outputs, and signal paths around your canvas and content",
+  - site/content/services/media-server-playback-solutions.json:61: em dash found -> "2. Content Pipeline — Media is formatted, tested, and organized at show resolution",
+  - site/content/services/media-server-playback-solutions.json:62: em dash found -> "3. Pre-Visualization — Mapping and blends are built in advance against accurate venue models",
+  - site/content/services/media-server-playback-solutions.json:63: em dash found -> "4. On-Site Alignment — Projectors are converged, warped, and blended to the real surface",
+  - site/content/services/media-server-playback-solutions.json:64: em dash found -> "5. Rehearsal & Sync — Playback is locked to timecode, lighting, and audio cues",
+  - site/content/services/media-server-playback-solutions.json:65: em dash found -> "6. Show Operation — Redundant systems run live with our operators at the controls"
+  - site/content/services/media-server-playback-solutions.json:73: em dash found -> "Landmark-scale mapping for PROJECTING CHANGE: Racing Extinction — Empire State Building, UN, Vatica
+  - site/content/services/media-server-playback-solutions.json:77: em dash found -> "Programmers who also operate — the person who built the show runs it"
+  - site/content/services/media-server-playback-solutions.json:86: em dash found -> "answer": "We work across professional playback platforms and real-time engines — including TouchDes
+  - site/content/services/media-server-playback-solutions.json:94: em dash found -> "answer": "Yes — irregular architecture, curved and spherical surfaces, and multi-projector blends a
+  - site/content/services/media-server-playback-solutions.json:98: em dash found -> "answer": "We can. We specify, source, and configure the servers as part of the system, or program a
+  - site/content/services/multimedia-displays.json:6: em dash found -> "description": "Multimedia displays in Portland, OR — LED walls, interactive kiosks, and permanent m
+  - site/content/services/multimedia-displays.json:9: em dash found -> "description": "Multimedia displays in Portland, OR — LED walls, interactive kiosks, and permanent m
+  - site/content/services/multimedia-displays.json:15: em dash found -> "subheadline": "Screens that earn their audience. Beatrox designs and integrates multimedia display 
+  - site/content/services/multimedia-displays.json:36: em dash found -> "content": "Multimedia displays are the screens, surfaces, and interactive devices that carry your c
+  - site/content/services/multimedia-displays.json:54: em dash found -> "content": "Beatrox designs, sources, integrates, and operates multimedia display systems of every s
+  - site/content/services/multimedia-displays.json:60: em dash found -> "1. Requirements — Viewing distances, ambient light, interaction, and duty cycle defined",
+  - site/content/services/multimedia-displays.json:61: em dash found -> "2. System Design — Panels, processors, servers, and sensors spec'd to the content",
+  - site/content/services/multimedia-displays.json:62: em dash found -> "3. Pre-Visualization & Pixel Mapping — Layouts and content templates approved up front",
+  - site/content/services/multimedia-displays.json:63: em dash found -> "4. Integration & Fabrication — Structures, cabling, and control systems built and bench-tested",
+  - site/content/services/multimedia-displays.json:64: em dash found -> "5. Calibration & Commissioning — Color, brightness, and tracking tuned on site",
+  - site/content/services/multimedia-displays.json:65: em dash found -> "6. Operation & Support — Live operation for events; maintenance plans for permanent installs"
+  - site/content/services/multimedia-displays.json:72: em dash found -> "Permanent-installation grade — the FLIR history wall engineered for years of low-maintenance operat
+  - site/content/services/multimedia-displays.json:73: em dash found -> "Touch-free interaction pioneers — LIDAR and computer vision, no screens to smudge or sanitize",
+  - site/content/services/multimedia-displays.json:74: em dash found -> "Festival-hardened — LED AR portals for Amazon Music Live at Outside Lands and Stagecoach",
+  - site/content/services/multimedia-displays.json:75: em dash found -> "Seamless environments — wall-to-wall ROE Black Pearl LED for Adidas x Parley Run for the Oceans",
+  - site/content/services/multimedia-displays.json:76: em dash found -> "Display and content pipeline from one team — pixel-perfect playback, no scaling artifacts",
+  - site/content/services/multimedia-displays.json:85: em dash found -> "question": "Interactive or passive — which is right for my project?",
+  - site/content/services/multimedia-displays.json:86: em dash found -> "answer": "It depends on the audience and the duty cycle. Passive displays suit high-traffic, glance
+  - site/content/services/multimedia-displays.json:90: em dash found -> "answer": "Yes — and we recommend it for public installations. LIDAR and camera-based tracking let g
+  - site/content/services/multimedia-displays.json:94: em dash found -> "answer": "Both. Permanent installs like the FLIR headquarters wall are engineered for uptime, servi
+  - site/content/services/multimedia-displays.json:98: em dash found -> "answer": "We can. Our content team formats and produces media to the exact pixel map of your system
+  - site/content/services/permanent-installation.json:6: em dash found -> "description": "Permanent installation in Portland, OR — architectural media, theatres, and branded 
+  - site/content/services/permanent-installation.json:9: em dash found -> "description": "Permanent installation in Portland, OR — architectural media, theatres, and branded 
+  - site/content/services/permanent-installation.json:36: em dash found -> "content": "A permanent installation is an experience built to live in a space for years rather than
+  - site/content/services/permanent-installation.json:54: em dash found -> "content": "Beatrox provides end-to-end permanent installation delivery: site assessment, structural
+  - site/content/services/permanent-installation.json:60: em dash found -> "1. Site Assessment — We survey the structure, environment, access, and operating conditions",
+  - site/content/services/permanent-installation.json:61: em dash found -> "2. Engineering & Design — Structural, media, and serviceability plans developed and reviewed",
+  - site/content/services/permanent-installation.json:62: em dash found -> "3. Fabrication & Pre-Integration — Systems are built and burned in before they reach the site",
+  - site/content/services/permanent-installation.json:63: em dash found -> "4. Installation & Commissioning — Precise mounting, alignment, and calibration in the space",
+  - site/content/services/permanent-installation.json:64: em dash found -> "5. Documentation & Training — As-builts, maintenance plans, and staff handover",
+  - site/content/services/permanent-installation.json:65: em dash found -> "6. Ongoing Support — Service and system maintenance available for the life of the installation"
+  - site/content/services/permanent-installation.json:72: em dash found -> "Deployed a spherical projection theatre at Dubai Mall — one of the world's busiest retail destinati
+  - site/content/services/permanent-installation.json:76: em dash found -> "Serviceability designed in from day one — documentation, access, and maintenance planning",
+  - site/content/services/permanent-installation.json:86: em dash found -> "answer": "Everything is engineered for longevity: materials rated for years of use, systems designe
+  - site/content/services/permanent-installation.json:90: em dash found -> "answer": "Yes. Our deployments include Dubai Mall and architectural landmarks like the Empire State
+  - site/content/services/permit-submittal.json:6: em dash found -> "description": "Event permit submittal in Portland, OR — special event, noise, fire, and laser varia
+  - site/content/services/permit-submittal.json:9: em dash found -> "description": "Event permit submittal in Portland, OR — special event, noise, fire, and laser varia
+  - site/content/services/permit-submittal.json:15: em dash found -> "subheadline": "Special event, noise, fire, laser variance, and landmark approvals — we manage the p
+  - site/content/services/permit-submittal.json:36: em dash found -> "content": "Permit submittal is the process of getting official approval for everything your event d
+  - site/content/services/permit-submittal.json:54: em dash found -> "content": "We manage the full submittal lifecycle: identifying every approval your production trigg
+  - site/content/services/permit-submittal.json:60: em dash found -> "1. Audit — We identify every permit and approval your production triggers",
+  - site/content/services/permit-submittal.json:61: em dash found -> "2. Document — Drawings, engineering packages, and safety plans prepared",
+  - site/content/services/permit-submittal.json:62: em dash found -> "3. Submit — Applications filed with each relevant authority",
+  - site/content/services/permit-submittal.json:63: em dash found -> "4. Shepherd — We manage reviewer questions, revisions, and timelines",
+  - site/content/services/permit-submittal.json:64: em dash found -> "5. Inspect — On-site coordination with marshals and officials",
+  - site/content/services/permit-submittal.json:65: em dash found -> "6. Close — Final approvals, certificates, and records delivered to you"
+  - site/content/services/permit-submittal.json:74: em dash found -> "Produced during Super Bowl weekend in Miami — peak regulatory scrutiny",
+  - site/content/services/permit-submittal.json:77: em dash found -> "Permitting planned into the schedule from day one — never an afterthought"
+  - site/content/services/permit-submittal.json:86: em dash found -> "answer": "It varies wildly by jurisdiction and permit type — from days for simple applications to m
+  - site/content/services/permit-submittal.json:94: em dash found -> "answer": "Yes. Through our laser show operations we file FDA/CDRH variance applications and coordin
+  - site/content/services/permit-submittal.json:98: em dash found -> "answer": "We plan for it. Our audit flags risky approvals early, and we design contingencies — alte
+  - site/content/services/pre-visualization.json:6: em dash found -> "description": "Event pre-visualization in Portland, OR — 3D renders, lighting simulations, and proj
+  - site/content/services/pre-visualization.json:9: em dash found -> "description": "Event pre-visualization in Portland, OR — 3D renders, lighting simulations, and proj
+  - site/content/services/pre-visualization.json:36: em dash found -> "content": "Pre-visualization — pre-viz — is the practice of building your event in 3D before it exi
+  - site/content/services/pre-visualization.json:53: em dash found -> "content": "Our pre-viz deliverables include dimensionally accurate 3D venue models, rendered lighti
+  - site/content/services/pre-visualization.json:59: em dash found -> "1. Venue Data Collection — Floor plans, dimensions, photos, and rigging info",
+  - site/content/services/pre-visualization.json:60: em dash found -> "2. 3D Model Build — Accurate digital twin of your space and staging",
+  - site/content/services/pre-visualization.json:61: em dash found -> "3. Look & Content Development — Lighting, video, and projection looks rendered",
+  - site/content/services/pre-visualization.json:62: em dash found -> "4. Review & Iteration — Stakeholders approve looks before production spend",
+  - site/content/services/pre-visualization.json:63: em dash found -> "5. Technical Verification — Throw distances, sightlines, and loads confirmed",
+  - site/content/services/pre-visualization.json:64: em dash found -> "6. Handoff to Production — The approved pre-viz becomes the on-site blueprint"
+  - site/content/services/pre-visualization.json:74: em dash found -> "Pre-viz models carry real technical data — not just pretty pictures",
+  - site/content/services/pre-visualization.json:93: em dash found -> "answer": "Not always — but any event with projection mapping, complex lighting, or a hard-to-modify
+  - site/content/services/production-management.json:6: em dash found -> "description": "Event production management in Portland, OR — budgets, schedules, vendors, and depar
+  - site/content/services/production-management.json:9: em dash found -> "description": "Event production management in Portland, OR — budgets, schedules, vendors, and depar
+  - site/content/services/production-management.json:15: em dash found -> "subheadline": "One accountable lead unifying budget, schedule, vendors, and departments — so comple
+  - site/content/services/production-management.json:36: em dash found -> "content": "Production management is the operational leadership of an event or build — the role that
+  - site/content/services/production-management.json:54: em dash found -> "content": "Our production managers run the full operational stack: master budgets with real-time co
+  - site/content/services/production-management.json:60: em dash found -> "1. Discovery — We scope the project, stakeholders, and success criteria",
+  - site/content/services/production-management.json:61: em dash found -> "2. Budget & Schedule — Master budget and milestone schedule built and baselined",
+  - site/content/services/production-management.json:62: em dash found -> "3. Mobilize — Vendors contracted, departments staffed, communication cadence set",
+  - site/content/services/production-management.json:63: em dash found -> "4. Manage — Daily tracking of cost, schedule, and risks through the build",
+  - site/content/services/production-management.json:64: em dash found -> "5. Deliver — On-site leadership through load-in, event, and strike",
+  - site/content/services/production-management.json:65: em dash found -> "6. Reconcile — Final accounting, documentation, and post-project review"
+  - site/content/services/production-management.json:75: em dash found -> "One accountable production lead — a single honest answer on budget and schedule",
+  - site/content/services/production-management.json:86: em dash found -> "answer": "Planning builds the roadmap; production management drives it. The production manager owns
+  - site/content/services/production-management.json:90: em dash found -> "answer": "Frequently, yes — it's one of our most common arrangements. Agencies bring us in as the p
+  - site/content/services/production-management.json:94: em dash found -> "answer": "Real-time cost tracking against a baselined budget, with committed spend visible as it's 
+  - site/content/services/projection-mapping.json:6: em dash found -> "description": "Projection mapping in Portland, OR — design, calibration, and show operation on canv
+  - site/content/services/projection-mapping.json:9: em dash found -> "description": "Projection mapping in Portland, OR — design, calibration, and show operation on canv
+  - site/content/services/projection-mapping.json:15: em dash found -> "subheadline": "Any surface can become a screen. Beatrox designs, maps, and operates projection show
+  - site/content/services/projection-mapping.json:36: em dash found -> "content": "Projection mapping is the craft of turning real-world geometry into a display — a craft 
+  - site/content/services/projection-mapping.json:54: em dash found -> "content": "Beatrox delivers projection mapping end to end: surface analysis, projector system desig
+  - site/content/services/projection-mapping.json:60: em dash found -> "1. Surface Study — We measure or scan the canvas and assess sightlines and ambient light",
+  - site/content/services/projection-mapping.json:61: em dash found -> "2. System Design — Projector count, placement, lenses, and blending zones engineered",
+  - site/content/services/projection-mapping.json:62: em dash found -> "3. Pre-Visualization — The mapped show rendered on the real geometry for approval",
+  - site/content/services/projection-mapping.json:63: em dash found -> "4. Content Production — Imagery built to the surface's exact template and timing",
+  - site/content/services/projection-mapping.json:64: em dash found -> "5. Calibration & Alignment — Multi-projector blend, warp, and focus dialed on site",
+  - site/content/services/projection-mapping.json:65: em dash found -> "6. Show Operation — Media servers programmed, rehearsed, and operated live"
+  - site/content/services/projection-mapping.json:72: em dash found -> "Landmark-proven — the Empire State Building, the United Nations, and the Vatican",
+  - site/content/services/projection-mapping.json:73: em dash found -> "Spherical canvas experience — the DUBAI 360 projection theatre in Dubai Mall",
+  - site/content/services/projection-mapping.json:74: em dash found -> "Election-night scale — CNN: Road to 270 on the Empire State Building",
+  - site/content/services/projection-mapping.json:76: em dash found -> "Content and calibration from one team — no gap between design and delivery",
+  - site/content/services/projection-mapping.json:86: em dash found -> "answer": "Nearly anything that reflects light — buildings, stage sets, spheres, cars, water feature
+  - site/content/services/projection-mapping.json:90: em dash found -> "answer": "Yes — with the right engineering. Outdoor shows account for ambient light, weather, and t
+  - site/content/services/projection-mapping.json:98: em dash found -> "answer": "Absolutely. We lock projection content to timecode and show calling for concerts, broadca
+  - site/content/services/realtime-content-ar-vr-xr.json:6: em dash found -> "description": "Realtime AR, VR, and XR content in Portland, OR — interactive Unreal Engine and Touc
+  - site/content/services/realtime-content-ar-vr-xr.json:9: em dash found -> "description": "Realtime AR, VR, and XR content in Portland, OR — interactive Unreal Engine and Touc
+  - site/content/services/realtime-content-ar-vr-xr.json:15: em dash found -> "subheadline": "Digital worlds that react to the people inside them — we build real-time AR, VR, and
+  - site/content/services/realtime-content-ar-vr-xr.json:36: em dash found -> "content": "Realtime content is digital media that renders live, frame by frame, in response to what
+  - site/content/services/realtime-content-ar-vr-xr.json:53: em dash found -> "content": "We design and build real-time systems end to end: 3D worlds and assets in Unreal Engine 
+  - site/content/services/realtime-content-ar-vr-xr.json:59: em dash found -> "1. Experience Concept — We define what guests do and what the system does back",
+  - site/content/services/realtime-content-ar-vr-xr.json:60: em dash found -> "2. World & Asset Build — 3D environments, characters, and visual systems created",
+  - site/content/services/realtime-content-ar-vr-xr.json:61: em dash found -> "3. Interaction Engineering — Sensors, tracking, and real-time logic integrated",
+  - site/content/services/realtime-content-ar-vr-xr.json:62: em dash found -> "4. Performance Tuning — Frame rate, latency, and stability tested under load",
+  - site/content/services/realtime-content-ar-vr-xr.json:63: em dash found -> "5. On-Site Integration — Hardware, media servers, and displays calibrated",
+  - site/content/services/realtime-content-ar-vr-xr.json:64: em dash found -> "6. Live Run — Staffed operation with monitoring and support throughout"
+  - site/content/services/realtime-content-ar-vr-xr.json:85: em dash found -> "answer": "AR overlays digital content on the real world, VR is a fully digital environment, and XR 
+  - site/content/services/realtime-content-ar-vr-xr.json:89: em dash found -> "answer": "Yes — real-time systems run on dedicated media servers or high-performance workstations, 
+  - site/content/services/set-scenic-assembly.json:6: em dash found -> "description": "Set and scenic assembly in Portland, OR — stages, scenic wraps, themed rooms, and im
+  - site/content/services/set-scenic-assembly.json:9: em dash found -> "description": "Set and scenic assembly in Portland, OR — stages, scenic wraps, themed rooms, and im
+  - site/content/services/set-scenic-assembly.json:15: em dash found -> "subheadline": "Stages, scenic wraps, and fully themed environments — we assemble the physical world
+  - site/content/services/set-scenic-assembly.json:36: em dash found -> "content": "Set and scenic assembly is the craft of turning raw materials and fabricated components 
+  - site/content/services/set-scenic-assembly.json:54: em dash found -> "content": "Beatrox provides complete scenic assembly: staging and platforms, scenic walls and wraps
+  - site/content/services/set-scenic-assembly.json:60: em dash found -> "1. Walkthrough & Discovery — We survey the venue and review the design intent",
+  - site/content/services/set-scenic-assembly.json:61: em dash found -> "2. Build Planning — Assembly sequences, load-in schedules, and crew assignments are mapped out",
+  - site/content/services/set-scenic-assembly.json:62: em dash found -> "3. Shop Prep — Components are pre-assembled and test-fit before they ever hit the truck",
+  - site/content/services/set-scenic-assembly.json:63: em dash found -> "4. Load-In & Assembly — Structural first, then skins, overhead elements, and dressing",
+  - site/content/services/set-scenic-assembly.json:64: em dash found -> "5. Tech Integration & Dressing — Lighting, AV, and final scenic details go in last",
+  - site/content/services/set-scenic-assembly.json:65: em dash found -> "6. Strike — Clean, fast teardown that leaves the venue exactly as we found it"
+  - site/content/services/set-scenic-assembly.json:72: em dash found -> "We've built immersive environments for Adidas in some of the tightest venues imaginable — including
+  - site/content/services/set-scenic-assembly.json:76: em dash found -> "Full-service team — scenic, technical, and production under one roof",
+  - site/content/services/set-scenic-assembly.json:90: em dash found -> "answer": "Yes — unconventional spaces are a specialty. We've converted a shut-down bodega in Manhat
+  - site/content/services/set-scenic-assembly.json:94: em dash found -> "answer": "Always. Strike is planned with the same care as load-in — fast teardown, material removal
+  - site/content/services/set-scenic-assembly.json:98: em dash found -> "answer": "We can design sets as modular, road-worthy kits that assemble and strike repeatedly — ide
+  - site/content/services/site-floor-plans.json:6: em dash found -> "description": "Event site and floor plans in Portland, OR — scaled layouts, guest flow, power plans
+  - site/content/services/site-floor-plans.json:9: em dash found -> "description": "Event site and floor plans in Portland, OR — scaled layouts, guest flow, power plans
+  - site/content/services/site-floor-plans.json:15: em dash found -> "subheadline": "Scaled, accurate event layouts that place every stage, screen, cable run, and guest 
+  - site/content/services/site-floor-plans.json:36: em dash found -> "content": "Site and floor plans are the scaled drawings that define where everything goes — drawing
+  - site/content/services/site-floor-plans.json:54: em dash found -> "content": "BEATROX produces complete, scaled site and floor plan packages: surveyed base plans, pro
+  - site/content/services/site-floor-plans.json:60: em dash found -> "1. Site Survey — We measure the venue and document columns, rigging points, power, and access",
+  - site/content/services/site-floor-plans.json:61: em dash found -> "2. Base Plan — An accurate scaled drawing of the space becomes the foundation",
+  - site/content/services/site-floor-plans.json:62: em dash found -> "3. Production Layout — Stages, screens, scenic, seating, and back-of-house are placed and iterated"
+  - site/content/services/site-floor-plans.json:63: em dash found -> "4. Technical Overlays — Power, rigging, cable, and signal paths are layered on",
+  - site/content/services/site-floor-plans.json:64: em dash found -> "5. Review & Compliance — Guest flow, egress, and venue requirements are checked and approved",
+  - site/content/services/site-floor-plans.json:65: em dash found -> "6. Issue & Update — Final plans are distributed to all departments and revised as the show evolves"
+  - site/content/services/site-floor-plans.json:75: em dash found -> "Planners who load in the shows they draw — layouts that work in practice",
+  - site/content/services/site-floor-plans.json:90: em dash found -> "answer": "A scaled base plan, the full production layout, technical overlays for power, rigging, an
+  - site/content/services/site-floor-plans.json:94: em dash found -> "answer": "As soon as the venue is confirmed. Layout drives budget, equipment lists, and creative de
+  - site/content/services/software-development.json:6: em dash found -> "description": "Event software development in Portland, OR — real-time interactive experiences, sens
+  - site/content/services/software-development.json:9: em dash found -> "description": "Event software development in Portland, OR — real-time interactive experiences, sens
+  - site/content/services/software-development.json:15: em dash found -> "subheadline": "Custom interactive software and real-time systems built for the one environment wher
+  - site/content/services/software-development.json:36: em dash found -> "content": "Event software development is the craft of building custom code that has to work perfect
+  - site/content/services/software-development.json:54: em dash found -> "content": "BEATROX develops the full software stack for experiential work: real-time engines in Tou
+  - site/content/services/software-development.json:60: em dash found -> "1. Discovery — We define the interaction, audience flow, and technical constraints",
+  - site/content/services/software-development.json:61: em dash found -> "2. Prototyping — Core interactions are built and tested against real hardware early",
+  - site/content/services/software-development.json:62: em dash found -> "3. Development — Full experience build with operator tools and fallback states",
+  - site/content/services/software-development.json:63: em dash found -> "4. Integration & Testing — Software is stress-tested with the actual sensors, servers, and displays
+  - site/content/services/software-development.json:64: em dash found -> "5. Deployment — On-site installation, calibration, and rehearsal with the show team",
+  - site/content/services/software-development.json:65: em dash found -> "6. Live Support & Handoff — We staff the event and document the system for future runs"
+  - site/content/services/software-development.json:86: em dash found -> "answer": "Our real-time work centers on TouchDesigner, Unreal Engine, and Unity, with Python and C+
+  - site/content/services/software-development.json:94: em dash found -> "answer": "Yes. Permanent work is engineered for uptime — watchdog processes, remote monitoring, and
+  - site/content/services/software-development.json:98: em dash found -> "answer": "Absolutely. We can own the full software build or embed with your team — taking a creativ
+  - site/content/services/sound-equipment-rentals.json:6: em dash found -> "description": "Sound equipment rentals in Portland, OR — PA systems, consoles, and monitoring with 
+  - site/content/services/sound-equipment-rentals.json:9: em dash found -> "description": "Sound equipment rentals in Portland, OR — PA systems, consoles, and monitoring with 
+  - site/content/services/sound-equipment-rentals.json:15: em dash found -> "subheadline": "Professional PA systems, consoles, and monitoring — with experienced engineers who k
+  - site/content/services/sound-equipment-rentals.json:35: em dash found -> "content": "Great sound is the foundation of every great event, and Beatrox provides professional-gr
+  - site/content/services/sound-equipment-rentals.json:41: em dash found -> "Touring-grade inventory — L-Acoustics, d&b audiotechnik, Meyer Sound, DiGiCo, and Midas",
+  - site/content/services/sound-equipment-rentals.json:42: em dash found -> "Engineer-led rentals — certified A1/A2 engineers available with every package",
+  - site/content/services/sound-equipment-rentals.json:43: em dash found -> "Venue-matched systems — coverage modeled from 100-person rooms to 5,000+ capacity",
+  - site/content/services/sound-equipment-rentals.json:44: em dash found -> "Professional RF coordination — clear wireless even in congested festival spectrum",
+  - site/content/services/sound-equipment-rentals.json:53: em dash found -> "1. Venue & Audience Assessment — Room size, acoustics, and coverage requirements",
+  - site/content/services/sound-equipment-rentals.json:54: em dash found -> "2. System Spec — PA, consoles, monitors, and wireless matched to the venue",
+  - site/content/services/sound-equipment-rentals.json:55: em dash found -> "3. Delivery & Deployment — Rig placed, cabled, and tuned to the room",
+  - site/content/services/sound-equipment-rentals.json:56: em dash found -> "4. Soundcheck Support — Inputs verified, monitors rung out, RF coordinated",
+  - site/content/services/sound-equipment-rentals.json:57: em dash found -> "5. Show Operation — Optional A1/A2 engineering from first note to encore",
+  - site/content/services/sound-equipment-rentals.json:58: em dash found -> "6. Strike & Pickup — System struck and out of your venue on schedule"
+  - site/content/services/sound-equipment-rentals.json:85: em dash found -> "content": "Our engineering team includes certified A1 and A2 engineers with touring experience on m
+  - site/content/services/sound-equipment-rentals.json:119: em dash found -> "answer": "Absolutely. Our team performs professional RF coordination, scanning the venue, assigning
+  - site/content/services/stage-design.json:6: em dash found -> "description": "Stage design company in Portland, OR — custom stages, projection-mapped scenic, and 
+  - site/content/services/stage-design.json:9: em dash found -> "description": "Stage design company in Portland, OR — custom stages, projection-mapped scenic, and 
+  - site/content/services/stage-design.json:36: em dash found -> "content": "Stage design is the architecture of attention — and as a stage design company based in P
+  - site/content/services/stage-design.json:54: em dash found -> "content": "Beatrox handles the full stage design arc: concept development, pre-visualization, engin
+  - site/content/services/stage-design.json:60: em dash found -> "1. Discovery — We learn the performance, venue, audience sightlines, and creative goals",
+  - site/content/services/stage-design.json:61: em dash found -> "2. Concept & Pre-Visualization — Rendered designs let you approve the stage before it's built",
+  - site/content/services/stage-design.json:62: em dash found -> "3. Engineering & Shop Drawings — Load calculations, rigging plots, and build documentation",
+  - site/content/services/stage-design.json:63: em dash found -> "4. Fabrication — Scenic and structural elements built and test-fit in the shop",
+  - site/content/services/stage-design.json:64: em dash found -> "5. Install & Integration — Lighting, projection, and media systems integrated on site",
+  - site/content/services/stage-design.json:65: em dash found -> "6. Show Support & Strike — Operated, maintained, and removed cleanly after the show"
+  - site/content/services/stage-design.json:74: em dash found -> "Tour-grade engineering — Projekt X set piece built for Adriatique's worldwide X Future tour",
+  - site/content/services/stage-design.json:75: em dash found -> "Stages designed for camera as well as the room — broadcast-ready sightlines and finishes",
+  - site/content/services/stage-design.json:86: em dash found -> "answer": "Yes — touring is a core part of our stage work. We design for crating, freight, and repea
+  - site/content/services/stage-design.json:90: em dash found -> "answer": "Every stage we design comes with full engineering documentation — load calculations, rigg
+  - site/content/services/stage-design.json:94: em dash found -> "answer": "That's our specialty. We design stages as media surfaces from day one — projection-mapped
+  - site/content/services/stage-design.json:98: em dash found -> "answer": "Ideally 8–12 weeks before load-in. Custom scenic lead times, engineering review, and venu
+  - site/content/services/staging-rigging.json:6: em dash found -> "description": "Staging and rigging in Portland, OR — stages, overhead structures, and suspended ele
+  - site/content/services/staging-rigging.json:9: em dash found -> "description": "Staging and rigging in Portland, OR — stages, overhead structures, and suspended ele
+  - site/content/services/staging-rigging.json:36: em dash found -> "content": "Staging and rigging is the structural backbone of any live experience — work Beatrox eng
+  - site/content/services/staging-rigging.json:54: em dash found -> "content": "Beatrox provides staging and rigging as part of a complete build package: stage platform
+  - site/content/services/staging-rigging.json:60: em dash found -> "1. Site & Load Assessment — We survey the venue, anchor points, and structural limits",
+  - site/content/services/staging-rigging.json:61: em dash found -> "2. Rigging & Stage Design — Plots, load calculations, and hardware schedules are documented",
+  - site/content/services/staging-rigging.json:62: em dash found -> "3. Venue & Authority Coordination — We align with venue riggers, insurers, and inspectors",
+  - site/content/services/staging-rigging.json:63: em dash found -> "4. Install — Stages, truss, and suspended elements go in per the engineered plan",
+  - site/content/services/staging-rigging.json:64: em dash found -> "5. Inspection & Show Support — Every point is checked before doors; crew stays through the show",
+  - site/content/services/staging-rigging.json:65: em dash found -> "6. Strike — Controlled derigging that protects both the equipment and the venue"
+  - site/content/services/staging-rigging.json:72: em dash found -> "Festival-proven structures — deployed at Outside Lands and Stagecoach for Amazon Music Live",
+  - site/content/services/staging-rigging.json:76: em dash found -> "Rigging designed in concert with lighting, video, and scenic — one coordinated team",
+  - site/content/services/staging-rigging.json:90: em dash found -> "answer": "We build and deploy outdoor structures regularly — our festival builds for Amazon Music L
+  - site/content/services/staging-rigging.json:98: em dash found -> "answer": "Absolutely — that's how we prefer to work. When staging, rigging, lighting, video, and sc
+  - site/content/services/system-maintenance-support.json:6: em dash found -> "description": "AV system maintenance and support in Portland, OR — preventative care, rapid respons
+  - site/content/services/system-maintenance-support.json:9: em dash found -> "description": "AV system maintenance and support in Portland, OR — preventative care, rapid respons
+  - site/content/services/system-maintenance-support.json:36: em dash found -> "content": "System maintenance and support is what happens after opening night — the ongoing care th
+  - site/content/services/system-maintenance-support.json:54: em dash found -> "content": "We offer structured maintenance programs built around your system's actual duty cycle: s
+  - site/content/services/system-maintenance-support.json:60: em dash found -> "1. Assessment — We audit your system's condition, usage, and failure risks",
+  - site/content/services/system-maintenance-support.json:61: em dash found -> "2. Plan — A maintenance schedule and response agreement tailored to duty cycle",
+  - site/content/services/system-maintenance-support.json:62: em dash found -> "3. Baseline — Full documentation, configuration backup, and staff training",
+  - site/content/services/system-maintenance-support.json:63: em dash found -> "4. Maintain — Scheduled preventative service and update management",
+  - site/content/services/system-maintenance-support.json:64: em dash found -> "5. Respond — Rapid remote or on-site support when issues arise",
+  - site/content/services/system-maintenance-support.json:65: em dash found -> "6. Report — Service history and recommendations after every visit"
+  - site/content/services/system-maintenance-support.json:72: em dash found -> "Built the FLIR Interactive History Wall — a permanent installation engineered for reliability and l
+  - site/content/services/system-maintenance-support.json:75: em dash found -> "The team that built your system maintains it — no knowledge gap",
+  - site/content/services/system-maintenance-support.json:86: em dash found -> "answer": "Often, yes. We start with a full assessment — documenting the hardware, software, and con
+  - site/content/services/system-maintenance-support.json:94: em dash found -> "answer": "Response windows are defined in your support agreement — remote diagnostics often resolve
+  - site/content/services/system-maintenance-support.json:98: em dash found -> "answer": "Yes — training is part of every engagement. We document startup, shutdown, content update
+  - site/content/services/technical-direction.json:6: em dash found -> "description": "Technical direction in Portland, OR — senior TDs owning every system on your show, f
+  - site/content/services/technical-direction.json:9: em dash found -> "description": "Technical direction in Portland, OR — senior TDs owning every system on your show, f
+  - site/content/services/technical-direction.json:15: em dash found -> "subheadline": "One accountable lead for every technical system on your show — translating creative 
+  - site/content/services/technical-direction.json:36: em dash found -> "content": "Technical direction is the discipline of turning a creative concept into a working produ
+  - site/content/services/technical-direction.json:54: em dash found -> "content": "BEATROX technical directors arrive with a complete picture of your show: system designs,
+  - site/content/services/technical-direction.json:60: em dash found -> "1. Discovery — We review the creative brief, venue, budget, and timeline with your team",
+  - site/content/services/technical-direction.json:61: em dash found -> "2. Technical Design — We spec systems, produce drawings, and identify risks early",
+  - site/content/services/technical-direction.json:62: em dash found -> "3. Pre-Production — Vendors booked, crew assigned, schedules and load-in plans issued",
+  - site/content/services/technical-direction.json:63: em dash found -> "4. Site Advance & Load-In — We survey the venue, then lead every department through build",
+  - site/content/services/technical-direction.json:64: em dash found -> "5. Rehearsal & Show — Technical rehearsals, cue refinement, and show calling on event day",
+  - site/content/services/technical-direction.json:65: em dash found -> "6. Strike & Wrap — Safe, efficient strike plus a post-event technical debrief"
+  - site/content/services/technical-direction.json:75: em dash found -> "One team covering design, build, and technical — no handoff gaps between disciplines",
+  - site/content/services/technical-direction.json:86: em dash found -> "answer": "The production manager owns schedule, budget, and logistics. The technical director owns 
+  - site/content/services/technical-direction.json:90: em dash found -> "answer": "As early as possible — ideally at concept stage. A TD involved early can flag unbuildable
+  - site/content/services/technical-direction.json:98: em dash found -> "answer": "Absolutely. We're based in Portland, OR, but our directors have led productions in New Yo
+  - site/content/services/technical-documentation.json:6: em dash found -> "description": "Technical documentation in Portland, OR — system diagrams, operating manuals, and as
+  - site/content/services/technical-documentation.json:9: em dash found -> "description": "Technical documentation in Portland, OR — system diagrams, operating manuals, and as
+  - site/content/services/technical-documentation.json:36: em dash found -> "content": "Technical documentation is the written record of how a production or installation actual
+  - site/content/services/technical-documentation.json:54: em dash found -> "content": "BEATROX produces documentation as a deliverable, not an afterthought: system and signal 
+  - site/content/services/technical-documentation.json:60: em dash found -> "1. System Capture — We document every system as designed: diagrams, schedules, and inventories",
+  - site/content/services/technical-documentation.json:61: em dash found -> "2. Procedure Writing — Operating, power-up, show, and emergency procedures are drafted",
+  - site/content/services/technical-documentation.json:62: em dash found -> "3. On-Site Verification — Documentation is checked against the real installation during commissioni
+  - site/content/services/technical-documentation.json:63: em dash found -> "4. As-Built Update — Drawings and records are revised to match exactly what was built",
+  - site/content/services/technical-documentation.json:64: em dash found -> "5. Handover & Training — We walk the receiving team through the documents and the system",
+  - site/content/services/technical-documentation.json:65: em dash found -> "6. Living Records — Documentation is maintained and reissued as the system evolves"
+  - site/content/services/technical-documentation.json:77: em dash found -> "As-built accuracy — what we document is what actually exists"
+  - site/content/services/technical-documentation.json:86: em dash found -> "answer": "Typically: system and signal flow diagrams, equipment and cable schedules, operating and 
+  - site/content/services/technical-documentation.json:90: em dash found -> "answer": "Yes. We can reverse-engineer an existing installation — tracing signal paths, inventoryin
+  - site/content/services/technical-documentation.json:98: em dash found -> "answer": "Even one-off events benefit — a show manual keeps rehearsal and show day from depending o
+  - site/content/services/tour-management.json:6: em dash found -> "description": "Tour management in Portland, OR — routing, freight, and per-venue adaptation deliver
+  - site/content/services/tour-management.json:9: em dash found -> "description": "Tour management in Portland, OR — routing, freight, and per-venue adaptation deliver
+  - site/content/services/tour-management.json:15: em dash found -> "subheadline": "Multi-city event programs and festival circuits, run like clockwork — routing, freig
+  - site/content/services/tour-management.json:36: em dash found -> "content": "Tour management is the production discipline behind anything that happens more than once
+  - site/content/services/tour-management.json:54: em dash found -> "content": "We build the touring plan from the routing out: advance surveys and spec packs for every
+  - site/content/services/tour-management.json:60: em dash found -> "1. Routing & Advance — We survey every stop and flag constraints early",
+  - site/content/services/tour-management.json:61: em dash found -> "2. Tour-Ready Design — Builds engineered to crate, ship, and redeploy fast",
+  - site/content/services/tour-management.json:62: em dash found -> "3. Spec Packs — Per-venue documents covering power, rigging, footprint, schedule",
+  - site/content/services/tour-management.json:63: em dash found -> "4. Deploy — Managed load-in, show, and strike at each stop",
+  - site/content/services/tour-management.json:64: em dash found -> "5. Transit — Freight, trucking, and asset tracking between cities",
+  - site/content/services/tour-management.json:65: em dash found -> "6. Wrap — Per-stop budgets reconciled and lessons fed into the next run"
+  - site/content/services/tour-management.json:90: em dash found -> "answer": "Yes. We audit the current production, document what exists, fix the pain points — usually
+  - site/content/services/tour-management.json:94: em dash found -> "answer": "We do. Our team has delivered work internationally, and we manage the added complexity — 
+  - site/content/services/trade-convention-booths.json:6: em dash found -> "description": "Trade show and convention booths in Portland, OR — high-traffic exhibits with custom
+  - site/content/services/trade-convention-booths.json:9: em dash found -> "description": "Trade show and convention booths in Portland, OR — high-traffic exhibits with custom
+  - site/content/services/trade-convention-booths.json:36: em dash found -> "content": "A trade or convention booth is a brand's entire world compressed into a few hundred squa
+  - site/content/services/trade-convention-booths.json:54: em dash found -> "content": "Beatrox delivers turnkey exhibit builds: design and engineering, custom fabrication, int
+  - site/content/services/trade-convention-booths.json:60: em dash found -> "1. Discovery — We learn your goals, footprint, show rules, and budget",
+  - site/content/services/trade-convention-booths.json:61: em dash found -> "2. Design & Pre-Visualization — See the booth rendered in the actual floor plan before it's built",
+  - site/content/services/trade-convention-booths.json:62: em dash found -> "3. Engineering & Fabrication — Structure, graphics, and interactive elements built and test-fit in 
+  - site/content/services/trade-convention-booths.json:63: em dash found -> "4. Show Logistics — Freight, show services, and venue coordination handled by our team",
+  - site/content/services/trade-convention-booths.json:64: em dash found -> "5. Install & Show Support — We build it on the floor and keep it running all show",
+  - site/content/services/trade-convention-booths.json:65: em dash found -> "6. Dismantle & Storage — Fast teardown, with reusable components crated for the next show"
+  - site/content/services/trade-convention-booths.json:72: em dash found -> "Convention-proven — a Comic-Con exhibition build for Netflix in New York",
+  - site/content/services/trade-convention-booths.json:73: em dash found -> "Experiential pedigree — campaign work for Toyota x MTV in Los Angeles",
+  - site/content/services/trade-convention-booths.json:74: em dash found -> "Interactive media in-house — LIDAR, computer vision, and ultra wide-format displays like our FLIR i
+  - site/content/services/trade-convention-booths.json:90: em dash found -> "answer": "Absolutely — that's where we differentiate. Our exhibits can integrate LED walls, touch-f
+  - site/content/services/trade-convention-booths.json:94: em dash found -> "answer": "We design modular systems that break down, crate, and reassemble across a multi-show cale
+  - site/content/services/venue-sourcing-booking.json:6: em dash found -> "description": "Venue sourcing and booking in Portland, OR — from raw industrial spaces to public pa
+  - site/content/services/venue-sourcing-booking.json:9: em dash found -> "description": "Venue sourcing and booking in Portland, OR — from raw industrial spaces to public pa
+  - site/content/services/venue-sourcing-booking.json:15: em dash found -> "subheadline": "The right space for the experience — we find, vet, and book venues that fit your cre
+  - site/content/services/venue-sourcing-booking.json:36: em dash found -> "content": "Venue sourcing is the search for a physical space that can actually hold your event — cr
+  - site/content/services/venue-sourcing-booking.json:54: em dash found -> "content": "We start with the experience you want to create, then search for spaces that can support
+  - site/content/services/venue-sourcing-booking.json:60: em dash found -> "1. Brief — We define the creative, capacity, and technical requirements",
+  - site/content/services/venue-sourcing-booking.json:61: em dash found -> "2. Search — Candidate spaces identified and pre-vetted against your needs",
+  - site/content/services/venue-sourcing-booking.json:62: em dash found -> "3. Survey — Top options walked and assessed for production feasibility",
+  - site/content/services/venue-sourcing-booking.json:63: em dash found -> "4. Negotiate — Rates, terms, insurance, and house rules locked in",
+  - site/content/services/venue-sourcing-booking.json:64: em dash found -> "5. Coordinate — Landlord liaison through build, event, and strike",
+  - site/content/services/venue-sourcing-booking.json:65: em dash found -> "6. Restore — Space returned to spec and deposit obligations closed out"
+  - site/content/services/venue-sourcing-booking.json:75: em dash found -> "Builders first — our feasibility assessments reflect real construction costs",
+  - site/content/services/venue-sourcing-booking.json:86: em dash found -> "answer": "Yes. We'll run a production feasibility survey on your space — power, rigging, load-in, r
+  - site/content/services/venue-sourcing-booking.json:98: em dash found -> "answer": "As early as possible — the venue constrains everything downstream. For non-traditional or
+  - site/content/services-index.json:6: em dash found -> "description": "We offer the full spectrum of experiential event design and production services — De
+  - site/content/team.json:6: em dash found -> "description": "Meet the multidisciplinary team behind Beatrox — creators, engineers, designers, and
+  - site/content/team.json:9: em dash found -> "description": "Creators, engineers, designers, and technologists united by one mission — craft expe
+  - site/content/team.json:71: em dash found -> "bio": "Owner of Sky Lites Drone Shows and a core member of the Beatrox team. Alan has spent many ye
+  - site/content/work.json:6: em dash found -> "description": "Our creative technology projects range from permanent installations to touring event
+  - site/docs/GA4_SETUP.md:1: em dash found -> # GA4 Setup — Dashboard Traffic Analytics
+  - site/docs/GA4_SETUP.md:10: em dash found -> 1. **Find the GA4 property ID** — Google Analytics → Admin → Property Settings
+  - site/docs/GA4_SETUP.md:14: em dash found -> 2. **Create a service account** — Google Cloud Console (same project used for
+  - site/docs/GA4_SETUP.md:20: em dash found -> 3. **Grant the service account read access to GA4** — Google Analytics →
+  - site/docs/GA4_SETUP.md:33: em dash found -> Keep the `\n` escapes inside quotes — the code converts them to real
+  - site/docs/GA4_SETUP.md:42: em dash found -> erroring — nothing else is affected.
+  - site/docs/GA4_SETUP.md:46: em dash found -> - `site/lib/analytics/ga4.ts` — client + report queries (`getGa4Dashboard`).
+  - site/docs/GA4_SETUP.md:47: em dash found -> - `site/components/payload/dashboard/DashboardView.tsx` — renders the card.
+  - site/docs/GOOGLE_CALENDAR_SETUP.md:66: em dash found -> 3. Check the Google Calendar of the authorized account — an event with a Google Meet link should app
+  - site/lib/analytics/ga4.ts:126: em dash found -> * on Google. Returns null when GA4 env vars are missing or the API fails —
+  - site/lib/capabilities.ts:1: em dash found -> // Shared capability tile data — types plus the curated default grid for
+  - site/lib/capabilities.ts:24: em dash found -> // /work/* projects). A few mappings are best-fit judgments — see
+  - site/lib/content.ts:55: em dash found -> /** Backend-only tags — drive which /services|/tech pages this photo
+  - site/lib/content.ts:158: em dash found -> /** Technologies behind a tech capability — display-only chips, never used for matching. */
+  - site/lib/content.ts:173: em dash found -> /** Payload doc id — present on CMS-backed members, absent on JSON fallback. */
+  - site/lib/content.ts:725: em dash found -> * listOrder sort as getAllProjectsResolved, but only the fields cards read —
+  - site/lib/content.ts:769: em dash found -> * metadata/images/seo) — body, contentBlocks, and videos stay in Postgres.
+  - site/lib/content.ts:940: em dash found -> // sourceIndex is the raw CMS `images` row index — the same numbering
+  - site/lib/content.ts:959: em dash found -> * 3. Remaining auto entries fill the free slots top-down — so a newly tagged
+  - site/lib/content.ts:1436: em dash found -> // Only called from the auth-gated /api/admin/media-library route — public
+  - site/lib/content.ts:1470: em dash found -> * editable on /services). Returns [] when unset — callers fall back to
+  - site/lib/crm/link-client.ts:28: em dash found -> * every public intake lands on a single client record. Never throws — intake
+  - site/lib/email.ts:164: em dash found -> subject: `New booking: ${input.consultationType} — ${input.name}`,
+  - site/lib/email.ts:212: em dash found -> subject: `New inquiry: ${input.name}${input.eventType ? ` — ${input.eventType}` : ''}`,
+  - site/lib/email.ts:264: em dash found -> (s) => `• ${s.name} <${s.email}> — inquiry from ${s.createdAt.slice(0, 10)} (${input.adminUrl}/colle
+  - site/lib/email.ts:267: em dash found -> (d) => `• ${d.title}${d.value ? ` — $${d.value.toLocaleString()}` : ''} — opened ${d.createdAt.slice
+  - site/lib/email.ts:284: em dash found -> `<li>${escapeHtml(s.name)} &lt;${escapeHtml(s.email)}&gt; — inquiry from ${escapeHtml(s.createdAt.sl
+  - site/lib/email.ts:290: em dash found -> `<li>${escapeHtml(d.title)}${d.value ? ` — $${d.value.toLocaleString()}` : ''} — opened ${escapeHtml
+  - site/lib/email.ts:330: em dash found -> `BEATROX weekly KPIs — ${input.weekLabel}`,
+  - site/lib/email.ts:377: em dash found -> `Your proposal from BEATROX — ${input.dealTitle} — is ready to review:`,
+  - site/lib/email.ts:393: em dash found -> <p>Your proposal from BEATROX — <strong>${escapeHtml(input.dealTitle)}</strong> — is ready to review
+  - site/lib/json-content.ts:37: em dash found -> /** CMS-only backend tags — absent in the JSON baseline. */
+  - site/lib/json-content.ts:110: em dash found -> /** CMS-only impact stats — absent in the JSON baseline. */
+  - site/lib/json-content.ts:126: em dash found -> /** Technologies behind a tech capability — display-only chips, never used for matching. */
+  - site/lib/json-content.ts:131: em dash found -> /** CMS-only per-page pin/hide overrides — absent in the JSON baseline. */
+  - site/lib/kpi.ts:24: em dash found -> * Weekly/monthly sales KPIs — the metric set from
+  - site/lib/rate-limit.ts:5: em dash found -> // so this only limits per instance — for strict limiting use a shared store
+  - site/lib/revalidate.ts:6: em dash found -> // swallows its own errors — revalidation must never fail a save.
+  - site/lib/scheduling/google-calendar.ts:202: em dash found -> * block consultation slots. Returns [] when unconfigured or on error —
+  - site/next.config.ts:10: em dash found -> // Rentals now lives on its own dedicated app (permanent — passes link equity).
+  - site/payload/collections/ContactSubmissions.ts:50: em dash found -> // Notify the team — contact submissions previously had no notification.
+  - site/payload/collections/Deals.ts:22: em dash found -> // Every deal gets a public proposal token up front — the proposal
+  - site/payload/collections/Projects.ts:182: em dash found -> description: 'Services used on this project — drives service-page related work and the /work service
+  - site/payload/collections/Projects.ts:194: em dash found -> description: 'Technologies used on this project — drives /tech pages. Display-only: never used for p
+  - site/payload/collections/Projects.ts:229: em dash found -> description: 'Deprecated — use Content Blocks below.',
+  - site/payload/collections/Projects.ts:264: em dash found -> description: 'Backend-only — not shown on the project page. Drives which /services pages this photo 
+  - site/payload/collections/Projects.ts:276: em dash found -> description: 'Backend-only — not shown on the project page. Drives which /tech pages this photo appe
+  - site/payload/collections/Services.ts:126: em dash found -> { label: 'Service (sold offering — /services/*)', value: 'service' },
+  - site/payload/collections/Services.ts:127: em dash found -> { label: 'Tech (capability — /tech/*)', value: 'tech' },
+  - site/payload/collections/Services.ts:138: em dash found -> description: 'Technologies behind this capability — shown as chips on tech pages. Display-only, neve
+  - site/payload/collections/Services.ts:183: em dash found -> description: 'Deprecated — use Content Blocks below.',
+  - site/payload/jobs/weekly-kpi-digest.ts:7: em dash found -> * Monday ~8am PT (15:00 UTC): email the weekly KPI digest — the metric set
+  - site/payload-types.ts:515: em dash found -> * Technologies behind this capability — shown as chips on tech pages. Display-only, never used for m
+  - site/payload-types.ts:546: em dash found -> * Deprecated — use Content Blocks below.
+  - site/payload-types.ts:837: em dash found -> * Services used on this project — drives service-page related work and the /work service tag cloud.
+  - site/payload-types.ts:841: em dash found -> * Technologies used on this project — drives /tech pages. Display-only: never used for project↔proje
+  - site/payload-types.ts:865: em dash found -> * Deprecated — use Content Blocks below.
+  - site/payload-types.ts:1030: em dash found -> * Backend-only — not shown on the project page. Drives which /services pages this photo appears on.
+  - site/payload-types.ts:1034: em dash found -> * Backend-only — not shown on the project page. Drives which /tech pages this photo appears on.
+  - site/payload.config.ts:35: em dash found -> // Read via indirection so Turbopack cannot inline the value at build time —
+  - site/payload.config.ts:39: em dash found -> // Never fall back to the dev secret in production — fail fast at config load.
+  - site/reports/missing-media-report.md:19: em dash found -> - `create-our-future`: index=0, filename=IMG_2957.jpg, note=CDN URL pending — source from Beatrox me
+  - site/reports/missing-media-report.md:20: em dash found -> - `create-our-future`: index=1, filename=IMG_2958.jpg, note=CDN URL pending — source from Beatrox me
+  - site/reports/missing-media-report.md:21: em dash found -> - `create-our-future`: index=2, filename=IMG_2959.jpg, note=CDN URL pending — source from Beatrox me
+  - site/reports/missing-media-report.md:22: em dash found -> - `create-our-future`: index=3, filename=IMG_2960.jpg, note=CDN URL pending — source from Beatrox me
+  - site/reports/missing-media-report.md:23: em dash found -> - `create-our-future`: index=4, filename=IMG_2961.jpg, note=CDN URL pending — source from Beatrox me
+  - site/reports/missing-media-report.md:24: em dash found -> - `create-our-future`: index=5, filename=IMG_2962.jpg, note=CDN URL pending — source from Beatrox me
+  - site/reports/missing-media-report.md:25: em dash found -> - `super-bowl-2020`: index=0, filename=ScreenShotsForProjectionMapping5.jpg, note=CDN URL pending — 
+  - site/reports/missing-media-report.md:26: em dash found -> - `super-bowl-2020`: index=1, filename=ScreenShotsForProjectionMapping4.jpg, note=CDN URL pending — 
+  - site/reports/missing-media-report.md:27: em dash found -> - `super-bowl-2020`: index=2, filename=ScreenShotsForProjectionMapping2.jpg, note=CDN URL pending — 

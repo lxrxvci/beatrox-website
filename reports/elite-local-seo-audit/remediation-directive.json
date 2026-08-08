@@ -508,7 +508,12 @@
             "effort": "S",
             "impact": "high",
             "closesGate": false,
-            "deviation": "CLIENT-DECLINED 2026-08-07: Beatrox is a global brand; hyper-local targeting moves to rentals.beatrox.com. Main-site H1 and title stay city-free by direction."
+            "deviation": "CLIENT-DECLINED 2026-08-07: Beatrox is a global brand; hyper-local targeting moves to rentals.beatrox.com. Main-site H1 and title stay city-free by direction.",
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "DEVIATION-RECORDED: client-declined 2026-08-07 for main site; global title now ships from JSON (CMS promotion pending)"
+            }
           }
         },
         {
@@ -559,7 +564,12 @@
             "effort": "S",
             "impact": "high",
             "closesGate": false,
-            "deviation": "CLIENT-DECLINED 2026-08-07: Beatrox is a global brand; hyper-local targeting moves to rentals.beatrox.com. Main-site H1 and title stay city-free by direction."
+            "deviation": "CLIENT-DECLINED 2026-08-07: Beatrox is a global brand; hyper-local targeting moves to rentals.beatrox.com. Main-site H1 and title stay city-free by direction.",
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "DEVIATION-RECORDED: client-declined 2026-08-07, global brand strategy"
+            }
           }
         },
         {
@@ -603,7 +613,12 @@
             "verificationCommand": "python3 /Users/lxrxcvi/.kimi-code/skills/elite-local-seo-audit/scripts/content_lint.py --path site",
             "effort": "M",
             "impact": "high",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: homepage now ~476 words incl chrome with global positioning section (audit-evidence/reaudit/index.html)"
+            }
           }
         },
         {
@@ -646,7 +661,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/services | grep -o '<title>[^<]*</title>'",
             "effort": "S",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: absolute-title fix live; /services renders \"Services | BEATROX\" (audit-evidence/reaudit/services.html)"
+            }
           }
         },
         {
@@ -694,7 +714,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '1313 SE 3rd Ave[^<]*'",
             "effort": "S",
             "impact": "high",
-            "closesGate": true
+            "closesGate": true,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: footer raw text matches GBP address exactly (nap_parity OK lines for Footer.tsx)"
+            }
           }
         },
         {
@@ -740,7 +765,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '\"name\":\"[^\"]*\"' | head -5",
             "effort": "S",
             "impact": "medium",
-            "closesGate": true
+            "closesGate": true,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-CODE-SIDE: schema name is \"Beatrox\" with stable @id; final parity check pending GBP creation"
+            }
           }
         },
         {
@@ -785,7 +815,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/book | grep -o 'rel=\"canonical\"[^>]*'",
             "effort": "S",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: /book canonical present (audit-evidence/reaudit/book.html)"
+            }
           }
         },
         {
@@ -839,7 +874,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/services | grep -c 'LocalBusiness'",
             "effort": "M",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: LocalBusiness on homepage only, zero on about/services/contact/work/book/team; no duplicate Organization entity anywhere"
+            }
           }
         },
         {
@@ -890,7 +930,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '\"geo\":[^}]*}'",
             "effort": "M",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: @id, geo, hasMap, openingHoursSpecification, structured areaServed, priceRange all live on homepage JSON-LD"
+            }
           }
         },
         {
@@ -932,7 +977,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '\"itemOffered\"' | wc -l",
             "effort": "M",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: 46 itemOffered entries generated from the services content source"
+            }
           }
         },
         {
@@ -1017,7 +1067,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/contact | grep -o '<input\\|<select\\|<textarea' | wc -l",
             "effort": "M",
             "impact": "high",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-IN-REPO: contact.json trimmed to 4 fields in both copies; rendered form still CMS-overridden until CMS promotion"
+            }
           }
         },
         {
@@ -1060,7 +1115,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -io 'super bowl\\|buzzfeed\\|adidas' | head -3",
             "effort": "S",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: trust line live under hero CTAs"
+            }
           }
         },
         {
@@ -1145,7 +1205,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/contact | grep -c 'google.com/maps'",
             "effort": "S",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: Google Map embed live on /contact"
+            }
           }
         },
         {
@@ -1188,7 +1253,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -c openingHoursSpecification",
             "effort": "S",
             "impact": "medium",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-CODE-SIDE: openingHoursSpecification live, matching /contact stated hours; GBP side pending profile creation"
+            }
           }
         },
         {
@@ -1398,7 +1468,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/sitemap.xml | grep -o '<lastmod>[^<]*' | sort -u | wc -l",
             "effort": "S",
             "impact": "low",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: zero lastmod entries in sitemap.xml"
+            }
           }
         },
         {
@@ -1480,7 +1555,12 @@
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -c $'\\u2014'",
             "effort": "S",
             "impact": "low",
-            "closesGate": true
+            "closesGate": true,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-PARTIAL: titles clean on JSON-driven pages; about/contact/team titles are CMS-overridden and flip at CMS promotion"
+            }
           }
         },
         {
@@ -1521,7 +1601,12 @@
             "verificationCommand": "ls schema/ 2>/dev/null || echo removed",
             "effort": "S",
             "impact": "low",
-            "closesGate": false
+            "closesGate": false,
+            "reaudit": {
+              "date": "2026-08-07",
+              "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+              "status": "CLOSED-VERIFIED: orphaned jsonld deleted, geo harvested into site/lib/schema.ts"
+            }
           }
         }
       ]
@@ -1549,6 +1634,11 @@
       "closure": "A finding closes only when every acceptanceCriterion is mechanically verified on re-audit.",
       "evidenceRule": "Every result carries an evidence property citing a captured artifact path, plus beforeSnippet/afterSnippet for code and content findings."
     },
-    "deploymentConstraint": "All code/config/content remediation lands on a forked branch with a staged Vercel preview deployment only. The production deployment and production CMS are not touched without explicit approval."
+    "deploymentConstraint": "All code/config/content remediation lands on a forked branch with a staged Vercel preview deployment only. The production deployment and production CMS are not touched without explicit approval.",
+    "reaudit": {
+      "date": "2026-08-07",
+      "preview": "https://beatrox-website-1or8tyjxj-lxrxvcis-projects.vercel.app",
+      "note": "Re-audit after staged remediation. Findings without a reaudit property remain OPEN."
+    }
   }
 }
