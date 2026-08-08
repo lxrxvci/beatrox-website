@@ -3,16 +3,16 @@
   "slug": "/services/laser-shows",
   "seo": {
     "title": "Laser Light Shows Portland, OR",
-    "description": "Laser light shows in Portland, OR — custom beam choreography, sky scanning, and laser mapping for concerts, festivals, and brand activations.",
+    "description": "Laser light shows in Portland, OR: custom beam choreography, sky scanning, and laser mapping for concerts, festivals, and brand activations.",
     "og": {
       "title": "Laser Light Shows Portland, OR | BEATROX",
-      "description": "Laser light shows in Portland, OR — custom beam choreography, sky scanning, and laser mapping for concerts, festivals, and brand activations.",
+      "description": "Laser light shows in Portland, OR: custom beam choreography, sky scanning, and laser mapping for concerts, festivals, and brand activations.",
       "image": "/images/verified/services/laser-shows/Laser-Show-Example1-97b60e2c.jpg"
     }
   },
   "hero": {
     "headline": "Laser Light Shows",
-    "subheadline": "High-powered laser systems choreographed to your music and brand — cutting through the dark with precision and impact.",
+    "subheadline": "High-powered laser systems choreographed to your music and brand, cutting through the dark with precision and impact.",
     "cta": {
       "label": "Get a Free Quote",
       "url": "/book"
@@ -32,30 +32,30 @@
   "body": [
     {
       "type": "intro",
-      "content": "Few effects command an audience's attention like a precisely choreographed laser show — and Beatrox designs and operates professional laser systems from Portland, Oregon for concerts, festivals, brand activations, and large-scale experiential events nationwide, from tight venue beam effects to massive outdoor sky scans."
+      "content": "Few effects command an audience's attention like a precisely choreographed laser show, and Beatrox designs and operates professional laser systems from Portland, Oregon for concerts, festivals, brand activations, and large-scale experiential events nationwide, from tight venue beam effects to massive outdoor sky scans."
     },
     {
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
         "ANSI Z136-compliant operation with certified laser safety officers on every show",
-        "FDA/CDRH variance permitting handled in-house — indoor and outdoor",
+        "FDA/CDRH variance permitting handled in-house: indoor and outdoor",
         "Full-color RGB systems from 1W venue rigs to 40W+ sky scanners",
-        "Laser-mapped touring work — including the Projekt X set piece for Adriatique's X Future tour",
-        "Frame-accurate music sync — beat grids, timecode, MIDI, and Ableton Link",
-        "Unified spectacles — lasers integrated with LED, projection, and drone shows"
+        "Laser-mapped touring work, including the Projekt X set piece for Adriatique's X Future tour",
+        "Frame-accurate music sync: beat grids, timecode, MIDI, and Ableton Link",
+        "Unified spectacles: lasers integrated with LED, projection, and drone shows"
       ]
     },
     {
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Creative & Venue Review — Music, sightlines, surfaces, and audience zones assessed",
-        "2. Show Programming — Beam choreography pre-visualized and locked to your tracks",
-        "3. Permitting & Safety Planning — Variance filings, beam-path calculations, safety zones",
-        "4. Rig & Align — Projectors positioned, focused, and verified against the safety plan",
-        "5. Live Operation — Certified operators run the show and adapt to the room in real time",
-        "6. Derig & Compliance Wrap — Equipment struck, authorities signed off, files archived"
+        "1. Creative & Venue Review: Music, sightlines, surfaces, and audience zones assessed",
+        "2. Show Programming: Beam choreography pre-visualized and locked to your tracks",
+        "3. Permitting & Safety Planning: Variance filings, beam-path calculations, safety zones",
+        "4. Rig & Align: Projectors positioned, focused, and verified against the safety plan",
+        "5. Live Operation: Certified operators run the show and adapt to the room in real time",
+        "6. Derig & Compliance Wrap: Equipment struck, authorities signed off, files archived"
       ]
     },
     {
@@ -82,7 +82,7 @@
     {
       "type": "service_detail",
       "heading": "Music Sync Options",
-      "content": "Beatrox laser shows can be programmed to any audio source — from prerecorded tracks with frame-accurate BPM timing to live, improvised performance. Our programmers build cues locked to beat grids for seamless sync with DJ sets and live bands. For live shows, our operators can improvise in real time, following the energy of the room and the artist's performance. We also integrate with timecode, MIDI, and Ableton Link for synchronized multi-system shows."
+      "content": "Beatrox laser shows can be programmed to any audio source, from prerecorded tracks with frame-accurate BPM timing to live, improvised performance. Our programmers build cues locked to beat grids for seamless sync with DJ sets and live bands. For live shows, our operators can improvise in real time, following the energy of the room and the artist's performance. We also integrate with timecode, MIDI, and Ableton Link for synchronized multi-system shows."
     },
     {
       "type": "specs",

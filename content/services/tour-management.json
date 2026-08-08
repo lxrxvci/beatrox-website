@@ -3,16 +3,16 @@
   "slug": "/services/tour-management",
   "seo": {
     "title": "Tour Management Portland, OR",
-    "description": "Tour management in Portland, OR — routing, freight, and per-venue adaptation delivering consistent show quality at every stop.",
+    "description": "Tour management in Portland, OR: routing, freight, and per-venue adaptation delivering consistent show quality at every stop.",
     "og": {
       "title": "Tour Management Portland, OR | BEATROX",
-      "description": "Tour management in Portland, OR — routing, freight, and per-venue adaptation delivering consistent show quality at every stop.",
+      "description": "Tour management in Portland, OR: routing, freight, and per-venue adaptation delivering consistent show quality at every stop.",
       "image": "/images/verified/work/infinite-playlist/Amazon-Music-Live-Activation-at-OutsideLands-7924bb43.jpg"
     }
   },
   "hero": {
     "headline": "Tour Management",
-    "subheadline": "Multi-city event programs and festival circuits, run like clockwork — routing, freight, per-venue adaptation, and the same show quality at every stop.",
+    "subheadline": "Multi-city event programs and festival circuits, run like clockwork: routing, freight, per-venue adaptation, and the same show quality at every stop.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Tour Management?",
-      "content": "Tour management is the production discipline behind anything that happens more than once, in more than one place — a discipline Beatrox runs from Portland, Oregon for programs routing across the country. Whether it's a brand activation hitting multiple festivals, a product experience moving city to city, or a live show with a routing sheet, the challenge is the same: deliver an identical quality of experience in venues that are never identical.\n\nEach stop brings new constraints — different footprints, power, load-in access, local vendors, and timelines. Without a touring framework, every city becomes a ground-up rebuild: budgets drift, freight goes missing, and the show slowly mutates as teams improvise around surprises. Tour management replaces improvisation with a system — advance work, spec packs, repeatable builds, and documentation that travels with the production.\n\nYou need it whenever your program has more than one date on the calendar. The second stop is where single-event thinking breaks down, and it's where an experienced tour manager pays for themselves immediately."
+      "content": "Tour management is the production discipline behind anything that happens more than once, in more than one place: a discipline Beatrox runs from Portland, Oregon for programs routing across the country. Whether it's a brand activation hitting multiple festivals, a product experience moving city to city, or a live show with a routing sheet, the challenge is the same: deliver an identical quality of experience in venues that are never identical.\n\nEach stop brings new constraints: different footprints, power, load-in access, local vendors, and timelines. Without a touring framework, every city becomes a ground-up rebuild: budgets drift, freight goes missing, and the show slowly mutates as teams improvise around surprises. Tour management replaces improvisation with a system: advance work, spec packs, repeatable builds, and documentation that travels with the production.\n\nYou need it whenever your program has more than one date on the calendar. The second stop is where single-event thinking breaks down, and it's where an experienced tour manager pays for themselves immediately."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "We build the touring plan from the routing out: advance surveys and spec packs for every venue, freight and trucking schedules between stops, crew and vendor coordination, asset tracking for every case and scenic element, and per-stop budget reconciliation. Critically, we design the production itself to tour — modular builds, crating strategies, and documented setup procedures so each deployment is faster and more consistent than the last.\n\nOn the Infinite Playlist Tour for Amazon Music Live, we deployed custom-built festival activations at both Outside Lands in San Francisco and Stagecoach in Indio within a single season — each venue receiving its own tailored build while the program's identity and quality stayed constant. AKU World in New York showed the same muscle at a different scale: live musical performances synchronized to lighting and projection across multiple programmed rooms, running on show discipline rather than luck. And Run for the Oceans — an interactive container experience built for Adidas and Parley Ocean School's annual 5k event — was engineered as a self-contained, redeployable environment for a recurring activation format."
+      "content": "We build the touring plan from the routing out: advance surveys and spec packs for every venue, freight and trucking schedules between stops, crew and vendor coordination, asset tracking for every case and scenic element, and per-stop budget reconciliation. Critically, we design the production itself to tour: modular builds, crating strategies, and documented setup procedures so each deployment is faster and more consistent than the last.\n\nOn the Infinite Playlist Tour for Amazon Music Live, we deployed custom-built festival activations at both Outside Lands in San Francisco and Stagecoach in Indio within a single season, each venue receiving its own tailored build while the program's identity and quality stayed constant. AKU World in New York showed the same muscle at a different scale: live musical performances synchronized to lighting and projection across multiple programmed rooms, running on show discipline rather than luck. And Run for the Oceans, an interactive container experience built for Adidas and Parley Ocean School's annual 5k event, was engineered as a self-contained, redeployable environment for a recurring activation format."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Routing & Advance — We survey every stop and flag constraints early",
-        "2. Tour-Ready Design — Builds engineered to crate, ship, and redeploy fast",
-        "3. Spec Packs — Per-venue documents covering power, rigging, footprint, schedule",
-        "4. Deploy — Managed load-in, show, and strike at each stop",
-        "5. Transit — Freight, trucking, and asset tracking between cities",
-        "6. Wrap — Per-stop budgets reconciled and lessons fed into the next run"
+        "1. Routing & Advance: We survey every stop and flag constraints early",
+        "2. Tour-Ready Design: Builds engineered to crate, ship, and redeploy fast",
+        "3. Spec Packs: Per-venue documents covering power, rigging, footprint, schedule",
+        "4. Deploy: Managed load-in, show, and strike at each stop",
+        "5. Transit: Freight, trucking, and asset tracking between cities",
+        "6. Wrap: Per-stop budgets reconciled and lessons fed into the next run"
       ]
     },
     {
@@ -87,11 +87,11 @@
         },
         {
           "question": "Can you take over management of an existing tour or program?",
-          "answer": "Yes. We audit the current production, document what exists, fix the pain points — usually freight, scheduling, and per-venue adaptation — and run subsequent stops on a proper touring framework."
+          "answer": "Yes. We audit the current production, document what exists, fix the pain points (usually freight, scheduling, and per-venue adaptation) and run subsequent stops on a proper touring framework."
         },
         {
           "question": "Do you handle international stops?",
-          "answer": "We do. Our team has delivered work internationally, and we manage the added complexity — carnets, freight forwarding, local crew, and compliance — as part of the routing plan."
+          "answer": "We do. Our team has delivered work internationally, and we manage the added complexity (carnets, freight forwarding, local crew, and compliance) as part of the routing plan."
         },
         {
           "question": "What's the minimum program size where tour management makes sense?",

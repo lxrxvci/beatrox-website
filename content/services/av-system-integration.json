@@ -3,16 +3,16 @@
   "slug": "/services/av-system-integration",
   "seo": {
     "title": "AV System Integration Portland, OR",
-    "description": "AV system integration in Portland, OR — audio, video, lighting, and control unified into one reliable system, from design through commissioning.",
+    "description": "AV system integration in Portland, OR: audio, video, lighting, and control unified into one reliable system, from design through commissioning.",
     "og": {
       "title": "AV System Integration Portland, OR | BEATROX",
-      "description": "AV system integration in Portland, OR — audio, video, lighting, and control unified into one reliable system, from design through commissioning.",
+      "description": "AV system integration in Portland, OR: audio, video, lighting, and control unified into one reliable system, from design through commissioning.",
       "image": "/images/verified/work/the-great-escape/the_great_escape_preview.jpg"
     }
   },
   "hero": {
     "headline": "AV System Integration",
-    "subheadline": "Audio, video, lighting, and control unified into one reliable system — designed, installed, and commissioned by a single accountable team.",
+    "subheadline": "Audio, video, lighting, and control unified into one reliable system, designed, installed, and commissioned by a single accountable team.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is AV System Integration?",
-      "content": "AV system integration is the work of making separate technologies behave as one system — work our Portland, Oregon team delivers on events and installations nationwide. Audio, video, lighting, interactivity, and control each arrive from different vendors with different protocols — integration is the design, infrastructure, and programming that binds them together so a single cue can move every department at once.\n\nYou need integration whenever a project combines more than one technical discipline — which is nearly every experiential build. A projection-mapped room with spatial audio and reactive lighting isn't three systems; it's one experience. Without deliberate integration, you get three teams, three timelines, and a show where the pieces never quite land together.\n\nIntegration done well is mostly invisible infrastructure: clean signal flow, sensible network architecture, labeled racks, and control logic that lets an operator run a complex show from one surface. It's the difference between technology that supports the creative and technology that competes with it."
+      "content": "AV system integration is the work of making separate technologies behave as one system: work our Portland, Oregon team delivers on events and installations nationwide. Audio, video, lighting, interactivity, and control each arrive from different vendors with different protocols. Integration is the design, infrastructure, and programming that binds them together so a single cue can move every department at once.\n\nYou need integration whenever a project combines more than one technical discipline, which is nearly every experiential build. A projection-mapped room with spatial audio and reactive lighting isn't three systems; it's one experience. Without deliberate integration, you get three teams, three timelines, and a show where the pieces never quite land together.\n\nIntegration done well is mostly invisible infrastructure: clean signal flow, sensible network architecture, labeled racks, and control logic that lets an operator run a complex show from one surface. It's the difference between technology that supports the creative and technology that competes with it."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "BEATROX integrates the full technical stack: system design and specification, signal flow and network architecture, rack builds and cable infrastructure, control programming across DMX, Art-Net, sACN, MIDI, and timecode, and on-site commissioning with calibration and testing. Because our designers, fabricators, and technicians work as one team, the AV is integrated into the scenic and structural design from day one — not threaded through it afterward.\n\nWe've unified complex systems for demanding clients. On The Great Escape for Adidas in Los Angeles, integrated AV drove a complete product launch experience, with audio, video, and interactive elements operating as a single environment. Projekt X for Adriatique's worldwide 'X Future' tour required deep integration inside a custom-fabricated aluminum stage element — DMX-addressable edge-lit LEDs recessed into the structure itself, pixel-mapped and laser-mapped, designed to fly in any orientation and reassemble identically in every city. And for BuzzFeed's NewFronts at Moynihan Station, we integrated media server playback, individually mapped projection orbs, and full lighting programming into one programmed show flow on a custom-built stage."
+      "content": "BEATROX integrates the full technical stack: system design and specification, signal flow and network architecture, rack builds and cable infrastructure, control programming across DMX, Art-Net, sACN, MIDI, and timecode, and on-site commissioning with calibration and testing. Because our designers, fabricators, and technicians work as one team, the AV is integrated into the scenic and structural design from day one, not threaded through it afterward.\n\nWe've unified complex systems for demanding clients. On The Great Escape for Adidas in Los Angeles, integrated AV drove a complete product launch experience, with audio, video, and interactive elements operating as a single environment. Projekt X for Adriatique's worldwide 'X Future' tour required deep integration inside a custom-fabricated aluminum stage element: DMX-addressable edge-lit LEDs recessed into the structure itself, pixel-mapped and laser-mapped, designed to fly in any orientation and reassemble identically in every city. And for BuzzFeed's NewFronts at Moynihan Station, we integrated media server playback, individually mapped projection orbs, and full lighting programming into one programmed show flow on a custom-built stage."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Discovery — We map the experience goals, venue, and every system in scope",
-        "2. System Design — Signal flow, network architecture, and equipment are specified as one design",
-        "3. Build & Pre-Rig — Racks, cable, and control surfaces are assembled and tested off-site",
-        "4. Installation — Infrastructure is installed, terminated, and labeled on site",
-        "5. Commissioning — Systems are calibrated, cues are programmed, and failover is tested",
-        "6. Handover & Support — Operators are trained and documentation is delivered with ongoing support"
+        "1. Discovery: We map the experience goals, venue, and every system in scope",
+        "2. System Design: Signal flow, network architecture, and equipment are specified as one design",
+        "3. Build & Pre-Rig: Racks, cable, and control surfaces are assembled and tested off-site",
+        "4. Installation: Infrastructure is installed, terminated, and labeled on site",
+        "5. Commissioning: Systems are calibrated, cues are programmed, and failover is tested",
+        "6. Handover & Support: Operators are trained and documentation is delivered with ongoing support"
       ]
     },
     {
@@ -72,7 +72,7 @@
         "Full AV integration for Adidas' The Great Escape product launch in Los Angeles",
         "Structure-embedded LED and mapping integration on Projekt X for Adriatique's world tour",
         "Unified playback, projection, and lighting systems for BuzzFeed's NewFronts",
-        "One team spanning design, fabrication, and technical — integration without handoffs",
+        "One team spanning design, fabrication, and technical: integration without handoffs",
         "Protocol fluency across DMX, Art-Net, sACN, MIDI, and timecode",
         "Commissioned, documented systems built for operators, not just engineers"
       ]
@@ -83,7 +83,7 @@
       "items": [
         {
           "question": "What's the difference between AV rental and AV integration?",
-          "answer": "Rental gets you equipment; integration gets you a system. Integration covers the design, signal flow, control programming, and commissioning that make separate technologies operate as one — whether the gear is rented, purchased, or already installed."
+          "answer": "Rental gets you equipment; integration gets you a system. Integration covers the design, signal flow, control programming, and commissioning that make separate technologies operate as one, whether the gear is rented, purchased, or already installed."
         },
         {
           "question": "Can you integrate with equipment we already own?",
@@ -91,7 +91,7 @@
         },
         {
           "question": "Do you handle permanent installations as well as events?",
-          "answer": "Both. Permanent work adds long-term requirements — maintenance access, monitoring, documentation, and operator training — which we build into the design from the start."
+          "answer": "Both. Permanent work adds long-term requirements (maintenance access, monitoring, documentation, and operator training) which we build into the design from the start."
         },
         {
           "question": "Who runs the system after integration?",

@@ -3,16 +3,16 @@
   "slug": "/services/multimedia-displays",
   "seo": {
     "title": "Multimedia Displays Portland, OR",
-    "description": "Multimedia displays in Portland, OR — LED walls, interactive kiosks, and permanent media installations designed and integrated as systems.",
+    "description": "Multimedia displays in Portland, OR: LED walls, interactive kiosks, and permanent media installations designed and integrated as systems.",
     "og": {
       "title": "Multimedia Displays Portland, OR | BEATROX",
-      "description": "Multimedia displays in Portland, OR — LED walls, interactive kiosks, and permanent media installations designed and integrated as systems.",
+      "description": "Multimedia displays in Portland, OR: LED walls, interactive kiosks, and permanent media installations designed and integrated as systems.",
       "image": "/images/verified/work/flir/IMG_1483_Moment-6f53ad1f.jpg"
     }
   },
   "hero": {
     "headline": "Multimedia Displays",
-    "subheadline": "Screens that earn their audience. Beatrox designs and integrates multimedia display systems — from interactive kiosks and LED walls to permanent installations built to run for years.",
+    "subheadline": "Screens that earn their audience. Beatrox designs and integrates multimedia display systems, from interactive kiosks and LED walls to permanent installations built to run for years.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What are Multimedia Displays?",
-      "content": "Multimedia displays are the screens, surfaces, and interactive devices that carry your content to an audience — LED video walls, kiosk systems, holographic and portal displays, ultra wide-format installations, and sensor-driven screens — designed and integrated by our Portland, Oregon team for events and venues nationwide. The hardware is only half the story; the integration, content pipeline, and reliability engineering are what make a display an experience instead of a TV.\n\nYou need multimedia display design whenever content has to live in the physical world: a festival booth that draws a crowd, a headquarters lobby that tells the company story, a retail environment where the display invites touch — or deliberately doesn't need it. Each context demands different brightness, pitch, interaction, and uptime.\n\nBeatrox approaches displays as systems, not rentals. We match panel and processor to the viewing distance, build the media server pipeline to the content, engineer the installation for its duty cycle, and stay accountable from power-up to strike — or for the life of a permanent install."
+      "content": "Multimedia displays are the screens, surfaces, and interactive devices that carry your content to an audience (LED video walls, kiosk systems, holographic and portal displays, ultra wide-format installations, and sensor-driven screens) designed and integrated by our Portland, Oregon team for events and venues nationwide. The hardware is only half the story; the integration, content pipeline, and reliability engineering are what make a display an experience instead of a TV.\n\nYou need multimedia display design whenever content has to live in the physical world: a festival booth that draws a crowd, a headquarters lobby that tells the company story, a retail environment where the display invites touch, or deliberately doesn't need it. Each context demands different brightness, pitch, interaction, and uptime.\n\nBeatrox approaches displays as systems, not rentals. We match panel and processor to the viewing distance, build the media server pipeline to the content, engineer the installation for its duty cycle, and stay accountable from power-up to strike, or for the life of a permanent install."
     },
     {
       "type": "use_cases",
@@ -51,29 +51,29 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "Beatrox designs, sources, integrates, and operates multimedia display systems of every scale — from single interactive kiosks to seamless LED environments. We handle panel selection, structural integration, media server programming, sensor and computer-vision interaction, and on-site calibration, with content formatted to exact pixel maps.\n\nFor FLIR, we delivered a permanent interactive history wall at FLIR's Washington, DC headquarters — ultra wide-format displays driven by a media server, with LIDAR scanners and AI computer vision assigning each visitor a unique ID so multiple people can explore FLIR's technology milestones simultaneously, entirely touch-free. For Run for the Oceans with Adidas and Parley Ocean School, we built seamless wall-to-wall ROE Black Pearl LED inside a shipping container, mirrored floor and ceiling turning the display into an infinity ocean. For the Infinite Playlist Tour with Amazon Music Live, free-standing LED walls became AR portals at Outside Lands and Stagecoach 2023. For BuzzFeed's NewFronts, we fabricated media walls and a custom neon display environment at Moynihan Station. And for AKU World, we integrated interactive kiosks, holographic portal displays, and a 4D body scanner that let guests mint their own digital avatars."
+      "content": "Beatrox designs, sources, integrates, and operates multimedia display systems of every scale, from single interactive kiosks to seamless LED environments. We handle panel selection, structural integration, media server programming, sensor and computer-vision interaction, and on-site calibration, with content formatted to exact pixel maps.\n\nFor FLIR, we delivered a permanent interactive history wall at FLIR's Washington, DC headquarters: ultra wide-format displays driven by a media server, with LIDAR scanners and AI computer vision assigning each visitor a unique ID so multiple people can explore FLIR's technology milestones simultaneously, entirely touch-free. For Run for the Oceans with Adidas and Parley Ocean School, we built seamless wall-to-wall ROE Black Pearl LED inside a shipping container, mirrored floor and ceiling turning the display into an infinity ocean. For the Infinite Playlist Tour with Amazon Music Live, free-standing LED walls became AR portals at Outside Lands and Stagecoach 2023. For BuzzFeed's NewFronts, we fabricated media walls and a custom neon display environment at Moynihan Station. And for AKU World, we integrated interactive kiosks, holographic portal displays, and a 4D body scanner that let guests mint their own digital avatars."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Requirements — Viewing distances, ambient light, interaction, and duty cycle defined",
-        "2. System Design — Panels, processors, servers, and sensors spec'd to the content",
-        "3. Pre-Visualization & Pixel Mapping — Layouts and content templates approved up front",
-        "4. Integration & Fabrication — Structures, cabling, and control systems built and bench-tested",
-        "5. Calibration & Commissioning — Color, brightness, and tracking tuned on site",
-        "6. Operation & Support — Live operation for events; maintenance plans for permanent installs"
+        "1. Requirements: Viewing distances, ambient light, interaction, and duty cycle defined",
+        "2. System Design: Panels, processors, servers, and sensors spec'd to the content",
+        "3. Pre-Visualization & Pixel Mapping: Layouts and content templates approved up front",
+        "4. Integration & Fabrication: Structures, cabling, and control systems built and bench-tested",
+        "5. Calibration & Commissioning: Color, brightness, and tracking tuned on site",
+        "6. Operation & Support: Live operation for events; maintenance plans for permanent installs"
       ]
     },
     {
       "type": "trust",
       "heading": "Why BEATROX",
       "items": [
-        "Permanent-installation grade — the FLIR history wall engineered for years of low-maintenance operation",
-        "Touch-free interaction pioneers — LIDAR and computer vision, no screens to smudge or sanitize",
-        "Festival-hardened — LED AR portals for Amazon Music Live at Outside Lands and Stagecoach",
-        "Seamless environments — wall-to-wall ROE Black Pearl LED for Adidas x Parley Run for the Oceans",
-        "Display and content pipeline from one team — pixel-perfect playback, no scaling artifacts",
+        "Permanent-installation grade: the FLIR history wall engineered for years of low-maintenance operation",
+        "Touch-free interaction pioneers: LIDAR and computer vision, no screens to smudge or sanitize",
+        "Festival-hardened: LED AR portals for Amazon Music Live at Outside Lands and Stagecoach",
+        "Seamless environments: wall-to-wall ROE Black Pearl LED for Adidas x Parley Run for the Oceans",
+        "Display and content pipeline from one team: pixel-perfect playback, no scaling artifacts",
         "Trusted by FLIR, Adidas, Amazon Music, and BuzzFeed for high-visibility displays"
       ]
     },
@@ -82,20 +82,20 @@
       "heading": "Frequently Asked Questions",
       "items": [
         {
-          "question": "Interactive or passive — which is right for my project?",
-          "answer": "It depends on the audience and the duty cycle. Passive displays suit high-traffic, glance-based environments; interactive displays reward dwell time. We often blend both — the FLIR history wall reacts to passers-by to invite interaction, then supports deep multi-user exploration."
+          "question": "Interactive or passive: which is right for my project?",
+          "answer": "It depends on the audience and the duty cycle. Passive displays suit high-traffic, glance-based environments; interactive displays reward dwell time. We often blend both: the FLIR history wall reacts to passers-by to invite interaction, then supports deep multi-user exploration."
         },
         {
           "question": "Can displays be interactive without touchscreens?",
-          "answer": "Yes — and we recommend it for public installations. LIDAR and camera-based tracking let guests control content with their body, with no shared surfaces. It's how both the FLIR wall and the Run for the Oceans ocean chamber work."
+          "answer": "Yes. And we recommend it for public installations. LIDAR and camera-based tracking let guests control content with their body, with no shared surfaces. It's how both the FLIR wall and the Run for the Oceans ocean chamber work."
         },
         {
           "question": "Do you build permanent installations, or only event displays?",
-          "answer": "Both. Permanent installs like the FLIR headquarters wall are engineered for uptime, serviceability, and low maintenance — different discipline from event gear, and one we're built for."
+          "answer": "Both. Permanent installs like the FLIR headquarters wall are engineered for uptime, serviceability, and low maintenance: a different discipline from event gear, and one we're built for."
         },
         {
           "question": "Who supplies the content for the displays?",
-          "answer": "We can. Our content team formats and produces media to the exact pixel map of your system — from branded loops to real-time rendered experiences — or we integrate content your team provides."
+          "answer": "We can. Our content team formats and produces media to the exact pixel map of your system (from branded loops to real-time rendered experiences) or we integrate content your team provides."
         }
       ]
     }

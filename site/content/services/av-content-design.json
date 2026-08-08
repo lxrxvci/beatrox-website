@@ -3,16 +3,16 @@
   "slug": "/services/av-content-design",
   "seo": {
     "title": "AV Content Design Portland, OR",
-    "description": "Event content design in Portland, OR — custom video, motion graphics, spatial audio, and lighting looks built as one synchronized system.",
+    "description": "Event content design in Portland, OR: custom video, motion graphics, spatial audio, and lighting looks built as one synchronized system.",
     "og": {
       "title": "AV Content Design Portland, OR | BEATROX",
-      "description": "Event content design in Portland, OR — custom video, motion graphics, spatial audio, and lighting looks built as one synchronized system.",
+      "description": "Event content design in Portland, OR: custom video, motion graphics, spatial audio, and lighting looks built as one synchronized system.",
       "image": "/images/verified/work/run-for-the-oceans/DeckScreenCap1-349ca35d.png"
     }
   },
   "hero": {
     "headline": "Audio, Video & Lighting Content Design",
-    "subheadline": "Custom media designed for your canvas — video, motion graphics, real-time visuals, audio, and lighting looks that work as one synchronized system.",
+    "subheadline": "Custom media designed for your canvas: video, motion graphics, real-time visuals, audio, and lighting looks that work as one synchronized system.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Audio, Video & Lighting Content Design?",
-      "content": "Content design is everything the audience sees and hears — the video on the LED wall, the motion graphics behind the keynote, the soundscape in the room, and the lighting looks that tie it together. Our Portland, Oregon studio designs these elements as one system for events nationwide, rather than as three separate vendor scopes — which is what makes a show feel unified.\n\nYou need content design whenever your event has screens, speakers, or intelligent lighting — which is nearly every modern production. The content has to fit the exact pixel map of your displays, the timing of your run-of-show, and the voice of your brand. Off-the-shelf visuals rarely do any of that.\n\nGreat content design starts with the story and the canvas. A festival activation, a corporate main stage, and a permanent lobby installation each demand completely different approaches to resolution, composition, contrast, and motion — and increasingly, content isn't a file at all, but a real-time system that responds to the audience."
+      "content": "Content design is everything the audience sees and hears: the video on the LED wall, the motion graphics behind the keynote, the soundscape in the room, and the lighting looks that tie it together. Our Portland, Oregon studio designs these elements as one system for events nationwide, rather than as three separate vendor scopes, which is what makes a show feel unified.\n\nYou need content design whenever your event has screens, speakers, or intelligent lighting, which is nearly every modern production. The content has to fit the exact pixel map of your displays, the timing of your run-of-show, and the voice of your brand. Off-the-shelf visuals rarely do any of that.\n\nGreat content design starts with the story and the canvas. A festival activation, a corporate main stage, and a permanent lobby installation each demand completely different approaches to resolution, composition, contrast, and motion, and increasingly, content isn't a file at all, but a real-time system that responds to the audience."
     },
     {
       "type": "use_cases",
@@ -51,28 +51,28 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "We produce custom video and motion graphics, real-time and generative visuals, LED wall media built to native pixel maps, spatial and ambient audio, and lighting looks — all programmed for timecode-accurate playback. Our team handles the full chain: creative direction, asset production, and on-site playback operation.\n\nFor Run for the Oceans with Adidas and Parley Ocean School, we built the real-time content system itself — a flocking fish simulation and fluid simulation driven live by LIDAR tracking, alongside a curated collage of deep-ocean footage and plastic-waste information designed for the infinity LED environment. For the Infinite Playlist Tour with Amazon Music Live, we created AR moments with real-time physics simulations in TouchDesigner, giving festival guests at Outside Lands and Stagecoach shareable interactive content. For AKU World, our team produced real-time 3D worlds in Unreal Engine and Blender that ran linked to the live musical performances. And for the FLIR Interactive History Wall, we designed the complete visual language — FLIR's Iron Bow thermal gradient applied across a library of video content and animations, with AI-driven behavior that invites passers-by to explore."
+      "content": "We produce custom video and motion graphics, real-time and generative visuals, LED wall media built to native pixel maps, spatial and ambient audio, and lighting looks, all programmed for timecode-accurate playback. Our team handles the full chain: creative direction, asset production, and on-site playback operation.\n\nFor Run for the Oceans with Adidas and Parley Ocean School, we built the real-time content system itself: a flocking fish simulation and fluid simulation driven live by LIDAR tracking, alongside a curated collage of deep-ocean footage and plastic-waste information designed for the infinity LED environment. For the Infinite Playlist Tour with Amazon Music Live, we created AR moments with real-time physics simulations in TouchDesigner, giving festival guests at Outside Lands and Stagecoach shareable interactive content. For AKU World, our team produced real-time 3D worlds in Unreal Engine and Blender that ran linked to the live musical performances. And for the FLIR Interactive History Wall, we designed the complete visual language: FLIR's Iron Bow thermal gradient applied across a library of video content and animations, with AI-driven behavior that invites passers-by to explore."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Canvas & Story Audit — We study your displays, playback systems, and narrative goals",
-        "2. Creative Direction — Style frames and animatics establish the visual language",
-        "3. Content Production — Video, motion graphics, audio, and lighting looks built to spec",
-        "4. Technical Formatting — Media rendered to exact pixel maps and playback specs",
-        "5. Playback Programming — Media servers, timecode, and cue stacks configured",
-        "6. Show Operation — Rehearsed, operated, and supported live on event day"
+        "1. Canvas & Story Audit: We study your displays, playback systems, and narrative goals",
+        "2. Creative Direction: Style frames and animatics establish the visual language",
+        "3. Content Production: Video, motion graphics, audio, and lighting looks built to spec",
+        "4. Technical Formatting: Media rendered to exact pixel maps and playback specs",
+        "5. Playback Programming: Media servers, timecode, and cue stacks configured",
+        "6. Show Operation: Rehearsed, operated, and supported live on event day"
       ]
     },
     {
       "type": "trust",
       "heading": "Why BEATROX",
       "items": [
-        "Real-time content systems — LIDAR-driven flocking and fluid simulations for Adidas x Parley",
+        "Real-time content systems: LIDAR-driven flocking and fluid simulations for Adidas x Parley",
         "Interactive AR content for Amazon Music Live at Outside Lands and Stagecoach 2023",
         "Real-time 3D world creation in Unreal Engine for AKU World",
-        "Brand-language design — FLIR's Iron Bow thermal gradient as a complete visual system",
+        "Brand-language design: FLIR's Iron Bow thermal gradient as a complete visual system",
         "Content, audio, and lighting designed as one synchronized system",
         "Timecode-accurate media server playback on every show"
       ]
@@ -83,15 +83,15 @@
       "items": [
         {
           "question": "Can you create content that reacts to the audience in real time?",
-          "answer": "Yes — real-time content is a specialty. We build generative and interactive visuals in TouchDesigner and Unreal Engine that respond to sensors, tracking data, or live audio, as we did for Run for the Oceans and the Infinite Playlist Tour."
+          "answer": "Yes. Real-time content is a specialty. We build generative and interactive visuals in TouchDesigner and Unreal Engine that respond to sensors, tracking data, or live audio, as we did for Run for the Oceans and the Infinite Playlist Tour."
         },
         {
           "question": "Do you handle the playback systems too?",
-          "answer": "We do. Content design and media server playback programming go together — we configure the servers, timecode, and cue structure so the content runs exactly as designed."
+          "answer": "We do. Content design and media server playback programming go together. We configure the servers, timecode, and cue structure so the content runs exactly as designed."
         },
         {
           "question": "Can content be synced to a live show or broadcast?",
-          "answer": "Absolutely. We lock content to timecode and show calling for concerts, broadcasts, and run-of-show-driven corporate events — including the official festival livestream content at Stagecoach for Amazon Music Live."
+          "answer": "Absolutely. We lock content to timecode and show calling for concerts, broadcasts, and run-of-show-driven corporate events, including the official festival livestream content at Stagecoach for Amazon Music Live."
         },
         {
           "question": "What information do you need to quote content design?",

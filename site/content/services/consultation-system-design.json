@@ -3,16 +3,16 @@
   "slug": "/services/consultation-system-design",
   "seo": {
     "title": "Event System Design & Consultation Portland, OR",
-    "description": "Event system design consultation in Portland, OR — expert AV, lighting, and interactive system specs from feasibility to full documentation.",
+    "description": "Event system design consultation in Portland, OR: expert AV, lighting, and interactive system specs from feasibility to full documentation.",
     "og": {
       "title": "Event System Design & Consultation Portland, OR | BEATROX",
-      "description": "Event system design consultation in Portland, OR — expert AV, lighting, and interactive system specs from feasibility to full documentation.",
+      "description": "Event system design consultation in Portland, OR: expert AV, lighting, and interactive system specs from feasibility to full documentation.",
       "image": "/images/verified/work/flir/DC+History+Wall+Demo+4_Moment1-0e89b875.jpg"
     }
   },
   "hero": {
     "headline": "Consultation & System Design",
-    "subheadline": "Before you buy, rent, or build — get a system designed to actually work. We engineer AV, lighting, and interactive systems from concept to specification.",
+    "subheadline": "Before you buy, rent, or build: get a system designed to actually work. We engineer AV, lighting, and interactive systems from concept to specification.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Consultation & System Design?",
-      "content": "Consultation and system design is the thinking that happens before the spending — and Beatrox provides it from Portland, Oregon for events and installations nationwide. It's the process of translating a creative goal — an interactive wall, a flagship event, a permanent installation — into a concrete technical system: what equipment, in what configuration, at what cost, maintained by whom.\n\nYou need this service whenever the technical path isn't obvious. Maybe you're weighing LED against projection, temporary rental against permanent install, or wondering whether a bold creative idea is even feasible in your venue. An experienced systems consultant answers those questions with numbers and drawings, not guesses.\n\nGood system design saves money twice: once by speccing only what you actually need, and again by preventing the expensive mistakes — undersized power, incompatible formats, unmaintainable installations — that plague under-planned projects."
+      "content": "Consultation and system design is the thinking that happens before the spending, and Beatrox provides it from Portland, Oregon for events and installations nationwide. It's the process of translating a creative goal (an interactive wall, a flagship event, a permanent installation) into a concrete technical system: what equipment, in what configuration, at what cost, maintained by whom.\n\nYou need this service whenever the technical path isn't obvious. Maybe you're weighing LED against projection, temporary rental against permanent install, or wondering whether a bold creative idea is even feasible in your venue. An experienced systems consultant answers those questions with numbers and drawings, not guesses.\n\nGood system design saves money twice: once by speccing only what you actually need, and again by preventing the expensive mistakes (undersized power, incompatible formats, unmaintainable installations) that plague under-planned projects."
     },
     {
       "type": "use_cases",
@@ -50,18 +50,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "Our consultation deliverables include system architecture diagrams, equipment schedules, signal flow plans, power and infrastructure requirements, budget ranges with value-engineering options, and maintenance roadmaps. For permanent work, we design for reliability first — commercial-grade components, serviceable layouts, and documentation your facilities team can actually use. Because we also produce events and build installations, our advice comes from people who have operated the systems they spec.\n\nFor FLIR, we designed and delivered a permanent interactive history wall at their Washington, DC headquarters — an ultra-wide display system with LIDAR sensors, a media server, and AI computer vision that assigns unique IDs to visitors so multiple people can interact simultaneously without interference. It was engineered from the start for daily reliability and low maintenance. We've brought the same consulting discipline to exhibition work for Netflix — including El Camino in New York — and to large-scale event systems like BuzzFeed's 2016 NewFronts at Moynihan Station, where a custom stage, individually mapped projection orbs, media server playback, and full lighting programming had to be planned as one integrated system."
+      "content": "Our consultation deliverables include system architecture diagrams, equipment schedules, signal flow plans, power and infrastructure requirements, budget ranges with value-engineering options, and maintenance roadmaps. For permanent work, we design for reliability first: commercial-grade components, serviceable layouts, and documentation your facilities team can actually use. Because we also produce events and build installations, our advice comes from people who have operated the systems they spec.\n\nFor FLIR, we designed and delivered a permanent interactive history wall at their Washington, DC headquarters: an ultra-wide display system with LIDAR sensors, a media server, and AI computer vision that assigns unique IDs to visitors so multiple people can interact simultaneously without interference. It was engineered from the start for daily reliability and low maintenance. We've brought the same consulting discipline to exhibition work for Netflix, including El Camino in New York, and to large-scale event systems like BuzzFeed's 2016 NewFronts at Moynihan Station, where a custom stage, individually mapped projection orbs, media server playback, and full lighting programming had to be planned as one integrated system."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Discovery — We learn your goals, space, users, and budget reality",
-        "2. Feasibility & Options — Approaches compared with honest cost and risk tradeoffs",
-        "3. System Design — Architecture, equipment schedules, and signal flow documented",
-        "4. Budget & Roadmap — Phased plans that match your funding and timeline",
-        "5. Procurement & Build Support — Vendor selection, bid review, and installation oversight",
-        "6. Commissioning & Handover — Testing, training, documentation, and maintenance plan"
+        "1. Discovery: We learn your goals, space, users, and budget reality",
+        "2. Feasibility & Options: Approaches compared with honest cost and risk tradeoffs",
+        "3. System Design: Architecture, equipment schedules, and signal flow documented",
+        "4. Budget & Roadmap: Phased plans that match your funding and timeline",
+        "5. Procurement & Build Support: Vendor selection, bid review, and installation oversight",
+        "6. Commissioning & Handover: Testing, training, documentation, and maintenance plan"
       ]
     },
     {
@@ -70,9 +70,9 @@
       "items": [
         "Permanent interactive installation designed for FLIR's Washington DC headquarters",
         "Systems consulting grounded in real production experience with Netflix and BuzzFeed",
-        "Vendor-neutral recommendations — we spec what's right, not what we rent",
+        "Vendor-neutral recommendations: we spec what's right, not what we rent",
         "Designs that include maintenance, serviceability, and total cost of ownership",
-        "One team can consult, design, build, and operate — or hand off cleanly",
+        "One team can consult, design, build, and operate, or hand off cleanly",
         "15+ years of combined live event and installation experience"
       ]
     },
@@ -82,7 +82,7 @@
       "items": [
         {
           "question": "Do you only consult on projects you'll also build?",
-          "answer": "No. We're happy to consult independently — many clients take our system designs to bid or hand them to internal teams. That said, keeping design and execution together usually saves time and money."
+          "answer": "No. We're happy to consult independently: many clients take our system designs to bid or hand them to internal teams. That said, keeping design and execution together usually saves time and money."
         },
         {
           "question": "Can you design systems for permanent installations?",
@@ -94,7 +94,7 @@
         },
         {
           "question": "Can you review an existing quote or system proposal?",
-          "answer": "Absolutely. Second-opinion reviews of vendor proposals are one of the fastest ways we save clients money — we flag overspec, underspec, and compatibility risks before you sign."
+          "answer": "Absolutely. Second-opinion reviews of vendor proposals are one of the fastest ways we save clients money. We flag overspec, underspec, and compatibility risks before you sign."
         }
       ]
     }

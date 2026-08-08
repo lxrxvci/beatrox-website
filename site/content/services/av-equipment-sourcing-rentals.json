@@ -3,16 +3,16 @@
   "slug": "/services/av-equipment-sourcing-rentals",
   "seo": {
     "title": "AV Equipment Rentals Portland, OR",
-    "description": "AV equipment rentals in Portland, OR — LED walls, projection, audio, and media servers sourced and engineered into complete show systems.",
+    "description": "AV equipment rentals in Portland, OR: LED walls, projection, audio, and media servers sourced and engineered into complete show systems.",
     "og": {
       "title": "AV Equipment Rentals Portland, OR | BEATROX",
-      "description": "AV equipment rentals in Portland, OR — LED walls, projection, audio, and media servers sourced and engineered into complete show systems.",
+      "description": "AV equipment rentals in Portland, OR: LED walls, projection, audio, and media servers sourced and engineered into complete show systems.",
       "image": "/images/verified/work/buzzfeed/BuzzFeedNewFronts-Stage-Wide2-703a6f28.jpg"
     }
   },
   "hero": {
     "headline": "AV Equipment Sourcing & Rentals",
-    "subheadline": "The right gear, from the right vendors, engineered into a complete system — LED video, projection, audio, lighting, and media servers ready for show day.",
+    "subheadline": "The right gear, from the right vendors, engineered into a complete system: LED video, projection, audio, lighting, and media servers ready for show day.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is AV Equipment Sourcing & Rentals?",
-      "content": "AV equipment sourcing is the process of specifying, renting, and integrating the technical systems your event depends on — audio, video, lighting, control, and playback — and Beatrox runs it from Portland, Oregon for productions nationwide. Most events don't own this gear; it's assembled per-show from rental houses, specialty vendors, and in-house inventory, then engineered into a single coherent system.\n\nThe sourcing decision matters more than most people realize. The wrong projector spec, an underpowered amp rack, or a mismatched video processor can compromise the entire experience — and you usually don't find out until load-in. Knowing which vendor carries which equipment, what it actually costs, and how it behaves in the field is a skill built over hundreds of shows.\n\nYou need professional sourcing whenever your event has real technical demands: large-format projection, LED video walls, concert-grade audio, show control, or anything that has to run flawlessly in front of an audience. A single accountable partner who designs the system and supplies the gear eliminates the finger-pointing that comes with split responsibility."
+      "content": "AV equipment sourcing is the process of specifying, renting, and integrating the technical systems your event depends on (audio, video, lighting, control, and playback) and Beatrox runs it from Portland, Oregon for productions nationwide. Most events don't own this gear; it's assembled per-show from rental houses, specialty vendors, and in-house inventory, then engineered into a single coherent system.\n\nThe sourcing decision matters more than most people realize. The wrong projector spec, an underpowered amp rack, or a mismatched video processor can compromise the entire experience, and you usually don't find out until load-in. Knowing which vendor carries which equipment, what it actually costs, and how it behaves in the field is a skill built over hundreds of shows.\n\nYou need professional sourcing whenever your event has real technical demands: large-format projection, LED video walls, concert-grade audio, show control, or anything that has to run flawlessly in front of an audience. A single accountable partner who designs the system and supplies the gear eliminates the finger-pointing that comes with split responsibility."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "We start with the creative and technical requirements, then spec the full system — projectors or LED panels, processors and media servers, PA and consoles, fixtures and control — and source every line item from trusted rental partners or our own inventory. Because we also operate what we supply, every package arrives pre-planned: power and signal flow documented, spares on the truck, and integration tested before doors.\n\nFor BuzzFeed's 2016 NewFronts at Moynihan Station in New York, we supplied and ran a large-format projection screen system, individually mapped projection orbs suspended throughout the venue, and full media server programming for seamless live playback. On Projekt X for Adriatique's worldwide tour, we built a custom stage element with integrated DMX-addressable LED lighting, engineered to accept pixel mapping, laser mapping, and projection mapping in any venue the tour visited. And for The Great Escape, a product launch experience for Adidas in Los Angeles, we assembled the integrated creative technology and production systems the experience ran on."
+      "content": "We start with the creative and technical requirements, then spec the full system (projectors or LED panels, processors and media servers, PA and consoles, fixtures and control) and source every line item from trusted rental partners or our own inventory. Because we also operate what we supply, every package arrives pre-planned: power and signal flow documented, spares on the truck, and integration tested before doors.\n\nFor BuzzFeed's 2016 NewFronts at Moynihan Station in New York, we supplied and ran a large-format projection screen system, individually mapped projection orbs suspended throughout the venue, and full media server programming for seamless live playback. On Projekt X for Adriatique's worldwide tour, we built a custom stage element with integrated DMX-addressable LED lighting, engineered to accept pixel mapping, laser mapping, and projection mapping in any venue the tour visited. And for The Great Escape, a product launch experience for Adidas in Los Angeles, we assembled the integrated creative technology and production systems the experience ran on."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Discovery — We define the creative goals and technical requirements",
-        "2. System Design — Full AV spec with power, signal, and redundancy plans",
-        "3. Sourcing — Quotes, vendor holds, and rental contracts secured",
-        "4. Prep & Test — Equipment prepped, configured, and bench-tested",
-        "5. Install & Operate — Delivery, setup, show operation, and strike",
-        "6. Reconcile — Returns, sub-rental closeout, and final cost reporting"
+        "1. Discovery: We define the creative goals and technical requirements",
+        "2. System Design: Full AV spec with power, signal, and redundancy plans",
+        "3. Sourcing: Quotes, vendor holds, and rental contracts secured",
+        "4. Prep & Test: Equipment prepped, configured, and bench-tested",
+        "5. Install & Operate: Delivery, setup, show operation, and strike",
+        "6. Reconcile: Returns, sub-rental closeout, and final cost reporting"
       ]
     },
     {
@@ -72,7 +72,7 @@
         "Ran full projection and media server systems for BuzzFeed's NewFronts at Moynihan Station",
         "Built touring-grade, show-ready AV integration for Adriatique's worldwide X Future tour",
         "Supported product launch experiences for Adidas in Los Angeles",
-        "One team designs, sources, and operates — no gap between spec and show",
+        "One team designs, sources, and operates, no gap between spec and show",
         "Established relationships with rental houses and specialty vendors nationwide",
         "Redundancy and spares planned into every package we ship"
       ]
@@ -83,7 +83,7 @@
       "items": [
         {
           "question": "Can you rent just equipment, without full production services?",
-          "answer": "Yes. We can supply individual systems — an LED wall, a projection package, a PA — with or without operators. That said, most clients find the best value when we engineer the full system, since compatibility issues disappear when one team owns the whole signal chain."
+          "answer": "Yes. We can supply individual systems (an LED wall, a projection package, a PA) with or without operators. That said, most clients find the best value when we engineer the full system, since compatibility issues disappear when one team owns the whole signal chain."
         },
         {
           "question": "Do you work with our venue's in-house AV?",
@@ -91,7 +91,7 @@
         },
         {
           "question": "What happens if something fails during the show?",
-          "answer": "Every package we build includes redundancy planning — spare processors, backup playback, and contingency signal paths where the stakes demand it. Our on-site techs are there to resolve issues before the audience ever notices."
+          "answer": "Every package we build includes redundancy planning: spare processors, backup playback, and contingency signal paths where the stakes demand it. Our on-site techs are there to resolve issues before the audience ever notices."
         },
         {
           "question": "How do rental costs get estimated?",

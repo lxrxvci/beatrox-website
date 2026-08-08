@@ -3,16 +3,16 @@
   "slug": "/services/lighting-services",
   "seo": {
     "title": "Event Lighting Services Portland, OR",
-    "description": "Event lighting services in Portland, OR — design, pre-visualization, integration, programming, and live operation from one lighting team.",
+    "description": "Event lighting services in Portland, OR: design, pre-visualization, integration, programming, and live operation from one lighting team.",
     "og": {
       "title": "Event Lighting Services Portland, OR | BEATROX",
-      "description": "Event lighting services in Portland, OR — design, pre-visualization, integration, programming, and live operation from one lighting team.",
+      "description": "Event lighting services in Portland, OR: design, pre-visualization, integration, programming, and live operation from one lighting team.",
       "image": "/og-default.jpg"
     }
   },
   "hero": {
     "headline": "Lighting Services",
-    "subheadline": "Lighting that transforms spaces and elevates every moment — designed, programmed, and operated by our experienced team.",
+    "subheadline": "Lighting that transforms spaces and elevates every moment, designed, programmed, and operated by our experienced team.",
     "cta": {
       "label": "Book a Free Consultation",
       "url": "/book"
@@ -32,7 +32,7 @@
   "body": [
     {
       "type": "intro",
-      "content": "Lighting is the invisible hand that shapes every experience — and Beatrox's Portland, Oregon lighting team designs systems for events and installations nationwide. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, our designers serve your vision — technically and aesthetically."
+      "content": "Lighting is the invisible hand that shapes every experience, and Beatrox's Portland, Oregon lighting team designs systems for events and installations nationwide. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, our designers serve your vision, technically and aesthetically."
     },
     {
       "type": "trust",
@@ -48,11 +48,11 @@
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call — We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization — See your event before it happens",
-        "3. Equipment & Crew — We source everything and assign the right team",
-        "4. On-Site Execution — Professional setup, operation, and strike",
-        "5. Post-Event Review — We ensure everything exceeded expectations"
+        "1. Discovery Call: We learn your vision, venue, and budget",
+        "2. Design & Pre-Visualization: See your event before it happens",
+        "3. Equipment & Crew: We source everything and assign the right team",
+        "4. On-Site Execution: Professional setup, operation, and strike",
+        "5. Post-Event Review: We ensure everything exceeded expectations"
       ]
     },
     {
@@ -71,7 +71,7 @@
     {
       "type": "service_detail",
       "heading": "From Concept to Operation",
-      "content": "Our lighting services begin at the design stage with full pre-visualization, allowing clients to see the lighting environment before a single fixture is hung. We then handle all integration, programming, and live operation — including DMX-controlled rigs, addressable LED systems, media server-driven content, and audio-reactive programming for immersive environments."
+      "content": "Our lighting services begin at the design stage with full pre-visualization, allowing clients to see the lighting environment before a single fixture is hung. We then handle all integration, programming, and live operation, including DMX-controlled rigs, addressable LED systems, media server-driven content, and audio-reactive programming for immersive environments."
     },
     {
       "type": "service_detail",
@@ -81,7 +81,7 @@
     {
       "type": "service_detail",
       "heading": "Benefits of Pre-Visualization",
-      "content": "Pre-visualization allows you to see your lighting design before investing in equipment and crew. Using 3D rendering software, we model your venue, fixture placement, and cue timing — giving you a realistic preview of every look. This reduces on-site programming time, minimizes surprises, and allows for faster client approvals. For complex shows, pre-viz can save hours of expensive load-in time and ensure your creative vision is achieved exactly as planned."
+      "content": "Pre-visualization allows you to see your lighting design before investing in equipment and crew. Using 3D rendering software, we model your venue, fixture placement, and cue timing, giving you a realistic preview of every look. This reduces on-site programming time, minimizes surprises, and allows for faster client approvals. For complex shows, pre-viz can save hours of expensive load-in time and ensure your creative vision is achieved exactly as planned."
     },
     {
       "type": "faq",
@@ -105,7 +105,7 @@
         },
         {
           "question": "Do you offer permanent installation lighting?",
-          "answer": "Absolutely. We design and install permanent lighting for retail spaces, venues, architectural features, and brand environments — with ongoing maintenance and programming support."
+          "answer": "Absolutely. We design and install permanent lighting for retail spaces, venues, architectural features, and brand environments, with ongoing maintenance and programming support."
         }
       ]
     }

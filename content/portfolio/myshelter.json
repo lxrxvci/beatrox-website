@@ -2,17 +2,17 @@
   "title": "MyShelter",
   "slug": "/work/myshelter",
   "seo": {
-    "title": "MyShelter \u2014 BEATROX Immersive Environment",
-    "description": "An immersive forest environment created for the Adidas Outdoor MyShelter jacket launch in New York \u2014 projection mapping, spatial audio, and low-lying fog in a repurposed bodega space.",
+    "title": "MyShelter: BEATROX Immersive Environment",
+    "description": "An immersive forest environment created for the Adidas Outdoor MyShelter jacket launch in New York: projection mapping, spatial audio, and low-lying fog in a repurposed bodega space.",
     "og": {
-      "title": "MyShelter \u2014 Adidas Immersive Product Launch",
-      "description": "A narrow NYC bodega transformed into a living forest canopy \u2014 projection mapping, spatial audio, and fog for the Adidas Outdoor MyShelter jacket launch.",
+      "title": "MyShelter: Adidas Immersive Product Launch",
+      "description": "A narrow NYC bodega transformed into a living forest canopy: projection mapping, spatial audio, and fog for the Adidas Outdoor MyShelter jacket launch.",
       "image": "/images/deck/myshelter/01-image51.jpg"
     }
   },
   "hero": {
     "headline": "MyShelter",
-    "subheadline": "A narrow bodega transformed into a living forest canopy \u2014 letting visitors experience Adidas Outdoor's MyShelter jacket in the environment it was made for.",
+    "subheadline": "A narrow bodega transformed into a living forest canopy, letting visitors experience Adidas Outdoor's MyShelter jacket in the environment it was made for.",
     "tags": [
       "Environmental Design",
       "Immersive Experience",
@@ -50,17 +50,17 @@
     {
       "type": "objective",
       "heading": "Design Objective",
-      "content": "To create an experiential immersive environment for the product launch of Adidas Outdoor's MyShelter jacket. The objective was to give people an environment to experience the jacket in the setting where it is best suited \u2014 deep within a lush forest canopy."
+      "content": "To create an experiential immersive environment for the product launch of Adidas Outdoor's MyShelter jacket. The objective was to give people an environment to experience the jacket in the setting where it is best suited: deep within a lush forest canopy."
     },
     {
       "type": "concept",
       "heading": "Design Concept",
-      "content": "The environment was created using projection mapping to transform the walls into a lush inner forest scene. Spatial audio recreated the immersive sounds of the inner forest canopy, and low-lying fog was used to create a sense of discovery and intrigue.\n\nThe project also utilized audio-reactive lighting, scenic elements hung from the roof, and custom signage to create a surreal scene to keep visitors entertained as they experienced the new Adidas jacket. The projector was short-throw and hidden within the forest canopy. The projection content was a slowly animating forest scene using forced perspective, making visitors feel like they were gently floating through a peaceful forest \u2014 even within a tiny Manhattan space."
+      "content": "The environment was created using projection mapping to transform the walls into a lush inner forest scene. Spatial audio recreated the immersive sounds of the inner forest canopy, and low-lying fog was used to create a sense of discovery and intrigue.\n\nThe project also utilized audio-reactive lighting, scenic elements hung from the roof, and custom signage to create a surreal scene to keep visitors entertained as they experienced the new Adidas jacket. The projector was short-throw and hidden within the forest canopy. The projection content was a slowly animating forest scene using forced perspective, making visitors feel like they were gently floating through a peaceful forest, even within a tiny Manhattan space."
     },
     {
       "type": "challenge",
       "heading": "Design Challenge",
-      "content": "The space was a small and narrow shut-down bodega, previously used for storing old kitchen equipment. The main challenge was to create a fully convincing immersive experience within this tight footprint \u2014 while hiding all technical infrastructure from view."
+      "content": "The space was a small and narrow shut-down bodega, previously used for storing old kitchen equipment. The main challenge was to create a fully convincing immersive experience within this tight footprint, while hiding all technical infrastructure from view."
     },
     {
       "type": "features_list",
@@ -80,67 +80,67 @@
   "images": [
     {
       "url": "/images/deck/myshelter/01-image51.jpg",
-      "alt": "Myshelter deck image 1"
+      "alt": "Entrance with MYSHELTER wall signage, glowing foliage canopy, warm light, visitor silhouette"
     },
     {
       "url": "/images/deck/myshelter/02-image67.jpg",
-      "alt": "Myshelter deck image 2"
+      "alt": "Street exterior of bodega with crowd and taxi"
     },
     {
       "url": "/images/deck/myshelter/03-image61.jpg",
-      "alt": "Myshelter deck image 3"
+      "alt": "MYSHELTER painted signage on boarded storefront doors with graffiti"
     },
     {
       "url": "/images/deck/myshelter/04-image69.jpg",
-      "alt": "Myshelter deck image 4"
+      "alt": "Graffiti-covered storefront windows"
     },
     {
       "url": "/images/deck/myshelter/05-image63.jpg",
-      "alt": "Myshelter deck image 5"
+      "alt": "Corridor with vertical LED tubes, low fog, hanging street sign and foliage canopy"
     },
     {
       "url": "/images/deck/myshelter/06-image62.jpg",
-      "alt": "Myshelter deck image 6"
+      "alt": "Visitor posing in foggy corridor lined with vertical LED tubes"
     },
     {
       "url": "/images/deck/myshelter/07-image66.jpg",
-      "alt": "Myshelter deck image 7"
+      "alt": "LED tube corridor with hanging foliage canopy, custom sign, MYSHELTER end wall"
     },
     {
       "url": "/images/deck/myshelter/08-image56.jpg",
-      "alt": "Myshelter deck image 8"
+      "alt": "Custom traffic-light prop and street signs with hanging foliage, warm lighting"
     },
     {
       "url": "/images/deck/myshelter/09-image54.jpg",
-      "alt": "Myshelter deck image 9"
+      "alt": "Two visitors taking selfie in foggy corridor; LED tube and street sign visible"
     },
     {
       "url": "/images/deck/myshelter/10-image59.jpg",
-      "alt": "Myshelter deck image 10"
+      "alt": "Jacket display rack with vertical LED tubes and fog"
     },
     {
       "url": "/images/deck/myshelter/11-image76.jpg",
-      "alt": "Myshelter deck image 11"
+      "alt": "Person standing in foggy corridor with vertical LED tubes, amber/pink wash"
     },
     {
       "url": "/images/deck/myshelter/12-image60.jpg",
-      "alt": "Myshelter deck image 12"
+      "alt": "Man on display platform with yellow LED strip edge and vertical LED tubes"
     },
     {
       "url": "/images/deck/myshelter/13-image65.jpg",
-      "alt": "Myshelter deck image 13"
+      "alt": "Empty corridor with LED tubes, fog, hanging street sign, amber wash"
     },
     {
       "url": "/images/deck/myshelter/14-image68.jpg",
-      "alt": "Myshelter deck image 14"
+      "alt": "Same corridor in blue/purple lighting scene with LED tubes and hanging sign"
     },
     {
       "url": "/images/deck/myshelter/15-image64.jpg",
-      "alt": "Myshelter deck image 15"
+      "alt": "Colorful scene with traffic-light prop, hanging foliage, geometric scenic shapes, LED tubes"
     },
     {
       "url": "/images/portfolio/myshelter/Middle.jpg",
-      "alt": "MyShelter immersive forest environment \u2014 middle section",
+      "alt": "MyShelter immersive forest environment: middle section",
       "filename": "Middle.jpg"
     },
     {

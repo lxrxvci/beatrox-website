@@ -3,16 +3,16 @@
   "slug": "/services/interactive-ui-ux-design",
   "seo": {
     "title": "Interactive UI/UX Design Portland, OR",
-    "description": "Interactive UI/UX design in Portland, OR — touch, motion, and sensor interfaces built for crowds at kiosks, installations, and brand events.",
+    "description": "Interactive UI/UX design in Portland, OR: touch, motion, and sensor interfaces built for crowds at kiosks, installations, and brand events.",
     "og": {
       "title": "Interactive UI/UX Design Portland, OR | BEATROX",
-      "description": "Interactive UI/UX design in Portland, OR — touch, motion, and sensor interfaces built for crowds at kiosks, installations, and brand events.",
+      "description": "Interactive UI/UX design in Portland, OR: touch, motion, and sensor interfaces built for crowds at kiosks, installations, and brand events.",
       "image": "/images/portfolio/aku-world/KIOSKS2.jpg"
     }
   },
   "hero": {
     "headline": "Interactive UI / UX Design",
-    "subheadline": "Interfaces designed for crowds, not desks — touch, motion, and sensor experiences that guests understand in seconds and remember for years.",
+    "subheadline": "Interfaces designed for crowds, not desks: touch, motion, and sensor experiences that guests understand in seconds and remember for years.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Interactive UI / UX Design?",
-      "content": "Interactive UI/UX design for events is a different discipline from app or web design — one our Portland, Oregon team practices on kiosks, installations, and brand experiences nationwide. Your 'user' is a guest walking through a loud, crowded space with seconds of attention to spare — and the interface might be a touchscreen kiosk, a motion-tracked wall, or a display that reacts to people simply passing by. Design has to work at walking speed, with zero instructions.\n\nYou need this service whenever people will touch, move, or gesture to control content: interactive kiosks, AR mirrors, timeline walls, product explorers, or gamified brand moments. The stakes are high — a confusing interface doesn't just frustrate one user, it creates a visible crowd of confused guests in the middle of your event.\n\nGreat experiential UX is invisible. Guests should never wonder what to do next; the interface should invite, respond, and reward in a loop that feels natural the first time — because at a live event, the first time is usually the only time."
+      "content": "Interactive UI/UX design for events is a different discipline from app or web design: one our Portland, Oregon team practices on kiosks, installations, and brand experiences nationwide. Your 'user' is a guest walking through a loud, crowded space with seconds of attention to spare. The interface might be a touchscreen kiosk, a motion-tracked wall, or a display that reacts to people simply passing by. Design has to work at walking speed, with zero instructions.\n\nYou need this service whenever people will touch, move, or gesture to control content: interactive kiosks, AR mirrors, timeline walls, product explorers, or gamified brand moments. The stakes are high. A confusing interface doesn't just frustrate one user, it creates a visible crowd of confused guests in the middle of your event.\n\nGreat experiential UX is invisible. Guests should never wonder what to do next; the interface should invite, respond, and reward in a loop that feels natural the first time, because at a live event, the first time is usually the only time."
     },
     {
       "type": "use_cases",
@@ -50,18 +50,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "We design the complete interaction layer: UX flows mapped to real guest journeys, interface layouts prototyped in Figma, on-brand visual systems, and the motion, sound, and feedback design that makes interactions feel responsive. Critically, we design for throughput — session lengths, attract loops, and queue behavior — and we test with real people before deployment. Our designers work alongside the engineers building the system, so the UX accounts for sensor accuracy, latency, and hardware limits from the start.\n\nAt AKU World for AKU + FTX in New York, guests used interactive kiosks to choose their 'Inner Astronaut' and flow through avatar creation — interface design that had to be intuitive enough for a continuous stream of event attendees. For Amazon Music Live's Infinite Playlist Tour at Outside Lands and Stagecoach 2023, we designed interactive touchpoints throughout the festival builds — AR moments, photo moments, and giveaway flows built for high-volume foot traffic. And for the G-MAN Experiential Campaign with Toyota x MTV in Los Angeles, we applied the same guest-first interface thinking to a national experiential campaign."
+      "content": "We design the complete interaction layer: UX flows mapped to real guest journeys, interface layouts prototyped in Figma, on-brand visual systems, and the motion, sound, and feedback design that makes interactions feel responsive. Critically, we design for throughput (session lengths, attract loops, and queue behavior) and we test with real people before deployment. Our designers work alongside the engineers building the system, so the UX accounts for sensor accuracy, latency, and hardware limits from the start.\n\nAt AKU World for AKU + FTX in New York, guests used interactive kiosks to choose their 'Inner Astronaut' and flow through avatar creation: interface design that had to be intuitive enough for a continuous stream of event attendees. For Amazon Music Live's Infinite Playlist Tour at Outside Lands and Stagecoach 2023, we designed interactive touchpoints throughout the festival builds: AR moments, photo moments, and giveaway flows built for high-volume foot traffic. And for the G-MAN Experiential Campaign with Toyota x MTV in Los Angeles, we applied the same guest-first interface thinking to a national experiential campaign."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Guest Journey Mapping — We define who interacts, where, and for how long",
-        "2. UX Flows & Wireframes — Interaction paths designed for speed and clarity",
-        "3. Visual & Motion Design — On-brand interfaces prototyped in Figma",
-        "4. Interactive Prototyping — Real builds tested with real users and sensors",
-        "5. Integration — UI married to hardware, sensors, and media systems",
-        "6. On-Site Refinement — Final tuning against real crowd behavior at the event"
+        "1. Guest Journey Mapping: We define who interacts, where, and for how long",
+        "2. UX Flows & Wireframes: Interaction paths designed for speed and clarity",
+        "3. Visual & Motion Design: On-brand interfaces prototyped in Figma",
+        "4. Interactive Prototyping: Real builds tested with real users and sensors",
+        "5. Integration: UI married to hardware, sensors, and media systems",
+        "6. On-Site Refinement: Final tuning against real crowd behavior at the event"
       ]
     },
     {
@@ -86,15 +86,15 @@
         },
         {
           "question": "Can the interface match our brand guidelines?",
-          "answer": "Yes. We design within your brand system — typography, color, motion language — so the experience feels like a natural extension of your campaign."
+          "answer": "Yes. We design within your brand system (typography, color, motion language) so the experience feels like a natural extension of your campaign."
         },
         {
           "question": "Do you handle the software development too?",
-          "answer": "We do. Our UI/UX designers work directly with our TouchDesigner and software engineers, so what's designed is exactly what ships — no translation losses between teams."
+          "answer": "We do. Our UI/UX designers work directly with our TouchDesigner and software engineers, so what's designed is exactly what ships, no translation losses between teams."
         },
         {
           "question": "How do you test interfaces before the event?",
-          "answer": "We prototype with the actual hardware and sensors, then run usability sessions with people unfamiliar with the project — the same conditions your guests will face."
+          "answer": "We prototype with the actual hardware and sensors, then run usability sessions with people unfamiliar with the project: the same conditions your guests will face."
         }
       ]
     }

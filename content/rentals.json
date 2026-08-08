@@ -3,7 +3,7 @@
   "slug": "/rentals",
   "seo": {
     "title": "Event Equipment Rentals: LED Walls, Sound, DJ, Lighting | BEATROX",
-    "description": "Professional event equipment rentals in Portland, OR — LED video walls, sound systems, DJ equipment, lighting, lasers, backline, and more. Delivery and on-site support available.",
+    "description": "Professional event equipment rentals in Portland, OR: LED video walls, sound systems, DJ equipment, lighting, lasers, backline, and more. Delivery and on-site support available.",
     "og": {
       "title": "Event Equipment Rentals: BEATROX Portland",
       "description": "Professional LED walls, sound, DJ, lighting, and backline rentals for events, concerts, and productions. Get a quote today.",
@@ -12,13 +12,13 @@
   },
   "hero": {
     "headline": "Professional Equipment Rentals",
-    "subheadline": "Industry-grade LED walls, sound systems, DJ equipment, lighting, lasers, and backline — delivered, set up, and supported by the Beatrox team.",
+    "subheadline": "Industry-grade LED walls, sound systems, DJ equipment, lighting, lasers, and backline, delivered, set up, and supported by the Beatrox team.",
     "cta": { "label": "Get a Quote", "url": "/contact" }
   },
   "categories": [
     {
       "name": "LED Video Walls",
-      "description": "High-resolution LED panels for any footprint — indoor, outdoor, and custom configurations.",
+      "description": "High-resolution LED panels for any footprint: indoor, outdoor, and custom configurations.",
       "items": [
         {
           "name": "Indoor Fine-Pitch LED Panels",
@@ -50,7 +50,7 @@
             "Seamless wall-to-wall multi-panel builds",
             "Custom content design and pre-visualization available"
           ],
-          "description": "Break the rectangle with custom LED configurations — curved walls, infinity mirror setups, and architectural integrations that transform spaces into immersive visual environments.",
+          "description": "Break the rectangle with custom LED configurations: curved walls, infinity mirror setups, and architectural integrations that transform spaces into immersive visual environments.",
           "available": true
         },
         {
@@ -118,7 +118,7 @@
     },
     {
       "name": "DJ Equipment",
-      "description": "Industry-standard DJ equipment for world-class performances — delivered, set up, and supported.",
+      "description": "Industry-standard DJ equipment for world-class performances, delivered, set up, and supported.",
       "items": [
         {
           "name": "Pioneer CDJ/DJM Packages",
@@ -167,7 +167,7 @@
             "Electronic drum options (Roland V-Drums)",
             "Drum mic packages (Audio-Technica, Shure)"
           ],
-          "description": "Touring-quality drum kits configured to artist riders. From jazz combos to heavy rock, our drum packages include shells, cymbals, hardware, and mics — fully tuned and ready to play.",
+          "description": "Touring-quality drum kits configured to artist riders. From jazz combos to heavy rock, our drum packages include shells, cymbals, hardware, and mics, fully tuned and ready to play.",
           "available": true
         },
         {
@@ -196,7 +196,7 @@
     },
     {
       "name": "Lighting Systems",
-      "description": "Complete lighting packages from design to operation — DMX rigs, LED washes, moving heads, and truss.",
+      "description": "Complete lighting packages from design to operation: DMX rigs, LED washes, moving heads, and truss.",
       "items": [
         {
           "name": "DMX Moving Head Packages",
@@ -235,7 +235,7 @@
     },
     {
       "name": "Laser Systems",
-      "description": "High-power professional laser systems for indoor and outdoor events — fully programmed and operated.",
+      "description": "High-power professional laser systems for indoor and outdoor events, fully programmed and operated.",
       "items": [
         {
           "name": "Indoor RGB Laser Systems",

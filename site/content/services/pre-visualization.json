@@ -3,10 +3,10 @@
   "slug": "/services/pre-visualization",
   "seo": {
     "title": "Event Pre-Visualization Portland, OR",
-    "description": "Event pre-visualization in Portland, OR — 3D renders, lighting simulations, and projection previews that let you approve every look early.",
+    "description": "Event pre-visualization in Portland, OR: 3D renders, lighting simulations, and projection previews that let you approve every look early.",
     "og": {
       "title": "Event Pre-Visualization Portland, OR | BEATROX",
-      "description": "Event pre-visualization in Portland, OR — 3D renders, lighting simulations, and projection previews that let you approve every look early.",
+      "description": "Event pre-visualization in Portland, OR: 3D renders, lighting simulations, and projection previews that let you approve every look early.",
       "image": "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png"
     }
   },
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Pre-Visualization?",
-      "content": "Pre-visualization — pre-viz — is the practice of building your event in 3D before it exists in reality, a service our Portland, Oregon team provides for productions nationwide. Using accurate models of the venue, staging, lighting, and projection surfaces, we render exactly what the audience will see, from any seat, at any moment of the show.\n\nYou need pre-viz whenever the stakes are too high for guesswork. Large-format projection mapping, complex lighting rigs, multi-screen stages, and one-night-only brand moments all benefit enormously from seeing — and approving — the final result in advance. Pre-viz turns subjective debates into clear decisions.\n\nIt's also a powerful risk-reduction tool. Sightline problems, projector alignment issues, and lighting conflicts are all cheap to fix in a 3D model and expensive to fix on site. Pre-visualization pays for itself by eliminating surprises."
+      "content": "Pre-visualization (pre-viz) is the practice of building your event in 3D before it exists in reality, a service our Portland, Oregon team provides for productions nationwide. Using accurate models of the venue, staging, lighting, and projection surfaces, we render exactly what the audience will see, from any seat, at any moment of the show.\n\nYou need pre-viz whenever the stakes are too high for guesswork. Large-format projection mapping, complex lighting rigs, multi-screen stages, and one-night-only brand moments all benefit enormously from seeing (and approving) the final result in advance. Pre-viz turns subjective debates into clear decisions.\n\nIt's also a powerful risk-reduction tool. Sightline problems, projector alignment issues, and lighting conflicts are all cheap to fix in a 3D model and expensive to fix on site. Pre-visualization pays for itself by eliminating surprises."
     },
     {
       "type": "use_cases",
@@ -50,18 +50,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "Our pre-viz deliverables include dimensionally accurate 3D venue models, rendered lighting simulations, projection mapping previews on the actual geometry of your surfaces, animated show sequences, and still renders for client approvals and marketing decks. We work in industry-standard tools — including Unreal Engine, Blender, and TouchDesigner — and our models carry real technical data: throw distances, lens calculations, fixture counts, and power loads.\n\nFor the DUBAI 360 spherical projection theatre in Dubai Mall — a project for DUBAI 360 & Obscura Digital — content had to be pre-visualized against a fully spherical screen so the imagery wrapped the audience seamlessly. For Adidas at Super Bowl 2020, projection content was pre-visualized and calibrated to the architecture of Ampersand Studios before a projector was ever hung, which is why the mapping looked seamless on event day. Pre-viz also plays a central role in our exhibition work for Netflix, including the Disenchantment Comic-Con exhibition in San Diego, and in large-scale projection projects like PROJECTING CHANGE: Racing Extinction for the Oceanic Preservation Society & Obscura Digital, where imagery was delivered to landmarks including the Empire State Building, the United Nations in New York, and the Vatican in Rome."
+      "content": "Our pre-viz deliverables include dimensionally accurate 3D venue models, rendered lighting simulations, projection mapping previews on the actual geometry of your surfaces, animated show sequences, and still renders for client approvals and marketing decks. We work in industry-standard tools (including Unreal Engine, Blender, and TouchDesigner) and our models carry real technical data: throw distances, lens calculations, fixture counts, and power loads.\n\nFor the DUBAI 360 spherical projection theatre in Dubai Mall (a project for DUBAI 360 & Obscura Digital) content had to be pre-visualized against a fully spherical screen so the imagery wrapped the audience seamlessly. For Adidas at Super Bowl 2020, projection content was pre-visualized and calibrated to the architecture of Ampersand Studios before a projector was ever hung, which is why the mapping looked seamless on event day. Pre-viz also plays a central role in our exhibition work for Netflix, including the Disenchantment Comic-Con exhibition in San Diego, and in large-scale projection projects like PROJECTING CHANGE: Racing Extinction for the Oceanic Preservation Society & Obscura Digital, where imagery was delivered to landmarks including the Empire State Building, the United Nations in New York, and the Vatican in Rome."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Venue Data Collection — Floor plans, dimensions, photos, and rigging info",
-        "2. 3D Model Build — Accurate digital twin of your space and staging",
-        "3. Look & Content Development — Lighting, video, and projection looks rendered",
-        "4. Review & Iteration — Stakeholders approve looks before production spend",
-        "5. Technical Verification — Throw distances, sightlines, and loads confirmed",
-        "6. Handoff to Production — The approved pre-viz becomes the on-site blueprint"
+        "1. Venue Data Collection: Floor plans, dimensions, photos, and rigging info",
+        "2. 3D Model Build: Accurate digital twin of your space and staging",
+        "3. Look & Content Development: Lighting, video, and projection looks rendered",
+        "4. Review & Iteration: Stakeholders approve looks before production spend",
+        "5. Technical Verification: Throw distances, sightlines, and loads confirmed",
+        "6. Handoff to Production: The approved pre-viz becomes the on-site blueprint"
       ]
     },
     {
@@ -71,7 +71,7 @@
         "Pre-visualized spherical projection content for the DUBAI 360 theatre in Dubai Mall",
         "Projection mapping calibrated in pre-viz for Adidas at Super Bowl 2020",
         "Landmark-scale projection experience from PROJECTING CHANGE: Racing Extinction",
-        "Pre-viz models carry real technical data — not just pretty pictures",
+        "Pre-viz models carry real technical data, not just pretty pictures",
         "Same team designs, visualizes, and executes the show",
         "Fewer on-site surprises, faster approvals, tighter budgets"
       ]
@@ -90,7 +90,7 @@
         },
         {
           "question": "Do I need pre-viz for a small event?",
-          "answer": "Not always — but any event with projection mapping, complex lighting, or a hard-to-modify venue benefits from it. We scale pre-viz depth to the project's risk and budget."
+          "answer": "Not always, but any event with projection mapping, complex lighting, or a hard-to-modify venue benefits from it. We scale pre-viz depth to the project's risk and budget."
         },
         {
           "question": "What do you need from us to start?",

@@ -3,10 +3,10 @@
   "slug": "/services/drafting-detail-drawings",
   "seo": {
     "title": "Drafting & Detail Drawings Portland, OR",
-    "description": "Drafting and detail drawings in Portland, OR — construction documents, fabrication shop drawings, and rigging plots for experiential builds.",
+    "description": "Drafting and detail drawings in Portland, OR: construction documents, fabrication shop drawings, and rigging plots for experiential builds.",
     "og": {
       "title": "Drafting & Detail Drawings Portland, OR | BEATROX",
-      "description": "Drafting and detail drawings in Portland, OR — construction documents, fabrication shop drawings, and rigging plots for experiential builds.",
+      "description": "Drafting and detail drawings in Portland, OR: construction documents, fabrication shop drawings, and rigging plots for experiential builds.",
       "image": "/images/portfolio/myshelter/image-asset.png"
     }
   },
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Drafting & Detail Drawings?",
-      "content": "Drafting is how an idea becomes a set of instructions — and from our Portland, Oregon studio, Beatrox produces the detail drawings that keep experiential builds across the country on the same page. In experiential production, detail drawings are the shared language between designers, fabricators, engineers, riggers, and venue staff — dimensioned plans, sections, elevations, and shop drawings that define exactly what gets built, where it goes, and how it fits together.\n\nYou need professional drafting whenever something has to be fabricated, approved, or coordinated across departments. A scenic wall that looks simple in a render can hide dozens of decisions: material thicknesses, connection details, cable paths, access panels, sightline clearances. Without drawings, those decisions get made on the shop floor or on site — the two most expensive places to make them.\n\nGood drafting also protects the creative. When every vendor works from the same accurate documents, the finished build matches the approved design, change orders shrink, and load-in stops being a negotiation."
+      "content": "Drafting is how an idea becomes a set of instructions, and from our Portland, Oregon studio, Beatrox produces the detail drawings that keep experiential builds across the country on the same page. In experiential production, detail drawings are the shared language between designers, fabricators, engineers, riggers, and venue staff: dimensioned plans, sections, elevations, and shop drawings that define exactly what gets built, where it goes, and how it fits together.\n\nYou need professional drafting whenever something has to be fabricated, approved, or coordinated across departments. A scenic wall that looks simple in a render can hide dozens of decisions: material thicknesses, connection details, cable paths, access panels, sightline clearances. Without drawings, those decisions get made on the shop floor or on site: the two most expensive places to make them.\n\nGood drafting also protects the creative. When every vendor works from the same accurate documents, the finished build matches the approved design, change orders shrink, and load-in stops being a negotiation."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "BEATROX produces full drafting packages in industry-standard CAD workflows: dimensioned floor plans, sections, elevations, fabrication shop drawings with material and hardware callouts, and technical plots for lighting, rigging, and AV. Because our drafters work alongside our fabricators and technical directors, the drawings reflect how things are actually built — not just how they look.\n\nOur drawings have carried real projects through approval and build. For Netflix's El Camino Comic-Con exhibition in New York, detailed documentation kept a complex exhibition build coordinated across departments. On the FLIR Interactive History Wall — a permanent installation at FLIR's Washington DC headquarters with ultra wide-format displays, LIDAR sensors, and a media server — precise placement and integration drawings were essential to a clean, low-maintenance result. And for Adidas' MyShelter launch, we drafted an immersive forest environment into a narrow Manhattan bodega, resolving how a hidden short-throw projector, scenic canopy, lighting, and signage could coexist in a footprint with no room for error."
+      "content": "BEATROX produces full drafting packages in industry-standard CAD workflows: dimensioned floor plans, sections, elevations, fabrication shop drawings with material and hardware callouts, and technical plots for lighting, rigging, and AV. Because our drafters work alongside our fabricators and technical directors, the drawings reflect how things are actually built, not just how they look.\n\nOur drawings have carried real projects through approval and build. For Netflix's El Camino Comic-Con exhibition in New York, detailed documentation kept a complex exhibition build coordinated across departments. On the FLIR Interactive History Wall (a permanent installation at FLIR's Washington DC headquarters with ultra wide-format displays, LIDAR sensors, and a media server) precise placement and integration drawings were essential to a clean, low-maintenance result. And for Adidas' MyShelter launch, we drafted an immersive forest environment into a narrow Manhattan bodega, resolving how a hidden short-throw projector, scenic canopy, lighting, and signage could coexist in a footprint with no room for error."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Brief & Survey — We gather creative intent, site dimensions, and venue constraints",
-        "2. Design Development — Concepts are modeled and resolved into buildable geometry",
-        "3. Drafting — Plans, sections, elevations, and detail views are produced and checked",
-        "4. Coordination — Drawings are shared with engineers, fabricators, and vendors for review",
-        "5. Issue & Revisions — Approved construction documents are released; changes are tracked",
-        "6. As-Builts — Final documentation reflects what was actually installed"
+        "1. Brief & Survey: We gather creative intent, site dimensions, and venue constraints",
+        "2. Design Development: Concepts are modeled and resolved into buildable geometry",
+        "3. Drafting: Plans, sections, elevations, and detail views are produced and checked",
+        "4. Coordination: Drawings are shared with engineers, fabricators, and vendors for review",
+        "5. Issue & Revisions: Approved construction documents are released; changes are tracked",
+        "6. As-Builts: Final documentation reflects what was actually installed"
       ]
     },
     {
@@ -72,7 +72,7 @@
         "Drafting behind permanent installations like the FLIR Interactive History Wall in Washington DC",
         "Documentation for Netflix's El Camino Comic-Con exhibition in New York",
         "Tight-footprint spatial drafting proven on Adidas' MyShelter bodega environment",
-        "Drafters who work beside our fabrication and technical teams — drawings that build",
+        "Drafters who work beside our fabrication and technical teams: drawings that build",
         "3D model-based workflows using tools like Rhino3D and SolidWorks",
         "Packages ready for engineering review, venue submittal, and shop fabrication"
       ]
@@ -83,7 +83,7 @@
       "items": [
         {
           "question": "What software do you draft in?",
-          "answer": "We work in standard CAD and 3D modeling tools — including Rhino3D and SolidWorks for complex fabrication geometry — and deliver files in formats your engineers, shops, and venues can open."
+          "answer": "We work in standard CAD and 3D modeling tools (including Rhino3D and SolidWorks for complex fabrication geometry) and deliver files in formats your engineers, shops, and venues can open."
         },
         {
           "question": "Can you draft from an existing concept or render?",
@@ -91,7 +91,7 @@
         },
         {
           "question": "Do your drawings support engineering certification?",
-          "answer": "They do. Our drafting packages are produced with engineering review in mind — loads, connections, and materials clearly documented so a licensed engineer can evaluate and stamp them efficiently."
+          "answer": "They do. Our drafting packages are produced with engineering review in mind: loads, connections, and materials clearly documented so a licensed engineer can evaluate and stamp them efficiently."
         },
         {
           "question": "Do I need drafting if my event is small?",

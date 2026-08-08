@@ -2,17 +2,17 @@
   "title": "Destination",
   "slug": "/work/destination",
   "seo": {
-    "title": "Destination \u2014 BEATROX Interactive Art Canvas",
+    "title": "Destination: BEATROX Interactive Art Canvas",
     "description": "A 40-foot interactive paint canvas created for Journey's x Adidas at Horton Plaza Park, San Diego. Participants controlled a robotic paint dripper to create live collaborative art.",
     "og": {
-      "title": "Destination \u2014 Journey's x Adidas Interactive Canvas",
-      "description": "A 40-foot blank canvas controlled by the crowd \u2014 robotic paint drippers, 5 colors, and live collaborative art creation for Journey's x Adidas in San Diego.",
+      "title": "Destination: Journey's x Adidas Interactive Canvas",
+      "description": "A 40-foot blank canvas controlled by the crowd: robotic paint drippers, 5 colors, and live collaborative art creation for Journey's x Adidas in San Diego.",
       "image": "/images/deck/destination/01-image77.png"
     }
   },
   "hero": {
     "headline": "Destination",
-    "subheadline": "A 40-foot blank canvas, five colors of paint, and a robotic dripper controlled by the crowd \u2014 collaborative art at festival scale.",
+    "subheadline": "A 40-foot blank canvas, five colors of paint, and a robotic dripper controlled by the crowd: collaborative art at festival scale.",
     "tags": [
       "Interactive Art Canvas",
       "Custom Scenic",
@@ -22,7 +22,7 @@
   },
   "metadata": {
     "client": "Journey's x Adidas",
-    "location": "Horton Plaza Park \u2014 San Diego, CA",
+    "location": "Horton Plaza Park, San Diego, CA",
     "type": "Interactive Art Canvas, Custom Scenic, Fabrication, Stage Design, Concert, Event Production",
     "tech": [
       "Custom Controller",
@@ -43,7 +43,7 @@
     {
       "type": "concept",
       "heading": "The Experience",
-      "content": "Created for Journey's and Adidas, Destination was a 40-foot tall structure skinned with a blank canvas and outfitted with a custom-built robotic paint distribution device. Each participant was given the chance to control the paint dripper and release one of 5 different colors of paint \u2014 all with the press of a button.\n\nParticipants simply made their color selection and the system automatically activated a mechanical valve, sending paint flowing down the massive canvas in real time. Over the course of the event, the canvas became a living, collaborative artwork shaped entirely by the crowd \u2014 a unique take-home memory that existed nowhere else in the world."
+      "content": "Created for Journey's and Adidas, Destination was a 40-foot tall structure skinned with a blank canvas and outfitted with a custom-built robotic paint distribution device. Each participant was given the chance to control the paint dripper and release one of 5 different colors of paint, all with the press of a button.\n\nParticipants simply made their color selection and the system automatically activated a mechanical valve, sending paint flowing down the massive canvas in real time. Over the course of the event, the canvas became a living, collaborative artwork shaped entirely by the crowd: a unique take-home memory that existed nowhere else in the world."
     },
     {
       "type": "features_list",
@@ -61,51 +61,51 @@
   "images": [
     {
       "url": "/images/deck/destination/01-image77.png",
-      "alt": "Destination deck image 1"
+      "alt": "Close-up of custom-built button controller console, hand pressing a button"
     },
     {
       "url": "/images/deck/destination/02-image86.png",
-      "alt": "Destination deck image 2"
+      "alt": "Night concert: stage with truss towers, LED IMAG screen, stage lighting, painted canvas facade, large crowd"
     },
     {
       "url": "/images/deck/destination/03-image111.jpg",
-      "alt": "Destination deck image 3"
+      "alt": "40-ft painted canvas structure with Adidas logo, scaffold towers both sides"
     },
     {
       "url": "/images/deck/destination/04-image89.jpg",
-      "alt": "Destination deck image 4"
+      "alt": "Performer posing in front of the painted canvas structure (backdrop clearly visible)"
     },
     {
       "url": "/images/deck/destination/05-image79.png",
-      "alt": "Destination deck image 5"
+      "alt": "3D render/pre-viz of the canvas tower structure with colorful paint stripes"
     },
     {
       "url": "/images/deck/destination/06-image87.png",
-      "alt": "Destination deck image 6"
+      "alt": "3D product render of the custom button controller on gray background"
     },
     {
       "url": "/images/deck/destination/07-image137.jpg",
-      "alt": "Destination deck image 7"
+      "alt": "Hands pressing buttons on custom controller console, paint color strips, truss behind"
     },
     {
       "url": "/images/deck/destination/08-image108.jpg",
-      "alt": "Destination deck image 8"
+      "alt": "Participant pressing button on Destination controller, painted canvas behind"
     },
     {
       "url": "/images/deck/destination/09-image73.jpg",
-      "alt": "Destination deck image 9"
+      "alt": "Close-up of painted canvas with drips, Adidas logo, scaffold structure visible"
     },
     {
       "url": "/images/deck/destination/10-image109.jpg",
-      "alt": "Destination deck image 10"
+      "alt": "Festival-wide night shot: uplit sculptural columns, truss with illuminated sign, tents, crowd, colored washes"
     },
     {
       "url": "/images/deck/destination/11-image114.jpg",
-      "alt": "Destination deck image 11"
+      "alt": "Concert stage at night with LED screen, haze and stage lighting, branded banner, crowd"
     },
     {
       "url": "/images/deck/destination/13-image78.jpg",
-      "alt": "Destination deck image 13"
+      "alt": "DJ at decks/mixer in front of large LED wall showing branded Adidas/Journeys motion graphics"
     },
     {
       "url": "/images/portfolio/destination/PicsForDeck3.PNG",

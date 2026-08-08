@@ -3,10 +3,10 @@
   "slug": "/services/technical-documentation",
   "seo": {
     "title": "Technical Documentation Portland, OR",
-    "description": "Technical documentation in Portland, OR — system diagrams, operating manuals, and as-built records that keep productions repeatable.",
+    "description": "Technical documentation in Portland, OR: system diagrams, operating manuals, and as-built records that keep productions repeatable.",
     "og": {
       "title": "Technical Documentation Portland, OR | BEATROX",
-      "description": "Technical documentation in Portland, OR — system diagrams, operating manuals, and as-built records that keep productions repeatable.",
+      "description": "Technical documentation in Portland, OR: system diagrams, operating manuals, and as-built records that keep productions repeatable.",
       "image": "/images/deck/destination/01-image77.png"
     }
   },
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Technical Documentation?",
-      "content": "Technical documentation is the written record of how a production or installation actually works — documentation Beatrox produces from Portland, Oregon for events and installations nationwide: system diagrams, signal flow, equipment schedules, operating procedures, maintenance guides, and as-built records. It's what allows someone who didn't build the system to run it, fix it, or rebuild it.\n\nYou need technical documentation whenever a system outlives the crew that installed it — a touring show with rotating technicians, a permanent installation maintained by in-house staff, or a brand activation that will be rebuilt in the next city. Without documentation, every handover is a game of telephone and every fault becomes a forensic investigation.\n\nDocumentation also protects the production itself. When the show manual defines power-up sequences, fallback procedures, and who owns which system, show day stops depending on any single person's memory. That's not bureaucracy — that's reliability."
+      "content": "Technical documentation is the written record of how a production or installation actually works: documentation Beatrox produces from Portland, Oregon for events and installations nationwide: system diagrams, signal flow, equipment schedules, operating procedures, maintenance guides, and as-built records. It's what allows someone who didn't build the system to run it, fix it, or rebuild it.\n\nYou need technical documentation whenever a system outlives the crew that installed it: a touring show with rotating technicians, a permanent installation maintained by in-house staff, or a brand activation that will be rebuilt in the next city. Without documentation, every handover is a game of telephone and every fault becomes a forensic investigation.\n\nDocumentation also protects the production itself. When the show manual defines power-up sequences, fallback procedures, and who owns which system, show day stops depending on any single person's memory. That's not bureaucracy, that's reliability."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "BEATROX produces documentation as a deliverable, not an afterthought: system and signal flow diagrams, cable and patching schedules, equipment inventories, step-by-step operating manuals, maintenance and service guides, and as-built drawing sets that record what was actually installed. Everything is written for the person who will use it — clear enough for a venue technician, precise enough for an engineer.\n\nOur documentation has kept real systems running beyond opening night. The FLIR Interactive History Wall — a permanent installation at FLIR's Washington DC headquarters combining ultra wide-format displays, LIDAR sensors, AI computer vision, and a media server — was delivered with the operating and maintenance documentation a corporate facilities team needs to own it long-term. For Netflix's El Camino Comic-Con exhibition in New York, complete technical records kept a multi-system exhibition build operable across the run of the show. And on Destination for Journey's x Adidas in San Diego, we documented a one-of-a-kind system — a 40-foot canvas driven by a robotic paint distribution device with custom Arduino firmware, relay-driven mechanical valves, and TouchDesigner integration — so the custom controller and its procedures could be operated and serviced by the event team."
+      "content": "BEATROX produces documentation as a deliverable, not an afterthought: system and signal flow diagrams, cable and patching schedules, equipment inventories, step-by-step operating manuals, maintenance and service guides, and as-built drawing sets that record what was actually installed. Everything is written for the person who will use it: clear enough for a venue technician, precise enough for an engineer.\n\nOur documentation has kept real systems running beyond opening night. The FLIR Interactive History Wall, a permanent installation at FLIR's Washington DC headquarters combining ultra wide-format displays, LIDAR sensors, AI computer vision, and a media server, was delivered with the operating and maintenance documentation a corporate facilities team needs to own it long-term. For Netflix's El Camino Comic-Con exhibition in New York, complete technical records kept a multi-system exhibition build operable across the run of the show. And on Destination for Journey's x Adidas in San Diego, we documented a one-of-a-kind system (a 40-foot canvas driven by a robotic paint distribution device with custom Arduino firmware, relay-driven mechanical valves, and TouchDesigner integration) so the custom controller and its procedures could be operated and serviced by the event team."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. System Capture — We document every system as designed: diagrams, schedules, and inventories",
-        "2. Procedure Writing — Operating, power-up, show, and emergency procedures are drafted",
-        "3. On-Site Verification — Documentation is checked against the real installation during commissioning",
-        "4. As-Built Update — Drawings and records are revised to match exactly what was built",
-        "5. Handover & Training — We walk the receiving team through the documents and the system",
-        "6. Living Records — Documentation is maintained and reissued as the system evolves"
+        "1. System Capture: We document every system as designed: diagrams, schedules, and inventories",
+        "2. Procedure Writing: Operating, power-up, show, and emergency procedures are drafted",
+        "3. On-Site Verification: Documentation is checked against the real installation during commissioning",
+        "4. As-Built Update: Drawings and records are revised to match exactly what was built",
+        "5. Handover & Training: We walk the receiving team through the documents and the system",
+        "6. Living Records: Documentation is maintained and reissued as the system evolves"
       ]
     },
     {
@@ -74,7 +74,7 @@
         "Full system documentation for Destination's custom robotic paint installation",
         "Documents written by the team that designed and built the system",
         "Manuals written for operators, not just engineers",
-        "As-built accuracy — what we document is what actually exists"
+        "As-built accuracy: what we document is what actually exists"
       ]
     },
     {
@@ -83,11 +83,11 @@
       "items": [
         {
           "question": "What's included in a technical documentation package?",
-          "answer": "Typically: system and signal flow diagrams, equipment and cable schedules, operating and show manuals, maintenance guides, and as-built drawings. We scope the package to who's receiving it — a touring crew needs different documents than a facilities team."
+          "answer": "Typically: system and signal flow diagrams, equipment and cable schedules, operating and show manuals, maintenance guides, and as-built drawings. We scope the package to who's receiving it: a touring crew needs different documents than a facilities team."
         },
         {
           "question": "Can you document a system someone else built?",
-          "answer": "Yes. We can reverse-engineer an existing installation — tracing signal paths, inventorying equipment, and producing the diagrams and manuals that were never delivered."
+          "answer": "Yes. We can reverse-engineer an existing installation: tracing signal paths, inventorying equipment, and producing the diagrams and manuals that were never delivered."
         },
         {
           "question": "Do you provide training with the documentation?",
@@ -95,7 +95,7 @@
         },
         {
           "question": "Why does documentation matter for a one-off event?",
-          "answer": "Even one-off events benefit — a show manual keeps rehearsal and show day from depending on one person's memory. And if the activation tours or returns next year, documentation is what makes the rebuild fast and faithful."
+          "answer": "Even one-off events benefit: a show manual keeps rehearsal and show day from depending on one person's memory. And if the activation tours or returns next year, documentation is what makes the rebuild fast and faithful."
         }
       ]
     }

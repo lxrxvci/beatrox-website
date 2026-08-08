@@ -3,16 +3,16 @@
   "slug": "/services/dj-equipment-rentals",
   "seo": {
     "title": "DJ Equipment Rental Portland, OR",
-    "description": "DJ equipment rental in Portland, OR — Pioneer CDJ-3000s, DJM mixers, and full booth packages delivered with on-site technical support.",
+    "description": "DJ equipment rental in Portland, OR: Pioneer CDJ-3000s, DJM mixers, and full booth packages delivered with on-site technical support.",
     "og": {
       "title": "DJ Equipment Rental Portland, OR | BEATROX",
-      "description": "DJ equipment rental in Portland, OR — Pioneer CDJ-3000s, DJM mixers, and full booth packages delivered with on-site technical support.",
+      "description": "DJ equipment rental in Portland, OR: Pioneer CDJ-3000s, DJM mixers, and full booth packages delivered with on-site technical support.",
       "image": "/images/verified/home/Beatrox-Professional-DJ-Equipment-Rental-Sound-Gear-9da90b24.jpg"
     }
   },
   "hero": {
     "headline": "DJ Equipment Rentals",
-    "subheadline": "Industry-standard DJ equipment for world-class performances — delivered, set up, and supported by our team.",
+    "subheadline": "Industry-standard DJ equipment for world-class performances, delivered, set up, and supported by our team.",
     "cta": {
       "label": "Get a Free Quote",
       "url": "/book"
@@ -38,11 +38,11 @@
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "Rider-exact packages — CDJ-3000, DJM-900NXS2, and Technics SL-1200 systems matched to spec",
-        "Backup units on site at every event — duplicate CDJs, mixers, and cables for zero downtime",
-        "Custom DJ booths designed and fabricated in-house — LED facades and branded wraps",
+        "Rider-exact packages: CDJ-3000, DJM-900NXS2, and Technics SL-1200 systems matched to spec",
+        "Backup units on site at every event: duplicate CDJs, mixers, and cables for zero downtime",
+        "Custom DJ booths designed and fabricated in-house: LED facades and branded wraps",
         "Touring-grade road cases for traveling acts",
-        "Festival-deployed — DJ rigs for Amazon Music Live activations at Outside Lands and Stagecoach",
+        "Festival-deployed: DJ rigs for Amazon Music Live activations at Outside Lands and Stagecoach",
         "On-site technical support from load-in to last track"
       ]
     },
@@ -50,12 +50,12 @@
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Rider & Spec Review — We match exact models and firmware versions the artist requires",
-        "2. Package Configuration — Players, mixer, monitors, booth, and cabling assembled",
-        "3. Bench Test — Every unit and connection verified, media compatibility confirmed",
-        "4. Delivery & Setup — Booth placed, rig integrated with house audio and visuals",
-        "5. Show Support — Tech on site with backup units staged and ready",
-        "6. Strike & Return — Gear struck, inspected, and back in rotation same night"
+        "1. Rider & Spec Review: We match exact models and firmware versions the artist requires",
+        "2. Package Configuration: Players, mixer, monitors, booth, and cabling assembled",
+        "3. Bench Test: Every unit and connection verified, media compatibility confirmed",
+        "4. Delivery & Setup: Booth placed, rig integrated with house audio and visuals",
+        "5. Show Support: Tech on site with backup units staged and ready",
+        "6. Strike & Return: Gear struck, inspected, and back in rotation same night"
       ]
     },
     {
@@ -77,12 +77,12 @@
     {
       "type": "service_detail",
       "heading": "DJ Booth Design Options",
-      "content": "The DJ booth is the visual centerpiece of any event. We offer custom booth designs ranging from sleek, low-profile setups for intimate clubs to large, illuminated installations for festival stages. Options include LED-integrated facades, branded wraps, custom facades with your logo, and modular designs that adapt to any venue size. Our team designs, builds, and installs the booth — then integrates it with your audio and visual systems for a seamless experience."
+      "content": "The DJ booth is the visual centerpiece of any event. We offer custom booth designs ranging from sleek, low-profile setups for intimate clubs to large, illuminated installations for festival stages. Options include LED-integrated facades, branded wraps, custom facades with your logo, and modular designs that adapt to any venue size. Our team designs, builds, and installs the booth, then integrates it with your audio and visual systems for a seamless experience."
     },
     {
       "type": "service_detail",
       "heading": "Artist Rider Compliance & Backup Equipment Policy",
-      "content": "We take artist riders seriously. Every DJ package is configured to match the exact models and firmware versions specified. Before load-in, we verify all equipment, test every connection, and confirm compatibility with the artist's USB drives and laptops. We also maintain a backup equipment policy — duplicate CDJs, mixers, and cables are on standby at every event to ensure zero downtime if a failure occurs."
+      "content": "We take artist riders seriously. Every DJ package is configured to match the exact models and firmware versions specified. Before load-in, we verify all equipment, test every connection, and confirm compatibility with the artist's USB drives and laptops. We also maintain a backup equipment policy: duplicate CDJs, mixers, and cables are on standby at every event to ensure zero downtime if a failure occurs."
     },
     {
       "type": "specs",
@@ -114,7 +114,7 @@
         },
         {
           "question": "Can you build a custom DJ booth?",
-          "answer": "Yes. We design and fabricate custom DJ booths with LED integration, branded facades, and modular sizing — from intimate club setups to large festival stages."
+          "answer": "Yes. We design and fabricate custom DJ booths with LED integration, branded facades, and modular sizing, from intimate club setups to large festival stages."
         },
         {
           "question": "Do you provide backup equipment?",

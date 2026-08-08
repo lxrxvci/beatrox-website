@@ -3,16 +3,16 @@
   "slug": "/services/sound-equipment-rentals",
   "seo": {
     "title": "Sound Equipment Rentals Portland, OR",
-    "description": "Sound equipment rentals in Portland, OR — PA systems, consoles, and monitoring with experienced engineers, from activations to concerts.",
+    "description": "Sound equipment rentals in Portland, OR: PA systems, consoles, and monitoring with experienced engineers, from activations to concerts.",
     "og": {
       "title": "Sound Equipment Rentals Portland, OR | BEATROX",
-      "description": "Sound equipment rentals in Portland, OR — PA systems, consoles, and monitoring with experienced engineers, from activations to concerts.",
+      "description": "Sound equipment rentals in Portland, OR: PA systems, consoles, and monitoring with experienced engineers, from activations to concerts.",
       "image": "/images/verified/home/Beatrox+Professional+sound+and+lighting+services+-+sound+equipment+rental+packages+-+RCF+-+QSC+-+Rentals-1d18c704.jpg"
     }
   },
   "hero": {
     "headline": "Sound Equipment Rentals",
-    "subheadline": "Professional PA systems, consoles, and monitoring — with experienced engineers who know how to make them sing.",
+    "subheadline": "Professional PA systems, consoles, and monitoring, with experienced engineers who know how to make them sing.",
     "cta": {
       "label": "Get a Free Quote",
       "url": "/book"
@@ -32,16 +32,16 @@
   "body": [
     {
       "type": "intro",
-      "content": "Great sound is the foundation of every great event, and Beatrox provides professional-grade sound equipment rentals in Portland, Oregon and nationwide — from intimate brand activations to large-format concert productions, backed by our team of experienced engineers. Every rental comes with the option of on-site engineering support."
+      "content": "Great sound is the foundation of every great event, and Beatrox provides professional-grade sound equipment rentals in Portland, Oregon and nationwide, from intimate brand activations to large-format concert productions, backed by our team of experienced engineers. Every rental comes with the option of on-site engineering support."
     },
     {
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
-        "Touring-grade inventory — L-Acoustics, d&b audiotechnik, Meyer Sound, DiGiCo, and Midas",
-        "Engineer-led rentals — certified A1/A2 engineers available with every package",
-        "Venue-matched systems — coverage modeled from 100-person rooms to 5,000+ capacity",
-        "Professional RF coordination — clear wireless even in congested festival spectrum",
+        "Touring-grade inventory: L-Acoustics, d&b audiotechnik, Meyer Sound, DiGiCo, and Midas",
+        "Engineer-led rentals: certified A1/A2 engineers available with every package",
+        "Venue-matched systems: coverage modeled from 100-person rooms to 5,000+ capacity",
+        "Professional RF coordination: clear wireless even in congested festival spectrum",
         "Audio Engineer Joshua Vallejos brings 15+ years of touring and live sound experience",
         "Deployed on productions for BuzzFeed and AKU World in New York"
       ]
@@ -50,12 +50,12 @@
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Venue & Audience Assessment — Room size, acoustics, and coverage requirements",
-        "2. System Spec — PA, consoles, monitors, and wireless matched to the venue",
-        "3. Delivery & Deployment — Rig placed, cabled, and tuned to the room",
-        "4. Soundcheck Support — Inputs verified, monitors rung out, RF coordinated",
-        "5. Show Operation — Optional A1/A2 engineering from first note to encore",
-        "6. Strike & Pickup — System struck and out of your venue on schedule"
+        "1. Venue & Audience Assessment: Room size, acoustics, and coverage requirements",
+        "2. System Spec: PA, consoles, monitors, and wireless matched to the venue",
+        "3. Delivery & Deployment: Rig placed, cabled, and tuned to the room",
+        "4. Soundcheck Support: Inputs verified, monitors rung out, RF coordinated",
+        "5. Show Operation: Optional A1/A2 engineering from first note to encore",
+        "6. Strike & Pickup: System struck and out of your venue on schedule"
       ]
     },
     {
@@ -82,7 +82,7 @@
     {
       "type": "service_detail",
       "heading": "Engineer Qualifications & Wireless Frequency Coordination",
-      "content": "Our engineering team includes certified A1 and A2 engineers with touring experience on major festivals and concert tours. For wireless microphone and IEM systems, we perform professional frequency coordination — scanning the RF environment, assigning clear frequencies, and monitoring for interference throughout your event. This is critical in urban venues and festival environments where RF congestion can cause dropouts. We ensure your wireless is rock-solid."
+      "content": "Our engineering team includes certified A1 and A2 engineers with touring experience on major festivals and concert tours. For wireless microphone and IEM systems, we perform professional frequency coordination, scanning the RF environment, assigning clear frequencies, and monitoring for interference throughout your event. This is critical in urban venues and festival environments where RF congestion can cause dropouts. We ensure your wireless is rock-solid."
     },
     {
       "type": "specs",
@@ -116,7 +116,7 @@
         },
         {
           "question": "Can you handle wireless microphones in a crowded RF environment?",
-          "answer": "Absolutely. Our team performs professional RF coordination, scanning the venue, assigning clear frequencies, and monitoring for interference — ensuring reliable wireless performance even in congested urban or festival environments."
+          "answer": "Absolutely. Our team performs professional RF coordination, scanning the venue, assigning clear frequencies, and monitoring for interference, ensuring reliable wireless performance even in congested urban or festival environments."
         }
       ]
     }

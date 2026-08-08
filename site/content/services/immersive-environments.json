@@ -3,10 +3,10 @@
   "slug": "/services/immersive-environments",
   "seo": {
     "title": "Immersive Environments Portland, OR",
-    "description": "Immersive environments in Portland, OR — projection mapping, spatial audio, LED, and real-time interaction that transform rooms into living worlds.",
+    "description": "Immersive environments in Portland, OR: projection mapping, spatial audio, LED, and real-time interaction that transform rooms into living worlds.",
     "og": {
       "title": "Immersive Environments Portland, OR | BEATROX",
-      "description": "Immersive environments in Portland, OR — projection mapping, spatial audio, LED, and real-time interaction that transform rooms into living worlds.",
+      "description": "Immersive environments in Portland, OR: projection mapping, spatial audio, LED, and real-time interaction that transform rooms into living worlds.",
       "image": "/images/verified/work/myshelter/INTERIOR1-972f68ea.jpg"
     }
   },
@@ -25,7 +25,7 @@
     "Infinity LED & Mirror Environments",
     "Spatial Audio & Soundscaping",
     "Real-Time Interactive Systems",
-    "Atmospheric Effects — Fog, Haze, Scent",
+    "Atmospheric Effects: Fog, Haze, Scent",
     "Environmental Lighting Design",
     "Sensor & Motion-Tracking Integration"
   ],
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is an Immersive Environment?",
-      "content": "An immersive environment is a space that stops behaving like a room — and Beatrox designs and builds them from Portland, Oregon for clients nationwide. Walls become forest canopy or deep ocean. Sound comes from everywhere. The floor, ceiling, and air itself are part of the design. Guests don't observe the experience — they're inside it, and their presence often drives what happens next.\n\nYou need an immersive environment when the message has to be felt, not read. Launching an outdoor jacket? Put guests in the forest. Raising ocean awareness? Sink them to the sea floor. The medium is the argument — and it only works when every technical system disappears behind the illusion.\n\nThat disappearance is the hard part. Projectors must hide inside the scenery, sensors must track without a single visible wire, and content must wrap real geometry without a seam. Beatrox builds environments where the technology is invisible and the world is all that's left."
+      "content": "An immersive environment is a space that stops behaving like a room, and Beatrox designs and builds them from Portland, Oregon for clients nationwide. Walls become forest canopy or deep ocean. Sound comes from everywhere. The floor, ceiling, and air itself are part of the design. Guests don't observe the experience. They're inside it, and their presence often drives what happens next.\n\nYou need an immersive environment when the message has to be felt, not read. Launching an outdoor jacket? Put guests in the forest. Raising ocean awareness? Sink them to the sea floor. The medium is the argument, and it only works when every technical system disappears behind the illusion.\n\nThat disappearance is the hard part. Projectors must hide inside the scenery, sensors must track without a single visible wire, and content must wrap real geometry without a seam. Beatrox builds environments where the technology is invisible and the world is all that's left."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "Beatrox designs and builds immersive environments end to end: spatial concept, surface and scenic design, projection and LED systems, spatial audio, sensor-driven interaction, and atmospheric effects — all integrated so the technology vanishes behind the experience.\n\nFor the Adidas Outdoor MyShelter jacket launch, we transformed a narrow, shuttered Manhattan bodega into a living forest canopy — floor-to-ceiling projection mapping with forced-perspective content, spatial audio recreating the inner forest, low-lying fog, and audio-reactive LED lighting, with the short-throw projector hidden inside the scenic canopy itself. For Run for the Oceans with Adidas and Parley Ocean School at Domino Park, Brooklyn, a custom shipping container became a deep-ocean chamber: seamless wall-to-wall LED, mirrored floor and ceiling creating an infinity effect, and scanning LIDAR driving real-time flocking fish and fluid simulations. For AKU World in New York, we built a multi-room immersive universe — a projection-mapped main room with Unreal Engine real-time content linked to live musical performances, an interactive subway lobby, and a merch room with holographic portal displays. And at Super Bowl 2020 in Miami, Ampersand Studios became an immersive Adidas VIP headquarters, its architecture wrapped in projection-mapped branded visuals."
+      "content": "Beatrox designs and builds immersive environments end to end: spatial concept, surface and scenic design, projection and LED systems, spatial audio, sensor-driven interaction, and atmospheric effects, all integrated so the technology vanishes behind the experience.\n\nFor the Adidas Outdoor MyShelter jacket launch, we transformed a narrow, shuttered Manhattan bodega into a living forest canopy: floor-to-ceiling projection mapping with forced-perspective content, spatial audio recreating the inner forest, low-lying fog, and audio-reactive LED lighting, with the short-throw projector hidden inside the scenic canopy itself. For Run for the Oceans with Adidas and Parley Ocean School at Domino Park, Brooklyn, a custom shipping container became a deep-ocean chamber: seamless wall-to-wall LED, mirrored floor and ceiling creating an infinity effect, and scanning LIDAR driving real-time flocking fish and fluid simulations. For AKU World in New York, we built a multi-room immersive universe: a projection-mapped main room with Unreal Engine real-time content linked to live musical performances, an interactive subway lobby, and a merch room with holographic portal displays. And at Super Bowl 2020 in Miami, Ampersand Studios became an immersive Adidas VIP headquarters, its architecture wrapped in projection-mapped branded visuals."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Discovery — Story, audience journey, and the physical constraints of the space",
-        "2. World Design — Spatial concepts, surface maps, and sensory layering defined",
-        "3. Pre-Visualization — Guests' views rendered and approved before build-out",
-        "4. Systems Integration — Projection, LED, audio, sensors, and atmospherics unified",
-        "5. Calibration & Tuning — Content aligned to real geometry, audio tuned to the room",
-        "6. Operation & Support — Run, maintained, and struck by the team that built it"
+        "1. Discovery: Story, audience journey, and the physical constraints of the space",
+        "2. World Design: Spatial concepts, surface maps, and sensory layering defined",
+        "3. Pre-Visualization: Guests' views rendered and approved before build-out",
+        "4. Systems Integration: Projection, LED, audio, sensors, and atmospherics unified",
+        "5. Calibration & Tuning: Content aligned to real geometry, audio tuned to the room",
+        "6. Operation & Support: Run, maintained, and struck by the team that built it"
       ]
     },
     {
@@ -71,9 +71,9 @@
       "items": [
         "Turned a cramped NYC bodega into a convincing forest canopy for Adidas MyShelter",
         "Built the infinity-mirror ocean chamber for Adidas x Parley Run for the Oceans in Brooklyn",
-        "Multi-room scale — AKU World's projection-mapped main room, subway lobby, and holographic gallery",
-        "Interaction built in — LIDAR, motion tracking, and audio-reactive systems programmed in-house",
-        "Hidden-infrastructure discipline — projectors, sensors, and cabling disappear into the scenery",
+        "Multi-room scale: AKU World's projection-mapped main room, subway lobby, and holographic gallery",
+        "Interaction built in: LIDAR, motion tracking, and audio-reactive systems programmed in-house",
+        "Hidden-infrastructure discipline: projectors, sensors, and cabling disappear into the scenery",
         "Trusted by Adidas for their highest-visibility launches, from MyShelter to Super Bowl 2020"
       ]
     },
@@ -83,19 +83,19 @@
       "items": [
         {
           "question": "How small a space can you make immersive?",
-          "answer": "Smaller than you'd think. MyShelter was a narrow, shuttered bodega previously used to store old kitchen equipment — and guests still felt like they were floating through a forest. Forced-perspective content, spatial audio, and tight scenic integration do the heavy lifting."
+          "answer": "Smaller than you'd think. MyShelter was a narrow, shuttered bodega previously used to store old kitchen equipment, and guests still felt like they were floating through a forest. Forced-perspective content, spatial audio, and tight scenic integration do the heavy lifting."
         },
         {
           "question": "Can the environment respond to guests?",
-          "answer": "Yes — interaction is one of our core tools. Scanning LIDAR, motion capture, and audio-reactive lighting let the environment answer a guest's movement, as it did in the Run for the Oceans ocean chamber and the AKU World main room."
+          "answer": "Yes. Interaction is one of our core tools. Scanning LIDAR, motion capture, and audio-reactive lighting let the environment answer a guest's movement, as it did in the Run for the Oceans ocean chamber and the AKU World main room."
         },
         {
           "question": "Do immersive environments work for temporary events?",
-          "answer": "Absolutely. Most of our environments are temporary — a festival weekend, a launch week, a Super Bowl activation. We design for fast load-in, reliable operation through the run, and a clean strike."
+          "answer": "Absolutely. Most of our environments are temporary: a festival weekend, a launch week, a Super Bowl activation. We design for fast load-in, reliable operation through the run, and a clean strike."
         },
         {
           "question": "Who operates the environment during the event?",
-          "answer": "We do. The team that builds the environment stays to run it — media servers, sensors, audio, and atmospherics are monitored and maintained live so the illusion never breaks."
+          "answer": "We do. The team that builds the environment stays to run it. Media servers, sensors, audio, and atmospherics are monitored and maintained live so the illusion never breaks."
         }
       ]
     }

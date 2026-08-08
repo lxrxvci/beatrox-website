@@ -3,16 +3,16 @@
   "slug": "/services/media-server-playback-solutions",
   "seo": {
     "title": "Media Server & Playback Solutions Portland, OR",
-    "description": "Media server and playback solutions in Portland, OR — programming, warping, blending, and frame-accurate playback for mapping and LED shows.",
+    "description": "Media server and playback solutions in Portland, OR: programming, warping, blending, and frame-accurate playback for mapping and LED shows.",
     "og": {
       "title": "Media Server & Playback Solutions Portland, OR | BEATROX",
-      "description": "Media server and playback solutions in Portland, OR — programming, warping, blending, and frame-accurate playback for mapping and LED shows.",
+      "description": "Media server and playback solutions in Portland, OR: programming, warping, blending, and frame-accurate playback for mapping and LED shows.",
       "image": "/images/verified/work/dubai-360-spherical-projection-theatre/dubai_360_spherical_projection_theatre_preview.png"
     }
   },
   "hero": {
     "headline": "Media Server & Playback Solutions",
-    "subheadline": "Frame-accurate content playback across any canvas — projection-mapped buildings, spherical theatres, LED walls, and multi-display environments.",
+    "subheadline": "Frame-accurate content playback across any canvas: projection-mapped buildings, spherical theatres, LED walls, and multi-display environments.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What are Media Server & Playback Solutions?",
-      "content": "Media servers are the engines that store, process, and play back video content across complex display systems — systems Beatrox designs, programs, and operates from Portland, Oregon for shows nationwide — warping and blending multiple projectors onto irregular surfaces, driving LED walls at native pixel maps, and keeping every screen in a venue synchronized to the frame. Playback solutions cover the whole chain: server hardware, software programming, content formatting, signal distribution, and live operation.\n\nYou need a media server specialist whenever content has to land precisely on a surface that isn't a flat rectangle, whenever more than one display must move as one image, or whenever playback simply cannot fail in front of an audience. Mapping a building, wrapping a dome, or syncing a dozen screens to a musical performance is a playback engineering problem before it's a creative one.\n\nThe difference between a good show and a flawless one is usually invisible: redundant servers, frame-accurate timecode, content tested at show resolution before load-in. That preparation is the service."
+      "content": "Media servers are the engines that store, process, and play back video content across complex display systems (systems Beatrox designs, programs, and operates from Portland, Oregon for shows nationwide), warping and blending multiple projectors onto irregular surfaces, driving LED walls at native pixel maps, and keeping every screen in a venue synchronized to the frame. Playback solutions cover the whole chain: server hardware, software programming, content formatting, signal distribution, and live operation.\n\nYou need a media server specialist whenever content has to land precisely on a surface that isn't a flat rectangle, whenever more than one display must move as one image, or whenever playback simply cannot fail in front of an audience. Mapping a building, wrapping a dome, or syncing a dozen screens to a musical performance is a playback engineering problem before it's a creative one.\n\nThe difference between a good show and a flawless one is usually invisible: redundant servers, frame-accurate timecode, content tested at show resolution before load-in. That preparation is the service."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "BEATROX designs, programs, and operates complete playback systems: server specification, content pipelines and format management, projector warp and blend, LED pixel mapping, real-time engine integration, timecode synchronization with lighting and audio, and redundant failover so a single hardware fault never reaches the audience. Our operators run the system through rehearsals and the show itself.\n\nOur playback work spans some of the most demanding canvases in the industry. For DUBAI 360: Spherical Projection Theatre with DUBAI 360 and Obscura Digital at Dubai Mall, we delivered projection mapping, content deployment, and software for a full spherical theatre environment. On PROJECTING CHANGE: Racing Extinction with the Oceanic Preservation Society and Obscura Digital, our mapping and playback systems carried content onto the Empire State Building, the United Nations in New York, and the Vatican in Rome. And for CNN: Road to 270, we drove a projection-mapped, interactive experience on the Empire State Building for CNN and Obscura Digital — playback precision on a global stage."
+      "content": "BEATROX designs, programs, and operates complete playback systems: server specification, content pipelines and format management, projector warp and blend, LED pixel mapping, real-time engine integration, timecode synchronization with lighting and audio, and redundant failover so a single hardware fault never reaches the audience. Our operators run the system through rehearsals and the show itself.\n\nOur playback work spans some of the most demanding canvases in the industry. For DUBAI 360: Spherical Projection Theatre with DUBAI 360 and Obscura Digital at Dubai Mall, we delivered projection mapping, content deployment, and software for a full spherical theatre environment. On PROJECTING CHANGE: Racing Extinction with the Oceanic Preservation Society and Obscura Digital, our mapping and playback systems carried content onto the Empire State Building, the United Nations in New York, and the Vatican in Rome. And for CNN: Road to 270, we drove a projection-mapped, interactive experience on the Empire State Building for CNN and Obscura Digital: playback precision on a global stage."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. System Design — We spec servers, outputs, and signal paths around your canvas and content",
-        "2. Content Pipeline — Media is formatted, tested, and organized at show resolution",
-        "3. Pre-Visualization — Mapping and blends are built in advance against accurate venue models",
-        "4. On-Site Alignment — Projectors are converged, warped, and blended to the real surface",
-        "5. Rehearsal & Sync — Playback is locked to timecode, lighting, and audio cues",
-        "6. Show Operation — Redundant systems run live with our operators at the controls"
+        "1. System Design: We spec servers, outputs, and signal paths around your canvas and content",
+        "2. Content Pipeline: Media is formatted, tested, and organized at show resolution",
+        "3. Pre-Visualization: Mapping and blends are built in advance against accurate venue models",
+        "4. On-Site Alignment: Projectors are converged, warped, and blended to the real surface",
+        "5. Rehearsal & Sync: Playback is locked to timecode, lighting, and audio cues",
+        "6. Show Operation: Redundant systems run live with our operators at the controls"
       ]
     },
     {
@@ -70,11 +70,11 @@
       "heading": "Why BEATROX",
       "items": [
         "Spherical theatre playback for DUBAI 360 at Dubai Mall with Obscura Digital",
-        "Landmark-scale mapping for PROJECTING CHANGE: Racing Extinction — Empire State Building, UN, Vatican",
+        "Landmark-scale mapping for PROJECTING CHANGE: Racing Extinction, Empire State Building, UN, Vatican",
         "Interactive mapped playback for CNN: Road to 270 on the Empire State Building",
         "Warp, blend, and pixel-mapping expertise across projection and LED",
         "Redundant playback architecture as standard, not an upgrade",
-        "Programmers who also operate — the person who built the show runs it"
+        "Programmers who also operate: the person who built the show runs it"
       ]
     },
     {
@@ -83,7 +83,7 @@
       "items": [
         {
           "question": "What media server platforms do you work with?",
-          "answer": "We work across professional playback platforms and real-time engines — including TouchDesigner-based systems — choosing the server architecture that fits your canvas, content, and budget rather than forcing one platform on every show."
+          "answer": "We work across professional playback platforms and real-time engines, including TouchDesigner-based systems, choosing the server architecture that fits your canvas, content, and budget rather than forcing one platform on every show."
         },
         {
           "question": "How do you handle playback failure during a live show?",
@@ -91,11 +91,11 @@
         },
         {
           "question": "Can you map onto unusual surfaces or architecture?",
-          "answer": "Yes — irregular architecture, curved and spherical surfaces, and multi-projector blends are our core work. We pre-visualize against accurate venue models, then align and converge on site for pixel-accurate results."
+          "answer": "Yes. Irregular architecture, curved and spherical surfaces, and multi-projector blends are our core work. We pre-visualize against accurate venue models, then align and converge on site for pixel-accurate results."
         },
         {
           "question": "Do you supply the media server hardware?",
-          "answer": "We can. We specify, source, and configure the servers as part of the system, or program and operate on hardware you already own — whichever fits the production."
+          "answer": "We can. We specify, source, and configure the servers as part of the system, or program and operate on hardware you already own, whichever fits the production."
         }
       ]
     }

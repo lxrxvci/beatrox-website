@@ -3,10 +3,10 @@
   "slug": "/team",
   "seo": {
     "title": "Our Team | BEATROX Experiential Design & Event Production",
-    "description": "Meet the multidisciplinary team behind Beatrox — creators, engineers, designers, and technologists with decades of experience in experiential events and live production.",
+    "description": "Meet the multidisciplinary team behind Beatrox: creators, engineers, designers, and technologists with decades of experience in experiential events and live production.",
     "og": {
       "title": "Meet the BEATROX Team",
-      "description": "Creators, engineers, designers, and technologists united by one mission — craft experiences that make audiences feel something real.",
+      "description": "Creators, engineers, designers, and technologists united by one mission: craft experiences that make audiences feel something real.",
       "image": "/og-default.jpg"
     }
   },
@@ -68,7 +68,7 @@
     {
       "name": "Alan Curtiss",
       "title": "Video Production & LED Technician",
-      "bio": "Owner of Sky Lites Drone Shows and a core member of the Beatrox team. Alan has spent many years producing and managing high-profile technical productions with a wide variety of skills — mastering video production both behind the camera and on the screens. His specialties include Drone Operations, VJ/Media Server operation, and LED Technician work.",
+      "bio": "Owner of Sky Lites Drone Shows and a core member of the Beatrox team. Alan has spent many years producing and managing high-profile technical productions with a wide variety of skills, mastering video production both behind the camera and on the screens. His specialties include Drone Operations, VJ/Media Server operation, and LED Technician work.",
       "expertise": [
         "Video Production",
         "Drone Operations",

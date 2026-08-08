@@ -3,16 +3,16 @@
   "slug": "/services/venue-sourcing-booking",
   "seo": {
     "title": "Venue Sourcing & Booking Portland, OR",
-    "description": "Venue sourcing and booking in Portland, OR — from raw industrial spaces to public parks, with negotiation and production feasibility handled.",
+    "description": "Venue sourcing and booking in Portland, OR: from raw industrial spaces to public parks, with negotiation and production feasibility handled.",
     "og": {
       "title": "Venue Sourcing & Booking Portland, OR | BEATROX",
-      "description": "Venue sourcing and booking in Portland, OR — from raw industrial spaces to public parks, with negotiation and production feasibility handled.",
+      "description": "Venue sourcing and booking in Portland, OR: from raw industrial spaces to public parks, with negotiation and production feasibility handled.",
       "image": "/images/portfolio/myshelter/IMG_9675.jpg"
     }
   },
   "hero": {
     "headline": "Venue Sourcing & Booking",
-    "subheadline": "The right space for the experience — we find, vet, and book venues that fit your creative vision and your production's technical reality.",
+    "subheadline": "The right space for the experience: we find, vet, and book venues that fit your creative vision and your production's technical reality.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Venue Sourcing & Booking?",
-      "content": "Venue sourcing is the search for a physical space that can actually hold your event — creatively and technically — a search Beatrox runs from Portland, Oregon for productions nationwide. It's easy to find a room; it's harder to find one with the footprint, ceiling height, power, load-in access, and neighborhood character your experience demands, at terms your budget can survive. Booking is the second half: negotiating the contract, deposits, insurance requirements, and house rules that govern what you're allowed to build.\n\nFor experiential work, this step carries extra weight. Immersive environments, projection mapping, and interactive installations impose requirements a standard ballroom rarely meets — which is why the most memorable activations often happen in raw warehouses, shuttered retail, rooftops, and public parks. Those spaces deliver unmatched creative freedom, but they also demand a producer who can assess feasibility and negotiate with landlords and municipalities who don't deal with events every day.\n\nYou need venue sourcing support whenever the space itself is part of the concept — or whenever you simply can't afford to discover a venue's deal-breakers after the deposit clears."
+      "content": "Venue sourcing is the search for a physical space that can actually hold your event, creatively and technically. Beatrox runs that search from Portland, Oregon for productions nationwide. It's easy to find a room; it's harder to find one with the footprint, ceiling height, power, load-in access, and neighborhood character your experience demands, at terms your budget can survive. Booking is the second half: negotiating the contract, deposits, insurance requirements, and house rules that govern what you're allowed to build.\n\nFor experiential work, this step carries extra weight. Immersive environments, projection mapping, and interactive installations impose requirements a standard ballroom rarely meets, which is why the most memorable activations often happen in raw warehouses, shuttered retail, rooftops, and public parks. Those spaces deliver unmatched creative freedom, but they also demand a producer who can assess feasibility and negotiate with landlords and municipalities who don't deal with events every day.\n\nYou need venue sourcing support whenever the space itself is part of the concept, or whenever you simply can't afford to discover a venue's deal-breakers after the deposit clears."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "We start with the experience you want to create, then search for spaces that can support it — surveying candidates for power, rigging, footprint, load-in, sound restrictions, and neighborhood fit before anything goes on your shortlist. We negotiate terms, coordinate insurance and compliance requirements, and stay on as the liaison between you and the property through build, event, and restoration. Because we're builders, our feasibility reads are practical: we know what it costs to make a raw space show-ready, so there are no surprises in the budget.\n\nThis approach shaped projects like MyShelter, where we converted a shut-down, narrow Manhattan bodega — previously used for storing old kitchen equipment — into a fully immersive forest environment for the Adidas Outdoor jacket launch, hiding all technical infrastructure within a tiny footprint. For AKU World, we took over a New York venue and programmed it into multiple distinct rooms — projection-mapped main room, interactive lobby, holographic merch space, live music, panels, and a patio bar. And Run for the Oceans placed a custom container installation in Domino Park, Brooklyn, coordinating a public-park footprint for Adidas and Parley Ocean School's annual 5k event."
+      "content": "We start with the experience you want to create, then search for spaces that can support it, surveying candidates for power, rigging, footprint, load-in, sound restrictions, and neighborhood fit before anything goes on your shortlist. We negotiate terms, coordinate insurance and compliance requirements, and stay on as the liaison between you and the property through build, event, and restoration. Because we're builders, our feasibility reads are practical: we know what it costs to make a raw space show-ready, so there are no surprises in the budget.\n\nThis approach shaped projects like MyShelter, where we converted a shut-down, narrow Manhattan bodega (previously used for storing old kitchen equipment) into a fully immersive forest environment for the Adidas Outdoor jacket launch, hiding all technical infrastructure within a tiny footprint. For AKU World, we took over a New York venue and programmed it into multiple distinct rooms: projection-mapped main room, interactive lobby, holographic merch space, live music, panels, and a patio bar. And Run for the Oceans placed a custom container installation in Domino Park, Brooklyn, coordinating a public-park footprint for Adidas and Parley Ocean School's annual 5k event."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Brief — We define the creative, capacity, and technical requirements",
-        "2. Search — Candidate spaces identified and pre-vetted against your needs",
-        "3. Survey — Top options walked and assessed for production feasibility",
-        "4. Negotiate — Rates, terms, insurance, and house rules locked in",
-        "5. Coordinate — Landlord liaison through build, event, and strike",
-        "6. Restore — Space returned to spec and deposit obligations closed out"
+        "1. Brief: We define the creative, capacity, and technical requirements",
+        "2. Search: Candidate spaces identified and pre-vetted against your needs",
+        "3. Survey: Top options walked and assessed for production feasibility",
+        "4. Negotiate: Rates, terms, insurance, and house rules locked in",
+        "5. Coordinate: Landlord liaison through build, event, and strike",
+        "6. Restore: Space returned to spec and deposit obligations closed out"
       ]
     },
     {
@@ -72,7 +72,7 @@
         "Converted a shuttered Manhattan bodega into the MyShelter launch environment for Adidas",
         "Programmed a multi-room venue takeover for AKU World in New York",
         "Placed a public-park activation at Domino Park, Brooklyn for Adidas x Parley",
-        "Builders first — our feasibility assessments reflect real construction costs",
+        "Builders first: our feasibility assessments reflect real construction costs",
         "Experience negotiating raw, retail, and public-space agreements",
         "One team handles the space and everything built inside it"
       ]
@@ -83,7 +83,7 @@
       "items": [
         {
           "question": "Can you work with a venue we've already found?",
-          "answer": "Yes. We'll run a production feasibility survey on your space — power, rigging, load-in, restrictions — and negotiate or review the contract terms so you know exactly what the venue will and won't allow before you commit."
+          "answer": "Yes. We'll run a production feasibility survey on your space (power, rigging, load-in, restrictions) and negotiate or review the contract terms so you know exactly what the venue will and won't allow before you commit."
         },
         {
           "question": "Do you work outside of Portland?",
@@ -95,7 +95,7 @@
         },
         {
           "question": "How early should venue sourcing start?",
-          "answer": "As early as possible — the venue constrains everything downstream. For non-traditional or public spaces especially, we recommend starting the search 10–12 weeks before your target date."
+          "answer": "As early as possible: the venue constrains everything downstream. For non-traditional or public spaces especially, we recommend starting the search 10–12 weeks before your target date."
         }
       ]
     }

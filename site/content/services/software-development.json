@@ -3,16 +3,16 @@
   "slug": "/services/software-development",
   "seo": {
     "title": "Event Software Development Portland, OR",
-    "description": "Event software development in Portland, OR — real-time interactive experiences, sensor integration, and show control built for live pressure.",
+    "description": "Event software development in Portland, OR: real-time interactive experiences, sensor integration, and show control built for live pressure.",
     "og": {
       "title": "Event Software Development Portland, OR | BEATROX",
-      "description": "Event software development in Portland, OR — real-time interactive experiences, sensor integration, and show control built for live pressure.",
+      "description": "Event software development in Portland, OR: real-time interactive experiences, sensor integration, and show control built for live pressure.",
       "image": "/images/verified/work/super-bowl-2020/IMG_1686_Moment-21565bd4.jpg"
     }
   },
   "hero": {
     "headline": "Software Development",
-    "subheadline": "Custom interactive software and real-time systems built for the one environment where there are no second takes — a live audience.",
+    "subheadline": "Custom interactive software and real-time systems built for the one environment where there are no second takes: a live audience.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Software Development for Events?",
-      "content": "Event software development is the craft of building custom code that has to work perfectly, in public, at a specific moment in time — a craft Beatrox practices from Portland, Oregon for experiences nationwide. It covers real-time interactive experiences, sensor-driven installations, media playback logic, show-control integration, and the custom tooling that ties lighting, video, audio, and interactivity into one responsive system.\n\nYou need custom software whenever an experience can't be bought off the shelf: a wall that reacts to the people in front of it, an AR moment driven by body tracking, a queue of kiosks that must never freeze, or a show where lighting and projection respond live to a performance. The tools exist — TouchDesigner, Unreal Engine, Unity, computer vision libraries — but making them reliable under live conditions is its own discipline.\n\nWhat separates event software from other software is the testing environment: there isn't one. Code has to be right before doors open, degrade gracefully if a sensor misbehaves, and be operable by a crew member who isn't a developer. That's how we build it."
+      "content": "Event software development is the craft of building custom code that has to work perfectly, in public, at a specific moment in time: a craft Beatrox practices from Portland, Oregon for experiences nationwide. It covers real-time interactive experiences, sensor-driven installations, media playback logic, show-control integration, and the custom tooling that ties lighting, video, audio, and interactivity into one responsive system.\n\nYou need custom software whenever an experience can't be bought off the shelf: a wall that reacts to the people in front of it, an AR moment driven by body tracking, a queue of kiosks that must never freeze, or a show where lighting and projection respond live to a performance. The tools exist (TouchDesigner, Unreal Engine, Unity, computer vision libraries), but making them reliable under live conditions is its own discipline.\n\nWhat separates event software from other software is the testing environment: there isn't one. Code has to be right before doors open, degrade gracefully if a sensor misbehaves, and be operable by a crew member who isn't a developer. That's how we build it."
     },
     {
       "type": "use_cases",
@@ -51,18 +51,18 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "BEATROX develops the full software stack for experiential work: real-time engines in TouchDesigner, Unreal Engine, and Unity; computer vision and sensor integration with hardware like Microsoft Kinect Azure and LIDAR; custom interfaces for guests and operators; and the networking and show-control glue that keeps every system synchronized. We prototype early, test against the actual hardware, and deploy with on-site support through the event.\n\nOur software has run in front of serious audiences. For the G-MAN Experiential Campaign with Toyota x MTV in Los Angeles, custom interactive technology drove the guest experience end to end. At AKU World for AKU + FTX in New York, we built an interactive software ecosystem across a multi-room event — Unreal Engine real-time content in the projection-mapped main room, interactive kiosks for selecting an 'Inner Astronaut,' and a 4D body-scanning pipeline for creating and minting digital avatars. And for Adidas at Super Bowl 2020 in Miami, our TouchDesigner programming paired with Kinect Azure motion capture and AI computer vision powered an AR mirror with a real-time physics portal, plus a custom photo booth that gave every guest a shareable digital takeaway."
+      "content": "BEATROX develops the full software stack for experiential work: real-time engines in TouchDesigner, Unreal Engine, and Unity; computer vision and sensor integration with hardware like Microsoft Kinect Azure and LIDAR; custom interfaces for guests and operators; and the networking and show-control glue that keeps every system synchronized. We prototype early, test against the actual hardware, and deploy with on-site support through the event.\n\nOur software has run in front of serious audiences. For the G-MAN Experiential Campaign with Toyota x MTV in Los Angeles, custom interactive technology drove the guest experience end to end. At AKU World for AKU + FTX in New York, we built an interactive software ecosystem across a multi-room event: Unreal Engine real-time content in the projection-mapped main room, interactive kiosks for selecting an 'Inner Astronaut,' and a 4D body-scanning pipeline for creating and minting digital avatars. And for Adidas at Super Bowl 2020 in Miami, our TouchDesigner programming paired with Kinect Azure motion capture and AI computer vision powered an AR mirror with a real-time physics portal, plus a custom photo booth that gave every guest a shareable digital takeaway."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Discovery — We define the interaction, audience flow, and technical constraints",
-        "2. Prototyping — Core interactions are built and tested against real hardware early",
-        "3. Development — Full experience build with operator tools and fallback states",
-        "4. Integration & Testing — Software is stress-tested with the actual sensors, servers, and displays",
-        "5. Deployment — On-site installation, calibration, and rehearsal with the show team",
-        "6. Live Support & Handoff — We staff the event and document the system for future runs"
+        "1. Discovery: We define the interaction, audience flow, and technical constraints",
+        "2. Prototyping: Core interactions are built and tested against real hardware early",
+        "3. Development: Full experience build with operator tools and fallback states",
+        "4. Integration & Testing: Software is stress-tested with the actual sensors, servers, and displays",
+        "5. Deployment: On-site installation, calibration, and rehearsal with the show team",
+        "6. Live Support & Handoff: We staff the event and document the system for future runs"
       ]
     },
     {
@@ -83,7 +83,7 @@
       "items": [
         {
           "question": "What platforms and languages do you develop in?",
-          "answer": "Our real-time work centers on TouchDesigner, Unreal Engine, and Unity, with Python and C++ for computer vision, sensor integration, and custom tooling. We choose the stack that fits the experience — not the other way around."
+          "answer": "Our real-time work centers on TouchDesigner, Unreal Engine, and Unity, with Python and C++ for computer vision, sensor integration, and custom tooling. We choose the stack that fits the experience, not the other way around."
         },
         {
           "question": "How do you make sure the software doesn't fail live?",
@@ -91,11 +91,11 @@
         },
         {
           "question": "Can you build software for a permanent installation?",
-          "answer": "Yes. Permanent work is engineered for uptime — watchdog processes, remote monitoring, and maintenance documentation so the experience keeps running long after the launch event."
+          "answer": "Yes. Permanent work is engineered for uptime: watchdog processes, remote monitoring, and maintenance documentation so the experience keeps running long after the launch event."
         },
         {
           "question": "Do you work with our existing creative or engineering team?",
-          "answer": "Absolutely. We can own the full software build or embed with your team — taking a creative brief to deployment, or contributing specific systems like tracking, playback, or show control."
+          "answer": "Absolutely. We can own the full software build or embed with your team, taking a creative brief to deployment, or contributing specific systems like tracking, playback, or show control."
         }
       ]
     }

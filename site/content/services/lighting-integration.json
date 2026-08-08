@@ -3,16 +3,16 @@
   "slug": "/services/lighting-integration",
   "seo": {
     "title": "Lighting Integration Portland, OR",
-    "description": "Lighting integration in Portland, OR — LED video, fixtures, sensors, and control unified into one responsive, show-ready environment.",
+    "description": "Lighting integration in Portland, OR: LED video, fixtures, sensors, and control unified into one responsive, show-ready environment.",
     "og": {
       "title": "Lighting Integration Portland, OR | BEATROX",
-      "description": "Lighting integration in Portland, OR — LED video, fixtures, sensors, and control unified into one responsive, show-ready environment.",
+      "description": "Lighting integration in Portland, OR: LED video, fixtures, sensors, and control unified into one responsive, show-ready environment.",
       "image": "/images/portfolio/run-for-the-oceans/KMP_2820.jpg"
     }
   },
   "hero": {
     "headline": "Lighting Integration",
-    "subheadline": "Lighting is only as good as its integration. Beatrox unifies LED video, fixtures, sensors, and control systems into environments that respond — to music, to movement, to the moment.",
+    "subheadline": "Lighting is only as good as its integration. Beatrox unifies LED video, fixtures, sensors, and control systems into environments that respond: to music, to movement, to the moment.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Lighting Integration?",
-      "content": "Lighting integration is the discipline of making every light-emitting element in a space — LED video panels, pixel tape, theatrical fixtures, interactive sensors — behave as one coordinated system, a discipline Beatrox delivers from Portland, Oregon on events and installations nationwide. It's not just hanging fixtures; it's designing the power, data, control, and programming layers that let all of it respond together.\n\nYou need lighting integration whenever a space has to do more than be lit: when visuals must sync to live music, when a wall should react to a person's movement, or when an environment needs to shift mood on cue. Modern experiential work lives at this intersection — LED video, interactive media, and architectural light are no longer separate trades.\n\nPoorly integrated lighting is obvious: flicker on camera, mismatched color, cues that drift. Well-integrated lighting disappears into the experience — audiences just know the room felt alive. That outcome is engineered, not accidental."
+      "content": "Lighting integration is the discipline of making every light-emitting element in a space (LED video panels, pixel tape, theatrical fixtures, interactive sensors) behave as one coordinated system, a discipline Beatrox delivers from Portland, Oregon on events and installations nationwide. It's not just hanging fixtures; it's designing the power, data, control, and programming layers that let all of it respond together.\n\nYou need lighting integration whenever a space has to do more than be lit: when visuals must sync to live music, when a wall should react to a person's movement, or when an environment needs to shift mood on cue. Modern experiential work lives at this intersection: LED video, interactive media, and architectural light are no longer separate trades.\n\nPoorly integrated lighting is obvious: flicker on camera, mismatched color, cues that drift. Well-integrated lighting disappears into the experience. Audiences just know the room felt alive. That outcome is engineered, not accidental."
     },
     {
       "type": "use_cases",
@@ -51,30 +51,30 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "Beatrox integrates lighting as part of the whole system: LED video panel specification and installation, addressable LED and pixel control, sensor-driven interactivity, show programming, and the power and data infrastructure that ties it together. Our programmers work in TouchDesigner and real-time engines, so lighting, video content, and interactive logic are designed in the same pipeline and calibrated together on site.\n\nFor Run for the Oceans at Domino Park in Brooklyn, created for Adidas and Parley Ocean School, we fitted a custom shipping container build with seamless wall-to-wall ROE Black Pearl LED video panels and mirror surfaces to create an infinity-mirror light environment — with scanning LIDAR sensors driving real-time flocking and fluid simulations that responded to every participant's movement. For Destination in San Diego, built for Journey's x Adidas, we integrated the control layer behind a 40-foot interactive canvas: Arduino firmware, relay-driven mechanical valves, and TouchDesigner synchronization that translated a guest's button press into paint flowing down the structure in real time. And for The Great Escape, an Adidas product launch experience in Los Angeles, we delivered integrated creative technology and production workflows — the lighting, media, and show systems working as one."
+      "content": "Beatrox integrates lighting as part of the whole system: LED video panel specification and installation, addressable LED and pixel control, sensor-driven interactivity, show programming, and the power and data infrastructure that ties it together. Our programmers work in TouchDesigner and real-time engines, so lighting, video content, and interactive logic are designed in the same pipeline and calibrated together on site.\n\nFor Run for the Oceans at Domino Park in Brooklyn, created for Adidas and Parley Ocean School, we fitted a custom shipping container build with seamless wall-to-wall ROE Black Pearl LED video panels and mirror surfaces to create an infinity-mirror light environment, with scanning LIDAR sensors driving real-time flocking and fluid simulations that responded to every participant's movement. For Destination in San Diego, built for Journey's x Adidas, we integrated the control layer behind a 40-foot interactive canvas: Arduino firmware, relay-driven mechanical valves, and TouchDesigner synchronization that translated a guest's button press into paint flowing down the structure in real time. And for The Great Escape, an Adidas product launch experience in Los Angeles, we delivered integrated creative technology and production workflows: the lighting, media, and show systems working as one."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Discovery & Creative Review — We learn what the space needs to do, not just how it should look",
-        "2. System Design — Fixture and panel spec, control architecture, power and data plans",
-        "3. Pre-Visualization & Programming — Looks and interactive behaviors are built before install",
-        "4. Install & Integration — Hardware goes in alongside scenic and AV as one coordinated build",
-        "5. Calibration & Rehearsal — Color, brightness, timing, and sensor response tuned on site",
-        "6. Show Operation & Support — Our team runs and maintains the system through the event"
+        "1. Discovery & Creative Review: We learn what the space needs to do, not just how it should look",
+        "2. System Design: Fixture and panel spec, control architecture, power and data plans",
+        "3. Pre-Visualization & Programming: Looks and interactive behaviors are built before install",
+        "4. Install & Integration: Hardware goes in alongside scenic and AV as one coordinated build",
+        "5. Calibration & Rehearsal: Color, brightness, timing, and sensor response tuned on site",
+        "6. Show Operation & Support: Our team runs and maintains the system through the event"
       ]
     },
     {
       "type": "trust",
       "heading": "Why BEATROX",
       "items": [
-        "Infinity-grade LED environments — wall-to-wall ROE Black Pearl panels for Adidas x Parley Ocean School",
-        "Sensor-reactive systems proven in public — LIDAR-driven light and media in Brooklyn",
+        "Infinity-grade LED environments: wall-to-wall ROE Black Pearl panels for Adidas x Parley Ocean School",
+        "Sensor-reactive systems proven in public: LIDAR-driven light and media in Brooklyn",
         "Deep control-layer expertise: Arduino firmware, relay systems, and TouchDesigner integration",
         "Trusted by Adidas for product launch experiences including The Great Escape",
         "Lighting, video, and interactive programming designed in one pipeline",
-        "Full-service crew — design, install, calibration, and show operation"
+        "Full-service crew: design, install, calibration, and show operation"
       ]
     },
     {
@@ -83,7 +83,7 @@
       "items": [
         {
           "question": "Can lighting react to people in the space?",
-          "answer": "Yes. We build sensor-driven systems using LIDAR, computer vision, and motion tracking — like the Run for the Oceans installation, where participants' movements drove real-time simulations across the LED environment."
+          "answer": "Yes. We build sensor-driven systems using LIDAR, computer vision, and motion tracking, like the Run for the Oceans installation, where participants' movements drove real-time simulations across the LED environment."
         },
         {
           "question": "Do you integrate lighting with LED video walls?",
@@ -91,7 +91,7 @@
         },
         {
           "question": "Can you sync lighting to live music?",
-          "answer": "Yes — from timecode-locked programming to live operation, we sync lighting and media to performances. Our programmers build cues in advance and operate or support them on show day."
+          "answer": "Yes. From timecode-locked programming to live operation, we sync lighting and media to performances. Our programmers build cues in advance and operate or support them on show day."
         },
         {
           "question": "Do you handle power and data planning?",

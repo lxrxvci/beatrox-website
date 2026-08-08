@@ -3,16 +3,16 @@
   "slug": "/services/audio-production",
   "seo": {
     "title": "Audio Production Services Portland, OR",
-    "description": "Audio production services in Portland, OR — A1/A2 mixing, FOH and monitor engineering, RF coordination, and system tuning by touring-grade engineers.",
+    "description": "Audio production services in Portland, OR: A1/A2 mixing, FOH and monitor engineering, RF coordination, and system tuning by touring-grade engineers.",
     "og": {
       "title": "Audio Production Services Portland, OR | BEATROX",
-      "description": "Audio production services in Portland, OR — A1/A2 mixing, FOH and monitor engineering, RF coordination, and system tuning by touring-grade engineers.",
+      "description": "Audio production services in Portland, OR: A1/A2 mixing, FOH and monitor engineering, RF coordination, and system tuning by touring-grade engineers.",
       "image": "/images/verified/work/infinite-playlist/Amazon-Music-Live-Outside-Lands-Mariah-The-Scientist-8994e8db.jpg"
     }
   },
   "hero": {
     "headline": "Audio Production",
-    "subheadline": "Great shows are heard before they're seen. Beatrox engineers live audio — FOH and monitor mixing, RF coordination, and system tuning — so every seat gets the show the artist intended.",
+    "subheadline": "Great shows are heard before they're seen. Beatrox engineers live audio (FOH and monitor mixing, RF coordination, and system tuning) so every seat gets the show the artist intended.",
     "cta": {
       "label": "Book a Consultation",
       "url": "/book"
@@ -33,7 +33,7 @@
     {
       "type": "intro",
       "heading": "What is Audio Production?",
-      "content": "Audio production is the engineering discipline behind what an audience hears — system design, tuning, mixing, and the hundred real-time decisions that keep a show sounding effortless — and our Portland, Oregon audio team delivers it for concerts and events nationwide. It's distinct from equipment rental: the same PA can sound world-class or amateur depending on who designs the coverage, rings out the room, and stands at the console.\n\nYou need dedicated audio production whenever the show has stakes. A festival set where the artist's mix has to translate to a field of ten thousand, a keynote where the CEO's words have to reach the back row without a hint of feedback, a livestream where the broadcast mix is the only one that matters. Each demands engineers who've done it under pressure.\n\nBeatrox staffs audio the way tours do: an A1 at front of house owning the room mix, an A2 managing monitors and wireless, systems tuned before doors, and RF coordinated so nothing drops mid-chorus. The audience never thinks about audio — which is exactly the point."
+      "content": "Audio production is the engineering discipline behind what an audience hears (system design, tuning, mixing, and the hundred real-time decisions that keep a show sounding effortless) and our Portland, Oregon audio team delivers it for concerts and events nationwide. It's distinct from equipment rental: the same PA can sound world-class or amateur depending on who designs the coverage, rings out the room, and stands at the console.\n\nYou need dedicated audio production whenever the show has stakes. A festival set where the artist's mix has to translate to a field of ten thousand, a keynote where the CEO's words have to reach the back row without a hint of feedback, a livestream where the broadcast mix is the only one that matters. Each demands engineers who've done it under pressure.\n\nBeatrox staffs audio the way tours do: an A1 at front of house owning the room mix, an A2 managing monitors and wireless, systems tuned before doors, and RF coordinated so nothing drops mid-chorus. The audience never thinks about audio, which is exactly the point."
     },
     {
       "type": "use_cases",
@@ -51,29 +51,29 @@
     {
       "type": "service_detail",
       "heading": "What BEATROX Provides",
-      "content": "Beatrox provides complete live audio production: system design and tuning, FOH and monitor engineering, RF coordination, playback and multitrack systems, and audio networking — with touring-grade engineers in every seat. We spec and tune the PA to the venue, ring out monitor worlds before the artist arrives, and manage the show from soundcheck to encore.\n\nFor the Infinite Playlist Tour with Amazon Music Live, our audio teams supported live performances across two major festival environments — Outside Lands 2023 in San Francisco and Stagecoach 2023 in Indio — including sets by artists like Mariah the Scientist, where festival RF congestion and tight changeovers make disciplined frequency coordination and line checks non-negotiable. For Create Our Future with Urban Outfitters x Adidas at Mack Sennett Studio, we engineered audio for multiple live performances including Phantogram, with the mix holding clarity against a 270-degree projection-mapped Cyclone Wall. For BuzzFeed's NewFronts at Moynihan Station, audio production supported a full presentation program in a cavernous, reverberant hall. And for AKU World in New York, live musical performances ran synced to the room's projection and lighting systems — audio driving the energy of a fully reactive environment."
+      "content": "Beatrox provides complete live audio production: system design and tuning, FOH and monitor engineering, RF coordination, playback and multitrack systems, and audio networking, with touring-grade engineers in every seat. We spec and tune the PA to the venue, ring out monitor worlds before the artist arrives, and manage the show from soundcheck to encore.\n\nFor the Infinite Playlist Tour with Amazon Music Live, our audio teams supported live performances across two major festival environments, Outside Lands 2023 in San Francisco and Stagecoach 2023 in Indio, including sets by artists like Mariah the Scientist, where festival RF congestion and tight changeovers make disciplined frequency coordination and line checks non-negotiable. For Create Our Future with Urban Outfitters x Adidas at Mack Sennett Studio, we engineered audio for multiple live performances including Phantogram, with the mix holding clarity against a 270-degree projection-mapped Cyclone Wall. For BuzzFeed's NewFronts at Moynihan Station, audio production supported a full presentation program in a cavernous, reverberant hall. And for AKU World in New York, live musical performances ran synced to the room's projection and lighting systems: audio driving the energy of a fully reactive environment."
     },
     {
       "type": "process",
       "heading": "How We Work",
       "items": [
-        "1. Advance — Rider review, input lists, venue acoustics, and coverage requirements",
-        "2. System Design & Tuning — PA spec'd, deployed, and tuned to the room before doors",
-        "3. RF Coordination — Spectrum scanned, frequencies assigned, interference monitored live",
-        "4. Soundcheck & Line Check — Every input verified, monitor worlds dialed per artist",
-        "5. Show Mixing — A1 on the room, A2 on stage, playback and comms in lockstep",
-        "6. Strike & Archive — Clean load-out with recordings and show files delivered"
+        "1. Advance: Rider review, input lists, venue acoustics, and coverage requirements",
+        "2. System Design & Tuning: PA spec'd, deployed, and tuned to the room before doors",
+        "3. RF Coordination: Spectrum scanned, frequencies assigned, interference monitored live",
+        "4. Soundcheck & Line Check: Every input verified, monitor worlds dialed per artist",
+        "5. Show Mixing: A1 on the room, A2 on stage, playback and comms in lockstep",
+        "6. Strike & Archive: Clean load-out with recordings and show files delivered"
       ]
     },
     {
       "type": "trust",
       "heading": "Why BEATROX",
       "items": [
-        "Festival-proven — Amazon Music Live performances at Outside Lands and Stagecoach 2023",
-        "Artist-trusted mixes — live sets from Phantogram to Mariah the Scientist",
-        "RF discipline — professional frequency coordination in congested festival and urban spectrum",
-        "Hard-room experience — intelligible audio in spaces like Moynihan Station's main hall",
-        "Audio engineered with the show — synced to projection and lighting at AKU World",
+        "Festival-proven: Amazon Music Live performances at Outside Lands and Stagecoach 2023",
+        "Artist-trusted mixes: live sets from Phantogram to Mariah the Scientist",
+        "RF discipline: professional frequency coordination in congested festival and urban spectrum",
+        "Hard-room experience: intelligible audio in spaces like Moynihan Station's main hall",
+        "Audio engineered with the show: synced to projection and lighting at AKU World",
         "Touring-grade A1/A2 engineers on every production, not just a gear drop"
       ]
     },
@@ -83,11 +83,11 @@
       "items": [
         {
           "question": "What's the difference between audio production and sound equipment rental?",
-          "answer": "Rental is the gear; production is the outcome. Audio production means engineers own the result — system design, tuning, mixing, RF coordination, and troubleshooting live. Our rentals can include engineers, and our production engagements always do."
+          "answer": "Rental is the gear; production is the outcome. Audio production means engineers own the result: system design, tuning, mixing, RF coordination, and troubleshooting live. Our rentals can include engineers, and our production engagements always do."
         },
         {
           "question": "Can you handle an artist's rider?",
-          "answer": "Yes. We advance every show against the rider — console, microphones, monitor configuration, and input list — and flag substitutions early. Our engineers have mixed to major-tour riders at festival scale."
+          "answer": "Yes. We advance every show against the rider (console, microphones, monitor configuration, and input list) and flag substitutions early. Our engineers have mixed to major-tour riders at festival scale."
         },
         {
           "question": "How do you deal with wireless interference at festivals?",
@@ -95,7 +95,7 @@
         },
         {
           "question": "Do you mix for livestream and broadcast as well as the room?",
-          "answer": "Yes. We run dedicated broadcast mixes where the stream is the primary audience — as we did for the official festival livestream integration at Stagecoach for Amazon Music Live — with the FOH and broadcast worlds engineered independently."
+          "answer": "Yes. We run dedicated broadcast mixes where the stream is the primary audience (as we did for the official festival livestream integration at Stagecoach for Amazon Music Live) with the FOH and broadcast worlds engineered independently."
         }
       ]
     }

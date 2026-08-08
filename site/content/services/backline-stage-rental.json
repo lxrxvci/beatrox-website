@@ -3,16 +3,16 @@
   "slug": "/services/backline-stage-rental",
   "seo": {
     "title": "Backline & Stage Rental Portland, OR",
-    "description": "Backline and stage rental in Portland, OR — drum kits, amplifiers, keyboards, and full stage packages backed by touring-proven crew.",
+    "description": "Backline and stage rental in Portland, OR: drum kits, amplifiers, keyboards, and full stage packages backed by touring-proven crew.",
     "og": {
       "title": "Backline & Stage Rental Portland, OR | BEATROX",
-      "description": "Backline and stage rental in Portland, OR — drum kits, amplifiers, keyboards, and full stage packages backed by touring-proven crew.",
+      "description": "Backline and stage rental in Portland, OR: drum kits, amplifiers, keyboards, and full stage packages backed by touring-proven crew.",
       "image": "/og-default.jpg"
     }
   },
   "hero": {
     "headline": "Backline & Stage Rental",
-    "subheadline": "Professional-grade backline and stage packages — so your artists hit the stage ready to perform, every time.",
+    "subheadline": "Professional-grade backline and stage packages, so your artists hit the stage ready to perform, every time.",
     "cta": {
       "label": "Get a Free Quote",
       "url": "/book"
@@ -32,7 +32,7 @@
   "body": [
     {
       "type": "intro",
-      "content": "Beatrox's backline and stage rental service is built for touring acts, festivals, and one-off concert productions in Portland, Oregon and nationwide. Our team — led by Joey Paulekas, who has toured with Odesza and global brands — understands exactly what artists and production managers need from a backline package."
+      "content": "Beatrox's backline and stage rental service is built for touring acts, festivals, and one-off concert productions in Portland, Oregon and nationwide. Our team (led by Joey Paulekas, who has toured with Odesza and global brands) understands exactly what artists and production managers need from a backline package."
     },
     {
       "type": "trust",
@@ -48,11 +48,11 @@
       "type": "process",
       "heading": "Our Process",
       "items": [
-        "1. Discovery Call — We learn your vision, venue, and budget",
-        "2. Design & Pre-Visualization — See your event before it happens",
-        "3. Equipment & Crew — We source everything and assign the right team",
-        "4. On-Site Execution — Professional setup, operation, and strike",
-        "5. Post-Event Review — We ensure everything exceeded expectations"
+        "1. Discovery Call: We learn your vision, venue, and budget",
+        "2. Design & Pre-Visualization: See your event before it happens",
+        "3. Equipment & Crew: We source everything and assign the right team",
+        "4. On-Site Execution: Professional setup, operation, and strike",
+        "5. Post-Event Review: We ensure everything exceeded expectations"
       ]
     },
     {
@@ -74,12 +74,12 @@
     {
       "type": "service_detail",
       "heading": "Rider Matching Process",
-      "content": "We know that a backline package is only as good as its match to the artist's rider. Our process begins with a detailed review of your artist's technical requirements — drum brands, amp models, keyboard configurations, and monitor preferences. We cross-reference our inventory, source anything missing, and confirm every detail before load-in. Our goal is zero surprises on stage."
+      "content": "We know that a backline package is only as good as its match to the artist's rider. Our process begins with a detailed review of your artist's technical requirements: drum brands, amp models, keyboard configurations, and monitor preferences. We cross-reference our inventory, source anything missing, and confirm every detail before load-in. Our goal is zero surprises on stage."
     },
     {
       "type": "service_detail",
       "heading": "Touring Packages & Artist-Specific Configurations",
-      "content": "For touring acts, we build repeatable, road-ready packages that maintain consistency across every date. This includes matched drum kits, dialed-in amp settings, road-case packaging, and spares for critical gear. We can also configure artist-specific setups — from signature amp combinations to custom keyboard rigs — ensuring every show feels familiar and professional."
+      "content": "For touring acts, we build repeatable, road-ready packages that maintain consistency across every date. This includes matched drum kits, dialed-in amp settings, road-case packaging, and spares for critical gear. We can also configure artist-specific setups (from signature amp combinations to custom keyboard rigs) ensuring every show feels familiar and professional."
     },
     {
       "type": "specs",
@@ -115,7 +115,7 @@
         },
         {
           "question": "Do you offer touring packages?",
-          "answer": "Absolutely. We build road-ready, repeatable touring packages with matched gear, road cases, and spares — ensuring consistency and reliability across every tour date."
+          "answer": "Absolutely. We build road-ready, repeatable touring packages with matched gear, road cases, and spares, ensuring consistency and reliability across every tour date."
         }
       ]
     }
