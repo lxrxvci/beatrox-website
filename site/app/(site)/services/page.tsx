@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // tile grid doesn't link. Each blurb carries the service's core keyword.
 const SERVICE_LINK_GROUPS: Array<{
   label: string
-  items: Array<{ label: string; slug: string; blurb: string }>
+  items: Array<{ label: string; slug: string; href?: string; blurb: string }>
 }> = [
   {
     label: 'Production & Experiences',
@@ -90,6 +90,7 @@ const SERVICE_LINK_GROUPS: Array<{
       {
         label: 'DJ Equipment Rentals',
         slug: 'dj-equipment-rentals',
+        href: 'https://rentals.beatrox.com/category/dj',
         blurb: 'DJ equipment rental in Portland: Pioneer CDJs, mixers, and full booth packages with on-site support.',
       },
       {
@@ -222,7 +223,7 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      url: `https://www.beatrox.com/services/${item.slug}`,
+      url: item.href ?? `https://www.beatrox.com/services/${item.slug}`,
     })),
   }
 
@@ -324,7 +325,7 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
                   {group.items.map((item) => (
                     <li key={item.slug}>
                       <Link
-                        href={`/services/${item.slug}`}
+                        href={item.href ?? `/services/${item.slug}`}
                         className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
                       >
                         <span

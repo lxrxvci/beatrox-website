@@ -16,7 +16,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Resolved docs carry the legacy "/services/<slug>" slug form regardless of pageType.
   const bareSlug = (slug: string) => slug.replace(/^\/(services|tech)\/+/, '')
-  const serviceSlugs = services.filter((s) => s.pageType !== 'tech').map((s) => bareSlug(s.slug))
+  // dj-equipment-rentals 308s to the rentals app; keep it out of the sitemap
+  // (sitemaps must list canonical 200 URLs only).
+  const RENTALS_APP_SLUGS = new Set(['dj-equipment-rentals'])
+  const serviceSlugs = services
+    .filter((s) => s.pageType !== 'tech')
+    .map((s) => bareSlug(s.slug))
+    .filter((slug) => !RENTALS_APP_SLUGS.has(slug))
   const techSlugs = services.filter((s) => s.pageType === 'tech').map((s) => bareSlug(s.slug))
 
   const rootPages: MetadataRoute.Sitemap = [

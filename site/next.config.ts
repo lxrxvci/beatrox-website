@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
         destination: 'https://rentals.beatrox.com/category/dj',
         permanent: true,
       },
+      // Rental service page moved to the rentals app.
+      {
+        source: '/services/dj-equipment-rentals',
+        destination: 'https://rentals.beatrox.com/category/dj',
+        permanent: true,
+      },
       // Tech capabilities moved from /services/* to dedicated /tech/* landing pages.
       ...[
         'environmental-design',

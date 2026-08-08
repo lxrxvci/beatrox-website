@@ -72,7 +72,7 @@ export const DEFAULT_CAPABILITIES: Capability[] = [
   },
   {
     label: 'DJ Equipment Rentals',
-    href: '/services/dj-equipment-rentals',
+    href: 'https://rentals.beatrox.com/category/dj',
     image: '/images/capabilities/dj-equipment-rentals.jpg',
   },
   {
