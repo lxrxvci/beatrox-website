@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
         destination: 'https://rentals.beatrox.com/:path*',
         permanent: true,
       },
+      // Short rental vanity URLs -> matching category on the rentals app.
+      {
+        source: '/dj-equipment-rentals',
+        destination: 'https://rentals.beatrox.com/category/dj',
+        permanent: true,
+      },
       // Tech capabilities moved from /services/* to dedicated /tech/* landing pages.
       ...[
         'environmental-design',
