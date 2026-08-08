@@ -77,6 +77,8 @@ Open from prior directive, unchanged: P2-01 (reviews), P5-02 (citations), P7-01 
 
 ## 5. GBP Audit (profile live + verified, dashboard fields client-confirmed)
 
+**UPDATE 2026-08-08: the client confirmed the blueprint is FULLY IMPLEMENTED in the dashboard (all fields per Sections 1 to 15), the Tuesday hours typo is fixed, and the sitemap was submitted in Search Console.** Remaining P1 movement is now propagation (public visibility, L-06) and the 7 to 14 day re-check.
+
 Public-signal audit (all that is externally visible): profile not yet surfacing publicly (L-06). NAP on the website matches the blueprint exactly, so once the profile propagates, website justifications and parity checks have a clean source.
 
 Dashboard parity checklist for the client (confirm against the GBP manager; every item is specified verbatim in `gbp-blueprint.md` v2):

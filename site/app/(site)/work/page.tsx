@@ -14,6 +14,49 @@ import ServiceTagCloud from '@/components/ServiceTagCloud'
 
 export const revalidate = 300
 
+// Field notes: one-sentence proof units for the work index (VTProDesign
+// pattern). Every client entity links to its project page.
+const FIELD_NOTES: Array<{ client: string; href: string; note: string }> = [
+  {
+    client: 'Adidas, Run for the Oceans',
+    href: '/work/run-for-the-oceans',
+    note: 'A LIDAR-driven interactive whale projection anchoring a global sustainability activation.',
+  },
+  {
+    client: 'Netflix at Comic-Con',
+    href: '/work/disenchantment',
+    note: 'Exhibition environments for Disenchantment and El Camino, built for the convention floor.',
+  },
+  {
+    client: 'Adidas at Super Bowl 2020',
+    href: '/work/super-bowl-2020',
+    note: 'An interactive AR mirror in front of one of the biggest audiences in sports.',
+  },
+  {
+    client: 'PROJECTING CHANGE: Racing Extinction',
+    href: '/work/projecting-change-racing-extinction',
+    note: 'Endangered species projected onto the Empire State Building and the Vatican.',
+  },
+  {
+    client: 'Amazon Music, Infinite Playlist',
+    href: '/work/infinite-playlist',
+    note: 'Interactive festival experiences at Outside Lands and Stagecoach.',
+  },
+  {
+    client: 'AKU World',
+    href: '/work/aku-world',
+    note: 'An immersive NFT Miami environment built around a 4D body scanner.',
+  },
+]
+
+// Stats strip: atomized proof, verifiable numbers only.
+const WORK_STATS: Array<{ value: string; label: string }> = [
+  { value: '15', label: 'Years producing, founded 2011 in Portland, Oregon' },
+  { value: '17', label: 'Flagship productions for global brands' },
+  { value: '2', label: 'World landmarks projected: the Empire State Building and the Vatican' },
+  { value: '46', label: 'Services under one roof, design through strike' },
+]
+
 export async function generateMetadata(): Promise<Metadata> {
   return seoToMetadata(getWorkIndex().seo, '/work')
 }
@@ -51,6 +94,8 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
             '@type': 'CollectionPage',
             name: 'Our Work',
             url: 'https://www.beatrox.com/work',
+            description:
+              'Flagship event production and experiential projects by Beatrox: Super Bowl activations, Comic-Con environments, festival builds, and landmark projections for global brands.',
           },
           buildBreadcrumbSchema([
             { name: 'Home', path: '/' },
@@ -67,44 +112,55 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
         minHeightClass="min-h-[94svh]"
       />
 
-      {/* Selected work, SEO intro */}
+      {/* Selected work, compact positioning paragraph (GES pattern, see
+          reports/work-page-restructure-plan.md). The old 4-paragraph block is
+          atomized into the field notes + stats below; every named entity links
+          to its project page. */}
       <section className="section border-t border-white/10">
-        <Reveal className="max-w-[1120px] mx-auto space-y-8">
-          <h2 className="heading-md">Selected Work for Brands That Don&apos;t Do Small</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base text-white leading-relaxed">
-            <div className="space-y-4">
-              <p>
-                Beatrox productions have carried some of the world&apos;s most recognizable names. For Netflix,
-                we built Comic-Con exhibition environments for Disenchantment and El Camino. BuzzFeed trusted us
-                with the stage design, media walls, and full production of their NewFronts presentation in New
-                York. Adidas has returned to us repeatedly, from the Run for the Oceans activation with its
-                LIDAR-driven interactive whale projection, to the 40-foot interactive Destination canvas at
-                Horton Plaza with Journey&apos;s.
-              </p>
-              <p>
-                For Amazon Music&apos;s Infinite Playlist tour, we designed and produced interactive festival
-                experiences at Outside Lands and Stagecoach: custom photobooths, AR content, and stage
-                production for artists including Mariah the Scientist. CNN brought us in for the Road to 270
-                election coverage, and for Super Bowl 2020 we built an interactive AR mirror experience for one
-                of the biggest audiences in sports.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <p>
-                Our projection work has reached genuine landmarks: the DUBAI 360 spherical projection theatre,
-                and large-format building projections for PROJECTING CHANGE: Racing Extinction, the campaign
-                that put endangered species on the Empire State Building and the Vatican. Toyota x MTV tapped
-                us for the G-MAN experiential campaign, FLIR for a permanent interactive history wall, and AKU
-                World for an immersive NFT Miami environment complete with a 4D body scanner.
-              </p>
-              <p>
-                Every one of these productions was delivered end to end by one accountable team (design,
-                fabrication, AV integration, and show operation) from our headquarters in Portland, Oregon to
-                stages across the country. Explore the projects below.
-              </p>
-            </div>
-          </div>
+        <Reveal className="max-w-[1120px] mx-auto">
+          <h2 className="heading-md mb-8">Selected Work for Brands That Don&apos;t Do Small</h2>
+          <p className="text-base text-white leading-relaxed max-w-3xl">
+            Beatrox produces work for brands that don&apos;t do small: Super Bowl activations,
+            Comic-Con environments, festival builds, and permanent landmark installations.
+            Every project below was designed, fabricated, and operated end to end by one
+            accountable team from our Portland, Oregon headquarters.
+          </p>
         </Reveal>
+      </section>
+
+      {/* Field notes: one-sentence proof units (VTProDesign pattern). Client
+          entities stay in crawlable text and each links to its project. */}
+      <section className="section border-t border-white/10">
+        <div className="max-w-[1120px] mx-auto">
+          <p className="overline mb-10">Field Notes</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+            {FIELD_NOTES.map((note, index) => (
+              <Reveal key={note.href} delayMs={index * 100}>
+                <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(index + 1).padStart(2, '0')}</p>
+                <h3 className="text-base font-semibold text-white mb-2">
+                  <Link href={note.href} className="transition-colors hover:text-[var(--accent)]">
+                    {note.client}
+                  </Link>
+                </h3>
+                <p className="text-sm text-white/80 leading-relaxed">{note.note}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats strip: atomized proof, verifiable numbers only */}
+      <section className="section border-t border-white/10">
+        <div className="max-w-[1120px] mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
+            {WORK_STATS.map((stat, index) => (
+              <Reveal key={stat.label} delayMs={index * 100}>
+                <p className="heading-md text-[var(--accent)] mb-2">{stat.value}</p>
+                <p className="text-sm text-white/80 leading-relaxed">{stat.label}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Project previews, asymmetric bento grid */}
@@ -139,7 +195,7 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
       <section className="section border-t border-white/10 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Have a <span className="text-[var(--accent)]">project</span> in mind?</h2>
-          <p className="text-base text-white mb-8">Let&apos;s talk about how we can bring your vision to life.</p>
+          <p className="text-base text-white mb-8">Tell us what you&apos;re trying to build and our Portland team will scope it.</p>
           <Link href="/book" className="btn-primary btn-primary--accent">Start a Conversation</Link>
         </div>
       </section>
