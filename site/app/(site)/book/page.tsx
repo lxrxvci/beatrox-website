@@ -55,7 +55,7 @@ export default async function BookPage() {
           <p className="overline mb-4">Schedule</p>
           <KineticHeading text="Book a Consultation" className="heading-xl" />
           <p className="text-base text-white mt-6 max-w-xl leading-relaxed">
-            Pick a time that works for you and we'll send a calendar invite with a Google Meet link.
+            Pick a time that works for you and our team will confirm it and send you a meeting link by email.
           </p>
         </div>
       </section>

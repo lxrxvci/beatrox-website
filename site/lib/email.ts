@@ -73,13 +73,19 @@ async function sendEmail(options: {
     const resend = new Resend(apiKey)
     const from = process.env.BOOKING_FROM_EMAIL || 'hello@beatrox.com'
 
-    await resend.emails.send({
+    // The Resend SDK reports delivery API failures on the result object
+    // instead of throwing, so check `error` explicitly.
+    const { error } = await resend.emails.send({
       from,
       to: Array.isArray(options.to) ? options.to : [options.to],
       subject: options.subject,
       text: options.text,
       html: options.html,
     })
+
+    if (error) {
+      console.error('[email] Resend API error:', error)
+    }
   } catch (error) {
     console.error('[email] Failed to send email:', error)
   }
@@ -91,9 +97,11 @@ export async function sendBookingConfirmation(input: BookingConfirmationInput): 
   const text = [
     `Hi ${input.name},`,
     '',
-    `Your ${input.consultationType} with BEATROX is confirmed for ${timeText}.`,
+    `Your ${input.consultationType} with BEATROX is booked for ${timeText}.`,
     '',
-    input.meetLink ? `Google Meet link: ${input.meetLink}` : 'Meeting details will be sent separately.',
+    input.meetLink
+      ? `Google Meet link: ${input.meetLink}`
+      : 'Our team will confirm this time and send your meeting link by email.',
     '',
     'If you need to reschedule, please reply to this email or contact us at hello@beatrox.com.',
     '',
@@ -104,9 +112,9 @@ export async function sendBookingConfirmation(input: BookingConfirmationInput): 
   const html = `
     <div style="font-family: Inter, sans-serif; color: #111;">
       <p>Hi ${escapeHtml(input.name)},</p>
-      <p>Your <strong>${escapeHtml(input.consultationType)}</strong> with BEATROX is confirmed for:</p>
+      <p>Your <strong>${escapeHtml(input.consultationType)}</strong> with BEATROX is booked for:</p>
       <p style="font-size: 18px; font-weight: 600;">${escapeHtml(timeText)}</p>
-      ${input.meetLink ? `<p><a href="${escapeHtml(input.meetLink)}">Join Google Meet</a></p>` : '<p>Meeting details will be sent separately.</p>'}
+      ${input.meetLink ? `<p><a href="${escapeHtml(input.meetLink)}">Join Google Meet</a></p>` : '<p>Our team will confirm this time and send your meeting link by email.</p>'}
       <p>If you need to reschedule, please reply to this email or contact us at <a href="mailto:hello@beatrox.com">hello@beatrox.com</a>.</p>
       <p>Looking forward to talking with you,<br>The BEATROX team</p>
     </div>
@@ -114,7 +122,9 @@ export async function sendBookingConfirmation(input: BookingConfirmationInput): 
 
   await sendEmail({
     to: input.to,
-    subject: `Your BEATROX ${input.consultationType} is confirmed`,
+    subject: input.meetLink
+      ? `Your BEATROX ${input.consultationType} is confirmed`
+      : `Your BEATROX ${input.consultationType} booking`,
     text,
     html,
   })
@@ -223,7 +233,9 @@ export async function sendConsultationReminder(input: BookingConfirmationInput):
     '',
     `A reminder that your ${input.consultationType} with BEATROX is coming up on ${timeText}.`,
     '',
-    input.meetLink ? `Google Meet link: ${input.meetLink}` : 'Meeting details were sent in your confirmation email.',
+    input.meetLink
+      ? `Google Meet link: ${input.meetLink}`
+      : 'If you do not have a meeting link yet, our team will send it by email before the call.',
     '',
     'If you need to reschedule, please reply to this email or contact us at hello@beatrox.com.',
     '',
@@ -235,7 +247,7 @@ export async function sendConsultationReminder(input: BookingConfirmationInput):
       <p>Hi ${escapeHtml(input.name)},</p>
       <p>A reminder that your <strong>${escapeHtml(input.consultationType)}</strong> with BEATROX is coming up on:</p>
       <p style="font-size: 18px; font-weight: 600;">${escapeHtml(timeText)}</p>
-      ${input.meetLink ? `<p><a href="${escapeHtml(input.meetLink)}">Join Google Meet</a></p>` : '<p>Meeting details were sent in your confirmation email.</p>'}
+      ${input.meetLink ? `<p><a href="${escapeHtml(input.meetLink)}">Join Google Meet</a></p>` : '<p>If you do not have a meeting link yet, our team will send it by email before the call.</p>'}
       <p>If you need to reschedule, please reply to this email or contact us at <a href="mailto:hello@beatrox.com">hello@beatrox.com</a>.</p>
       <p>The BEATROX team</p>
     </div>

@@ -6,7 +6,7 @@ import { getPayload } from 'payload'
 import { headers } from 'next/headers'
 import payloadConfig from '@/payload.config'
 import { getAvailableSlots } from '@/lib/scheduling/availability'
-import { createCalendarEvent } from '@/lib/scheduling/google-calendar'
+import { createCalendarEvent, isGoogleCalendarConfigured } from '@/lib/scheduling/google-calendar'
 import { sendBookingConfirmation, sendInternalBookingNotification } from '@/lib/email'
 import { hashIp, isRateLimited } from '@/lib/rate-limit'
 
@@ -142,7 +142,7 @@ export async function bookConsultation(
   if (formData.get('website')?.toString().trim()) {
     return {
       success: true,
-      message: 'Your consultation is booked. You will receive a confirmation email shortly with meeting details.',
+      message: 'Your consultation is booked. Our team will confirm your time and send you a meeting link by email.',
     }
   }
 
@@ -240,21 +240,28 @@ export async function bookConsultation(
       },
     })
 
-    const calendarResult = await createCalendarEvent({
-      summary: `BEATROX ${typeDoc.name}: ${name}`,
-      description: [
-        projectSummary,
-        company ? `Company: ${company}` : '',
-        phone ? `Phone: ${phone}` : '',
-        'Booked via beatrox.com',
-      ]
-        .filter(Boolean)
-        .join('\n\n'),
-      startTime: slotStart,
-      endTime: slotEnd,
-      timezone,
-      attendees: [{ email, displayName: name }],
-    })
+    // Email-first booking: without Google credentials (GOOGLE_CLIENT_ID /
+    // GOOGLE_CLIENT_SECRET / GOOGLE_REFRESH_TOKEN) the event creation is
+    // skipped cleanly and the booking succeeds with email notifications only.
+    // When the credentials are present later, this path creates the event
+    // with a Meet link exactly as before.
+    const calendarResult = isGoogleCalendarConfigured()
+      ? await createCalendarEvent({
+          summary: `BEATROX ${typeDoc.name}: ${name}`,
+          description: [
+            projectSummary,
+            company ? `Company: ${company}` : '',
+            phone ? `Phone: ${phone}` : '',
+            'Booked via beatrox.com',
+          ]
+            .filter(Boolean)
+            .join('\n\n'),
+          startTime: slotStart,
+          endTime: slotEnd,
+          timezone,
+          attendees: [{ email, displayName: name }],
+        })
+      : null
 
     if (calendarResult) {
       await payload.update({
@@ -297,7 +304,7 @@ export async function bookConsultation(
       success: true,
       message: calendarResult?.meetLink
         ? 'Your consultation is booked. A calendar invite with a Google Meet link has been emailed to you.'
-        : 'Your consultation is booked. You will receive a confirmation email shortly with meeting details.',
+        : 'Your consultation is booked. Our team will confirm your time and send you a meeting link by email.',
       meetLink: calendarResult?.meetLink,
       startTime: toISOLocal(slotStart, timezone),
       timezone,
