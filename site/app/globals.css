@@ -521,7 +521,7 @@ html.lenis body {
 
 /* ── Prose typography for WYSIWYG output ─────────────────────────────────── */
 .prose {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--white);
 }
 
 .prose h2 {

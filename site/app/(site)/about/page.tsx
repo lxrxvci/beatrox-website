@@ -47,7 +47,7 @@ export default async function AboutPage({ preview = false }: { preview?: boolean
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
           <div className="max-w-[1120px] mx-auto">
             <p className="overline mb-4">About Us</p>
-            <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
+            <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl max-[480px]:text-[2.5rem] max-[380px]:text-[2.1rem]" />
             <p className="text-base text-white mt-6 max-w-3xl leading-relaxed">
               <EditableText collection="pages" documentId={cmsPage?.id} fieldPath="hero.subheadline" value={data.hero.subheadline}>
                 {data.hero.subheadline}
@@ -75,7 +75,7 @@ export default async function AboutPage({ preview = false }: { preview?: boolean
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
         <div className="max-w-[1120px] mx-auto">
           <p className="overline mb-4">About Us</p>
-          <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl" />
+          <KineticHeading text="The Team Behind the Tech" className="heading-xl max-w-3xl max-[480px]:text-[2.5rem] max-[380px]:text-[2.1rem]" />
           <p className="text-base text-white mt-6 max-w-3xl leading-relaxed">{data.hero.subheadline}</p>
         </div>
       </section>

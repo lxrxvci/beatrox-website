@@ -60,6 +60,12 @@ function Tile({ cap, index }: { cap: Capability; index: number }) {
           {image}
         </span>
         <span className="block pt-3 text-white group-hover:text-white transition-colors">{label}</span>
+        <span
+          className="mt-1 block font-mono text-[0.65rem] uppercase tracking-[0.2em] text-[var(--accent)] opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100"
+          aria-hidden="true"
+        >
+          Explore&nbsp;›
+        </span>
       </Link>
     )
   }
@@ -84,6 +90,13 @@ function Tile({ cap, index }: { cap: Capability; index: number }) {
           {label}
         </span>
       )}
+      {/* Touch affordance: always visible on mobile, hover/focus reveal on desktop */}
+      <span
+        className="pointer-events-none absolute bottom-3 right-3 font-mono text-[0.65rem] uppercase tracking-[0.2em] text-[var(--accent)] opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100"
+        aria-hidden="true"
+      >
+        Explore&nbsp;›
+      </span>
     </Link>
   )
 }

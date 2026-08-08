@@ -153,7 +153,8 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
       />
 
       {/* Intro — crawlable positioning copy: who we are, what the services
-          cover, who we serve, and where we work */}
+          cover, who we serve, and where we work. Broken into labeled blocks
+          so it stays scannable on mobile instead of a wall of text. */}
       <section className="section border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <div className="max-w-3xl">
@@ -161,48 +162,73 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
               A Full-Service Event Production Company in <span className="text-[var(--accent)]">Portland, Oregon</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-base text-white leading-relaxed">
-            <div className="space-y-6">
-              <p>
-                Beatrox is a full-service event production company headquartered in Portland, Oregon, and
-                deployed nationwide. Our designers, engineers, fabricators, and technical directors bring
-                over 20 years of combined experience turning ambitious ideas into physical experiences —
-                for agencies, brands, and venues that need one partner accountable from the first sketch
-                to the final strike. What makes the model work is range: the creative studio, the
-                fabrication shop, the AV inventory, and the production office all sit under one roof.
-                From intimate brand activations to festival main stages and permanent installations, the
-                through-line is the same — experiences engineered to be unforgettable and built to run
-                flawlessly.
-              </p>
-              <p>
-                Our services span the entire life of an event. Full-service event production and
-                experiential events cover strategy, planning, and execution end to end. Stage design and
-                custom fabrication turn concepts into structures. Immersive environments, projection
-                mapping, and multimedia displays put the story on every surface. LED video wall rentals,
-                audio production, DJ equipment rentals, drone light shows, and laser light shows deliver
-                the spectacle — engineered, permitted, and operated by the same team that designed it.
-                Specialty services round out the roster: event lighting services, sound equipment
-                rentals, and backline and stage rental for touring productions.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+            <div className="space-y-12">
+              <div>
+                <h3 className="overline mb-4">One Partner, End to End</h3>
+                <p className="text-base text-white leading-relaxed">
+                  Beatrox is a full-service event production company headquartered in Portland, Oregon,
+                  and deployed nationwide. Our designers, engineers, fabricators, and technical
+                  directors bring over 20 years of combined experience — one partner accountable from
+                  the first sketch to the final strike. The creative studio, the fabrication shop, the
+                  AV inventory, and the production office all sit under one roof, from intimate brand
+                  activations to festival main stages and permanent installations.
+                </p>
+              </div>
+              <div>
+                <h3 className="overline mb-4">The Full Service Spectrum</h3>
+                <p className="text-base text-white leading-relaxed">
+                  Our services span the entire life of an event.{' '}
+                  <Link href="/services/event-production" className="text-[var(--accent)] hover:underline">Full-service event production</Link>{' '}
+                  and{' '}
+                  <Link href="/services/experiential-events" className="text-[var(--accent)] hover:underline">experiential events</Link>{' '}
+                  cover strategy, planning, and execution end to end.{' '}
+                  <Link href="/services/stage-design" className="text-[var(--accent)] hover:underline">Stage design</Link>{' '}
+                  and{' '}
+                  <Link href="/services/custom-fabrication" className="text-[var(--accent)] hover:underline">custom fabrication</Link>{' '}
+                  turn concepts into structures.{' '}
+                  <Link href="/services/immersive-environments" className="text-[var(--accent)] hover:underline">Immersive environments</Link>,{' '}
+                  <Link href="/services/projection-mapping" className="text-[var(--accent)] hover:underline">projection mapping</Link>, and{' '}
+                  <Link href="/services/multimedia-displays" className="text-[var(--accent)] hover:underline">multimedia displays</Link>{' '}
+                  put the story on every surface.{' '}
+                  <Link href="/services/led-video-wall-rentals" className="text-[var(--accent)] hover:underline">LED video wall rentals</Link>,{' '}
+                  <Link href="/services/audio-production" className="text-[var(--accent)] hover:underline">audio production</Link>,{' '}
+                  <Link href="/services/dj-equipment-rentals" className="text-[var(--accent)] hover:underline">DJ equipment rentals</Link>,{' '}
+                  <Link href="/services/drone-light-shows" className="text-[var(--accent)] hover:underline">drone light shows</Link>, and{' '}
+                  <Link href="/services/laser-shows" className="text-[var(--accent)] hover:underline">laser light shows</Link>{' '}
+                  deliver the spectacle — engineered, permitted, and operated by the same team that
+                  designed it — with{' '}
+                  <Link href="/services/lighting-services" className="text-[var(--accent)] hover:underline">event lighting services</Link>,{' '}
+                  <Link href="/services/sound-equipment-rentals" className="text-[var(--accent)] hover:underline">sound equipment rentals</Link>, and{' '}
+                  <Link href="/services/backline-stage-rental" className="text-[var(--accent)] hover:underline">backline and stage rental</Link>{' '}
+                  rounding out the roster.
+                </p>
+              </div>
             </div>
-            <div className="space-y-6">
-              <p>
-                As an experiential marketing agency, we build the moments brands can't buy with media:
-                activations people line up for, launch environments that become the story, festival
-                footprints fans choose over the main stage. Agencies bring us in when the idea outruns
-                their in-house resources. Brands come directly when they want one accountable partner
-                instead of five vendors. Venues trust us with the permitting, engineering, and safety
-                documentation that ambitious public work demands. Our productions have carried global
-                brands through product launches, world tours, Comic-Con exhibitions, and landmark
-                projections — work where there is no second take.
-              </p>
-              <p>
-                Every service is delivered from our Portland headquarters and travels — from Oregon
-                Convention Center ballrooms to the Empire State Building. Every engagement starts with a
-                conversation, not a quote sheet: we scope the idea, flag the risks, and price the
-                reality. Explore the services below, or book a discovery call and tell us what you're
-                trying to build.
-              </p>
+            <div className="space-y-12">
+              <div>
+                <h3 className="overline mb-4">Built for Brands, Agencies &amp; Venues</h3>
+                <p className="text-base text-white leading-relaxed">
+                  As an experiential marketing agency, we build the moments brands can&apos;t buy with
+                  media: activations people line up for, launch environments that become the story,
+                  festival footprints fans choose over the main stage. Agencies bring us in when the
+                  idea outruns their in-house resources; brands come directly for one accountable
+                  partner instead of five vendors; venues trust us with the permitting, engineering,
+                  and safety documentation that ambitious public work demands. Our productions have
+                  carried global brands through product launches, world tours, Comic-Con exhibitions,
+                  and landmark projections — work where there is no second take.
+                </p>
+              </div>
+              <div>
+                <h3 className="overline mb-4">Portland-Based, Deployed Nationwide</h3>
+                <p className="text-base text-white leading-relaxed">
+                  Every service is delivered from our Portland headquarters and travels — from Oregon
+                  Convention Center ballrooms to the Empire State Building. Every engagement starts
+                  with a conversation, not a quote sheet: we scope the idea, flag the risks, and price
+                  the reality. Explore the services below, or book a discovery call and tell us what
+                  you&apos;re trying to build.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -211,7 +237,10 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
       {/* Capabilities image grid (swapped from the About page — title stays here) */}
       <section className="section border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
-          <h2 className="heading-lg mb-10">Our Services</h2>
+          <h2 className="heading-lg mb-4">Our Services</h2>
+          <p className="text-base text-white/60 max-w-xl mb-10">
+            Every capability under one roof. Tap any service to explore it in detail.
+          </p>
           <RevealOnScroll>
           <EditableGalleryGrid
             globalSlug="capability-tiles"
@@ -243,7 +272,7 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
                       >
                         <span
                           aria-hidden="true"
-                          className="hud-index opacity-40 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                          className="hud-index text-[var(--accent)] opacity-70 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
                         >
                           ›
                         </span>
