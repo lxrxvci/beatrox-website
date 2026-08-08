@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getAboutResolved, getCMSPageBySlug } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
+import { LOCALBUSINESS_ID } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 import Reveal from '@/components/Reveal'
@@ -24,9 +26,20 @@ export default async function AboutPage({ preview = false }: { preview?: boolean
   const pillars = data.sections.find((s) => s.type === 'three_column')
   const capability = data.sections.find((s) => s.type === 'capabilities_summary')
 
+  // Single AboutPage node referencing the shared LocalBusiness entity (OP-08:
+  // the business itself is declared once, on the homepage).
+  const aboutPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About Beatrox',
+    url: 'https://www.beatrox.com/about',
+    about: { '@id': LOCALBUSINESS_ID },
+  }
+
   if (cmsPage?.blocks && cmsPage.blocks.length > 0) {
     return (
       <article>
+        <JsonLd data={aboutPageSchema} />
         <section className="relative hero border-b border-white/10 overflow-hidden">
           <EditableImage
             collection="pages"
@@ -62,6 +75,7 @@ export default async function AboutPage({ preview = false }: { preview?: boolean
 
   return (
     <>
+      <JsonLd data={aboutPageSchema} />
       {/* Hero */}
       <section className="relative hero border-b border-white/10 overflow-hidden">
         <Image

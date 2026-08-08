@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { getWorkIndex, normalizeProjectSlug } from '@/lib/json-content'
 import { getAllProjectsResolved, getProjectSlugsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
+import { buildBreadcrumbSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 import Reveal from '@/components/Reveal'
 import ParallaxHero from '@/components/ParallaxHero'
 import BentoWorkGrid from '@/components/BentoWorkGrid'
@@ -42,6 +44,20 @@ export default async function WorkPage({ preview = false }: { preview?: boolean 
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Our Work',
+            url: 'https://www.beatrox.com/work',
+          },
+          buildBreadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Work', path: '/work' },
+          ]),
+        ]}
+      />
       <ParallaxHero
         imageSrc={heroImage}
         imageAlt="Work page hero"

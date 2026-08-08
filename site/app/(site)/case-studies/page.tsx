@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getAllCaseStudiesResolved } from '@/lib/content'
+import { buildBreadcrumbSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 
 export const revalidate = 300
 
@@ -35,6 +37,20 @@ export default async function CaseStudiesPage({ preview = false }: { preview?: b
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Case Studies',
+            url: 'https://www.beatrox.com/case-studies',
+          },
+          buildBreadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Case Studies', path: '/case-studies' },
+          ]),
+        ]}
+      />
       <section className="relative hero min-h-[48vh] flex flex-col justify-end overflow-hidden bg-black">
         <Image src="/og-default.jpg" alt="Case studies hero" fill priority sizes="100vw" className="object-cover opacity-35" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />

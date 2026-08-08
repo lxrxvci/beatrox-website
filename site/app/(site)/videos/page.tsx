@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { readManifest } from '@/lib/youtube/storage'
+import { buildBreadcrumbSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -32,6 +34,20 @@ export default function VideosPage() {
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Videos',
+            url: 'https://www.beatrox.com/videos',
+          },
+          buildBreadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Videos', path: '/videos' },
+          ]),
+        ]}
+      />
       <section className="section">
         <div className="max-w-[1100px] mx-auto">
           <header className="mb-12">

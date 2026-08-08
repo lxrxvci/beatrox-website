@@ -116,13 +116,33 @@ export function buildLocalBusinessSchema(): LocalBusinessSchema {
     geo: GEO,
     hasMap:
       'https://www.google.com/maps/search/?api=1&query=1313+SE+3rd+Ave%2C+Portland%2C+OR+97214',
-    // Matches the hours stated on /contact; GBP hours must match these exactly.
+    // Matches the hours stated on /contact and the GBP exactly (2026-08-08 set).
+    // Friday/Saturday close at 2 AM the following morning; per Google's
+    // LocalBusiness doc, overnight hours use a single spec with the opening day.
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '18:00',
+        dayOfWeek: ['Sunday'],
+        opens: '11:00',
+        closes: '22:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+        opens: '12:00',
+        closes: '22:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Friday'],
+        opens: '12:00',
+        closes: '02:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Saturday'],
+        opens: '11:00',
+        closes: '02:00',
       },
     ],
     sameAs: SOCIAL_PROFILES,

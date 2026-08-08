@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { getPayload } from 'payload'
 import payloadConfig from '@/payload.config'
+import { buildBreadcrumbSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 import BookingForm from './BookingForm'
 import KineticHeading from '@/components/KineticHeading'
 
@@ -34,6 +36,20 @@ export default async function BookPage() {
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Book a Consultation',
+            url: 'https://www.beatrox.com/book',
+          },
+          buildBreadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Book a Consultation', path: '/book' },
+          ]),
+        ]}
+      />
       <section className="hero border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <p className="overline mb-4">Schedule</p>

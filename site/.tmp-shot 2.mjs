@@ -1,0 +1,13 @@
+import { chromium } from 'playwright'
+const browser = await chromium.launch()
+const page = await browser.newPage({ viewport: { width: 390, height: 844 } })
+await page.goto('http://localhost:3123/about', { waitUntil: 'networkidle' })
+await page.screenshot({ path: '/tmp/about-mobile.png', fullPage: true })
+await page.goto('http://localhost:3123/services', { waitUntil: 'networkidle' })
+await page.screenshot({ path: '/tmp/services-mobile.png', fullPage: true })
+const desktop = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+await desktop.goto('http://localhost:3123/services', { waitUntil: 'networkidle' })
+await desktop.screenshot({ path: '/tmp/services-desktop.png', fullPage: true })
+await desktop.goto('http://localhost:3123/about', { waitUntil: 'networkidle' })
+await desktop.screenshot({ path: '/tmp/about-desktop.png', fullPage: true })
+await browser.close()

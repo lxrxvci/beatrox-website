@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getCaseStudyResolved, getCaseStudySlugsResolved, normalizeCaseStudySlug } from '@/lib/content'
+import { buildBreadcrumbSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
 
@@ -46,6 +48,19 @@ export default async function CaseStudyPage({ params, preview = false }: Props) 
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: caseStudy.title,
+          },
+          buildBreadcrumbSchema([
+            { name: 'Case Studies', path: '/case-studies' },
+            { name: caseStudy.title, path: `/case-studies/${caseStudy.canonicalSlug}` },
+          ]),
+        ]}
+      />
       <section className="relative pt-24 min-h-[60vh] flex flex-col justify-end overflow-hidden bg-black">
         {heroImage && (
           <>

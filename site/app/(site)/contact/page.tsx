@@ -4,6 +4,8 @@ import { seoToMetadata } from '@/lib/metadata'
 import ContactForm from './ContactForm'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
+import JsonLd from '@/components/JsonLd'
+import { LOCALBUSINESS_ID } from '@/lib/schema'
 import { EditableText } from '@/components/admin'
 
 export const revalidate = 300
@@ -19,6 +21,17 @@ export default async function ContactPage({ preview = false }: { preview?: boole
 
   return (
     <>
+      {/* ContactPage schema: references the homepage LocalBusiness entity by @id
+          (OP-08: no duplicated LocalBusiness off the homepage) */}
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact Beatrox',
+          url: 'https://www.beatrox.com/contact',
+          about: { '@id': LOCALBUSINESS_ID },
+        }}
+      />
       {/* Header */}
       <section className="hero border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
@@ -102,7 +115,7 @@ export default async function ContactPage({ preview = false }: { preview?: boole
         <div className="max-w-xl mx-auto">
           <h2 className="heading-md mb-5">Prefer to reach out directly?</h2>
           <p className="text-base text-white mb-8 leading-relaxed">
-            Our team is available Monday–Friday, 9am–6pm PT. We typically respond within 1–2 business days.
+            Our team is available Sunday 11am–10pm, Monday–Thursday 12pm–10pm, Friday 12pm–2am, and Saturday 11am–2am PT. We typically respond within 1–2 business days.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href={`mailto:${data.contact.email}`} className="btn-primary">Email Us</a>

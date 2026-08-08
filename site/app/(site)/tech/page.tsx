@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllServicesResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
+import { buildBreadcrumbSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 import ParallaxHero from '@/components/ParallaxHero'
 import RevealOnScroll from '@/components/RevealOnScroll'
 
@@ -44,6 +46,20 @@ export default async function TechIndexPage({ preview = false }: { preview?: boo
 
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Tech Capabilities',
+            url: 'https://www.beatrox.com/tech',
+          },
+          buildBreadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Tech Capabilities', path: '/tech' },
+          ]),
+        ]}
+      />
       <ParallaxHero
         imageSrc={heroImage}
         imageAlt="Tech capabilities hero media"
