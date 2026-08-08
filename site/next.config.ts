@@ -10,12 +10,12 @@ const nextConfig: NextConfig = {
       // Rentals now lives on its own dedicated app (permanent — passes link equity).
       {
         source: '/rentals',
-        destination: 'https://app-ruby-pi-32.vercel.app/',
+        destination: 'https://rentals.beatrox.com/',
         permanent: true,
       },
       {
         source: '/rentals/:path*',
-        destination: 'https://app-ruby-pi-32.vercel.app/:path*',
+        destination: 'https://rentals.beatrox.com/:path*',
         permanent: true,
       },
       // Tech capabilities moved from /services/* to dedicated /tech/* landing pages.

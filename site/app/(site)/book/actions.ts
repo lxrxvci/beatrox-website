@@ -290,7 +290,7 @@ export async function bookConsultation(
       endTime: slotEnd,
       timezone,
       projectSummary,
-      adminUrl: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://beatrox-website.vercel.app'}/admin/collections/consultations/${consultation.id}`,
+      adminUrl: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.beatrox.com'}/admin/collections/consultations/${consultation.id}`,
     })
 
     return {

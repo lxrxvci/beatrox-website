@@ -14,7 +14,7 @@ interface Props {
 // Rentals lives on its own SPA deployment (see redirects in next.config.ts).
 // Render it as a plain external anchor so the Next client router never tries
 // to prefetch/fetch its RSC payload cross-origin (which the CSP blocks).
-const RENTALS_EXTERNAL_URL = 'https://app-ruby-pi-32.vercel.app/'
+const RENTALS_EXTERNAL_URL = 'https://rentals.beatrox.com/'
 
 function resolveHref(href: string): { href: string; external: boolean } {
   if (href === '/rentals' || href.startsWith('/rentals/')) {

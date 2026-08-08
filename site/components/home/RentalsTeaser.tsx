@@ -1,7 +1,7 @@
 import { getAllServicesResolved } from '@/lib/content'
 import ScrollPanel from './ScrollPanel'
 
-const RENTALS_URL = 'https://app-ruby-pi-32.vercel.app/'
+const RENTALS_URL = 'https://rentals.beatrox.com/'
 
 export default async function RentalsTeaser() {
   const services = await getAllServicesResolved()
