@@ -128,4 +128,12 @@ Expected post-remediation composite: 82 to 88 depending on review velocity; revi
 
 ## Accepted Deviations (if any)
 
-None recorded yet. Candidate: client directive of 2026-08-07 fixes the homepage H1 as "Beatrox Experiential and Event Production"; if the city-inclusive H1 (P3-01) is declined, record as "Elite with deviations" with P3 capped at 7.
+Recorded 2026-08-07, client direction: **Beatrox is a global company, not hyper-local to Portland or the Pacific Northwest.** The brand's proof points are Netflix, Adidas, and Super Bowl-scale work. Consequences:
+
+- P3-01 (city in homepage H1): DECLINED. The H1 stays "Beatrox Experiential and Event Production" exactly as directed. P3 caps at 7 under the deviation rule.
+- P3-02 (city in homepage title): DECLINED for the main site. The title targets the global head term instead: "Experiential Design & Event Production | BEATROX".
+- The Portland intro section on the homepage was rewritten to global positioning ("Based in Portland, producing worldwide") rather than hyper-local entity copy.
+- Schema areaServed reduced to the studio city plus the United States; metro city lists removed.
+- **All hyper-local Portland SEO scope moves to the rentals property (rentals.beatrox.com)**: local title tags and content, Portland rental queries ("led video wall rental portland", "audiovisual equipment rental portland"), and any future location or service-area pages live there. The GBP remains a single hybrid profile for Beatrox at 1313 SE 3rd Ave (one profile per business per address; a second profile for rentals is a suspension risk, GC-06/GC-07).
+
+Composite is therefore reported as "Elite with deviations" once the remaining gates close; P0s must still close.

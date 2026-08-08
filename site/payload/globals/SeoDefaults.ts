@@ -25,7 +25,7 @@ export const SeoDefaults: GlobalConfig = {
     {
       name: 'defaultTitle',
       type: 'text',
-      defaultValue: 'Event Production Company Portland, OR | BEATROX',
+      defaultValue: 'Experiential Design & Event Production | BEATROX',
     },
     {
       name: 'titleTemplate',

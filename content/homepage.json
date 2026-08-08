@@ -2,16 +2,16 @@
   "title": "Home",
   "slug": "/",
   "seo": {
-    "title": "Event Production Company Portland, OR | BEATROX",
+    "title": "Experiential Design & Event Production | BEATROX",
     "description": "Beatrox is a Portland-based experiential design and event production company. We push the limits of creativity and technology to craft inspiring, unforgettable experiences.",
     "og": {
-      "title": "Event Production Company Portland, OR | BEATROX",
+      "title": "Experiential Design & Event Production | BEATROX",
       "description": "Portland-based experiential design and event production. Drone light shows, LED video walls, projection mapping, custom fabrication, and full-service event production.",
       "image": "/og-default.jpg"
     }
   },
   "hero": {
-    "headline": "Beatrox Experiential and Event Production in Portland, OR",
+    "headline": "Beatrox Experiential and Event Production",
     "subheadline": "Pushing the limits of creativity and technology to craft inspiring, unforgettable stories for our audience.",
     "cta": {
       "label": "See Our Work",

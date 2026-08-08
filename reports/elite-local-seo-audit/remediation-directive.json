@@ -9,32 +9,360 @@
           "version": "1.0.0",
           "informationUri": "skill://elite-local-seo-audit",
           "rules": [
-            { "id": "P1-01", "name": "GBPProfileMissing", "shortDescription": { "text": "No Google Business Profile exists" }, "properties": { "pillar": "P1", "modes": ["PACK", "AI"] } },
-            { "id": "P1-02", "name": "HoursAbsentOnWebsite", "shortDescription": { "text": "No business hours on website or schema; GBP hours parity has no source" }, "properties": { "pillar": "P1", "modes": ["PACK", "AI"] } },
-            { "id": "P1-04", "name": "DomainStrategyUnresolved", "shortDescription": { "text": "Live deployment canonicals to www.beatrox.com while serving on vercel.app host" }, "properties": { "pillar": "P1", "modes": ["PACK", "ORGANIC"] } },
-            { "id": "P2-01", "name": "NoReviewsOrTestimonials", "shortDescription": { "text": "Zero reviews on money pages; no acquisition program" }, "properties": { "pillar": "P2", "modes": ["PACK", "AI"] } },
-            { "id": "P3-01", "name": "HomepageH1MissingCity", "shortDescription": { "text": "Homepage H1 lacks the primary city" }, "properties": { "pillar": "P3", "modes": ["ORGANIC", "AI"] } },
-            { "id": "P3-02", "name": "HomepageTitleMissingCity", "shortDescription": { "text": "Homepage title lacks the primary city" }, "properties": { "pillar": "P3", "modes": ["ORGANIC", "AI"] } },
-            { "id": "P3-03", "name": "HomepageThinCopy", "shortDescription": { "text": "Homepage body copy below 400 to 600 word money-page standard" }, "properties": { "pillar": "P3", "modes": ["ORGANIC", "AI"] } },
-            { "id": "P3-04", "name": "ServiceNamespaceSplit", "shortDescription": { "text": "46 services split across /services and /tech namespaces" }, "properties": { "pillar": "P3", "modes": ["ORGANIC"] } },
-            { "id": "P3-05", "name": "TitleBrandDuplication", "shortDescription": { "text": "Rendered titles duplicate the brand suffix" }, "properties": { "pillar": "P3", "modes": ["ORGANIC"] } },
-            { "id": "P3-06", "name": "GenericImageAltText", "shortDescription": { "text": "Deck images use generic alt text without local/service relevance" }, "properties": { "pillar": "P3", "modes": ["ORGANIC"] } },
-            { "id": "P3-07", "name": "BannedDashInRenderedTitles", "shortDescription": { "text": "Em dashes render in live titles and metadata" }, "properties": { "pillar": "P3", "modes": ["ORGANIC"] } },
-            { "id": "P4-01", "name": "MissingCanonicalBookPage", "shortDescription": { "text": "/book renders without a canonical tag" }, "properties": { "pillar": "P4", "modes": ["ORGANIC"] } },
-            { "id": "P4-02", "name": "SitewideLocalBusinessDuplicateEntity", "shortDescription": { "text": "Full LocalBusiness with address on every page plus redundant Organization entity" }, "properties": { "pillar": "P4", "modes": ["ORGANIC", "AI"] } },
-            { "id": "P4-03", "name": "LocalBusinessStackIncomplete", "shortDescription": { "text": "LocalBusiness missing geo, openingHours, @id, hasMap, image; areaServed unstructured" }, "properties": { "pillar": "P4", "modes": ["ORGANIC", "AI"] } },
-            { "id": "P4-04", "name": "OfferCatalogIncomplete", "shortDescription": { "text": "Schema offer catalog lists 8 of 46 services" }, "properties": { "pillar": "P4", "modes": ["ORGANIC", "AI"] } },
-            { "id": "P4-05", "name": "SyntheticSitemapLastmod", "shortDescription": { "text": "Sitemap lastmod is one build timestamp for all URLs" }, "properties": { "pillar": "P4", "modes": ["ORGANIC", "AI"] } },
-            { "id": "P4-06", "name": "OrphanedSchemaFile", "shortDescription": { "text": "schema/schema-beatrox-locbiz.jsonld is not served and drifts from live schema" }, "properties": { "pillar": "P4", "modes": ["ORGANIC"] } },
-            { "id": "P5-01", "name": "FooterAddressFormattingDrift", "shortDescription": { "text": "Footer address renders without comma and with stray space" }, "properties": { "pillar": "P5", "modes": ["PACK", "AI"] } },
-            { "id": "P5-02", "name": "CoreCitationsAbsent", "shortDescription": { "text": "No Bing Places, Apple Business Connect, Yelp, Facebook, or BBB profiles" }, "properties": { "pillar": "P5", "modes": ["PACK", "AI"] } },
-            { "id": "P5-03", "name": "NameCaseNonParity", "shortDescription": { "text": "Site uses BEATROX and Beatrox LLC; intended GBP name Beatrox never appears in exact case" }, "properties": { "pillar": "P5", "modes": ["PACK", "AI"] } },
-            { "id": "P6-01", "name": "RentalsExternalDomainSplit", "shortDescription": { "text": "/rentals 308-redirects to external vercel.app deployment with own self-canonical" }, "properties": { "pillar": "P6", "modes": ["ORGANIC", "PACK"] } },
-            { "id": "P7-01", "name": "CompetitorStacksUnverified", "shortDescription": { "text": "Competitor GBP categories and review counts captured via search API, not live Maps" }, "properties": { "pillar": "P7", "modes": ["PACK"] } },
-            { "id": "P8-01", "name": "ContactFormTooLong", "shortDescription": { "text": "Contact form carries roughly 12 user-facing fields; standard is 3 to 5" }, "properties": { "pillar": "P8", "modes": ["ORGANIC", "PACK"] } },
-            { "id": "P8-02", "name": "NoTrustSignalsNearCTA", "shortDescription": { "text": "No reviews, ratings, client logos, or years-in-business adjacent to CTAs" }, "properties": { "pillar": "P8", "modes": ["ORGANIC"] } },
-            { "id": "P8-03", "name": "ConversionMeasurementAbsent", "shortDescription": { "text": "GA4 env unset on live deployment; no conversion events or thank-you tracking" }, "properties": { "pillar": "P8", "modes": ["ORGANIC"] } },
-            { "id": "P8-04", "name": "NoEmbeddedMap", "shortDescription": { "text": "No embedded Google Map on /contact or anywhere" }, "properties": { "pillar": "P8", "modes": ["PACK"] } }
+            {
+              "id": "P1-01",
+              "name": "GBPProfileMissing",
+              "shortDescription": {
+                "text": "No Google Business Profile exists"
+              },
+              "properties": {
+                "pillar": "P1",
+                "modes": [
+                  "PACK",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P1-02",
+              "name": "HoursAbsentOnWebsite",
+              "shortDescription": {
+                "text": "No business hours on website or schema; GBP hours parity has no source"
+              },
+              "properties": {
+                "pillar": "P1",
+                "modes": [
+                  "PACK",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P1-04",
+              "name": "DomainStrategyUnresolved",
+              "shortDescription": {
+                "text": "Live deployment canonicals to www.beatrox.com while serving on vercel.app host"
+              },
+              "properties": {
+                "pillar": "P1",
+                "modes": [
+                  "PACK",
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P2-01",
+              "name": "NoReviewsOrTestimonials",
+              "shortDescription": {
+                "text": "Zero reviews on money pages; no acquisition program"
+              },
+              "properties": {
+                "pillar": "P2",
+                "modes": [
+                  "PACK",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P3-01",
+              "name": "HomepageH1MissingCity",
+              "shortDescription": {
+                "text": "Homepage H1 lacks the primary city"
+              },
+              "properties": {
+                "pillar": "P3",
+                "modes": [
+                  "ORGANIC",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P3-02",
+              "name": "HomepageTitleMissingCity",
+              "shortDescription": {
+                "text": "Homepage title lacks the primary city"
+              },
+              "properties": {
+                "pillar": "P3",
+                "modes": [
+                  "ORGANIC",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P3-03",
+              "name": "HomepageThinCopy",
+              "shortDescription": {
+                "text": "Homepage body copy below 400 to 600 word money-page standard"
+              },
+              "properties": {
+                "pillar": "P3",
+                "modes": [
+                  "ORGANIC",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P3-04",
+              "name": "ServiceNamespaceSplit",
+              "shortDescription": {
+                "text": "46 services split across /services and /tech namespaces"
+              },
+              "properties": {
+                "pillar": "P3",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P3-05",
+              "name": "TitleBrandDuplication",
+              "shortDescription": {
+                "text": "Rendered titles duplicate the brand suffix"
+              },
+              "properties": {
+                "pillar": "P3",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P3-06",
+              "name": "GenericImageAltText",
+              "shortDescription": {
+                "text": "Deck images use generic alt text without local/service relevance"
+              },
+              "properties": {
+                "pillar": "P3",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P3-07",
+              "name": "BannedDashInRenderedTitles",
+              "shortDescription": {
+                "text": "Em dashes render in live titles and metadata"
+              },
+              "properties": {
+                "pillar": "P3",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P4-01",
+              "name": "MissingCanonicalBookPage",
+              "shortDescription": {
+                "text": "/book renders without a canonical tag"
+              },
+              "properties": {
+                "pillar": "P4",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P4-02",
+              "name": "SitewideLocalBusinessDuplicateEntity",
+              "shortDescription": {
+                "text": "Full LocalBusiness with address on every page plus redundant Organization entity"
+              },
+              "properties": {
+                "pillar": "P4",
+                "modes": [
+                  "ORGANIC",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P4-03",
+              "name": "LocalBusinessStackIncomplete",
+              "shortDescription": {
+                "text": "LocalBusiness missing geo, openingHours, @id, hasMap, image; areaServed unstructured"
+              },
+              "properties": {
+                "pillar": "P4",
+                "modes": [
+                  "ORGANIC",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P4-04",
+              "name": "OfferCatalogIncomplete",
+              "shortDescription": {
+                "text": "Schema offer catalog lists 8 of 46 services"
+              },
+              "properties": {
+                "pillar": "P4",
+                "modes": [
+                  "ORGANIC",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P4-05",
+              "name": "SyntheticSitemapLastmod",
+              "shortDescription": {
+                "text": "Sitemap lastmod is one build timestamp for all URLs"
+              },
+              "properties": {
+                "pillar": "P4",
+                "modes": [
+                  "ORGANIC",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P4-06",
+              "name": "OrphanedSchemaFile",
+              "shortDescription": {
+                "text": "schema/schema-beatrox-locbiz.jsonld is not served and drifts from live schema"
+              },
+              "properties": {
+                "pillar": "P4",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P5-01",
+              "name": "FooterAddressFormattingDrift",
+              "shortDescription": {
+                "text": "Footer address renders without comma and with stray space"
+              },
+              "properties": {
+                "pillar": "P5",
+                "modes": [
+                  "PACK",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P5-02",
+              "name": "CoreCitationsAbsent",
+              "shortDescription": {
+                "text": "No Bing Places, Apple Business Connect, Yelp, Facebook, or BBB profiles"
+              },
+              "properties": {
+                "pillar": "P5",
+                "modes": [
+                  "PACK",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P5-03",
+              "name": "NameCaseNonParity",
+              "shortDescription": {
+                "text": "Site uses BEATROX and Beatrox LLC; intended GBP name Beatrox never appears in exact case"
+              },
+              "properties": {
+                "pillar": "P5",
+                "modes": [
+                  "PACK",
+                  "AI"
+                ]
+              }
+            },
+            {
+              "id": "P6-01",
+              "name": "RentalsExternalDomainSplit",
+              "shortDescription": {
+                "text": "/rentals 308-redirects to external vercel.app deployment with own self-canonical"
+              },
+              "properties": {
+                "pillar": "P6",
+                "modes": [
+                  "ORGANIC",
+                  "PACK"
+                ]
+              }
+            },
+            {
+              "id": "P7-01",
+              "name": "CompetitorStacksUnverified",
+              "shortDescription": {
+                "text": "Competitor GBP categories and review counts captured via search API, not live Maps"
+              },
+              "properties": {
+                "pillar": "P7",
+                "modes": [
+                  "PACK"
+                ]
+              }
+            },
+            {
+              "id": "P8-01",
+              "name": "ContactFormTooLong",
+              "shortDescription": {
+                "text": "Contact form carries roughly 12 user-facing fields; standard is 3 to 5"
+              },
+              "properties": {
+                "pillar": "P8",
+                "modes": [
+                  "ORGANIC",
+                  "PACK"
+                ]
+              }
+            },
+            {
+              "id": "P8-02",
+              "name": "NoTrustSignalsNearCTA",
+              "shortDescription": {
+                "text": "No reviews, ratings, client logos, or years-in-business adjacent to CTAs"
+              },
+              "properties": {
+                "pillar": "P8",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P8-03",
+              "name": "ConversionMeasurementAbsent",
+              "shortDescription": {
+                "text": "GA4 env unset on live deployment; no conversion events or thank-you tracking"
+              },
+              "properties": {
+                "pillar": "P8",
+                "modes": [
+                  "ORGANIC"
+                ]
+              }
+            },
+            {
+              "id": "P8-04",
+              "name": "NoEmbeddedMap",
+              "shortDescription": {
+                "text": "No embedded Google Map on /contact or anywhere"
+              },
+              "properties": {
+                "pillar": "P8",
+                "modes": [
+                  "PACK"
+                ]
+              }
+            }
           ]
         }
       },
@@ -42,464 +370,1158 @@
         {
           "ruleId": "P1-01",
           "level": "error",
-          "message": { "text": "No Google Business Profile exists for Beatrox. Local pack visibility is zero. Create and verify the profile per the GBP blueprint (name Beatrox, primary category Event management company, hybrid address display)." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/competitors/serp-notes-event-production-portland.txt" } } } ],
+          "message": {
+            "text": "No Google Business Profile exists for Beatrox. Local pack visibility is zero. Create and verify the profile per the GBP blueprint (name Beatrox, primary category Event management company, hybrid address display)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/competitors/serp-notes-event-production-portland.txt"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P1", "priority": "P0", "modes": ["PACK", "AI"], "url": "https://business.google.com",
+            "pillar": "P1",
+            "priority": "P0",
+            "modes": [
+              "PACK",
+              "AI"
+            ],
+            "url": "https://business.google.com",
             "evidence": "audit-evidence/competitors/serp-notes-event-production-portland.txt",
-            "currentState": { "gbp": "does not exist" },
-            "requiredState": { "gbp": "claimed, video-verified, categories and services per gbp-blueprint.md" },
+            "currentState": {
+              "gbp": "does not exist"
+            },
+            "requiredState": {
+              "gbp": "claimed, video-verified, categories and services per gbp-blueprint.md"
+            },
             "fixInstructions": "Manual client task. Verify domain in Search Console first for possible instant verification, then create the profile at business.google.com with the blueprint values. Prepare the video verification shot list before starting.",
             "agentActionability": "manual",
-            "acceptanceCriteria": [ "GBP live and verified", "GBP NAP matches website NAP char-for-char", "nap_parity.py passes against live GBP" ],
+            "acceptanceCriteria": [
+              "GBP live and verified",
+              "GBP NAP matches website NAP char-for-char",
+              "nap_parity.py passes against live GBP"
+            ],
             "verificationCommand": "python3 /Users/lxrxcvi/.kimi-code/skills/elite-local-seo-audit/scripts/nap_parity.py --path site --name \"Beatrox\" --address \"1313 SE 3rd Ave, Portland, OR 97214\" --phone \"(503) 515-4715\"",
-            "effort": "M", "impact": "high", "closesGate": true
+            "effort": "M",
+            "impact": "high",
+            "closesGate": true
           }
         },
         {
           "ruleId": "P1-04",
           "level": "error",
-          "message": { "text": "Canonicals, sitemap locs, and robots Sitemap line all point to https://www.beatrox.com while the site serves on beatrox-website.vercel.app. If www.beatrox.com does not serve this deployment, GBP website URL and all canonical signals target a different or stale property." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/homepage.html" } } } ],
+          "message": {
+            "text": "Canonicals, sitemap locs, and robots Sitemap line all point to https://www.beatrox.com while the site serves on beatrox-website.vercel.app. If www.beatrox.com does not serve this deployment, GBP website URL and all canonical signals target a different or stale property."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/homepage.html"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P1", "priority": "P0", "modes": ["PACK", "ORGANIC"], "url": "/",
+            "pillar": "P1",
+            "priority": "P0",
+            "modes": [
+              "PACK",
+              "ORGANIC"
+            ],
+            "url": "/",
             "evidence": "audit-evidence/homepage.html (canonical link tag), audit-evidence/sitemap.xml, audit-evidence/robots.txt",
             "beforeSnippet": "<link rel=\"canonical\" href=\"https://www.beatrox.com\"/>",
-            "currentState": { "canonical": "https://www.beatrox.com", "servingHost": "beatrox-website.vercel.app" },
-            "requiredState": { "canonical": "resolves to the same content on the final production domain" },
+            "currentState": {
+              "canonical": "https://www.beatrox.com",
+              "servingHost": "beatrox-website.vercel.app"
+            },
+            "requiredState": {
+              "canonical": "resolves to the same content on the final production domain"
+            },
             "fixInstructions": "Decide the production domain, wire www.beatrox.com (and beatrox.com redirect) to this Vercel deployment, and confirm the old Squarespace property is fully replaced. Until then the GBP website link cannot be finalized.",
             "agentActionability": "config",
-            "acceptanceCriteria": [ "https://www.beatrox.com serves this deployment", "curl -s https://www.beatrox.com returns the new H1", "HTTP to HTTPS and apex to www redirects are single-hop 308s" ],
+            "acceptanceCriteria": [
+              "https://www.beatrox.com serves this deployment",
+              "curl -s https://www.beatrox.com returns the new H1",
+              "HTTP to HTTPS and apex to www redirects are single-hop 308s"
+            ],
             "verificationCommand": "curl -s -o /dev/null -w '%{http_code}' https://www.beatrox.com && curl -s https://www.beatrox.com | grep -c 'Beatrox Experiential'",
-            "effort": "S", "impact": "high", "closesGate": true
+            "effort": "S",
+            "impact": "high",
+            "closesGate": true
           }
         },
         {
           "ruleId": "P3-02",
-          "level": "error",
-          "message": { "text": "Homepage title carries no city. Apply the local title formula: primary keyword plus location plus brand, 60 chars or fewer." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/content/homepage.json" }, "region": { "startLine": 5 } } } ],
+          "level": "note",
+          "message": {
+            "text": "Homepage title carries no city. Apply the local title formula: primary keyword plus location plus brand, 60 chars or fewer. [UPDATE 2026-08-07: declined by client direction; global brand strategy, hyper-local scope moved to rentals.beatrox.com.]"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/content/homepage.json"
+                },
+                "region": {
+                  "startLine": 5
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P3", "priority": "P1", "modes": ["ORGANIC", "AI"], "url": "/",
+            "pillar": "P3",
+            "priority": "P3",
+            "modes": [
+              "ORGANIC",
+              "AI"
+            ],
+            "url": "/",
             "evidence": "audit-evidence/homepage.html (title verbatim)",
             "beforeSnippet": "\"title\": \"BEATROX — Experiential Design & Event Production\"",
             "afterSnippet": "\"title\": \"Event Production Company Portland, OR | BEATROX\"",
-            "currentState": { "title": "BEATROX — Experiential Design & Event Production", "chars": 49, "city": false, "keyword": true },
-            "requiredState": { "title": "Event Production Company Portland, OR | BEATROX", "chars": 48, "city": true, "keyword": true },
-            "fixInstructions": "Edit seo.title and og.title in both content/homepage.json (repo root, seed source) and site/content/homepage.json (runtime). Re-seed pages or edit the home doc in Payload admin so the CMS copy matches. Removes the em dash at the same time (P3-07).",
+            "currentState": {
+              "title": "BEATROX — Experiential Design & Event Production",
+              "chars": 49,
+              "city": false,
+              "keyword": true
+            },
+            "requiredState": {
+              "title": "Event Production Company Portland, OR | BEATROX",
+              "chars": 48,
+              "city": true,
+              "keyword": true
+            },
+            "fixInstructions": "No action. Recorded as accepted deviation; see audit-report.md Accepted Deviations.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "Homepage title contains Portland and Event Production", "Title length <= 60 chars", "No em dash in rendered title", "CMS home doc matches JSON" ],
+            "acceptanceCriteria": [
+              "Homepage title contains Portland and Event Production",
+              "Title length <= 60 chars",
+              "No em dash in rendered title",
+              "CMS home doc matches JSON"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '<title>[^<]*</title>'",
-            "effort": "S", "impact": "high", "closesGate": false
+            "effort": "S",
+            "impact": "high",
+            "closesGate": false,
+            "deviation": "CLIENT-DECLINED 2026-08-07: Beatrox is a global brand; hyper-local targeting moves to rentals.beatrox.com. Main-site H1 and title stay city-free by direction."
           }
         },
         {
           "ruleId": "P3-01",
-          "level": "error",
-          "message": { "text": "Homepage H1 contains the service keyword but not the primary city (mandatory OP-17/OP-23 check). The H1 was fixed by client directive on 2026-08-07; the recommended fix appends the city while preserving that exact phrase." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/content/homepage.json" }, "region": { "startLine": 14 } } } ],
+          "level": "note",
+          "message": {
+            "text": "Homepage H1 contains the service keyword but not the primary city (mandatory OP-17/OP-23 check). The H1 was fixed by client directive on 2026-08-07; the recommended fix appends the city while preserving that exact phrase. [UPDATE 2026-08-07: declined by client direction; global brand strategy, hyper-local scope moved to rentals.beatrox.com.]"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/content/homepage.json"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P3", "priority": "P1", "modes": ["ORGANIC", "AI"], "url": "/",
+            "pillar": "P3",
+            "priority": "P3",
+            "modes": [
+              "ORGANIC",
+              "AI"
+            ],
+            "url": "/",
             "evidence": "audit-evidence/homepage.html (H1 verbatim)",
             "beforeSnippet": "\"headline\": \"Beatrox Experiential and Event Production\"",
             "afterSnippet": "\"headline\": \"Beatrox Experiential and Event Production in Portland, OR\"",
-            "currentState": { "h1": "Beatrox Experiential and Event Production", "city": false },
-            "requiredState": { "h1": "contains service keyword and Portland", "city": true },
-            "fixInstructions": "Append 'in Portland, OR' to hero.headline in both homepage.json copies, site/components/HomeHero.tsx default, site/app/(site)/page.tsx IntroGate fallback, then re-seed the CMS home page. If the client declines, record an accepted deviation and cap P3 at 7.",
+            "currentState": {
+              "h1": "Beatrox Experiential and Event Production",
+              "city": false
+            },
+            "requiredState": {
+              "h1": "contains service keyword and Portland",
+              "city": true
+            },
+            "fixInstructions": "No action. Recorded as accepted deviation; see audit-report.md Accepted Deviations.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "Exactly one H1 on homepage", "H1 contains Event Production and Portland", "Intro overlay match-frame verified visually at 375px and 1440px" ],
+            "acceptanceCriteria": [
+              "Exactly one H1 on homepage",
+              "H1 contains Event Production and Portland",
+              "Intro overlay match-frame verified visually at 375px and 1440px"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '<h1[^>]*>[^<]*' | head -2",
-            "effort": "S", "impact": "high", "closesGate": false
+            "effort": "S",
+            "impact": "high",
+            "closesGate": false,
+            "deviation": "CLIENT-DECLINED 2026-08-07: Beatrox is a global brand; hyper-local targeting moves to rentals.beatrox.com. Main-site H1 and title stay city-free by direction."
           }
         },
         {
           "ruleId": "P3-03",
           "level": "error",
-          "message": { "text": "Homepage body copy is ~338 words including template chrome, below the 400 to 600 word money-homepage standard (OP-23). Add one substantive section answering what, who, and why trust, with genuine Portland entities." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/app/(site)/page.tsx" } } } ],
+          "message": {
+            "text": "Homepage body copy is ~338 words including template chrome, below the 400 to 600 word money-homepage standard (OP-23). Add one substantive section answering what, who, and why trust, with genuine Portland entities."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/app/(site)/page.tsx"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P3", "priority": "P1", "modes": ["ORGANIC", "AI"], "url": "/",
+            "pillar": "P3",
+            "priority": "P1",
+            "modes": [
+              "ORGANIC",
+              "AI"
+            ],
+            "url": "/",
             "evidence": "audit-evidence/homepage.html (word count, crawl report)",
-            "currentState": { "words": 338 },
-            "requiredState": { "words": ">= 400 excluding chrome", "localEntities": ">= 3" },
+            "currentState": {
+              "words": 338
+            },
+            "requiredState": {
+              "words": ">= 400 excluding chrome",
+              "localEntities": ">= 3"
+            },
             "fixInstructions": "Add a homepage intro section (150 to 250 words) naming the Portland studio, the Central Eastside industrial district context, metro service area, and nationwide touring work. Human-first copy, no city-list block (OP-45).",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "Homepage body copy >= 400 words excluding nav/footer", "3 or more genuine local entities present", "content_lint.py passes on new copy" ],
+            "acceptanceCriteria": [
+              "Homepage body copy >= 400 words excluding nav/footer",
+              "3 or more genuine local entities present",
+              "content_lint.py passes on new copy"
+            ],
             "verificationCommand": "python3 /Users/lxrxcvi/.kimi-code/skills/elite-local-seo-audit/scripts/content_lint.py --path site",
-            "effort": "M", "impact": "high", "closesGate": false
+            "effort": "M",
+            "impact": "high",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P3-05",
           "level": "error",
-          "message": { "text": "Rendered titles duplicate the brand: 'Services — BEATROX | BEATROX'. The seo title already contains the brand and the metadata template appends ' | BEATROX' again." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/lib/metadata.ts" } } } ],
+          "message": {
+            "text": "Rendered titles duplicate the brand: 'Services — BEATROX | BEATROX'. The seo title already contains the brand and the metadata template appends ' | BEATROX' again."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/lib/metadata.ts"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P3", "priority": "P1", "modes": ["ORGANIC"], "url": "/services",
+            "pillar": "P3",
+            "priority": "P1",
+            "modes": [
+              "ORGANIC"
+            ],
+            "url": "/services",
             "evidence": "audit-evidence/services.html, audit-evidence/work.html, audit-evidence/contact.html (titles verbatim)",
             "beforeSnippet": "<title>Services — BEATROX | BEATROX</title>",
             "afterSnippet": "<title>Services | BEATROX</title>",
-            "currentState": { "pattern": "{seo.title containing BEATROX} + ' | BEATROX' template suffix" },
-            "requiredState": { "pattern": "brand appears exactly once per title" },
+            "currentState": {
+              "pattern": "{seo.title containing BEATROX} + ' | BEATROX' template suffix"
+            },
+            "requiredState": {
+              "pattern": "brand appears exactly once per title"
+            },
             "fixInstructions": "In site/lib/metadata.ts seoToMetadata, do not append the brand template when the seo title already contains 'BEATROX' (case-insensitive). Alternatively strip ' — BEATROX' from the JSON seo titles. Pick one source of truth for the brand suffix.",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "No rendered title contains BEATROX twice", "All titles <= 60 chars where feasible" ],
+            "acceptanceCriteria": [
+              "No rendered title contains BEATROX twice",
+              "All titles <= 60 chars where feasible"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/services | grep -o '<title>[^<]*</title>'",
-            "effort": "S", "impact": "medium", "closesGate": false
+            "effort": "S",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P5-01",
           "level": "error",
-          "message": { "text": "Footer address renders as '1313 SE 3rd Ave Portland , OR 97214' (missing comma after street, stray space before city comma). The GBP-matching exact string exists only on /contact." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/homepage.html" }, "region": { "startLine": 1 } } } ],
+          "message": {
+            "text": "Footer address renders as '1313 SE 3rd Ave Portland , OR 97214' (missing comma after street, stray space before city comma). The GBP-matching exact string exists only on /contact."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/homepage.html"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P5", "priority": "P1", "modes": ["PACK", "AI"], "url": "all pages (footer)",
+            "pillar": "P5",
+            "priority": "P1",
+            "modes": [
+              "PACK",
+              "AI"
+            ],
+            "url": "all pages (footer)",
             "evidence": "audit-evidence/homepage.html:1 (footer) vs audit-evidence/contact.html:1",
             "beforeSnippet": "1313 SE 3rd Ave Portland , OR 97214",
             "afterSnippet": "1313 SE 3rd Ave, Portland, OR 97214",
-            "currentState": { "footer": "1313 SE 3rd Ave Portland , OR 97214" },
-            "requiredState": { "footer": "1313 SE 3rd Ave, Portland, OR 97214", "note": "identical on every page" },
+            "currentState": {
+              "footer": "1313 SE 3rd Ave Portland , OR 97214"
+            },
+            "requiredState": {
+              "footer": "1313 SE 3rd Ave, Portland, OR 97214",
+              "note": "identical on every page"
+            },
             "fixInstructions": "Fix the footer component to render the address.formatted string from site/content/contact.json ('1313 SE 3rd Ave, Portland, OR 97214') verbatim instead of concatenating parts.",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "Footer address on homepage equals GBP address char-for-char", "Same string on all pages" ],
+            "acceptanceCriteria": [
+              "Footer address on homepage equals GBP address char-for-char",
+              "Same string on all pages"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '1313 SE 3rd Ave[^<]*'",
-            "effort": "S", "impact": "high", "closesGate": true
+            "effort": "S",
+            "impact": "high",
+            "closesGate": true
           }
         },
         {
           "ruleId": "P5-03",
           "level": "error",
-          "message": { "text": "Intended GBP name 'Beatrox' never appears in exact case on the site; rendered name is 'BEATROX' (styling) and legal 'Beatrox LLC'. Schema name is 'BEATROX'. GBP-02 requires char-for-char parity between GBP name, website, and schema." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/lib/schema.ts" } } } ],
+          "message": {
+            "text": "Intended GBP name 'Beatrox' never appears in exact case on the site; rendered name is 'BEATROX' (styling) and legal 'Beatrox LLC'. Schema name is 'BEATROX'. GBP-02 requires char-for-char parity between GBP name, website, and schema."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/lib/schema.ts"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P5", "priority": "P1", "modes": ["PACK", "AI"],
+            "pillar": "P5",
+            "priority": "P1",
+            "modes": [
+              "PACK",
+              "AI"
+            ],
             "evidence": "audit-evidence/nap_parity.txt, site/content/contact.json:29, audit-evidence/homepage.html (schema block)",
             "beforeSnippet": "\"name\": \"BEATROX\"",
             "afterSnippet": "\"name\": \"Beatrox\"",
-            "currentState": { "schemaName": "BEATROX", "footerName": "BEATROX / Beatrox LLC" },
-            "requiredState": { "schemaName": "Beatrox", "note": "visual all-caps styling via CSS is fine; underlying text and schema must read Beatrox" },
+            "currentState": {
+              "schemaName": "BEATROX",
+              "footerName": "BEATROX / Beatrox LLC"
+            },
+            "requiredState": {
+              "schemaName": "Beatrox",
+              "note": "visual all-caps styling via CSS is fine; underlying text and schema must read Beatrox"
+            },
             "fixInstructions": "Set LocalBusiness and Organization schema name to 'Beatrox' (legalName may stay 'Beatrox LLC'). Keep visual brand lockup unchanged; ensure at least one crawlable instance of exact-case 'Beatrox' with the NAP (contact page company field already reads Beatrox LLC; add 'Beatrox' plain usage).",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "Schema name equals Beatrox", "GBP name equals schema name char-for-char", "nap_parity.py name check passes" ],
+            "acceptanceCriteria": [
+              "Schema name equals Beatrox",
+              "GBP name equals schema name char-for-char",
+              "nap_parity.py name check passes"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '\"name\":\"[^\"]*\"' | head -5",
-            "effort": "S", "impact": "medium", "closesGate": true
+            "effort": "S",
+            "impact": "medium",
+            "closesGate": true
           }
         },
         {
           "ruleId": "P4-01",
           "level": "error",
-          "message": { "text": "/book renders with no canonical tag; its generateMetadata does not pass canonicalPath." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/app/(site)/book/page.tsx" }, "region": { "startLine": 7 } } } ],
+          "message": {
+            "text": "/book renders with no canonical tag; its generateMetadata does not pass canonicalPath."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/app/(site)/book/page.tsx"
+                },
+                "region": {
+                  "startLine": 7
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P4", "priority": "P1", "modes": ["ORGANIC"], "url": "/book",
+            "pillar": "P4",
+            "priority": "P1",
+            "modes": [
+              "ORGANIC"
+            ],
+            "url": "/book",
             "evidence": "audit-evidence/book.html (no canonical link), site/app/(site)/book/page.tsx:7-11",
             "beforeSnippet": "export async function generateMetadata(): Promise<Metadata> {\n  return {\n    title: 'Book a Consultation — BEATROX',",
             "afterSnippet": "canonicalPath: '/book' passed through seoToMetadata (and em dash removed from title)",
-            "currentState": { "canonical": "absent" },
-            "requiredState": { "canonical": "https://www.beatrox.com/book" },
+            "currentState": {
+              "canonical": "absent"
+            },
+            "requiredState": {
+              "canonical": "https://www.beatrox.com/book"
+            },
             "fixInstructions": "Route /book metadata through seoToMetadata with canonicalPath '/book' like other pages.",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "/book HTML contains rel=canonical pointing at /book" ],
+            "acceptanceCriteria": [
+              "/book HTML contains rel=canonical pointing at /book"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/book | grep -o 'rel=\"canonical\"[^>]*'",
-            "effort": "S", "impact": "medium", "closesGate": false
+            "effort": "S",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P4-02",
           "level": "warning",
-          "message": { "text": "Full LocalBusiness (with street address) and a separate Organization entity are injected sitewide via layout.tsx. OP-08: only the homepage (and location pages) should carry full LocalBusiness; OP-07: do not duplicate the entity as a second type without a shared @id." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/app/(site)/layout.tsx" }, "region": { "startLine": 97 } } } ],
+          "message": {
+            "text": "Full LocalBusiness (with street address) and a separate Organization entity are injected sitewide via layout.tsx. OP-08: only the homepage (and location pages) should carry full LocalBusiness; OP-07: do not duplicate the entity as a second type without a shared @id."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/app/(site)/layout.tsx"
+                },
+                "region": {
+                  "startLine": 97
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P4", "priority": "P2", "modes": ["ORGANIC", "AI"],
+            "pillar": "P4",
+            "priority": "P2",
+            "modes": [
+              "ORGANIC",
+              "AI"
+            ],
             "evidence": "audit-evidence/services.html, audit-evidence/about.html (identical LocalBusiness blocks), site/app/(site)/layout.tsx:97-98",
             "beforeSnippet": "<JsonLd data={buildOrganizationSchema()} />\n<JsonLd data={buildLocalBusinessSchema()} />",
             "afterSnippet": "Homepage only: <JsonLd data={buildLocalBusinessSchema()} /> with stable @id; other pages: no business entity or a @id reference",
-            "currentState": { "scope": "sitewide", "entities": ["Organization", "LocalBusiness"] },
-            "requiredState": { "scope": "homepage only", "entities": ["LocalBusiness with @id https://www.beatrox.com/#localbusiness"] },
+            "currentState": {
+              "scope": "sitewide",
+              "entities": [
+                "Organization",
+                "LocalBusiness"
+              ]
+            },
+            "requiredState": {
+              "scope": "homepage only",
+              "entities": [
+                "LocalBusiness with @id https://www.beatrox.com/#localbusiness"
+              ]
+            },
             "fixInstructions": "Move the LocalBusiness JsonLd injection from the (site) layout into the homepage page component; drop the redundant Organization block (LocalBusiness inherits Organization). Give the entity a stable @id and reference that @id from Service schema providers.",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "Homepage JSON-LD contains LocalBusiness with @id", "No other page carries the full LocalBusiness block", "Schema Markup Validator: zero errors" ],
+            "acceptanceCriteria": [
+              "Homepage JSON-LD contains LocalBusiness with @id",
+              "No other page carries the full LocalBusiness block",
+              "Schema Markup Validator: zero errors"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/services | grep -c 'LocalBusiness'",
-            "effort": "M", "impact": "medium", "closesGate": false
+            "effort": "M",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P4-03",
           "level": "warning",
-          "message": { "text": "LocalBusiness lacks geo, openingHours, @id, hasMap, and image; areaServed is the free-text string 'Portland, OR and worldwide' instead of structured entities." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/lib/schema.ts" } } } ],
+          "message": {
+            "text": "LocalBusiness lacks geo, openingHours, @id, hasMap, and image; areaServed is the free-text string 'Portland, OR and worldwide' instead of structured entities."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/lib/schema.ts"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P4", "priority": "P2", "modes": ["ORGANIC", "AI"],
+            "pillar": "P4",
+            "priority": "P2",
+            "modes": [
+              "ORGANIC",
+              "AI"
+            ],
             "evidence": "audit-evidence/homepage.html (full LocalBusiness block), schema/schema-beatrox-locbiz.jsonld:20-24 (geo coordinates available: 45.5134853, -122.6629198)",
             "beforeSnippet": "\"areaServed\": \"Portland, OR and worldwide\"",
             "afterSnippet": "\"@id\": \"https://www.beatrox.com/#localbusiness\", \"geo\": {\"@type\":\"GeoCoordinates\",\"latitude\":45.5134853,\"longitude\":-122.6629198}, \"hasMap\": \"<Google Maps share URL>\", \"areaServed\": [{\"@type\":\"City\",\"name\":\"Portland\"}, ...metro cities, {\"@type\":\"Country\",\"name\":\"United States\"}]",
-            "currentState": { "geo": "absent", "openingHours": "absent", "@id": "absent", "hasMap": "absent" },
-            "requiredState": { "geo": "present", "@id": "stable", "hasMap": "present", "openingHours": "present once client confirms hours", "areaServed": "structured, matches GBP service areas" },
+            "currentState": {
+              "geo": "absent",
+              "openingHours": "absent",
+              "@id": "absent",
+              "hasMap": "absent"
+            },
+            "requiredState": {
+              "geo": "present",
+              "@id": "stable",
+              "hasMap": "present",
+              "openingHours": "present once client confirms hours",
+              "areaServed": "structured; studio city Portland plus Country United States (global brand; metro list declined per client direction)"
+            },
             "fixInstructions": "Extend buildLocalBusinessSchema in site/lib/schema.ts: add @id, geo (coords from the orphaned jsonld), hasMap (Google Maps share URL for the address), image, and structured areaServed listing the metro cities from intake. Add openingHoursSpecification only after the client confirms hours (blueprint proposes Mon-Fri 9:00-18:00).",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "geo, @id, hasMap present in homepage JSON-LD", "areaServed structured and matches GBP service areas", "Validator passes" ],
+            "acceptanceCriteria": [
+              "geo, @id, hasMap present in homepage JSON-LD",
+              "areaServed structured and matches GBP service areas",
+              "Validator passes"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '\"geo\":[^}]*}'",
-            "effort": "M", "impact": "medium", "closesGate": false
+            "effort": "M",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P4-04",
           "level": "warning",
-          "message": { "text": "Live offer catalog (and the orphaned jsonld) list 8 services; the site sells 46. GBP Services parity and AI grounding both need the full catalog." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/lib/schema.ts" } } } ],
+          "message": {
+            "text": "Live offer catalog (and the orphaned jsonld) list 8 services; the site sells 46. GBP Services parity and AI grounding both need the full catalog."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/lib/schema.ts"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P4", "priority": "P2", "modes": ["ORGANIC", "AI"],
+            "pillar": "P4",
+            "priority": "P2",
+            "modes": [
+              "ORGANIC",
+              "AI"
+            ],
             "evidence": "audit-evidence/homepage.html (LocalBusiness block), schema/schema-beatrox-locbiz.jsonld:99-168 (8 offers), audit-evidence/sitemap.xml (46 service URLs)",
-            "currentState": { "offerCount": 8 },
-            "requiredState": { "offerCount": 46, "note": "each Offer links its /services or /tech URL" },
+            "currentState": {
+              "offerCount": 8
+            },
+            "requiredState": {
+              "offerCount": 46,
+              "note": "each Offer links its /services or /tech URL"
+            },
             "fixInstructions": "Generate hasOfferCatalog from the services content source (all 46 service JSONs) instead of a hardcoded 8-item list.",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "Offer catalog contains all 46 services with URLs", "Validator passes" ],
+            "acceptanceCriteria": [
+              "Offer catalog contains all 46 services with URLs",
+              "Validator passes"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -o '\"itemOffered\"' | wc -l",
-            "effort": "M", "impact": "medium", "closesGate": false
+            "effort": "M",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P6-01",
           "level": "error",
-          "message": { "text": "/rentals permanently redirects to app-ruby-pi-32.vercel.app, a separate deployment branding itself BEATROX LLC with its own self-canonical. The in-repo rentals landing page is dead code. Entity and link signals split across two hosts, and a throwaway vercel.app hostname leaks into nav on every page." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/rentals.html" } } } ],
+          "message": {
+            "text": "/rentals permanently redirects to app-ruby-pi-32.vercel.app, a separate deployment branding itself BEATROX LLC with its own self-canonical. The in-repo rentals landing page is dead code. Entity and link signals split across two hosts, and a throwaway vercel.app hostname leaks into nav on every page."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/rentals.html"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P6", "priority": "P1", "modes": ["ORGANIC", "PACK"], "url": "/rentals",
+            "pillar": "P6",
+            "priority": "P1",
+            "modes": [
+              "ORGANIC",
+              "PACK"
+            ],
+            "url": "/rentals",
             "evidence": "audit-evidence/rentals.html (308 target, 4KB shell, BEATROX LLC branding), site/next.config redirects",
-            "currentState": { "rentals": "308 to external vercel.app host" },
-            "requiredState": { "rentals": "served on the primary domain (subdirectory or subdomain of beatrox.com)" },
+            "currentState": {
+              "rentals": "308 to external vercel.app host"
+            },
+            "requiredState": {
+              "rentals": "served at rentals.beatrox.com; this property becomes the hyper-local Portland SEO target (local titles, rental-intent content) per client direction 2026-08-07"
+            },
             "fixInstructions": "Decision item for the client: move the rentals app to rentals.beatrox.com or beatrox.com/rentals (revive the in-repo page as the SEO landing page linking into the app). Do not leave a raw vercel.app host in production nav.",
             "agentActionability": "config",
-            "acceptanceCriteria": [ "/rentals or nav rentals link resolves on a beatrox.com host", "No vercel.app hostname in production nav" ],
+            "acceptanceCriteria": [
+              "/rentals or nav rentals link resolves on a beatrox.com host",
+              "No vercel.app hostname in production nav"
+            ],
             "verificationCommand": "curl -s -o /dev/null -w '%{redirect_url}' https://beatrox-website.vercel.app/rentals",
-            "effort": "M", "impact": "high", "closesGate": false
+            "effort": "M",
+            "impact": "high",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P8-01",
           "level": "error",
-          "message": { "text": "Contact form carries roughly 12 user-facing fields (name, email, company, location, event_type select, 12 service checkboxes, event_date, budget, message). OP-48 standard is 3 to 5 fields; each extra field costs 5 to 10 percent conversion." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/content/contact.json" } } } ],
+          "message": {
+            "text": "Contact form carries roughly 12 user-facing fields (name, email, company, location, event_type select, 12 service checkboxes, event_date, budget, message). OP-48 standard is 3 to 5 fields; each extra field costs 5 to 10 percent conversion."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/content/contact.json"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P8", "priority": "P1", "modes": ["ORGANIC", "PACK"], "url": "/contact",
+            "pillar": "P8",
+            "priority": "P1",
+            "modes": [
+              "ORGANIC",
+              "PACK"
+            ],
+            "url": "/contact",
             "evidence": "audit-evidence/contact.html (form element inventory), site/content/contact.json (consultationForm.fields)",
-            "currentState": { "userFacingFields": 12 },
-            "requiredState": { "userFacingFields": "<= 5", "note": "name, email, event/project type, message, plus optional phone" },
+            "currentState": {
+              "userFacingFields": 12
+            },
+            "requiredState": {
+              "userFacingFields": "<= 5",
+              "note": "name, email, event/project type, message, plus optional phone"
+            },
             "fixInstructions": "Trim consultationForm.fields in both content/contact.json copies to 5 fields; move services/budget/date qualifiers into the booking flow or a follow-up email. Confirm CRM mapping before dropping fields (they may feed Deals collections). Re-seed CMS contact doc after edit.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "Rendered form has <= 5 visible fields plus honeypot/utm hiddens", "Form still submits successfully" ],
+            "acceptanceCriteria": [
+              "Rendered form has <= 5 visible fields plus honeypot/utm hiddens",
+              "Form still submits successfully"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/contact | grep -o '<input\\|<select\\|<textarea' | wc -l",
-            "effort": "M", "impact": "high", "closesGate": false
+            "effort": "M",
+            "impact": "high",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P8-02",
           "level": "error",
-          "message": { "text": "No trust signal above the fold or adjacent to CTAs: no client names, review snippets, or years-in-business near the hero or the contact form (OP-46, OP-49)." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/app/(site)/page.tsx" } } } ],
+          "message": {
+            "text": "No trust signal above the fold or adjacent to CTAs: no client names, review snippets, or years-in-business near the hero or the contact form (OP-46, OP-49)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/app/(site)/page.tsx"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P8", "priority": "P1", "modes": ["ORGANIC"], "url": "/",
+            "pillar": "P8",
+            "priority": "P1",
+            "modes": [
+              "ORGANIC"
+            ],
+            "url": "/",
             "evidence": "audit-evidence/homepage.html (above-fold CTA inventory)",
-            "currentState": { "trustSignalsAboveFold": 0 },
-            "requiredState": { "trustSignalsAboveFold": ">= 1", "note": "e.g. named-client line drawn from the real portfolio" },
+            "currentState": {
+              "trustSignalsAboveFold": 0
+            },
+            "requiredState": {
+              "trustSignalsAboveFold": ">= 1",
+              "note": "e.g. named-client line drawn from the real portfolio"
+            },
             "fixInstructions": "Add a trust line under the hero CTAs using only verifiable portfolio clients (Super Bowl 2020, BuzzFeed, Adidas Run for the Oceans per existing work content). Add a second trust element adjacent to the contact form.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "At least one trust signal visible in first viewport", "Trust signal adjacent to contact form", "All named clients verifiable in /work content" ],
+            "acceptanceCriteria": [
+              "At least one trust signal visible in first viewport",
+              "Trust signal adjacent to contact form",
+              "All named clients verifiable in /work content"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -io 'super bowl\\|buzzfeed\\|adidas' | head -3",
-            "effort": "S", "impact": "medium", "closesGate": false
+            "effort": "S",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P8-03",
           "level": "error",
-          "message": { "text": "GA4 snippet is env-gated and NEXT_PUBLIC_GA_MEASUREMENT_ID is unset on the live deployment: zero googletagmanager references in served HTML. No conversion events, no thank-you tracking (OP-51, OP-63)." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/app/(site)/layout.tsx" }, "region": { "startLine": 123 } } } ],
+          "message": {
+            "text": "GA4 snippet is env-gated and NEXT_PUBLIC_GA_MEASUREMENT_ID is unset on the live deployment: zero googletagmanager references in served HTML. No conversion events, no thank-you tracking (OP-51, OP-63)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/app/(site)/layout.tsx"
+                },
+                "region": {
+                  "startLine": 123
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P8", "priority": "P1", "modes": ["ORGANIC"],
+            "pillar": "P8",
+            "priority": "P1",
+            "modes": [
+              "ORGANIC"
+            ],
             "evidence": "audit-evidence/homepage.html (no googletagmanager), site/app/(site)/layout.tsx:123-139",
-            "currentState": { "ga4": "env var unset, snippet not rendered" },
-            "requiredState": { "ga4": "measurement ID set; form and booking submissions fire conversion events" },
+            "currentState": {
+              "ga4": "env var unset, snippet not rendered"
+            },
+            "requiredState": {
+              "ga4": "measurement ID set; form and booking submissions fire conversion events"
+            },
             "fixInstructions": "Set NEXT_PUBLIC_GA_MEASUREMENT_ID (and the GA4 service-account vars for the admin dashboard) in the Vercel project for Production and Preview. Wire GA4 conversion events on contact submit and booking confirmation.",
             "agentActionability": "config",
-            "acceptanceCriteria": [ "Live HTML contains googletagmanager/gtag", "Test conversion event visible in GA4 Realtime" ],
+            "acceptanceCriteria": [
+              "Live HTML contains googletagmanager/gtag",
+              "Test conversion event visible in GA4 Realtime"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -c googletagmanager",
-            "effort": "S", "impact": "high", "closesGate": false
+            "effort": "S",
+            "impact": "high",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P8-04",
           "level": "warning",
-          "message": { "text": "No embedded Google Map on /contact (OP-50). Map embed reinforces the geo signal and supports GBP website parity." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/contact.html" } } } ],
+          "message": {
+            "text": "No embedded Google Map on /contact (OP-50). Map embed reinforces the geo signal and supports GBP website parity."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/contact.html"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P8", "priority": "P2", "modes": ["PACK"], "url": "/contact",
+            "pillar": "P8",
+            "priority": "P2",
+            "modes": [
+              "PACK"
+            ],
+            "url": "/contact",
             "evidence": "audit-evidence/contact.html (zero google.com/maps references)",
-            "currentState": { "mapEmbed": false },
-            "requiredState": { "mapEmbed": true, "note": "keyless embed iframe for 1313 SE 3rd Ave, Portland, OR 97214" },
+            "currentState": {
+              "mapEmbed": false
+            },
+            "requiredState": {
+              "mapEmbed": true,
+              "note": "keyless embed iframe for 1313 SE 3rd Ave, Portland, OR 97214"
+            },
             "fixInstructions": "Add a keyless Google Maps embed iframe (maps.google.com/maps?q=<address>&output=embed) to the contact page near the NAP block. Lazy-load it.",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "contact.html contains a google maps embed iframe", "Iframe lazy-loaded, has title attribute" ],
+            "acceptanceCriteria": [
+              "contact.html contains a google maps embed iframe",
+              "Iframe lazy-loaded, has title attribute"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/contact | grep -c 'google.com/maps'",
-            "effort": "S", "impact": "medium", "closesGate": false
+            "effort": "S",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P1-02",
           "level": "error",
-          "message": { "text": "No business hours on any page or in schema. GBP hours parity (GBP-12) requires a website source, and open-now is a pack ranking factor." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/contact.html" } } } ],
+          "message": {
+            "text": "No business hours on any page or in schema. GBP hours parity (GBP-12) requires a website source, and open-now is a pack ranking factor."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/contact.html"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P1", "priority": "P1", "modes": ["PACK", "AI"], "url": "/contact",
+            "pillar": "P1",
+            "priority": "P1",
+            "modes": [
+              "PACK",
+              "AI"
+            ],
+            "url": "/contact",
             "evidence": "audit-evidence/contact.html, audit-evidence/homepage.html (no openingHours)",
-            "currentState": { "hours": "absent everywhere" },
-            "requiredState": { "hours": "published on /contact and in schema; identical to GBP hours" },
+            "currentState": {
+              "hours": "absent everywhere"
+            },
+            "requiredState": {
+              "hours": "published on /contact and in schema; identical to GBP hours"
+            },
             "fixInstructions": "Client confirms real hours (blueprint proposes Mon-Fri 9:00-18:00). Then add hours to contact.json, render on /contact, and add openingHoursSpecification to the LocalBusiness schema. All three surfaces must match GBP exactly.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "Hours visible on /contact", "openingHoursSpecification in homepage JSON-LD", "GBP hours identical" ],
+            "acceptanceCriteria": [
+              "Hours visible on /contact",
+              "openingHoursSpecification in homepage JSON-LD",
+              "GBP hours identical"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -c openingHoursSpecification",
-            "effort": "S", "impact": "medium", "closesGate": false
+            "effort": "S",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P2-01",
           "level": "warning",
-          "message": { "text": "Zero reviews or testimonials on money pages; no acquisition program. Reviews are 16 percent of pack weight and gate AI eligibility." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/service-event-production.html" } } } ],
+          "message": {
+            "text": "Zero reviews or testimonials on money pages; no acquisition program. Reviews are 16 percent of pack weight and gate AI eligibility."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/service-event-production.html"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P2", "priority": "P2", "modes": ["PACK", "AI"],
+            "pillar": "P2",
+            "priority": "P2",
+            "modes": [
+              "PACK",
+              "AI"
+            ],
             "evidence": "audit-evidence/homepage.html, audit-evidence/service-event-production.html (no review content)",
-            "currentState": { "onSiteReviews": 0, "googleReviews": 0 },
-            "requiredState": { "googleReviews": ">= 15 at 4.5+", "onSiteReviews": "named testimonials on homepage and top service pages" },
+            "currentState": {
+              "onSiteReviews": 0,
+              "googleReviews": 0
+            },
+            "requiredState": {
+              "googleReviews": ">= 15 at 4.5+",
+              "onSiteReviews": "named testimonials on homepage and top service pages"
+            },
             "fixInstructions": "Manual: start the review ask program per the GBP blueprint (script included). Content: add named client testimonials to homepage and top 5 service pages once permission is secured. Never mark up self-serving AggregateRating on LocalBusiness (OP-10).",
             "agentActionability": "manual",
-            "acceptanceCriteria": [ ">= 15 Google reviews", "Testimonials visible on homepage and top service pages" ],
+            "acceptanceCriteria": [
+              ">= 15 Google reviews",
+              "Testimonials visible on homepage and top service pages"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -ci 'testimonial\\|review'",
-            "effort": "L", "impact": "high", "closesGate": false
+            "effort": "L",
+            "impact": "high",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P5-02",
           "level": "warning",
-          "message": { "text": "No core citations confirmed: Bing Places, Apple Business Connect, Yelp, Facebook, BBB. Citations are 13 percent of AI visibility weight; 3 or more NAP inconsistencies across sources is an AI-exclusion risk." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/competitors/serp-notes-event-production-portland.txt" } } } ],
+          "message": {
+            "text": "No core citations confirmed: Bing Places, Apple Business Connect, Yelp, Facebook, BBB. Citations are 13 percent of AI visibility weight; 3 or more NAP inconsistencies across sources is an AI-exclusion risk."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/competitors/serp-notes-event-production-portland.txt"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P5", "priority": "P2", "modes": ["PACK", "AI"],
+            "pillar": "P5",
+            "priority": "P2",
+            "modes": [
+              "PACK",
+              "AI"
+            ],
             "evidence": "audit-evidence/competitors/*.txt (Beatrox absent from directories sampled)",
-            "currentState": { "coreCitations": 0 },
-            "requiredState": { "coreCitations": "Bing Places, Apple Business Connect, Yelp, Facebook, BBB, all with identical NAP" },
+            "currentState": {
+              "coreCitations": 0
+            },
+            "requiredState": {
+              "coreCitations": "Bing Places, Apple Business Connect, Yelp, Facebook, BBB, all with identical NAP"
+            },
             "fixInstructions": "Manual client task: claim the five core citations with the exact GBP NAP (Beatrox, 1313 SE 3rd Ave, Portland, OR 97214, (503) 515-4715). Add LinkedIn and Clutch for the B2B vertical.",
             "agentActionability": "manual",
-            "acceptanceCriteria": [ "5 core citations live", "NAP identical across all" ],
+            "acceptanceCriteria": [
+              "5 core citations live",
+              "NAP identical across all"
+            ],
             "verificationCommand": "nap_parity.py per citation source",
-            "effort": "M", "impact": "high", "closesGate": false
+            "effort": "M",
+            "impact": "high",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P3-04",
           "level": "warning",
-          "message": { "text": "46 services split across /services/* (15) and /tech/* (31); the /services index links only 15. The service mesh is fragmented (OP-24, OP-33, OP-34)." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/sitemap.xml" } } } ],
+          "message": {
+            "text": "46 services split across /services/* (15) and /tech/* (31); the /services index links only 15. The service mesh is fragmented (OP-24, OP-33, OP-34)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/sitemap.xml"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P3", "priority": "P2", "modes": ["ORGANIC"], "url": "/services",
+            "pillar": "P3",
+            "priority": "P2",
+            "modes": [
+              "ORGANIC"
+            ],
+            "url": "/services",
             "evidence": "audit-evidence/sitemap.xml (15 /services, 31 /tech), audit-evidence/services.html",
-            "currentState": { "servicesNs": 15, "techNs": 31, "crossLinks": "none observed" },
-            "requiredState": { "note": "either consolidate under /services with 301s, or cross-link both indexes bidirectionally with descriptive anchors" },
+            "currentState": {
+              "servicesNs": 15,
+              "techNs": 31,
+              "crossLinks": "none observed"
+            },
+            "requiredState": {
+              "note": "either consolidate under /services with 301s, or cross-link both indexes bidirectionally with descriptive anchors"
+            },
             "fixInstructions": "Decision item: consolidating /tech under /services is cleanest long-term but touches 31 URLs and their CMS docs. Minimum viable: link the full tech catalog from /services and vice versa.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "Every service page reachable from /services within 2 clicks", "No orphan service pages" ],
+            "acceptanceCriteria": [
+              "Every service page reachable from /services within 2 clicks",
+              "No orphan service pages"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/services | grep -o 'href=\"/tech/[^\"]*\"' | wc -l",
-            "effort": "M", "impact": "medium", "closesGate": false
+            "effort": "M",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P7-01",
           "level": "warning",
-          "message": { "text": "Competitor GBP primary categories and review counts were captured via a search API, not live Google Maps. Verify top-3 category stacks manually before locking Beatrox categories (GC-20)." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/competitors/serp-notes-event-production-portland.txt" } } } ],
+          "message": {
+            "text": "Competitor GBP primary categories and review counts were captured via a search API, not live Google Maps. Verify top-3 category stacks manually before locking Beatrox categories (GC-20)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/competitors/serp-notes-event-production-portland.txt"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P7", "priority": "P2", "modes": ["PACK"],
+            "pillar": "P7",
+            "priority": "P2",
+            "modes": [
+              "PACK"
+            ],
             "evidence": "audit-evidence/competitors/*.txt",
-            "currentState": { "competitorData": "search API snapshots" },
-            "requiredState": { "competitorData": "Maps view-source or GMBspy category stacks for MeyerPro, The AV Department, Pro Sound & Lighting" },
+            "currentState": {
+              "competitorData": "search API snapshots"
+            },
+            "requiredState": {
+              "competitorData": "Maps view-source or GMBspy category stacks for MeyerPro, The AV Department, Pro Sound & Lighting"
+            },
             "fixInstructions": "Manual: open each competitor's Maps listing, view-source, extract primary plus secondary categories (technique in gbp-categories.md section 1.5). Diff against the blueprint category set.",
             "agentActionability": "manual",
-            "acceptanceCriteria": [ "Category stacks recorded for top 3", "Blueprint categories confirmed or adjusted" ],
+            "acceptanceCriteria": [
+              "Category stacks recorded for top 3",
+              "Blueprint categories confirmed or adjusted"
+            ],
             "verificationCommand": "n/a (manual)",
-            "effort": "S", "impact": "medium", "closesGate": false
+            "effort": "S",
+            "impact": "medium",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P4-05",
           "level": "note",
-          "message": { "text": "All 79 sitemap URLs share one build-timestamp lastmod, generated from new Date() at build time. Not a per-page freshness signal (OP-57, OP-70)." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "site/app/(site)/sitemap.ts" }, "region": { "startLine": 24 } } } ],
+          "message": {
+            "text": "All 79 sitemap URLs share one build-timestamp lastmod, generated from new Date() at build time. Not a per-page freshness signal (OP-57, OP-70)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "site/app/(site)/sitemap.ts"
+                },
+                "region": {
+                  "startLine": 24
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P4", "priority": "P3", "modes": ["ORGANIC", "AI"],
+            "pillar": "P4",
+            "priority": "P3",
+            "modes": [
+              "ORGANIC",
+              "AI"
+            ],
             "evidence": "audit-evidence/sitemap.xml (two distinct lastmod values across 79 URLs)",
-            "currentState": { "lastmod": "build timestamp for all URLs" },
-            "requiredState": { "lastmod": "real per-content modified date, or omitted" },
+            "currentState": {
+              "lastmod": "build timestamp for all URLs"
+            },
+            "requiredState": {
+              "lastmod": "real per-content modified date, or omitted"
+            },
             "fixInstructions": "Drop lastmod from sitemap entries until a real content-modified source exists (CMS updatedAt per doc is available via Payload).",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "lastmod omitted or reflects real content dates" ],
+            "acceptanceCriteria": [
+              "lastmod omitted or reflects real content dates"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/sitemap.xml | grep -o '<lastmod>[^<]*' | sort -u | wc -l",
-            "effort": "S", "impact": "low", "closesGate": false
+            "effort": "S",
+            "impact": "low",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P3-06",
           "level": "note",
-          "message": { "text": "Deck image alts are generic ('Aku World deck image 4'). Alt text should carry service and local relevance (OP-22)." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/service-drone-light-shows.html" } } } ],
+          "message": {
+            "text": "Deck image alts are generic ('Aku World deck image 4'). Alt text should carry service and local relevance (OP-22)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/service-drone-light-shows.html"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P3", "priority": "P3", "modes": ["ORGANIC"],
+            "pillar": "P3",
+            "priority": "P3",
+            "modes": [
+              "ORGANIC"
+            ],
             "evidence": "audit-evidence/service-drone-light-shows.html, audit-evidence/work.html",
             "beforeSnippet": "alt=\"Aku World deck image 4\"",
             "afterSnippet": "alt=\"Aku World immersive environment build, Miami NFT activation\"",
-            "currentState": { "genericAlts": "many deck images" },
-            "requiredState": { "genericAlts": "none on money pages" },
+            "currentState": {
+              "genericAlts": "many deck images"
+            },
+            "requiredState": {
+              "genericAlts": "none on money pages"
+            },
             "fixInstructions": "Rewrite alt generation for deck/gallery images to use project name plus service plus location from existing project metadata. No stuffing.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "No 'deck image N' alts on service and work pages" ],
+            "acceptanceCriteria": [
+              "No 'deck image N' alts on service and work pages"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app/work | grep -c 'deck image'",
-            "effort": "M", "impact": "low", "closesGate": false
+            "effort": "M",
+            "impact": "low",
+            "closesGate": false
           }
         },
         {
           "ruleId": "P3-07",
           "level": "note",
-          "message": { "text": "Em dashes render in live titles and metadata (Dash Law). content_lint.py output is noisy (1205 flags, mostly Tailwind classes and comments) but genuine prose instances exist in JSON seo blocks." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "audit-evidence/content_lint.txt" } } } ],
+          "message": {
+            "text": "Em dashes render in live titles and metadata (Dash Law). content_lint.py output is noisy (1205 flags, mostly Tailwind classes and comments) but genuine prose instances exist in JSON seo blocks."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "audit-evidence/content_lint.txt"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P3", "priority": "P3", "modes": ["ORGANIC"],
+            "pillar": "P3",
+            "priority": "P3",
+            "modes": [
+              "ORGANIC"
+            ],
             "evidence": "audit-evidence/content_lint.txt, audit-evidence/book.html (title 'Book a Consultation — BEATROX')",
             "beforeSnippet": "'Book a Consultation — BEATROX'",
             "afterSnippet": "'Book a Consultation | BEATROX'",
-            "currentState": { "emDashInTitles": true },
-            "requiredState": { "emDashInTitles": false },
+            "currentState": {
+              "emDashInTitles": true
+            },
+            "requiredState": {
+              "emDashInTitles": false
+            },
             "fixInstructions": "Replace em dashes with pipes or colons in all content JSON seo title/og fields and hardcoded page titles. Most instances get fixed as a side effect of P3-02 and P3-05.",
             "agentActionability": "content",
-            "acceptanceCriteria": [ "No em dash in any rendered title or meta description" ],
+            "acceptanceCriteria": [
+              "No em dash in any rendered title or meta description"
+            ],
             "verificationCommand": "curl -s https://beatrox-website.vercel.app | grep -c $'\\u2014'",
-            "effort": "S", "impact": "low", "closesGate": true
+            "effort": "S",
+            "impact": "low",
+            "closesGate": true
           }
         },
         {
           "ruleId": "P4-06",
           "level": "note",
-          "message": { "text": "schema/schema-beatrox-locbiz.jsonld is orphaned (zero references) and drifts from the live schema (different name string, richer content). Either serve it or delete it; do not leave a stale parallel source of truth." },
-          "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "schema/schema-beatrox-locbiz.jsonld" } } } ],
+          "message": {
+            "text": "schema/schema-beatrox-locbiz.jsonld is orphaned (zero references) and drifts from the live schema (different name string, richer content). Either serve it or delete it; do not leave a stale parallel source of truth."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "schema/schema-beatrox-locbiz.jsonld"
+                }
+              }
+            }
+          ],
           "properties": {
-            "pillar": "P4", "priority": "P3", "modes": ["ORGANIC"],
+            "pillar": "P4",
+            "priority": "P3",
+            "modes": [
+              "ORGANIC"
+            ],
             "evidence": "repo grep: zero references to schema-beatrox-locbiz.jsonld",
-            "currentState": { "served": false, "drift": "name Beatrox LLC vs live BEATROX, 8 offers, has geo" },
-            "requiredState": { "note": "single source of truth in site/lib/schema.ts; harvest geo coords first" },
+            "currentState": {
+              "served": false,
+              "drift": "name Beatrox LLC vs live BEATROX, 8 offers, has geo"
+            },
+            "requiredState": {
+              "note": "single source of truth in site/lib/schema.ts; harvest geo coords first"
+            },
             "fixInstructions": "Harvest the geo coordinates into site/lib/schema.ts (P4-03), then delete the orphaned file on the remediation branch.",
             "agentActionability": "code",
-            "acceptanceCriteria": [ "One schema source of truth", "No orphaned jsonld in repo" ],
+            "acceptanceCriteria": [
+              "One schema source of truth",
+              "No orphaned jsonld in repo"
+            ],
             "verificationCommand": "ls schema/ 2>/dev/null || echo removed",
-            "effort": "S", "impact": "low", "closesGate": false
+            "effort": "S",
+            "impact": "low",
+            "closesGate": false
           }
         }
       ]
@@ -507,8 +1529,17 @@
   ],
   "properties": {
     "convention": {
-      "levels": { "error": "P0 or P1 blocking finding", "warning": "P2 polish", "note": "P3 optional" },
-      "priorities": { "P0": "ranking-critical, suspension-risk, or broken; blocks Elite", "P1": "elite-gap; required for pillar >= 8", "P2": "polish", "P3": "optional" },
+      "levels": {
+        "error": "P0 or P1 blocking finding",
+        "warning": "P2 polish",
+        "note": "P3 optional"
+      },
+      "priorities": {
+        "P0": "ranking-critical, suspension-risk, or broken; blocks Elite",
+        "P1": "elite-gap; required for pillar >= 8",
+        "P2": "polish",
+        "P3": "optional"
+      },
       "agentActionability": {
         "code": "K3 fixes in the codebase",
         "config": "K3 changes configuration or metadata",

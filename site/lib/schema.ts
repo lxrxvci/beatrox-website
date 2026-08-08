@@ -25,16 +25,11 @@ const SOCIAL_PROFILES = [
   'https://www.instagram.com/beatrox/',
 ]
 
-/** Hybrid service area: Portland metro cities plus nationwide project work.
-    Must stay in parity with the GBP service-area list. */
+/** Studio location plus the real operating footprint. Beatrox produces
+    globally; hyper-local (metro city) targeting lives on rentals.beatrox.com,
+    not the main brand site. */
 const AREA_SERVED = [
   { '@type': 'City' as const, name: 'Portland, OR' },
-  { '@type': 'City' as const, name: 'Vancouver, WA' },
-  { '@type': 'City' as const, name: 'Beaverton, OR' },
-  { '@type': 'City' as const, name: 'Lake Oswego, OR' },
-  { '@type': 'City' as const, name: 'Tigard, OR' },
-  { '@type': 'City' as const, name: 'Hillsboro, OR' },
-  { '@type': 'City' as const, name: 'Gresham, OR' },
   { '@type': 'Country' as const, name: 'United States' },
 ]
 

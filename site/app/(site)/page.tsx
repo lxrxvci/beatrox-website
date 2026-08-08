@@ -47,7 +47,7 @@ export default async function HomePage({ preview = false }: { preview?: boolean 
           for repeat visits, reduced-motion users, or crawlers. */}
       <IntroGate
         heroImage={heroImage}
-        headline={data.hero.headline || 'Beatrox Experiential and Event Production in Portland, OR'}
+        headline={data.hero.headline || 'Beatrox Experiential and Event Production'}
         // Same fallback strings HomeHero applies — the intro's beat-3
         // match-frame must reproduce the real hero's exact final layout.
         subheadline={
@@ -67,32 +67,31 @@ export default async function HomePage({ preview = false }: { preview?: boolean 
         <HomeHero {...heroProps} introControlled />
       </section>
 
-      {/* ── Local positioning intro (OP-23: what, who, why trust, with real
-          Portland entities; OP-37: 3+ genuine local references) ──────────── */}
+      {/* ── Positioning intro (OP-23: what, who, why trust). Global brand
+          framing per client direction 2026-08-07: Beatrox is not hyper-local;
+          Portland hyper-local SEO lives on rentals.beatrox.com. ──────────── */}
       <section className="section border-b border-white/10 py-12 lg:py-20">
         <div className="max-w-[1120px] mx-auto">
-          <p className="overline mb-4">Portland, Oregon</p>
+          <p className="overline mb-4">Based in Portland, producing worldwide</p>
           <h2 className="heading-lg mb-6 max-w-3xl">
-            An event production studio in the Central Eastside
+            One team from first sketch to final strike
           </h2>
           <div className="max-w-3xl space-y-5">
             <p className="text-base text-white leading-relaxed">
-              Beatrox is an experiential design and event production company based in
-              Portland&apos;s Central Eastside Industrial District, a few blocks from the
-              Willamette River. From that studio we design, fabricate, and ship productions
-              across the Portland metro, the Pacific Northwest, and nationwide tours.
+              Beatrox is an experiential design and event production company. From our
+              Portland, Oregon studio we design, fabricate, and deploy productions for
+              agencies, brands, and venues across the United States and around the world.
             </p>
             <p className="text-base text-white leading-relaxed">
               Every technical layer stays in house: LED video walls, drone light shows,
               laser shows, projection mapping, custom fabrication, lighting, and audio.
-              Agencies, brands, and venues get one accountable partner from first sketch
-              to final strike, whether the build is a one-night activation downtown or a
-              permanent installation engineered for years of daily operation.
+              One accountable partner, whether the build is a one-night brand activation
+              or a permanent installation engineered for years of daily operation.
             </p>
             <p className="text-base text-white leading-relaxed">
-              Our Portland crew has deployed projection mapping on the Empire State
-              Building, built an AR mirror for Adidas at Super Bowl 2020, and produced
-              immersive brand environments for Netflix at Comic-Con.
+              Our crew has deployed projection mapping on the Empire State Building,
+              built an AR mirror for Adidas at Super Bowl 2020, and produced immersive
+              brand environments for Netflix at Comic-Con.
             </p>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 **Generated 2026-08-07 under explicit user override of the Elite gate (site is NOT Elite yet; composite 34/100). Fields mirror the current website and will need a parity re-check after remediation closes.**
 **Parity source: each field lists the website page or file it matches. All generated text is em dash free and within policy limits.**
+**Strategy note (client direction 2026-08-07): Beatrox is a global brand, not hyper-local. This GBP exists as the verified entity anchor for the Portland studio address and the review surface; it is NOT the hyper-local play. All Portland hyper-local SEO (rental-intent queries, local landing pages) belongs to rentals.beatrox.com. One profile only: a second GBP for the rentals arm at the same address is a suspension risk (GC-06/GC-07).**
 
 ---
 
@@ -27,14 +28,14 @@ Parity: every category above has one or more live website service pages. Verify 
 ## 3. Business Description (<=750 chars, first 250 engineered)
 
 ```
-Beatrox is an experiential design and event production company in Portland, Oregon, producing brand activations, festivals, corporate events, and permanent installations across the Portland metro and nationwide.
+Beatrox is an experiential design and event production company with a studio in Portland, Oregon, producing brand activations, festivals, corporate events, and permanent installations across the United States and worldwide.
 
-Our team designs, builds, and runs every technical layer in house: LED video walls, drone light shows, laser shows, projection mapping, custom fabrication, lighting design, and full audio production. We also rent LED video walls, sound systems, DJ gear, backline, and staging with experienced crew.
+Our team designs, builds, and runs every technical layer in house: LED video walls, drone light shows, laser shows, projection mapping, custom fabrication, lighting design, and full audio production.
 
-From our Central Eastside Portland studio we handle concept, engineering, permits, and show calling, so agencies, brands, and venues get one accountable partner from first sketch to final strike. Founded in 2020, our crew brings over 20 years of touring and broadcast experience to every project.
+Agencies, brands, and venues get one accountable partner from first sketch to final strike. Founded in 2020, our crew brings over 20 years of touring and broadcast experience, from Super Bowl activations to immersive environments for global clients.
 ```
 
-Chars: 745/750 | Parity: homepage hero and services index positioning (site/content/homepage.json, site/content/services-index.json) | Policy: no URLs, no promos, no phone, no ALL-CAPS words, no em dashes.
+Chars: 675/750 | Parity: homepage hero and services index positioning (site/content/homepage.json, site/content/services-index.json) | Policy: no URLs, no promos, no phone, no ALL-CAPS words, no em dashes.
 
 ## 4. Services (mirror website service pages exactly)
 
@@ -77,9 +78,9 @@ Note: open-at-time-of-search is a top pack factor. Never falsify hours.
 - Appointment link: `https://www.beatrox.com/book?utm_source=google&utm_medium=organic&utm_campaign=gbp-appt`
 - GBP landing page decision: homepage. Single location, NAP visible in footer sitewide and on /contact, and no Diversity Update collision because the organic homepage and the pack listing reinforce the same entity.
 
-## 9. Service Area (hybrid: address shown plus areas)
+## 9. Service Area (hybrid: address shown, global brand)
 
-Address hidden: NO (hybrid; storefront receives clients by appointment). Areas (<=20, within ~2h drive): Portland, Vancouver WA, Beaverton, Lake Oswego, Tigard, Tualatin, Hillsboro, Gresham, Milwaukie, Oregon City, Happy Valley, Troutdale, Camas WA, Salem. Nationwide touring work is described in the business description, not as service areas (2-hour rule). Parity: matches areaServed schema once P4-03 closes.
+Address hidden: NO (hybrid; the studio receives clients by appointment). Service areas: keep minimal. Per client direction the brand is global, so do not stack 20 metro cities chasing local rankings. Set `Portland, OR` only, or none at all; the address itself anchors the local entity. GBP service areas do not drive ranking anyway (proximity to the address dominates), and the hyper-local rental play belongs to rentals.beatrox.com content, not this profile. Parity: matches the areaServed schema (Portland, OR plus United States).
 
 ## 10. Media Plan
 

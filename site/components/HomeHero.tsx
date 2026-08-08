@@ -31,7 +31,7 @@ const INTRO_FALLBACK_MS = 10_000
  * below are the original hardcoded strings used when CMS fields are empty.
  */
 export default function HomeHero({
-  headline = 'Beatrox Experiential and Event Production in Portland, OR',
+  headline = 'Beatrox Experiential and Event Production',
   subheadline = 'Laser. Drone. Code. Canvas. We engineer moments that defy expectation.',
   cta = { label: 'See Our Work', url: '/work' },
   secondaryCta = { label: 'Book a Consultation', url: '/book' },

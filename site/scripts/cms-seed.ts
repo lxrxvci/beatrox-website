@@ -148,7 +148,7 @@ async function seed() {
     slug: 'seo-defaults',
     data: {
       siteName: 'BEATROX',
-      defaultTitle: 'Event Production Company Portland, OR | BEATROX',
+      defaultTitle: 'Experiential Design & Event Production | BEATROX',
       titleTemplate: '%s | BEATROX',
       defaultDescription:
         'Portland-based experiential design and event production. Drone light shows, LED video walls, projection mapping, custom fabrication, and full-service event production.',
