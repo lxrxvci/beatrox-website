@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getServicesIndex } from '@/lib/json-content'
-import { getAllServicesResolved, getCapabilityTiles } from '@/lib/content'
+import { getAllServicesResolved, getCapabilityTiles, getFeaturedProjectsResolved } from '@/lib/content'
 import { seoToMetadata } from '@/lib/metadata'
+import { buildFaqSchema, type FaqItem } from '@/lib/schema'
 import ParallaxHero from '@/components/ParallaxHero'
 import CapabilitiesGrid from '@/components/CapabilitiesGrid'
+import BentoWorkGrid from '@/components/BentoWorkGrid'
+import JsonLd from '@/components/JsonLd'
 import RevealOnScroll from '@/components/RevealOnScroll'
 import { EditableGalleryGrid } from '@/components/admin'
 
@@ -118,6 +121,57 @@ const SERVICE_LINK_GROUPS: Array<{
   },
 ]
 
+// Audience strip — the "who we serve" claims, atomized so no paragraph
+// on the page runs long (GPJ/4Wall separator pattern).
+const AUDIENCES: Array<{ label: string; body: string }> = [
+  {
+    label: 'Agencies',
+    body: 'Agencies bring us in when the idea outruns their in-house resources — white-label or side by side, we make the pitch buildable.',
+  },
+  {
+    label: 'Brands',
+    body: 'Brands come directly for one accountable partner instead of five vendors — product launches, world tours, Comic-Con exhibitions, landmark projections.',
+  },
+  {
+    label: 'Venues',
+    body: 'Venues trust us with the permitting, engineering, and safety documentation that ambitious public work demands.',
+  },
+]
+
+// Same featured projects as the homepage teaser — proof break between the
+// service listings.
+const FEATURED_SLUGS = ['run-for-the-oceans', 'aku-world', 'projekt-x', 'myshelter']
+
+// FAQ — question-form keywords live here instead of in intro paragraphs
+// (Gradient pattern). Visible text + FAQPage JSON-LD below.
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: 'What does a full-service event production company do?',
+    answer:
+      'Everything between the idea and the applause: strategy, creative design, engineering, custom fabrication, AV and lighting, permitting, on-site operation, and strike. At Beatrox those disciplines sit under one roof in Portland — one accountable team instead of five vendors.',
+  },
+  {
+    question: 'What is the difference between an experiential marketing agency and an event production company?',
+    answer:
+      'An experiential marketing agency designs the moment — the activation, launch environment, or installation people line up for. An event production company makes it physically real and keeps it running. Beatrox is both: the studio that conceives the experience and the shop that builds, permits, and operates it.',
+  },
+  {
+    question: 'Do you work outside Portland, Oregon?',
+    answer:
+      'Yes. Every service is delivered from our Portland headquarters and travels nationwide — from Oregon Convention Center ballrooms to the Empire State Building. Our crew, inventory, and fabrication ship wherever the production demands.',
+  },
+  {
+    question: 'Can I rent equipment without booking full production?',
+    answer:
+      'Yes. LED video wall rentals, sound equipment rentals, DJ equipment rentals, and backline and stage rental are all available standalone, with experienced technicians — the same touring-grade inventory that powers our full productions.',
+  },
+  {
+    question: 'How far in advance should we start the conversation?',
+    answer:
+      'Earlier than you think. Ambitious public work needs permitting, engineering, and safety documentation, and those lead times are real. Bring us the idea while it is still a sketch — we will scope it, flag the risks, and price the reality.',
+  },
+]
+
 export default async function ServicesPage({ preview = false }: { preview?: boolean }) {
   const services = await getAllServicesResolved(preview)
   const servicesHero = services[0]?.media?.heroImage || '/og-default.jpg'
@@ -127,6 +181,23 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
   // defaults from lib/capabilities.
   const tiles = await getCapabilityTiles()
   const tileItems = tiles.length > 0 ? tiles : undefined
+
+  // Featured work teaser (same source as the homepage WorkTeaser)
+  const featuredProjects = await getFeaturedProjectsResolved(FEATURED_SLUGS)
+  const projectsBySlug = new Map(featuredProjects.map((project) => [project.canonicalSlug, project]))
+  const workProjects = FEATURED_SLUGS.map((slug) => projectsBySlug.get(slug))
+    .filter((project): project is (typeof featuredProjects)[number] => Boolean(project))
+    .map((project) => {
+      const firstImage = project.images?.find((img) => img.url && img.url !== '')
+      return {
+        slug: project.canonicalSlug,
+        title: project.title,
+        client: project.metadata?.client,
+        tags: project.hero?.tags,
+        image: firstImage?.url || project.seo?.og?.image || '/og-default.jpg',
+        alt: firstImage?.alt || project.title,
+      }
+    })
 
   // ItemList schema for the 15 service detail pages (matches the link catalog below)
   const itemListJsonLd = {
@@ -152,84 +223,21 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
         minHeightClass="min-h-[94svh]"
       />
 
-      {/* Intro — crawlable positioning copy: who we are, what the services
-          cover, who we serve, and where we work. Broken into labeled blocks
-          so it stays scannable on mobile instead of a wall of text. */}
+      {/* Intro — one compact keyword paragraph (GES/4Wall pattern); the rest
+          of the SEO copy is distributed through the page: per-service blurbs
+          in the A-to-Z catalog, the audience strip, and the FAQ below. */}
       <section className="section border-b border-white/10">
         <div className="max-w-[1400px] mx-auto">
           <div className="max-w-3xl">
             <h2 className="heading-lg mb-8">
               A Full-Service Event Production Company in <span className="text-[var(--accent)]">Portland, Oregon</span>
             </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-            <div className="space-y-12">
-              <div>
-                <h3 className="overline mb-4">One Partner, End to End</h3>
-                <p className="text-base text-white leading-relaxed">
-                  Beatrox is a full-service event production company headquartered in Portland, Oregon,
-                  and deployed nationwide. Our designers, engineers, fabricators, and technical
-                  directors bring over 20 years of combined experience — one partner accountable from
-                  the first sketch to the final strike. The creative studio, the fabrication shop, the
-                  AV inventory, and the production office all sit under one roof, from intimate brand
-                  activations to festival main stages and permanent installations.
-                </p>
-              </div>
-              <div>
-                <h3 className="overline mb-4">The Full Service Spectrum</h3>
-                <p className="text-base text-white leading-relaxed">
-                  Our services span the entire life of an event.{' '}
-                  <Link href="/services/event-production" className="text-[var(--accent)] hover:underline">Full-service event production</Link>{' '}
-                  and{' '}
-                  <Link href="/services/experiential-events" className="text-[var(--accent)] hover:underline">experiential events</Link>{' '}
-                  cover strategy, planning, and execution end to end.{' '}
-                  <Link href="/services/stage-design" className="text-[var(--accent)] hover:underline">Stage design</Link>{' '}
-                  and{' '}
-                  <Link href="/services/custom-fabrication" className="text-[var(--accent)] hover:underline">custom fabrication</Link>{' '}
-                  turn concepts into structures.{' '}
-                  <Link href="/services/immersive-environments" className="text-[var(--accent)] hover:underline">Immersive environments</Link>,{' '}
-                  <Link href="/services/projection-mapping" className="text-[var(--accent)] hover:underline">projection mapping</Link>, and{' '}
-                  <Link href="/services/multimedia-displays" className="text-[var(--accent)] hover:underline">multimedia displays</Link>{' '}
-                  put the story on every surface.{' '}
-                  <Link href="/services/led-video-wall-rentals" className="text-[var(--accent)] hover:underline">LED video wall rentals</Link>,{' '}
-                  <Link href="/services/audio-production" className="text-[var(--accent)] hover:underline">audio production</Link>,{' '}
-                  <Link href="/services/dj-equipment-rentals" className="text-[var(--accent)] hover:underline">DJ equipment rentals</Link>,{' '}
-                  <Link href="/services/drone-light-shows" className="text-[var(--accent)] hover:underline">drone light shows</Link>, and{' '}
-                  <Link href="/services/laser-shows" className="text-[var(--accent)] hover:underline">laser light shows</Link>{' '}
-                  deliver the spectacle — engineered, permitted, and operated by the same team that
-                  designed it — with{' '}
-                  <Link href="/services/lighting-services" className="text-[var(--accent)] hover:underline">event lighting services</Link>,{' '}
-                  <Link href="/services/sound-equipment-rentals" className="text-[var(--accent)] hover:underline">sound equipment rentals</Link>, and{' '}
-                  <Link href="/services/backline-stage-rental" className="text-[var(--accent)] hover:underline">backline and stage rental</Link>{' '}
-                  rounding out the roster.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-12">
-              <div>
-                <h3 className="overline mb-4">Built for Brands, Agencies &amp; Venues</h3>
-                <p className="text-base text-white leading-relaxed">
-                  As an experiential marketing agency, we build the moments brands can&apos;t buy with
-                  media: activations people line up for, launch environments that become the story,
-                  festival footprints fans choose over the main stage. Agencies bring us in when the
-                  idea outruns their in-house resources; brands come directly for one accountable
-                  partner instead of five vendors; venues trust us with the permitting, engineering,
-                  and safety documentation that ambitious public work demands. Our productions have
-                  carried global brands through product launches, world tours, Comic-Con exhibitions,
-                  and landmark projections — work where there is no second take.
-                </p>
-              </div>
-              <div>
-                <h3 className="overline mb-4">Portland-Based, Deployed Nationwide</h3>
-                <p className="text-base text-white leading-relaxed">
-                  Every service is delivered from our Portland headquarters and travels — from Oregon
-                  Convention Center ballrooms to the Empire State Building. Every engagement starts
-                  with a conversation, not a quote sheet: we scope the idea, flag the risks, and price
-                  the reality. Explore the services below, or book a discovery call and tell us what
-                  you&apos;re trying to build.
-                </p>
-              </div>
-            </div>
+            <p className="text-base text-white leading-relaxed">
+              Beatrox is a full-service event production company and experiential marketing agency —
+              designers, engineers, fabricators, and technical directors under one roof, deployed
+              nationwide from our Portland headquarters. For agencies, brands, and venues that need
+              one accountable partner from the first sketch to the final strike.
+            </p>
           </div>
         </div>
       </section>
@@ -252,6 +260,41 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
           </RevealOnScroll>
         </div>
       </section>
+
+      {/* Audience strip — who we serve, atomized (replaces the old intro
+          paragraphs; keeps the claims on-page in scannable form) */}
+      <section className="section border-b border-white/10">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="overline mb-10">Who We Build For</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
+            {AUDIENCES.map((audience, index) => (
+              <RevealOnScroll key={audience.label} delayMs={index * 120}>
+                <p className="font-mono text-xs text-[var(--accent)] mb-3">{String(index + 1).padStart(2, '0')}</p>
+                <h3 className="heading-sm text-white mb-4">{audience.label}</h3>
+                <p className="text-base text-white leading-relaxed">{audience.body}</p>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Selected work — proof break between the service listings */}
+      {workProjects.length > 0 && (
+        <section className="section border-b border-white/10">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="flex flex-wrap items-end justify-between gap-6 mb-10">
+              <h2 className="heading-lg">Selected Work</h2>
+              <Link
+                href="/work"
+                className="text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:text-[var(--accent)]"
+              >
+                View All Work →
+              </Link>
+            </div>
+            <BentoWorkGrid projects={workProjects} textBelow />
+          </div>
+        </section>
+      )}
 
       {/* Full service catalog — every service page as a text link, including
           the rental pages the tile grid doesn't surface */}
@@ -290,16 +333,34 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      <JsonLd data={buildFaqSchema(FAQ_ITEMS)} />
+
+      {/* FAQ — question-form keyword copy, visible text (Gradient pattern) */}
+      <section className="section border-b border-white/10">
+        <div className="max-w-[1400px] mx-auto">
+          <h2 className="heading-lg mb-10">Questions, <span className="text-[var(--accent)]">Answered</span></h2>
+          <div className="max-w-3xl divide-y divide-white/10">
+            {FAQ_ITEMS.map((item) => (
+              <div key={item.question} className="py-6 first:pt-0 last:pb-0">
+                <h3 className="text-base font-semibold text-white mb-2 flex items-start gap-3">
+                  <span aria-hidden="true" className="text-[var(--accent)] shrink-0">+</span>
+                  {item.question}
+                </h3>
+                <p className="text-base text-white leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Consultation CTA */}
       <section className="section text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="heading-lg mb-5">Book a <span className="text-[var(--accent)]">Consultation</span></h2>
           <p className="text-base text-white leading-relaxed mb-10">
-            Our team of technical and creative directors can help you with your project.
-            We specialize in bringing unique and bespoke ideas to life. We know that every project
-            is different and we can tailor a custom solution that works for you and your budget.
-            Book a discovery call and get professional advice today.
+            Portland-based, deployed nationwide — from Oregon Convention Center ballrooms to the
+            Empire State Building. Tell us what you&apos;re trying to build and we&apos;ll scope the
+            idea, flag the risks, and price the reality.
           </p>
           <Link href="/book" className="btn-primary btn-primary--accent">Book a Discovery Call</Link>
         </div>
