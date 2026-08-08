@@ -50,22 +50,25 @@ Founding year CONFIRMED 2011 (client, 2026-08-08). GBP may offer an AI-drafted d
 
 ## 4. Services (mirror website service pages exactly)
 
-| # | Service name (<=58) | Description (<=300) | Price | Website source |
-|---|--------------------|---------------------|-------|----------------|
-| 1 | Full Service Event Production | Concept to strike: creative direction, technical design, fabrication, crewing, and show calling for brand activations, festivals, and corporate events. One accountable team from first sketch to final strike. | (blank) | /services/event-production |
-| 2 | Experiential Events and Brand Activations | Immersive brand experiences: interactive installations, real-time AR/VR/XR content, and multimedia displays built to be shared. Designed and fabricated in house. | (blank) | /services/experiential-events |
-| 3 | LED Video Wall Rentals | Fine-pitch indoor panels to festival-scale outdoor walls, with processors, rigging, and LED technicians. Dry hire or full show support across the Portland metro and nationwide tours. | (blank) | /services/led-video-wall-rentals |
-| 4 | Drone Light Shows | Custom drone light shows with full FAA compliance, produced with Sky Lites Drone Shows. Choreographed formations for festivals, product launches, and city celebrations. | (blank) | /services/drone-light-shows |
-| 5 | Laser Light Shows | High-power aerial and graphic laser shows for concerts, festivals, and brand events. Variance handling, safety officer, and operation included. | (blank) | /services/laser-shows |
-| 6 | Projection Mapping | Building-scale projection mapping and interactive AR, from brand activations to landmark installs. Content, media servers, and alignment handled in house. | (blank) | /services/projection-mapping |
-| 7 | Custom Fabrication | CNC machining, scenic assembly, and custom builds for stages, booths, and permanent installations. Drafting, engineering certification, and permit submittal support. | (blank) | /services/custom-fabrication |
-| 8 | Lighting Design and Services | Lighting design, integration, and full-service event lighting: consoles, fixtures, and programmers for tours, festivals, and corporate shows. | (blank) | /services/lighting-services |
-| 9 | Sound Equipment Rentals | PA systems, line arrays, monitors, and microphones with audio engineers available. Concert-grade sound for events of any size. | (blank) | /services/sound-equipment-rentals |
-| 10 | DJ Equipment Rentals | Club-standard DJ gear: CDJs, mixers, controllers, and turntables. Delivery, setup, and tech support available across the Portland metro. | (blank) | /services/dj-equipment-rentals |
-| 11 | Backline and Stage Rental | Drum kits, amps, instruments, staging, and rigging for touring artists and festivals. Advance-friendly inventory with crew support. | (blank) | /services/backline-stage-rental |
-| 12 | Event Planning and Logistics | Venue sourcing, permits, site plans, production management, and tour management. The operational backbone behind complex shows. | (blank) | /services/event-planning-logistics |
+**How the editor works:** GBP shows your categories as sections in the services editor. Per Google: "If your business has multiple categories, group services together into sections under the appropriate category." In the most common dashboard variant you must pick one of your categories first, then add the custom service under it. The Section column below is the exact mapping. Also expect Google to auto-populate suggested services scraped from the website; prune anything irrelevant at setup and re-check monthly.
 
-Predefined services: check every category-linked service Google offers that is genuinely delivered (feeds "Provides X" justifications). Custom services: the 12 above. On Appendix B launch, move entries 3, 9, 10, 11 to the rentals profile and keep this list production-only.
+| # | Service name (<=58) | GBP section (category) | Description (<=300) | Price | Website source |
+|---|--------------------|------------------------|---------------------|-------|----------------|
+| 1 | Full Service Event Production | Event management company | Concept to strike: creative direction, technical design, fabrication, crewing, and show calling for brand activations, festivals, and corporate events. One accountable team from first sketch to final strike. | (blank) | /services/event-production |
+| 2 | Event Planning and Logistics | Event management company | Venue sourcing, permits, site plans, production management, and tour management. The operational backbone behind complex shows. | (blank) | /services/event-planning-logistics |
+| 3 | Custom Fabrication | Event management company | CNC machining, scenic assembly, and custom builds for stages, booths, and permanent installations. Drafting, engineering certification, and permit submittal support. | (blank) | /services/custom-fabrication |
+| 4 | Experiential Events and Brand Activations | Marketing agency | Immersive brand experiences: interactive installations, real-time AR/VR/XR content, and multimedia displays built to be shared. Designed and fabricated in house. | (blank) | /services/experiential-events |
+| 5 | Projection Mapping | Event technology service | Building-scale projection mapping and interactive AR, from brand activations to landmark installs. Content, media servers, and alignment handled in house. | (blank) | /services/projection-mapping |
+| 6 | Drone Light Shows | Event technology service | Custom drone light shows with full FAA compliance, produced with Sky Lites Drone Shows. Choreographed formations for festivals, product launches, and city celebrations. | (blank) | /services/drone-light-shows |
+| 7 | Laser Light Shows | Event technology service | High-power aerial and graphic laser shows for concerts, festivals, and brand events. Variance handling, safety officer, and operation included. | (blank) | /services/laser-shows |
+| 8 | Lighting Design and Services | Event technology service | Lighting design, integration, and full-service event lighting: consoles, fixtures, and programmers for tours, festivals, and corporate shows. | (blank) | /services/lighting-services |
+| 9 | LED Video Wall Rentals | Audiovisual equipment rental service | Fine-pitch indoor panels to festival-scale outdoor walls, with processors, rigging, and LED technicians. Dry hire or full show support across the Portland metro and nationwide tours. | (blank) | /services/led-video-wall-rentals |
+| 10 | Sound Equipment Rentals | Audiovisual equipment rental service | PA systems, line arrays, monitors, and microphones with audio engineers available. Concert-grade sound for events of any size. | (blank) | /services/sound-equipment-rentals |
+| 11 | DJ Equipment Rentals | Audiovisual equipment rental service | Club-standard DJ gear: CDJs, mixers, controllers, and turntables. Delivery, setup, and tech support available across the Portland metro. | (blank) | /services/dj-equipment-rentals |
+| 12 | Backline and Stage Rental | Audiovisual equipment rental service | Drum kits, amps, instruments, staging, and rigging for touring artists and festivals. Advance-friendly inventory with crew support. | (blank) | /services/backline-stage-rental |
+| 13 | AV Content and Video Production | Video production service | Show content produced in house: 3D animation, motion capture, real-time renders, and video for LED walls, projection mapping, and broadcast. Post-production and playback engineering included. | (blank) | /services/audio-production + /tech 3D animation pages |
+
+Predefined services: check every category-linked service Google offers that is genuinely delivered (feeds "Provides X" justifications). Custom services: the 13 above. Every category section carries at least one service, which is what evidences the category to Google. On Appendix B launch, move entries 9 to 12 to the rentals profile and keep this list production-only.
 2026 note: Google shows AI-generated service summaries on knowledge panels, assembled from these entries plus the website; exact, consistent naming is the lever.
 
 ## 5. Products
@@ -197,14 +200,16 @@ Dry hire or full show support, single day or multi-week runs. Book online for sa
 
 ### B4. Services (6, mirror rentals.beatrox.com category pages)
 
-| # | Service name | Description (<=300) | Website source |
-|---|--------------|---------------------|----------------|
-| 1 | LED Video Wall Rentals | Fine-pitch indoor to festival-scale outdoor LED walls with processors, rigging, and technicians. Delivery and setup across Portland and the Pacific Northwest. | rentals.beatrox.com LED category |
-| 2 | Sound Equipment Rentals | PA systems, line arrays, monitors, and microphones, concert-grade, with audio engineers available. Serving Portland events of any size. | rentals.beatrox.com sound category |
-| 3 | DJ Equipment Rentals | Club-standard CDJs, mixers, controllers, and turntables with delivery, setup, and tech support across the Portland metro. | rentals.beatrox.com DJ category |
-| 4 | Backline and Stage Rental | Drum kits, amps, instruments, staging, and rigging for touring artists and festivals. Advance-friendly inventory with crew support. | rentals.beatrox.com backline category |
-| 5 | Lighting System Rentals | Event lighting packages: moving heads, washes, consoles, and control, with programmers available for shows across the Pacific Northwest. | rentals.beatrox.com lighting category |
-| 6 | Laser System Rentals | High-power laser systems with variance handling and safety officer included, for concerts, festivals, and brand events in Portland and beyond. | rentals.beatrox.com laser category |
+Same editor mechanics as the main profile: categories appear as sections; add each custom service under the section named below. DJ gear sits under Party equipment rental service deliberately: it is the consumer-intent category and needs at least one service as evidence.
+
+| # | Service name | GBP section (category) | Description (<=300) | Website source |
+|---|--------------|------------------------|---------------------|----------------|
+| 1 | LED Video Wall Rentals | Audiovisual equipment rental service | Fine-pitch indoor to festival-scale outdoor LED walls with processors, rigging, and technicians. Delivery and setup across Portland and the Pacific Northwest. | rentals.beatrox.com LED category |
+| 2 | Sound Equipment Rentals | Audiovisual equipment rental service | PA systems, line arrays, monitors, and microphones, concert-grade, with audio engineers available. Serving Portland events of any size. | rentals.beatrox.com sound category |
+| 3 | Backline and Stage Rental | Audiovisual equipment rental service | Drum kits, amps, instruments, staging, and rigging for touring artists and festivals. Advance-friendly inventory with crew support. | rentals.beatrox.com backline category |
+| 4 | DJ Equipment Rentals | Party equipment rental service | Club-standard CDJs, mixers, controllers, and turntables with delivery, setup, and tech support across the Portland metro. | rentals.beatrox.com DJ category |
+| 5 | Lighting System Rentals | Event technology service | Event lighting packages: moving heads, washes, consoles, and control, with programmers available for shows across the Pacific Northwest. | rentals.beatrox.com lighting category |
+| 6 | Laser System Rentals | Event technology service | High-power laser systems with variance handling and safety officer included, for concerts, festivals, and brand events in Portland and beyond. | rentals.beatrox.com laser category |
 
 ### B5. Links and Diversity Update split
 - Website: `https://rentals.beatrox.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing`
