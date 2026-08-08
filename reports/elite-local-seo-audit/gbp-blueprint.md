@@ -82,8 +82,9 @@ Set after category selection reveals the available set. Candidates: wheelchair a
 ## 7. Hours and Opening Date
 
 - Opening date: set to the 2011 date on the Beatrox LLC registration (client to supply exact month and day). Google displays "15+ years in business" in local results; if left unset, Google infers the date from third parties and is often wrong.
-- Regular: Mon to Fri 9:00 AM to 6:00 PM, Sat to Sun closed. Parity DONE: stated on /contact and in openingHoursSpecification (site/lib/schema.ts:120-127).
-- Website copy fix queued: /contact says "PST"; Portland observes PDT in summer. Change to "PT" in the next content release.
+- Regular (client-set in GBP 2026-08-08, pending review at capture): Sunday 11:00 AM to 10:00 PM; Monday to Thursday 12:00 PM to 10:00 PM; Friday 12:00 PM to 2:00 AM; Saturday 11:00 AM to 2:00 AM. KNOWN TYPO: GBP shows Tuesday opening 12:00 AM; client confirmed 2026-08-08 it should be 12:00 PM. Fix in the GBP dashboard.
+- Parity DONE: /contact copy and openingHoursSpecification (site/lib/schema.ts) both updated to this exact schedule on 2026-08-08 (overnight closes use Google's single-spec late-night pattern). rentals.beatrox.com schema mirrors it (Appendix B parity).
+- Website copy fix DONE: /contact now says "PT" instead of "PST".
 - Special hours: set proactively for all public holidays when Google prompts.
 - More hours: "Online service hours" only if consultations genuinely happen outside office hours.
 - Open-at-time-of-search is a top-5 pack factor in 2026. Never falsify hours.
