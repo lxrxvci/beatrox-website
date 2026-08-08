@@ -6,8 +6,6 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
 import { AdminEditProvider, AdminOverlay } from '@/components/admin'
-import JsonLd from '@/components/JsonLd'
-import { buildLocalBusinessSchema, buildOrganizationSchema } from '@/lib/schema'
 import { Analytics } from '@vercel/analytics/react'
 import { getSeoDefaults, getSiteStyles } from '@/lib/content'
 
@@ -94,8 +92,8 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
       <body>
         <div className="bg-black text-white antialiased" style={cssVars}>
-          <JsonLd data={buildOrganizationSchema()} />
-          <JsonLd data={buildLocalBusinessSchema()} />
+          {/* Entity schema lives on the homepage only (OP-07/OP-08): a single
+              LocalBusiness with a stable @id, never duplicated sitewide. */}
           <a href="#main-content" className="skip-link">
             Skip to content
           </a>

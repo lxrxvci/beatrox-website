@@ -12,6 +12,8 @@ import TeamTeaser from '@/components/home/TeamTeaser'
 import ContactSection from '@/components/home/ContactSection'
 import IntroGate from '@/components/intro/IntroGate'
 import { MONTAGE_IMAGES } from '@/components/intro/montage-images'
+import JsonLd from '@/components/JsonLd'
+import { buildLocalBusinessSchema } from '@/lib/schema'
 
 export const revalidate = 300
 
@@ -37,11 +39,15 @@ export default async function HomePage({ preview = false }: { preview?: boolean 
 
   return (
     <>
+      {/* Single source of entity truth: full LocalBusiness with stable @id
+          on the homepage only; other pages reference it by @id (OP-07/08). */}
+      <JsonLd data={buildLocalBusinessSchema()} />
+
       {/* First-visit intro overlay — client-gated, zero SSR; nothing renders
           for repeat visits, reduced-motion users, or crawlers. */}
       <IntroGate
         heroImage={heroImage}
-        headline={data.hero.headline || 'Building Unforgettable Worlds'}
+        headline={data.hero.headline || 'Beatrox Experiential and Event Production in Portland, OR'}
         // Same fallback strings HomeHero applies — the intro's beat-3
         // match-frame must reproduce the real hero's exact final layout.
         subheadline={
@@ -59,6 +65,37 @@ export default async function HomePage({ preview = false }: { preview?: boolean 
       <section className="relative min-h-[100svh] flex flex-col justify-end hero overflow-hidden bg-black border-b border-white/10">
         <HeroMedia imageSrc={heroImage} imageAlt="BEATROX hero media" />
         <HomeHero {...heroProps} introControlled />
+      </section>
+
+      {/* ── Local positioning intro (OP-23: what, who, why trust, with real
+          Portland entities; OP-37: 3+ genuine local references) ──────────── */}
+      <section className="section border-b border-white/10 py-12 lg:py-20">
+        <div className="max-w-[1120px] mx-auto">
+          <p className="overline mb-4">Portland, Oregon</p>
+          <h2 className="heading-lg mb-6 max-w-3xl">
+            An event production studio in the Central Eastside
+          </h2>
+          <div className="max-w-3xl space-y-5">
+            <p className="text-base text-white leading-relaxed">
+              Beatrox is an experiential design and event production company based in
+              Portland&apos;s Central Eastside Industrial District, a few blocks from the
+              Willamette River. From that studio we design, fabricate, and ship productions
+              across the Portland metro, the Pacific Northwest, and nationwide tours.
+            </p>
+            <p className="text-base text-white leading-relaxed">
+              Every technical layer stays in house: LED video walls, drone light shows,
+              laser shows, projection mapping, custom fabrication, lighting, and audio.
+              Agencies, brands, and venues get one accountable partner from first sketch
+              to final strike, whether the build is a one-night activation downtown or a
+              permanent installation engineered for years of daily operation.
+            </p>
+            <p className="text-base text-white leading-relaxed">
+              Our Portland crew has deployed projection mapping on the Empire State
+              Building, built an AR mirror for Adidas at Super Bowl 2020, and produced
+              immersive brand environments for Netflix at Comic-Con.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* ── Continuous-scroll teaser panels ──────────────────────────────── */}

@@ -22,61 +22,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const rootPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/work`,
-      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/services`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/tech`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/team`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/book`,
-      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/contact`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/videos`,
-      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/case-studies`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
@@ -87,14 +77,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const projectPages: MetadataRoute.Sitemap = projectSlugs.map(slug => ({
     url: `${BASE_URL}/work/${slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
   const servicePages: MetadataRoute.Sitemap = serviceSlugs.map(slug => ({
     url: `${BASE_URL}/services/${slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -102,14 +90,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Tech capabilities live at /tech/* (pageType 'tech'), excluded from /services above.
   const techPages: MetadataRoute.Sitemap = techSlugs.map(slug => ({
     url: `${BASE_URL}/tech/${slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
   const caseStudyPages: MetadataRoute.Sitemap = caseStudySlugs.map(slug => ({
     url: `${BASE_URL}/case-studies/${slug}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -118,7 +104,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((video) => !video.noindex)
     .map((video) => ({
       url: `${BASE_URL}/videos/${video.id}`,
-      lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.5,
     }))

@@ -269,7 +269,7 @@ export async function importPages(token) {
     'seo-defaults',
     {
       siteName: 'BEATROX',
-      defaultTitle: 'BEATROX — Experiential Design & Event Production',
+      defaultTitle: 'Event Production Company Portland, OR | BEATROX',
       titleTemplate: '%s | BEATROX',
       defaultDescription:
         'Portland-based experiential design and event production. Drone light shows, LED video walls, projection mapping, custom fabrication, and full-service event production.',

@@ -11,7 +11,7 @@ import { api, assertCredentials, login, BASE_URL } from './cms-import-utils.mjs'
  * (CMS_SEED_EMAIL / CMS_SEED_PASSWORD come from .env)
  */
 
-const HEADLINE = 'Building Unforgettable Worlds'
+const HEADLINE = 'Beatrox Experiential and Event Production in Portland, OR'
 const SECONDARY_CTA_URL = '/book'
 
 async function main() {

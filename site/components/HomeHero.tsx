@@ -31,7 +31,7 @@ const INTRO_FALLBACK_MS = 10_000
  * below are the original hardcoded strings used when CMS fields are empty.
  */
 export default function HomeHero({
-  headline = 'Building Unforgettable Worlds',
+  headline = 'Beatrox Experiential and Event Production in Portland, OR',
   subheadline = 'Laser. Drone. Code. Canvas. We engineer moments that defy expectation.',
   cta = { label: 'See Our Work', url: '/work' },
   secondaryCta = { label: 'Book a Consultation', url: '/book' },
@@ -102,6 +102,17 @@ export default function HomeHero({
           {secondaryCta.label}
         </MagneticButton>
       </motion.div>
+
+      {/* Trust signal adjacent to the CTAs (OP-49); every name is verifiable
+          in the /work portfolio. */}
+      <motion.p
+        className="mono mt-8 text-xs uppercase tracking-[0.18em] text-white/70"
+        initial={{ opacity: 0 }}
+        animate={active ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.6, delay: 1.5 }}
+      >
+        Trusted on productions for Super Bowl 2020, BuzzFeed, and Adidas
+      </motion.p>
     </div>
   )
 }

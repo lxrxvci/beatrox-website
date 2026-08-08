@@ -1,0 +1,38 @@
+Query space: "event production company portland" / "event management company portland"
+Date captured: 2026-08-07 (via web search API, not live Google local pack)
+
+Top organic/local-style results observed:
+1. West Coast Event Productions, Inc. - https://wcep.com/
+   "Event production, design and rental company based in Portland, Oregon.
+    40+ years, three locations." Wedding/rental-heavy (tents, decor, lighting).
+   WeddingWire profile: https://www.weddingwire.com/biz/west-coast-event-productions-portland/7c31888c963b5303.html
+   ("30 years... recognized as one of the top ten event production companies nationwide";
+    mixed review snippet re: rental cost vs quality)
+2. MeyerPro - https://meyerproinc.com/
+   "Audio Visual Event Production in Seattle & Portland. LED video walls, live sound,
+    livestream production for conferences, galas, broadcast events."
+   AV Alliance (2025-12-05, https://avalliance.com/the-av-alliance-welcomes-meyerpro-from-seattle-usa/):
+   "headquarters in Portland, OR... founded 41 years ago as a family business,
+    doubled revenue in last 5 years, workforce +150%."
+   Deep per-service pages:
+     /event-production-services/ (live-event-av-services, portland-corporate-event-av,
+       nonprofit, live-av-event-services - mentions LED walls + projection mapping)
+     /av-equipment/equipment-rentals/ and /av-equipment/sales/ (LED walls, cameras,
+       audio, comms, projection, switching; dry hire or full show support)
+3. The AV Department - https://theavdept.com/rentals/ (fetched full text)
+   Full-service AV production + rentals, Portland (503-442-4882). Nav shows per-service
+   pages: Event Production (with Venue Photo Gallery), Live Streaming/Virtual Events,
+   Video Production, AV Rentals (itemized published price list), Studios, Blog.
+   Google reviews per DesignRush profile: 5.0 (5 reviews)
+   https://www.designrush.com/agency/profile/the-av-department
+4. Portland Productions - https://www.portlandproductions.net/
+   "Experiential event production company. Stages, lighting, audio, scenic, video,
+    custom event solutions." (Address string in snippet ambiguous - verify locality.)
+5. Party To Go-Go - https://www.partytogogo.com/ (event PLANNER, weddings/launches)
+6. Audio Visual PNW - https://www.audiovisualpnw.com/event-services
+   Portland OR 97203. AV event support: staging, lighting/audio design, set design,
+   livestreaming studio. MapQuest categories: Audio/Visual Equipment Rental,
+   Event Planning, Event Production (https://www.mapquest.com/us/oregon/audio-visual-pnw-519890660)
+7. Clutch list (video/live-event production, Portland): Silverman Studios, GMS Media,
+   The Hood Collective - mostly video-production shops, not live-event production.
+   https://clutch.co/agencies/video-production/live-event/portland

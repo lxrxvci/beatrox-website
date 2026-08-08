@@ -81,6 +81,18 @@ export default async function ContactPage({ preview = false }: { preview?: boole
                 </a>
               </div>
             </div>
+
+            {/* Embedded Google Map of the studio (OP-50); keyless embed,
+                lazy-loaded, reinforces the geo signal for GBP parity. */}
+            <div className="mt-10 md:mt-12 border border-white/10">
+              <iframe
+                title="Beatrox location map: 1313 SE 3rd Ave, Portland, OR 97214"
+                src="https://maps.google.com/maps?q=1313%20SE%203rd%20Ave%2C%20Portland%2C%20OR%2097214&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-[320px] md:h-[400px] block"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </section>

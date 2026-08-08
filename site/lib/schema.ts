@@ -1,38 +1,77 @@
-export interface OrganizationSchema {
-  '@context': 'https://schema.org'
-  '@type': 'Organization'
-  name: string
-  url: string
-  logo: string
-  address?: {
-    '@type': 'PostalAddress'
-    streetAddress: string
-    addressLocality: string
-    addressRegion: string
-    postalCode: string
-    addressCountry: string
-  }
-  sameAs?: string[]
+import { getAllServices } from './json-content'
+
+const SITE_URL = 'https://www.beatrox.com'
+
+/** Stable entity @id, reused anywhere the business is referenced (OP-05). */
+export const LOCALBUSINESS_ID = `${SITE_URL}/#localbusiness`
+
+const POSTAL_ADDRESS = {
+  '@type': 'PostalAddress' as const,
+  streetAddress: '1313 SE 3rd Ave',
+  addressLocality: 'Portland',
+  addressRegion: 'OR',
+  postalCode: '97214',
+  addressCountry: 'US',
 }
+
+const GEO = {
+  '@type': 'GeoCoordinates' as const,
+  latitude: 45.5134853,
+  longitude: -122.6629198,
+}
+
+const SOCIAL_PROFILES = [
+  'https://www.youtube.com/@beatrox',
+  'https://www.instagram.com/beatrox/',
+]
+
+/** Hybrid service area: Portland metro cities plus nationwide project work.
+    Must stay in parity with the GBP service-area list. */
+const AREA_SERVED = [
+  { '@type': 'City' as const, name: 'Portland, OR' },
+  { '@type': 'City' as const, name: 'Vancouver, WA' },
+  { '@type': 'City' as const, name: 'Beaverton, OR' },
+  { '@type': 'City' as const, name: 'Lake Oswego, OR' },
+  { '@type': 'City' as const, name: 'Tigard, OR' },
+  { '@type': 'City' as const, name: 'Hillsboro, OR' },
+  { '@type': 'City' as const, name: 'Gresham, OR' },
+  { '@type': 'Country' as const, name: 'United States' },
+]
 
 export interface LocalBusinessSchema {
   '@context': 'https://schema.org'
   '@type': 'LocalBusiness'
+  '@id': string
   name: string
+  legalName?: string
   url: string
   logo: string
-  address: {
-    '@type': 'PostalAddress'
-    streetAddress: string
-    addressLocality: string
-    addressRegion: string
-    postalCode: string
-    addressCountry: string
-  }
+  image: string
+  address: typeof POSTAL_ADDRESS
+  geo: typeof GEO
+  hasMap: string
+  openingHoursSpecification?: {
+    '@type': 'OpeningHoursSpecification'
+    dayOfWeek: string[]
+    opens: string
+    closes: string
+  }[]
   sameAs?: string[]
   telephone?: string
-  areaServed?: string
+  areaServed?: typeof AREA_SERVED
   priceRange?: string
+  hasOfferCatalog?: {
+    '@type': 'OfferCatalog'
+    name: string
+    itemListElement: {
+      '@type': 'Offer'
+      itemOffered: {
+        '@type': 'Service'
+        name: string
+        url: string
+      }
+    }[]
+  }
 }
 
 export interface ServiceSchema {
@@ -42,32 +81,29 @@ export interface ServiceSchema {
   description: string
   provider: {
     '@type': 'Organization'
+    '@id': string
     name: string
     url: string
   }
-  areaServed?: string
+  areaServed?: typeof AREA_SERVED
   serviceType?: string
 }
 
-export function buildOrganizationSchema(): OrganizationSchema {
+/** Offer catalog generated from the services content source so schema,
+    GBP Services, and the website never drift apart (OP-06, GBP-08). */
+function buildOfferCatalog(): NonNullable<LocalBusinessSchema['hasOfferCatalog']> {
+  const bareSlug = (slug: string) => slug.replace(/^\/(services|tech)\/+/, '')
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'BEATROX',
-    url: 'https://www.beatrox.com',
-    logo: 'https://www.beatrox.com/og-default.jpg',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '1313 SE 3rd Ave',
-      addressLocality: 'Portland',
-      addressRegion: 'OR',
-      postalCode: '97214',
-      addressCountry: 'US',
-    },
-    sameAs: [
-      'https://www.youtube.com/@beatrox',
-      'https://www.instagram.com/beatrox/',
-    ],
+    '@type': 'OfferCatalog',
+    name: 'Beatrox Services',
+    itemListElement: getAllServices().map((service) => ({
+      '@type': 'Offer' as const,
+      itemOffered: {
+        '@type': 'Service' as const,
+        name: service.title,
+        url: `${SITE_URL}/${service.pageType === 'tech' ? 'tech' : 'services'}/${bareSlug(service.slug)}`,
+      },
+    })),
   }
 }
 
@@ -75,24 +111,30 @@ export function buildLocalBusinessSchema(): LocalBusinessSchema {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'BEATROX',
-    url: 'https://www.beatrox.com',
-    logo: 'https://www.beatrox.com/og-default.jpg',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '1313 SE 3rd Ave',
-      addressLocality: 'Portland',
-      addressRegion: 'OR',
-      postalCode: '97214',
-      addressCountry: 'US',
-    },
-    sameAs: [
-      'https://www.youtube.com/@beatrox',
-      'https://www.instagram.com/beatrox/',
+    '@id': LOCALBUSINESS_ID,
+    name: 'Beatrox',
+    legalName: 'Beatrox LLC',
+    url: SITE_URL,
+    logo: `${SITE_URL}/og-default.jpg`,
+    image: `${SITE_URL}/og-default.jpg`,
+    address: POSTAL_ADDRESS,
+    geo: GEO,
+    hasMap:
+      'https://www.google.com/maps/search/?api=1&query=1313+SE+3rd+Ave%2C+Portland%2C+OR+97214',
+    // Matches the hours stated on /contact; GBP hours must match these exactly.
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
     ],
+    sameAs: SOCIAL_PROFILES,
     telephone: '+15035154715',
-    areaServed: 'Portland, OR and worldwide',
+    areaServed: AREA_SERVED,
     priceRange: '$$$',
+    hasOfferCatalog: buildOfferCatalog(),
   }
 }
 
@@ -108,10 +150,11 @@ export function buildServiceSchema(
     description,
     provider: {
       '@type': 'Organization',
-      name: 'BEATROX',
-      url: 'https://www.beatrox.com',
+      '@id': LOCALBUSINESS_ID,
+      name: 'Beatrox',
+      url: SITE_URL,
     },
-    areaServed: 'Portland, OR and worldwide',
+    areaServed: AREA_SERVED,
     serviceType: serviceType || 'Experiential Design & Event Production',
   }
 }

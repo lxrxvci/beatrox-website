@@ -3,7 +3,10 @@ import type { SeoMeta } from './content'
 
 export function seoToMetadata(seo: SeoMeta, canonicalPath?: string): Metadata {
   return {
-    title: seo.title,
+    // Bypass the root layout's "%s | BEATROX" title template when the SEO
+    // title already carries the brand, otherwise titles render as
+    // "Services | BEATROX | BEATROX" (OP-13/OP-14).
+    title: /beatrox/i.test(seo.title) ? { absolute: seo.title } : seo.title,
     description: seo.description,
     // Resolved against metadataBase (root layout: https://www.beatrox.com).
     ...(canonicalPath ? { alternates: { canonical: canonicalPath } } : {}),

@@ -18,8 +18,10 @@ export default function Footer() {
               height={2102}
               className="h-24 w-auto mb-5"
             />
+            {/* NAP must concatenate to the GBP address char-for-char:
+                "1313 SE 3rd Ave, Portland, OR 97214" (OP-61). */}
             <p className="text-sm text-white leading-relaxed">
-              {data.address.street}<br />
+              {data.address.street},<br />
               {data.address.city}, {data.address.state} {data.address.zip}
             </p>
             <a
@@ -56,7 +58,7 @@ export default function Footer() {
             ))}
             {/* Rentals lives on a separate SPA deployment — plain external anchor, no Next prefetch. */}
             <a
-              href="https://app-ruby-pi-32.vercel.app/"
+              href="https://rentals.beatrox.com/"
               className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-[var(--accent)] transition-colors w-fit"
             >
               Rentals

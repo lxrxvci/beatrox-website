@@ -6,8 +6,10 @@ import KineticHeading from '@/components/KineticHeading'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Book a Consultation — BEATROX',
+    // Absolute: carries the brand, so bypass the layout's "| BEATROX" template.
+    title: { absolute: 'Book a Consultation | BEATROX' },
     description: 'Schedule a free discovery call or site visit with the BEATROX team.',
+    alternates: { canonical: '/book' },
   }
 }
 
