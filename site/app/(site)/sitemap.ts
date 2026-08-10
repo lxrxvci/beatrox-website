@@ -27,7 +27,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const rootPages: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL,
+      // Trailing slash matches the canonical homepage URL exactly; without it
+      // GSC doesn't attribute this sitemap as the referring sitemap for "/".
+      url: `${BASE_URL}/`,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
