@@ -195,6 +195,9 @@ export const Services: CollectionConfig = {
             { name: 'answer', type: 'textarea' },
           ],
         },
+        // Handoff blocks link out to the rentals site (e.g. rentals.beatrox.com).
+        { name: 'linkLabel', type: 'text' },
+        { name: 'linkUrl', type: 'text' },
       ],
     },
     {

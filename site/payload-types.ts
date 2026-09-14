@@ -558,6 +558,8 @@ export interface Service {
               id?: string | null;
             }[]
           | null;
+        linkLabel?: string | null;
+        linkUrl?: string | null;
         id?: string | null;
       }[]
     | null;
@@ -2668,6 +2670,8 @@ export interface ServicesSelect<T extends boolean = true> {
               answer?: T;
               id?: T;
             };
+        linkLabel?: T;
+        linkUrl?: T;
         id?: T;
       };
   contentBlocks?:

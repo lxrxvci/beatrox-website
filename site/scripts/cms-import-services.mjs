@@ -29,6 +29,9 @@ function mapBody(body) {
         ? { question: String(item.question || ''), answer: String(item.answer || '') }
         : { value: String(item ?? '') },
     ),
+    // Handoff blocks carry an outbound link to the rentals site.
+    linkLabel: block.linkLabel || '',
+    linkUrl: block.linkUrl || '',
   }))
 }
 
