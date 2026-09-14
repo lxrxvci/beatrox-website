@@ -105,7 +105,7 @@ Nathan's 12-step draft is sound. Corrections from current docs (full cited repor
 
 ### Phase 1 — Legal pages (unblocks everything; ~1 day + review)
 
-1. Publish the ToS Nathan sent as `/terms` on beatrox.com (markdown → page component; effective date Sep 12, 2026). Add canonical + metadata; add to sitemap.
+1. Publish the ToS Nathan sent as `/terms-and-conditions` on beatrox.com (markdown → page component; effective date Sep 12, 2026; `/terms` + `/terms-of-service` 301 to it — slug per Nathan 2026-09-14). Canonical + metadata + sitemap entry.
 2. Draft and publish **Privacy Policy** at `/privacy` — must include the 10DLC mobile-data clause ("No mobile information will be shared with third parties or affiliates for marketing or promotional purposes") and cover GA4, contact/booking forms, rentals transactions.
 3. Draft **SMS Terms & Conditions** (8 required elements: program name, description, msg & data rates, frequency, support contact, **bolded HELP/STOP**, privacy link, carrier non-liability) — either a `/sms-terms` page or a dedicated section linked wherever numbers are collected.
 4. Footer: add Terms / Privacy links (and SMS terms where relevant) — `site/components/Footer.tsx`.
