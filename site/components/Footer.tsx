@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getContact } from '@/lib/json-content'
+import TrackedPhoneLink from '@/components/TrackedPhoneLink'
+import TrackedRentalsLink from '@/components/TrackedRentalsLink'
 
 export default function Footer() {
   const data = getContact()
@@ -33,12 +35,13 @@ export default function Footer() {
             >
               {data.contact.email}
             </a>
-            <a
+            <TrackedPhoneLink
               href={`tel:${data.contact.phone}`}
+              linkLocation="footer"
               className="text-sm text-white hover:text-white transition-colors block mt-1"
             >
               {data.contact.phoneFormatted}
-            </a>
+            </TrackedPhoneLink>
           </div>
 
           {/* Nav */}
@@ -60,12 +63,13 @@ export default function Footer() {
               </Link>
             ))}
             {/* Rentals lives on a separate SPA deployment: plain external anchor, no Next prefetch. */}
-            <a
+            <TrackedRentalsLink
               href="https://rentals.beatrox.com/"
+              linkLocation="footer"
               className="text-sm font-semibold tracking-[0.14em] uppercase text-white hover:text-[var(--accent)] transition-colors w-fit"
             >
               Rentals
-            </a>
+            </TrackedRentalsLink>
           </div>
 
           {/* Social */}
@@ -91,9 +95,26 @@ export default function Footer() {
 
         <div className="divider mb-6" />
 
-        <p className="text-xs text-white tracking-[0.16em] uppercase">
-          © {new Date().getFullYear()} Beatrox LLC. All rights reserved.
-        </p>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="text-xs text-white tracking-[0.16em] uppercase">
+            © {new Date().getFullYear()} Beatrox LLC. All rights reserved.
+          </p>
+          <nav className="flex flex-wrap gap-x-6 gap-y-2">
+            {[
+              ['Terms of Service', '/terms'],
+              ['Privacy Policy', '/privacy'],
+              ['SMS Terms', '/sms-terms'],
+            ].map(([label, href]) => (
+              <Link
+                key={href}
+                href={href}
+                className="text-xs tracking-[0.16em] uppercase text-white hover:text-[var(--accent)] transition-colors w-fit"
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   )

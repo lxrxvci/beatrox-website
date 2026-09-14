@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { readManifest } from '@/lib/youtube/storage'
+import { buildVideoObjectSchema } from '@/lib/schema'
+import JsonLd from '@/components/JsonLd'
 import CTASection from '@/components/CTASection'
 
 interface Props {
@@ -53,24 +55,6 @@ export default async function VideoDetailPage({ params }: Props) {
   const video = getVideo(videoId)
   if (!video) notFound()
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoObject',
-    name: video.title,
-    description: video.description,
-    thumbnailUrl: Object.values(video.thumbnails)
-      .map((item) => item.url)
-      .filter(Boolean),
-    uploadDate: video.publishedAt,
-    duration: video.duration,
-    embedUrl: video.embedUrl,
-    contentUrl: video.url,
-    potentialAction: {
-      '@type': 'WatchAction',
-      target: video.url,
-    },
-  }
-
   return (
     <>
       <section className="section">
@@ -106,7 +90,9 @@ export default async function VideoDetailPage({ params }: Props) {
           </div>
         </div>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        {/* VideoObject only on indexable pages: structured data on a noindex
+            URL is never eligible for rich results. */}
+        {!video.noindex && <JsonLd data={buildVideoObjectSchema(video)} />}
       </section>
 
       <CTASection

@@ -49,6 +49,22 @@ const nextConfig: NextConfig = {
         destination: '/work',
         permanent: true,
       },
+      {
+        source: '/portfolio/:path*',
+        destination: '/work',
+        permanent: true,
+      },
+      // Convenience aliases for the legal pages.
+      {
+        source: '/terms-of-service',
+        destination: '/terms',
+        permanent: true,
+      },
+      {
+        source: '/privacy-policy',
+        destination: '/privacy',
+        permanent: true,
+      },
       // Legacy rental pages -> matching category on the rentals app.
       {
         source: '/sound-equipment-rentals',

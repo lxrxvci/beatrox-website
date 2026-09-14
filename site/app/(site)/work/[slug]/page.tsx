@@ -9,7 +9,7 @@ import { getImageDimensions } from '@/lib/image-dimensions'
 import { seoToMetadata } from '@/lib/metadata'
 import { truncateAtWord } from '@/lib/text'
 import JsonLd from '@/components/JsonLd'
-import { buildBreadcrumbSchema } from '@/lib/schema'
+import { buildBreadcrumbSchema, buildCreativeWorkSchema } from '@/lib/schema'
 import VideoEmbedStrip from '@/components/VideoEmbedStrip'
 import ProjectGallery from '@/components/ProjectGallery'
 import MetadataSchematic from '@/components/MetadataSchematic'
@@ -368,10 +368,18 @@ export default async function ProjectPage({ params, preview = false }: Props) {
         </div>
       </section>
       <JsonLd
-        data={buildBreadcrumbSchema([
-          { name: 'Work', path: '/work' },
-          { name: project.title, path: `/work/${canonicalSlug}` },
-        ])}
+        data={[
+          buildCreativeWorkSchema({
+            name: project.title,
+            path: `/work/${canonicalSlug}`,
+            description: project.seo.description || project.hero.subheadline,
+            image: project.seo.og.image,
+          }),
+          buildBreadcrumbSchema([
+            { name: 'Work', path: '/work' },
+            { name: project.title, path: `/work/${canonicalSlug}` },
+          ]),
+        ]}
       />
     </ThemedProjectShell>
   )

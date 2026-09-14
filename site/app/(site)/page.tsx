@@ -13,7 +13,7 @@ import ContactSection from '@/components/home/ContactSection'
 import IntroGate from '@/components/intro/IntroGate'
 import { MONTAGE_IMAGES } from '@/components/intro/montage-images'
 import JsonLd from '@/components/JsonLd'
-import { buildLocalBusinessSchema } from '@/lib/schema'
+import { buildLocalBusinessSchema, buildWebSiteSchema } from '@/lib/schema'
 
 export const revalidate = 300
 
@@ -41,7 +41,7 @@ export default async function HomePage({ preview = false }: { preview?: boolean 
     <>
       {/* Single source of entity truth: full LocalBusiness with stable @id
           on the homepage only; other pages reference it by @id (OP-07/08). */}
-      <JsonLd data={buildLocalBusinessSchema()} />
+      <JsonLd data={[buildLocalBusinessSchema(), buildWebSiteSchema()]} />
 
       {/* First-visit intro overlay, client-gated, zero SSR; nothing renders
           for repeat visits, reduced-motion users, or crawlers. */}

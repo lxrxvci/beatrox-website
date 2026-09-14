@@ -1638,6 +1638,53 @@ export async function getCMSPageSlugs(): Promise<string[]> {
   }
 }
 
+export interface CMSPageSitemapEntry {
+  slug: string
+  updatedAt?: string
+}
+
+/** Sitemap-facing variant of getCMSPageSlugs: same published/enabled scope,
+    plus the seo.noindex exclusion (Pages.ts:213) and the doc updatedAt for
+    lastModified. Kept separate so generateStaticParams keeps pre-rendering
+    noindex pages. */
+export async function getCMSPageSitemapEntries(): Promise<CMSPageSitemapEntry[]> {
+  try {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'pages',
+      where: {
+        slug: {
+          not_equals: 'home',
+        },
+        status: {
+          equals: 'published',
+        },
+        isEnabled: {
+          equals: true,
+        },
+        'seo.noindex': {
+          not_equals: true,
+        },
+      },
+      limit: 500,
+      select: {
+        slug: true,
+        updatedAt: true,
+      },
+      // Trusted server-side read: the where clause above enforces
+      // published-only.
+      overrideAccess: true,
+    })
+
+    return (result.docs as Array<{ slug?: string; updatedAt?: string }>)
+      .filter((doc): doc is { slug: string; updatedAt?: string } => typeof doc.slug === 'string' && doc.slug.length > 0)
+      .map((doc) => ({ slug: doc.slug, updatedAt: doc.updatedAt }))
+      .sort((a, b) => a.slug.localeCompare(b.slug))
+  } catch {
+    return []
+  }
+}
+
 export async function getCMSPageBySlug(slug: string, preview = false): Promise<CMSPageData | null> {
   try {
     const payload = await getPayloadClient()

@@ -50,7 +50,7 @@ export default async function AboutPage({ preview = false }: { preview?: boolean
           >
             <Image
               src={heroImage}
-              alt="About page hero"
+              alt="Immersive event environment designed and produced by the Beatrox team"
               fill
               priority
               sizes="100vw"
@@ -80,7 +80,7 @@ export default async function AboutPage({ preview = false }: { preview?: boolean
       <section className="relative hero border-b border-white/10 overflow-hidden">
         <Image
           src={heroImage}
-          alt="About page hero"
+          alt="Immersive event environment designed and produced by the Beatrox team"
           fill
           priority
           sizes="100vw"
@@ -108,7 +108,7 @@ export default async function AboutPage({ preview = false }: { preview?: boolean
           </div>
           {sectionImages[1] && (
             <div className="relative h-72 md:h-[420px] bg-neutral-950 overflow-hidden">
-              <Image src={sectionImages[1]} alt="About supporting visual" fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover" />
+              <Image src={sectionImages[1]} alt="Beatrox experiential installation and environmental design work" fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover" />
             </div>
           )}
         </div>

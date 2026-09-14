@@ -62,7 +62,7 @@ export default async function TechIndexPage({ preview = false }: { preview?: boo
       />
       <ParallaxHero
         imageSrc={heroImage}
-        imageAlt="Tech capabilities hero media"
+        imageAlt="Beatrox event technology, AV integration, and technical production capabilities"
         eyebrow="What We Build With"
         title="Tech Capabilities"
         description="The design, build, technical, and production capabilities behind every Beatrox environment."

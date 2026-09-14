@@ -1,4 +1,5 @@
 import { getAllServices } from './json-content'
+import type { YouTubeManifestVideo } from './youtube/types'
 
 const SITE_URL = 'https://www.beatrox.com'
 
@@ -268,6 +269,114 @@ export function buildFaqSchema(faqItems: FaqItem[]): FaqPageSchema {
       },
     })),
   }
+}
+
+export interface WebSiteSchema {
+  '@context': 'https://schema.org'
+  '@type': 'WebSite'
+  '@id': string
+  name: string
+  url: string
+  publisher: {
+    '@id': string
+  }
+}
+
+/** Site-level WebSite node, emitted once on the homepage next to the full
+    LocalBusiness declaration it references (OP-07/08). */
+export function buildWebSiteSchema(): WebSiteSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: 'Beatrox',
+    url: SITE_URL,
+    publisher: { '@id': LOCALBUSINESS_ID },
+  }
+}
+
+export interface CreativeWorkSchema {
+  '@context': 'https://schema.org'
+  '@type': 'CreativeWork'
+  name: string
+  url: string
+  description?: string
+  image?: string
+  datePublished?: string
+  creator: {
+    '@type': 'Organization'
+    '@id': string
+    name: string
+    url: string
+  }
+}
+
+/** One CreativeWork node per /work/* project page, credited to the shared
+    LocalBusiness entity. datePublished is emitted only when the source
+    content actually carries a date; nothing is invented. */
+export function buildCreativeWorkSchema(input: {
+  name: string
+  path: string
+  description?: string
+  image?: string
+  datePublished?: string
+}): CreativeWorkSchema {
+  const schema: CreativeWorkSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: input.name,
+    url: `${SITE_URL}${input.path}`,
+    creator: {
+      '@type': 'Organization',
+      '@id': LOCALBUSINESS_ID,
+      name: 'Beatrox',
+      url: SITE_URL,
+    },
+  }
+  if (input.description) schema.description = input.description
+  if (input.image) {
+    schema.image = input.image.startsWith('http') ? input.image : `${SITE_URL}${input.image}`
+  }
+  if (input.datePublished) schema.datePublished = input.datePublished
+  return schema
+}
+
+export interface VideoObjectSchema {
+  '@context': 'https://schema.org'
+  '@type': 'VideoObject'
+  name: string
+  description: string
+  thumbnailUrl: string[]
+  uploadDate: string
+  duration?: string
+  embedUrl: string
+  contentUrl: string
+  potentialAction: {
+    '@type': 'WatchAction'
+    target: string
+  }
+}
+
+/** VideoObject for indexable /videos/* detail pages; callers must skip
+    noindex manifest entries. thumbnailUrl uses the same i.ytimg.com poster
+    source as VideoPosterCard. */
+export function buildVideoObjectSchema(video: YouTubeManifestVideo): VideoObjectSchema {
+  const schema: VideoObjectSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: video.title,
+    description: video.description,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`],
+    uploadDate: video.publishedAt,
+    embedUrl: video.embedUrl,
+    contentUrl: video.url,
+    potentialAction: {
+      '@type': 'WatchAction',
+      target: video.url,
+    },
+  }
+  if (video.duration) schema.duration = video.duration
+  return schema
 }
 
 export interface BreadcrumbItem {

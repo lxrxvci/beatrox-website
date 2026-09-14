@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /preview
+Disallow: /proposal
+Disallow: /api
 
 Sitemap: https://www.beatrox.com/sitemap.xml
