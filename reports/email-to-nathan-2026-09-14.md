@@ -56,12 +56,11 @@ Your setup process checks out against current Twilio/Front docs, with a few corr
 8. Monthly message volume estimate, and yes/no: will this number **ever** send marketing? (Recommend no.)
 9. Front: workspace admin invite, billing, and the names/emails for the 3 seats. Area code preference — **971 recommended** (503 inventory is largely exhausted; same Portland geography).
 
-**Quick admin actions (5 minutes, rentals site)**
-10. In the rentals admin: deactivate **"Test Item ($1)"** — it's still bookable until you do (or we can run the migration if you give us DB access).
-11. In Vercel for the rentals project: set `ADMIN_EMAILS` (order-approval and late-return alerts currently email nobody), set `VITE_GA_MEASUREMENT_ID` to the GA4 property ID, and delete the old `EXTENSION_PAYMENT_BYPASS` variable (the code no longer reads it).
+**Quick admin action (2 minutes, rentals site)**
+10. In the rentals admin (`/admin`): deactivate **"Test Item ($1)"** — it's out of Google's sitemap but still bookable until deactivated. (Everything else on the infrastructure side is handled — analytics, alert routing to admin@beatrox.com, and the old payment-bypass flag are done.)
 
 **Access**
-12. Google Search Console access for both properties so we can validate the indexing fixes and close out the error reports.
+11. Google Search Console access for both properties so we can validate the indexing fixes and close out the error reports.
 
 Once 4–9 land we'll kick off the 10DLC registration the same day — the carrier clock is the long pole, so the sooner that starts, the sooner production comms move off your phone.
 
