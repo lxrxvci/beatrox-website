@@ -5,7 +5,7 @@ import { trackRentalsClick } from '@/lib/analytics/track'
 
 interface TrackedRentalsLinkProps {
   href: string
-  linkLocation: 'footer' | 'home_teaser' | 'services_index'
+  linkLocation: 'footer' | 'home_teaser' | 'services_index' | 'service_handoff'
   className?: string
   children: ReactNode
 }

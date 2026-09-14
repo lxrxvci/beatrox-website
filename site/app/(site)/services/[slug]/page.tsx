@@ -168,7 +168,7 @@ export default async function ServicePage({ params, preview = false }: Props) {
   // FAQ body blocks feed the FAQPage JSON-LD (rendered HTML stays unchanged).
   const faqItems = service.body
     .filter((block) => block.type === 'faq')
-    .flatMap((block) => (block.items as unknown as FaqItem[]) || [])
+    .flatMap((block) => ((block as { items?: unknown }).items as unknown as FaqItem[]) || [])
 
   return (
     <>

@@ -96,7 +96,15 @@ export interface FAQBlock {
   items: FAQItem[]
 }
 
-export type ServiceBodyBlock = BodyBlock | TrustBlock | ProcessBlock | FAQBlock
+export interface HandoffBlock {
+  type: 'handoff'
+  heading?: string
+  content?: string
+  linkLabel?: string
+  linkUrl?: string
+}
+
+export type ServiceBodyBlock = BodyBlock | TrustBlock | ProcessBlock | FAQBlock | HandoffBlock
 
 export interface Project {
   id: string
@@ -648,6 +656,9 @@ function mapCmsService(doc: Record<string, unknown>): Service {
         heading: block.heading ? String(block.heading) : undefined,
         content: block.content ? String(block.content) : undefined,
         items: asArray<Record<string, unknown>>(block.items).map((item) => String(item.value || '')).filter(Boolean),
+        // Handoff blocks carry an outbound link (e.g. to rentals.beatrox.com).
+        ...(block.linkLabel ? { linkLabel: String(block.linkLabel) } : {}),
+        ...(block.linkUrl ? { linkUrl: String(block.linkUrl) } : {}),
       }
     }),
     contentBlocks: asArray<Record<string, unknown>>(doc.contentBlocks).map((block) =>

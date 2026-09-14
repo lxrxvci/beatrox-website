@@ -77,7 +77,15 @@ export interface FAQBlock {
   items: FAQItem[]
 }
 
-export type ServiceBodyBlock = BodyBlock | TrustBlock | ProcessBlock | FAQBlock
+export interface HandoffBlock {
+  type: 'handoff'
+  heading?: string
+  content?: string
+  linkLabel?: string
+  linkUrl?: string
+}
+
+export type ServiceBodyBlock = BodyBlock | TrustBlock | ProcessBlock | FAQBlock | HandoffBlock
 
 export interface Project {
   title: string

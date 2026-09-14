@@ -1,18 +1,18 @@
 {
-  "title": "LED Video Wall Rentals",
+  "title": "LED Video Wall Systems, Designed & Operated",
   "slug": "/services/led-video-wall-rentals",
   "seo": {
-    "title": "LED Video Wall Rentals Portland, OR",
-    "description": "LED video wall rentals in Portland, OR: fine-pitch to festival-scale panels with media server integration and on-site LED technician support.",
+    "title": "LED Video Wall Design & Production — Portland, OR | BEATROX",
+    "description": "LED video wall design & production in Portland, OR — fine-pitch to festival-scale systems, media server integration, custom content, and on-site LED techs.",
     "og": {
-      "title": "LED Video Wall Rentals Portland, OR | BEATROX",
-      "description": "LED video wall rentals in Portland, OR: fine-pitch to festival-scale panels with media server integration and on-site LED technician support.",
+      "title": "LED Video Wall Design & Production — Portland, OR | BEATROX",
+      "description": "LED video wall design & production in Portland, OR — fine-pitch to festival-scale systems, media server integration, custom content, and on-site LED techs.",
       "image": "/og-default.jpg"
     }
   },
   "hero": {
-    "headline": "LED Video Wall Rentals",
-    "subheadline": "High-resolution LED panels for any footprint, with full media server integration, custom content, and on-site technical support.",
+    "headline": "LED Video Wall Systems, Designed & Operated",
+    "subheadline": "High-resolution LED systems for any footprint — designed, integrated, and crewed by our team, from media server programming to custom content and live operation.",
     "cta": {
       "label": "Get a Free Quote",
       "url": "/book"
@@ -32,7 +32,14 @@
   "body": [
     {
       "type": "intro",
-      "content": "From intimate brand activations to massive festival stages, Beatrox delivers LED video wall rentals in Portland, Oregon and nationwide: systems that fit your space, your content, and your budget. Our team handles everything from panel selection and structural integration to media server programming and live operation."
+      "content": "From intimate brand activations to massive festival stages, Beatrox designs, integrates, and operates LED video wall systems in Portland, Oregon and nationwide: displays engineered to fit your space, your content, and your budget. Our team handles everything from panel selection and structural integration to media server programming, content design, and crewed live operation."
+    },
+    {
+      "type": "handoff",
+      "heading": "Just need panels?",
+      "content": "Rent LED video wall inventory direct from our self-service rental shop — panels, processors, and ground support with delivery across Portland and Oregon.",
+      "linkLabel": "LED video wall rentals in Portland",
+      "linkUrl": "https://rentals.beatrox.com/category/led-wall"
     },
     {
       "type": "trust",
@@ -43,7 +50,7 @@
         "Infinity LED proven: the seamless wall-to-wall ocean chamber for Adidas x Parley Run for the Oceans",
         "AR portal experience: free-standing LED walls for Amazon Music Live at Outside Lands and Stagecoach",
         "Pixel-perfect playback: content mapped to exact wall dimensions, no scaling artifacts",
-        "On-site LED technician included with every rental"
+        "On-site LED technician included with every deployment"
       ]
     },
     {
@@ -72,7 +79,7 @@
     {
       "type": "service_detail",
       "heading": "Turnkey LED Solutions",
-      "content": "We source, configure, and operate LED video wall systems of any size and resolution. Our team has extensive experience with seamless wall-to-wall builds in complex environments, including custom infinity mirror configurations and non-standard architectural surfaces. Every rental includes on-site LED technician support."
+      "content": "We source, configure, and operate LED video wall systems of any size and resolution. Our team has extensive experience with seamless wall-to-wall builds in complex environments, including custom infinity mirror configurations and non-standard architectural surfaces. Every deployment includes on-site LED technician support."
     },
     {
       "type": "service_detail",
@@ -101,15 +108,15 @@
       "items": [
         {
           "question": "How far in advance should I book?",
-          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard productions and 8–12 weeks for custom builds. Last-minute requests are often accommodated depending on availability."
         },
         {
           "question": "Do you travel outside Portland?",
           "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events."
         },
         {
-          "question": "What's included in the rental?",
-          "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
+          "question": "What's included in an LED wall production?",
+          "answer": "Every production includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
         },
         {
           "question": "Can you build custom shapes and configurations?",

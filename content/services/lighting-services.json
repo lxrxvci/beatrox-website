@@ -35,6 +35,13 @@
       "content": "Lighting is the invisible hand that shapes every experience, and Beatrox's Portland, Oregon lighting team designs systems for events and installations nationwide. Whether it's a dramatic stage wash, an audio-reactive LED environment, or precision architectural illumination, our designers serve your vision, technically and aesthetically."
     },
     {
+      "type": "handoff",
+      "heading": "Need fixtures only?",
+      "content": "Browse self-service lighting and laser rentals — movers, washes, and console packages with pickup or delivery across Portland and Oregon.",
+      "linkLabel": "lighting rentals in Portland",
+      "linkUrl": "https://rentals.beatrox.com/category/lights-lasers"
+    },
+    {
       "type": "trust",
       "heading": "Why Choose Beatrox",
       "items": [
@@ -89,15 +96,15 @@
       "items": [
         {
           "question": "How far in advance should I book?",
-          "answer": "We recommend booking at least 4–6 weeks in advance for standard rentals and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
+          "answer": "We recommend booking at least 4–6 weeks in advance for standard events and 8–12 weeks for custom productions. Last-minute requests are often accommodated depending on availability."
         },
         {
           "question": "Do you travel outside Portland?",
           "answer": "Absolutely. While we're headquartered in Portland, OR, we regularly serve clients across the West Coast and nationwide for touring and large-scale events."
         },
         {
-          "question": "What's included in the rental?",
-          "answer": "Every rental includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
+          "question": "What's included in a lighting engagement?",
+          "answer": "Every engagement includes delivery, setup, on-site technical support, and strike. Custom packages can also include content design, pre-visualization, and dedicated project management."
         },
         {
           "question": "Can you create audio-reactive lighting?",

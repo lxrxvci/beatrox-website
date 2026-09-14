@@ -1,6 +1,7 @@
 import React from 'react'
 import NodeBullet from '@/components/NodeBullet'
 import RevealOnScroll from '@/components/RevealOnScroll'
+import TrackedRentalsLink from '@/components/TrackedRentalsLink'
 import { EditableText } from '@/components/admin'
 import type { Service } from '@/lib/content'
 
@@ -89,7 +90,36 @@ export default function ServiceBodySections({ service, renderAfterSection }: Ser
               </div>
             )}
 
-            {block.type !== 'trust' && block.type !== 'process' && block.type !== 'faq' && (() => {
+            {block.type === 'handoff' && (() => {
+              const handoff = block as { heading?: string; content?: string; linkLabel?: string; linkUrl?: string }
+              return (
+              <div className="hud-card p-6 md:p-8 border-[var(--accent)]/40">
+                <span className="hud-corners" aria-hidden="true" />
+                {handoff.heading && (
+                  <h2 className="hud-label mb-4"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.heading`} value={handoff.heading}>{handoff.heading}</EditableText></h2>
+                )}
+                {handoff.content && (
+                  <p className="text-base text-white leading-relaxed mb-5"><EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.content`} value={handoff.content}>{handoff.content}</EditableText></p>
+                )}
+                {handoff.linkUrl && handoff.linkLabel && (
+                  <div className="flex items-baseline gap-2">
+                    {/* Anchor text stays exactly linkLabel (exact-match hand-off
+                        anchor per the keyword map); the arrow is outside the link. */}
+                    <TrackedRentalsLink
+                      href={handoff.linkUrl}
+                      linkLocation="service_handoff"
+                      className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--accent)] hover:text-white transition-colors"
+                    >
+                      <EditableText collection="services" documentId={service.id} fieldPath={`body.${i}.linkLabel`} value={handoff.linkLabel}>{handoff.linkLabel}</EditableText>
+                    </TrackedRentalsLink>
+                    <span aria-hidden="true" className="text-[var(--accent)]">→</span>
+                  </div>
+                )}
+              </div>
+              )
+            })()}
+
+            {block.type !== 'trust' && block.type !== 'process' && block.type !== 'faq' && block.type !== 'handoff' && (() => {
               const bodyBlock = block as { heading?: string; content?: string; items?: string[] }
               return (
               <div>
