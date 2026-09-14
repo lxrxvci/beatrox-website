@@ -95,7 +95,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/terms`,
+      url: `${BASE_URL}/terms-and-conditions`,
       lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: 'yearly',
       priority: 0.3,

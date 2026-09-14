@@ -106,7 +106,7 @@ export default function PrivacyPage() {
               If the Site allows you to create an account, we collect the credentials and profile information
               you provide, such as your name, email address, and password or other authentication
               identifiers. You are responsible for maintaining the confidentiality of your credentials as
-              described in our <Link href="/terms">Terms of Service</Link>.
+              described in our <Link href="/terms-and-conditions">Terms of Service</Link>.
             </p>
             <h3>Payment Information</h3>
             <p>
@@ -256,7 +256,7 @@ export default function PrivacyPage() {
             <h2>10. Children&rsquo;s Privacy</h2>
             <p>
               The Site is not directed to children, and you must be at least 18 years old to enter into a
-              transaction through the Site, as provided in our <Link href="/terms">Terms of Service</Link>.
+              transaction through the Site, as provided in our <Link href="/terms-and-conditions">Terms of Service</Link>.
               We do not knowingly collect personal information from children under 18. If you believe a child
               has provided us personal information, contact us and we will delete it.
             </p>

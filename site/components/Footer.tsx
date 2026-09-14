@@ -101,7 +101,7 @@ export default function Footer() {
           </p>
           <nav className="flex flex-wrap gap-x-6 gap-y-2">
             {[
-              ['Terms of Service', '/terms'],
+              ['Terms of Service', '/terms-and-conditions'],
               ['Privacy Policy', '/privacy'],
               ['SMS Terms', '/sms-terms'],
             ].map(([label, href]) => (

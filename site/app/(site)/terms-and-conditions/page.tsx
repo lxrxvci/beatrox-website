@@ -18,7 +18,7 @@ export function generateMetadata(): Metadata {
         image: '/og-default.jpg',
       },
     },
-    '/terms',
+    '/terms-and-conditions',
   )
 }
 
@@ -31,11 +31,11 @@ export default function TermsPage() {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
             name: 'Terms of Service',
-            url: 'https://www.beatrox.com/terms',
+            url: 'https://www.beatrox.com/terms-and-conditions',
           },
           buildBreadcrumbSchema([
             { name: 'Home', path: '/' },
-            { name: 'Terms of Service', path: '/terms' },
+            { name: 'Terms of Service', path: '/terms-and-conditions' },
           ]),
         ]}
       />

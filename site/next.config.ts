@@ -56,8 +56,13 @@ const nextConfig: NextConfig = {
       },
       // Convenience aliases for the legal pages.
       {
+        source: '/terms',
+        destination: '/terms-and-conditions',
+        permanent: true,
+      },
+      {
         source: '/terms-of-service',
-        destination: '/terms',
+        destination: '/terms-and-conditions',
         permanent: true,
       },
       {
