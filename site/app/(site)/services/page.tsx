@@ -9,6 +9,7 @@ import CapabilitiesGrid from '@/components/CapabilitiesGrid'
 import BentoWorkGrid from '@/components/BentoWorkGrid'
 import JsonLd from '@/components/JsonLd'
 import RevealOnScroll from '@/components/RevealOnScroll'
+import TrackedRentalsLink from '@/components/TrackedRentalsLink'
 import { EditableGalleryGrid } from '@/components/admin'
 
 export const revalidate = 300
@@ -231,7 +232,7 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
     <>
       <ParallaxHero
         imageSrc={servicesHero}
-        imageAlt="Services hero media"
+        imageAlt="Beatrox full-service event production and experiential design services"
         eyebrow="What We Offer"
         title="What We Do"
         description="Full-spectrum experiential production. From the first sketch to the final strike."
@@ -324,18 +325,35 @@ export default async function ServicesPage({ preview = false }: { preview?: bool
                 <ul className="space-y-5">
                   {group.items.map((item) => (
                     <li key={item.slug}>
-                      <Link
-                        href={item.href ?? `/services/${item.slug}`}
-                        className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className="hud-index text-[var(--accent)] opacity-70 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                      {item.href ? (
+                        /* External rentals link: plain anchor (no Next prefetch), tracked. */
+                        <TrackedRentalsLink
+                          href={item.href}
+                          linkLocation="services_index"
+                          className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
                         >
-                          ›
-                        </span>
-                        <span>{item.label}</span>
-                      </Link>
+                          <span
+                            aria-hidden="true"
+                            className="hud-index text-[var(--accent)] opacity-70 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                          >
+                            ›
+                          </span>
+                          <span>{item.label}</span>
+                        </TrackedRentalsLink>
+                      ) : (
+                        <Link
+                          href={`/services/${item.slug}`}
+                          className="group flex items-baseline gap-2.5 text-sm text-white leading-relaxed hover:text-white transition-colors"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="hud-index text-[var(--accent)] opacity-70 md:opacity-0 md:-translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0"
+                          >
+                            ›
+                          </span>
+                          <span>{item.label}</span>
+                        </Link>
+                      )}
                       <p className="mt-1 text-xs text-white leading-relaxed">{item.blurb}</p>
                     </li>
                   ))}

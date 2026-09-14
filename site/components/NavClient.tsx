@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import type { NavigationLink } from '@/lib/fallbacks'
 import MagneticButton from '@/components/MagneticButton'
+import { trackRentalsClick } from '@/lib/analytics/track'
 
 interface Props {
   links: NavigationLink[]
@@ -52,7 +53,7 @@ function RollingLink({
   )
   if (external) {
     return (
-      <a href={href} className={className}>
+      <a href={href} className={className} onClick={() => trackRentalsClick(href, 'nav')}>
         {inner}
       </a>
     )
@@ -174,7 +175,7 @@ export default function NavClient({ links }: Props) {
             const className =
               'text-xs font-semibold tracking-[0.18em] uppercase text-white hover:text-white transition-colors'
             return resolved.external ? (
-              <a key={href} href={resolved.href} className={className}>
+              <a key={href} href={resolved.href} className={className} onClick={() => trackRentalsClick(resolved.href, 'nav_mobile')}>
                 {label}
               </a>
             ) : (

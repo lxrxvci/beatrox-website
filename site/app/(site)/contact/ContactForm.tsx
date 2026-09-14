@@ -1,8 +1,9 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect, useRef } from 'react'
 import { submitContactForm, type FormState } from './actions'
-import { AttributionFields } from '@/components/AttributionFields'
+import { AttributionFields, readAttribution } from '@/components/AttributionFields'
+import { trackEvent } from '@/lib/analytics/track'
 
 interface Field {
   id: string
@@ -26,6 +27,14 @@ const initialState: FormState = {
 
 export default function ContactForm({ fields, submitLabel, successMessage }: ContactFormProps) {
   const [state, formAction, pending] = useActionState(submitContactForm, initialState)
+
+  const leadTracked = useRef(false)
+  useEffect(() => {
+    if (state.success && !leadTracked.current) {
+      leadTracked.current = true
+      trackEvent('generate_lead', { form_name: 'contact', ...readAttribution() })
+    }
+  }, [state.success])
 
   if (state.success) {
     return (

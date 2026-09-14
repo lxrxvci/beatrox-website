@@ -5,6 +5,7 @@ import ContactForm from './ContactForm'
 import KineticHeading from '@/components/KineticHeading'
 import CMSBlockRenderer from '@/components/CMSBlockRenderer'
 import JsonLd from '@/components/JsonLd'
+import TrackedPhoneLink from '@/components/TrackedPhoneLink'
 import { LOCALBUSINESS_ID } from '@/lib/schema'
 import { EditableText } from '@/components/admin'
 
@@ -119,7 +120,7 @@ export default async function ContactPage({ preview = false }: { preview?: boole
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href={`mailto:${data.contact.email}`} className="btn-primary">Email Us</a>
-            <a href={`tel:${data.contact.phone}`} className="btn-ghost">Call Us</a>
+            <TrackedPhoneLink href={`tel:${data.contact.phone}`} linkLocation="contact_page" className="btn-ghost">Call Us</TrackedPhoneLink>
           </div>
         </div>
       </section>

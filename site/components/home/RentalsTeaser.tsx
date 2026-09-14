@@ -1,4 +1,5 @@
 import { getAllServicesResolved } from '@/lib/content'
+import TrackedRentalsLink from '@/components/TrackedRentalsLink'
 import ScrollPanel from './ScrollPanel'
 
 const RENTALS_URL = 'https://rentals.beatrox.com/'
@@ -25,9 +26,9 @@ export default async function RentalsTeaser() {
       </div>
       <div>
         {/* Plain <a> on purpose: CSP blocks cross-origin RSC prefetch from next/link. */}
-        <a href={RENTALS_URL} className="btn-primary inline-block">
+        <TrackedRentalsLink href={RENTALS_URL} linkLocation="home_teaser" className="btn-primary inline-block">
           Open Beatrox Rentals ↗
-        </a>
+        </TrackedRentalsLink>
       </div>
     </ScrollPanel>
   )

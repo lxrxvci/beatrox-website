@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getContactResolved, getHomepageResolved } from '@/lib/content'
 import KineticHeading from '@/components/KineticHeading'
 import MagneticButton from '@/components/MagneticButton'
+import TrackedPhoneLink from '@/components/TrackedPhoneLink'
 import ScrollPanel from './ScrollPanel'
 
 export default async function ContactSection() {
@@ -35,9 +36,9 @@ export default async function ContactSection() {
           <a href={`mailto:${email}`} className="text-white underline-offset-4 transition-colors hover:text-[var(--accent)] hover:underline">
             {email}
           </a>
-          <a href={`tel:${phone}`} className="text-white underline-offset-4 transition-colors hover:text-[var(--accent)] hover:underline">
+          <TrackedPhoneLink href={`tel:${phone}`} linkLocation="home_section" className="text-white underline-offset-4 transition-colors hover:text-[var(--accent)] hover:underline">
             {phoneFormatted || phone}
-          </a>
+          </TrackedPhoneLink>
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">

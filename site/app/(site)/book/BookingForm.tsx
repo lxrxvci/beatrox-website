@@ -1,8 +1,9 @@
 'use client'
 
-import { useActionState, useState, useTransition } from 'react'
+import { useActionState, useEffect, useRef, useState, useTransition } from 'react'
 import { bookConsultation, getAvailableSlotsForDate, type BookingFormState, type SlotOption } from './actions'
-import { AttributionFields } from '@/components/AttributionFields'
+import { AttributionFields, readAttribution } from '@/components/AttributionFields'
+import { trackEvent } from '@/lib/analytics/track'
 
 interface ConsultationType {
   id: string
@@ -45,6 +46,18 @@ export default function BookingForm({ types }: BookingFormProps) {
   const [slots, setSlots] = useState<SlotOption[]>([])
   const [slotError, setSlotError] = useState<string>('')
 
+  const leadTracked = useRef(false)
+  useEffect(() => {
+    if (state.success && !leadTracked.current) {
+      leadTracked.current = true
+      trackEvent('generate_lead', {
+        form_name: 'booking',
+        consultation_type: selectedType?.name,
+        ...readAttribution(),
+      })
+    }
+  }, [state.success])
+
   const tomorrow = new Date()
   tomorrow.setDate(tomorrow.getDate() + 1)
   const maxDate = new Date()
@@ -85,6 +98,11 @@ export default function BookingForm({ types }: BookingFormProps) {
   }
 
   function handleSlotSelect(slot: SlotOption) {
+    trackEvent('booking_slot_selected', {
+      form_name: 'booking',
+      consultation_type: selectedType?.name,
+      slot_date: selectedDate,
+    })
     setSelectedSlot(slot)
     setStep('details')
   }
