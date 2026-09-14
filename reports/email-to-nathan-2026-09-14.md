@@ -1,13 +1,13 @@
-# Email draft — Matthew → Nathan (2026-09-14)
+# Email draft — Matthew → Nathan (2026-09-14, v2)
 
 **To:** nathanjenkins@beatrox.com
-**Subject:** All three priorities shipped or in motion — legal pages live, rentals rebuilt for search, and the short list we need from you
+**Subject:** Twilio resubmission unblocked — privacy policy + terms are live (plus SEO & rentals shipped)
 
 ---
 
 Hi Nathan,
 
-Quick rundown on the three priorities from your Sep 9 email. The short version: the main site was healthier than we thought, the rentals site had the real problem (now fixed), and the Front/Twilio path is validated and unblocked. Details below, then the list of what we need from you.
+Good news on the Twilio denial: the two things it was rejected for are now live. The Privacy Policy and Terms are published on both sites, so the campaign can be resubmitted today — details in section 3. Also shipped this week: the SEO cleanup and the rentals rebuild. Rundown below, then the short list we need from you.
 
 ## 1. SEO / indexing — main site is clean, fixes shipped
 
@@ -15,7 +15,7 @@ We audited beatrox.com against your whole checklist, live and in code:
 
 - **Legacy Squarespace URLs**: all 26 real legacy slugs already 301 to the right destinations, and we added `/portfolio/*` coverage. Nothing obsolete in the sitemap.
 - **Canonicals, titles, H1s, address**: already consistent sitewide. There are zero "Halsey" references anywhere in the shipped site — 1313 SE 3rd Ave is the only address in the code, schema, and footer. Any old-address sightings are in Google's cached snippets and off-site directories, which clear as Google recrawls and as we update citations.
-- **Shipped this week**: legal pages (`/terms`, `/privacy`, `/sms-terms` — your Terms text verbatim), sitemap `lastmod` dates, crawler exclusions for admin/preview routes, richer structured data (WebSite, CreativeWork, VideoObject), and **real conversion tracking** — GA4 was recording pageviews only; it now tracks form submissions, phone clicks, and rental click-throughs.
+- **Shipped this week**: legal pages (`/terms-and-conditions`, `/privacy`, `/sms-terms` — your Terms text verbatim), sitemap `lastmod` dates, crawler exclusions for admin/preview routes, richer structured data (WebSite, CreativeWork, VideoObject), and **real conversion tracking** — GA4 was recording pageviews only; it now tracks form submissions, phone clicks, and rental click-throughs.
 - **Search Console**: most errors you're seeing are likely stale Squarespace-era reports or the rentals subdomain (below). To validate and close them out we need GSC access (see request list).
 
 ## 2. rentals.beatrox.com — the actual fire, now fixed
@@ -29,40 +29,45 @@ The rental site was serving an empty shell to Google for every URL — real page
 - **Keyword map**: we've mapped every keyword on your list (plus five high-value variants that weren't on it — "speaker rental Portland", "AV rental Portland", etc.) to exactly one page across the two sites so they complement instead of compete. Rentals owns "rental" terms; beatrox.com owns "production" terms — the LED and sound service pages on the main site were reframed accordingly, with deliberate hand-off links down to rentals. Full document ready for your review (ask and I'll send it).
 - **Held pending your answer**: Stage Rental, Projector Rental, and Backline Rental pages. We don't publish thin pages for gear you don't stock — do you carry staging, projectors/screens, and backline for dry hire, or are those operated-only? Also need Artfox panel **quantity and day/week/month pricing** to make it a bookable product.
 
-## 3. Front + Twilio — validated, unblocked, ready to start
+## 3. Twilio — your denial reasons are fixed; resubmission path
 
-Your setup process checks out against current Twilio/Front docs, with a few corrections:
+Since your account and brand are already set up and the campaign was denied **only** for the missing legal pages, this is now a resubmission, not a fresh registration. The pages the vetters asked for are live on both sites:
 
-- Registration runs through Twilio's **Trust Hub**, and there's a fourth step people miss: the number must be attached to the Messaging Service's sender pool after campaign approval.
-- We'll register as a **Low-Volume Standard Brand + Low-Volume Mixed campaign** (cheapest tier, fits operational messaging): ~$20 one-time + ~$1.50/mo.
-- **Carrier vetting currently takes 10–15 days**, and rejections reset the clock — so we want the first submission clean.
-- As of this summer, Twilio **requires live privacy-policy and SMS-terms pages before campaign approval** — that's now satisfied (both are live on beatrox.com and rentals.beatrox.com). Note: the Privacy Policy and SMS Terms are our drafts written to carrier spec — please review the wording.
-- Realistic budget: **~$205–215/mo** total (Front Professional, 3 seats + Twilio number + campaign + messages) and ~$20 one-time. Timeline: 2–3 weeks end-to-end, mostly carrier waiting.
-- One honest flag: if you only wanted shared SMS without email in the same inbox, Quo (formerly OpenPhone) does it for ~$45/mo. Front+Twilio is the right call if email consolidation matters — your call.
-- Oregon note: HB 3865 (2025) treats texts as telephone solicitation. Consented operational crew messaging is fine — another reason to keep marketing strictly off this number.
+- **Privacy Policy**: https://www.beatrox.com/privacy (also on rentals.beatrox.com/privacy) — includes the carrier-required clause that mobile information is never shared with third parties for marketing
+- **Terms & Conditions**: https://www.beatrox.com/terms-and-conditions
+- **SMS Terms**: https://www.beatrox.com/sms-terms — all 8 required elements (program name, msg & data rates, frequency, bold STOP/HELP instructions, carrier non-liability, privacy link)
+
+Note: the Privacy Policy and SMS Terms are our drafts written to carrier spec — please review the wording.
+
+Resubmission guidance:
+
+- When the campaign form asks for the website/legal URLs, use the three above.
+- **Change nothing else** — you said the denial was only the legal pages, so keep the campaign description, opt-in flow, and sample messages exactly as submitted.
+- **Forward us the denial notice** before resubmitting so we can confirm nothing else was flagged — each rejection resets the vetting clock, and carrier vetting is currently running 10–15 days.
+- After approval, one step people miss: the number must be **attached to the Messaging Service's sender pool** (association can take up to 24h) before it can actually send.
+- Oregon note: HB 3865 (2025) treats texts as telephone solicitation. Consented operational crew messaging is fine — keep marketing strictly off this number.
+
+**Front side** (once the number is approved): the setup in your original email checks out against current Front docs — shared "Beatrox Production" inbox, Twilio channel via Account SID + Auth Token, and your tags/routing/templates plan. Two gotchas to know: the number must not be connected to any other app (one webhook per number), and the Messaging Service must be set to "Defer to Sender's Webhook" or inbound texts won't reach Front. Budget: ~$205–215/mo total (Front Professional, 3 seats + number + campaign + messages).
 
 ## What we need from you
 
-**Legal / content review**
-1. Review the Privacy Policy and SMS Terms drafts (live at beatrox.com/privacy and /sms-terms — wording edits welcome, they exist to satisfy carrier vetting).
-2. Sign off on the keyword map — especially the inventory question: do you stock **staging, projectors/screens, backline** for dry hire?
-3. Artfox Pro Flex Outdoor P3.91: **quantity owned + day/week/month pricing** (we'll pull public specs).
-
 **Twilio / Front**
-4. Create the Twilio account under Beatrox LLC yourself (billing identity), add a card, upgrade from trial, then grant us admin access.
-5. **EIN + legal business name exactly as filed with the IRS** (e.g. confirm it's "Beatrox LLC" with the suffix — a mismatch here is the #1 cause of registration rejection), entity type, and the physical address on file.
-6. **Opt-in method decision**: recommend adding an SMS-consent checkbox/signature line to freelancer/vendor onboarding paperwork — one signed sample is what carriers want as opt-in proof. Also: how do you collect crew numbers today?
-7. **2–5 sample texts in your voice** (availability ask, booking confirmation, call-time reminder, schedule change, logistics) — each including "Beatrox" and "Reply STOP to opt out", with placeholders instead of real names.
-8. Monthly message volume estimate, and yes/no: will this number **ever** send marketing? (Recommend no.)
-9. Front: workspace admin invite, billing, and the names/emails for the 3 seats. Area code preference — **971 recommended** (503 inventory is largely exhausted; same Portland geography).
+1. Either add matthew@agenticpnw.com as an admin on the existing Twilio account and we'll handle the resubmission, or resubmit it yourself with the legal URLs above.
+2. Forward the denial notice (so we confirm nothing else was flagged before the clock resets).
+3. Front: workspace admin invite, billing, and the names/emails for the 3 seats. Area code preference — **971 recommended** (503 inventory is largely exhausted; same Portland geography).
+
+**Legal / content review**
+4. Review the Privacy Policy and SMS Terms drafts (links above — wording edits welcome, they exist to satisfy carrier vetting).
+5. Sign off on the keyword map — especially the inventory question: do you stock **staging, projectors/screens, backline** for dry hire?
+6. Artfox Pro Flex Outdoor P3.91: **quantity owned + day/week/month pricing** (we'll pull public specs).
 
 **Quick admin action (2 minutes, rentals site)**
-10. In the rentals admin (`/admin`): deactivate **"Test Item ($1)"** — it's out of Google's sitemap but still bookable until deactivated. (Everything else on the infrastructure side is handled — analytics, alert routing to admin@beatrox.com, and the old payment-bypass flag are done.)
+7. In the rentals admin (`/admin`): deactivate **"Test Item ($1)"** — it's out of Google's sitemap but still bookable until deactivated. (Everything else on the infrastructure side is handled — analytics, alert routing to admin@beatrox.com, and the old payment-bypass flag are done.)
 
 **Access**
-11. Google Search Console access for both properties so we can validate the indexing fixes and close out the error reports.
+8. Google Search Console access for both properties so we can validate the indexing fixes and close out the error reports.
 
-Once 4–9 land we'll kick off the 10DLC registration the same day — the carrier clock is the long pole, so the sooner that starts, the sooner production comms move off your phone.
+The carrier vetting window is the long pole for the SMS system — the sooner the resubmission goes in, the sooner production comms move off your phone.
 
 Thanks,
 Matthew
